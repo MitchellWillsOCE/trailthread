@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "title": "Untitled journey",
+  "description": "",
+  "region": "",
+  "continent": "europe",
+  "emoji": "🧭",
+  "days": 7,
+  "highlights": [
+    "Zurich, Switzerland",
+    "Brussels, Belgium"
+  ],
+  "author": "",
+  "stops": [
+    {
+      "id": "zurich-ch",
+      "name": "Zurich",
+      "country": "Switzerland",
+      "kind": "city",
+      "mode": "drive",
+      "stopType": "start",
+      "day": "",
+      "tagline": "most populous city in Switzerland and capital of the canton of Zurich.",
+      "lat": 47.3769,
+      "lng": 8.5417
+    },
+    {
+      "id": "brussels-be",
+      "name": "Brussels",
+      "country": "Belgium",
+      "kind": "city",
+      "mode": "fly",
+      "stopType": "end",
+      "day": "",
+      "tagline": "municipality and capital city of Belgium.",
+      "lat": 50.8503,
+      "lng": 4.3517
+    }
+  ],
+  "code": "7Y6EAKR",
+  "createdAt": "2026-05-25T07:15:03.297Z",
+  "distanceKm": 492
+}

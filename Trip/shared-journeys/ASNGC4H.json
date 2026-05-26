@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "title": "Untitled journey",
+  "description": "",
+  "region": "",
+  "continent": "europe",
+  "emoji": "🧭",
+  "days": 7,
+  "highlights": [
+    "Bordeaux, France",
+    "Mont-Saint-Michel, France"
+  ],
+  "author": "",
+  "stops": [
+    {
+      "id": "bordeaux-fr",
+      "name": "Bordeaux",
+      "country": "France",
+      "kind": "city",
+      "mode": "drive",
+      "stopType": "city",
+      "day": "",
+      "tagline": "city and commune in Gironde, New Aquitaine, France.",
+      "lat": 44.8378,
+      "lng": -0.5792
+    },
+    {
+      "id": "mont-saint-michel-france",
+      "name": "Mont-Saint-Michel",
+      "country": "France",
+      "kind": "poi",
+      "mode": "train",
+      "stopType": "end",
+      "day": "",
+      "tagline": "municipality in Quebec, Canada.",
+      "lat": 48.636,
+      "lng": -1.511
+    }
+  ],
+  "code": "ASNGC4H",
+  "createdAt": "2026-05-25T06:50:34.375Z",
+  "distanceKm": 428
+}

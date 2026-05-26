@@ -1,0 +1,13 @@
+[
+  { "osm_id": 5572545, "name": "Mala Paklenica — Martinovo Mirilo", "country": "Croatia", "cc": "hr", "popularity": 88 },
+  { "osm_id": 6011278, "name": "Kanjon Velika Paklenica", "country": "Croatia", "cc": "hr", "popularity": 90 },
+  { "osm_id": 5904818, "name": "Gradac — Sv. Ilija", "country": "Croatia", "cc": "hr", "popularity": 85 },
+  { "osm_id": 3739879, "name": "Korenica — Gola Plješivica", "country": "Croatia", "cc": "hr", "popularity": 84 },
+  { "osm_id": 19436296, "name": "Kanal Svetog Ante", "country": "Croatia", "cc": "hr", "popularity": 82 },
+  { "osm_id": 10943622, "name": "Premužićeva staza", "country": "Croatia", "cc": "hr", "popularity": 94 },
+  { "osm_id": 11502863, "name": "Via Dinarica — Velebit", "country": "Croatia", "cc": "hr", "popularity": 91 },
+  { "osm_id": 2776159, "name": "Primorska planinarska transverzala", "country": "Croatia", "cc": "hr", "popularity": 89 },
+  { "osm_id": 158821, "name": "Manastir Praskvica — Čelobrdo — Ograđenica", "country": "Montenegro", "cc": "me", "popularity": 86 },
+  { "osm_id": 2777368, "name": "Crnogorska Transverzala 1", "country": "Montenegro", "cc": "me", "popularity": 93 },
+  { "osm_id": 7395262, "name": "Planina Durmitor — Bobotov Kuk approach", "country": "Montenegro", "cc": "me", "popularity": 92 }
+]

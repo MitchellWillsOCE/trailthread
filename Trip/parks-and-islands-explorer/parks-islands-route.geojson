@@ -1,0 +1,216 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parks and Islands Drive Arc",
+        "mode": "drive",
+        "day": "1-10",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [18.0940, 42.6500],
+          [16.4400, 43.5080],
+          [15.9660, 43.8050],
+          [15.4380, 44.3000],
+          [15.6160, 44.8800],
+          [14.4420, 45.3270],
+          [13.8490, 44.8660],
+          [13.7760, 45.6490]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dubrovnik to Mljet to Split Ferry",
+        "mode": "ferry",
+        "ferryRouteId": "dubrovnik-split",
+        "day": "2-3",
+        "section": "optionalLinks"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [18.0940, 42.6500],
+          [17.5000, 42.7400],
+          [16.4400, 43.5080]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Krka Hiking Loop",
+        "mode": "hike",
+        "hikeId": "europe-19436296",
+        "day": "5",
+        "section": "parks"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[15.9660, 43.8050], [15.9660, 43.8050]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Split to Bari Flight Option",
+        "mode": "fly",
+        "day": "Optional",
+        "section": "optionalLinks"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [16.4400, 43.5080],
+          [16.9000, 42.3000],
+          [16.8719, 41.1171]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dubrovnik",
+        "country": "Croatia",
+        "stopType": "city",
+        "day": "1",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.0940, 42.6500]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mljet National Park",
+        "country": "Croatia",
+        "stopType": "park",
+        "day": "2",
+        "section": "parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.5000, 42.7400]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Split",
+        "country": "Croatia",
+        "stopType": "city",
+        "day": "3-4",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.4400, 43.5080]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Krka National Park",
+        "country": "Croatia",
+        "stopType": "park",
+        "day": "5",
+        "section": "parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.9660, 43.8050]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Paklenica National Park",
+        "country": "Croatia",
+        "stopType": "park",
+        "day": "6",
+        "section": "parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.4380, 44.3000]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Plitvice Lakes National Park",
+        "country": "Croatia",
+        "stopType": "park",
+        "day": "7",
+        "section": "parks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.6160, 44.8800]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rijeka",
+        "country": "Croatia",
+        "stopType": "city",
+        "day": "8",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.4420, 45.3270]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pula",
+        "country": "Croatia",
+        "stopType": "city",
+        "day": "9",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.8490, 44.8660]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trieste",
+        "country": "Italy",
+        "stopType": "end",
+        "day": "10",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.7760, 45.6490]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bari",
+        "country": "Italy",
+        "stopType": "city",
+        "day": "Optional",
+        "section": "optionalLinks"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.8719, 41.1171]
+      }
+    }
+  ]
+}

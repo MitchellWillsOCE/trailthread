@@ -1,0 +1,335 @@
+{
+  "fxNote": "Budgets shown in AUD (EUR × 1.65 reference rate).",
+  "trips": [
+    {
+      "key": "barNorth",
+      "emoji": "🚗",
+      "continent": "europe",
+      "folder": "rome-bar-north-classic",
+      "title": "Rome to Bar to North Adriatic Classic",
+      "description": "Extended classic route from Rome by train to Bari, ferry to Bar, then north with bigger hiking modules.",
+      "geojson": "./Trip/rome-bar-north-classic/bar-north-route.geojson",
+      "itinerary": "./Trip/rome-bar-north-classic/bar-north-itinerary.md",
+      "days": 14,
+      "distanceKm": 1850,
+      "budgetAudMin": 3960,
+      "budgetAudMax": 5775,
+      "region": "Italy · Balkans · Adriatic",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?width=1200",
+      "highlights": [
+        "High-speed train Rome–Naples–Bari through southern Italy",
+        "Coastal drive from Bari through Montenegro",
+        "Extended hikes at Kotor, Paklenica, and Plitvice",
+        "Heritage stops in Dubrovnik, Mostar, and Split"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?width=1200",
+          "caption": "Rome to Bar to North Adriatic Classic"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Forum-photos_taken_by_Hans_Hoffmann.jpg?width=1200",
+          "caption": "Roman Forum — Rome"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bari_Vecchia_aerial_view.jpg?width=1200",
+          "caption": "Bari Vecchia (old town)"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Nicola_%28Bari%29_-_Esterno.jpg?width=1200",
+          "caption": "Basilica di San Nicola, Bari"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Bar%2C_Montenegro.jpg?width=1200",
+          "caption": "Stari Bar ruins"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bar%2C_Montenegro_-_panoramio.jpg?width=1200",
+          "caption": "Bar harbour area"
+        }
+      ]
+    },
+    {
+      "key": "montenegroHeritage",
+      "emoji": "🏰",
+      "continent": "europe",
+      "folder": "montenegro-heritage-arc",
+      "title": "Montenegro and Heritage Arc",
+      "description": "Old towns, fortresses, viewpoints, and cultural stops through Montenegro to Herzegovina.",
+      "geojson": "./Trip/montenegro-heritage-arc/montenegro-heritage-route.geojson",
+      "itinerary": "./Trip/montenegro-heritage-arc/montenegro-heritage-itinerary.md",
+      "days": 9,
+      "distanceKm": 620,
+      "budgetAudMin": 2800,
+      "budgetAudMax": 4200,
+      "region": "Montenegro · Croatia · Bosnia",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Bar%2C_Montenegro.jpg?width=1200",
+      "highlights": [
+        "Fortresses from Bar to Kanli Kula",
+        "Bay of Kotor and Blue Cave boat day",
+        "Dubrovnik walls and Mostar bridge"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Bar%2C_Montenegro.jpg?width=1200",
+          "caption": "Montenegro and Heritage Arc"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bar%2C_Montenegro_-_panoramio.jpg?width=1200",
+          "caption": "Bar harbour area"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Miljevci%2C_Montenegro_-_panoramio.jpg/1280px-Miljevci%2C_Montenegro_-_panoramio.jpg",
+          "caption": "Miljevci, Montenegro - panoramio — Haj Nehaj Fortress"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Zankovi%C4%87i%2C_Montenegro_-_panoramio.jpg/1280px-Zankovi%C4%87i%2C_Montenegro_-_panoramio.jpg",
+          "caption": "Zankovići, Montenegro - panoramio — Haj Nehaj Fortress"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budva_Old_Town%2C_Montenegro.jpg?width=1200",
+          "caption": "Budva old town — Old Town of Budva"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Budva%2C_Jadranski_put_IV.jpg/1280px-Budva%2C_Jadranski_put_IV.jpg",
+          "caption": "Budva, Jadranski put IV — Old Town of Budva"
+        }
+      ]
+    },
+    {
+      "key": "parksIslands",
+      "emoji": "🌿",
+      "continent": "europe",
+      "folder": "parks-and-islands-explorer",
+      "title": "Parks and Islands Explorer",
+      "description": "National parks and island-focused route with active hiking blocks and scenic ferry legs.",
+      "geojson": "./Trip/parks-and-islands-explorer/parks-islands-route.geojson",
+      "itinerary": "./Trip/parks-and-islands-explorer/parks-islands-itinerary.md",
+      "days": 10,
+      "distanceKm": 980,
+      "budgetAudMin": 3200,
+      "budgetAudMax": 4800,
+      "region": "Croatia · Slovenia · Italy",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_Old_Town_from_the_city_walls.jpg?width=1200",
+      "highlights": [
+        "Mljet island national park by ferry",
+        "Krka waterfalls and Paklenica canyon",
+        "Plitvice lakes full-day trek"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_Old_Town_from_the_city_walls.jpg?width=1200",
+          "caption": "Parks and Islands Explorer"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stradun%2C_Dubrovnik%2C_Croatia.jpg?width=1200",
+          "caption": "Stradun, Dubrovnik"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Mljet%2C_Croatia_%28Unsplash%29.jpg/1280px-Mljet%2C_Croatia_%28Unsplash%29.jpg",
+          "caption": "Mljet, Croatia (Unsplash) — Mljet National Park"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aerial_view_of_Mljet_National_Park_in_Croatia_%2848608842776%29.jpg/1280px-Aerial_view_of_Mljet_National_Park_in_Croatia_%2848608842776%29.jpg",
+          "caption": "Aerial view of Mljet National Park in Croatia (48608842776)"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Diocletian%27s_Palace%2C_Split%2C_Croatia.jpg?width=1200",
+          "caption": "Diocletian's Palace, Split"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riva%2C_Split%2C_Croatia.jpg?width=1200",
+          "caption": "Riva waterfront, Split"
+        }
+      ]
+    },
+    {
+      "key": "caucasusHighlands",
+      "emoji": "⛰️",
+      "continent": "asia",
+      "folder": "caucasus-highlands-expedition",
+      "title": "Caucasus Highlands Expedition",
+      "description": "Fortresses, alpine roads, and mountain trekking through Georgia and Armenia.",
+      "geojson": "./Trip/caucasus-highlands-expedition/caucasus-highlands-route.geojson",
+      "itinerary": "./Trip/caucasus-highlands-expedition/caucasus-highlands-itinerary.md",
+      "days": 10,
+      "distanceKm": 740,
+      "budgetAudMin": 2900,
+      "budgetAudMax": 4500,
+      "region": "Georgia · Armenia",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Tbilisi%2C_Georgia.jpg?width=1200",
+      "highlights": [
+        "Gergeti Trinity Church ridge hike",
+        "Ananuri fortress on the Aragvi River",
+        "Yerevan, Geghard, and volcanic Azhdahak"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Tbilisi%2C_Georgia.jpg?width=1200",
+          "caption": "Caucasus Highlands Expedition"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narikala_Fortress%2C_Tbilisi.jpg?width=1200",
+          "caption": "Narikala Fortress — Tbilisi"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ananuri_fortress_%28Georgia%29.jpg?width=1200",
+          "caption": "Ananuri fortress, Georgia — Ananuri Fortress Complex"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Ananuri%2C_Georgia_%E2%80%94_Interior_of_Ananuri_Deity_Church.jpg/1280px-Ananuri%2C_Georgia_%E2%80%94_Interior_of_Ananuri_Deity_Church.jpg",
+          "caption": "Ananuri, Georgia — Interior of Ananuri Deity Church — Ananuri Fortress Complex"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gergeti_Trinity_Church%2C_Georgia.jpg?width=1200",
+          "caption": "Gergeti Trinity Church with Kazbek"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gergetier_Dreifaltigkeitskirche.jpg?width=1200",
+          "caption": "Gergeti church and mountains — Gergeti Trinity Church"
+        }
+      ]
+    },
+    {
+      "key": "vietnamHeritage",
+      "emoji": "🛶",
+      "continent": "asia",
+      "folder": "vietnam-heritage-nature-route",
+      "title": "Vietnam Heritage and Nature Route",
+      "description": "Bay cruising, imperial heritage, and cave trekking from north to central Vietnam.",
+      "geojson": "./Trip/vietnam-heritage-nature-route/vietnam-heritage-route.geojson",
+      "itinerary": "./Trip/vietnam-heritage-nature-route/vietnam-heritage-itinerary.md",
+      "days": 11,
+      "distanceKm": 1100,
+      "budgetAudMin": 2400,
+      "budgetAudMax": 3800,
+      "region": "Northern & Central Vietnam",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoan_Kiem_Lake%2C_Hanoi%2C_Vietnam.jpg?width=1200",
+      "highlights": [
+        "Ha Long Bay overnight cruise",
+        "Hue Imperial City and Marble Mountains",
+        "Phong Nha cave trekking block"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoan_Kiem_Lake%2C_Hanoi%2C_Vietnam.jpg?width=1200",
+          "caption": "Vietnam Heritage and Nature Route"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Literature%2C_Hanoi.jpg?width=1200",
+          "caption": "Temple of Literature, Hanoi"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%281%29.jpg/1280px-Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%281%29.jpg",
+          "caption": "Christian propaganda outside of the St. Joseph's Cathedral, Hanoi (1) — St. Joseph Cathedral"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%282%29.jpg/1280px-Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%282%29.jpg",
+          "caption": "Christian propaganda outside of the St. Joseph's Cathedral, Hanoi (2) — St. Joseph Cathedral"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ha_Long_Bay%2C_Vietnam.jpg?width=1200",
+          "caption": "Ha Long Bay karsts — Hạ Long"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halong_Bay_Vietnam.jpg?width=1200",
+          "caption": "Ha Long Bay cruise — Hạ Long"
+        }
+      ]
+    },
+    {
+      "key": "iberiaFortress",
+      "emoji": "🗺️",
+      "continent": "europe",
+      "folder": "iberia-fortresses-old-cities",
+      "title": "Iberia Fortresses and Old Cities",
+      "description": "Historic architecture and dramatic viewpoints from southern France to Gibraltar.",
+      "geojson": "./Trip/iberia-fortresses-old-cities/iberia-fortress-route.geojson",
+      "itinerary": "./Trip/iberia-fortresses-old-cities/iberia-fortress-itinerary.md",
+      "days": 12,
+      "distanceKm": 1420,
+      "budgetAudMin": 3500,
+      "budgetAudMax": 5200,
+      "region": "France · Spain · Gibraltar",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Balma_de_Na_Cristiana_-_Sud_-_loin.JPG/1280px-Balma_de_Na_Cristiana_-_Sud_-_loin.JPG",
+      "highlights": [
+        "Pyrenees fortresses and Perpignan",
+        "Madrid and Granada heritage cores",
+        "Rock of Gibraltar summit hike"
+      ],
+      "gallery": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Balma_de_Na_Cristiana_-_Sud_-_loin.JPG/1280px-Balma_de_Na_Cristiana_-_Sud_-_loin.JPG",
+          "caption": "Iberia Fortresses and Old Cities"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bellegarde_Canigou.jpg/1280px-Bellegarde_Canigou.jpg",
+          "caption": "Bellegarde Canigou — Bellegarde Fort"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Bellegarde_main_entrance.jpg/1280px-Bellegarde_main_entrance.jpg",
+          "caption": "Bellegarde main entrance — Bellegarde Fort"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839265793%29.jpg",
+          "caption": "Le Palais des Rois de Majorque (Perpignan) (8839265793)"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839272083%29.jpg",
+          "caption": "Le Palais des Rois de Majorque (Perpignan) (8839272083)"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Cristal%2C_Madrid%2C_Espa%C3%B1a%2C_2014-05-11%2C_DD_01.jpg?width=1200",
+          "caption": "Retiro Park, Madrid"
+        }
+      ]
+    },
+    {
+      "key": "japanCultural",
+      "emoji": "🏯",
+      "continent": "asia",
+      "folder": "japan-cultural-arc",
+      "title": "Japan Cultural Arc",
+      "description": "City contrast, garden heritage, and efficient route pacing across key regions.",
+      "geojson": "./Trip/japan-cultural-arc/japan-cultural-route.geojson",
+      "itinerary": "./Trip/japan-cultural-arc/japan-cultural-itinerary.md",
+      "days": 9,
+      "distanceKm": 890,
+      "budgetAudMin": 4200,
+      "budgetAudMax": 6200,
+      "region": "Honshu · Japan",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibuya_Crossing_2018.jpg?width=1200",
+      "highlights": [
+        "Tokyo neighbourhoods and food districts",
+        "Kenroku-en and Kanazawa samurai quarter",
+        "Osaka street food and return arc"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibuya_Crossing_2018.jpg?width=1200",
+          "caption": "Japan Cultural Arc"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sensoji_Temple_Tokyo_Skytree_View.jpg?width=1200",
+          "caption": "Senso-ji temple, Asakusa — Tokyo"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/1_Chome_Hirosaka%2C_Kanazawa-shi%2C_Ishikawa-ken_920-0962%2C_Japan_-_panoramio.jpg/1280px-1_Chome_Hirosaka%2C_Kanazawa-shi%2C_Ishikawa-ken_920-0962%2C_Japan_-_panoramio.jpg",
+          "caption": "1 Chome Hirosaka, Kanazawa-shi, Ishikawa-ken 920-0962, Japan - panoramio — Kenroku-en"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/20190705_Kenroku-en-6.jpg/1280px-20190705_Kenroku-en-6.jpg",
+          "caption": "20190705 Kenroku-en-6"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/150617kanazawa-omicho-PO.jpg/1280px-150617kanazawa-omicho-PO.jpg",
+          "caption": "150617kanazawa-omicho-PO — Kanazawa Old District"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/20131007_36_Kanazawa_-_Higashi_Chaya_District_%2810477160465%29.jpg/1280px-20131007_36_Kanazawa_-_Higashi_Chaya_District_%2810477160465%29.jpg",
+          "caption": "20131007 36 Kanazawa - Higashi Chaya District (10477160465) — Kanazawa Old District"
+        }
+      ]
+    }
+  ]
+}

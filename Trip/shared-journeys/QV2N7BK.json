@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "title": "Test loop",
+  "description": "test",
+  "region": "",
+  "continent": "europe",
+  "emoji": "🧭",
+  "days": 3,
+  "highlights": [],
+  "author": "",
+  "stops": [
+    {
+      "id": "stop-1",
+      "name": "Rome",
+      "country": "Italy",
+      "kind": "stop",
+      "mode": "drive",
+      "stopType": "start",
+      "day": "",
+      "tagline": "",
+      "lat": 41.9,
+      "lng": 12.5
+    },
+    {
+      "id": "stop-2",
+      "name": "Bari",
+      "country": "Italy",
+      "kind": "stop",
+      "mode": "drive",
+      "stopType": "end",
+      "day": "",
+      "tagline": "",
+      "lat": 41.1,
+      "lng": 16.9
+    }
+  ],
+  "code": "QV2N7BK",
+  "createdAt": "2026-05-25T05:03:05.049Z",
+  "distanceKm": 377
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "title": "Untitled journey",
+  "description": "",
+  "region": "",
+  "continent": "europe",
+  "emoji": "🧭",
+  "days": 7,
+  "highlights": [
+    "Moscow, Russia",
+    "London, United Kingdom",
+    "Dublin, Ireland",
+    "Tour du Mont Rose, Switzerland"
+  ],
+  "author": "",
+  "stops": [
+    {
+      "id": "moscow-ru",
+      "name": "Moscow",
+      "country": "Russia",
+      "kind": "city",
+      "mode": "drive",
+      "stopType": "start",
+      "day": "",
+      "tagline": "capital and most populous city of Russia.",
+      "lat": 55.7558,
+      "lng": 37.6173
+    },
+    {
+      "id": "london-gb",
+      "name": "London",
+      "country": "United Kingdom",
+      "kind": "city",
+      "mode": "drive",
+      "stopType": "city",
+      "day": "",
+      "tagline": "capital and largest city of England and the United Kingdom.",
+      "lat": 51.5074,
+      "lng": -0.1278
+    },
+    {
+      "id": "dublin-ie",
+      "name": "Dublin",
+      "country": "Ireland",
+      "kind": "city",
+      "mode": "ferry",
+      "stopType": "city",
+      "day": "",
+      "tagline": "capital and largest city of Ireland.",
+      "lat": 53.3498,
+      "lng": -6.2603
+    },
+    {
+      "id": "europe-44202",
+      "name": "Tour du Mont Rose",
+      "country": "Switzerland",
+      "kind": "hike",
+      "mode": "fly",
+      "stopType": "end",
+      "day": "",
+      "tagline": "mountain trail in the Alps",
+      "lat": 45.08950011714922,
+      "lng": 7.9227386367483295
+    }
+  ],
+  "code": "SNWTFY6",
+  "createdAt": "2026-05-26T01:06:22.482Z",
+  "distanceKm": 4339
+}

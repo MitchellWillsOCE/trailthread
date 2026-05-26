@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "storage": "sqlite",
+  "database": "./Trip/poi/poi.db",
+  "apiBase": "/api/poi",
+  "regions": [
+    {
+      "id": "europe",
+      "label": "Europe",
+      "count": 95
+    }
+  ]
+}

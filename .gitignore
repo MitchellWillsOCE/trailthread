@@ -1,0 +1,32 @@
+node_modules/
+dist/
+scripts/cache/
+scripts/__pycache__/
+**/__pycache__/
+
+# Large built city DB (regenerated from seed JSON via `npm run build:cities`)
+Trip/cities/cities.db
+
+# SQLite runtime files
+*.db-wal
+*.db-shm
+
+# Logs and temporary debug session artifacts
+logs/
+*.log
+debug-*.log
+.tmp-*
+
+# Backups & build-progress checkpoints
+*.bak
+scripts/data/_seed-correction-progress.json
+
+# Editor / IDE metadata
+.cursor/
+.vscode/
+.idea/
+*.swp
+
+# OS junk
+.DS_Store
+Thumbs.db

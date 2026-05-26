@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "storage": "sqlite",
+  "database": "./Trip/parks/parks.db",
+  "regions": [
+    {
+      "id": "europe",
+      "label": "Europe",
+      "count": 63
+    }
+  ]
+}

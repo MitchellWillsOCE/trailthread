@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 2,
+  "storage": "sqlite",
+  "database": "./Trip/cities/cities.db",
+  "apiBase": "/api/cities",
+  "regions": [
+    {
+      "id": "europe",
+      "label": "Europe",
+      "count": 8589,
+      "legacyGeojson": "./Trip/cities/europe/cities.geojson"
+    }
+  ]
+}

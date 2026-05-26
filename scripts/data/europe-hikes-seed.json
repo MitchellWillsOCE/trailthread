@@ -1,0 +1,660 @@
+[
+  {
+    "osm_id": 16287,
+    "name": "West Highland Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 98
+  },
+  {
+    "osm_id": 4080347,
+    "name": "Pennine Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 95
+  },
+  {
+    "osm_id": 2376086,
+    "name": "South West Coast Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 94
+  },
+  {
+    "osm_id": 183744,
+    "name": "Kerry Way",
+    "country": "Ireland",
+    "cc": "ie",
+    "popularity": 88
+  },
+  {
+    "osm_id": 2740,
+    "name": "Wicklow Way",
+    "country": "Ireland",
+    "cc": "ie",
+    "popularity": 82
+  },
+  {
+    "osm_id": 124456,
+    "name": "Tour du Mont Blanc",
+    "country": "France",
+    "cc": "fr",
+    "popularity": 100
+  },
+  {
+    "osm_id": 7411272,
+    "name": "GR 10",
+    "country": "France",
+    "cc": "fr",
+    "popularity": 92
+  },
+  {
+    "osm_id": 101692,
+    "name": "GR 20",
+    "country": "France",
+    "cc": "fr",
+    "popularity": 96
+  },
+  {
+    "osm_id": 961354,
+    "name": "Alta Via 1",
+    "country": "Italy",
+    "cc": "it",
+    "popularity": 93
+  },
+  {
+    "osm_id": 12359033,
+    "name": "Alpine Pass Route",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 85
+  },
+  {
+    "osm_id": 44201,
+    "name": "Walker's Haute Route",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 91
+  },
+  {
+    "osm_id": 254324,
+    "name": "Kungsleden",
+    "country": "Sweden",
+    "cc": "se",
+    "popularity": 94
+  },
+  {
+    "osm_id": 2437984,
+    "name": "Nordkalottleden",
+    "country": "Norway",
+    "cc": "no",
+    "popularity": 86
+  },
+  {
+    "osm_id": 1271661,
+    "name": "Slovenian Mountain Trail",
+    "country": "Slovenia",
+    "cc": "si",
+    "popularity": 84
+  },
+  {
+    "osm_id": 7592697,
+    "name": "Rota Vicentina",
+    "country": "Portugal",
+    "cc": "pt",
+    "popularity": 89
+  },
+  {
+    "osm_id": 51855,
+    "name": "Lycian Way",
+    "country": "Turkey",
+    "cc": "tr",
+    "popularity": 87
+  },
+  {
+    "osm_id": 11860709,
+    "name": "Via Francigena",
+    "country": "Italy",
+    "cc": "it",
+    "popularity": 88
+  },
+  {
+    "osm_id": 2163573,
+    "name": "Camino Francés",
+    "country": "Spain",
+    "cc": "es",
+    "popularity": 97
+  },
+  {
+    "osm_id": 1818074,
+    "name": "E5 European Long Distance Path",
+    "country": "Austria",
+    "cc": "at",
+    "popularity": 83
+  },
+  {
+    "osm_id": 114289,
+    "name": "Malerweg",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 79
+  },
+  {
+    "osm_id": 2685,
+    "name": "Rheinsteig",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 78
+  },
+  {
+    "osm_id": 126572,
+    "name": "Great Glen Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 88
+  },
+  {
+    "osm_id": 49215,
+    "name": "John Muir Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 82
+  },
+  {
+    "osm_id": 38791,
+    "name": "Hadrian's Wall Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 85
+  },
+  {
+    "osm_id": 77976,
+    "name": "South Downs Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 83
+  },
+  {
+    "osm_id": 77964,
+    "name": "Pembrokeshire Coast Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 86
+  },
+  {
+    "osm_id": 9649,
+    "name": "Offa's Dyke Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 84
+  },
+  {
+    "osm_id": 65239,
+    "name": "Cotswold Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 80
+  },
+  {
+    "osm_id": 2989585,
+    "name": "Beara Way",
+    "country": "Ireland",
+    "cc": "ie",
+    "popularity": 84
+  },
+  {
+    "osm_id": 21664,
+    "name": "Dingle Way",
+    "country": "Ireland",
+    "cc": "ie",
+    "popularity": 83
+  },
+  {
+    "osm_id": 7973533,
+    "name": "Pieterpad",
+    "country": "Netherlands",
+    "cc": "nl",
+    "popularity": 81
+  },
+  {
+    "osm_id": 4580796,
+    "name": "GR 5",
+    "country": "France",
+    "cc": "fr",
+    "popularity": 88
+  },
+  {
+    "osm_id": 12770070,
+    "name": "GR 92",
+    "country": "France",
+    "cc": "fr",
+    "popularity": 80
+  },
+  {
+    "osm_id": 223039,
+    "name": "GR 70",
+    "country": "France",
+    "cc": "fr",
+    "popularity": 78
+  },
+  {
+    "osm_id": 8865914,
+    "name": "GR 11",
+    "country": "Spain",
+    "cc": "es",
+    "popularity": 90
+  },
+  {
+    "osm_id": 62900,
+    "name": "Westweg",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 82
+  },
+  {
+    "osm_id": 1176757,
+    "name": "Eifelsteig",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 76
+  },
+  {
+    "osm_id": 6354078,
+    "name": "Mullerthal Trail",
+    "country": "Luxembourg",
+    "cc": "lu",
+    "popularity": 77
+  },
+  {
+    "osm_id": 1225037,
+    "name": "Laugavegur",
+    "country": "Iceland",
+    "cc": "is",
+    "popularity": 92
+  },
+  {
+    "osm_id": 398473,
+    "name": "Nordkalottleden (Finnmark)",
+    "country": "Norway",
+    "cc": "no",
+    "popularity": 80
+  },
+  {
+    "osm_id": 130871,
+    "name": "Rallarvegen",
+    "country": "Norway",
+    "cc": "no",
+    "popularity": 79
+  },
+  {
+    "osm_id": 435822,
+    "name": "Jotunheimen Trail",
+    "country": "Norway",
+    "cc": "no",
+    "popularity": 81
+  },
+  {
+    "osm_id": 280016,
+    "name": "Bohusleden",
+    "country": "Sweden",
+    "cc": "se",
+    "popularity": 78
+  },
+  {
+    "osm_id": 961355,
+    "name": "Alta Via 2",
+    "country": "Italy",
+    "cc": "it",
+    "popularity": 86
+  },
+  {
+    "osm_id": 222322,
+    "name": "Via degli Dei",
+    "country": "Italy",
+    "cc": "it",
+    "popularity": 80
+  },
+  {
+    "osm_id": 19001007,
+    "name": "Camino del Norte",
+    "country": "Spain",
+    "cc": "es",
+    "popularity": 85
+  },
+  {
+    "osm_id": 7534244,
+    "name": "Camino Portugués",
+    "country": "Portugal",
+    "cc": "pt",
+    "popularity": 84
+  },
+  {
+    "osm_id": 1818075,
+    "name": "E4 European Long Distance Path",
+    "country": "Greece",
+    "cc": "gr",
+    "popularity": 82
+  },
+  {
+    "osm_id": 4415749,
+    "name": "St Paul Trail",
+    "country": "Turkey",
+    "cc": "tr",
+    "popularity": 76
+  },
+  {
+    "osm_id": 1271662,
+    "name": "Juliana Trail",
+    "country": "Slovenia",
+    "cc": "si",
+    "popularity": 79
+  },
+  {
+    "osm_id": 72547,
+    "name": "Tour of the Jungfrau Region",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 84
+  },
+  {
+    "osm_id": 44202,
+    "name": "Tour du Mont Rose",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 83
+  },
+  {
+    "osm_id": 61186,
+    "name": "Goldsteig",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 74
+  },
+  {
+    "osm_id": 3632589,
+    "name": "Moselsteig",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 73
+  },
+  {
+    "osm_id": 20469,
+    "name": "Thames Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 81
+  },
+  {
+    "osm_id": 16327216,
+    "name": "Yorkshire Wolds Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 72
+  },
+  {
+    "osm_id": 4087652,
+    "name": "Cleveland Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 77
+  },
+  {
+    "osm_id": 74612,
+    "name": "Peddars Way and Norfolk Coast Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 71
+  },
+  {
+    "osm_id": 1957071,
+    "name": "North Downs Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 74
+  },
+  {
+    "osm_id": 1026251,
+    "name": "Speyside Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 70
+  },
+  {
+    "osm_id": 4736666,
+    "name": "Southern Upland Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 69
+  },
+  {
+    "osm_id": 189465,
+    "name": "Rob Roy Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 68
+  },
+  {
+    "osm_id": 1754599,
+    "name": "Moray Coast Trail",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 67
+  },
+  {
+    "osm_id": 10841122,
+    "name": "Fife Coastal Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 70
+  },
+  {
+    "osm_id": 4640636,
+    "name": "Arran Coastal Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 66
+  },
+  {
+    "osm_id": 1756394,
+    "name": "Ayrshire Coastal Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 65
+  },
+  {
+    "osm_id": 7016887,
+    "name": "Berwickshire Coastal Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 64
+  },
+  {
+    "osm_id": 1713853,
+    "name": "Borders Abbeys Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 63
+  },
+  {
+    "osm_id": 1756395,
+    "name": "Cateran Trail",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 62
+  },
+  {
+    "osm_id": 3548216,
+    "name": "Cowal Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 61
+  },
+  {
+    "osm_id": 9686036,
+    "name": "East Highland Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 60
+  },
+  {
+    "osm_id": 3170152,
+    "name": "Great Trossachs Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 59
+  },
+  {
+    "osm_id": 12145,
+    "name": "Coast to Coast Walk",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 90
+  },
+  {
+    "osm_id": 8879,
+    "name": "The Ridgeway",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 79
+  },
+  {
+    "osm_id": 77256,
+    "name": "Glyndŵr's Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 74
+  },
+  {
+    "osm_id": 1756629,
+    "name": "Kintyre Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 72
+  },
+  {
+    "osm_id": 4515009,
+    "name": "St Cuthbert's Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 73
+  },
+  {
+    "osm_id": 11743021,
+    "name": "A Pennine Journey",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 76
+  },
+  {
+    "osm_id": 1756393,
+    "name": "Annandale Way",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 70
+  },
+  {
+    "osm_id": 9256539,
+    "name": "Voralpenweg",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 82
+  },
+  {
+    "osm_id": 2184844,
+    "name": "Alpe-Adria-Trail",
+    "country": "Slovenia",
+    "cc": "si",
+    "popularity": 88
+  },
+  {
+    "osm_id": 22603,
+    "name": "Harzer Hexenstieg",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 78
+  },
+  {
+    "osm_id": 1028502,
+    "name": "GR 105",
+    "country": "France",
+    "cc": "fr",
+    "popularity": 77
+  },
+  {
+    "osm_id": 11083,
+    "name": "E6 European Long Distance Path",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 80
+  },
+  {
+    "osm_id": 37360,
+    "name": "E1 European Long Distance Path",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 78
+  },
+  {
+    "osm_id": 16516269,
+    "name": "Sentiero Azzurro",
+    "country": "Italy",
+    "cc": "it",
+    "popularity": 85
+  },
+  {
+    "osm_id": 128572,
+    "name": "St Olavsleden",
+    "country": "Norway",
+    "cc": "no",
+    "popularity": 82
+  },
+  {
+    "osm_id": 19298101,
+    "name": "Camino Primitivo",
+    "country": "Spain",
+    "cc": "es",
+    "popularity": 83
+  },
+  {
+    "osm_id": 270973,
+    "name": "Via Romea Germanica",
+    "country": "Italy",
+    "cc": "it",
+    "popularity": 75
+  },
+  {
+    "osm_id": 4728034,
+    "name": "Lechweg",
+    "country": "Austria",
+    "cc": "at",
+    "popularity": 86
+  },
+  {
+    "osm_id": 240736,
+    "name": "Berliner Höhenweg",
+    "country": "Germany",
+    "cc": "de",
+    "popularity": 81
+  },
+  {
+    "osm_id": 11514308,
+    "name": "Ötztal Trek",
+    "country": "Austria",
+    "cc": "at",
+    "popularity": 84
+  },
+  {
+    "osm_id": 3305327,
+    "name": "Adlerweg",
+    "country": "Austria",
+    "cc": "at",
+    "popularity": 88
+  },
+  {
+    "osm_id": 3971851,
+    "name": "England Coast Path",
+    "country": "United Kingdom",
+    "cc": "gb",
+    "popularity": 87
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "storage": "sqlite",
+  "database": "./Trip/hikes/hikes.db",
+  "apiBase": "/api/hikes",
+  "source": "OpenStreetMap via Overpass API",
+  "regions": [
+    {
+      "id": "europe",
+      "label": "Europe",
+      "count": 96,
+      "legacyGeojson": "./Trip/hikes/europe/hikes-index.geojson"
+    }
+  ]
+}

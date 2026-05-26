@@ -1,0 +1,128 @@
+[
+  { "name": "Dubrovnik City Walls", "country": "Croatia", "cc": "hr", "lat": 42.641, "lng": 18.107, "category": "fortress", "popularity": 98, "tagline": "UNESCO cliff-top ramparts encircling the Pearl of the Adriatic" },
+  { "name": "Diocletian's Palace", "country": "Croatia", "cc": "hr", "lat": 43.508, "lng": 16.440, "category": "heritage", "popularity": 97, "tagline": "Living Roman imperial palace at the heart of Split's old town" },
+  { "name": "Šibenik Cathedral of St James", "country": "Croatia", "cc": "hr", "lat": 43.735, "lng": 15.889, "category": "monument", "popularity": 92, "tagline": "Renaissance cathedral built entirely of stone without mortar" },
+  { "name": "Trogir Historic Centre", "country": "Croatia", "cc": "hr", "lat": 43.517, "lng": 16.251, "category": "heritage", "popularity": 90, "tagline": "Venetian-Romanesque island town frozen in Adriatic time" },
+  { "name": "Pula Arena", "country": "Croatia", "cc": "hr", "lat": 44.873, "lng": 13.850, "category": "monument", "popularity": 91, "tagline": "One of the world's best-preserved Roman amphitheatres" },
+  { "name": "Klis Fortress", "country": "Croatia", "cc": "hr", "lat": 43.559, "lng": 16.522, "category": "fortress", "popularity": 88, "tagline": "Strategic cliff fortress above Split—Game of Thrones filming site" },
+  { "name": "Ston Salt Works", "country": "Croatia", "cc": "hr", "lat": 42.839, "lng": 17.704, "category": "heritage", "popularity": 85, "tagline": "Medieval salt pans and Europe's longest preserved town walls" },
+  { "name": "Korčula Old Town", "country": "Croatia", "cc": "hr", "lat": 42.961, "lng": 17.135, "category": "heritage", "popularity": 87, "tagline": "Marco Polo's reputed birthplace—a miniature Dubrovnik on stone" },
+  { "name": "Hvar Fortica", "country": "Croatia", "cc": "hr", "lat": 43.170, "lng": 16.445, "category": "fortress", "popularity": 86, "tagline": "Spanish fortress overlooking lavender fields and Pakleni Islands" },
+  { "name": "Euphrasian Basilica", "country": "Croatia", "cc": "hr", "lat": 45.227, "lng": 13.594, "category": "monument", "popularity": 84, "tagline": "Byzantine mosaics in Poreč—among Croatia's finest early Christian art" },
+  { "name": "Zadar Sea Organ", "country": "Croatia", "cc": "hr", "lat": 44.117, "lng": 15.224, "category": "monument", "popularity": 83, "tagline": "Modern sound sculpture where waves play music on the riva" },
+  { "name": "Trakošćan Castle", "country": "Croatia", "cc": "hr", "lat": 46.258, "lng": 15.950, "category": "fortress", "popularity": 80, "tagline": "Romantic neo-Gothic castle mirrored in a forest lake" },
+
+  { "name": "Kotor Fortifications", "country": "Montenegro", "cc": "me", "lat": 42.424, "lng": 18.771, "category": "fortress", "popularity": 97, "tagline": "Bay of Kotor's serpentine walls climbing to St. John's fortress" },
+  { "name": "Ostrog Monastery", "country": "Montenegro", "cc": "me", "lat": 42.975, "lng": 19.030, "category": "monument", "popularity": 95, "tagline": "Orthodox monastery carved into a sheer vertical cliff face" },
+  { "name": "Perast — Our Lady of the Rocks", "country": "Montenegro", "cc": "me", "lat": 42.487, "lng": 18.689, "category": "heritage", "popularity": 92, "tagline": "Baroque islet church built on sailors' pledged stones" },
+  { "name": "Sveti Stefan", "country": "Montenegro", "cc": "me", "lat": 42.256, "lng": 18.891, "category": "heritage", "popularity": 94, "tagline": "Fishermen's islet village turned iconic Adriatic icon" },
+  { "name": "Haj Nehaj Fortress", "country": "Montenegro", "cc": "me", "lat": 42.142, "lng": 19.046, "category": "fortress", "popularity": 82, "tagline": "Venetian hilltop citadel guarding the approach to the Bay of Kotor" },
+  { "name": "Kanli Kula", "country": "Montenegro", "cc": "me", "lat": 42.454, "lng": 18.537, "category": "fortress", "popularity": 81, "tagline": "Blood Tower fortress turned open-air stage above Herceg Novi" },
+  { "name": "Old Town of Budva", "country": "Montenegro", "cc": "me", "lat": 42.286, "lng": 18.840, "category": "heritage", "popularity": 88, "tagline": "Walled Adriatic resort town with 2,500 years of layered history" },
+  { "name": "Cetinje Monastery", "country": "Montenegro", "cc": "me", "lat": 42.388, "lng": 18.924, "category": "monument", "popularity": 80, "tagline": "Spiritual heart of Montenegro—royal capital and relic shrine" },
+
+  { "name": "Stari Most", "country": "Bosnia and Herzegovina", "cc": "ba", "lat": 43.337, "lng": 17.815, "category": "monument", "popularity": 96, "tagline": "Ottoman single-arch bridge symbolising Mostar's reunion" },
+  { "name": "Počitelj Old Town", "country": "Bosnia and Herzegovina", "cc": "ba", "lat": 43.134, "lng": 17.732, "category": "heritage", "popularity": 88, "tagline": "Ottoman hillside citadel above the Neretva canyon" },
+  { "name": "Mehmed Paša Sokolović Bridge", "country": "Bosnia and Herzegovina", "cc": "ba", "lat": 43.782, "lng": 19.288, "category": "monument", "popularity": 85, "tagline": "Sinan's graceful Drina crossing—a UNESCO Ottoman masterpiece" },
+  { "name": "Sarajevo Baščaršija", "country": "Bosnia and Herzegovina", "cc": "ba", "lat": 43.859, "lng": 18.431, "category": "heritage", "popularity": 90, "tagline": "Ottoman bazaar quarter where East meets West at the Latin Bridge" },
+
+  { "name": "Predjama Castle", "country": "Slovenia", "cc": "si", "lat": 45.815, "lng": 14.127, "category": "fortress", "popularity": 93, "tagline": "Renaissance castle built into the mouth of a cave cliff" },
+  { "name": "Pilgrimage Church of the Assumption", "country": "Slovenia", "cc": "si", "lat": 46.362, "lng": 14.090, "category": "monument", "popularity": 91, "tagline": "Baroque church on Bled island reached by traditional pletna boat" },
+  { "name": "Škocjan Caves", "country": "Slovenia", "cc": "si", "lat": 45.666, "lng": 13.968, "category": "heritage", "popularity": 89, "tagline": "Underground cathedral canyon—UNESCO karst wonder" },
+  { "name": "Ljubljana Castle", "country": "Slovenia", "cc": "si", "lat": 46.449, "lng": 14.508, "category": "fortress", "popularity": 84, "tagline": "Hilltop symbol of Slovenia's capital above the dragon bridge" },
+
+  { "name": "Butrint Archaeological Park", "country": "Albania", "cc": "al", "lat": 39.745, "lng": 20.020, "category": "heritage", "popularity": 90, "tagline": "Greek, Roman, and Venetian layers in a lagoon sanctuary" },
+  { "name": "Gjirokastër Old Bazaar", "country": "Albania", "cc": "al", "lat": 40.075, "lng": 20.138, "category": "heritage", "popularity": 88, "tagline": "Stone-city of a thousand steps—Ottoman Albania preserved" },
+  { "name": "Berat Castle Quarter", "country": "Albania", "cc": "al", "lat": 40.706, "lng": 19.952, "category": "fortress", "popularity": 87, "tagline": "City of a thousand windows beneath a living castle" },
+  { "name": "Krujë Castle", "country": "Albania", "cc": "al", "lat": 41.508, "lng": 19.793, "category": "fortress", "popularity": 86, "tagline": "Skanderbeg's mountain stronghold and national identity shrine" },
+
+  { "name": "Belgrade Fortress", "country": "Serbia", "cc": "rs", "lat": 44.823, "lng": 20.449, "category": "fortress", "popularity": 88, "tagline": "Kalemegdan citadel where the Danube meets the Sava" },
+  { "name": "Studenica Monastery", "country": "Serbia", "cc": "rs", "lat": 43.480, "lng": 20.536, "category": "monument", "popularity": 85, "tagline": "Medieval Serbian Orthodox jewel of white marble and frescoes" },
+  { "name": "Đavolja Varoš", "country": "Serbia", "cc": "rs", "lat": 42.370, "lng": 21.700, "category": "heritage", "popularity": 82, "tagline": "Eerie earth pyramids—nature's stone towers on Mount Radan" },
+
+  { "name": "Ohrid St. Panteleimon", "country": "North Macedonia", "cc": "mk", "lat": 41.111, "lng": 20.788, "category": "monument", "popularity": 90, "tagline": "Byzantine monastery above Lake Ohrid's UNESCO shores" },
+  { "name": "Matka Canyon", "country": "North Macedonia", "cc": "mk", "lat": 41.960, "lng": 21.308, "category": "heritage", "popularity": 84, "tagline": "Limestone gorge and cave churches minutes from Skopje" },
+
+  { "name": "Meteora Monasteries", "country": "Greece", "cc": "gr", "lat": 39.721, "lng": 21.631, "category": "monument", "popularity": 98, "tagline": "Orthodox monasteries perched on sandstone pillars in Thessaly" },
+  { "name": "Delphi Archaeological Site", "country": "Greece", "cc": "gr", "lat": 38.482, "lng": 22.501, "category": "heritage", "popularity": 95, "tagline": "Oracle of Apollo—centre of the ancient Greek world" },
+  { "name": "Knossos Palace", "country": "Greece", "cc": "gr", "lat": 35.298, "lng": 25.163, "category": "heritage", "popularity": 93, "tagline": "Minoan labyrinth palace of King Minos on Crete" },
+  { "name": "Acropolis of Athens", "country": "Greece", "cc": "gr", "lat": 37.971, "lng": 23.726, "category": "monument", "popularity": 99, "tagline": "Parthenon and classical Athens crowning the Attic plateau" },
+  { "name": "Monemvasia Lower Town", "country": "Greece", "cc": "gr", "lat": 36.687, "lng": 23.055, "category": "heritage", "popularity": 89, "tagline": "Medieval rock-castle town—the Gibraltar of the Aegean" },
+  { "name": "Rhodes Old Town", "country": "Greece", "cc": "gr", "lat": 36.444, "lng": 28.227, "category": "fortress", "popularity": 92, "tagline": "Knights of St. John walled city on the Dodecanese" },
+
+  { "name": "Colosseum", "country": "Italy", "cc": "it", "lat": 41.890, "lng": 12.492, "category": "monument", "popularity": 99, "tagline": "Rome's amphitheatre—icon of imperial spectacle" },
+  { "name": "Pompeii Archaeological Park", "country": "Italy", "cc": "it", "lat": 40.748, "lng": 14.489, "category": "heritage", "popularity": 97, "tagline": "Roman city frozen by Vesuvius in AD 79" },
+  { "name": "Trulli of Alberobello", "country": "Italy", "cc": "it", "lat": 40.786, "lng": 17.238, "category": "heritage", "popularity": 91, "tagline": "Conical dry-stone houses unique to Puglia" },
+  { "name": "Matera Sassi", "country": "Italy", "cc": "it", "lat": 40.666, "lng": 16.606, "category": "heritage", "popularity": 94, "tagline": "Prehistoric cave dwellings—one of the world's oldest towns" },
+  { "name": "St. Mark's Basilica", "country": "Italy", "cc": "it", "lat": 45.434, "lng": 12.340, "category": "monument", "popularity": 96, "tagline": "Byzantine gold mosaics at the heart of Venetian power" },
+  { "name": "Leaning Tower of Pisa", "country": "Italy", "cc": "it", "lat": 43.723, "lng": 10.397, "category": "monument", "popularity": 90, "tagline": "Romanesque campanile in the Piazza dei Miracoli" },
+  { "name": "Valle dei Templi", "country": "Italy", "cc": "it", "lat": 37.289, "lng": 13.599, "category": "heritage", "popularity": 88, "tagline": "Greek temples on a ridge above Agrigento, Sicily" },
+
+  { "name": "Eiffel Tower", "country": "France", "cc": "fr", "lat": 48.858, "lng": 2.294, "category": "monument", "popularity": 99, "tagline": "Iron lattice symbol of Paris and the Belle Époque" },
+  { "name": "Mont-Saint-Michel", "country": "France", "cc": "fr", "lat": 48.636, "lng": -1.511, "category": "heritage", "popularity": 97, "tagline": "Tidal abbey island rising from the sands of Normandy" },
+  { "name": "Palace of Versailles", "country": "France", "cc": "fr", "lat": 48.805, "lng": 2.120, "category": "monument", "popularity": 96, "tagline": "Sun King's baroque seat of absolute monarchy" },
+  { "name": "Pont du Gard", "country": "France", "cc": "fr", "lat": 43.947, "lng": 4.535, "category": "monument", "popularity": 90, "tagline": "Roman aqueduct bridge spanning the Gardon gorge" },
+  { "name": "Carcassonne Citadel", "country": "France", "cc": "fr", "lat": 43.207, "lng": 2.364, "category": "fortress", "popularity": 92, "tagline": "Restored medieval double-walled city on the Cathar trail" },
+
+  { "name": "Neuschwanstein Castle", "country": "Germany", "cc": "de", "lat": 47.557, "lng": 10.749, "category": "fortress", "popularity": 96, "tagline": "Ludwig II's fairy-tale castle above the Bavarian Alps" },
+  { "name": "Cologne Cathedral", "country": "Germany", "cc": "de", "lat": 50.941, "lng": 6.958, "category": "monument", "popularity": 93, "tagline": "Gothic twin spires dominating the Rhine skyline" },
+  { "name": "Brandenburg Gate", "country": "Germany", "cc": "de", "lat": 52.516, "lng": 13.378, "category": "monument", "popularity": 91, "tagline": "Berlin's neoclassical gateway from division to unity" },
+  { "name": "Wartburg Castle", "country": "Germany", "cc": "de", "lat": 50.966, "lng": 10.306, "category": "fortress", "popularity": 85, "tagline": "Where Luther translated the Bible—UNESCO hilltop castle" },
+
+  { "name": "Alhambra", "country": "Spain", "cc": "es", "lat": 37.176, "lng": -3.588, "category": "fortress", "popularity": 98, "tagline": "Nasrid palaces and gardens—Moorish Granada perfected" },
+  { "name": "Sagrada Família", "country": "Spain", "cc": "es", "lat": 41.403, "lng": 2.174, "category": "monument", "popularity": 97, "tagline": "Gaudí's unfinished basilica of organic stone and light" },
+  { "name": "Mezquita-Catedral of Córdoba", "country": "Spain", "cc": "es", "lat": 37.879, "lng": -4.780, "category": "monument", "popularity": 95, "tagline": "Forest of columns where mosque and cathedral coexist" },
+  { "name": "Santiago de Compostela Cathedral", "country": "Spain", "cc": "es", "lat": 42.880, "lng": -8.545, "category": "monument", "popularity": 94, "tagline": "Pilgrimage endpoint of the Camino de Santiago" },
+  { "name": "Guggenheim Museum Bilbao", "country": "Spain", "cc": "es", "lat": 43.269, "lng": -2.934, "category": "monument", "popularity": 88, "tagline": "Titanium curves that revived a Basque industrial city" },
+
+  { "name": "Tower of London", "country": "United Kingdom", "cc": "gb", "lat": 51.508, "lng": -0.076, "category": "fortress", "popularity": 94, "tagline": "Norman keep and crown jewels on the Thames" },
+  { "name": "Stonehenge", "country": "United Kingdom", "cc": "gb", "lat": 51.179, "lng": -1.826, "category": "heritage", "popularity": 93, "tagline": "Neolithic stone circle aligned to solstice sunrises" },
+  { "name": "Edinburgh Castle", "country": "United Kingdom", "cc": "gb", "lat": 55.949, "lng": -3.200, "category": "fortress", "popularity": 92, "tagline": "Volcanic crag fortress above Scotland's capital" },
+  { "name": "Giant's Causeway", "country": "United Kingdom", "cc": "gb", "lat": 55.241, "lng": -6.512, "category": "heritage", "popularity": 90, "tagline": "Hexagonal basalt columns of Irish myth and geology" },
+  { "name": "Charles Bridge", "country": "Czech Republic", "cc": "cz", "lat": 50.086, "lng": 14.411, "category": "monument", "popularity": 91, "tagline": "Baroque statues crossing the Vltava in Prague" },
+  { "name": "Prague Castle", "country": "Czech Republic", "cc": "cz", "lat": 50.090, "lng": 14.399, "category": "fortress", "popularity": 93, "tagline": "Largest ancient castle complex in the world" },
+
+  { "name": "Mont Blanc", "country": "France", "cc": "fr", "lat": 45.833, "lng": 6.865, "category": "mountain", "popularity": 96, "tagline": "Western Europe's highest peak on the Franco-Italian border" },
+  { "name": "Matterhorn", "country": "Switzerland", "cc": "ch", "lat": 45.976, "lng": 7.659, "category": "mountain", "popularity": 95, "tagline": "Pyramidal Alp that defines Swiss mountaineering" },
+  { "name": "Triglav", "country": "Slovenia", "cc": "si", "lat": 46.378, "lng": 13.836, "category": "mountain", "popularity": 88, "tagline": "Slovenia's sacred summit in the Julian Alps" },
+  { "name": "Mount Etna", "country": "Italy", "cc": "it", "lat": 37.751, "lng": 14.993, "category": "mountain", "popularity": 92, "tagline": "Europe's most active volcano towering over eastern Sicily" },
+  { "name": "Grossglockner", "country": "Austria", "cc": "at", "lat": 47.074, "lng": 12.694, "category": "mountain", "popularity": 86, "tagline": "Austria's highest peak above the High Tauern" },
+
+  { "name": "Bran Castle", "country": "Romania", "cc": "ro", "lat": 45.515, "lng": 25.367, "category": "fortress", "popularity": 90, "tagline": "Transylvanian hill castle linked to Dracula legend" },
+  { "name": "Painted Monasteries of Bucovina", "country": "Romania", "cc": "ro", "lat": 47.778, "lng": 25.712, "category": "monument", "popularity": 88, "tagline": "Exterior frescoes on Moldavian church walls" },
+  { "name": "Sighișoara Citadel", "country": "Romania", "cc": "ro", "lat": 46.220, "lng": 24.793, "category": "heritage", "popularity": 87, "tagline": "Birthplace of Vlad the Impaler—intact Saxon citadel" },
+
+  { "name": "Rila Monastery", "country": "Bulgaria", "cc": "bg", "lat": 42.133, "lng": 23.340, "category": "monument", "popularity": 90, "tagline": "Bulgarian Orthodox masterpiece in the Rila Mountains" },
+  { "name": "Plovdiv Old Town", "country": "Bulgaria", "cc": "bg", "lat": 42.147, "lng": 24.751, "category": "heritage", "popularity": 84, "tagline": "Thracian, Roman, and Revival houses on seven hills" },
+
+  { "name": "Wawel Castle", "country": "Poland", "cc": "pl", "lat": 50.054, "lng": 19.935, "category": "fortress", "popularity": 91, "tagline": "Polish kings' hilltop seat above the Vistula in Kraków" },
+  { "name": "Malbork Castle", "country": "Poland", "cc": "pl", "lat": 54.040, "lng": 19.028, "category": "fortress", "popularity": 89, "tagline": "World's largest castle by area—Teutonic brick Gothic" },
+  { "name": "Wieliczka Salt Mine", "country": "Poland", "cc": "pl", "lat": 49.983, "lng": 20.054, "category": "heritage", "popularity": 88, "tagline": "Underground chapels carved in rock salt for centuries" },
+
+  { "name": "Bryggen Wharf", "country": "Norway", "cc": "no", "lat": 60.397, "lng": 5.324, "category": "heritage", "popularity": 87, "tagline": "Hanseatic wooden wharf in Bergen's harbour" },
+  { "name": "Borgund Stave Church", "country": "Norway", "cc": "no", "lat": 61.047, "lng": 7.810, "category": "monument", "popularity": 85, "tagline": "Best-preserved dragon-tailed medieval stave church" },
+  { "name": "Svalbard Global Seed Vault", "country": "Norway", "cc": "no", "lat": 78.236, "lng": 15.491, "category": "landmark", "popularity": 90, "tagline": "Doomsday seed bank carved into Arctic permafrost above Longyearbyen" },
+
+  { "name": "Drottningholm Palace", "country": "Sweden", "cc": "se", "lat": 59.327, "lng": 17.886, "category": "monument", "popularity": 84, "tagline": "Swedish royal residence and UNESCO palace gardens" },
+  { "name": "Visby City Wall", "country": "Sweden", "cc": "se", "lat": 57.634, "lng": 18.294, "category": "fortress", "popularity": 83, "tagline": "Medieval Hanseatic ring wall on Gotland" },
+
+  { "name": "Þingvellir", "country": "Iceland", "cc": "is", "lat": 64.255, "lng": -21.130, "category": "heritage", "popularity": 94, "tagline": "Viking parliament plain on the Mid-Atlantic rift" },
+  { "name": "Hallgrímskirkja", "country": "Iceland", "cc": "is", "lat": 64.142, "lng": -21.927, "category": "monument", "popularity": 88, "tagline": "Reykjavík's basalt-column church inspired by lava flows" },
+
+  { "name": "Göreme Open-Air Museum", "country": "Turkey", "cc": "tr", "lat": 38.643, "lng": 34.831, "category": "heritage", "popularity": 95, "tagline": "Rock-cut Byzantine churches in Cappadocia's fairy chimneys" },
+  { "name": "Ephesus Library of Celsus", "country": "Turkey", "cc": "tr", "lat": 37.939, "lng": 27.341, "category": "heritage", "popularity": 93, "tagline": "Roman façade on the Aegean trade route" },
+  { "name": "Hagia Sophia", "country": "Turkey", "cc": "tr", "lat": 41.009, "lng": 28.980, "category": "monument", "popularity": 98, "tagline": "Byzantine dome that defined Istanbul for a millennium" },
+
+  { "name": "Bellegarde Fort", "country": "France", "cc": "fr", "lat": 42.474, "lng": 2.895, "category": "fortress", "popularity": 78, "tagline": "Pyrenean Vauban fortress on the France–Spain frontier" },
+  { "name": "Gibraltar Upper Rock", "country": "Gibraltar", "cc": "gi", "lat": 36.141, "lng": -5.345, "category": "fortress", "popularity": 86, "tagline": "British limestone stronghold at the gateway to the Mediterranean" },
+
+  { "name": "Madriu-Perafita-Claror Valley", "country": "Andorra", "cc": "ad", "lat": 42.4833, "lng": 1.5833, "category": "heritage", "popularity": 94, "tagline": "UNESCO glacial valley of stone shepherds' huts and Pyrenean meadows" },
+  { "name": "Coma Pedrosa", "country": "Andorra", "cc": "ad", "lat": 42.5928, "lng": 1.4581, "category": "mountain", "popularity": 86, "tagline": "Andorra's highest summit (2,942 m) above Comapedrosa Natural Park" },
+  { "name": "Casa de la Vall", "country": "Andorra", "cc": "ad", "lat": 42.5064, "lng": 1.5215, "category": "heritage", "popularity": 82, "tagline": "16th-century parliament house of the co-principality in old Andorra la Vella" },
+  { "name": "Santa Coloma Church", "country": "Andorra", "cc": "ad", "lat": 42.4934, "lng": 1.4963, "category": "monument", "popularity": 80, "tagline": "Pre-Romanesque church (9th c.) with frescoes — oldest in Andorra" },
+  { "name": "Sant Joan de Caselles", "country": "Andorra", "cc": "ad", "lat": 42.5713, "lng": 1.6532, "category": "monument", "popularity": 80, "tagline": "Romanesque hillside chapel above Canillo with rare 12th-c. wooden Christ" },
+  { "name": "Roc del Quer Skywalk", "country": "Andorra", "cc": "ad", "lat": 42.5694, "lng": 1.6098, "category": "landmark", "popularity": 81, "tagline": "Cantilevered glass walkway 500 m above Vall d'Orient" },
+  { "name": "Sant Climent de Pal", "country": "Andorra", "cc": "ad", "lat": 42.5503, "lng": 1.4694, "category": "monument", "popularity": 76, "tagline": "Quiet Romanesque mountain church in the parish of la Massana" },
+  { "name": "Caldea", "country": "Andorra", "cc": "ad", "lat": 42.5083, "lng": 1.5394, "category": "landmark", "popularity": 78, "tagline": "Mountain-spa cathedral of glass — the Pyrenees' largest thermal centre" },
+  { "name": "Sant Martí de la Cortinada", "country": "Andorra", "cc": "ad", "lat": 42.5825, "lng": 1.5306, "category": "monument", "popularity": 74, "tagline": "Romanesque parish church preserving Andorran medieval frescoes" }
+]

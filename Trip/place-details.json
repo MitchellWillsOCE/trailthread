@@ -1,0 +1,2197 @@
+{
+  "Rome": {
+    "country": "Italy",
+    "stay": "2 nights",
+    "general": "Historic core, layered neighbourhoods, and an easy first-day orientation loop before the rail leg south to Bari.",
+    "activities": [
+      "Colosseum exterior walk",
+      "Trastevere food crawl",
+      "Sunset from Gianicolo"
+    ],
+    "tips": [
+      "Book Vatican timed entry if visiting",
+      "Use metro for cross-town hops",
+      "Carry cash for small trattorias"
+    ],
+    "itinerary": "Days 1–2 — keep logistics light and focus on walkable districts near the centre.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?width=1200",
+        "caption": "Colosseum, Rome",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Forum-photos_taken_by_Hans_Hoffmann.jpg?width=1200",
+        "caption": "Roman Forum — Rome",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon_Rome_1.jpg?width=1200",
+        "caption": "Pantheon, Rome",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Rome%2C_Italy_by_Hodoyoshi-1.jpg/1280px-Rome%2C_Italy_by_Hodoyoshi-1.jpg",
+        "caption": "Rome, Italy by Hodoyoshi-1",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Colosseum exterior walk"
+  },
+  "Naples": {
+    "country": "Italy",
+    "stay": "Optional stop",
+    "general": "Vibrant bay city between Rome and Bari — pizza birthplace, historic centro, and a natural break on the Frecciarossa / Adriatic rail corridor.",
+    "activities": [
+      "Spaccanapoli street walk",
+      "Castel dell'Ovo waterfront",
+      "Pizza al portafoglio in the old quarter"
+    ],
+    "tips": [
+      "Most Rome–Bari trains call at Napoli Centrale — book a through ticket or same-day connection",
+      "Keep bags light if transferring between platforms"
+    ],
+    "itinerary": "Day 2 — optional lunch or short stroll if your Rome→Bari routing includes a Naples connection.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Naples_%28Italy%29.jpg?width=1200",
+        "caption": "Bay of Naples",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castel_dell%27Ovo_and_Vesuvius.jpg?width=1200",
+        "caption": "Castel dell'Ovo and Vesuvius",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Rail hub on the Rome–Bari corridor"
+  },
+  "Bari": {
+    "country": "Italy",
+    "stay": "1 night",
+    "general": "Port city gateway to the Adriatic — old town lanes, seafood, and the ferry south to Montenegro.",
+    "activities": [
+      "Bari Vecchia evening walk",
+      "Lungomare promenade",
+      "Port watch at sunrise"
+    ],
+    "tips": [
+      "Park near the waterfront for an early ferry",
+      "Try orecchiette in the old quarter"
+    ],
+    "itinerary": "Days 2–3 — arrive by train from Rome (via Naples), then ferry hub before the coast road south.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bari_Vecchia_aerial_view.jpg?width=1200",
+        "caption": "Bari Vecchia (old town)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Nicola_%28Bari%29_-_Esterno.jpg?width=1200",
+        "caption": "Basilica di San Nicola, Bari",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lungomare_di_Bari.jpg?width=1200",
+        "caption": "Lungomare promenade, Bari",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/20140430_Italia_019_Bari_Bari_Centrale.jpg/1280px-20140430_Italia_019_Bari_Bari_Centrale.jpg",
+        "caption": "20140430 Italia 019 Bari Bari Centrale",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/D.445.1016_in_partenza_con_un_IC_da_Bari_per_Lecce.jpg",
+        "caption": "D.445.1016 in partenza con un IC da Bari per Lecce",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/FS_225.5006_a_Bari_Centrale.jpg",
+        "caption": "FS 225.5006 a Bari Centrale",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Bari Vecchia evening walk"
+  },
+  "Bar": {
+    "country": "Montenegro",
+    "stay": "1 night",
+    "general": "Southern Montenegro base with Ottoman old town, beaches, and quick access to Lake Skadar.",
+    "activities": [
+      "Stari Bar ruins",
+      "Olive grove viewpoints",
+      "Harbour seafood dinner"
+    ],
+    "tips": [
+      "Haj Nehaj fortress is a short drive uphill",
+      "Summer traffic peaks on coastal roads"
+    ],
+    "itinerary": "Day 4 — first Montenegro stop after the ferry; ideal for fortress and coast pairing.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Bar%2C_Montenegro.jpg?width=1200",
+        "caption": "Stari Bar ruins",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bar%2C_Montenegro_-_panoramio.jpg?width=1200",
+        "caption": "Bar harbour area",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Bar%2C_Montenegro_-_panoramio_%2834%29.jpg/1280px-Bar%2C_Montenegro_-_panoramio_%2834%29.jpg",
+        "caption": "Bar, Montenegro - panoramio (34)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Bjeli%C5%A1i%2C_Montenegro_-_panoramio.jpg/1280px-Bjeli%C5%A1i%2C_Montenegro_-_panoramio.jpg",
+        "caption": "Bjeliši, Montenegro - panoramio — Bar",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Old_olive_in_Bar%2C_Montenegro.jpg/1280px-Old_olive_in_Bar%2C_Montenegro.jpg",
+        "caption": "Old olive in Bar, Montenegro",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Stari Bar ruins"
+  },
+  "Budva Old Town": {
+    "country": "Montenegro",
+    "stay": "1 night",
+    "general": "Walled resort town mixing beach life with medieval lanes and nightlife along the riviera.",
+    "activities": [
+      "Citadel ramparts loop",
+      "Mogren Beach swim",
+      "Old town café crawl"
+    ],
+    "tips": [
+      "Visit ramparts before midday heat",
+      "Parking fills fast in peak season"
+    ],
+    "itinerary": "Coastal evening stop between Bar and Kotor on the classic northbound arc.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budva_Old_Town%2C_Montenegro.jpg?width=1200",
+        "caption": "Budva old town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Citadel_in_Budva%2C_Montenegro.jpg?width=1200",
+        "caption": "Budva citadel — Budva Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Budva%2C_Jadranski_put_IV.jpg/1280px-Budva%2C_Jadranski_put_IV.jpg",
+        "caption": "Budva, Jadranski put IV — Budva Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Budva%2C_Montenegro_-_panoramio_%2831%29.jpg/1280px-Budva%2C_Montenegro_-_panoramio_%2831%29.jpg",
+        "caption": "Budva, Montenegro - panoramio (31) — Budva Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Budva%2C_okol%C3%AD_radnice_01.jpg/1280px-Budva%2C_okol%C3%AD_radnice_01.jpg",
+        "caption": "Budva, okolí radnice 01 — Budva Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Budva%2C_radnice.jpg/1280px-Budva%2C_radnice.jpg",
+        "caption": "Budva, radnice — Budva Old Town",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Citadel ramparts loop"
+  },
+  "Old Town of Budva": {
+    "country": "Montenegro",
+    "stay": "1 night",
+    "general": "Same walled resort core — citadel views over the Adriatic and narrow stone streets.",
+    "activities": [
+      "Citadel ramparts loop",
+      "Mogren Beach swim",
+      "Old town café crawl"
+    ],
+    "tips": [
+      "Evening light is best on the walls",
+      "Link with Kotor for a two-bay day"
+    ],
+    "itinerary": "Heritage arc stop — pair with Haj Nehaj fortress the same day.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budva_Old_Town%2C_Montenegro.jpg?width=1200",
+        "caption": "Budva old town — Old Town of Budva",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Budva%2C_Jadranski_put_IV.jpg/1280px-Budva%2C_Jadranski_put_IV.jpg",
+        "caption": "Budva, Jadranski put IV — Old Town of Budva",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Budva%2C_Montenegro_-_panoramio_%2831%29.jpg/1280px-Budva%2C_Montenegro_-_panoramio_%2831%29.jpg",
+        "caption": "Budva, Montenegro - panoramio (31) — Old Town of Budva",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Budva%2C_okol%C3%AD_radnice_01.jpg/1280px-Budva%2C_okol%C3%AD_radnice_01.jpg",
+        "caption": "Budva, okolí radnice 01 — Old Town of Budva",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Budva%2C_radnice.jpg/1280px-Budva%2C_radnice.jpg",
+        "caption": "Budva, radnice — Old Town of Budva",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Budva%2C_radnice_03.jpg/1280px-Budva%2C_radnice_03.jpg",
+        "caption": "Budva, radnice 03 — Old Town of Budva",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Citadel ramparts loop"
+  },
+  "Kotor": {
+    "country": "Montenegro",
+    "stay": "2 nights",
+    "general": "Fjord-like bay setting with medieval walls climbing the hillside — ideal for a moderate viewpoint hike.",
+    "activities": [
+      "Old town ramparts",
+      "Vrmac ridge viewpoints",
+      "Harbour sunset"
+    ],
+    "tips": [
+      "Start fortress climb early to avoid cruise crowds",
+      "Bring layers for ridge wind"
+    ],
+    "itinerary": "Days 4–5 — use Kotor as the hiking hub before continuing up the coast.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_Scene_-_Kotor_-_Montenegro_-_02.jpg?width=1200",
+        "caption": "Kotor old town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bay_of_Kotor_from_Lov%C4%87en.jpg?width=1200",
+        "caption": "Bay of Kotor",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kotor_Cathedral_of_Saint_Tryphon.jpg?width=1200",
+        "caption": "Cathedral of Saint Tryphon, Kotor",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/20230915_133025_September_2023_in_Montenegro.jpg/1280px-20230915_133025_September_2023_in_Montenegro.jpg",
+        "caption": "20230915 133025 September 2023 in Montenegro — Kotor",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Historical_Region_of_Kotor_02062023_144.jpg/1280px-Historical_Region_of_Kotor_02062023_144.jpg",
+        "caption": "Historical Region of Kotor 02062023 144",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Historical_Region_of_Kotor_02062023_156.jpg/1280px-Historical_Region_of_Kotor_02062023_156.jpg",
+        "caption": "Historical Region of Kotor 02062023 156",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Old town ramparts"
+  },
+  "Herceg Novi": {
+    "country": "Montenegro",
+    "stay": "1 night",
+    "general": "Garden town at the bay entrance — fortresses, stair streets, and boat links toward the Blue Cave.",
+    "activities": [
+      "Kanli Kula fortress",
+      "Seafront promenade",
+      "Blue Cave boat trip"
+    ],
+    "tips": [
+      "Boats to Blue Cave run seasonally — confirm morning departures",
+      "Steep lanes — wear grippy shoes"
+    ],
+    "itinerary": "Day 6 — launch point for cave and Dubrovnik transfer days.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Herceg_Novi%2C_Montenegro.jpg?width=1200",
+        "caption": "Herceg Novi bay",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanli_Kula%2C_Herceg_Novi.jpg?width=1200",
+        "caption": "Kanli Kula fortress — Herceg Novi",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/2024-02-04_Citizens_of_Herceg_Novi.jpg/1280px-2024-02-04_Citizens_of_Herceg_Novi.jpg",
+        "caption": "2024-02-04 Citizens of Herceg Novi",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/2024-02-04_View_of_Herceg_Novi_Old_Town_from_Kanli_Kula_Fortress_2.jpg/1280px-2024-02-04_View_of_Herceg_Novi_Old_Town_from_Kanli_Kula_Fortress_2.jpg",
+        "caption": "2024-02-04 View of Herceg Novi Old Town from Kanli Kula Fortress 2",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Herceg_Novi%2C_Montenegro_-_panoramio_%2824%29.jpg/1280px-Herceg_Novi%2C_Montenegro_-_panoramio_%2824%29.jpg",
+        "caption": "Herceg Novi, Montenegro - panoramio (24)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Herceg_Novi%2C_Montenegro_-_panoramio_%2827%29.jpg/1280px-Herceg_Novi%2C_Montenegro_-_panoramio_%2827%29.jpg",
+        "caption": "Herceg Novi, Montenegro - panoramio (27)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Kanli Kula fortress"
+  },
+  "Haj Nehaj Fortress": {
+    "country": "Montenegro",
+    "stay": "Half day",
+    "general": "Hilltop Venetian fortress overlooking Bar and the coast — short, steep climb with wide views.",
+    "activities": [
+      "Rampart circuit",
+      "Coast panorama photos",
+      "Combine with Stari Bar"
+    ],
+    "tips": [
+      "No shade on walls — bring water",
+      "Sunset timing is spectacular"
+    ],
+    "itinerary": "Heritage arc morning block from Bar base.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Miljevci%2C_Montenegro_-_panoramio.jpg/1280px-Miljevci%2C_Montenegro_-_panoramio.jpg",
+        "caption": "Miljevci, Montenegro - panoramio — Haj Nehaj Fortress",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Zankovi%C4%87i%2C_Montenegro_-_panoramio.jpg/1280px-Zankovi%C4%87i%2C_Montenegro_-_panoramio.jpg",
+        "caption": "Zankovići, Montenegro - panoramio — Haj Nehaj Fortress",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Haj-Nehaj_Fortress.jpg/1280px-Haj-Nehaj_Fortress.jpg",
+        "caption": "Haj-Nehaj Fortress — Haj Nehaj Fortress",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sutomore_from_Haj-Nehaj.jpg/1280px-Sutomore_from_Haj-Nehaj.jpg",
+        "caption": "Sutomore from Haj-Nehaj — Haj Nehaj Fortress",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Rampart circuit"
+  },
+  "Kanli kula": {
+    "country": "Montenegro",
+    "stay": "Half day",
+    "general": "Red fortress above Herceg Novi — concerts in summer and sweeping bay views.",
+    "activities": [
+      "Fortress museum rooms",
+      "Harbour overlook",
+      "Evening music events"
+    ],
+    "tips": [
+      "Check event schedule for evening visits",
+      "Combine with Blue Cave same day"
+    ],
+    "itinerary": "Heritage arc — afternoon fortress before coastal drive north.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kanli_Kula%2C_Herceg_Novi.jpg?width=1200",
+        "caption": "Kanli Kula fortress",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Herceg_Novi%2C_Montenegro_-_panoramio.jpg/1280px-Herceg_Novi%2C_Montenegro_-_panoramio.jpg",
+        "caption": "Herceg Novi, Montenegro - panoramio — Kanli kula",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Herceg_Novi%2C_Montenegro_-_panoramio_%2824%29.jpg/1280px-Herceg_Novi%2C_Montenegro_-_panoramio_%2824%29.jpg",
+        "caption": "Herceg Novi, Montenegro - panoramio (24) — Kanli kula",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Herceg_Novi%2C_Montenegro_-_panoramio_%2827%29.jpg/1280px-Herceg_Novi%2C_Montenegro_-_panoramio_%2827%29.jpg",
+        "caption": "Herceg Novi, Montenegro - panoramio (27) — Kanli kula",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Herceg_Novi%2C_Montenegro_Jul_03%2C_2025_08-31-35_AM.jpeg/1280px-Herceg_Novi%2C_Montenegro_Jul_03%2C_2025_08-31-35_AM.jpeg",
+        "caption": "Herceg Novi, Montenegro Jul 03, 2025 08-31-35 AM — Kanli kula",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Fortress museum rooms"
+  },
+  "Blue Cave": {
+    "country": "Montenegro",
+    "stay": "Half day",
+    "general": "Boat-access sea cave on the Lustica peninsula — iridescent water when sun angle is right.",
+    "activities": [
+      "Speedboat tour",
+      "Swim stop (seasonal)",
+      "Coastal photography"
+    ],
+    "tips": [
+      "Midday sun gives the blue glow",
+      "Book small-group boats from Herceg Novi"
+    ],
+    "itinerary": "Half-day boat module — weather dependent.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Herceg_Novi_Montenegro_2008-10-05.JPG/1280px-Herceg_Novi_Montenegro_2008-10-05.JPG",
+        "caption": "Herceg Novi Montenegro 2008-10-05 — Blue Cave",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_01.jpg/1280px-Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_01.jpg",
+        "caption": "Blue Cave (Plava špilja), Bay of Kotor, Montenegro 01",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_02.jpg/1280px-Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_02.jpg",
+        "caption": "Blue Cave (Plava špilja), Bay of Kotor, Montenegro 02",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_03.jpg/1280px-Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_03.jpg",
+        "caption": "Blue Cave (Plava špilja), Bay of Kotor, Montenegro 03",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_04.jpg/1280px-Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_04.jpg",
+        "caption": "Blue Cave (Plava špilja), Bay of Kotor, Montenegro 04",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_05.jpg/1280px-Blue_Cave_%28Plava_%C5%A1pilja%29%2C_Bay_of_Kotor%2C_Montenegro_05.jpg",
+        "caption": "Blue Cave (Plava špilja), Bay of Kotor, Montenegro 05",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Speedboat tour"
+  },
+  "Dubrovnik": {
+    "country": "Croatia",
+    "stay": "2 nights",
+    "general": "Walled old town on the Adriatic with dramatic sea cliffs and dense heritage lanes.",
+    "activities": [
+      "City walls circuit",
+      "Lokrum viewpoint",
+      "Old port evening walk"
+    ],
+    "tips": [
+      "Buy walls ticket online in summer",
+      "Take first ferry to Lokrum for quiet trails"
+    ],
+    "itinerary": "Day 7 — plan the walls early, then a relaxed harbour loop at golden hour.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_Old_Town_from_the_city_walls.jpg?width=1200",
+        "caption": "Dubrovnik old town from the walls",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stradun%2C_Dubrovnik%2C_Croatia.jpg?width=1200",
+        "caption": "Stradun, Dubrovnik",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Dubrovnik_%28213621621%29.jpeg/1280px-Dubrovnik_%28213621621%29.jpeg",
+        "caption": "Dubrovnik",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Dubrovnik_%28213621623%29.jpeg/1280px-Dubrovnik_%28213621623%29.jpeg",
+        "caption": "Dubrovnik",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Dubrovnik_%28213621645%29.jpeg/1280px-Dubrovnik_%28213621645%29.jpeg",
+        "caption": "Dubrovnik",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Dubrovnik_%28213621667%29.jpeg",
+        "caption": "Dubrovnik",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "City walls circuit"
+  },
+  "Mostar": {
+    "country": "Bosnia and Herzegovina",
+    "stay": "1 night",
+    "general": "Ottoman bridge town in a river gorge — iconic Stari Most and bazaar copper craft lanes.",
+    "activities": [
+      "Stari Most viewpoint",
+      "Koski Mehmed mosque minaret",
+      "Bazaar walk"
+    ],
+    "tips": [
+      "Respect divers — viewing from café terraces is fine",
+      "Try ćevapi near the river"
+    ],
+    "itinerary": "Inland heritage detour between coast legs — allow half day minimum.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Most_Mostar.jpg?width=1200",
+        "caption": "Stari Most (Old Bridge), Mostar",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mostar_Old_Town.jpg?width=1200",
+        "caption": "Mostar old town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Mostar%2C_2013_%2803%29.jpg/1280px-Mostar%2C_2013_%2803%29.jpg",
+        "caption": "Mostar, 2013 (03)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Mostar%2C_2013_%2804%29.jpg/1280px-Mostar%2C_2013_%2804%29.jpg",
+        "caption": "Mostar, 2013 (04)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Mostar%2C_2013_%2805%29.jpg/1280px-Mostar%2C_2013_%2805%29.jpg",
+        "caption": "Mostar, 2013 (05)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Mostar%2C_2013_%2806%29.jpg/1280px-Mostar%2C_2013_%2806%29.jpg",
+        "caption": "Mostar, 2013 (06)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Stari Most viewpoint"
+  },
+  "Badanj Cave": {
+    "country": "Bosnia and Herzegovina",
+    "stay": "Half day",
+    "general": "Archaeological cave site near Stolac — Paleolithic art and quiet Herzegovina landscape.",
+    "activities": [
+      "Guided cave visit",
+      "Stolac old town",
+      "Herzegovina vineyard stops"
+    ],
+    "tips": [
+      "Confirm opening hours locally",
+      "Pair with Mostar overnight"
+    ],
+    "itinerary": "Heritage arc extension — short stop en route to the coast.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Badanj.jpg",
+        "caption": "Badanj — Badanj Cave",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Guided cave visit"
+  },
+  "Split": {
+    "country": "Croatia",
+    "stay": "2 nights",
+    "general": "Coastal city anchored by Diocletian's Palace and a strong ferry/hiking gateway to Biokovo.",
+    "activities": [
+      "Palace quarter wander",
+      "Riva promenade",
+      "Biokovo ridge day hike"
+    ],
+    "tips": [
+      "Enter palace from waterfront gates early",
+      "Ferry desks cluster near the port"
+    ],
+    "itinerary": "Day 9 — combine urban heritage morning with an afternoon ridge option.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Diocletian%27s_Palace%2C_Split%2C_Croatia.jpg?width=1200",
+        "caption": "Diocletian's Palace, Split",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riva%2C_Split%2C_Croatia.jpg?width=1200",
+        "caption": "Riva waterfront, Split",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Historical_Complex_of_Split_with_the_Palace_of_Diocletian_Part3_003.jpg/1280px-Historical_Complex_of_Split_with_the_Palace_of_Diocletian_Part3_003.jpg",
+        "caption": "Historical Complex of Split with the Palace of Diocletian Part3 003",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Split_Sunset.jpg/1280px-Split_Sunset.jpg",
+        "caption": "Split Sunset",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Vestibule_of_Diocletian%27s_Palace%2C_Split%2C_Croatia_%28PPL1-Corrected%29_julesvernex2.jpg/1280px-Vestibule_of_Diocletian%27s_Palace%2C_Split%2C_Croatia_%28PPL1-Corrected%29_julesvernex2.jpg",
+        "caption": "Vestibule of Diocletian's Palace, Split, Croatia (PPL1-Corrected) julesvernex2",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Vestibule_of_Diocletian%27s_Palace%2C_Split%2C_Croatia_%28PPL2-Enhanced%29_julesvernex2-2.jpg/1280px-Vestibule_of_Diocletian%27s_Palace%2C_Split%2C_Croatia_%28PPL2-Enhanced%29_julesvernex2-2.jpg",
+        "caption": "Vestibule of Diocletian's Palace, Split, Croatia (PPL2-Enhanced) julesvernex2-2",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Palace quarter wander"
+  },
+  "Mljet National Park": {
+    "country": "Croatia",
+    "stay": "1 night",
+    "general": "Forested island park with saltwater lakes, monastery islet, and calm cycling paths.",
+    "activities": [
+      "Lake Veliko swim",
+      "Monastery islet boat",
+      "Pine forest bike loop"
+    ],
+    "tips": [
+      "Stay in Pomena for park access",
+      "Last ferries from Dubrovnik are seasonal"
+    ],
+    "itinerary": "Island module — ferry from Dubrovnik, overnight recommended.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Mljet%2C_Croatia_%28Unsplash%29.jpg/1280px-Mljet%2C_Croatia_%28Unsplash%29.jpg",
+        "caption": "Mljet, Croatia (Unsplash) — Mljet National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aerial_view_of_Mljet_National_Park_in_Croatia_%2848608842776%29.jpg/1280px-Aerial_view_of_Mljet_National_Park_in_Croatia_%2848608842776%29.jpg",
+        "caption": "Aerial view of Mljet National Park in Croatia (48608842776)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Guest_houses_in_Mljet_National_Park_in_Croatia_%2848738881676%29.jpg/1280px-Guest_houses_in_Mljet_National_Park_in_Croatia_%2848738881676%29.jpg",
+        "caption": "Guest houses in Mljet National Park in Croatia (48738881676)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Microplastics_in_Mljet_National_Park_in_Croatia_%2848738883061%29.jpg/1280px-Microplastics_in_Mljet_National_Park_in_Croatia_%2848738883061%29.jpg",
+        "caption": "Microplastics in Mljet National Park in Croatia (48738883061)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mljet_National_Park_in_Croatia_%2848612946936%29.jpg/1280px-Mljet_National_Park_in_Croatia_%2848612946936%29.jpg",
+        "caption": "Mljet National Park in Croatia (48612946936)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Picnic_area_in_Mljet_National_Park%2C_Croatia_%2848738894651%29.jpg/1280px-Picnic_area_in_Mljet_National_Park%2C_Croatia_%2848738894651%29.jpg",
+        "caption": "Picnic area in Mljet National Park, Croatia (48738894651)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Lake Veliko swim"
+  },
+  "Krka National Park": {
+    "country": "Croatia",
+    "stay": "1 day",
+    "general": "Tiered waterfalls you can swim near — boardwalks through forested gorges upstream of Sibenik.",
+    "activities": [
+      "Skradinski buk loop",
+      "Roski slap viewpoints",
+      "River swim (check rules)"
+    ],
+    "tips": [
+      "Arrive at opening for fewer tour buses",
+      "Combine with Split or Zadar drive"
+    ],
+    "itinerary": "Full-day park block between Split and Paklenica.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krka_National_Park_Skradinski_buk.jpg?width=1200",
+        "caption": "Skradinski buk waterfalls, Krka — Krka National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Croatia_%2828398485368%29.jpg/1280px-Croatia_%2828398485368%29.jpg",
+        "caption": "Croatia (28398485368) — Krka National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Croatia_%2841369582705%29.jpg/1280px-Croatia_%2841369582705%29.jpg",
+        "caption": "Croatia (41369582705) — Krka National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Croatia_%2842245761902%29.jpg/1280px-Croatia_%2842245761902%29.jpg",
+        "caption": "Croatia (42245761902) — Krka National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Croatia_%2842292421741%29.jpg/1280px-Croatia_%2842292421741%29.jpg",
+        "caption": "Croatia (42292421741) — Krka National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Croatia_%2844531701540%29.jpg/1280px-Croatia_%2844531701540%29.jpg",
+        "caption": "Croatia (44531701540) — Krka National Park",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Skradinski buk loop"
+  },
+  "Paklenica National Park": {
+    "country": "Croatia",
+    "stay": "1 day",
+    "general": "Limestone canyon under Velebit — classic big-wall hiking and shaded river walks.",
+    "activities": [
+      "Velika Paklenica canyon hike",
+      "Anića kuk viewpoint",
+      "Climber watching at cliffs"
+    ],
+    "tips": [
+      "Start canyon trail before noon heat",
+      "Bring 2L water for ridge variants"
+    ],
+    "itinerary": "Major hiking day — longest vertical gain on Adriatic routes.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paklenica_National_Park_canyon.jpg?width=1200",
+        "caption": "Paklenica canyon — Paklenica National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Op%C4%87ina_Starigrad%2C_Croatia_-_panoramio.jpg/1280px-Op%C4%87ina_Starigrad%2C_Croatia_-_panoramio.jpg",
+        "caption": "Općina Starigrad, Croatia - panoramio — Paklenica National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Op%C4%87ina_Starigrad%2C_Croatia_-_panoramio_%281%29.jpg/1280px-Op%C4%87ina_Starigrad%2C_Croatia_-_panoramio_%281%29.jpg",
+        "caption": "Općina Starigrad, Croatia - panoramio (1) — Paklenica National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Starigrad%2C_Croatia_-_panoramio_%284%29.jpg/1280px-Starigrad%2C_Croatia_-_panoramio_%284%29.jpg",
+        "caption": "Starigrad, Croatia - panoramio (4) — Paklenica National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Starigrad%2C_Croatia_-_panoramio_%285%29.jpg/1280px-Starigrad%2C_Croatia_-_panoramio_%285%29.jpg",
+        "caption": "Starigrad, Croatia - panoramio (5) — Paklenica National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Starigrad%2C_Croatia_-_panoramio_%286%29.jpg/1280px-Starigrad%2C_Croatia_-_panoramio_%286%29.jpg",
+        "caption": "Starigrad, Croatia - panoramio (6) — Paklenica National Park",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Velika Paklenica canyon hike"
+  },
+  "Plitvice Lakes National Park": {
+    "country": "Croatia",
+    "stay": "1 day",
+    "general": "Terraced lakes and waterfalls in a UNESCO park — the flagship full-day trek on this route.",
+    "activities": [
+      "Upper ridge trek",
+      "Lake boardwalk descent",
+      "Photography at cascades"
+    ],
+    "tips": [
+      "Route C balances lakes and distance",
+      "No swimming — stay on boardwalks"
+    ],
+    "itinerary": "Day 12 — longest hiking block; start early and carry rain layer.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plitvice_Lakes_National_Park_BW_2014-10-13_13-07-14.jpg?width=1200",
+        "caption": "Plitvice Lakes waterfalls — Plitvice Lakes National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plitvice_Lakes%2C_Croatia%2C_Galovac_jezero.jpg?width=1200",
+        "caption": "Galovac lake, Plitvice — Plitvice Lakes National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_park_Plitvice_lakes_Croatia.jpg?width=1200",
+        "caption": "Plitvice boardwalks — Plitvice Lakes National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30_%2819%29.jpg/1280px-53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30_%2819%29.jpg",
+        "caption": "53231, Plitvička Jezera, Croatia - panoramio - Laci30 (19) — Plitvice Lakes National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Plitvice_Lakes_National_Park_BW_2014-10-13_14-08-48.jpg/1280px-Plitvice_Lakes_National_Park_BW_2014-10-13_14-08-48.jpg",
+        "caption": "Plitvice Lakes National Park BW 2014-10-13 14-08-48",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Plitvice_Lakes_National_Park_in_2014_%2812%29.JPG/1280px-Plitvice_Lakes_National_Park_in_2014_%2812%29.JPG",
+        "caption": "Plitvice Lakes National Park in 2014 (12)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Upper ridge trek"
+  },
+  "Plitvice": {
+    "country": "Croatia",
+    "stay": "1 day",
+    "general": "Shorthand for the lakes park — cascading turquoise pools linked by wooden walkways.",
+    "activities": [
+      "Upper ridge trek",
+      "Lake boardwalk descent",
+      "Shuttle boat between lakes"
+    ],
+    "tips": [
+      "Ticket windows queue after 10:00 — pre-book online",
+      "October colours are exceptional"
+    ],
+    "itinerary": "Capstone nature day before pushing to Rijeka or Trieste.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plitvice_Lakes_National_Park_BW_2014-10-13_13-07-14.jpg?width=1200",
+        "caption": "Plitvice Lakes waterfalls",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plitvice_Lakes%2C_Croatia%2C_Galovac_jezero.jpg?width=1200",
+        "caption": "Galovac lake, Plitvice",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio.jpg/1280px-53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio.jpg",
+        "caption": "53231, Plitvička Jezera, Croatia - panoramio — Plitvice",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30.jpg/1280px-53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30.jpg",
+        "caption": "53231, Plitvička Jezera, Croatia - panoramio - Laci30 — Plitvice",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30_%281%29.jpg/1280px-53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30_%281%29.jpg",
+        "caption": "53231, Plitvička Jezera, Croatia - panoramio - Laci30 (1) — Plitvice",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30_%282%29.jpg/1280px-53231%2C_Plitvi%C4%8Dka_Jezera%2C_Croatia_-_panoramio_-_Laci30_%282%29.jpg",
+        "caption": "53231, Plitvička Jezera, Croatia - panoramio - Laci30 (2) — Plitvice",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Upper ridge trek"
+  },
+  "Rijeka": {
+    "country": "Croatia",
+    "stay": "1 night",
+    "general": "Port city under the Učka massif — Austro architecture, trsat castle, and ferry links north.",
+    "activities": [
+      "Korzo main street",
+      "Trsat castle sunset",
+      "Harbour coffee stops"
+    ],
+    "tips": [
+      "Good base between Plitvice and Istria",
+      "Parking garages near centre"
+    ],
+    "itinerary": "Transit night with optional castle walk.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/RIJEKA_%28Fiume%29_-_panoramio.jpg",
+        "caption": "RIJEKA (Fiume) - panoramio",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Rijeka%2C_Kroatien_2024_%2854691889603%29.jpg/1280px-Rijeka%2C_Kroatien_2024_%2854691889603%29.jpg",
+        "caption": "Rijeka, Kroatien 2024 (54691889603)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rijeka%2C_Kroatien_2024_%2854691916564%29.jpg/1280px-Rijeka%2C_Kroatien_2024_%2854691916564%29.jpg",
+        "caption": "Rijeka, Kroatien 2024 (54691916564)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Rijeka_%2848880688692%29.jpg/1280px-Rijeka_%2848880688692%29.jpg",
+        "caption": "Rijeka (48880688692)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Rijeka_-_Grad_Rijeka_%2848880490476%29.jpg/1280px-Rijeka_-_Grad_Rijeka_%2848880490476%29.jpg",
+        "caption": "Rijeka - Grad Rijeka (48880490476)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Rijeka_-_Grad_Rijeka_%2848880507436%29.jpg/1280px-Rijeka_-_Grad_Rijeka_%2848880507436%29.jpg",
+        "caption": "Rijeka - Grad Rijeka (48880507436)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Korzo main street"
+  },
+  "Pula": {
+    "country": "Croatia",
+    "stay": "1 night",
+    "general": "Istrian Roman arena town — amphitheatre, vineyards, and short drives to hill villages.",
+    "activities": [
+      "Arena interior tour",
+      "Forum ruins",
+      "Kamenjak cape swim"
+    ],
+    "tips": [
+      "Arena lighting is best at dusk",
+      "Try truffles and malvazija wine nearby"
+    ],
+    "itinerary": "Istria cultural stop before Trieste or Italy border.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-16%2C_DD_01-06_PAN.jpg/1280px-Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-16%2C_DD_01-06_PAN.jpg",
+        "caption": "Anfiteatro de Pula, Croacia, 2017-04-16, DD 01-06 PAN",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-16%2C_DD_07-11_PAN.jpg/1280px-Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-16%2C_DD_07-11_PAN.jpg",
+        "caption": "Anfiteatro de Pula, Croacia, 2017-04-16, DD 07-11 PAN",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-16%2C_DD_35.jpg/1280px-Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-16%2C_DD_35.jpg",
+        "caption": "Anfiteatro de Pula, Croacia, 2017-04-16, DD 35",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-17%2C_DD_13-18_HDR_PAN.jpg/1280px-Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-17%2C_DD_13-18_HDR_PAN.jpg",
+        "caption": "Anfiteatro de Pula, Croacia, 2017-04-17, DD 13-18 HDR PAN",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-17%2C_DD_49-57_HDR_PAN.jpg/1280px-Anfiteatro_de_Pula%2C_Croacia%2C_2017-04-17%2C_DD_49-57_HDR_PAN.jpg",
+        "caption": "Anfiteatro de Pula, Croacia, 2017-04-17, DD 49-57 HDR PAN",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Catedral_de_Pula%2C_Pula%2C_Croacia%2C_2017-04-17%2C_DD_65-67_HDR.jpg/1280px-Catedral_de_Pula%2C_Pula%2C_Croacia%2C_2017-04-17%2C_DD_65-67_HDR.jpg",
+        "caption": "Catedral de Pula, Pula, Croacia, 2017-04-17, DD 65-67 HDR",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Arena interior tour"
+  },
+  "Trieste": {
+    "country": "Italy",
+    "stay": "1 night",
+    "general": "Habsburg port where Italy meets Slovenia — coffee houses, castle hill, and seafront miramare nearby.",
+    "activities": [
+      "Piazza Unità d'Italia",
+      "San Giusto castle",
+      "Miramare day trip"
+    ],
+    "tips": [
+      "Bora wind can be fierce — check forecast",
+      "End-of-route customs if driving onward"
+    ],
+    "itinerary": "Final Adriatic city on the classic northbound spine.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Bus_10_Trieste_Trasporti.jpg",
+        "caption": "Bus 10 Trieste Trasporti",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Citaro_bus_Trieste.jpg",
+        "caption": "Citaro bus Trieste",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Stairway_Silvano_Buffa%2C_Trieste%2C_Italy.jpeg/1280px-Stairway_Silvano_Buffa%2C_Trieste%2C_Italy.jpeg",
+        "caption": "Stairway Silvano Buffa, Trieste, Italy",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Street_in_Trieste_%28under_castle%29.jpg/1280px-Street_in_Trieste_%28under_castle%29.jpg",
+        "caption": "Street in Trieste (under castle)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Trieste%2C_piazza_Goldoni_-_panoramio.jpg/1280px-Trieste%2C_piazza_Goldoni_-_panoramio.jpg",
+        "caption": "Trieste, piazza Goldoni - panoramio",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Trieste%2C_piazza_Goldoni_-_panoramio_%281%29.jpg/1280px-Trieste%2C_piazza_Goldoni_-_panoramio_%281%29.jpg",
+        "caption": "Trieste, piazza Goldoni - panoramio (1)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Piazza Unità d'Italia"
+  },
+  "Tbilisi": {
+    "country": "Georgia",
+    "stay": "2 nights",
+    "general": "Layered capital with sulfur baths, wine bars, and a dramatic old town above the Mtkvari.",
+    "activities": [
+      "Narikala fortress cable car",
+      "Abanotubani baths",
+      "Dry bridge market"
+    ],
+    "tips": [
+      "Try amber wine in Vino underground",
+      "Marshrutkas to Kazbegi leave early"
+    ],
+    "itinerary": "Days 1–2 — stock supplies before mountain legs.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Tbilisi%2C_Georgia.jpg?width=1200",
+        "caption": "Old Tbilisi",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narikala_Fortress%2C_Tbilisi.jpg?width=1200",
+        "caption": "Narikala Fortress — Tbilisi",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Georgian_Labour-party_central.jpg/1280px-Georgian_Labour-party_central.jpg",
+        "caption": "Georgian Labour-party central — Tbilisi",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/House_Museum_of_Niko_Pirosmani_%28Tbilisi%2C_Georgia%29_%2828120010700%29.jpg/1280px-House_Museum_of_Niko_Pirosmani_%28Tbilisi%2C_Georgia%29_%2828120010700%29.jpg",
+        "caption": "House Museum of Niko Pirosmani (Tbilisi, Georgia) (28120010700)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Son_with_mother_walks_to_the_school_first_time_in_the_morning%2C_Tbilisi%2C_Georgia.jpg/1280px-Son_with_mother_walks_to_the_school_first_time_in_the_morning%2C_Tbilisi%2C_Georgia.jpg",
+        "caption": "Son with mother walks to the school first time in the morning, Tbilisi, Georgia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Tbilisi_%283220311556%29.jpg/1280px-Tbilisi_%283220311556%29.jpg",
+        "caption": "Tbilisi (3220311556)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Narikala fortress cable car"
+  },
+  "Ananuri Fortress Complex": {
+    "country": "Georgia",
+    "stay": "Half day",
+    "general": "Medieval towers on the turquoise Aragvi reservoir — classic stop on the road to Kazbegi.",
+    "activities": [
+      "Tower climb",
+      "Reservoir viewpoint",
+      "Church frescoes"
+    ],
+    "tips": [
+      "Quick stop — combine with Gergeti same day",
+      "Watch for bus tour parking"
+    ],
+    "itinerary": "Day 2 heritage pause on the military highway.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ananuri_fortress_%28Georgia%29.jpg?width=1200",
+        "caption": "Ananuri fortress, Georgia — Ananuri Fortress Complex",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Ananuri%2C_Georgia_%E2%80%94_Interior_of_Ananuri_Deity_Church.jpg/1280px-Ananuri%2C_Georgia_%E2%80%94_Interior_of_Ananuri_Deity_Church.jpg",
+        "caption": "Ananuri, Georgia — Interior of Ananuri Deity Church — Ananuri Fortress Complex",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Ananuri%2C_a_fortress_complex_on_the_Aragvi_River_featuring_churches_and_towers_dating_back_to_the_16-17th_centuries%2C_Georgia_-_53159675808.jpg/1280px-Ananuri%2C_a_fortress_complex_on_the_Aragvi_River_featuring_churches_and_towers_dating_back_to_the_16-17th_centuries%2C_Georgia_-_53159675808.jpg",
+        "caption": "Ananuri, a fortress complex on the Aragvi River featuring churches and towers dating back to the 16-17th centuries, Georgia - 53159675808 — Ananuri Fortress Complex",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Ananuri_August_2013_10.jpg/1280px-Ananuri_August_2013_10.jpg",
+        "caption": "Ananuri August 2013 10 — Ananuri Fortress Complex",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ananuri_August_2013_11.jpg/1280px-Ananuri_August_2013_11.jpg",
+        "caption": "Ananuri August 2013 11 — Ananuri Fortress Complex",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Ananuri_August_2013_12.jpg/1280px-Ananuri_August_2013_12.jpg",
+        "caption": "Ananuri August 2013 12 — Ananuri Fortress Complex",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Tower climb"
+  },
+  "Gergeti Trinity Church": {
+    "country": "Georgia",
+    "stay": "1 day",
+    "general": "Iconic church beneath Mount Kazbek — steep hike or 4x4 track with Caucasus panoramas.",
+    "activities": [
+      "Gergeti glacier viewpoint hike",
+      "Church visit",
+      "Stepantsminda town base"
+    ],
+    "tips": [
+      "Altitude — pace yourself above 2,000 m",
+      "Weather changes fast — pack shell"
+    ],
+    "itinerary": "Day 3 flagship hike — start at dawn if possible.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gergeti_Trinity_Church%2C_Georgia.jpg?width=1200",
+        "caption": "Gergeti Trinity Church with Kazbek",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gergetier_Dreifaltigkeitskirche.jpg?width=1200",
+        "caption": "Gergeti church and mountains — Gergeti Trinity Church",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Church_of_the_Holy_Trinity%2C_Gergeti.jpg?width=1200",
+        "caption": "Holy Trinity Church, Gergeti — Gergeti Trinity Church",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gergeti_Trinity_Church%2C_Clouds%2C_Georgia.jpg/1280px-Gergeti_Trinity_Church%2C_Clouds%2C_Georgia.jpg",
+        "caption": "Gergeti Trinity Church, Clouds, Georgia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Gergeti_Trinity_Church%2C_Interior%2C_Georgia.jpg/1280px-Gergeti_Trinity_Church%2C_Interior%2C_Georgia.jpg",
+        "caption": "Gergeti Trinity Church, Interior, Georgia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gergeti_Trinity_Church%2C_Khevi%2C_Georgia.jpg/1280px-Gergeti_Trinity_Church%2C_Khevi%2C_Georgia.jpg",
+        "caption": "Gergeti Trinity Church, Khevi, Georgia",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Gergeti glacier viewpoint hike"
+  },
+  "Yerevan": {
+    "country": "Armenia",
+    "stay": "2 nights",
+    "general": "Pink-stone capital with cascade views, brandy cellars, and genocide memorial gravity.",
+    "activities": [
+      "Cascade complex",
+      "Republic Square evening",
+      "Ararat brandy tour"
+    ],
+    "tips": [
+      "Metro is simple for cross-town",
+      "Day trips to Geghard and Garni fit here"
+    ],
+    "itinerary": "Days 5–6 — base for Armenian heritage loop.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Mount_Ararat_and_the_Yerevan_skyline.jpg/1280px-Mount_Ararat_and_the_Yerevan_skyline.jpg",
+        "caption": "Mount Ararat and the Yerevan skyline",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Yerevan%2C_Brandy_barrels%2C_Armenia.jpg/1280px-Yerevan%2C_Brandy_barrels%2C_Armenia.jpg",
+        "caption": "Yerevan, Brandy barrels, Armenia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Yerevan%2C_Cascade_of_Yerevan%2C_Armenia.jpg/1280px-Yerevan%2C_Cascade_of_Yerevan%2C_Armenia.jpg",
+        "caption": "Yerevan, Cascade of Yerevan, Armenia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Yerevan%2C_Cascade_of_Yerevan%2C_Art_2%2C_Armenia.jpg/1280px-Yerevan%2C_Cascade_of_Yerevan%2C_Art_2%2C_Armenia.jpg",
+        "caption": "Yerevan, Cascade of Yerevan, Art 2, Armenia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Yerevan%2C_Divers%2C_Statue%2C_Cascade_of_Yerevan%2C_Armenia.jpg/1280px-Yerevan%2C_Divers%2C_Statue%2C_Cascade_of_Yerevan%2C_Armenia.jpg",
+        "caption": "Yerevan, Divers, Statue, Cascade of Yerevan, Armenia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Yerevan%2C_Government_House%2C_Government_of_Armenia%2C_Armenia.jpg/1280px-Yerevan%2C_Government_House%2C_Government_of_Armenia%2C_Armenia.jpg",
+        "caption": "Yerevan, Government House, Government of Armenia, Armenia",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Cascade complex"
+  },
+  "Geghard": {
+    "country": "Armenia",
+    "stay": "Half day",
+    "general": "Rock-cut monastery in a gorge — medieval acoustics and cliff chapels linked to Garni temple.",
+    "activities": [
+      "Monastery interior",
+      "Gorge walk",
+      "Garni temple pairing"
+    ],
+    "tips": [
+      "Hire taxi loop from Yerevan",
+      "Modest dress inside chapels"
+    ],
+    "itinerary": "Day 6 — half-day with Garni canyon temple.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Geghard_monastery_Armenia.jpg?width=1200",
+        "caption": "Geghard Monastery",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/12-13th_century_khachkars_on_the_left_side_of_the_road_leading_to_the_Geghard_monastery.jpg/1280px-12-13th_century_khachkars_on_the_left_side_of_the_road_leading_to_the_Geghard_monastery.jpg",
+        "caption": "12-13th century khachkars on the left side of the road leading to the Geghard monastery",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Geghard_Monastery-_details_05.png/1280px-Geghard_Monastery-_details_05.png",
+        "caption": "Geghard Monastery- details 05",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Geghard_Monastery-_details_06.png/1280px-Geghard_Monastery-_details_06.png",
+        "caption": "Geghard Monastery- details 06",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Holy_Mother_of_God_church_in_Geghard_-_details_05.png/1280px-Holy_Mother_of_God_church_in_Geghard_-_details_05.png",
+        "caption": "Holy Mother of God church in Geghard - details 05",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Khachkar_on_the_south_wall_of_Saint_Gregory_the_Illuminator_Chapel_of_Geghard.jpg/1280px-Khachkar_on_the_south_wall_of_Saint_Gregory_the_Illuminator_Chapel_of_Geghard.jpg",
+        "caption": "Khachkar on the south wall of Saint Gregory the Illuminator Chapel of Geghard",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Monastery interior"
+  },
+  "Azhdahak": {
+    "country": "Armenia",
+    "stay": "1 day",
+    "general": "Volcanic plateau trek with highland lakes — remote, windy, and rewarding on clear days.",
+    "activities": [
+      "Summit crater lake",
+      "Alpine meadow traverse",
+      "4x4 approach roads"
+    ],
+    "tips": [
+      "Guide recommended for navigation",
+      "No facilities on plateau — pack food"
+    ],
+    "itinerary": "Day 7 expedition block — weather window critical.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Azhdahak_Mount%2C_Geghama_range%2C_Armenia_-_panoramio.jpg/1280px-Azhdahak_Mount%2C_Geghama_range%2C_Armenia_-_panoramio.jpg",
+        "caption": "Azhdahak Mount, Geghama range, Armenia - panoramio",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Azhdahak_mountain_Armenia.jpg/1280px-Azhdahak_mountain_Armenia.jpg",
+        "caption": "Azhdahak mountain Armenia",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Crater_lake_on_Azhdahak_Mountain.jpg/1280px-Crater_lake_on_Azhdahak_Mountain.jpg",
+        "caption": "Crater lake on Azhdahak Mountain",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Lake_Azhdahak_view_2.jpg/1280px-Lake_Azhdahak_view_2.jpg",
+        "caption": "Lake Azhdahak view 2",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Lake_in_Crater_of_mount_Azhdahak%2C_Geghama_range%2C_Armenia_-_panoramio.jpg/1280px-Lake_in_Crater_of_mount_Azhdahak%2C_Geghama_range%2C_Armenia_-_panoramio.jpg",
+        "caption": "Lake in Crater of mount Azhdahak, Geghama range, Armenia - panoramio",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Mount_Azhdahak_-_Seroujo.jpg",
+        "caption": "Mount Azhdahak - Seroujo",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Summit crater lake"
+  },
+  "Hanoi": {
+    "country": "Vietnam",
+    "stay": "2 nights",
+    "general": "Old Quarter maze, lake temples, and street-food alleys — chaotic, fragrant, unforgettable.",
+    "activities": [
+      "Hoan Kiem lake loop",
+      "Train street coffee",
+      "Water puppet show"
+    ],
+    "tips": [
+      "Cross streets slowly in steady pace",
+      "Book Ha Long cruise from reputable operators"
+    ],
+    "itinerary": "Days 1–2 — acclimatise before bay cruise.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoan_Kiem_Lake%2C_Hanoi%2C_Vietnam.jpg?width=1200",
+        "caption": "Hoan Kiem Lake, Hanoi",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Literature%2C_Hanoi.jpg?width=1200",
+        "caption": "Temple of Literature, Hanoi",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Hanoi%2C_Vietnam_%28Unsplash_bNNtwg_2AUE%29_%28cropped%29.jpg",
+        "caption": "Hanoi, Vietnam (Unsplash bNNtwg 2AUE) (cropped)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Hanoi_Haircut_%28229287633%29.jpeg",
+        "caption": "Hanoi Haircut",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Hanoi_Impressions_%28234225523%29.jpeg",
+        "caption": "Hanoi Impressions",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Hoan Kiem lake loop"
+  },
+  "St. Joseph Cathedral": {
+    "country": "Vietnam",
+    "stay": "1 hour",
+    "general": "Gothic revival cathedral in French Quarter — neo-Gothic façade and quiet square mornings.",
+    "activities": [
+      "Exterior photography",
+      "French Quarter walk",
+      "Egg coffee nearby"
+    ],
+    "tips": [
+      "Sunday mass times draw crowds",
+      "Combine with Hoan Kiem same day"
+    ],
+    "itinerary": "Day 1 micro-stop in central Hanoi.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%281%29.jpg/1280px-Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%281%29.jpg",
+        "caption": "Christian propaganda outside of the St. Joseph's Cathedral, Hanoi (1) — St. Joseph Cathedral",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%282%29.jpg/1280px-Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%282%29.jpg",
+        "caption": "Christian propaganda outside of the St. Joseph's Cathedral, Hanoi (2) — St. Joseph Cathedral",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Saint_Joseph_Cathedral.jpg/1280px-Saint_Joseph_Cathedral.jpg",
+        "caption": "Saint Joseph Cathedral — St. Joseph Cathedral",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Xmas_Eve_in_front_of_the_St._Joseph_Cathedral_in_Hanoi_%2839251039582%29.jpg/1280px-Xmas_Eve_in_front_of_the_St._Joseph_Cathedral_in_Hanoi_%2839251039582%29.jpg",
+        "caption": "Xmas Eve in front of the St. Joseph Cathedral in Hanoi (39251039582)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Exterior photography"
+  },
+  "Hạ Long": {
+    "country": "Vietnam",
+    "stay": "1–2 nights",
+    "general": "Karst bay of limestone pillars — overnight junk cruises through caves and floating villages.",
+    "activities": [
+      "Overnight cruise",
+      "Kayak through arches",
+      "Sung Sot cave"
+    ],
+    "tips": [
+      "Book 2D1N for quieter anchorages",
+      "Bring motion sickness tabs if sensitive"
+    ],
+    "itinerary": "Days 3–4 — flagship water module of the route.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ha_Long_Bay%2C_Vietnam.jpg?width=1200",
+        "caption": "Ha Long Bay karsts — Hạ Long",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halong_Bay_Vietnam.jpg?width=1200",
+        "caption": "Ha Long Bay cruise — Hạ Long",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Halong_Bay%2C_Vietnam_-_panoramio_%286%29.jpg/1280px-Halong_Bay%2C_Vietnam_-_panoramio_%286%29.jpg",
+        "caption": "Halong Bay, Vietnam - panoramio (6) — Hạ Long",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/H%E1%BA%A1_Long_Bay%2C_Vietnam_%2854527884658%29.jpg/1280px-H%E1%BA%A1_Long_Bay%2C_Vietnam_%2854527884658%29.jpg",
+        "caption": "Hạ Long Bay, Vietnam (54527884658)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/H%E1%BA%A1_Long_Bay%2C_Vietnam_2024.jpg/1280px-H%E1%BA%A1_Long_Bay%2C_Vietnam_2024.jpg",
+        "caption": "Hạ Long Bay, Vietnam 2024",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/H%E1%BA%A1_Long_Bay_Panorama%2C_Vietnam.jpg/1280px-H%E1%BA%A1_Long_Bay_Panorama%2C_Vietnam.jpg",
+        "caption": "Hạ Long Bay Panorama, Vietnam",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Overnight cruise"
+  },
+  "Ha Long": {
+    "country": "Vietnam",
+    "stay": "1–2 nights",
+    "general": "Karst bay cruises among thousands of limestone islets — Vietnam's classic seascape.",
+    "activities": [
+      "Overnight cruise",
+      "Kayak through arches",
+      "Cave visits"
+    ],
+    "tips": [
+      "Avoid cheapest party boats if seeking quiet",
+      "March–May often has clearer skies"
+    ],
+    "itinerary": "Bay module — allow buffer for weather delays.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ha_Long_Bay%2C_Vietnam.jpg?width=1200",
+        "caption": "Ha Long Bay karsts",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halong_Bay_Vietnam.jpg?width=1200",
+        "caption": "Ha Long Bay cruise",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Halong_Bay%2C_Vietnam_-_panoramio_%286%29.jpg/1280px-Halong_Bay%2C_Vietnam_-_panoramio_%286%29.jpg",
+        "caption": "Halong Bay, Vietnam - panoramio (6) — Ha Long",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/H%E1%BA%A1_Long_Bay%2C_Vietnam_%2854527884658%29.jpg/1280px-H%E1%BA%A1_Long_Bay%2C_Vietnam_%2854527884658%29.jpg",
+        "caption": "Hạ Long Bay, Vietnam (54527884658) — Ha Long",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/H%E1%BA%A1_Long_Bay%2C_Vietnam_2024.jpg/1280px-H%E1%BA%A1_Long_Bay%2C_Vietnam_2024.jpg",
+        "caption": "Hạ Long Bay, Vietnam 2024 — Ha Long",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/H%E1%BA%A1_Long_Bay_Panorama%2C_Vietnam.jpg/1280px-H%E1%BA%A1_Long_Bay_Panorama%2C_Vietnam.jpg",
+        "caption": "Hạ Long Bay Panorama, Vietnam — Ha Long",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Overnight cruise"
+  },
+  "The Marble Mountains": {
+    "country": "Vietnam",
+    "stay": "Half day",
+    "general": "Five marble and limestone hills with caves, pagodas, and coastal views near Da Nang.",
+    "activities": [
+      "Thuy Son cave climb",
+      "Pagoda visits",
+      "Marble workshop stops"
+    ],
+    "tips": [
+      "Elevator saves time in heat",
+      "Wear shoes with grip on wet steps"
+    ],
+    "itinerary": "Day 6 — easy pairing with Hoi An or Da Nang.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_01.jpg/1280px-Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_01.jpg",
+        "caption": "Chùa Tam Tôn, Thủy Sơn, Đà Nẵng (Tam Ton Pagoda, Thuy Son Marble Mountain) - img 01 — The Marble Mountains",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_02.jpg/1280px-Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_02.jpg",
+        "caption": "Chùa Tam Tôn, Thủy Sơn, Đà Nẵng (Tam Ton Pagoda, Thuy Son Marble Mountain) - img 02 — The Marble Mountains",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_03.jpg/1280px-Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_03.jpg",
+        "caption": "Chùa Tam Tôn, Thủy Sơn, Đà Nẵng (Tam Ton Pagoda, Thuy Son Marble Mountain) - img 03 — The Marble Mountains",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_04.jpg/1280px-Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_04.jpg",
+        "caption": "Chùa Tam Tôn, Thủy Sơn, Đà Nẵng (Tam Ton Pagoda, Thuy Son Marble Mountain) - img 04 — The Marble Mountains",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_05.jpg/1280px-Ch%C3%B9a_Tam_T%C3%B4n%2C_Th%E1%BB%A7y_S%C6%A1n%2C_%C4%90%C3%A0_N%E1%BA%B5ng_%28Tam_Ton_Pagoda%2C_Thuy_Son_Marble_Mountain%29_-_img_05.jpg",
+        "caption": "Chùa Tam Tôn, Thủy Sơn, Đà Nẵng (Tam Ton Pagoda, Thuy Son Marble Mountain) - img 05 — The Marble Mountains",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Thuy Son cave climb"
+  },
+  "Hue Imperial City": {
+    "country": "Vietnam",
+    "stay": "2 nights",
+    "general": "Nguyen dynasty citadel and tombs along the Perfume River — imperial Vietnam at full scale.",
+    "activities": [
+      "Citadel moat walk",
+      "Thien Mu pagoda",
+      "Royal tomb cycling loop"
+    ],
+    "tips": [
+      "Rent bike for tomb scatter",
+      "Hue cuisine is spicier — try bun bo"
+    ],
+    "itinerary": "Days 8–9 — allow full citadel plus one tomb day.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Cyclo_Tour%2C_Hue%2C_Vietnam_%286927378450%29.jpg/1280px-Cyclo_Tour%2C_Hue%2C_Vietnam_%286927378450%29.jpg",
+        "caption": "Cyclo Tour, Hue, Vietnam (6927378450) — Hue Imperial City",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Cyclo_Tour%2C_Hue%2C_Vietnam_%286927402734%29.jpg/1280px-Cyclo_Tour%2C_Hue%2C_Vietnam_%286927402734%29.jpg",
+        "caption": "Cyclo Tour, Hue, Vietnam (6927402734) — Hue Imperial City",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Cyclo_Tour%2C_Hue%2C_Vietnam_%286927438022%29.jpg/1280px-Cyclo_Tour%2C_Hue%2C_Vietnam_%286927438022%29.jpg",
+        "caption": "Cyclo Tour, Hue, Vietnam (6927438022) — Hue Imperial City",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cyclo_Tour%2C_Hue%2C_Vietnam_%287073486997%29.jpg/1280px-Cyclo_Tour%2C_Hue%2C_Vietnam_%287073486997%29.jpg",
+        "caption": "Cyclo Tour, Hue, Vietnam (7073486997) — Hue Imperial City",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Hue_Sity%2C_Vietnam_%288104952824%29.jpg",
+        "caption": "Hue Sity, Vietnam (8104952824) — Hue Imperial City",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Only_in_Vietnam%2C_Hue_%287073472053%29.jpg/1280px-Only_in_Vietnam%2C_Hue_%287073472053%29.jpg",
+        "caption": "Only in Vietnam, Hue (7073472053) — Hue Imperial City",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Citadel moat walk"
+  },
+  "Phong Nha - Ke Bang National Park": {
+    "country": "Vietnam",
+    "stay": "2 nights",
+    "general": "World's largest cave systems — jungle karst, river caves, and adventure outfitters in Phong Nha town.",
+    "activities": [
+      "Paradise cave",
+      "Dark cave mud zip-line",
+      "Son Doong (permit tours)"
+    ],
+    "tips": [
+      "Book popular caves ahead",
+      "Dry season (Feb–Aug) for river access"
+    ],
+    "itinerary": "Days 10–11 — flagship trekking and cave block.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Barquero_en_el_R%C3%ADo_Son%2C_Phong_Nha%2C_Vietnam_%2843409828472%29.jpg/1280px-Barquero_en_el_R%C3%ADo_Son%2C_Phong_Nha%2C_Vietnam_%2843409828472%29.jpg",
+        "caption": "Barquero en el Río Son, Phong Nha, Vietnam (43409828472) — Phong Nha - Ke Bang National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Parco_nazionale_Phong_Nha_banner.jpg/1280px-Parco_nazionale_Phong_Nha_banner.jpg",
+        "caption": "Parco nazionale Phong Nha banner — Phong Nha - Ke Bang National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Part_of_mountain_range_in_Phong_Nha_-_Ke_Bang_National_Park.jpg/1280px-Part_of_mountain_range_in_Phong_Nha_-_Ke_Bang_National_Park.jpg",
+        "caption": "Part of mountain range in Phong Nha - Ke Bang National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Phong_Nha-Ke_Bang_cave3.jpg/1280px-Phong_Nha-Ke_Bang_cave3.jpg",
+        "caption": "Phong Nha-Ke Bang cave3 — Phong Nha - Ke Bang National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Phongnhakebang6.jpg/1280px-Phongnhakebang6.jpg",
+        "caption": "Phongnhakebang6 — Phong Nha - Ke Bang National Park",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Phongnhatourism.jpg/1280px-Phongnhatourism.jpg",
+        "caption": "Phongnhatourism — Phong Nha - Ke Bang National Park",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Paradise cave"
+  },
+  "Da Nang": {
+    "country": "Vietnam",
+    "stay": "1 night",
+    "general": "Modern coastal hub between heritage and caves — beach, Dragon Bridge, and easy airport links.",
+    "activities": [
+      "My Khe beach",
+      "Son Tra peninsula",
+      "Marble Mountains half-day"
+    ],
+    "tips": [
+      "Good flight hub to exit route",
+      "Avoid peak-hour bridge traffic"
+    ],
+    "itinerary": "Day 11 — final coastal stop before departure.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Da_Nang_City_Square.JPG/1280px-Da_Nang_City_Square.JPG",
+        "caption": "Da Nang City Square",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Da_Nang_Roman_Catholic_Cathedral.jpg/1280px-Da_Nang_Roman_Catholic_Cathedral.jpg",
+        "caption": "Da Nang Roman Catholic Cathedral",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Restoracio_en_Danango.jpg/1280px-Restoracio_en_Danango.jpg",
+        "caption": "Restoracio en Danango — Da Nang",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Cu_%C4%90%C3%AA_River%2C_Da_Nang.jpg/1280px-Cu_%C4%90%C3%AA_River%2C_Da_Nang.jpg",
+        "caption": "Cu Đê River, Da Nang",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Da-Nang_Vietnam_Coracles-01.jpg/1280px-Da-Nang_Vietnam_Coracles-01.jpg",
+        "caption": "Da-Nang Vietnam Coracles-01 — Da Nang",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Da-Nang_Vietnam_Coracles-02.jpg/1280px-Da-Nang_Vietnam_Coracles-02.jpg",
+        "caption": "Da-Nang Vietnam Coracles-02 — Da Nang",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "My Khe beach"
+  },
+  "Bellegarde Fort": {
+    "country": "France",
+    "stay": "Half day",
+    "general": "Vauban-era fortress commanding the Pyrenees pass — dramatic ramparts above Perthus.",
+    "activities": [
+      "Rampart walk",
+      "Mountain panorama",
+      "Catalan border history"
+    ],
+    "tips": [
+      "Windy at summit — bring jacket",
+      "Combine with Perpignan same day"
+    ],
+    "itinerary": "Day 1 — route opener on the Iberia arc.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bellegarde_Canigou.jpg/1280px-Bellegarde_Canigou.jpg",
+        "caption": "Bellegarde Canigou — Bellegarde Fort",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Bellegarde_main_entrance.jpg/1280px-Bellegarde_main_entrance.jpg",
+        "caption": "Bellegarde main entrance — Bellegarde Fort",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Fort_de_Bellegarde_01.jpg",
+        "caption": "Fort de Bellegarde 01 — Bellegarde Fort",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/06/Fort_de_Bellegarde_02.jpg",
+        "caption": "Fort de Bellegarde 02 — Bellegarde Fort",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Fort_de_Bellegarde_03.jpg",
+        "caption": "Fort de Bellegarde 03 — Bellegarde Fort",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Fort_de_Bellegarde_04.jpg",
+        "caption": "Fort de Bellegarde 04 — Bellegarde Fort",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Rampart walk"
+  },
+  "Perpignan": {
+    "country": "France",
+    "stay": "1 night",
+    "general": "Catalan-flavoured city between France and Spain — palm squares and quick Costa Brava access.",
+    "activities": [
+      "Castillet tower",
+      "Place de la Loge",
+      "Market day produce"
+    ],
+    "tips": [
+      "Park centre for old-town walks",
+      "Summer festivals fill hotels"
+    ],
+    "itinerary": "Day 2 — gentle city before long Spain drives.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839265793%29.jpg",
+        "caption": "Le Palais des Rois de Majorque (Perpignan) (8839265793)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839272083%29.jpg",
+        "caption": "Le Palais des Rois de Majorque (Perpignan) (8839272083)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839894426%29.jpg/1280px-Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839894426%29.jpg",
+        "caption": "Le Palais des Rois de Majorque (Perpignan) (8839894426)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839896122%29.jpg/1280px-Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839896122%29.jpg",
+        "caption": "Le Palais des Rois de Majorque (Perpignan) (8839896122)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839918960%29.jpg/1280px-Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839918960%29.jpg",
+        "caption": "Le Palais des Rois de Majorque (Perpignan) (8839918960)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Perpignan_Palace_of_the_Kings_of_Majorca_Western_side_exterior_2.jpg/1280px-Perpignan_Palace_of_the_Kings_of_Majorca_Western_side_exterior_2.jpg",
+        "caption": "Perpignan Palace of the Kings of Majorca Western side exterior 2",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Castillet tower"
+  },
+  "Madrid": {
+    "country": "Spain",
+    "stay": "2 nights",
+    "general": "Grand boulevards, world-class museums, and late-night tapas — Spain's energetic capital.",
+    "activities": [
+      "Prado Museum",
+      "Retiro park rowboats",
+      "La Latina tapas crawl"
+    ],
+    "tips": [
+      "Book Prado timed entry",
+      "Dinner starts late — 21:00 is normal"
+    ],
+    "itinerary": "Days 4–5 — culture pause on the drive south.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Cristal%2C_Madrid%2C_Espa%C3%B1a%2C_2014-05-11%2C_DD_01.jpg?width=1200",
+        "caption": "Retiro Park, Madrid",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Mayor_Madrid.jpg?width=1200",
+        "caption": "Plaza Mayor, Madrid",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2019-06-22_RealMadrid20182019.jpg/1280px-2019-06-22_RealMadrid20182019.jpg",
+        "caption": "2019-06-22 RealMadrid20182019",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Madrid%2C_Spain_%28Unsplash_vw4-IpWQu94%29.jpg/1280px-Madrid%2C_Spain_%28Unsplash_vw4-IpWQu94%29.jpg",
+        "caption": "Madrid, Spain (Unsplash vw4-IpWQu94)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pro_Life_protest_Madrid_%287011612803%29.jpg/1280px-Pro_Life_protest_Madrid_%287011612803%29.jpg",
+        "caption": "Pro Life protest Madrid (7011612803)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Prado Museum"
+  },
+  "Granada": {
+    "country": "Spain",
+    "stay": "2 nights",
+    "general": "Alhambra palace city beneath Sierra Nevada — Moorish gardens and Albaicín miradors.",
+    "activities": [
+      "Alhambra palaces",
+      "Albaicín sunset",
+      "Sacromonte flamenco"
+    ],
+    "tips": [
+      "Alhambra tickets sell out weeks ahead",
+      "Wear comfortable shoes for cobbles"
+    ],
+    "itinerary": "Days 7–8 — anchor heritage block before Gibraltar.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alhambra_Granada_Spain.jpg?width=1200",
+        "caption": "Alhambra, Granada",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Albaic%C3%ADn%2C_Granada%2C_Spain.jpg?width=1200",
+        "caption": "Albaicín quarter, Granada",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Granada%2C_Spain_%28Unsplash%29.jpg/1280px-Granada%2C_Spain_%28Unsplash%29.jpg",
+        "caption": "Granada, Spain (Unsplash)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Granada_%28255440805%29.jpeg/1280px-Granada_%28255440805%29.jpeg",
+        "caption": "Granada",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Alhambra palaces"
+  },
+  "Rock of Gibraltar": {
+    "country": "Gibraltar",
+    "stay": "1 day",
+    "general": "Limestone monolith with Barbary macaques, WWII tunnels, and views across two continents.",
+    "activities": [
+      "Upper Rock Nature Reserve",
+      "St Michael's Cave",
+      "Europa Point lighthouse"
+    ],
+    "tips": [
+      "Take cable car up, walk down if fit",
+      "Close bags — macaques are bold"
+    ],
+    "itinerary": "Day 10 — summit hike module on the route.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Gibraltar_%28238030299%29.jpeg/1280px-Gibraltar_%28238030299%29.jpeg",
+        "caption": "Gibraltar — Rock of Gibraltar",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Gibraltar_BW_2015-10-26_14-44-23.jpg/1280px-Gibraltar_BW_2015-10-26_14-44-23.jpg",
+        "caption": "Gibraltar BW 2015-10-26 14-44-23 — Rock of Gibraltar",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Gibraltar_BW_2015-10-26_16-18-18.jpg/1280px-Gibraltar_BW_2015-10-26_16-18-18.jpg",
+        "caption": "Gibraltar BW 2015-10-26 16-18-18 — Rock of Gibraltar",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Gibraltar_BW_2015-10-26_16-18-57.jpg/1280px-Gibraltar_BW_2015-10-26_16-18-57.jpg",
+        "caption": "Gibraltar BW 2015-10-26 16-18-57 — Rock of Gibraltar",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Gibraltar_City_Hall_3.jpg/1280px-Gibraltar_City_Hall_3.jpg",
+        "caption": "Gibraltar City Hall 3 — Rock of Gibraltar",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Gibraltar_S_Rock_%28136247891%29.jpeg/1280px-Gibraltar_S_Rock_%28136247891%29.jpeg",
+        "caption": "Gibraltar S Rock — Rock of Gibraltar",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Upper Rock Nature Reserve"
+  },
+  "Gibraltar Old Town": {
+    "country": "Gibraltar",
+    "stay": "1 night",
+    "general": "Compact British enclave streets — pubs, duty-free, and marina walks at the peninsula tip.",
+    "activities": [
+      "Main Street shopping",
+      "Marina stroll",
+      "Mediterranean Steps hike"
+    ],
+    "tips": [
+      "Border queues vary — plan driving time",
+      "Pounds sterling used locally"
+    ],
+    "itinerary": "Days 11–12 — wind-down before route end.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock_of_Gibraltar_from_the_Mediterranean.jpg?width=1200",
+        "caption": "Rock of Gibraltar — Gibraltar Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Main_Street%2C_Gibraltar.jpg?width=1200",
+        "caption": "Main Street, Gibraltar — Gibraltar Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Gibraltar_-_panoramio_-_Jos_Dierickx.jpg/1280px-Gibraltar_-_panoramio_-_Jos_Dierickx.jpg",
+        "caption": "Gibraltar - panoramio - Jos Dierickx — Gibraltar Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Gibraltar_-_panoramio_-_Jos_Dierickx_%281%29.jpg/1280px-Gibraltar_-_panoramio_-_Jos_Dierickx_%281%29.jpg",
+        "caption": "Gibraltar - panoramio - Jos Dierickx (1) — Gibraltar Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Gull_of_Gibraltar_%288483055557%29.jpg/1280px-Gull_of_Gibraltar_%288483055557%29.jpg",
+        "caption": "Gull of Gibraltar (8483055557) — Gibraltar Old Town",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Rock_of_Gibraltar_-_panoramio_%2810%29.jpg/1280px-Rock_of_Gibraltar_-_panoramio_%2810%29.jpg",
+        "caption": "Rock of Gibraltar - panoramio (10) — Gibraltar Old Town",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Main Street shopping"
+  },
+  "Tokyo": {
+    "country": "Japan",
+    "stay": "3 nights",
+    "general": "Neon districts, shrine calm, and food obsession — start and end anchor of the cultural arc.",
+    "activities": [
+      "Senso-ji temple",
+      "Shibuya crossing",
+      "Tsukiji outer market breakfast"
+    ],
+    "tips": [
+      "Get Suica card for trains",
+      "Reserve teamLab if visiting"
+    ],
+    "itinerary": "Days 1 and 9 — bookend city with different neighbourhoods each time.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibuya_Crossing_2018.jpg?width=1200",
+        "caption": "Shibuya Crossing, Tokyo",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sensoji_Temple_Tokyo_Skytree_View.jpg?width=1200",
+        "caption": "Senso-ji temple, Asakusa — Tokyo",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Mahsa_Salar%2C_Iranian_karateka_and_bronze_medalist_at_the_2006_SKIF_World_Karate_Championship_in_Tokyo%2C_Japan.jpg/1280px-Mahsa_Salar%2C_Iranian_karateka_and_bronze_medalist_at_the_2006_SKIF_World_Karate_Championship_in_Tokyo%2C_Japan.jpg",
+        "caption": "Mahsa Salar, Iranian karateka and bronze medalist at the 2006 SKIF World Karate Championship in Tokyo, Japan",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tokyo%2C_Japan_%28Unsplash_mEaYSkucTys%29.jpg/1280px-Tokyo%2C_Japan_%28Unsplash_mEaYSkucTys%29.jpg",
+        "caption": "Tokyo, Japan (Unsplash mEaYSkucTys)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Tokyo_-_panoramio_-_sasikan_%285%29.jpg",
+        "caption": "Tokyo - panoramio - sasikan (5)",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Tokyo_-_panoramio_-_sasikan_%286%29.jpg",
+        "caption": "Tokyo - panoramio - sasikan (6)",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Senso-ji temple"
+  },
+  "Tokyo Return": {
+    "country": "Japan",
+    "stay": "1 night",
+    "general": "Final night in the capital — last-minute shopping, airport trains, and favourite district revisit.",
+    "activities": [
+      "Departure district stroll",
+      "Last ramen bowl",
+      "Imperial East Gardens"
+    ],
+    "tips": [
+      "Narita vs Haneda — confirm airport early",
+      "Pack omiyage gifts last day"
+    ],
+    "itinerary": "Day 9 — transit buffer before international flight.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Mahsa_Salar%2C_Iranian_karateka_and_bronze_medalist_at_the_2006_SKIF_World_Karate_Championship_in_Tokyo%2C_Japan.jpg/1280px-Mahsa_Salar%2C_Iranian_karateka_and_bronze_medalist_at_the_2006_SKIF_World_Karate_Championship_in_Tokyo%2C_Japan.jpg",
+        "caption": "Mahsa Salar, Iranian karateka and bronze medalist at the 2006 SKIF World Karate Championship in Tokyo, Japan — Tokyo Return",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tokyo%2C_Japan_%28Unsplash_mEaYSkucTys%29.jpg/1280px-Tokyo%2C_Japan_%28Unsplash_mEaYSkucTys%29.jpg",
+        "caption": "Tokyo, Japan (Unsplash mEaYSkucTys) — Tokyo Return",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Tokyo_-_panoramio_-_sasikan_%285%29.jpg",
+        "caption": "Tokyo - panoramio - sasikan (5) — Tokyo Return",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Tokyo_-_panoramio_-_sasikan_%286%29.jpg",
+        "caption": "Tokyo - panoramio - sasikan (6) — Tokyo Return",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Tokyo_-_panoramio_-_sasikan_%287%29.jpg",
+        "caption": "Tokyo - panoramio - sasikan (7) — Tokyo Return",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Tokyo_-_panoramio_-_sasikan_%288%29.jpg",
+        "caption": "Tokyo - panoramio - sasikan (8) — Tokyo Return",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Departure district stroll"
+  },
+  "Kenroku-en": {
+    "country": "Japan",
+    "stay": "Half day",
+    "general": "One of Japan's three great gardens — ponds, bridges, and seasonal maples in Kanazawa.",
+    "activities": [
+      "Garden circuit",
+      "Tea house pause",
+      "Castle park adjacency"
+    ],
+    "tips": [
+      "Pair with Kanazawa Old District same day",
+      "Early entry avoids tour groups"
+    ],
+    "itinerary": "Day 3 — refined garden block on the north coast leg.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/1_Chome_Hirosaka%2C_Kanazawa-shi%2C_Ishikawa-ken_920-0962%2C_Japan_-_panoramio.jpg/1280px-1_Chome_Hirosaka%2C_Kanazawa-shi%2C_Ishikawa-ken_920-0962%2C_Japan_-_panoramio.jpg",
+        "caption": "1 Chome Hirosaka, Kanazawa-shi, Ishikawa-ken 920-0962, Japan - panoramio — Kenroku-en",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/20190705_Kenroku-en-6.jpg/1280px-20190705_Kenroku-en-6.jpg",
+        "caption": "20190705 Kenroku-en-6",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/20190705_Kenroku-en-8.jpg/1280px-20190705_Kenroku-en-8.jpg",
+        "caption": "20190705 Kenroku-en-8",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Kenroku-en_Gankobashi_under_blooming_sakura.jpg/1280px-Kenroku-en_Gankobashi_under_blooming_sakura.jpg",
+        "caption": "Kenroku-en Gankobashi under blooming sakura",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Kenroku-en_pine_with_raised_roots.jpg/1280px-Kenroku-en_pine_with_raised_roots.jpg",
+        "caption": "Kenroku-en pine with raised roots",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Kenroku-en_pine_with_raised_roots_close_up.jpg/1280px-Kenroku-en_pine_with_raised_roots_close_up.jpg",
+        "caption": "Kenroku-en pine with raised roots close up",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Garden circuit"
+  },
+  "Kanazawa Old District": {
+    "country": "Japan",
+    "stay": "1 night",
+    "general": "Preserved samurai and geisha quarters — gold leaf crafts and Edo-era streetscapes.",
+    "activities": [
+      "Higashi Chaya district",
+      "Nagamachi samurai houses",
+      "Omicho market lunch"
+    ],
+    "tips": [
+      "Stay near Kenroku-en for walking",
+      "Try gold-leaf ice cream once"
+    ],
+    "itinerary": "Day 3 overnight — cultural counterpoint to Tokyo.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/150617kanazawa-omicho-PO.jpg/1280px-150617kanazawa-omicho-PO.jpg",
+        "caption": "150617kanazawa-omicho-PO — Kanazawa Old District",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/20131007_36_Kanazawa_-_Higashi_Chaya_District_%2810477160465%29.jpg/1280px-20131007_36_Kanazawa_-_Higashi_Chaya_District_%2810477160465%29.jpg",
+        "caption": "20131007 36 Kanazawa - Higashi Chaya District (10477160465) — Kanazawa Old District",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/20131007_42_Kanazawa_-_Food_served_at_Nakayasu_Ryokan_%2810477174574%29.jpg",
+        "caption": "20131007 42 Kanazawa - Food served at Nakayasu Ryokan (10477174574) — Kanazawa Old District",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Japan_2024-05-05_%2853892802661%29.jpg/1280px-Japan_2024-05-05_%2853892802661%29.jpg",
+        "caption": "Japan 2024-05-05 (53892802661) — Kanazawa Old District",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Kanazawa_streets_%2850153816213%29.jpg/1280px-Kanazawa_streets_%2850153816213%29.jpg",
+        "caption": "Kanazawa streets (50153816213) — Kanazawa Old District",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/NHK_Kanazawa_Broadcasting_Station%2C_JOJK%2C_Sep_2012.jpg/1280px-NHK_Kanazawa_Broadcasting_Station%2C_JOJK%2C_Sep_2012.jpg",
+        "caption": "NHK Kanazawa Broadcasting Station, JOJK, Sep 2012 — Kanazawa Old District",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Higashi Chaya district"
+  },
+  "Osaka": {
+    "country": "Japan",
+    "stay": "2 nights",
+    "general": "Street-food capital with castle park — neon Dotonbori and friendly Kansai energy.",
+    "activities": [
+      "Dotonbori takoyaki crawl",
+      "Osaka Castle park",
+      "Kuromon market"
+    ],
+    "tips": [
+      "Try okonomiyaki in local joints",
+      "IC card works on most Kansai lines"
+    ],
+    "itinerary": "Days 6–7 — food-focused stay before return north.",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Buddhist_Temple_In_Old_Town_Osaka_%28254929875%29.jpeg/1280px-Buddhist_Temple_In_Old_Town_Osaka_%28254929875%29.jpeg",
+        "caption": "Buddhist Temple In Old Town Osaka",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Buddhist_Temple_In_Old_Town_Osaka_%28254929877%29.jpeg/1280px-Buddhist_Temple_In_Old_Town_Osaka_%28254929877%29.jpeg",
+        "caption": "Buddhist Temple In Old Town Osaka",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Osaka_Castle_%28218116207%29.jpeg/1280px-Osaka_Castle_%28218116207%29.jpeg",
+        "caption": "Osaka Castle",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Osaka_Castle_Moat_%28218116215%29.jpeg/1280px-Osaka_Castle_Moat_%28218116215%29.jpeg",
+        "caption": "Osaka Castle Moat",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Osaka_Restaurant_At_Night_%28254930029%29.jpeg/1280px-Osaka_Restaurant_At_Night_%28254930029%29.jpeg",
+        "caption": "Osaka Restaurant At Night",
+        "source": "Wikimedia Commons"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Street_In_Old_Town_Osaka_%28254929941%29.jpeg/1280px-Street_In_Old_Town_Osaka_%28254929941%29.jpeg",
+        "caption": "Street In Old Town Osaka",
+        "source": "Wikimedia Commons"
+      }
+    ],
+    "tagline": "Dotonbori takoyaki crawl"
+  }
+}

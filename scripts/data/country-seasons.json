@@ -1,0 +1,207 @@
+{
+  "default": {
+    "peak": ["Jun", "Jul", "Aug"],
+    "shoulder": ["Apr", "May", "Sep", "Oct"],
+    "low": ["Jan", "Feb", "Mar", "Nov", "Dec"],
+    "note": "Northern hemisphere baseline — peak summer, cooler shoulder months, quieter winter.",
+    "best": "May–Sep",
+    "weather": {
+      "Jan": {"high": 6, "low": -1, "rain": 60},
+      "Feb": {"high": 7, "low": 0, "rain": 55},
+      "Mar": {"high": 11, "low": 3, "rain": 60},
+      "Apr": {"high": 15, "low": 6, "rain": 60},
+      "May": {"high": 20, "low": 10, "rain": 55},
+      "Jun": {"high": 24, "low": 14, "rain": 45},
+      "Jul": {"high": 27, "low": 16, "rain": 40},
+      "Aug": {"high": 27, "low": 16, "rain": 50},
+      "Sep": {"high": 22, "low": 12, "rain": 60},
+      "Oct": {"high": 16, "low": 8, "rain": 70},
+      "Nov": {"high": 10, "low": 3, "rain": 70},
+      "Dec": {"high": 7, "low": 0, "rain": 65}
+    }
+  },
+  "byCountry": {
+    "Montenegro": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Coast is hot and busy in Jul/Aug. Inland parks (Durmitor, Biogradska) are best May–Sep; high passes can be snowed in until late May.",
+      "best": "May–Sep",
+      "weather": {
+        "Jan": {"high": 9, "low": 3, "rain": 130},
+        "Feb": {"high": 11, "low": 3, "rain": 110},
+        "Mar": {"high": 14, "low": 6, "rain": 100},
+        "Apr": {"high": 18, "low": 9, "rain": 85},
+        "May": {"high": 23, "low": 13, "rain": 70},
+        "Jun": {"high": 27, "low": 17, "rain": 40},
+        "Jul": {"high": 30, "low": 19, "rain": 30},
+        "Aug": {"high": 31, "low": 19, "rain": 45},
+        "Sep": {"high": 26, "low": 15, "rain": 80},
+        "Oct": {"high": 21, "low": 11, "rain": 110},
+        "Nov": {"high": 15, "low": 7, "rain": 160},
+        "Dec": {"high": 11, "low": 4, "rain": 150}
+      }
+    },
+    "Croatia": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Dalmatian coast hot Jun–Aug; expect ferry surcharges. Plitvice & Krka most photogenic in late spring and autumn.",
+      "best": "May–Oct",
+      "weather": {
+        "Jan": {"high": 9, "low": 3, "rain": 90},
+        "Feb": {"high": 11, "low": 3, "rain": 80},
+        "Mar": {"high": 14, "low": 6, "rain": 75},
+        "Apr": {"high": 19, "low": 9, "rain": 65},
+        "May": {"high": 24, "low": 13, "rain": 55},
+        "Jun": {"high": 28, "low": 17, "rain": 50},
+        "Jul": {"high": 31, "low": 19, "rain": 35},
+        "Aug": {"high": 31, "low": 19, "rain": 45},
+        "Sep": {"high": 26, "low": 15, "rain": 75},
+        "Oct": {"high": 20, "low": 11, "rain": 100},
+        "Nov": {"high": 14, "low": 7, "rain": 110},
+        "Dec": {"high": 10, "low": 4, "rain": 105}
+      }
+    },
+    "Slovenia": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["May", "Jun", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb", "Mar"],
+      "note": "Julian Alps best Jul–Sep; lower trails open from late May. Winters cold but excellent for ski resorts.",
+      "best": "Jun–Sep",
+      "weather": {
+        "Jan": {"high": 3, "low": -3, "rain": 75},
+        "Feb": {"high": 5, "low": -2, "rain": 65},
+        "Mar": {"high": 11, "low": 2, "rain": 80},
+        "Apr": {"high": 16, "low": 6, "rain": 85},
+        "May": {"high": 21, "low": 11, "rain": 100},
+        "Jun": {"high": 25, "low": 14, "rain": 110},
+        "Jul": {"high": 27, "low": 16, "rain": 105},
+        "Aug": {"high": 26, "low": 15, "rain": 110},
+        "Sep": {"high": 21, "low": 11, "rain": 100},
+        "Oct": {"high": 15, "low": 7, "rain": 105},
+        "Nov": {"high": 8, "low": 2, "rain": 95},
+        "Dec": {"high": 4, "low": -1, "rain": 85}
+      }
+    },
+    "Italy": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["Apr", "May", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Big cities hot and crowded Jul/Aug; coastal areas peak. Dolomiti hiking season Jun–Sep.",
+      "best": "Apr–Jun, Sep–Oct"
+    },
+    "France": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["May", "Jun", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Alps hut season mid-Jun to mid-Sep; Provence lavender peaks early Jul.",
+      "best": "May–Sep"
+    },
+    "Spain": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["Apr", "May", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Andalucía very hot Jul/Aug — go shoulder. Picos & Pyrenees Jun–Sep.",
+      "best": "Apr–Jun, Sep–Oct"
+    },
+    "Portugal": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["Apr", "May", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Algarve packed Jul/Aug; Peneda-Gerês best late spring and early autumn.",
+      "best": "May–Oct"
+    },
+    "Greece": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["May", "Jun", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Cyclades very hot/dry Jul/Aug. Mainland hikes (Olympus, Samaria) Jun–Oct.",
+      "best": "May–Jun, Sep–Oct"
+    },
+    "Norway": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Most mountain huts open mid-Jun to mid-Sep. Northern lights season Sep–Mar.",
+      "best": "Jun–Aug"
+    },
+    "Sweden": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Midnight sun in north Jun/Jul; Kungsleden hut season mid-Jun to mid-Sep.",
+      "best": "Jun–Aug"
+    },
+    "Iceland": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Highlands roads (F-roads) open ~late Jun to mid-Sep. Aurora season Sep–Mar.",
+      "best": "Jun–Aug for hiking, Sep–Mar for aurora"
+    },
+    "Switzerland": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["Jun", "Sep"],
+      "low": ["Apr", "May", "Oct", "Nov"],
+      "note": "Alpine hiking Jul–Sep; cable cars often closed in shoulder. Ski season Dec–Mar.",
+      "best": "Jul–Sep"
+    },
+    "Austria": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["Jun", "Sep"],
+      "low": ["Apr", "May", "Oct", "Nov"],
+      "note": "Hohe Tauern hut season Jun–Sep; Vienna pleasant May–Oct.",
+      "best": "Jun–Sep"
+    },
+    "Germany": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Bavarian Alps & Black Forest best Jun–Sep; Christmas markets late Nov–Dec.",
+      "best": "May–Sep"
+    },
+    "Poland": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["May", "Jun", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Tatra peaks safe Jul–Sep; Białowieża best in late spring for biodiversity.",
+      "best": "Jun–Sep"
+    },
+    "Romania": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["May", "Jun", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Carpathian hikes Jul–Sep; Danube Delta best May–Jun for migratory birds.",
+      "best": "May–Sep"
+    },
+    "Bulgaria": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["May", "Jun", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Pirin & Rila hut season Jun–Sep; Black Sea coast Jul/Aug.",
+      "best": "May–Sep"
+    },
+    "Turkey": {
+      "peak": ["Jul", "Aug"],
+      "shoulder": ["Apr", "May", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Istanbul/Aegean pleasant Apr–Jun & Sep–Oct. Cappadocia balloons fly year-round but autumn light is exceptional.",
+      "best": "Apr–Jun, Sep–Oct"
+    },
+    "United Kingdom": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep", "Oct"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Highlands and Lake District best Jun–Sep; bring rain gear in any season.",
+      "best": "May–Sep"
+    },
+    "Ireland": {
+      "peak": ["Jun", "Jul", "Aug"],
+      "shoulder": ["May", "Sep"],
+      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "note": "Long daylight Jun–Jul; expect showers all year. Wild Atlantic Way drive best May–Sep.",
+      "best": "May–Sep"
+    }
+  }
+}

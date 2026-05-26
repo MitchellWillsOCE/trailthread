@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f766e" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Trailthread — Plan &amp; Explore Routes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main class="map-stage" id="layoutRoot">
+        <div class="map-hud">
+          <div class="map-hud-left">
+            <div class="hud-brand" id="hudBrand">
+              <p class="hud-kicker">Trailthread</p>
+              <h2 id="hudTripName" class="hud-trip-title">Pick a journey or explore</h2>
+              <p id="hudTripSubtitle" class="hud-trip-subtitle">Browse sample routes or discover cities and trails on the map</p>
+              <div class="city-search" id="citySearch">
+                <label class="visually-hidden" for="citySearchInput">Search cities, parks, trails, landmarks</label>
+                <div class="city-search__field">
+                  <label
+                    id="citySearchIconButton"
+                    class="city-search__icon-button"
+                    for="citySearchInput"
+                    aria-hidden="true"
+                  >
+                    <svg class="city-search__icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                      <path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                  </label>
+                  <input
+                    id="citySearchInput"
+                    class="city-search__input"
+                    type="search"
+                    placeholder="Search cities, parks, trails…"
+                    autocomplete="off"
+                    spellcheck="false"
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-controls="citySearchResults"
+                    aria-autocomplete="list"
+                    enterkeyhint="search"
+                  />
+                  <span id="citySearchSpinner" class="city-search__spinner" aria-hidden="true" hidden></span>
+                  <kbd id="citySearchKbd" class="city-search__kbd" aria-hidden="true" title="Press / to focus">/</kbd>
+                  <button type="button" id="citySearchClear" class="city-search__clear" hidden aria-label="Clear search">✕</button>
+                </div>
+                <ul id="citySearchResults" class="city-search__results" hidden role="listbox" aria-label="Search results"></ul>
+              </div>
+              <nav class="hud-nav" id="hudNav" aria-label="Map views">
+                <div class="hud-nav-track">
+                  <button type="button" class="hud-nav-item" data-view="map" data-active="true" aria-current="page">Map</button>
+                  <button type="button" class="hud-nav-item" data-view="story">Story</button>
+                  <button type="button" class="hud-nav-item" data-view="stops">Stops</button>
+                  <span class="hud-nav-indicator" id="hudNavIndicator" aria-hidden="true"></span>
+                </div>
+              </nav>
+            </div>
+            <div class="hud-actions">
+              <button
+                id="exploreModeBtn"
+                class="explore-mode-btn"
+                type="button"
+                aria-pressed="false"
+                title="Explore the map without selecting a journey"
+              >
+                <span class="explore-mode-btn__icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21s7-4.35 7-10a7 7 0 1 0-14 0c0 5.65 7 10 7 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="11" r="2.5" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                </span>
+                <span class="explore-mode-btn__text">
+                  <span class="explore-mode-btn__label">Explore</span>
+                  <span id="exploreModeHint" class="explore-mode-btn__hint">Cities · parks · trails · landmarks</span>
+                </span>
+              </button>
+              <button
+                id="openJourneysMenuButton"
+                class="journeys-menu-btn"
+                type="button"
+                aria-haspopup="dialog"
+                aria-controls="tripOverlay"
+                aria-expanded="false"
+                title="Browse and open a journey"
+              >
+                <span class="journeys-menu-icon" aria-hidden="true">🧭</span>
+                <span class="journeys-menu-text">
+                  <span class="journeys-menu-label">Journeys</span>
+                  <span id="journeysMenuHint" class="journeys-menu-hint">Sample routes</span>
+                </span>
+              </button>
+              <button
+                id="openFavoritesButton"
+                class="journeys-menu-btn favorites-menu-btn"
+                type="button"
+                aria-haspopup="dialog"
+                aria-controls="favoritesOverlay"
+                aria-expanded="false"
+                title="Your saved places"
+              >
+                <span class="journeys-menu-icon" aria-hidden="true">❤</span>
+                <span class="journeys-menu-text">
+                  <span class="journeys-menu-label">Favorites</span>
+                  <span id="favoritesMenuHint" class="journeys-menu-hint">0 saved</span>
+                </span>
+              </button>
+              <button
+                id="reopenPanelButton"
+                class="show-story-btn"
+                type="button"
+                aria-controls="itineraryPanel"
+                aria-expanded="false"
+                hidden
+                title="Show travel story panel"
+              >
+                Show story
+              </button>
+            </div>
+          </div>
+          <div class="map-controls">
+            <details class="map-controls-drawer" id="mapControlsDrawer" open>
+              <summary class="map-controls-drawer__summary">
+                <span class="map-controls-drawer__label">Map options</span>
+                <span class="map-controls-drawer__hint" id="mapControlsHint">Layers &amp; routes</span>
+                <span class="map-controls-drawer__chev" aria-hidden="true"></span>
+              </summary>
+              <div class="map-controls-card">
+                <div class="control-group">
+                  <span class="control-label">Map style</span>
+                  <div id="basemapSwitcher" class="layer-chip-row" aria-label="Basemap style"></div>
+                </div>
+                <div class="control-group">
+                  <span class="control-label">Map overlays</span>
+                  <div id="overlaySwitcher" class="layer-chip-row" aria-label="Map overlays"></div>
+                </div>
+                <div class="control-group">
+                  <span class="control-label">Explore</span>
+                  <div class="layer-chip-row explore-layer-row" id="exploreLayersRow">
+                    <div id="exploreCitiesToggle" aria-label="Explore cities"></div>
+                    <div id="exploreParksToggle" aria-label="Explore national parks"></div>
+                    <div id="exploreHikesToggle" aria-label="Explore hiking trails"></div>
+                    <div id="explorePoisToggle" aria-label="Explore points of interest"></div>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <span class="control-label">Transport modes</span>
+                  <div id="routeLegend" class="route-legend" aria-label="Route mode filters"></div>
+                </div>
+                <button
+                  id="togglePanel"
+                  class="hud-btn hud-btn--ghost hud-btn--panel"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="itineraryPanel"
+                  title="Show the journey panel"
+                >
+                  Show story
+                </button>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div id="map" role="application" aria-label="Interactive journey map"></div>
+
+        <div id="mapHintBar" class="map-hint-bar" hidden>
+          <span class="map-hint-bar__icon" aria-hidden="true">◎</span>
+          <p id="mapHintText" class="map-hint-bar__text">Zoom in to discover cities, parks, trails, and landmarks. Tap a marker for details.</p>
+          <button type="button" id="mapHintDismiss" class="map-hint-bar__dismiss" aria-label="Dismiss hint">✕</button>
+        </div>
+
+
+        <div id="welcomeOverlay" class="welcome-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+          <div class="welcome-overlay__backdrop" data-welcome-dismiss></div>
+          <section class="welcome-card">
+            <p class="hud-kicker">Welcome</p>
+            <h1 id="welcomeTitle">Plan routes. Explore places.</h1>
+            <p class="welcome-lead">
+              Trailthread is a travel map for browsing multi-day routes, reading day-by-day stories, and discovering cities, national parks, and hiking trails—similar to a digital trip journal on a map.
+            </p>
+            <ol class="welcome-steps">
+              <li>
+                <strong>Explore</strong>
+                <span>Turn on city, park, trail, and landmark layers in Map options—no journey required.</span>
+              </li>
+              <li>
+                <strong>Pick a journey</strong>
+                <span>Open a sample route to see the path, stops, and full itinerary.</span>
+              </li>
+              <li>
+                <strong>Read &amp; navigate</strong>
+                <span>Use Story and Stops tabs once a journey is loaded.</span>
+              </li>
+            </ol>
+            <div class="welcome-actions">
+              <button type="button" id="welcomeExploreBtn" class="welcome-btn welcome-btn--primary">
+                Explore
+              </button>
+              <button type="button" id="welcomeJourneysBtn" class="welcome-btn welcome-btn--secondary">
+                Browse journeys
+              </button>
+            </div>
+            <button type="button" class="welcome-skip" data-welcome-dismiss>Skip intro</button>
+          </section>
+        </div>
+
+        <div id="tripOverlay" class="trip-overlay hidden">
+          <section class="trip-overlay-panel" role="dialog" aria-modal="true" aria-labelledby="tripOverlayTitle">
+            <div class="trip-overlay-header">
+              <div class="trip-overlay-header__title">
+                <p class="hud-kicker">Journey library</p>
+                <h2 id="tripOverlayTitle">Choose a journey</h2>
+              </div>
+              <div class="trip-overlay-actions">
+                <button type="button" id="openJourneyBuilderBtn" class="trip-overlay-action trip-overlay-action--primary">
+                  <span aria-hidden="true">＋</span> Build journey
+                </button>
+                <form class="trip-overlay-code" id="journeyCodeForm" autocomplete="off">
+                  <label class="visually-hidden" for="journeyCodeInput">Open by code</label>
+                  <input id="journeyCodeInput" type="text" inputmode="text" autocapitalize="characters" autocorrect="off" autocomplete="off" spellcheck="false" placeholder="Code" maxlength="14" />
+                  <button type="submit" class="trip-overlay-action">Open</button>
+                </form>
+                <button id="closeTripMenuButton" class="trip-overlay-close" type="button" aria-label="Close journey picker">✕</button>
+              </div>
+            </div>
+            <p class="trip-overlay-note">Sample multi-day routes with mapped paths, stops, and day-by-day stories. Routes align to OpenStreetMap where possible.</p>
+            <p id="journeyCodeError" class="journey-code-error" hidden></p>
+            <section id="mintedJourneysSection" class="minted-journeys" aria-label="Your journey codes" hidden>
+              <header class="minted-journeys__header">
+                <p class="hud-kicker">Your codes</p>
+                <h3>Journeys you've minted</h3>
+                <p class="minted-journeys__hint">Saved on this device. Re-open any code below or copy its share link.</p>
+              </header>
+              <div id="mintedJourneysList" class="minted-journeys__list"></div>
+            </section>
+            <div class="continent-filters" id="continentFilters" role="group" aria-label="Filter by continent"></div>
+            <div id="tripMenuGrid" class="trip-grid"></div>
+          </section>
+        </div>
+
+      </main>
+
+      <aside id="mobileControlsSheet" class="mobile-sheet" hidden aria-label="Map controls">
+        <div class="mobile-sheet__backdrop" data-mobile-sheet-close></div>
+        <section class="mobile-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="mobileControlsTitle">
+          <header class="mobile-sheet__header">
+            <span class="mobile-sheet__handle" aria-hidden="true"></span>
+            <h2 id="mobileControlsTitle" class="mobile-sheet__title">Map controls</h2>
+            <button type="button" class="mobile-sheet__close" data-mobile-sheet-close aria-label="Close map controls">✕</button>
+          </header>
+          <div id="mobileControlsBody" class="mobile-sheet__body"></div>
+        </section>
+      </aside>
+
+      <nav id="mobileBottomNav" class="mobile-bottom-nav" aria-label="Mobile navigation">
+        <button type="button" class="mobile-bottom-nav__item" data-nav="map" data-active="true" aria-label="Show map">
+          <span class="mobile-bottom-nav__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20V6.5Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M9 4v13.5M15 6.5V20" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="mobile-bottom-nav__label">Map</span>
+        </button>
+        <button type="button" class="mobile-bottom-nav__item" data-nav="explore" aria-label="Toggle explore mode">
+          <span class="mobile-bottom-nav__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 21s7-4.35 7-10a7 7 0 1 0-14 0c0 5.65 7 10 7 10Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="12" cy="11" r="2.5" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </span>
+          <span class="mobile-bottom-nav__label">Explore</span>
+        </button>
+        <button type="button" class="mobile-bottom-nav__item" data-nav="journeys" aria-label="Open journey library">
+          <span class="mobile-bottom-nav__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3v3M3 12h3M21 12h-3M12 21v-3M5.6 5.6l2.1 2.1M18.4 5.6l-2.1 2.1M18.4 18.4l-2.1-2.1M5.6 18.4l2.1-2.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </span>
+          <span class="mobile-bottom-nav__label">Journeys</span>
+        </button>
+        <button type="button" class="mobile-bottom-nav__item" data-nav="saved" aria-label="Open saved places">
+          <span class="mobile-bottom-nav__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 20.5s-7.5-4.7-7.5-10.2A4.3 4.3 0 0 1 12 6.7a4.3 4.3 0 0 1 7.5 3.6c0 5.5-7.5 10.2-7.5 10.2Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="mobile-bottom-nav__label">Saved</span>
+        </button>
+        <button type="button" class="mobile-bottom-nav__item" data-nav="layers" aria-label="Open map layers and routes">
+          <span class="mobile-bottom-nav__icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="m12 3 9 5-9 5-9-5 9-5Zm9 9-9 5-9-5m18 4-9 5-9-5" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="mobile-bottom-nav__label">Layers</span>
+        </button>
+      </nav>
+
+      <aside id="itineraryPanel" class="journey-panel journey-panel--empty collapsed" aria-label="Travel story and itinerary">
+        <header class="journey-panel-header">
+          <div class="panel-header-row">
+            <div class="panel-handle" aria-hidden="true"></div>
+          </div>
+          <button
+            id="collapsePanelButton"
+            class="panel-collapse-btn"
+            type="button"
+            aria-label="Open travel story panel"
+            aria-controls="itineraryPanel"
+            aria-expanded="false"
+            title="Open panel"
+          >
+            <span aria-hidden="true">✕</span>
+          </button>
+          <div id="tripGallery" class="trip-gallery" hidden aria-label="Trip photos"></div>
+          <p class="eyebrow">Journey details</p>
+          <p id="tripRegion" class="trip-region" hidden></p>
+          <h1 id="tripTitle">No journey selected</h1>
+          <p id="tripDescription" class="subline">Explore the map or open a journey from the library to see routes, stories, and stops.</p>
+          <ul id="tripHighlights" class="trip-highlights" hidden aria-label="Trip highlights"></ul>
+          <div class="quick-stats" id="tripQuickStats" hidden>
+            <span id="statDays" class="stat-pill">—</span>
+            <span id="statModes" class="stat-pill">—</span>
+            <span id="statStops" class="stat-pill">—</span>
+          </div>
+        </header>
+
+        <section id="journeyEmptyState" class="journey-empty-state" aria-label="Getting started">
+          <div class="journey-empty-state__icon" aria-hidden="true">🗺</div>
+          <h3>Where would you like to start?</h3>
+          <p>Open a journey for routes and day-by-day notes, or explore cities, national parks, and trails on the map.</p>
+          <div class="journey-empty-state__actions">
+            <button type="button" id="emptyStateExploreBtn" class="journey-empty-btn journey-empty-btn--primary">Explore</button>
+            <button type="button" id="emptyStateJourneysBtn" class="journey-empty-btn">Browse journeys</button>
+          </div>
+        </section>
+
+        <section id="stopsPanel" class="stops-panel" hidden aria-label="Route stops">
+          <h3>Route stops</h3>
+          <p class="stops-panel-note">Tap a stop to fly there on the map.</p>
+          <div id="stopsList" class="stops-list"></div>
+        </section>
+
+        <article id="itineraryContent" class="itinerary-content" hidden>
+          <p class="loading-note">Loading itinerary…</p>
+        </article>
+      </aside>
+    </div>
+
+    <div id="mediaLightbox" class="media-lightbox" hidden aria-modal="true" aria-label="Photo viewer">
+      <div class="media-lightbox__backdrop" aria-hidden="true"></div>
+      <div class="media-lightbox__stage">
+        <button type="button" class="media-lightbox__close" data-lightbox-close aria-label="Close photo viewer">✕</button>
+        <button type="button" class="media-lightbox__nav media-lightbox__nav--prev" data-lightbox-prev aria-label="Previous photo">‹</button>
+        <img id="mediaLightboxImage" class="media-lightbox__image" alt="" referrerpolicy="no-referrer" />
+        <button type="button" class="media-lightbox__nav media-lightbox__nav--next" data-lightbox-next aria-label="Next photo">›</button>
+        <p id="mediaLightboxCaption" class="media-lightbox__caption" hidden></p>
+        <span id="mediaLightboxCounter" class="media-lightbox__counter"></span>
+      </div>
+    </div>
+
+    <div id="placeStory" class="dest-panel" hidden>
+      <div class="dest-panel__backdrop" data-place-story-close></div>
+      <section class="dest-panel__card" role="dialog" aria-modal="true" aria-labelledby="placeStoryTitle">
+        <header class="dest-panel__topbar">
+          <div class="dest-panel__country">
+            <img id="placeStoryFlag" class="dest-panel__flag" width="16" height="16" alt="" referrerpolicy="no-referrer" hidden />
+            <span id="placeStoryCountryName"></span>
+          </div>
+          <div class="dest-panel__topbar-actions">
+            <button type="button" id="placeStoryFavorite" class="dest-panel__heart" data-favorite-btn aria-label="Save to favorites" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s-7.5-4.78-7.5-11.07A4.43 4.43 0 0 1 9 5.5 4.85 4.85 0 0 1 12 7.05 4.85 4.85 0 0 1 15 5.5a4.43 4.43 0 0 1 4.5 4.43C19.5 16.22 12 21 12 21Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none" />
+              </svg>
+            </button>
+            <button type="button" class="dest-panel__close" data-place-story-close aria-label="Close destination">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 19 7-7 7-7m0 14L5 5" />
+              </svg>
+            </button>
+          </div>
+        </header>
+        <div class="dest-panel__scroll">
+          <div class="dest-panel__hero" id="placeStoryHero">
+            <div id="placeStoryCarousel" class="dest-panel__carousel-host"></div>
+            <div class="dest-panel__hero-gradient"></div>
+            <div class="dest-panel__hero-text">
+              <h2 id="placeStoryTitle"></h2>
+              <p id="placeStoryTagline" class="dest-panel__tagline"></p>
+            </div>
+          </div>
+          <div class="dest-panel__details">
+            <p id="placeStoryDescription" class="dest-panel__description"></p>
+            <dl class="dest-panel__stats" id="placeStoryStats"></dl>
+            <div class="dest-panel__contrast" id="placeStoryBody"></div>
+            <p id="placeStoryCredit" class="dest-panel__credit" hidden></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="countryDossier" class="dest-panel dest-panel--country" hidden>
+      <div class="dest-panel__backdrop" data-country-close></div>
+      <section class="dest-panel__card country-dossier" role="dialog" aria-modal="true" aria-labelledby="countryDossierTitle">
+        <header class="dest-panel__topbar">
+          <div class="dest-panel__country">
+            <img id="countryDossierFlag" class="dest-panel__flag" width="18" height="18" alt="" referrerpolicy="no-referrer" hidden />
+            <span id="countryDossierFlagName"></span>
+          </div>
+          <button type="button" class="dest-panel__close" data-country-close aria-label="Close country dossier">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 19 7-7 7-7m0 14L5 5" />
+            </svg>
+          </button>
+        </header>
+        <div class="dest-panel__scroll">
+          <div class="country-dossier__hero">
+            <div class="country-dossier__hero-bg" id="countryDossierHeroBg"></div>
+            <div class="country-dossier__hero-text">
+              <p class="hud-kicker">Country dossier</p>
+              <h2 id="countryDossierTitle">Country</h2>
+              <p id="countryDossierLead" class="dest-panel__tagline"></p>
+            </div>
+          </div>
+          <div class="country-dossier__body">
+            <div class="country-dossier__counts" id="countryDossierCounts"></div>
+            <div class="country-dossier__actions">
+              <button type="button" class="welcome-btn welcome-btn--primary" id="countryDossierExplore">Explore on map</button>
+              <button type="button" class="welcome-btn welcome-btn--secondary" id="countryDossierBuild">Start a journey here</button>
+            </div>
+            <div id="countryDossierSeason"></div>
+            <section class="country-dossier__section" id="countryDossierCities" hidden>
+              <h3 class="dest-panel__section-title">Top cities</h3>
+              <div class="country-dossier__cards" data-kind="city"></div>
+            </section>
+            <section class="country-dossier__section" id="countryDossierParks" hidden>
+              <h3 class="dest-panel__section-title">National parks</h3>
+              <div class="country-dossier__cards" data-kind="park"></div>
+            </section>
+            <section class="country-dossier__section" id="countryDossierHikes" hidden>
+              <h3 class="dest-panel__section-title">Trails</h3>
+              <div class="country-dossier__cards" data-kind="hike"></div>
+            </section>
+            <section class="country-dossier__section" id="countryDossierPois" hidden>
+              <h3 class="dest-panel__section-title">Landmarks</h3>
+              <div class="country-dossier__cards" data-kind="poi"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="favoritesOverlay" class="favorites-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="favoritesOverlayTitle">
+      <div class="favorites-overlay__backdrop" data-favorites-close></div>
+      <section class="favorites-overlay__panel">
+        <header class="favorites-overlay__header">
+          <div>
+            <p class="hud-kicker">Saved places</p>
+            <h2 id="favoritesOverlayTitle">Your favorites</h2>
+            <p class="favorites-overlay__count" id="favoritesOverlayCount">No favorites yet — tap a heart on any card to save it.</p>
+          </div>
+          <div class="favorites-overlay__actions">
+            <button type="button" id="favoritesClearBtn" class="trip-overlay-action" disabled>Clear all</button>
+            <button type="button" class="trip-overlay-close" data-favorites-close aria-label="Close favorites">✕</button>
+          </div>
+        </header>
+        <div class="favorites-overlay__filter" id="favoritesOverlayFilter" role="tablist" hidden></div>
+        <div class="favorites-overlay__grid" id="favoritesOverlayGrid"></div>
+        <p class="favorites-overlay__empty" id="favoritesOverlayEmpty" hidden>
+          Heart any city, park, trail or landmark to keep it here — handy for building journeys quickly.
+        </p>
+      </section>
+    </div>
+
+    <button type="button" id="builderResumeFab" class="builder-resume-fab" hidden aria-label="Resume building your journey">
+      <span class="builder-resume-fab__icon" aria-hidden="true">🧭</span>
+      <span class="builder-resume-fab__label">
+        <strong>Journey in progress</strong>
+        <span><span data-fab-count>0</span> stops · tap to resume</span>
+      </span>
+    </button>
+
+    <div id="builderPickBanner" class="builder-pick-banner" hidden role="status" aria-live="polite">
+      <div class="builder-pick-banner__inner">
+        <span class="builder-pick-banner__icon" aria-hidden="true">📍</span>
+        <div class="builder-pick-banner__text">
+          <strong>Choose your next stop</strong>
+          <span>Tap a marker, or click anywhere on the map.</span>
+        </div>
+        <button type="button" class="builder-pick-banner__cancel" id="builderPickCancel">Cancel</button>
+      </div>
+    </div>
+
+    <div id="journeyBuilder" class="dest-panel dest-panel--builder" hidden>
+      <div class="dest-panel__backdrop"></div>
+      <section class="dest-panel__card journey-builder" role="dialog" aria-modal="true" aria-labelledby="journeyBuilderTitle">
+        <header class="dest-panel__topbar">
+          <div class="dest-panel__country">
+            <span class="dest-panel__trail-badge" aria-hidden="true">🧭</span>
+            <span>Journey builder</span>
+          </div>
+          <button type="button" class="dest-panel__close" data-builder-close aria-label="Close journey builder">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 19 7-7 7-7m0 14L5 5" />
+            </svg>
+          </button>
+        </header>
+        <div class="dest-panel__scroll journey-builder__scroll">
+          <div class="journey-builder__body">
+            <p class="hud-kicker">Build &amp; share</p>
+            <h2 id="journeyBuilderTitle">Design a journey</h2>
+            <p class="journey-builder__lead">
+              Add stops by search, by clicking the map, or by tapping any marker. We'll mint a shareable code when you're ready.
+            </p>
+
+            <div class="journey-builder__summary" id="builderSummary" hidden>
+              <div class="journey-builder__summary-card">
+                <span class="journey-builder__summary-num" id="builderSummaryStops">0</span>
+                <span class="journey-builder__summary-label">stops</span>
+              </div>
+              <div class="journey-builder__summary-card">
+                <span class="journey-builder__summary-num" id="builderSummaryDistance">0</span>
+                <span class="journey-builder__summary-label">km approx</span>
+              </div>
+              <div class="journey-builder__summary-card">
+                <span class="journey-builder__summary-num" id="builderSummaryCountries">0</span>
+                <span class="journey-builder__summary-label">countries</span>
+              </div>
+            </div>
+
+            <details class="journey-builder__meta" id="builderMeta">
+              <summary>Journey details</summary>
+              <label class="journey-builder__field">
+                <span>Title</span>
+                <input type="text" id="builderTitle" maxlength="120" placeholder="Coastal Croatia loop" />
+              </label>
+              <label class="journey-builder__field">
+                <span>Short description</span>
+                <textarea id="builderDescription" maxlength="400" rows="2" placeholder="What is this trip about?"></textarea>
+              </label>
+              <div class="journey-builder__grid">
+                <label class="journey-builder__field">
+                  <span>Days</span>
+                  <input type="number" id="builderDays" min="1" max="60" value="7" />
+                </label>
+                <label class="journey-builder__field">
+                  <span>Region label</span>
+                  <input type="text" id="builderRegion" maxlength="80" placeholder="Croatia · Adriatic" />
+                </label>
+                <label class="journey-builder__field">
+                  <span>Author</span>
+                  <input type="text" id="builderAuthor" maxlength="60" placeholder="@you" />
+                </label>
+              </div>
+            </details>
+
+            <div class="journey-builder__add">
+              <div class="journey-builder__add-modes" role="tablist">
+                <button type="button" id="builderModeSearch" class="journey-builder__add-mode is-active" role="tab" aria-selected="true">
+                  <span aria-hidden="true">🔎</span> Search
+                </button>
+                <button type="button" id="builderModeMap" class="journey-builder__add-mode" role="tab" aria-selected="false">
+                  <span aria-hidden="true">📍</span> Pick on map
+                </button>
+                <button type="button" id="builderModeFavorites" class="journey-builder__add-mode" role="tab" aria-selected="false">
+                  <span aria-hidden="true">❤</span> Favorites <span class="journey-builder__add-mode-badge" id="builderFavoritesBadge" hidden>0</span>
+                </button>
+              </div>
+
+              <div class="journey-builder__search" id="builderSearchPanel">
+                <div class="journey-builder__search-row">
+                  <input id="builderSearchInput" type="search" placeholder="Search cities, parks, trails, landmarks…" autocomplete="off" />
+                  <button type="button" id="builderSearchClear" class="city-search__clear" hidden aria-label="Clear builder search">✕</button>
+                </div>
+                <ul id="builderSearchResults" class="city-search__results journey-builder__search-results" hidden></ul>
+              </div>
+
+              <div class="journey-builder__map-pick" id="builderMapPickPanel" hidden>
+                <p class="journey-builder__map-pick-hint">
+                  We'll hide the builder while you choose. Click a marker for a known place, or anywhere on the map to drop a custom stop.
+                </p>
+                <button type="button" id="builderPickOnMap" class="welcome-btn welcome-btn--primary journey-builder__map-pick-btn">
+                  <span aria-hidden="true">📍</span> Choose next stop on map
+                </button>
+              </div>
+
+              <div class="journey-builder__favorites-panel" id="builderFavoritesPanel" hidden>
+                <div class="journey-builder__favorites-empty" id="builderFavoritesEmpty" hidden>
+                  <span aria-hidden="true">❤</span>
+                  <strong>No favorites yet</strong>
+                  <small>Tap a heart on any place card to save it here for one-click adding.</small>
+                </div>
+                <div class="journey-builder__favorites-list" id="builderFavoritesList" role="list"></div>
+              </div>
+            </div>
+
+            <h3 class="dest-panel__section-title journey-builder__stops-title">Itinerary</h3>
+            <ol class="journey-builder__stops" id="builderStops" aria-live="polite"></ol>
+            <p class="journey-builder__hint" id="builderStopsHint">Need at least 2 stops to mint a code.</p>
+
+            <div id="builderResult" class="journey-builder__result" hidden>
+              <p class="hud-kicker">Journey code</p>
+              <p class="journey-builder__code" id="builderResultCode"></p>
+              <p class="journey-builder__result-hint">Share this code or the full link — anyone who enters it can open your journey.</p>
+              <div class="journey-builder__result-row">
+                <input id="builderResultLink" type="text" readonly />
+                <button type="button" id="builderResultCopy" class="welcome-btn welcome-btn--secondary">Copy link</button>
+              </div>
+              <button type="button" id="builderResultOpen" class="welcome-btn welcome-btn--primary">Open this journey</button>
+            </div>
+          </div>
+        </div>
+        <footer class="journey-builder__footer">
+          <button type="button" id="builderReset" class="welcome-btn welcome-btn--secondary">Reset</button>
+          <button type="button" id="builderMint" class="welcome-btn welcome-btn--primary" disabled>Mint share code</button>
+        </footer>
+      </section>
+    </div>
+
+    <div id="hikeStory" class="dest-panel dest-panel--hike" hidden>
+      <div class="dest-panel__backdrop" data-hike-story-close></div>
+      <section class="dest-panel__card" role="dialog" aria-modal="true" aria-labelledby="hikeStoryTitle">
+        <header class="dest-panel__topbar">
+          <div class="dest-panel__country">
+            <span class="dest-panel__trail-badge" aria-hidden="true">⛰</span>
+            <span id="hikeStoryCountryName"></span>
+          </div>
+          <div class="dest-panel__topbar-actions">
+            <button type="button" id="hikeStoryFavorite" class="dest-panel__heart" data-favorite-btn aria-label="Save to favorites" aria-pressed="false">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s-7.5-4.78-7.5-11.07A4.43 4.43 0 0 1 9 5.5 4.85 4.85 0 0 1 12 7.05 4.85 4.85 0 0 1 15 5.5a4.43 4.43 0 0 1 4.5 4.43C19.5 16.22 12 21 12 21Z"
+                      stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none" />
+              </svg>
+            </button>
+            <button type="button" class="dest-panel__close" data-hike-story-close aria-label="Close trail">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 19 7-7 7-7m0 14L5 5" />
+              </svg>
+            </button>
+          </div>
+        </header>
+        <div class="dest-panel__scroll">
+          <div class="dest-panel__hero dest-panel__hero--trail" id="hikeStoryHero">
+            <div id="hikeStoryCarousel" class="dest-panel__carousel-host"></div>
+            <div class="dest-panel__hero-gradient"></div>
+            <div class="dest-panel__hero-text dest-panel__hero-text--hike">
+              <h2 id="hikeStoryTitle"></h2>
+              <div class="dest-panel__tagline-row">
+                <p id="hikeStoryTagline" class="dest-panel__tagline"></p>
+                <span id="hikeStoryDifficultyPill" class="hike-difficulty-pill"></span>
+              </div>
+            </div>
+          </div>
+          <div class="dest-panel__details">
+            <p id="hikeStoryDescription" class="dest-panel__description"></p>
+            <dl class="dest-panel__stats" id="hikeStoryStats"></dl>
+            <div id="hikeStoryTips" class="dest-panel__contrast"></div>
+            <p id="hikeStoryCredit" class="dest-panel__credit"></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

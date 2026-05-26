@@ -1,0 +1,776 @@
+[
+  {
+    "osm_id": 158814,
+    "name": "750 E",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 158813,
+    "name": "750 R",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 160816,
+    "name": "753 A",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14613979,
+    "name": "778B",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15670051,
+    "name": "785R",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15602834,
+    "name": "790T Komarno - Komaraštik",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15602945,
+    "name": "792B Komarno - Rijeka Crnoevića",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15602946,
+    "name": "792D Komarno - Poseljani",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 2781602,
+    "name": "792E",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 11636323,
+    "name": "AM-PL-01",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8139141,
+    "name": "Andrijevica - Gradišnica - Jelovica",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8124321,
+    "name": "Andrijevica - Komovi",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8124362,
+    "name": "Andrijevica - Krivi Do",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8124399,
+    "name": "Andrijevica - Zeletin - Visitor",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616756,
+    "name": "Around Stari Bar",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 18110322,
+    "name": "Babin most - Dupilo - Babin most",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14625492,
+    "name": "Baltina - Gornji Šestani",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616671,
+    "name": "Baltina - vidikovac",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616672,
+    "name": "Baltina - vidikovac",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 11591094,
+    "name": "Bandžov - Hajla - Cmiljevica - Džakovica",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8134058,
+    "name": "Berane - Bogaje (Rožaje)",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8133850,
+    "name": "Berane - Šiško jezero",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 17926142,
+    "name": "Bioč",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13136167,
+    "name": "Bojana - Trnovački Durmitor",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13136184,
+    "name": "Bojanska vrata - Trnovački Durmitor",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7572200,
+    "name": "Brezojevice - Visitor",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 18110272,
+    "name": "Brijege - Bjelasica",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8134509,
+    "name": "Brzava - Šiško jezero",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 6118235,
+    "name": "Countryside Hiking Trail CS12",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 6118278,
+    "name": "Countryside Hiking Trail CS16",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 5615098,
+    "name": "Countryside Hiking Trail CS3",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 6101506,
+    "name": "Countryside Hiking Trail CS7",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8136159,
+    "name": "Crno jezero - Terzin Bogaz - Lokvice",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8135828,
+    "name": "Crno jezero - Škrčka jezera",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 2777368,
+    "name": "Crnogorska Transverzala 1",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 20409461,
+    "name": "Danielov put",
+    "network": "",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616172,
+    "name": "Dobri Do - m. Rumija",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7394090,
+    "name": "Donje Bare preko Suhe i Prijevora do Trnovačkog jezera",
+    "network": "rcn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 18110674,
+    "name": "Donji Brčeli - Tomići - Donji Brčeli",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 18110612,
+    "name": "Dupilo - Komarno",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13122372,
+    "name": "Edukaciona staza",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616173,
+    "name": "Gorna Briska - m. Rumija",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13051632,
+    "name": "Guri i Kuq Peak Trail",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7879656,
+    "name": "Han Drndarski - Ljuban",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7571733,
+    "name": "Hridsko jezero",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8138866,
+    "name": "Ivan Do - Gornja Ališnica",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 17799211,
+    "name": "KR-DU",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 11631383,
+    "name": "KRPLJE",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13755926,
+    "name": "Katun Road - Pešter Grasslands",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13754667,
+    "name": "Katun Road - Untold Bjelasica",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 6481489,
+    "name": "Katun Road Borderline Heights",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8134676,
+    "name": "Kolašin - Crna Glava",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8139075,
+    "name": "Kolašin - Ćirilovac - Ključ - Krivi Do",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8134569,
+    "name": "Krstac - Vrioca",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 158450,
+    "name": "Krug oko Komova",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13149999,
+    "name": "Kruševice - Vrbanj",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14561475,
+    "name": "LM 774R",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 158468,
+    "name": "Ljuban - Ljevorečki Kom",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 6103923,
+    "name": "Lubnice - Crna Glava",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616532,
+    "name": "Lunje - Loska",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616531,
+    "name": "Lunje - Sutorman",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7394228,
+    "name": "Maglić do Pivske planine preko kanjona Pive",
+    "network": "rcn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7571580,
+    "name": "Maja Rosit",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15510471,
+    "name": "Mala Venecia - Velji vrh",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 158821,
+    "name": "Manastir Praskvica – Čelobrdo – Ograđenica (PPT)",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8139163,
+    "name": "Mateševo - Ključ - Krivi Do",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14515776,
+    "name": "Međukomlje - Ljevorečki Kom (354)",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13041719,
+    "name": "Miljanov Most-Cervena Stijena",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8134589,
+    "name": "Mojkovac - Jelovica",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 2844583,
+    "name": "Njeguši ham trail / Staza njeguške pršute",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 11630515,
+    "name": "North to West Hiking Trail",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14563461,
+    "name": "Ostrog: railway station <-> monastery",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616795,
+    "name": "Partisan staza",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 4726204,
+    "name": "Peaks of the Balkans",
+    "network": "iwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8126941,
+    "name": "Pepiće - Visitor",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7395262,
+    "name": "Planina Durmitor",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 18110373,
+    "name": "Podgor - Virpazar",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 2776159,
+    "name": "Primorska planinarska transverzala",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8138954,
+    "name": "Radigojna - Goleš - Biogradsko jezero - Kraljevo kolo",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8134531,
+    "name": "Ravna Rijeka - Šiško jezero",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8134442,
+    "name": "Ribarevine - Šiško jezero",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13051182,
+    "name": "South to West Hiking Trail",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13232086,
+    "name": "Stabna - Stabanska jezera - Veliki Vitao",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13231949,
+    "name": "Stabna - Stabanski katun - Veliki Vitao",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 11630542,
+    "name": "Starac - Čakor",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13041856,
+    "name": "Stari bar - Baltina",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 17431588,
+    "name": "Starčevića serpentine",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13150001,
+    "name": "Staza zdravlja",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13136460,
+    "name": "Studenac",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616782,
+    "name": "Sutomore - Popov Do (PPT)",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14616815,
+    "name": "Sutorman - Mogila",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14628862,
+    "name": "Sutorman - Zupci",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7347441,
+    "name": "Thematic Trail",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13335321,
+    "name": "Trnovačko jezero - Bojanska vrata",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13136084,
+    "name": "Trnovačko jezero - Maglić",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 14625326,
+    "name": "Tuđemili - PPT",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13136328,
+    "name": "Uspon na Trzivku",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8135898,
+    "name": "Velika Previja - Bolj",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 16244920,
+    "name": "Veliko Stabansko jezero - Ljubota",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 11502863,
+    "name": "Via Dinarica",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 16501210,
+    "name": "Via Dinarica Kosovo",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15951884,
+    "name": "Via Dinarica Kosovo - Stage 2",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 17769511,
+    "name": "Via Dinarica Kosovo - Stage 3",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 16713515,
+    "name": "Via Dinarica Kosovo - Stage 4",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 17769512,
+    "name": "Via Dinarica Kosovo - Stage 5",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15951894,
+    "name": "Via Dinarica Kosovo - Stage 6",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15951966,
+    "name": "Via Dinarica Kosovo - Stage 7",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15951973,
+    "name": "Via Dinarica Kosovo - Stage 8",
+    "network": "rwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8133813,
+    "name": "Vinicka - Jelovica",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 16247244,
+    "name": "Volujak - Studenac",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13041718,
+    "name": "Volujica-Crvena Stijena-Uvala Bigovica",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15510451,
+    "name": "Vranjina - Velji vrh",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13149998,
+    "name": "Vrbanj - Orjen sedlo",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13150000,
+    "name": "Vrbanj - Sitnica",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 13149997,
+    "name": "Vrbanj - Subra",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 17926760,
+    "name": "Vrsta",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 15602846,
+    "name": "Zaboj",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7571301,
+    "name": "Zla Kolata",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 17473668,
+    "name": "Ćelobrdo - Blizikuće - Paštrovska gora",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 20052959,
+    "name": "Ćiro",
+    "network": "",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8135845,
+    "name": "Šarban - Škrka - Nedajno",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 158449,
+    "name": "Štavna - Kučki Kom",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8133873,
+    "name": "Štavna - Pajkov Vir",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 158462,
+    "name": "Štavna - Vaspjevićki Kom",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 18110651,
+    "name": "Šuplja stijena - Opačac",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8135709,
+    "name": "Žabljak - Šarban (via Bobotov kuk)",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 8136213,
+    "name": "Žabljak - Šljeme",
+    "network": "nwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 7395355,
+    "name": "Žabljak via Sinjavina to Biogradska gora",
+    "network": "lwn",
+    "route": "hiking"
+  },
+  {
+    "osm_id": 10967097,
+    "name": "Свети Илија",
+    "network": "lwn",
+    "route": "hiking"
+  }
+]

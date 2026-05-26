@@ -1,0 +1,20 @@
+{
+  "name": "Trailthread",
+  "short_name": "Trailthread",
+  "description": "Plan routes, explore cities, parks, trails, and landmarks across Europe.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f766e",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "maps", "lifestyle"]
+}

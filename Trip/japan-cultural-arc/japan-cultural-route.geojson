@@ -1,0 +1,12 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature", "properties": { "name": "Japan Cultural Rail-Drive Arc", "mode": "drive", "day": "1-9", "section": "core" }, "geometry": { "type": "LineString", "coordinates": [[139.6917,35.6895],[136.6562,36.5613],[135.5023,34.6937],[139.6917,35.6895]] } },
+    { "type": "Feature", "properties": { "name": "Osaka to Tokyo Flight Option", "mode": "fly", "day": "Optional", "section": "optionalLinks" }, "geometry": { "type": "LineString", "coordinates": [[135.5023,34.6937],[137.2000,35.2000],[139.6917,35.6895]] } },
+    { "type": "Feature", "properties": { "name": "Tokyo", "country": "Japan", "stopType": "start", "day": "1", "section": "cities" }, "geometry": { "type": "Point", "coordinates": [139.6917,35.6895] } },
+    { "type": "Feature", "properties": { "name": "Kenroku-en", "country": "Japan", "stopType": "park", "day": "3", "section": "parks" }, "geometry": { "type": "Point", "coordinates": [136.6562,36.5613] } },
+    { "type": "Feature", "properties": { "name": "Kanazawa Old District", "country": "Japan", "stopType": "heritage", "day": "3", "section": "heritage" }, "geometry": { "type": "Point", "coordinates": [136.6605,36.5714] } },
+    { "type": "Feature", "properties": { "name": "Osaka", "country": "Japan", "stopType": "city", "day": "6", "section": "cities" }, "geometry": { "type": "Point", "coordinates": [135.5023,34.6937] } },
+    { "type": "Feature", "properties": { "name": "Tokyo Return", "country": "Japan", "stopType": "end", "day": "9", "section": "core" }, "geometry": { "type": "Point", "coordinates": [139.6917,35.6895] } }
+  ]
+}

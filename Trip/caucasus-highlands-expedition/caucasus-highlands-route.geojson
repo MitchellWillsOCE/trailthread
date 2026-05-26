@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Caucasus Highlands Drive", "mode": "drive", "day": "1-10", "section": "core" },
+      "geometry": { "type": "LineString", "coordinates": [[44.8015,41.7151],[44.7030,42.1645],[44.8200,42.6620],[44.5160,40.1772],[44.8185,40.1582],[44.8000,40.3000]] }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Yerevan to Tbilisi Flight Option", "mode": "fly", "day": "Optional", "section": "optionalLinks" },
+      "geometry": { "type": "LineString", "coordinates": [[44.5160,40.1772],[44.7000,40.9000],[44.8015,41.7151]] }
+    },
+    { "type": "Feature", "properties": { "name": "Tbilisi", "country": "Georgia", "stopType": "start", "day": "1", "section": "cities" }, "geometry": { "type": "Point", "coordinates": [44.8015,41.7151] } },
+    { "type": "Feature", "properties": { "name": "Ananuri Fortress Complex", "country": "Georgia", "stopType": "heritage", "day": "2", "section": "heritage" }, "geometry": { "type": "Point", "coordinates": [44.7030,42.1645] } },
+    { "type": "Feature", "properties": { "name": "Gergeti Trinity Church", "country": "Georgia", "stopType": "heritage", "day": "3", "section": "heritage" }, "geometry": { "type": "Point", "coordinates": [44.8200,42.6620] } },
+    { "type": "Feature", "properties": { "name": "Yerevan", "country": "Armenia", "stopType": "city", "day": "5", "section": "cities" }, "geometry": { "type": "Point", "coordinates": [44.5160,40.1772] } },
+    { "type": "Feature", "properties": { "name": "Geghard", "country": "Armenia", "stopType": "heritage", "day": "6", "section": "heritage" }, "geometry": { "type": "Point", "coordinates": [44.8185,40.1582] } },
+    { "type": "Feature", "properties": { "name": "Azhdahak", "country": "Armenia", "stopType": "park", "day": "7", "section": "parks" }, "geometry": { "type": "Point", "coordinates": [44.8000,40.3000] } }
+  ]
+}
