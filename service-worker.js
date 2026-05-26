@@ -10,13 +10,13 @@ const SHELL_CACHE = `${SW_VERSION}-shell`;
 const RUNTIME_CACHE = `${SW_VERSION}-runtime`;
 const PHOTOS_CACHE = `${SW_VERSION}-photos`;
 
+// Note: built CSS/JS/webmanifest live at hashed paths under /assets/ in
+// production; relying on runtime caching for those rather than enumerating
+// here. The listed paths are stable (HTML entry + repo-rooted JSON catalogs).
 const SHELL_ASSETS = [
   "/",
   "/index.html",
-  "/manifest.webmanifest",
   "/favicon.svg",
-  "/styles.css",
-  "/app.js",
   "/Trip/journeys.json",
   "/Trip/place-details.json",
   "/scripts/data/country-seasons.json"
