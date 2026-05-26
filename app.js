@@ -6140,16 +6140,26 @@ function setupTripOverlay() {
       }
 
       const tripKey = card.dataset.tripKey;
+
+      // Close the library and pop the journey panel open immediately so the
+      // user gets instant feedback. Previously this only happened after
+      // loadTrip resolved, which on mobile left the library closed but the
+      // panel still in its collapsed (width 0) state if the geojson fetch
+      // was slow or failed — making it look like the click did nothing.
+      closeTripOverlay();
+      setPanelCollapsed(false);
+      setActiveView("map");
+
       try {
         await loadTrip(tripKey, true);
-        closeTripOverlay();
         renderTripMenu();
-        setActiveView("map");
       } catch (error) {
         console.error(error);
         layoutRoot?.classList.remove("is-trip-loading");
         const content = document.getElementById("itineraryContent");
-        content.innerHTML = "<p>There was an issue loading the selected trip.</p>";
+        if (content) {
+          content.innerHTML = "<p>There was an issue loading the selected trip.</p>";
+        }
       }
     });
   }
