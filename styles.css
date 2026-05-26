@@ -8010,6 +8010,20 @@ body.welcome-open .journey-panel {
     overflow: visible;
   }
 
+  /* The base stylesheet has a higher-specificity rule
+   *   .map-stage:not(.hike-story-open) .map-hud { display: grid; ... }
+   * (and a sibling for .hike-story-open) which forces a two-column grid
+   * with --hud-stack-width on column 1 and a 1fr "controls" column on
+   * column 2 — that 1fr column was eating a visible ~20px slice on the
+   * right of the search bar on phones. Re-assert single-column block
+   * layout here so the pill can actually reach edge-to-edge. */
+  .map-stage:not(.hike-story-open) .map-hud,
+  .map-stage.hike-story-open .map-hud,
+  body.hike-story-open .map-hud {
+    display: block;
+    grid-template-columns: none;
+  }
+
   /* Smooth, pixel-anchored fade that always sits flush against the bottom
    * of the search-bar HUD — independent of the safe-area-inset, so the
    * transition looks identical on notched iPhones and edge-to-edge Androids.
