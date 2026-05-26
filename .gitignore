@@ -31,3 +31,4 @@ scripts/data/_seed-correction-progress.json
 # OS junk
 .DS_Store
 Thumbs.db
+.vercel

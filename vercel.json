@@ -4,7 +4,14 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
-  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/cities/:path*", "destination": "/api/cities" },
+    { "source": "/api/hikes/:path*", "destination": "/api/hikes" },
+    { "source": "/api/parks/:path*", "destination": "/api/parks" },
+    { "source": "/api/poi/:path*", "destination": "/api/poi" },
+    { "source": "/api/country/:path*", "destination": "/api/country" },
+    { "source": "/api/journeys/:path*", "destination": "/api/journeys" }
+  ],
   "headers": [
     {
       "source": "/service-worker.js",

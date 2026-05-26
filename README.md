@@ -18,14 +18,16 @@ journey codes.
 | ------------ | ---------------------------------------------------------- |
 | Client       | Vite, Leaflet, vanilla ES modules                          |
 | API (dev)    | Vite middleware plugins under `server/`                    |
-| API (prod)   | Vercel serverless catch-all at `api/[...slug].js`          |
+| API (prod)   | Six Vercel serverless functions under `api/*.js`           |
 | Catalog data | SQLite (`sql.js`, WASM) for cities, hikes, parks, POIs     |
 | Mint storage | Upstash Redis (prod) / JSON files (dev) for shared codes   |
 | Build data   | Python scripts under `scripts/` (OSM, Wikidata, GeoNames)  |
 
-The dev plugins and the production serverless function both delegate to the
+The dev plugins and the production serverless functions both delegate to the
 same handler modules in `api/_lib/handlers/`, so there is one source of truth
 for every endpoint.
+
+**Live:** <https://trailthread.vercel.app>
 
 ## Local development
 
@@ -43,8 +45,13 @@ is missing, and write minted journeys to `Trip/shared-journeys/*.json`.
 
 ## API surface
 
-All endpoints are mounted under `/api/`. The catch-all at
-`api/[...slug].js` dispatches to one of six handler modules.
+All endpoints are mounted under `/api/`. There is one Vercel serverless
+function per resource prefix (`api/cities.js`, `api/hikes.js`,
+`api/parks.js`, `api/poi.js`, `api/country.js`, `api/journeys.js`), each a
+thin wrapper around the matching handler in `api/_lib/handlers/`. The
+nested URLs (e.g. `/api/cities/detail/lyon-fr`) are routed to those
+functions via `rewrites` in `vercel.json`, and the handler dispatches
+internally on `req.url`.
 
 | Endpoint                                          | Handler          | Notes                                       |
 | ------------------------------------------------- | ---------------- | ------------------------------------------- |
@@ -137,11 +144,17 @@ succeed.
 
 ```
 api/
-  [...slug].js               Vercel catch-all entrypoint
+  cities.js                  Vercel function entrypoint for /api/cities/*
+  hikes.js                   ... /api/hikes/*
+  parks.js                   ... /api/parks/*
+  poi.js                     ... /api/poi/*
+  country.js                 ... /api/country/*
+  journeys.js                ... /api/journeys/*
   _lib/
     handlers/*.js            Framework-agnostic handler logic
     paths.js                 Single source of truth for repo-rooted paths
     sql-shared.js            sql.js bootstrap + small helpers
+    function-config.js       Shared includeFiles + maxDuration
 server/
   _make-plugin.js            Vite plugin factory
   *-api.js                   Six thin wrappers, each ~10 lines
