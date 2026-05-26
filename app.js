@@ -2814,31 +2814,42 @@ function setupCitySearch() {
     }
   });
 
-  // The icon is now a <label for="citySearchInput">, which natively focuses
-  // the input on tap (including raising the iOS keyboard). We just augment it
-  // with a hint when the field is empty.
+  // The entire pill is now a <label for="citySearchInput">, so the browser
+  // natively focuses the input when any part of the pill (icon, padding
+  // gaps, etc.) is tapped — that is the reliable cross-iOS-version path to
+  // a tap-to-focus search bar. The icon click handler below stays as a
+  // pure augmentation: surface the hint drawer when the field is empty.
   iconBtn?.addEventListener("click", () => {
     if (input.value.trim().length < 2) {
       showCitySearchHint();
     }
   });
 
-  // Make the entire pill background a tap target that focuses the input. The
-  // individual children (icon <label>, the input itself, the clear button)
-  // already focus correctly on their own — this only kicks in when the user
-  // taps the padding around them. The clear button already calls
-  // stopPropagation in its own click handler, so this never steals an X tap.
-  const field = root?.querySelector(".city-search__field");
-  field?.addEventListener("click", (event) => {
+  // On phones the entire top HUD shelf doubles as a tap-to-focus target
+  // for the search input. The shelf is mostly empty space around the
+  // centered pill, so giving it click-to-focus behavior makes the search
+  // feel like a single big button. Interactive children (the ✕, the
+  // dropdown options, any future actions) are excluded so they keep their
+  // own click handlers.
+  const mapHud = document.querySelector(".map-hud");
+  const isPhoneViewport = () =>
+    typeof window.matchMedia === "function" &&
+    window.matchMedia("(max-width: 640px)").matches;
+  mapHud?.addEventListener("click", (event) => {
+    if (!isPhoneViewport()) return;
     const target = event.target;
+    if (!target) return;
+    // Skip when the click already landed on an interactive descendant
+    // (the input itself, the ✕ clear button, the results list, the kbd
+    // shortcut hint, etc.) — they handle their own events.
     if (
-      target === input ||
       target.closest?.(
-        ".city-search__clear, .city-search__icon-button, .city-search__input"
+        "button, a, input, select, textarea, [role='button'], .city-search__results, .city-search__option, .city-search__clear"
       )
     ) {
       return;
     }
+    event.preventDefault();
     input.focus();
   });
 
