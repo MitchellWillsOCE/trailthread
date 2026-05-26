@@ -7985,12 +7985,11 @@ body.welcome-open .journey-panel {
     left: 0;
     right: 0;
     z-index: 940;
-    padding: calc(max(12px, env(safe-area-inset-top)) + 10px) 10px 14px;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.96) 60%,
-      rgba(255, 255, 255, 0)
-    );
+    padding: calc(max(12px, env(safe-area-inset-top)) + 10px) 10px 12px;
+    /* Solid white across the full HUD (status bar through to just below
+     * the search-bar pill). A pseudo-element below extends a smooth fade
+     * into the map so the edge never looks like a hard shelf. */
+    background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: block;
@@ -7998,6 +7997,36 @@ body.welcome-open .journey-panel {
     pointer-events: none;
     max-height: none;
     overflow: visible;
+  }
+
+  /* Smooth, pixel-anchored fade that always sits flush against the bottom
+   * of the search-bar HUD — independent of the safe-area-inset, so the
+   * transition looks identical on notched iPhones and edge-to-edge Androids.
+   */
+  .map-hud::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 28px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.96),
+      rgba(255, 255, 255, 0)
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+    mask-image: linear-gradient(to bottom, #000, transparent);
+    pointer-events: none;
+  }
+
+  /* While the search-results dropdown is open we lift .map-hud above the
+   * journey panel; do the same for its fade pseudo-element so it stays
+   * visually attached. */
+  .map-hud:has(.city-search__results:not([hidden]))::after {
+    z-index: inherit;
   }
 
   .map-hud-left,
