@@ -6223,10 +6223,14 @@ path.leaflet-interactive:hover {
 
   .map-hud-left {
     width: min(480px, 100%);
+    /* Sit the HUD column squarely in the middle of the screen instead of
+     * hugging the left edge — important for tablet/laptop widths where the
+     * 480px column would otherwise land off-center inside a 1fr grid. */
+    justify-self: center;
   }
 
   .map-hud .map-controls {
-    justify-self: start;
+    justify-self: center;
     width: min(480px, 100%);
   }
 
@@ -7985,7 +7989,14 @@ body.welcome-open .journey-panel {
     left: 0;
     right: 0;
     z-index: 940;
-    padding: calc(max(12px, env(safe-area-inset-top)) + 10px) 10px 12px;
+    /* Phone HUD: zero horizontal padding so the search-bar pill reaches
+     * truly edge-to-edge. Safe-area-inset (left/right) keeps the pill
+     * clear of notches when the phone is in landscape. */
+    padding:
+      calc(max(12px, env(safe-area-inset-top)) + 10px)
+      env(safe-area-inset-right, 0px)
+      12px
+      env(safe-area-inset-left, 0px);
     /* Solid white across the full HUD (status bar through to just below
      * the search-bar pill). A pseudo-element below extends a smooth fade
      * into the map so the edge never looks like a hard shelf. */
