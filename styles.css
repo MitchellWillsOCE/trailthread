@@ -2916,39 +2916,116 @@ body.hike-story-open .map-controls .route-legend {
 }
 
 @media (max-width: 640px) {
+  /* Pin the favourites overlay to the bottom of the viewport and account
+   * for the dynamic browser chrome (URL bar) + the iOS home-indicator
+   * safe area. `dvh` shrinks when the URL bar is showing, so the panel
+   * never disappears under it; `svh` is used as an upper bound so the
+   * panel cannot grow taller than the smallest possible visible area. */
   .favorites-overlay {
-    padding: 8px;
+    padding: 8px 8px max(8px, env(safe-area-inset-bottom, 0px));
     align-items: flex-end;
   }
+
   .favorites-overlay__panel {
-    max-height: 94dvh;
+    width: 100%;
+    /* min() with svh ensures the panel never overflows the smallest
+     * possible viewport (chrome fully visible). */
+    max-height: min(94dvh, 94svh);
     border-radius: 20px 20px 0 0;
-    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-bottom: 0;
   }
+
+  /* The header now flows tightly — a row with the title block on the
+   * left and the close (✕) on the right, then the "Clear all" button
+   * stretched full-width underneath. This removes the giant empty gap
+   * caused by `flex: 1 1 240px` (which on a column flex turned into a
+   * 240px MIN HEIGHT, leaving a tall blank region under the count). */
   .favorites-overlay__header {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 18px 16px 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title close"
+      "clear clear";
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 10px;
+    padding: 14px 16px 12px;
+    flex-wrap: initial;
   }
+
+  /* Title block: kicker + h2 + count. Reset the desktop flex-basis so it
+   * occupies only the height of its content (no 240px ghost space). */
+  .favorites-overlay__header > div:first-child {
+    grid-area: title;
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .favorites-overlay__header h2 {
+    font-size: 1.25rem;
+    margin: 2px 0 0;
+  }
+
+  .favorites-overlay__count {
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  /* Actions: the (✕) close pins to the top-right corner of the header,
+   * the "Clear all" button gets its own full-width row below the title. */
   .favorites-overlay__actions {
-    flex-wrap: wrap;
+    display: contents;
   }
+
   .favorites-overlay__actions .trip-overlay-action {
-    flex: 1 1 calc(50% - 4px);
+    grid-area: clear;
+    width: 100%;
     justify-content: center;
   }
+
   .favorites-overlay__actions .trip-overlay-close {
+    grid-area: close;
     flex: 0 0 auto;
+    align-self: start;
   }
+
   .favorites-overlay__filter {
-    padding: 10px 16px 4px;
+    padding: 8px 16px 4px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
   }
+
+  .favorites-overlay__filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Allow the grid to expand and fill remaining vertical space so cards
+   * don't get clipped by the panel's max-height. Cards still scroll
+   * horizontally; the grid itself never overflows the panel. */
   .favorites-overlay__grid {
-    padding: 14px 16px 18px;
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 12px 16px max(14px, env(safe-area-inset-bottom, 0px));
+    align-items: stretch;
   }
+
   .favorites-overlay__grid .favorites-overlay__card {
-    flex: 0 0 220px;
-    width: 220px;
+    flex: 0 0 78vw;
+    width: 78vw;
+    max-width: 280px;
+  }
+
+  /* Trim oversized card covers on phones so each card fits the visible
+   * portion of the panel without internal scrolling. */
+  .favorites-overlay__cover {
+    height: 108px;
+  }
+
+  .favorites-overlay__empty {
+    margin: 12px 16px 16px;
+    padding: 18px;
+    font-size: 0.86rem;
   }
 }
 
