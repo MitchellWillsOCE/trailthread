@@ -2297,6 +2297,9 @@ function showCitySearchHint() {
   const input = document.getElementById("citySearchInput");
   if (!list || !input) return;
   if (input.value.trim().length >= 2) return;
+  // The empty-state suggestion drawer is a touch-friendly affordance; on
+  // desktop the old "no results until you type" behaviour worked fine.
+  if (!window.matchMedia("(pointer: coarse)").matches) return;
 
   citySearchResults = [];
   citySearchActiveIndex = -1;

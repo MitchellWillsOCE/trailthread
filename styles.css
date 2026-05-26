@@ -6655,7 +6655,7 @@ path.leaflet-interactive:hover {
 
 .city-search {
   position: relative;
-  margin-top: 18px;
+  margin-top: 10px;
   z-index: 5;
 }
 
@@ -6804,6 +6804,56 @@ path.leaflet-interactive:hover {
   transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease, transform var(--dur-fast) ease;
 }
 
+/* -------------------------------------------------------------------------
+ * Desktop revert: the new search bar UX is great for touch users, but on
+ * desktop we keep things compact and quiet — no kbd hint, no spinner badge,
+ * no empty-state suggestion drawer, and the icon goes back to a small
+ * decorative glyph (no hover background). The input/clear sizes shrink to
+ * their pre-polish dimensions.
+ * ------------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) {
+  .city-search__field {
+    min-height: 36px;
+    padding: 0 6px 0 10px;
+    gap: 4px;
+  }
+
+  .city-search__icon-button {
+    width: 22px;
+    height: 22px;
+    cursor: text;
+    pointer-events: none;
+  }
+
+  .city-search__icon-button:hover {
+    background: transparent;
+    color: #475569;
+  }
+
+  .city-search__field:focus-within .city-search__icon-button {
+    color: #475569;
+  }
+
+  .city-search__input {
+    height: 32px;
+    font-size: 0.88rem;
+  }
+
+  .city-search__kbd {
+    display: none;
+  }
+
+  .city-search__spinner {
+    display: none !important;
+  }
+
+  .city-search__clear {
+    width: 22px;
+    height: 22px;
+    font-size: 0.7rem;
+  }
+}
+
 .city-search__clear:hover {
   background: rgba(15, 23, 42, 0.14);
   color: #0f172a;
@@ -6829,6 +6879,22 @@ path.leaflet-interactive:hover {
   overscroll-behavior: contain;
   scrollbar-width: thin;
   animation: city-search-results-in 180ms ease both;
+  z-index: 1500;
+}
+
+/* The .map-hud ancestor has overflow-y: auto on desktop/tablet, which would
+ * otherwise clip the dropdown when it extends past the HUD card. While the
+ * results list is open, let the HUD overflow visibly and lift the search
+ * column above every other floating element (journey panel, mobile sheet,
+ * map-hint bar). */
+.city-search:has(.city-search__results:not([hidden])) {
+  z-index: 2000;
+}
+
+.map-hud:has(.city-search__results:not([hidden])) {
+  overflow: visible;
+  max-height: none;
+  z-index: 1500;
 }
 
 @keyframes city-search-results-in {
