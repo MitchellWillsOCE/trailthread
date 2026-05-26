@@ -6673,6 +6673,9 @@ path.leaflet-interactive:hover {
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 4px 14px rgba(8, 19, 31, 0.08);
+  /* The whole pill (including the padding background) is wired up as a
+   * tap target that focuses the input; the cursor invites that. */
+  cursor: text;
   transition: border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease, transform var(--dur-fast) ease;
 }
 
@@ -7142,7 +7145,9 @@ path.leaflet-interactive:hover {
 .welcome-overlay {
   position: fixed;
   inset: 0;
-  z-index: 920;
+  /* Must sit above .map-hud (z-index 940 on phones) so the floating search
+   * bar can't paint over the intro card while the welcome overlay is up. */
+  z-index: 970;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8067,6 +8072,42 @@ body.welcome-open .journey-panel {
     pointer-events: auto;
   }
 
+  /* Belt-and-braces for the mobile hit-test: each interactive child of the
+   * search pill gets an explicit pointer-events / touch-action and is lifted
+   * onto its own positioned layer. Without this, iOS Safari has been observed
+   * to drop taps when the parent stack uses `backdrop-filter: blur(...)` and
+   * the pill is sandwiched between a `pointer-events: none` HUD shelf and a
+   * 100vw `.hud-brand` underneath. Explicit values remove any ambiguity
+   * about which element catches the touch. */
+  .map-hud .city-search__field,
+  .map-hud .city-search__icon-button,
+  .map-hud .city-search__input,
+  .map-hud .city-search__clear {
+    pointer-events: auto !important;
+    touch-action: manipulation;
+  }
+
+  /* Promote the field to its own stacking context so nothing inside the HUD
+   * shelf (animation transforms on .hud-brand, the ::after fade, etc.) can
+   * paint above the input and eat the tap. */
+  .map-hud .city-search {
+    z-index: 2;
+  }
+  .map-hud .city-search__field {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* The clear-search ✕ MUST sit above the field-wide click-to-focus area so
+   * its own click handler (which calls preventDefault + stopPropagation)
+   * gets the tap and never the input. The icon label sits on top for the
+   * same reason. */
+  .map-hud .city-search__clear,
+  .map-hud .city-search__icon-button {
+    position: relative;
+    z-index: 2;
+  }
+
   /* Center the search-pill column inside the full-bleed HUD shelf.
    * `margin: 0 auto` guarantees equal space on both sides regardless of
    * any other padding/width rule that might have leaked through. */
@@ -8131,15 +8172,20 @@ body.welcome-open .journey-panel {
     font-size: 16px; /* prevent iOS zoom */
   }
 
-  /* Hide the slim search bar while a full-screen overlay is up. */
-  body.welcome-open .map-hud,
-  body.place-story-open .map-hud,
-  body.hike-story-open .map-hud,
-  body.country-dossier-open .map-hud,
-  body:has(#tripOverlay.open) .map-hud,
-  body:has(#favoritesOverlay.is-open) .map-hud,
-  body:has(.dest-panel.is-open) .map-hud,
-  body:has(.mobile-sheet.is-open) .map-hud {
+  /* Hide the slim search bar while a full-screen overlay is up.
+   * NOTE: the `.map-stage` qualifier is required to outrank the
+   * `.map-stage:not(.hike-story-open) .map-hud { display: block !important }`
+   * rule above (specificity 0,3,0). Without it the hide rule (0,2,1) loses
+   * the cascade and the floating mobile search pill keeps painting on top
+   * of whichever overlay is open. */
+  body.welcome-open .map-stage .map-hud,
+  body.place-story-open .map-stage .map-hud,
+  body.hike-story-open .map-stage .map-hud,
+  body.country-dossier-open .map-stage .map-hud,
+  body:has(#tripOverlay.open) .map-stage .map-hud,
+  body:has(#favoritesOverlay.is-open) .map-stage .map-hud,
+  body:has(.dest-panel.is-open) .map-stage .map-hud,
+  body:has(.mobile-sheet.is-open) .map-stage .map-hud {
     display: none !important;
   }
 

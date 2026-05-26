@@ -24,10 +24,10 @@ USER_AGENT = "Trailthread/1.0 (Europe catalog enrichment; contact: local-dev)"
 
 # Per-host minimum interval (seconds)
 _HOST_DELAYS = {
-    "wikidata.org": 0.55,
-    "dbpedia.org": 0.48,
-    "wikipedia.org": 0.75,
-    "wikimedia.org": 0.55,
+    "wikidata.org": 1.1,
+    "dbpedia.org": 0.55,
+    "wikipedia.org": 0.85,
+    "wikimedia.org": 0.6,
     "openstreetmap.org": 1.1,
 }
 _last_request: dict[str, float] = {}

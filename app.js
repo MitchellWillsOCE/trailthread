@@ -2823,6 +2823,25 @@ function setupCitySearch() {
     }
   });
 
+  // Make the entire pill background a tap target that focuses the input. The
+  // individual children (icon <label>, the input itself, the clear button)
+  // already focus correctly on their own — this only kicks in when the user
+  // taps the padding around them. The clear button already calls
+  // stopPropagation in its own click handler, so this never steals an X tap.
+  const field = root?.querySelector(".city-search__field");
+  field?.addEventListener("click", (event) => {
+    const target = event.target;
+    if (
+      target === input ||
+      target.closest?.(
+        ".city-search__clear, .city-search__icon-button, .city-search__input"
+      )
+    ) {
+      return;
+    }
+    input.focus();
+  });
+
   // Prevent the clear button from stealing focus from the input on touch.
   // Without this, tapping ✕ blurs the input and the OS may also re-dispatch
   // a synthetic click to whatever lands under the finger after the DOM
