@@ -62,6 +62,15 @@ import {
   subscribeFavorites,
 } from "./favorites.js";
 import { loadPoiRegion, fetchPoiFeatures, fetchPoiById, searchPois } from "./poi.js";
+import { inject as injectVercelAnalytics } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
+
+/* Vercel Analytics + Speed Insights.
+ * Both packages are safe no-ops in local/dev (they auto-detect the
+ * VERCEL_ENV and only send beacons when the site is served from Vercel),
+ * so we can call them unconditionally. */
+injectVercelAnalytics();
+injectSpeedInsights();
 
 const DEFAULT_MAP_VIEW = { center: [52, 15], zoom: 4 };
 
