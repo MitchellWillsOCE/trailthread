@@ -63,6 +63,23 @@ export function isJourneyCode(value) {
   return /^[A-Z2-9]{4,12}$/i.test(String(value || "").trim());
 }
 
+export async function fetchJourneyShareStatus() {
+  const response = await fetch(`${BASE}/status`, { cache: "no-store" });
+  if (!response.ok) {
+    return { storage: "unknown", crossDeviceCodes: false };
+  }
+  return response.json();
+}
+
+export async function verifySharedJourneyStored(code) {
+  const c = normaliseCode(code);
+  if (!c) {
+    return false;
+  }
+  const response = await fetch(`${BASE}/code/${encodeURIComponent(c)}`, { cache: "no-store" });
+  return response.ok;
+}
+
 /* ---------------------------------------------------------------------------
  * Self-contained share links
  *

@@ -48,6 +48,8 @@ import { fetchCountryDossier } from "./country-dossier.js";
 import {
   createSharedJourney,
   fetchSharedJourney,
+  fetchJourneyShareStatus,
+  verifySharedJourneyStored,
   isJourneyCode,
   encodeJourneyToToken,
   decodeJourneyToken,
@@ -6442,10 +6444,16 @@ function renderTripCardHtml(trip, { libraryKind: explicitKind } = {}) {
     <div class="trip-card-cover">
       ${coverImg}
       <span class="trip-card-cover-fallback" aria-hidden="true"></span>
-      <span class="trip-card-badge ${badgeClass}">${badgeLabel}</span>
-      <span class="trip-card-emoji">${trip.emoji || "🧭"}</span>
-      ${trip.region ? `<span class="trip-card-region">${escapeHtml(trip.region)}</span>` : ""}
-      <span class="trip-card-days">${trip.days} days</span>
+      <div class="trip-card-cover-chips">
+        <div class="trip-card-cover-top">
+          <span class="trip-card-badge ${badgeClass}">${badgeLabel}</span>
+          <span class="trip-card-emoji" aria-hidden="true">${trip.emoji || "🧭"}</span>
+        </div>
+        <div class="trip-card-cover-bottom">
+          ${trip.region ? `<span class="trip-card-region">${escapeHtml(trip.region)}</span>` : "<span></span>"}
+          <span class="trip-card-days">${trip.days} days</span>
+        </div>
+      </div>
     </div>
     <div class="trip-card-body">
       <h3>${escapeHtml(trip.title)}</h3>
@@ -7385,6 +7393,30 @@ function registerServiceWorker() {
   });
 }
 
+function parseJourneyShareInput(raw) {
+  const trimmed = String(raw || "").trim();
+  if (!trimmed) {
+    return { code: "", inlineToken: "" };
+  }
+  if (trimmed.includes("://") || trimmed.includes("?")) {
+    try {
+      const url = trimmed.includes("://")
+        ? new URL(trimmed)
+        : new URL(trimmed.startsWith("/") ? trimmed : `/${trimmed}`, window.location.origin);
+      return {
+        code: (url.searchParams.get("journey") || "").toUpperCase().replace(/[^A-Z2-9]/g, ""),
+        inlineToken: url.searchParams.get("j") || "",
+      };
+    } catch {
+      /* fall through to short-code parsing */
+    }
+  }
+  return {
+    code: trimmed.toUpperCase().replace(/[^A-Z2-9]/g, ""),
+    inlineToken: "",
+  };
+}
+
 async function maybeOpenSharedJourneyFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const code = params.get("journey");
@@ -7418,8 +7450,23 @@ async function maybeOpenSharedJourneyFromUrl() {
 }
 
 async function openSharedJourney(code, { source = "import", inlineToken = "" } = {}) {
-  const journey = await fetchSharedJourney(code);
-  const geojsonUrl = `/api/journeys/code/${encodeURIComponent(code.toUpperCase())}/geojson`;
+  const normalized = String(code || "").toUpperCase();
+  const resolvedToken = inlineToken || getInlineTokenForCode(normalized);
+  let journey;
+  try {
+    journey = await fetchSharedJourney(normalized);
+  } catch (fetchErr) {
+    if (resolvedToken) {
+      const inline = decodeJourneyToken(resolvedToken);
+      if (inline) {
+        inline.code = inline.code || normalized;
+        await openInlineSharedJourney(inline, { source, inlineToken: resolvedToken });
+        return;
+      }
+    }
+    throw fetchErr;
+  }
+  const geojsonUrl = `/api/journeys/code/${encodeURIComponent(journey.code)}/geojson`;
   const tripKey = `shared-${journey.code}`;
   const catalog = resolveTripCatalog({ source, code: journey.code });
   const tripEntry = {
@@ -8216,12 +8263,19 @@ function setupJourneyBuilder() {
     event.preventDefault();
     const input = document.getElementById("journeyCodeInput");
     const errEl = document.getElementById("journeyCodeError");
-    const raw = (input?.value || "").trim().toUpperCase().replace(/[^A-Z2-9]/g, "");
+    const { code, inlineToken } = parseJourneyShareInput(input?.value || "");
     if (errEl) {
       errEl.hidden = true;
       errEl.textContent = "";
     }
-    if (!isJourneyCode(raw)) {
+    if (!code && !inlineToken) {
+      if (errEl) {
+        errEl.hidden = false;
+        errEl.textContent = "Enter a journey code or paste the full share link.";
+      }
+      return;
+    }
+    if (code && !isJourneyCode(code)) {
       if (errEl) {
         errEl.hidden = false;
         errEl.textContent = "Codes are 4–12 alphanumeric characters.";
@@ -8229,12 +8283,24 @@ function setupJourneyBuilder() {
       return;
     }
     try {
-      await openSharedJourney(raw);
+      if (inlineToken) {
+        const journey = decodeJourneyToken(inlineToken);
+        if (!journey) {
+          throw new Error("Invalid share link");
+        }
+        await openInlineSharedJourney(journey, {
+          source: code && isMintedJourneyCode(code) ? "minted" : "import",
+          inlineToken,
+        });
+      } else {
+        await openSharedJourney(code, { inlineToken });
+      }
       if (input) input.value = "";
     } catch (err) {
       if (errEl) {
         errEl.hidden = false;
-        errEl.textContent = "We couldn't find that journey code.";
+        errEl.textContent =
+          "We couldn't open that journey. Paste the full share link (with ?j=…) or check the code on the device that created it.";
       }
     }
   });
@@ -9066,12 +9132,29 @@ async function mintBuilderJourney() {
 
   let serverCode = "";
   let serverError = null;
+  let crossDeviceCodes = false;
   try {
     const result = await createSharedJourney(payload);
-    serverCode = result.code;
+    serverCode = String(result.code || "").toUpperCase();
+    crossDeviceCodes = result.crossDeviceCodes !== false;
+    if (serverCode) {
+      const readable = await verifySharedJourneyStored(serverCode);
+      if (!readable) {
+        console.warn("[mint] code not readable after create");
+        serverCode = "";
+        serverError = new Error("Short code is not saved on the server — share the full link instead.");
+        crossDeviceCodes = false;
+      }
+    }
   } catch (err) {
     serverError = err;
     console.warn("[mint] server-side mint unavailable, share via inline URL only", err);
+    try {
+      const status = await fetchJourneyShareStatus();
+      crossDeviceCodes = status.crossDeviceCodes === true;
+    } catch {
+      crossDeviceCodes = false;
+    }
   }
 
   const resultEl = document.getElementById("builderResult");
@@ -9079,25 +9162,32 @@ async function mintBuilderJourney() {
   const linkEl = document.getElementById("builderResultLink");
   const hintEl = resultEl?.querySelector(".journey-builder__result-hint");
 
-  const mintCode = (
+  const localListCode = (
     builderState.editingSharedCode ||
     serverCode ||
     `TT${Date.now().toString(36).slice(-6).toUpperCase()}`
   ).toUpperCase();
 
   if (codeEl) {
-    codeEl.textContent = mintCode;
+    codeEl.textContent = serverCode || (inlineToken ? "USE LINK" : "—");
   }
   const shareUrl = inlineToken
-    ? `${window.location.origin}/?journey=${encodeURIComponent(mintCode)}&j=${inlineToken}`
+    ? serverCode
+      ? `${window.location.origin}/?journey=${encodeURIComponent(serverCode)}&j=${inlineToken}`
+      : `${window.location.origin}/?j=${inlineToken}`
     : serverCode
       ? `${window.location.origin}/?journey=${encodeURIComponent(serverCode)}`
-      : inlineUrl;
+      : "";
   if (linkEl) linkEl.value = shareUrl;
   if (hintEl) {
-    if (inlineToken || serverCode) {
+    if (inlineToken && serverCode && crossDeviceCodes) {
       hintEl.textContent =
-        "Share this code or the full link — anyone who enters the code or opens the link can view your journey.";
+        "Share the full link or the short code — both work on any device.";
+    } else if (inlineToken) {
+      hintEl.textContent =
+        "Share the full link below — it includes your journey and works on any phone or computer. Short codes need server storage (Upstash Redis on Vercel).";
+    } else if (serverCode) {
+      hintEl.textContent = "Share this code or the full link to open your journey.";
     } else {
       hintEl.textContent =
         "We could not mint a share code. Please add at least 2 stops with valid coordinates.";
@@ -9105,12 +9195,13 @@ async function mintBuilderJourney() {
   }
   if (resultEl) resultEl.hidden = false;
 
-  resultEl?.setAttribute("data-server-code", mintCode);
+  resultEl?.setAttribute("data-server-code", serverCode || "");
   resultEl?.setAttribute("data-inline-token", inlineToken || "");
 
-  if (inlineToken || serverCode || mintCode) {
+  if (inlineToken || serverCode) {
+    const listCode = serverCode || localListCode;
     addMintedJourney({
-      code: mintCode,
+      code: listCode,
       title: payload.title,
       region: payload.region,
       emoji: payload.emoji,

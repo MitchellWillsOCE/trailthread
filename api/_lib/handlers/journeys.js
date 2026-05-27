@@ -241,11 +241,18 @@ async function readStored(code) {
   }
 }
 
+const JOURNEY_TTL_SEC = 60 * 60 * 24 * 365; // 1 year
+
 async function writeStored(code, record) {
   if (isKvAvailable()) {
     const kv = await getKv();
-    await kv.set(`${KV_KEY_PREFIX}${code}`, record);
+    await kv.set(`${KV_KEY_PREFIX}${code}`, record, { ex: JOURNEY_TTL_SEC });
     return;
+  }
+  if (process.env.VERCEL) {
+    throw new Error(
+      "Shared journey storage is not configured. Add Upstash Redis (KV_REST_API_URL and KV_REST_API_TOKEN) in your Vercel project environment variables."
+    );
   }
   ensureDir();
   fs.writeFileSync(
@@ -259,6 +266,15 @@ export async function handleJourneys(req, res, url) {
   const { pathname } = url;
   res.setHeader("Cache-Control", "no-store");
 
+  if (pathname === "/api/journeys/status" && req.method === "GET") {
+    const kv = isKvAvailable();
+    sendJson(res, 200, {
+      storage: kv ? "redis" : process.env.VERCEL ? "unavailable" : "disk",
+      crossDeviceCodes: kv,
+    });
+    return;
+  }
+
   if (pathname === "/api/journeys/create" && req.method === "POST") {
     try {
       const body = await readBody(req);
@@ -271,7 +287,13 @@ export async function handleJourneys(req, res, url) {
         distanceKm: approximateDistanceKm(journey.stops),
       };
       await writeStored(code, record);
-      sendJson(res, 201, { code, url: `/?journey=${code}`, journey: record });
+      sendJson(res, 201, {
+        code,
+        url: `/?journey=${code}`,
+        journey: record,
+        storage: isKvAvailable() ? "redis" : "disk",
+        crossDeviceCodes: isKvAvailable() || !process.env.VERCEL,
+      });
     } catch (err) {
       sendJson(res, 400, { error: err.message || "Invalid journey" });
     }

@@ -3408,11 +3408,34 @@ body.hike-story-open .map-controls .route-legend {
   border-color: rgba(15, 23, 42, 0.1);
 }
 
-.trip-card-badge {
+.trip-card-cover-chips {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  inset: 0;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.trip-card-cover-top,
+.trip-card-cover-bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.trip-card-cover-bottom {
+  align-items: flex-end;
+}
+
+.trip-card-badge {
+  position: static;
+  flex-shrink: 0;
   padding: 3px 9px;
   border-radius: 999px;
   font-size: 0.68rem;
@@ -3507,10 +3530,8 @@ body.hike-story-open .map-controls .route-legend {
 }
 
 .trip-card-emoji {
-  position: absolute;
-  z-index: 3;
-  top: 10px;
-  left: 12px;
+  position: static;
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3525,10 +3546,9 @@ body.hike-story-open .map-controls .route-legend {
 }
 
 .trip-card-region {
-  position: absolute;
-  z-index: 3;
-  left: 12px;
-  bottom: 10px;
+  position: static;
+  flex: 1;
+  min-width: 0;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -3539,17 +3559,14 @@ body.hike-story-open .map-controls .route-legend {
   border-radius: 999px;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  max-width: calc(100% - 80px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .trip-card-days {
-  position: absolute;
-  z-index: 3;
-  right: 10px;
-  bottom: 10px;
+  position: static;
+  flex-shrink: 0;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.04em;

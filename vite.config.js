@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { defineConfig } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import { citiesApiPlugin } from "./server/cities-api.js";
 import { hikesApiPlugin } from "./server/hikes-api.js";
 import { parksApiPlugin } from "./server/parks-api.js";
@@ -107,14 +107,19 @@ function copyStaticAssetsPlugin() {
   };
 }
 
-export default defineConfig({
-  plugins: [
-    citiesApiPlugin(),
-    hikesApiPlugin(),
-    parksApiPlugin(),
-    poiApiPlugin(),
-    countryDossierApiPlugin(),
-    journeyCodesApiPlugin(),
-    copyStaticAssetsPlugin(),
-  ],
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), "");
+  Object.assign(process.env, env);
+
+  return {
+    plugins: [
+      citiesApiPlugin(),
+      hikesApiPlugin(),
+      parksApiPlugin(),
+      poiApiPlugin(),
+      countryDossierApiPlugin(),
+      journeyCodesApiPlugin(),
+      copyStaticAssetsPlugin(),
+    ],
+  };
 });
