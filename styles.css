@@ -30,6 +30,7 @@
   --layout-hud-bottom: 120px;
   --layout-hud-height: 0px;
   --leaflet-bottom-offset: 12px;
+  --builder-resume-clearance: 0px;
   --layout-map-hint: 0px;
   --hud-stack-width: min(300px, calc(100vw - 2 * var(--hud-pad) - var(--panel-reserve)));
 }
@@ -1850,8 +1851,8 @@ body.hike-story-open .map-controls .route-legend {
 }
 
 .map-stage #map .leaflet-bottom.leaflet-left {
-  margin-left: 8px;
-  margin-bottom: var(--leaflet-bottom-offset, 12px);
+  margin-left: max(12px, env(safe-area-inset-left, 0px));
+  margin-bottom: calc(var(--leaflet-bottom-offset, 12px) + var(--builder-resume-clearance, 0px));
   transition: margin-bottom var(--dur-med) var(--ease-smooth);
 }
 
@@ -5916,13 +5917,13 @@ body.media-lightbox-open {
 /* ------------------------------------------------------------------- */
 .builder-resume-fab {
   position: fixed;
-  left: max(16px, env(safe-area-inset-left));
-  bottom: calc(max(20px, env(safe-area-inset-bottom)) + 16px);
+  left: calc(var(--shell-pad, 14px) + max(12px, env(safe-area-inset-left, 0px)));
+  bottom: calc(var(--leaflet-bottom-offset, 12px) + max(10px, env(safe-area-inset-bottom, 0px)));
   z-index: 950;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 16px 10px 12px;
+  padding: 11px 18px 11px 14px;
   border: 0;
   border-radius: 999px;
   background: #0f766e;
@@ -5968,9 +5969,8 @@ body.media-lightbox-open {
 
 @media (max-width: 480px) {
   .builder-resume-fab {
-    left: 10px;
-    bottom: calc(env(safe-area-inset-bottom, 0px) + 12px);
-    padding: 8px 14px 8px 10px;
+    left: calc(var(--shell-pad, 14px) + max(10px, env(safe-area-inset-left, 0px)));
+    padding: 10px 16px 10px 12px;
   }
   .builder-resume-fab__label strong {
     font-size: 0.8rem;

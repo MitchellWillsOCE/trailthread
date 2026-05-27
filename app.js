@@ -6921,6 +6921,18 @@ function updateLayoutInsets() {
   }
 
   stage.style.setProperty("--leaflet-bottom-offset", `${leafletBottom}px`);
+  document.documentElement.style.setProperty("--leaflet-bottom-offset", `${leafletBottom}px`);
+
+  const fab = document.getElementById("builderResumeFab");
+  const fabVisible =
+    fab && !fab.hidden && fab.classList.contains("is-visible");
+  document.body.classList.toggle("builder-resume-visible", fabVisible);
+  let fabClearance = 0;
+  if (fabVisible && fab) {
+    fabClearance = Math.ceil(fab.getBoundingClientRect().height + 10);
+  }
+  document.documentElement.style.setProperty("--builder-resume-clearance", `${fabClearance}px`);
+  stage.style.setProperty("--builder-resume-clearance", `${fabClearance}px`);
 }
 
 function syncStoryPanelLayout() {
@@ -8609,8 +8621,10 @@ function updateBuilderFab() {
       if (!fab.classList.contains("is-visible")) {
         fab.hidden = true;
       }
+      requestAnimationFrame(updateLayoutInsets);
     }, 220);
   }
+  requestAnimationFrame(updateLayoutInsets);
 }
 
 function reopenBuilderIfPending() {
