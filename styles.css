@@ -6828,11 +6828,17 @@ path.leaflet-interactive:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: text;
+  cursor: pointer;
   margin: 0;
   padding: 0;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
   transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+
+.city-search__icon-button:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
 }
 
 .city-search__field:focus-within .city-search__icon-button {
@@ -6967,19 +6973,20 @@ path.leaflet-interactive:hover {
   }
 
   .city-search__icon-button {
-    width: 22px;
-    height: 22px;
-    cursor: text;
-    pointer-events: none;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    /* Keep the icon click-through-able as a search trigger now that it's a
+     * real <button>: no `pointer-events: none` here. */
   }
 
   .city-search__icon-button:hover {
-    background: transparent;
-    color: #475569;
+    background: rgba(15, 23, 42, 0.04);
+    color: #0f172a;
   }
 
   .city-search__field:focus-within .city-search__icon-button {
-    color: #475569;
+    color: #0f766e;
   }
 
   .city-search__input {
@@ -8272,30 +8279,42 @@ body.welcome-open .journey-panel {
     -webkit-backdrop-filter: none;
   }
 
+  /* The icon is now a real <button> that focuses the input AND triggers
+   * a search when there is a query — make sure it sits above the input
+   * so taps actually land on it. The input gets a left padding to keep
+   * the typed text from running underneath. */
   .map-hud .city-search__icon-button {
     position: absolute;
-    left: 6px;
+    left: 4px;
     top: 50%;
     transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
-    z-index: 1;
+    pointer-events: auto;
+    z-index: 3;
     background: transparent;
+    color: #0f766e;
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(15, 118, 110, 0.12);
+  }
+  .map-hud .city-search__icon-button:active {
+    background: rgba(15, 118, 110, 0.12);
   }
 
   /* The input is absolutely positioned to fill the ENTIRE field box (border
    * included) so the hit target is the full visible pill — no seam at the
-   * top/bottom border, no padding-only "dead" strip. */
+   * top/bottom border, no padding-only "dead" strip. The right padding
+   * leaves room for the (wider) ✕ clear button when it is visible. */
   .map-hud .city-search__input {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    padding: 0 48px 0 44px;
+    padding: 0 56px 0 48px;
     margin: 0;
     border: 0;
     border-radius: inherit;
@@ -8323,9 +8342,22 @@ body.welcome-open .journey-panel {
     z-index: 1;
   }
 
+  /* Bigger, more forgiving hit area for the ✕ on phones — previously the
+   * button was a 28×28 dot which made it both hard to hit cleanly AND a
+   * source of click-through when iOS Safari synthesized a follow-up click
+   * after the button hid itself. The wider hit zone plus pointerdown
+   * capture in JS keeps the touch contained to this control. */
   .map-hud .city-search__clear {
-    z-index: 3;
+    width: 44px;
+    height: 44px;
+    right: 4px;
+    z-index: 4;
     touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(15, 23, 42, 0.12);
+    background: rgba(15, 23, 42, 0.1);
+  }
+  .map-hud .city-search__clear:active {
+    background: rgba(15, 23, 42, 0.18);
   }
 
   /* Also explicitly clear backdrop-filter from the wrapper on mobile so
