@@ -271,3 +271,72 @@ export function clearMintedJourneys() {
     }
   }
 }
+
+/* ---------------- Downloaded / opened journeys (localStorage) ---------------- */
+
+const IMPORTED_LS_KEY = "tt-imported-trips";
+const MAX_IMPORTED_TRIPS = 30;
+
+export function readImportedTrips() {
+  if (!isBrowser() || typeof localStorage === "undefined") {
+    return [];
+  }
+  try {
+    const raw = localStorage.getItem(IMPORTED_LS_KEY);
+    const parsed = safeParse(raw, []);
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeImportedTrips(list) {
+  if (!isBrowser() || typeof localStorage === "undefined") {
+    return [];
+  }
+  const trimmed = (list || []).slice(0, MAX_IMPORTED_TRIPS);
+  try {
+    if (!trimmed.length) {
+      localStorage.removeItem(IMPORTED_LS_KEY);
+      return [];
+    }
+    localStorage.setItem(IMPORTED_LS_KEY, JSON.stringify(trimmed));
+  } catch {
+    /* quota — drop oldest */
+  }
+  return trimmed;
+}
+
+export function upsertImportedTrip(entry) {
+  if (!entry?.key) {
+    return readImportedTrips();
+  }
+  const key = String(entry.key);
+  const next = readImportedTrips().filter((item) => item.key !== key);
+  next.unshift({
+    key,
+    sharedCode: trim(entry.sharedCode || "", 14),
+    title: trim(entry.title || "Shared journey", 80),
+    description: trim(entry.description || "", 280),
+    region: trim(entry.region || "", 60),
+    emoji: trim(entry.emoji || "🧭", 4),
+    continent: trim(entry.continent || "europe", 16),
+    days: Number(entry.days) || 1,
+    distanceKm: Number(entry.distanceKm) || 0,
+    highlights: Array.isArray(entry.highlights) ? entry.highlights.slice(0, 6) : [],
+    cover: trim(entry.cover || "", 200),
+    author: trim(entry.author || "", 60),
+    geojson: trim(entry.geojson || "", 120),
+    inlineToken: entry.inlineToken ? String(entry.inlineToken) : "",
+    savedAt: Date.now(),
+  });
+  return writeImportedTrips(next);
+}
+
+export function removeImportedTrip(tripKey) {
+  const target = String(tripKey || "");
+  if (!target) {
+    return readImportedTrips();
+  }
+  return writeImportedTrips(readImportedTrips().filter((item) => item.key !== target));
+}

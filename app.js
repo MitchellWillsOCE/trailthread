@@ -60,6 +60,9 @@ import {
   readJourneyDraft,
   readMintedJourneys,
   removeMintedJourney,
+  readImportedTrips,
+  upsertImportedTrip,
+  removeImportedTrip,
   writeJourneyDraft,
 } from "./journey-storage.js";
 import { loadSeasonHints, buildTimeOfYearHtml } from "./seasons.js";
@@ -265,9 +268,28 @@ const importedTripsGrid = document.getElementById("importedTripsGrid");
 const TRIP_CATALOG = {
   SAMPLE: "sample",
   IMPORTED: "imported",
+  CREATED: "created",
 };
 
-function isImportedTrip(trip) {
+function isMintedJourneyCode(code) {
+  const target = String(code || "").toUpperCase();
+  if (!target) {
+    return false;
+  }
+  return readMintedJourneys().some((entry) => entry.code === target);
+}
+
+function isCreatedTrip(trip) {
+  if (trip?.catalog === TRIP_CATALOG.CREATED) {
+    return true;
+  }
+  return isMintedJourneyCode(trip?.sharedCode);
+}
+
+function isDownloadedTrip(trip) {
+  if (isCreatedTrip(trip)) {
+    return false;
+  }
   return (
     trip?.catalog === TRIP_CATALOG.IMPORTED ||
     (typeof trip?.key === "string" && trip.key.startsWith("shared-"))
@@ -275,14 +297,183 @@ function isImportedTrip(trip) {
 }
 
 function isSampleTrip(trip) {
-  if (isImportedTrip(trip)) {
-    return false;
-  }
-  return trip?.catalog === TRIP_CATALOG.SAMPLE || !String(trip?.key || "").startsWith("shared-");
+  return trip?.catalog === TRIP_CATALOG.SAMPLE;
 }
 
 function tagSampleTrips(trips) {
   return (trips || []).map((trip) => ({ ...trip, catalog: TRIP_CATALOG.SAMPLE }));
+}
+
+function rehydrateImportedTrips() {
+  const imported = [];
+  for (const trip of readImportedTrips()) {
+    if (isMintedJourneyCode(trip.sharedCode)) {
+      removeImportedTrip(trip.key);
+      continue;
+    }
+    imported.push({ ...trip, catalog: TRIP_CATALOG.IMPORTED });
+  }
+  return imported;
+}
+
+function resolveTripCatalog({ source, code } = {}) {
+  if (source === "builder" || source === "minted" || source === "created") {
+    return TRIP_CATALOG.CREATED;
+  }
+  if (isMintedJourneyCode(code)) {
+    return TRIP_CATALOG.CREATED;
+  }
+  return TRIP_CATALOG.IMPORTED;
+}
+
+function persistDownloadedTrip(tripEntry) {
+  if (tripEntry.catalog !== TRIP_CATALOG.IMPORTED) {
+    return;
+  }
+  upsertImportedTrip(tripEntry);
+}
+
+function removeTripFromLibrary(tripKey) {
+  const trip = state.trips.find((item) => item.key === tripKey);
+  state.trips = state.trips.filter((item) => item.key !== tripKey);
+  removeImportedTrip(tripKey);
+  if (trip?.sharedCode) {
+    tripGeojsonCache.delete(tripKey);
+  }
+  if (state.selectedTrip === tripKey) {
+    tripEnrichGeneration += 1;
+    state.selectedTrip = null;
+    clearTripLayers();
+    renderEmptyJourneyPanel();
+    setPanelCollapsed(true);
+    renderHudJourneyStrip();
+  }
+  renderTripMenu();
+  renderMintedJourneys();
+}
+
+function removeCreatedJourney(code) {
+  const normalized = String(code || "").toUpperCase();
+  if (!normalized) {
+    return;
+  }
+  removeMintedJourney(normalized);
+  const tripKey = `shared-${normalized}`;
+  state.trips = state.trips.filter(
+    (trip) => trip.key !== tripKey && String(trip.sharedCode || "").toUpperCase() !== normalized
+  );
+  removeImportedTrip(tripKey);
+  tripGeojsonCache.delete(tripKey);
+  if (state.selectedTrip === tripKey) {
+    tripEnrichGeneration += 1;
+    state.selectedTrip = null;
+    clearTripLayers();
+    renderEmptyJourneyPanel();
+    setPanelCollapsed(true);
+    renderHudJourneyStrip();
+  }
+  renderTripMenu();
+  renderMintedJourneys();
+}
+
+function journeyFromGeojson(geojson, meta = {}) {
+  const stops = (geojson?.features || [])
+    .filter((feature) => feature?.geometry?.type === "Point")
+    .map((feature, index) => {
+      const [lng, lat] = feature.geometry.coordinates || [];
+      return {
+        id: feature.properties?.id || `stop-${index}`,
+        name: feature.properties?.name || `Stop ${index + 1}`,
+        country: feature.properties?.country || "",
+        kind: feature.properties?.kind || feature.properties?.stopType || "stop",
+        mode: feature.properties?.mode || "drive",
+        stopType: feature.properties?.stopType || feature.properties?.kind || "city",
+        tagline: feature.properties?.tagline || "",
+        lat,
+        lng,
+      };
+    })
+    .filter((stop) => Number.isFinite(stop.lat) && Number.isFinite(stop.lng));
+  return {
+    title: meta.title || "Shared journey",
+    description: meta.description || "",
+    region: meta.region || "",
+    author: meta.author || "",
+    days: meta.days || stops.length,
+    emoji: meta.emoji || "🧭",
+    continent: meta.continent || "europe",
+    stops,
+  };
+}
+
+function loadJourneyIntoBuilder(journey, { editingCode = null } = {}) {
+  if (!journey?.stops?.length) {
+    window.alert("This journey does not have enough stops to edit.");
+    return false;
+  }
+  builderState.editingSharedCode = editingCode ? String(editingCode).toUpperCase() : null;
+  builderState.stops = journey.stops.map((stop, index) => ({
+    id: stop.id || `stop-${index}-${stop.lat}-${stop.lng}`,
+    name: stop.name || `Stop ${index + 1}`,
+    country: stop.country || "",
+    kind: stop.kind || stop.stopType || "stop",
+    mode: stop.mode || "drive",
+    stopType: index === 0 ? "start" : stop.stopType || stop.kind || "city",
+    tagline: stop.tagline || "",
+    lat: stop.lat,
+    lng: stop.lng,
+  }));
+  const setVal = (id, val) => {
+    const el = document.getElementById(id);
+    if (el && val != null) {
+      el.value = val;
+    }
+  };
+  setVal("builderTitle", journey.title || "");
+  setVal("builderDescription", journey.description || "");
+  setVal("builderRegion", journey.region || "");
+  setVal("builderAuthor", journey.author || "");
+  setVal("builderDays", journey.days || builderState.stops.length);
+  const result = document.getElementById("builderResult");
+  if (result) {
+    result.hidden = true;
+  }
+  const meta = document.getElementById("builderMeta");
+  if (meta) {
+    meta.open = true;
+  }
+  renderBuilderStops();
+  updateBuilderFab();
+  scheduleSaveBuilderDraft();
+  openJourneyBuilder();
+  return true;
+}
+
+async function editJourneyFromLibrary({ code, inlineToken, tripKey }) {
+  closeTripOverlay();
+  let journey = inlineToken ? decodeJourneyToken(inlineToken) : null;
+  const normalizedCode = code ? String(code).toUpperCase() : "";
+  if (!journey && normalizedCode) {
+    try {
+      journey = await fetchSharedJourney(normalizedCode);
+    } catch (err) {
+      console.warn("[edit journey] fetch failed", err);
+    }
+  }
+  if (!journey && tripKey) {
+    const trip = state.trips.find((item) => item.key === tripKey);
+    const cached = tripGeojsonCache.get(tripKey);
+    if (cached && trip) {
+      journey = journeyFromGeojson(cached, trip);
+    }
+  }
+  if (!journey?.stops?.length) {
+    window.alert("Could not load this journey for editing. Try opening it on the map first.");
+    return;
+  }
+  const editingCode =
+    normalizedCode || journey.code || tripKey?.replace(/^shared-/, "") || null;
+  loadJourneyIntoBuilder(journey, { editingCode });
 }
 const openJourneysMenuButton = document.getElementById("openJourneysMenuButton");
 const closeTripMenuButton = document.getElementById("closeTripMenuButton");
@@ -373,6 +564,7 @@ function setActiveView(view, options = {}) {
   requestAnimationFrame(() => {
     updateHudNavIndicator();
     updateLayoutInsets();
+    updateMobileBottomNavActive();
   });
 
   itineraryPanel?.classList.toggle("view-story-focus", view === "story" || view === "stops");
@@ -506,6 +698,7 @@ function updateHudJourneyState() {
 
   layoutRoot?.classList.toggle("map-stage--no-journey", !hasActiveJourney());
   document.body.classList.toggle("no-journey-selected", !hasActiveJourney());
+  updateMobileBottomNavActive();
 
   if (!hasActiveJourney()) {
     if (titleEl) {
@@ -825,6 +1018,7 @@ function renderContinentFilters() {
 function renderHudJourneyStrip() {
   updateJourneysMenuHint();
   updateJourneysMenuButton();
+  updateMobileBottomNavActive();
 }
 
 function renderStopsList(pointFeatures) {
@@ -843,7 +1037,7 @@ function renderStopsList(pointFeatures) {
       const details = getPlaceDetail(name);
       const photos = getPlacePhotos(name);
       const photo = photos[0]?.url;
-      const tagline = placeTagline(details);
+      const tagline = journeyStopTagline(props, details);
       const flagUrl = countryFlagUrl(country);
       const flagHtml = flagUrl
         ? `<img class="dest-stop-card__flag" src="${escapeHtml(flagUrl)}" alt="" width="14" height="14" loading="lazy" referrerpolicy="no-referrer" />`
@@ -1299,8 +1493,8 @@ function completeReadablePhrase(text, maxLen = 88) {
     const line = t.slice(0, comma).trim();
     return /[.!?]$/.test(line) ? line : `${line}.`;
   }
-  const space = window.lastIndexOf(" ");
-  const line = (space >= 40 ? t.slice(0, space) : window).trim().replace(/[,;—]$/, "");
+  const space = head.lastIndexOf(" ");
+  const line = (space >= 40 ? t.slice(0, space) : head).trim().replace(/[,;—]$/, "");
   return /[.!?]$/.test(line) ? line : `${line}.`;
 }
 
@@ -1337,15 +1531,50 @@ function formatHighlightLine(text) {
   return "";
 }
 
-function placeTagline(details) {
-  if (details.tagline) {
-    return completeReadablePhrase(details.tagline, 88);
+/** Explore / catalog copy — never use journey-specific taglines from place-details. */
+function catalogPlaceTagline(details) {
+  const general = completeReadablePhrase(details.general || "", 88);
+  if (general) {
+    return general;
   }
   const firstActivity = details.activities?.[0];
   if (firstActivity) {
     return formatHighlightLine(firstActivity);
   }
-  return completeReadablePhrase(details.general || "", 88);
+  const name = details.name || "this place";
+  return `Discover ${name}`;
+}
+
+function isJourneyRouteStop(props = {}) {
+  return hasActiveJourney() && Boolean(props.day || props.stopType || props.tagline);
+}
+
+function resolveStopItineraryNote(props = {}, details = {}) {
+  if (props.tagline) {
+    return completeReadablePhrase(props.tagline, 500);
+  }
+  if (isJourneyRouteStop(props) && details.itinerary) {
+    return completeReadablePhrase(details.itinerary, 500);
+  }
+  return "";
+}
+
+/** Popup / panel tagline when viewing a stop on an active journey route. */
+function journeyStopTagline(props = {}, details = {}) {
+  if (props.tagline) {
+    return completeReadablePhrase(props.tagline, 88);
+  }
+  if (details.itinerary && isJourneyRouteStop(props)) {
+    return completeReadablePhrase(details.itinerary, 88);
+  }
+  return catalogPlaceTagline(details);
+}
+
+function placeTagline(details, props = null) {
+  if (props && isJourneyRouteStop(props)) {
+    return journeyStopTagline(props, details);
+  }
+  return catalogPlaceTagline(details);
 }
 
 function stopTypeLabel(stopType) {
@@ -1478,10 +1707,11 @@ function buildPlaceStatsHtml(details, props) {
     .join("");
 }
 
-function buildGoodToKnowHtml(details) {
+function buildGoodToKnowHtml(details, props = null) {
+  const itineraryNote = resolveStopItineraryNote(props || {}, details);
   const rows = [
     { id: "tips", icon: "💡", title: "Good to know", items: details.tips || [] },
-    { id: "itinerary", icon: "🗓", title: "Itinerary note", text: details.itinerary }
+    { id: "itinerary", icon: "🗓", title: "Itinerary note", text: itineraryNote },
   ].filter((row) => row.text || (row.items && row.items.length));
 
   if (!rows.length) {
@@ -1543,7 +1773,7 @@ function buildNearbyCitiesHtml(details) {
     </section>`;
 }
 
-function buildParkStoryBody(details) {
+function buildParkStoryBody(details, props = null) {
   const highlights = details.highlights || [];
   const carousel = buildHighlightsCarouselHtml(highlights, { title: details.name });
   const activityLines = (details.activities || [])
@@ -1572,11 +1802,11 @@ function buildParkStoryBody(details) {
         : ""
     }
     ${buildTimeOfYearHtml(details.country || "")}
-    ${buildGoodToKnowHtml(details)}
+    ${buildGoodToKnowHtml(details, props)}
   `;
 }
 
-function buildMajorPlaceStoryBody(details) {
+function buildMajorPlaceStoryBody(details, props = null) {
   const highlights = details.highlights || [];
   const carousel = buildHighlightsCarouselHtml(highlights, { title: details.name });
   const activityLines = (details.activities || [])
@@ -1606,11 +1836,11 @@ function buildMajorPlaceStoryBody(details) {
     }
     ${buildNearbyCitiesHtml(details)}
     ${buildTimeOfYearHtml(details.country || "")}
-    ${buildGoodToKnowHtml(details)}
+    ${buildGoodToKnowHtml(details, props)}
   `;
 }
 
-function buildPoiStoryBody(details) {
+function buildPoiStoryBody(details, props = null) {
   const highlights = details.highlights || [];
   const carousel = buildHighlightsCarouselHtml(highlights, { title: details.name });
   const activityLines = (details.activities || [])
@@ -1639,19 +1869,19 @@ function buildPoiStoryBody(details) {
         : ""
     }
     ${buildTimeOfYearHtml(details.country || "")}
-    ${buildGoodToKnowHtml(details)}
+    ${buildGoodToKnowHtml(details, props)}
   `;
 }
 
-function buildPlaceStoryBody(details) {
+function buildPlaceStoryBody(details, props = null) {
   if (details.kind === "park") {
-    return buildParkStoryBody(details);
+    return buildParkStoryBody(details, props);
   }
   if (details.kind === "poi") {
-    return buildPoiStoryBody(details);
+    return buildPoiStoryBody(details, props);
   }
   if (details.tier === "major" || details.isMajorCard) {
-    return buildMajorPlaceStoryBody(details);
+    return buildMajorPlaceStoryBody(details, props);
   }
   return `
     ${
@@ -1669,7 +1899,7 @@ function buildPlaceStoryBody(details) {
     </section>`
         : ""
     }
-    ${buildGoodToKnowHtml(details)}
+    ${buildGoodToKnowHtml(details, props)}
   `;
 }
 
@@ -1892,7 +2122,9 @@ async function openPlaceStory(title, props = {}) {
   activePlacePhotos = dedupedPhotos;
 
   titleEl.textContent = title;
-  taglineEl.textContent = placeTagline(details);
+  taglineEl.textContent = isJourneyRouteStop(props)
+    ? journeyStopTagline(props, details)
+    : catalogPlaceTagline(details);
   descEl.textContent = completeReadablePhrase(details.general || "", 2000);
   statsEl.innerHTML = buildPlaceStatsHtml(details, props);
   const isPark = details.kind === "park";
@@ -1902,7 +2134,7 @@ async function openPlaceStory(title, props = {}) {
   sheet.classList.toggle("dest-panel--poi", isPoi);
   sheet.classList.toggle("dest-panel--major", isMajor);
 
-  bodyEl.innerHTML = buildPlaceStoryBody(details);
+  bodyEl.innerHTML = buildPlaceStoryBody(details, props);
   bindGoodToKnowAccordion(bodyEl);
   bindNearbyCityButtons(bodyEl);
   initHighlightsCarousels(bodyEl);
@@ -2205,7 +2437,7 @@ function cityCatalogPopupHtml(props, details) {
           <div class="dest-popup-card__hero-gradient"></div>
           ${flagUrl ? `<img class="dest-popup-card__flag" src="${escapeAttr(flagUrl)}" alt="" width="14" height="14" loading="lazy" referrerpolicy="no-referrer" />` : ""}
           <h4 class="dest-popup-card__title">${escapeHtml(title)}</h4>
-          <p class="dest-popup-card__tagline">${escapeHtml(placeTagline(resolved))}</p>
+          <p class="dest-popup-card__tagline">${escapeHtml(catalogPlaceTagline(resolved))}</p>
         </div>
       </div>
       <div class="dest-popup-card__body">
@@ -2270,7 +2502,7 @@ function buildCatalogPreviewPopupHtml(kind, props, details) {
           <div class="dest-popup-card__hero-gradient"></div>
           ${flagUrl ? `<img class="dest-popup-card__flag" src="${escapeAttr(flagUrl)}" alt="" width="14" height="14" loading="lazy" referrerpolicy="no-referrer" />` : ""}
           <h4 class="dest-popup-card__title">${escapeHtml(title)}</h4>
-          <p class="dest-popup-card__tagline">${escapeHtml(placeTagline(resolved))}</p>
+          <p class="dest-popup-card__tagline">${escapeHtml(catalogPlaceTagline(resolved))}</p>
         </div>
       </div>
       <div class="dest-popup-card__body">
@@ -3347,6 +3579,7 @@ function syncExploreHudButton() {
       exploreHint.textContent = `${parts.join(" · ")} on — tap a marker`;
     }
   }
+  updateMobileBottomNavActive();
 }
 
 function updateExploreCitiesUi() {
@@ -4938,7 +5171,7 @@ function pointPopupHtml(props) {
           <div class="dest-popup-card__hero-gradient"></div>
           ${flagUrl ? `<img class="dest-popup-card__flag" src="${escapeAttr(flagUrl)}" alt="" width="14" height="14" loading="lazy" referrerpolicy="no-referrer" />` : ""}
           <h4 class="dest-popup-card__title">${escapeHtml(title)}</h4>
-          <p class="dest-popup-card__tagline">${escapeHtml(placeTagline(details))}</p>
+          <p class="dest-popup-card__tagline">${escapeHtml(journeyStopTagline(props, details))}</p>
         </div>
       </div>
       <div class="dest-popup-card__body">
@@ -5757,6 +5990,20 @@ function renderInlineItinerary(trip) {
   if (!content) {
     return;
   }
+  const geo = tripGeojsonCache.get(trip.key);
+  const routeStops = (geo?.features || [])
+    .filter((feature) => feature?.geometry?.type === "Point")
+    .map((feature) => feature.properties || {})
+    .filter((props) => props.name);
+  const stopNotesHtml = routeStops.length
+    ? `<h3>Stops</h3><ol class="itinerary-stop-notes">${routeStops
+        .map((props) => {
+          const note = props.tagline ? `<p class="itinerary-stop-notes__note">${escapeHtml(props.tagline)}</p>` : "";
+          const meta = [props.country, props.day ? `Day ${props.day}` : ""].filter(Boolean).join(" · ");
+          return `<li><strong>${escapeHtml(props.name)}</strong>${meta ? `<span class="itinerary-stop-notes__meta">${escapeHtml(meta)}</span>` : ""}${note}</li>`;
+        })
+        .join("")}</ol>`
+    : "";
   const highlights = (trip.highlights || [])
     .map((line) => `<li>${escapeHtml(line)}</li>`)
     .join("");
@@ -5772,6 +6019,7 @@ function renderInlineItinerary(trip) {
   content.innerHTML = `
     ${shareLine}
     <p>${escapeHtml(trip.description || "")}</p>
+    ${stopNotesHtml}
     ${highlights ? `<h3>Highlights</h3><ul>${highlights}</ul>` : ""}
     <p class="itinerary-share itinerary-share--hint">Use the map to follow the route — share the code with friends to send them this journey.</p>
   `;
@@ -6057,16 +6305,118 @@ async function loadTrip(tripKey, fit = true, { animate = true } = {}) {
   renderHudJourneyStrip();
   setPanelCollapsed(false);
   layoutRoot?.classList.remove("is-trip-loading");
-  requestAnimationFrame(updateLayoutInsets);
+  requestAnimationFrame(() => {
+    updateLayoutInsets();
+    updateMobileBottomNavActive();
+  });
 
   void enrichTripLinesInBackground(lineFeatures, enrichGeneration);
 }
 
-function renderTripCardHtml(trip) {
+function mintedEntryToTripPreview(entry) {
+  const code = String(entry.code || "").toUpperCase();
+  const stops = Number(entry.stops) || 0;
+  const region = entry.region ? `${entry.region}` : "";
+  const description = [region, stops ? `${stops} stops` : "", code ? `Code ${code}` : ""]
+    .filter(Boolean)
+    .join(" · ");
+  return {
+    key: `shared-${code}`,
+    emoji: entry.emoji || "🧭",
+    title: entry.title || "Untitled journey",
+    description,
+    region: entry.region || "",
+    days: stops || 1,
+    distanceKm: 0,
+    cover: "",
+    sharedCode: code,
+    inlineToken: entry.inlineToken || "",
+    catalog: TRIP_CATALOG.CREATED,
+  };
+}
+
+function resolveTripLibraryKind(trip, explicitKind) {
+  if (explicitKind) {
+    return explicitKind;
+  }
+  if (isDownloadedTrip(trip)) {
+    return "downloaded";
+  }
+  if (isCreatedTrip(trip)) {
+    return "created";
+  }
+  return "sample";
+}
+
+function buildTripShareLink(sharedCode, inlineToken) {
+  const code = String(sharedCode || "").toUpperCase();
+  if (!code) {
+    return "";
+  }
+  return inlineToken
+    ? `${window.location.origin}/?journey=${encodeURIComponent(code)}&j=${inlineToken}`
+    : `${window.location.origin}/?journey=${encodeURIComponent(code)}`;
+}
+
+function closeTripCardMenus(exceptPanel = null) {
+  document.querySelectorAll(".trip-card__menu-panel").forEach((panel) => {
+    if (panel !== exceptPanel) {
+      panel.hidden = true;
+    }
+  });
+  document.querySelectorAll("[data-trip-menu-toggle]").forEach((btn) => {
+    const panel = btn.parentElement?.querySelector(".trip-card__menu-panel");
+    if (panel !== exceptPanel) {
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+function renderTripCardFooterHtml({ libraryKind, sharedCode, inlineToken }) {
+  const code = sharedCode ? escapeAttr(sharedCode) : "";
+  const token = inlineToken ? escapeAttr(inlineToken) : "";
+  const copyLabel = "Copy link";
+  const menuItems = `
+    <button type="button" class="trip-card__menu-item" role="menuitem" data-trip-edit>Edit</button>
+    <button type="button" class="trip-card__menu-item" role="menuitem" data-trip-copy data-copy-label="${escapeAttr(copyLabel)}">${copyLabel}</button>
+    <button type="button" class="trip-card__menu-item trip-card__menu-item--danger" role="menuitem" data-trip-delete>Delete</button>
+  `;
+  return `
+    <div class="trip-card__footer">
+      <button type="button" class="trip-card__open-btn" data-trip-open>Open</button>
+      <div class="trip-card__actions-inline" aria-label="Journey actions">
+        <button type="button" class="trip-card__action" data-trip-edit>Edit</button>
+        <button type="button" class="trip-card__action" data-trip-copy data-copy-label="${escapeAttr(copyLabel)}">${copyLabel}</button>
+        <button type="button" class="trip-card__action trip-card__action--danger" data-trip-delete>Delete</button>
+      </div>
+      <div class="trip-card__menu">
+        <button
+          type="button"
+          class="trip-card__menu-btn"
+          data-trip-menu-toggle
+          aria-label="More actions"
+          aria-haspopup="menu"
+          aria-expanded="false"
+        >⋯</button>
+        <div class="trip-card__menu-panel" role="menu" hidden>
+          ${menuItems}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderTripCardHtml(trip, { libraryKind: explicitKind } = {}) {
+  const libraryKind = resolveTripLibraryKind(trip, explicitKind);
+  const isLibraryCard = libraryKind === "downloaded" || libraryKind === "created";
   const active = trip.key === state.selectedTrip;
-  const imported = isImportedTrip(trip);
-  const badgeClass = imported ? "trip-card-badge--imported" : "trip-card-badge--sample";
-  const badgeLabel = imported ? "Downloaded" : "Sample";
+  const badgeClass = `trip-card-badge--${libraryKind === "sample" ? "sample" : libraryKind}`;
+  const badgeLabel =
+    libraryKind === "downloaded"
+      ? "Downloaded"
+      : libraryKind === "created"
+        ? "Created"
+        : "Example";
   const budget =
     trip.budgetAudMin && trip.budgetAudMax
       ? `<span class="trip-card-budget">${formatAud(trip.budgetAudMin)}–${formatAud(trip.budgetAudMax).replace(/^AUD /, "")}</span>`
@@ -6076,38 +6426,113 @@ function renderTripCardHtml(trip) {
     ? `<img class="trip-card-cover-img" src="${escapeHtml(trip.cover)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentElement?.classList.add('is-loaded')" onerror="this.remove()" />`
     : "";
   const authorLine =
-    imported && trip.author
+    libraryKind === "downloaded" && trip.author
       ? `<span class="trip-card-author">by ${escapeHtml(trip.author)}</span>`
       : "";
+  const inlineToken = trip.inlineToken ? escapeAttr(trip.inlineToken) : "";
+  const sharedCode = trip.sharedCode ? escapeAttr(trip.sharedCode) : "";
+  const description =
+    trip.description ||
+    (isLibraryCard ? "Saved on this device" : "");
+  const sampleNote =
+    libraryKind === "sample" && trip.builderNote
+      ? `<p class="trip-card-sample-note">${escapeHtml(trip.builderNote)}</p>`
+      : "";
+  const cardInner = `
+    <div class="trip-card-cover">
+      ${coverImg}
+      <span class="trip-card-cover-fallback" aria-hidden="true"></span>
+      <span class="trip-card-badge ${badgeClass}">${badgeLabel}</span>
+      <span class="trip-card-emoji">${trip.emoji || "🧭"}</span>
+      ${trip.region ? `<span class="trip-card-region">${escapeHtml(trip.region)}</span>` : ""}
+      <span class="trip-card-days">${trip.days} days</span>
+    </div>
+    <div class="trip-card-body">
+      <h3>${escapeHtml(trip.title)}</h3>
+      <p>${escapeHtml(description)}</p>
+      ${sampleNote}
+      <div class="trip-card-meta">${distance}${budget}${authorLine}</div>
+    </div>
+  `;
+  const footer = isLibraryCard
+    ? renderTripCardFooterHtml({ libraryKind, sharedCode, inlineToken })
+    : "";
+
+  if (isLibraryCard) {
+    return `
+      <article
+        class="trip-card-wrap trip-card-wrap--${libraryKind}"
+        data-trip-key="${escapeAttr(trip.key)}"
+        data-shared-code="${sharedCode}"
+        data-inline-token="${inlineToken}"
+        data-library-kind="${libraryKind}"
+      >
+        <div
+          class="trip-card trip-card--${libraryKind} trip-card--library"
+          data-active="${String(active)}"
+        >
+          ${cardInner}
+        </div>
+        ${footer}
+      </article>
+    `;
+  }
 
   return `
-    <button
-      class="trip-card trip-card--${imported ? "imported" : "sample"}"
-      type="button"
+    <article
+      class="trip-card-wrap trip-card-wrap--sample"
       data-trip-key="${escapeAttr(trip.key)}"
-      data-trip-catalog="${imported ? TRIP_CATALOG.IMPORTED : TRIP_CATALOG.SAMPLE}"
-      data-active="${String(active)}"
+      data-shared-code="${sharedCode}"
+      data-inline-token="${inlineToken}"
+      data-library-kind="sample"
     >
-      <div class="trip-card-cover">
-        ${coverImg}
-        <span class="trip-card-cover-fallback" aria-hidden="true"></span>
-        <span class="trip-card-badge ${badgeClass}">${badgeLabel}</span>
-        <span class="trip-card-emoji">${trip.emoji || "🧭"}</span>
-        ${trip.region ? `<span class="trip-card-region">${escapeHtml(trip.region)}</span>` : ""}
-        <span class="trip-card-days">${trip.days} days</span>
-      </div>
-      <div class="trip-card-body">
-        <h3>${escapeHtml(trip.title)}</h3>
-        <p>${escapeHtml(trip.description)}</p>
-        <div class="trip-card-meta">${distance}${budget}${authorLine}</div>
-      </div>
-    </button>
+      <button
+        class="trip-card trip-card--sample trip-card__open"
+        type="button"
+        data-trip-open
+        data-trip-key="${escapeAttr(trip.key)}"
+        data-active="${String(active)}"
+      >
+        ${cardInner}
+      </button>
+    </article>
   `;
+}
+
+async function openTripFromLibraryCard({ tripKey, sharedCode, inlineToken, libraryKind }) {
+  closeTripOverlay();
+  setPanelCollapsed(false);
+  setActiveView("map");
+
+  const existing = state.trips.find((item) => item.key === tripKey);
+  if (existing) {
+    await loadTrip(tripKey, true);
+    renderTripMenu();
+    return;
+  }
+
+  const code = String(sharedCode || tripKey.replace(/^shared-/, "")).toUpperCase();
+  const source =
+    libraryKind === "created" || isMintedJourneyCode(code) ? "minted" : "import";
+
+  try {
+    await openSharedJourney(code, { source, inlineToken });
+  } catch (err) {
+    if (!inlineToken) {
+      throw err;
+    }
+    const journey = decodeJourneyToken(inlineToken);
+    if (!journey) {
+      throw err;
+    }
+    await openInlineSharedJourney(journey, { source, inlineToken });
+  }
+  renderTripMenu();
 }
 
 function renderTripMenu() {
   const trips = getFilteredTrips();
-  const imported = trips.filter(isImportedTrip);
+  const imported = trips.filter(isDownloadedTrip);
   const samples = trips.filter(isSampleTrip);
 
   const importedSection = document.getElementById("importedJourneysSection");
@@ -6117,7 +6542,9 @@ function renderTripMenu() {
       importedTripsGrid.innerHTML = "";
     } else {
       importedSection.hidden = false;
-      importedTripsGrid.innerHTML = imported.map((trip) => renderTripCardHtml(trip)).join("");
+      importedTripsGrid.innerHTML = imported
+        .map((trip) => renderTripCardHtml(trip, { libraryKind: "downloaded" }))
+        .join("");
     }
   }
 
@@ -6249,8 +6676,8 @@ function setupTripOverlay() {
     grid.addEventListener(
       "pointerenter",
       (event) => {
-        const card = event.target.closest("button[data-trip-key]");
-        if (card) {
+        const card = event.target.closest("[data-trip-key]");
+        if (card?.dataset.tripKey && state.trips.some((trip) => trip.key === card.dataset.tripKey)) {
           prefetchTrip(card.dataset.tripKey);
         }
       },
@@ -6258,27 +6685,101 @@ function setupTripOverlay() {
     );
 
     grid.addEventListener("focusin", (event) => {
-      const card = event.target.closest("button[data-trip-key]");
-      if (card) {
+      const card = event.target.closest("[data-trip-key]");
+      if (card?.dataset.tripKey && state.trips.some((trip) => trip.key === card.dataset.tripKey)) {
         prefetchTrip(card.dataset.tripKey);
       }
     });
 
     grid.addEventListener("click", async (event) => {
-      const card = event.target.closest("button[data-trip-key]");
+      const card = event.target.closest("[data-trip-key]");
       if (!card) {
         return;
       }
 
       const tripKey = card.dataset.tripKey;
+      const sharedCode = card.dataset.sharedCode || "";
+      const inlineToken = card.dataset.inlineToken || "";
+      const libraryKind = card.dataset.libraryKind || "sample";
 
-      closeTripOverlay();
-      setPanelCollapsed(false);
-      setActiveView("map");
+      if (event.target.closest("[data-trip-menu-toggle]")) {
+        event.stopPropagation();
+        const panel = card.querySelector(".trip-card__menu-panel");
+        const trigger = event.target.closest("[data-trip-menu-toggle]");
+        const willOpen = Boolean(panel?.hidden);
+        closeTripCardMenus(panel);
+        if (panel && trigger) {
+          panel.hidden = !willOpen;
+          trigger.setAttribute("aria-expanded", String(willOpen));
+        }
+        return;
+      }
+
+      if (event.target.closest(".trip-card__menu-panel")) {
+        event.stopPropagation();
+      }
+
+      if (event.target.closest("[data-trip-delete]")) {
+        closeTripCardMenus();
+        const isCreated = libraryKind === "created" || isMintedJourneyCode(sharedCode);
+        const message = isCreated
+          ? "Delete this created journey from your library?"
+          : "Remove this downloaded journey from your library?";
+        if (!window.confirm(message)) {
+          return;
+        }
+        if (isCreated) {
+          removeCreatedJourney(sharedCode || tripKey.replace(/^shared-/, ""));
+        } else {
+          removeTripFromLibrary(tripKey);
+        }
+        return;
+      }
+
+      if (event.target.closest("[data-trip-edit]")) {
+        closeTripCardMenus();
+        void editJourneyFromLibrary({ code: sharedCode, inlineToken, tripKey });
+        return;
+      }
+
+      if (event.target.closest("[data-trip-copy]")) {
+        closeTripCardMenus();
+        const link = buildTripShareLink(sharedCode, inlineToken);
+        if (!link) {
+          return;
+        }
+        try {
+          await navigator.clipboard.writeText(link);
+        } catch {
+          /* ignore */
+        }
+        const btn = event.target.closest("[data-trip-copy]");
+        if (btn) {
+          const prev = btn.dataset.copyLabel || btn.textContent;
+          btn.textContent = "Copied";
+          btn.disabled = true;
+          setTimeout(() => {
+            btn.textContent = prev;
+            btn.disabled = false;
+          }, 1200);
+        }
+        return;
+      }
+
+      if (!event.target.closest("[data-trip-open]")) {
+        return;
+      }
 
       try {
-        await loadTrip(tripKey, true);
-        renderTripMenu();
+        if (libraryKind === "sample") {
+          closeTripOverlay();
+          setPanelCollapsed(false);
+          setActiveView("map");
+          await loadTrip(tripKey, true);
+          renderTripMenu();
+          return;
+        }
+        await openTripFromLibraryCard({ tripKey, sharedCode, inlineToken, libraryKind });
       } catch (error) {
         console.error(error);
         layoutRoot?.classList.remove("is-trip-loading");
@@ -6293,8 +6794,16 @@ function setupTripOverlay() {
     });
   };
 
+  if (!document.documentElement.dataset.tripCardMenusWired) {
+    document.documentElement.dataset.tripCardMenusWired = "true";
+    document.addEventListener("click", () => {
+      closeTripCardMenus();
+    });
+  }
+
   wireTripCardGrid(tripMenuGrid);
   wireTripCardGrid(importedTripsGrid);
+  wireTripCardGrid(document.getElementById("mintedJourneysList"));
 }
 
 let panelCollapsed = false;
@@ -6540,6 +7049,20 @@ function setupMobileHudPill() {
 
 const phoneMq = () => window.matchMedia("(max-width: 640px)").matches;
 
+function isMobileJourneyPanelVisible() {
+  if (!phoneMq()) {
+    return false;
+  }
+  const panel = document.getElementById("itineraryPanel");
+  if (!panel || panel.classList.contains("collapsed")) {
+    return false;
+  }
+  if (!hasActiveJourney()) {
+    return false;
+  }
+  return panel.classList.contains("is-peek") || panel.classList.contains("is-expanded");
+}
+
 function setMobilePanelMode(mode) {
   // mode: "peek" | "expanded" | "hidden"
   const panel = document.getElementById("itineraryPanel");
@@ -6547,7 +7070,10 @@ function setMobilePanelMode(mode) {
   panel.classList.remove("is-peek", "is-expanded");
   if (mode === "peek") panel.classList.add("is-peek");
   else if (mode === "expanded") panel.classList.add("is-expanded");
-  requestAnimationFrame(updateLayoutInsets);
+  requestAnimationFrame(() => {
+    updateLayoutInsets();
+    updateMobileBottomNavActive();
+  });
 }
 
 function syncMobilePanelMode() {
@@ -6575,10 +7101,19 @@ function updateMobileBottomNavActive() {
   const exploreBtn = document.getElementById("exploreModeBtn");
   const isExpanded = panel?.classList.contains("is-expanded");
   const isExplore = exploreBtn?.getAttribute("aria-pressed") === "true";
+  const journeyOnMap = hasActiveJourney();
+  const journeyPanelVisible = isMobileJourneyPanelVisible();
 
+  // A loaded journey (peek or expanded details sheet) owns the nav highlight —
+  // explore can stay on in the background without stealing the active tab.
   let active = "map";
-  if (isExpanded) active = "story";
-  else if (isExplore) active = "explore";
+  if (journeyOnMap || journeyPanelVisible) {
+    active = "journeys";
+  } else if (isExplore) {
+    active = "explore";
+  } else if (isExpanded) {
+    active = "story";
+  }
 
   nav.querySelectorAll("[data-nav]").forEach((btn) => {
     btn.dataset.active = btn.dataset.nav === active ? "true" : "false";
@@ -6737,7 +7272,7 @@ async function initializeTrips() {
   }
 
   const manifest = await response.json();
-  state.trips = tagSampleTrips(manifest.trips || []);
+  state.trips = [...rehydrateImportedTrips(), ...tagSampleTrips(manifest.trips || [])];
   updateJourneysMenuHint();
 
   state.selectedTrip = null;
@@ -6859,8 +7394,9 @@ async function maybeOpenSharedJourneyFromUrl() {
   // requires the server to find the record, so we try it first if present
   // but fall back to the inline payload when both are present.
   if (code) {
+    const source = isMintedJourneyCode(code) ? "minted" : "import";
     try {
-      await openSharedJourney(code);
+      await openSharedJourney(code, { source, inlineToken });
       return;
     } catch (err) {
       console.warn("[shared journey] code lookup failed, falling back to inline payload", err);
@@ -6874,17 +7410,18 @@ async function maybeOpenSharedJourneyFromUrl() {
       return;
     }
     try {
-      await openInlineSharedJourney(journey, { source: "url" });
+      await openInlineSharedJourney(journey, { source: "url", inlineToken });
     } catch (err) {
       console.warn("[shared journey] inline open failed", err);
     }
   }
 }
 
-async function openSharedJourney(code) {
+async function openSharedJourney(code, { source = "import", inlineToken = "" } = {}) {
   const journey = await fetchSharedJourney(code);
   const geojsonUrl = `/api/journeys/code/${encodeURIComponent(code.toUpperCase())}/geojson`;
   const tripKey = `shared-${journey.code}`;
+  const catalog = resolveTripCatalog({ source, code: journey.code });
   const tripEntry = {
     key: tripKey,
     emoji: journey.emoji || "🧭",
@@ -6899,7 +7436,8 @@ async function openSharedJourney(code) {
     cover: journey.cover || journey.stops?.[0]?.photo || "",
     sharedCode: journey.code,
     author: journey.author || "",
-    catalog: TRIP_CATALOG.IMPORTED,
+    inlineToken: inlineToken || "",
+    catalog,
   };
   const existing = state.trips.findIndex((trip) => trip.key === tripKey);
   if (existing >= 0) {
@@ -6907,6 +7445,7 @@ async function openSharedJourney(code) {
   } else {
     state.trips = [tripEntry, ...state.trips];
   }
+  persistDownloadedTrip(tripEntry);
   renderTripMenu();
   closeTripOverlay();
   dismissWelcomeOverlay();
@@ -6924,16 +7463,18 @@ async function openSharedJourney(code) {
  * The geojson is synthesized client-side and pre-cached so loadTrip never
  * tries to hit the API.
  */
-async function openInlineSharedJourney(journey, { source = "inline" } = {}) {
+async function openInlineSharedJourney(journey, { source = "inline", inlineToken = "" } = {}) {
   if (!journey || !Array.isArray(journey.stops) || journey.stops.length < 2) {
     throw new Error("Inline journey is missing stops");
   }
   const sharedCode = journey.code || `inline-${Date.now().toString(36)}`;
   const tripKey = `shared-${sharedCode}`;
+  const catalog = resolveTripCatalog({ source, code: sharedCode });
   const inlineGeojson = buildJourneyGeojson(journey);
   tripGeojsonCache.set(tripKey, inlineGeojson);
   const distance =
     journey.distanceKm || approximateJourneyDistanceKm(journey.stops);
+  const encodedToken = inlineToken || encodeJourneyToToken(journey);
   const tripEntry = {
     key: tripKey,
     emoji: journey.emoji || "🧭",
@@ -6949,7 +7490,8 @@ async function openInlineSharedJourney(journey, { source = "inline" } = {}) {
     sharedCode,
     author: journey.author || "",
     inlineSource: source,
-    catalog: TRIP_CATALOG.IMPORTED,
+    inlineToken: encodedToken || "",
+    catalog,
   };
   const existing = state.trips.findIndex((trip) => trip.key === tripKey);
   if (existing >= 0) {
@@ -6957,6 +7499,7 @@ async function openInlineSharedJourney(journey, { source = "inline" } = {}) {
   } else {
     state.trips = [tripEntry, ...state.trips];
   }
+  persistDownloadedTrip(tripEntry);
   renderTripMenu();
   closeTripOverlay();
   dismissWelcomeOverlay();
@@ -7608,6 +8151,7 @@ const builderState = {
   pickMode: false,
   addMode: "search",
   reopenAfterStory: false,
+  editingSharedCode: null,
 };
 
 const KIND_EMOJI = {
@@ -7776,18 +8320,18 @@ function setupJourneyBuilder() {
     }
   });
 
+  document.getElementById("builderStops")?.addEventListener("input", (event) => {
+    const input = event.target.closest("input[data-stop-note]");
+    if (!input) return;
+    const index = Number(input.dataset.stopNote);
+    if (builderState.stops[index]) {
+      builderState.stops[index].tagline = input.value;
+      scheduleSaveBuilderDraft();
+    }
+  });
+
   document.getElementById("builderReset")?.addEventListener("click", () => {
-    builderState.stops = [];
-    ["builderTitle", "builderDescription", "builderRegion", "builderAuthor"].forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) el.value = "";
-    });
-    const daysEl = document.getElementById("builderDays");
-    if (daysEl) daysEl.value = "7";
-    renderBuilderStops();
-    const result = document.getElementById("builderResult");
-    if (result) result.hidden = true;
-    clearJourneyDraft();
+    clearBuilderInProgress();
   });
 
   document.getElementById("builderMint")?.addEventListener("click", () => {
@@ -7822,11 +8366,11 @@ function setupJourneyBuilder() {
     const inlineToken = resultEl?.getAttribute("data-inline-token") || "";
     closeJourneyBuilder();
     if (serverCode) {
-      void openSharedJourney(serverCode).catch((err) => {
+      void openSharedJourney(serverCode, { source: "created", inlineToken }).catch((err) => {
         console.warn("[builder open] server fetch failed, trying inline", err);
         const journey = inlineToken ? decodeJourneyToken(inlineToken) : null;
         if (journey) {
-          void openInlineSharedJourney(journey, { source: "fallback" });
+          void openInlineSharedJourney(journey, { source: "created", inlineToken });
         }
       });
       return;
@@ -7834,7 +8378,7 @@ function setupJourneyBuilder() {
     if (inlineToken) {
       const journey = decodeJourneyToken(inlineToken);
       if (journey) {
-        void openInlineSharedJourney(journey, { source: "builder" });
+        void openInlineSharedJourney(journey, { source: "created", inlineToken });
       }
     }
   });
@@ -7932,6 +8476,29 @@ function closeJourneyBuilder({ silent = false } = {}) {
 
 function isJourneyBuilderOpen() {
   return Boolean(document.getElementById("journeyBuilder")?.classList.contains("is-open"));
+}
+
+function clearBuilderInProgress({ keepMintResult = false } = {}) {
+  builderState.stops = [];
+  builderState.editingSharedCode = null;
+  builderState.pickMode = false;
+  ["builderTitle", "builderDescription", "builderRegion", "builderAuthor"].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.value = "";
+  });
+  const daysEl = document.getElementById("builderDays");
+  if (daysEl) daysEl.value = "7";
+  if (builderDraftSaveTimer) {
+    clearTimeout(builderDraftSaveTimer);
+    builderDraftSaveTimer = null;
+  }
+  clearJourneyDraft();
+  if (!keepMintResult) {
+    const result = document.getElementById("builderResult");
+    if (result) result.hidden = true;
+  }
+  renderBuilderStops();
+  updateBuilderFab();
 }
 
 function updateBuilderFab() {
@@ -8410,18 +8977,31 @@ function renderBuilderStops() {
       const meta = [stop.country, stop.kind].filter(Boolean).join(" · ") || "Custom point";
       pieces.push(`
         <li class="journey-builder__stop" data-kind="${escapeAttr(stop.kind || "stop")}">
-          <span class="journey-builder__stop-num" aria-hidden="true">${index + 1}</span>
-          <span class="journey-builder__stop-kind" aria-hidden="true">${kindEmoji}</span>
-          <div class="journey-builder__stop-text">
-            <strong>${escapeHtml(stop.name)}</strong>
-            <span>${escapeHtml(meta)}</span>
+          <div class="journey-builder__stop-main">
+            <span class="journey-builder__stop-num" aria-hidden="true">${index + 1}</span>
+            <span class="journey-builder__stop-kind" aria-hidden="true">${kindEmoji}</span>
+            <div class="journey-builder__stop-text">
+              <strong>${escapeHtml(stop.name)}</strong>
+              <span>${escapeHtml(meta)}</span>
+            </div>
+            <div class="journey-builder__stop-actions">
+              <button type="button" data-stop-up="${index}" ${isFirst ? "disabled" : ""} aria-label="Move up">▲</button>
+              <button type="button" data-stop-down="${index}" ${isLast ? "disabled" : ""} aria-label="Move down">▼</button>
+              <button type="button" data-stop-focus="${index}" aria-label="Show on map">🎯</button>
+              <button type="button" data-stop-remove="${index}" aria-label="Remove stop">✕</button>
+            </div>
           </div>
-          <div class="journey-builder__stop-actions">
-            <button type="button" data-stop-up="${index}" ${isFirst ? "disabled" : ""} aria-label="Move up">▲</button>
-            <button type="button" data-stop-down="${index}" ${isLast ? "disabled" : ""} aria-label="Move down">▼</button>
-            <button type="button" data-stop-focus="${index}" aria-label="Show on map">🎯</button>
-            <button type="button" data-stop-remove="${index}" aria-label="Remove stop">✕</button>
-          </div>
+          <label class="journey-builder__stop-note">
+            <span class="journey-builder__stop-note-label">Itinerary note</span>
+            <input
+              type="text"
+              class="journey-builder__stop-note-input"
+              data-stop-note="${index}"
+              value="${escapeAttr(stop.tagline || "")}"
+              placeholder="Optional — shown on your journey map and when this stop is opened"
+              maxlength="160"
+            />
+          </label>
         </li>
       `);
     });
@@ -8499,22 +9079,25 @@ async function mintBuilderJourney() {
   const linkEl = document.getElementById("builderResultLink");
   const hintEl = resultEl?.querySelector(".journey-builder__result-hint");
 
-  // Prefer the short code when we have it; fall back to a recognisable label
-  // for inline-only journeys so the popup never reads as "broken".
+  const mintCode = (
+    builderState.editingSharedCode ||
+    serverCode ||
+    `TT${Date.now().toString(36).slice(-6).toUpperCase()}`
+  ).toUpperCase();
+
   if (codeEl) {
-    codeEl.textContent = serverCode || (inlineToken ? "INLINE LINK" : "—");
+    codeEl.textContent = mintCode;
   }
-  const shareUrl = serverCode
-    ? `${window.location.origin}/?journey=${encodeURIComponent(serverCode)}${inlineToken ? `&j=${inlineToken}` : ""}`
-    : inlineUrl;
+  const shareUrl = inlineToken
+    ? `${window.location.origin}/?journey=${encodeURIComponent(mintCode)}&j=${inlineToken}`
+    : serverCode
+      ? `${window.location.origin}/?journey=${encodeURIComponent(serverCode)}`
+      : inlineUrl;
   if (linkEl) linkEl.value = shareUrl;
   if (hintEl) {
-    if (serverCode) {
+    if (inlineToken || serverCode) {
       hintEl.textContent =
         "Share this code or the full link — anyone who enters the code or opens the link can view your journey.";
-    } else if (inlineToken) {
-      hintEl.textContent =
-        "Share this link — it includes your journey, so anyone who opens it can view it.";
     } else {
       hintEl.textContent =
         "We could not mint a share code. Please add at least 2 stops with valid coordinates.";
@@ -8522,14 +9105,12 @@ async function mintBuilderJourney() {
   }
   if (resultEl) resultEl.hidden = false;
 
-  // Stash whichever identifier we have so the "Open" button can re-open the
-  // journey reliably without another network round-trip.
-  resultEl?.setAttribute("data-server-code", serverCode || "");
+  resultEl?.setAttribute("data-server-code", mintCode);
   resultEl?.setAttribute("data-inline-token", inlineToken || "");
 
-  if (serverCode) {
+  if (inlineToken || serverCode || mintCode) {
     addMintedJourney({
-      code: serverCode,
+      code: mintCode,
       title: payload.title,
       region: payload.region,
       emoji: payload.emoji,
@@ -8537,7 +9118,8 @@ async function mintBuilderJourney() {
       inlineToken: inlineToken || undefined,
     });
     renderMintedJourneys();
-  } else if (serverError && !inlineToken) {
+    clearBuilderInProgress({ keepMintResult: true });
+  } else if (serverError) {
     alert(serverError.message || "Could not mint share code");
   }
 
@@ -8597,13 +9179,6 @@ function restoreBuilderDraft() {
   renderMintedJourneys();
 }
 
-function formatMintedDate(timestamp) {
-  if (!timestamp) return "";
-  const date = new Date(timestamp);
-  if (Number.isNaN(date.getTime())) return "";
-  return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
-}
-
 function renderMintedJourneys() {
   const host = document.getElementById("mintedJourneysSection");
   const list = document.getElementById("mintedJourneysList");
@@ -8616,88 +9191,8 @@ function renderMintedJourneys() {
   }
   host.hidden = false;
   list.innerHTML = entries
-    .map((entry) => {
-      const emoji = entry.emoji || "🧭";
-      const region = entry.region ? ` · ${escapeHtml(entry.region)}` : "";
-      const dateStr = formatMintedDate(entry.createdAt);
-      const inlineToken = entry.inlineToken ? escapeAttr(entry.inlineToken) : "";
-      return `
-        <article class="minted-journey" data-minted-code="${escapeAttr(entry.code)}" data-inline-token="${inlineToken}">
-          <button type="button" class="minted-journey__open" data-minted-open>
-            <span class="minted-journey__emoji" aria-hidden="true">${emoji}</span>
-            <span class="minted-journey__text">
-              <span class="minted-journey__title-row">
-                <span class="minted-journey__title">${escapeHtml(entry.title || "Untitled journey")}</span>
-                <span class="minted-journey__badge">Created</span>
-              </span>
-              <span class="minted-journey__meta">
-                <code>${escapeHtml(entry.code)}</code>
-                <span>${entry.stops || 0} stops${region}</span>
-                ${dateStr ? `<span class="minted-journey__date">${escapeHtml(dateStr)}</span>` : ""}
-              </span>
-            </span>
-          </button>
-          <div class="minted-journey__actions">
-            <button type="button" class="minted-journey__action" data-minted-copy aria-label="Copy share link for ${escapeAttr(entry.title || entry.code)}">Copy link</button>
-            <button type="button" class="minted-journey__action minted-journey__action--danger" data-minted-remove aria-label="Forget code ${escapeAttr(entry.code)}">✕</button>
-          </div>
-        </article>
-      `;
-    })
+    .map((entry) => renderTripCardHtml(mintedEntryToTripPreview(entry), { libraryKind: "created" }))
     .join("");
-}
-
-function setupMintedJourneysList() {
-  const list = document.getElementById("mintedJourneysList");
-  if (!list) return;
-  list.addEventListener("click", (event) => {
-    const card = event.target.closest("[data-minted-code]");
-    if (!card) return;
-    const code = card.dataset.mintedCode;
-    if (!code) return;
-    const inlineToken = card.dataset.inlineToken || "";
-    if (event.target.closest("[data-minted-remove]")) {
-      removeMintedJourney(code);
-      renderMintedJourneys();
-      return;
-    }
-    if (event.target.closest("[data-minted-copy]")) {
-      // Self-contained URLs work even when the API is unreachable, so
-      // append the inline token if we have it. Plain `?journey=CODE` links
-      // depend on server-side storage and silently fail across clients
-      // when KV / Redis isn't configured.
-      const link = inlineToken
-        ? `${window.location.origin}/?journey=${encodeURIComponent(code)}&j=${inlineToken}`
-        : `${window.location.origin}/?journey=${encodeURIComponent(code)}`;
-      try {
-        navigator.clipboard.writeText(link);
-      } catch {
-        /* ignore — fallback could be a temporary input + execCommand */
-      }
-      const btn = event.target.closest("[data-minted-copy]");
-      if (btn) {
-        const prev = btn.textContent;
-        btn.textContent = "Copied";
-        btn.disabled = true;
-        setTimeout(() => {
-          btn.textContent = prev;
-          btn.disabled = false;
-        }, 1200);
-      }
-      return;
-    }
-    if (event.target.closest("[data-minted-open]")) {
-      closeTripOverlay();
-      void openSharedJourney(code).catch((err) => {
-        console.warn("[minted open] server fetch failed, trying inline", err);
-        if (!inlineToken) return;
-        const journey = decodeJourneyToken(inlineToken);
-        if (journey) {
-          void openInlineSharedJourney(journey, { source: "minted" });
-        }
-      });
-    }
-  });
 }
 
 function setupFilters() {
@@ -8729,7 +9224,6 @@ setupWelcomeAndExplore();
 setupCitySearch();
 setupCountryDossier();
 setupJourneyBuilder();
-setupMintedJourneysList();
 setupFavoritesUi();
 setupSeasonStripInteractions();
 
