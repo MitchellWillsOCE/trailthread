@@ -2828,54 +2828,69 @@ function setupCitySearch() {
   });
 
   /**
-   * Reliably bring focus to the search input. iOS Safari can drop
-   * `input.focus()` calls if the keyboard transition was just dismissed or
-   * if the call happened off the user-interaction stack, so we retry on the
-   * next animation frame as a safety net. The previous label-to-input focus
-   * delegation was unreliable on iPhone — switching to a plain <div>
-   * wrapper plus this helper avoids those quirks entirely. Issue #4: search
-   * bar not selectable on mobile.
+   * Reliably bring focus to the search input. We schedule a second focus
+   * call on the next frame as belt-and-braces in case the first one lost
+   * its user-gesture context (rare on iOS Safari but cheap to guard for).
    */
   const focusInput = () => {
     if (document.activeElement === input) return;
-    try {
-      input.focus({ preventScroll: false });
-    } catch (_) {
-      input.focus();
-    }
+    try { input.focus({ preventScroll: false }); } catch (_) { input.focus(); }
     if (document.activeElement !== input) {
       requestAnimationFrame(() => {
-        try {
-          input.focus({ preventScroll: false });
-        } catch (_) {
-          input.focus();
-        }
+        try { input.focus({ preventScroll: false }); } catch (_) { input.focus(); }
       });
     }
   };
 
-  // Focus the input when the user taps anywhere on the pill that isn't
-  // already an interactive control. This catches the padding gaps and the
-  // decorative spinner / kbd hint area.
-  const focusInputFromField = (event) => {
-    if (!event?.target) return;
-    // Skip clicks already handled by interactive descendants of the field
-    // (the icon button has its own listener; the input handles its own
-    // focus natively).
-    if (event.target.closest?.('[data-search-control="icon"]')) return;
-    if (event.target.closest?.('[data-search-control="input"]')) return;
-    event.preventDefault();
-    focusInput();
-  };
-  field?.addEventListener("click", focusInputFromField);
+  /* ---------------------------------------------------------------------- */
+  /* iPhone-16 / iOS-18 hardening                                            */
+  /* ---------------------------------------------------------------------- */
+  /* The user reported two persistent bugs that prior fixes did not resolve: */
+  /*                                                                         */
+  /*   1. "dead spots" on the search pill where tapping the input area does */
+  /*      not bring up the keyboard.                                        */
+  /*   2. tapping the ✕ clear button while there is text in the input opens */
+  /*      the full-screen Journey Builder modal AND the text is NOT cleared,*/
+  /*      meaning the X handler is not running at all on those taps.        */
+  /*                                                                         */
+  /* The root cause for both is that bubble-phase listeners on the ✕ button */
+  /* and the field can be silently outranked by capture-phase handlers      */
+  /* registered elsewhere, and that programmatic `.focus()` from a click on */
+  /* a different element does not reliably activate the iOS keyboard.       */
+  /*                                                                         */
+  /* The defensive answer is:                                                */
+  /*   • A document-level CAPTURE-phase pointerdown / click listener that   */
+  /*     fires before any other handler on the page. It hard-handles the    */
+  /*     ✕ click and the icon click and drops the events on the floor.     */
+  /*   • A `pointerdown` listener on the field that synchronously focuses   */
+  /*     the input from the earliest possible touch event — this is the    */
+  /*     iOS-Safari-recommended way to pop the keyboard from JS.            */
+  /* ---------------------------------------------------------------------- */
 
-  iconBtn?.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation();
+  const handleClearActivation = (event) => {
+    if (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      if (event.stopPropagation) event.stopPropagation();
+    }
+    input.value = "";
+    if (clearBtn) clearBtn.hidden = true;
+    closeCitySearchResults();
     focusInput();
-    // Tapping the magnifying glass should also trigger a search when there
-    // is already a query — previously it only opened the suggestion drawer
-    // for empty inputs, so users couldn't "search from the icon".
+    setTimeout(() => {
+      if (document.activeElement === input && input.value.trim().length < 2) {
+        showCitySearchHint();
+      }
+    }, 80);
+  };
+
+  const handleIconActivation = (event) => {
+    if (event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      if (event.stopPropagation) event.stopPropagation();
+    }
+    focusInput();
     const trimmed = input.value.trim();
     if (trimmed.length >= 2) {
       scheduleCitySearch(input.value);
@@ -2886,99 +2901,62 @@ function setupCitySearch() {
     } else {
       showCitySearchHint();
     }
-  });
-
-  // On phones the entire top HUD shelf doubles as a tap-to-focus target
-  // for the search input. The shelf is mostly empty space around the
-  // centered pill, so giving it click-to-focus behavior makes the search
-  // feel like a single big button. Interactive children (the ✕, the
-  // dropdown options, any future actions) are excluded so they keep their
-  // own click handlers.
-  const mapHud = document.querySelector(".map-hud");
-  const isPhoneViewport = () =>
-    typeof window.matchMedia === "function" &&
-    window.matchMedia("(max-width: 640px)").matches;
-  mapHud?.addEventListener("click", (event) => {
-    if (!isPhoneViewport()) return;
-    const target = event.target;
-    if (!target) return;
-    // Skip when the click already landed on any search control or any
-    // other interactive descendant — those handle their own events.
-    if (
-      target.closest?.(
-        "[data-search-control], button, a, input, select, textarea, [role='button'], .city-search__results, .city-search__option"
-      )
-    ) {
-      return;
-    }
-    event.preventDefault();
-    focusInput();
-  });
-
-  // Robustly handle the ✕ clear button. The previous "tap ✕ → journey
-  // panel pops up" bug was caused by the click bubbling to the ancestor
-  // .hud-brand handler that auto-expands the bottom sheet. Even with
-  // `stopPropagation`, iOS Safari occasionally dispatches a delayed
-  // synthetic click on an underlying element after the ✕ vanishes. The
-  // approach below kills both vectors:
-  //
-  //   1. `touchstart.preventDefault()` suppresses the trailing synthetic
-  //      mouse/click sequence entirely on touch devices. Keyboard users
-  //      still get a real `click` from Enter/Space.
-  //   2. `pointerdown` does an additional preventDefault for browsers
-  //      that no longer fire touch events.
-  //   3. The clear is run from `touchend` (touch path) and `click`
-  //      (keyboard / non-touch fallback). Both call the same idempotent
-  //      action and stopImmediatePropagation so no ancestor handler ever
-  //      sees the event.
-  let clearLastTouchTs = 0;
-  const clearAction = (event) => {
-    event?.preventDefault?.();
-    event?.stopImmediatePropagation?.();
-    input.value = "";
-    if (clearBtn) clearBtn.hidden = true;
-    closeCitySearchResults();
-    focusInput();
-    // Defer the hint render long enough to outlast iOS Safari's synthetic
-    // click delay (≈ 300 ms historically, ≤ 50 ms on modern iOS) so a
-    // delayed click cannot accidentally land on a freshly rendered chip.
-    setTimeout(() => {
-      if (document.activeElement === input && input.value.trim().length < 2) {
-        showCitySearchHint();
-      }
-    }, 80);
   };
-  clearBtn?.addEventListener(
-    "touchstart",
-    (event) => {
-      event.preventDefault();
-      event.stopImmediatePropagation();
-    },
-    { passive: false }
-  );
-  clearBtn?.addEventListener("pointerdown", (event) => {
-    event.preventDefault();
-    event.stopImmediatePropagation();
-  });
-  clearBtn?.addEventListener("touchend", (event) => {
-    clearLastTouchTs = Date.now();
-    clearAction(event);
-  });
-  clearBtn?.addEventListener("mousedown", (event) => {
-    event.preventDefault();
-  });
-  clearBtn?.addEventListener("click", (event) => {
-    // touchend already ran clearAction on touch devices; if we just
-    // handled a touch within the last 500 ms swallow this synthetic click
-    // outright so it cannot bubble. For non-touch (keyboard / mouse) this
-    // is the primary activation path.
-    if (Date.now() - clearLastTouchTs < 500) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
+
+  // Capture-phase document listeners. These run BEFORE any bubble-phase
+  // handlers anywhere on the page, so even if some unrelated ancestor were
+  // to react to the click and open the journey-builder modal, we'd already
+  // have stopped propagation.
+  const captureClick = (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (target.closest("#citySearchClear")) {
+      handleClearActivation(event);
       return;
     }
-    clearAction(event);
-  });
+    if (target.closest("#citySearchIconButton")) {
+      handleIconActivation(event);
+      return;
+    }
+  };
+  document.addEventListener("click", captureClick, { capture: true });
+
+  // Some iOS-Safari quirks can fire a "ghost click" on the wrong element
+  // after a pointerdown if the original target hides itself. Catching the
+  // pointer events in capture mode too gives us a second chance.
+  const capturePointerDown = (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    if (target.closest("#citySearchClear")) {
+      // Don't run the action yet — wait for the matching click — but make
+      // sure no other handler reacts to this pointerdown.
+      event.stopPropagation();
+      // Don't preventDefault here: we still want the synthesized click
+      // event to fire so the capture-phase click handler above runs.
+    }
+  };
+  document.addEventListener("pointerdown", capturePointerDown, { capture: true });
+
+  // Synchronously focus the input on the earliest touch/pointer event.
+  // iOS Safari is strictest about keyboard activation: it tends to only
+  // pop the keyboard when `.focus()` is called from an event handler that
+  // is itself the very first user gesture on the input. `pointerdown`
+  // fires before `click`, so this maximises the chance of the keyboard
+  // appearing reliably.
+  const fieldPointerDownFocus = (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    // Don't steal focus from the X or icon — those have their own actions.
+    if (target.closest("#citySearchClear")) return;
+    if (target.closest("#citySearchIconButton")) return;
+    if (document.activeElement !== input) {
+      // Synchronous focus call inside the user-gesture handler.
+      try { input.focus({ preventScroll: false }); } catch (_) { input.focus(); }
+    }
+  };
+  field?.addEventListener("pointerdown", fieldPointerDownFocus);
+  // Also wire the wrapper so taps on padding outside the field still focus.
+  root?.addEventListener("pointerdown", fieldPointerDownFocus);
 
   list.addEventListener("click", (event) => {
     const suggestion = event.target.closest("[data-suggestion]");
