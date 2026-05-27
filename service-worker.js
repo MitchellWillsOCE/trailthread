@@ -5,7 +5,11 @@
  *  - cache-first with size cap for remote photo CDNs (Wikimedia / Wikipedia)
  *  - network-only for journey-code mutations
  */
-const SW_VERSION = "tt-v1";
+// Bump the version whenever shipping a fix that changes app shell or JS
+// behaviour so old SW caches (which serve stale assets via
+// stale-while-revalidate) are dropped on next visit. The build pipeline
+// hashes asset paths but the previous SW could still hand back old HTML.
+const SW_VERSION = "tt-v3-search";
 const SHELL_CACHE = `${SW_VERSION}-shell`;
 const RUNTIME_CACHE = `${SW_VERSION}-runtime`;
 const PHOTOS_CACHE = `${SW_VERSION}-photos`;

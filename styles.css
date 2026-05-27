@@ -8279,30 +8279,27 @@ body.welcome-open .journey-panel {
     -webkit-backdrop-filter: none;
   }
 
-  /* The icon is now a real <button> that focuses the input AND triggers
-   * a search when there is a query — make sure it sits above the input
-   * so taps actually land on it. The input gets a left padding to keep
-   * the typed text from running underneath. */
+  /* The icon button is decorative on phones — it sits visually inside the
+   * pill but `pointer-events: none` lets every tap on the icon area fall
+   * straight through to the <input> beneath it. This is the only reliable
+   * way to bring up the iOS Safari keyboard, since calling `.focus()`
+   * programmatically in response to a click on a *different* element does
+   * not always activate the on-screen keyboard. The desktop breakpoint
+   * keeps the icon clickable for the "search from the icon" affordance. */
   .map-hud .city-search__icon-button {
     position: absolute;
-    left: 4px;
+    left: 6px;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: auto;
-    z-index: 3;
+    pointer-events: none;
+    z-index: 1;
     background: transparent;
     color: #0f766e;
-    cursor: pointer;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: rgba(15, 118, 110, 0.12);
-  }
-  .map-hud .city-search__icon-button:active {
-    background: rgba(15, 118, 110, 0.12);
   }
 
   /* The input is absolutely positioned to fill the ENTIRE field box (border
