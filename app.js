@@ -45,7 +45,15 @@ import {
 } from "./hikes.js";
 import { loadParkRegion, fetchParkFeatures, fetchParkById, searchParks } from "./parks.js";
 import { fetchCountryDossier } from "./country-dossier.js";
-import { createSharedJourney, fetchSharedJourney, isJourneyCode } from "./journey-codes.js";
+import {
+  createSharedJourney,
+  fetchSharedJourney,
+  isJourneyCode,
+  encodeJourneyToToken,
+  decodeJourneyToken,
+  buildJourneyGeojson,
+  approximateJourneyDistanceKm,
+} from "./journey-codes.js";
 import {
   addMintedJourney,
   clearJourneyDraft,
@@ -1991,14 +1999,18 @@ function syncMapPopupStacking() {
 }
 
 // Touch devices need bigger tap targets, but bumping marker radius too much
-// makes neighbouring cities/parks/POIs merge visually in dense regions. A small
-// +2 / +3px bump on coarse pointers strikes a balance: still respects neighbours
-// because the relative spacing pattern is preserved, but each dot is much
-// easier to land a fingertip on.
+// makes neighbouring cities/parks/POIs merge visually in dense regions. We
+// differentiate between phones (≤ 640px — small viewports where the +3px
+// bump made dots feel oversized and crowded) and larger touch devices like
+// tablets (where the bump remains a UX win). Issue: "the location markers
+// (the dots) on the map need to be smaller on mobile".
 const TOUCH_HIT_BUMP = (() => {
   if (typeof window === "undefined" || typeof window.matchMedia !== "function") return 0;
   try {
-    return window.matchMedia("(pointer: coarse)").matches ? 3 : 0;
+    if (window.matchMedia("(max-width: 640px)").matches) {
+      return -1;
+    }
+    return window.matchMedia("(pointer: coarse)").matches ? 2 : 0;
   } catch {
     return 0;
   }
@@ -2795,6 +2807,7 @@ function setupCitySearch() {
   const list = document.getElementById("citySearchResults");
   const clearBtn = document.getElementById("citySearchClear");
   const iconBtn = document.getElementById("citySearchIconButton");
+  const fieldLabel = document.getElementById("citySearchFieldLabel");
   const root = document.getElementById("citySearch");
 
   if (!input || !list) {
@@ -2814,12 +2827,38 @@ function setupCitySearch() {
     }
   });
 
-  // The entire pill is now a <label for="citySearchInput">, so the browser
-  // natively focuses the input when any part of the pill (icon, padding
-  // gaps, etc.) is tapped — that is the reliable cross-iOS-version path to
-  // a tap-to-focus search bar. The icon click handler below stays as a
-  // pure augmentation: surface the hint drawer when the field is empty.
+  // The pill is wrapped in a <label for="citySearchInput">, but on iOS
+  // Safari the native label→input focus delegation drops taps intermittently
+  // when the <input> is `position: absolute; inset: 0` (the layout we use on
+  // phones to make the whole pill a single hit target). Bind explicit
+  // click + pointer handlers on the label so a tap on any pixel of the
+  // pill focuses the input every time. Issue: search bar not selectable on
+  // mobile / "tapping does nothing most of the time".
+  const focusInputFromField = (event) => {
+    if (!event?.target) return;
+    if (event.target.closest(".city-search__clear")) return;
+    if (event.target.closest("button:not([aria-hidden='true'])")) return;
+    if (document.activeElement === input) return;
+    if (typeof event.preventDefault === "function") {
+      event.preventDefault();
+    }
+    try {
+      input.focus({ preventScroll: false });
+    } catch (_) {
+      input.focus();
+    }
+  };
+  fieldLabel?.addEventListener("click", focusInputFromField);
+  fieldLabel?.addEventListener("pointerup", focusInputFromField);
+
   iconBtn?.addEventListener("click", () => {
+    if (document.activeElement !== input) {
+      try {
+        input.focus({ preventScroll: false });
+      } catch (_) {
+        input.focus();
+      }
+    }
     if (input.value.trim().length < 2) {
       showCitySearchHint();
     }
@@ -5678,9 +5717,15 @@ function renderInlineItinerary(trip) {
   const highlights = (trip.highlights || [])
     .map((line) => `<li>${escapeHtml(line)}</li>`)
     .join("");
-  const shareLine = trip.sharedCode
+  // Hide synthetic "inline-..." codes — they're internal trip keys for
+  // self-contained share links, not user-facing share codes.
+  const showSharedCode =
+    trip.sharedCode && !/^inline-/i.test(trip.sharedCode);
+  const shareLine = showSharedCode
     ? `<p class="itinerary-share">Shared journey code: <strong>${escapeHtml(trip.sharedCode)}</strong>${trip.author ? ` · by ${escapeHtml(trip.author)}` : ""}</p>`
-    : "";
+    : trip.author
+      ? `<p class="itinerary-share">Shared journey${trip.author ? ` by ${escapeHtml(trip.author)}` : ""}</p>`
+      : "";
   content.innerHTML = `
     ${shareLine}
     <p>${escapeHtml(trip.description || "")}</p>
@@ -6720,13 +6765,31 @@ function registerServiceWorker() {
 async function maybeOpenSharedJourneyFromUrl() {
   const params = new URLSearchParams(window.location.search);
   const code = params.get("journey");
-  if (!code) {
-    return;
+  const inlineToken = params.get("j");
+  // Self-contained share links (`?j=...`) work without server storage so
+  // they always succeed across clients. The short-code form (`?journey=...`)
+  // requires the server to find the record, so we try it first if present
+  // but fall back to the inline payload when both are present.
+  if (code) {
+    try {
+      await openSharedJourney(code);
+      return;
+    } catch (err) {
+      console.warn("[shared journey] code lookup failed, falling back to inline payload", err);
+      if (!inlineToken) return;
+    }
   }
-  try {
-    await openSharedJourney(code);
-  } catch (err) {
-    console.warn("[shared journey]", err);
+  if (inlineToken) {
+    const journey = decodeJourneyToken(inlineToken);
+    if (!journey) {
+      console.warn("[shared journey] inline token could not be decoded");
+      return;
+    }
+    try {
+      await openInlineSharedJourney(journey, { source: "url" });
+    } catch (err) {
+      console.warn("[shared journey] inline open failed", err);
+    }
   }
 }
 
@@ -6762,6 +6825,55 @@ async function openSharedJourney(code) {
     setActiveView("map");
   } catch (err) {
     console.error("[shared journey] load failed", err);
+    throw err;
+  }
+}
+
+/**
+ * Open a journey directly from a decoded inline payload (no server fetch).
+ * The geojson is synthesized client-side and pre-cached so loadTrip never
+ * tries to hit the API.
+ */
+async function openInlineSharedJourney(journey, { source = "inline" } = {}) {
+  if (!journey || !Array.isArray(journey.stops) || journey.stops.length < 2) {
+    throw new Error("Inline journey is missing stops");
+  }
+  const sharedCode = journey.code || `inline-${Date.now().toString(36)}`;
+  const tripKey = `shared-${sharedCode}`;
+  const inlineGeojson = buildJourneyGeojson(journey);
+  tripGeojsonCache.set(tripKey, inlineGeojson);
+  const distance =
+    journey.distanceKm || approximateJourneyDistanceKm(journey.stops);
+  const tripEntry = {
+    key: tripKey,
+    emoji: journey.emoji || "🧭",
+    continent: journey.continent || "europe",
+    title: journey.title || "Shared journey",
+    description: journey.description || "",
+    geojson: `inline:${tripKey}`,
+    days: journey.days || journey.stops.length,
+    distanceKm: distance,
+    region: journey.region || "",
+    highlights: Array.isArray(journey.highlights) ? journey.highlights : [],
+    cover: journey.cover || journey.stops[0]?.photo || "",
+    sharedCode,
+    author: journey.author || "",
+    inlineSource: source,
+  };
+  const existing = state.trips.findIndex((trip) => trip.key === tripKey);
+  if (existing >= 0) {
+    state.trips[existing] = tripEntry;
+  } else {
+    state.trips = [tripEntry, ...state.trips];
+  }
+  closeTripOverlay();
+  dismissWelcomeOverlay();
+  try {
+    await loadTrip(tripKey, true);
+    setActiveView("map");
+  } catch (err) {
+    tripGeojsonCache.delete(tripKey);
+    console.error("[shared journey] inline load failed", err);
     throw err;
   }
 }
@@ -7613,10 +7725,26 @@ function setupJourneyBuilder() {
   });
 
   document.getElementById("builderResultOpen")?.addEventListener("click", () => {
-    const code = document.getElementById("builderResultCode")?.textContent?.trim();
-    if (!code) return;
+    const resultEl = document.getElementById("builderResult");
+    const serverCode = resultEl?.getAttribute("data-server-code") || "";
+    const inlineToken = resultEl?.getAttribute("data-inline-token") || "";
     closeJourneyBuilder();
-    void openSharedJourney(code);
+    if (serverCode) {
+      void openSharedJourney(serverCode).catch((err) => {
+        console.warn("[builder open] server fetch failed, trying inline", err);
+        const journey = inlineToken ? decodeJourneyToken(inlineToken) : null;
+        if (journey) {
+          void openInlineSharedJourney(journey, { source: "fallback" });
+        }
+      });
+      return;
+    }
+    if (inlineToken) {
+      const journey = decodeJourneyToken(inlineToken);
+      if (journey) {
+        void openInlineSharedJourney(journey, { source: "builder" });
+      }
+    }
   });
 }
 
@@ -8243,31 +8371,84 @@ async function mintBuilderJourney() {
       [stop.name, stop.country].filter(Boolean).join(", ")
     ),
   };
+
   const mintBtn = document.getElementById("builderMint");
   if (mintBtn) mintBtn.disabled = true;
+
+  // Always build a self-contained share URL — this works cross-client even
+  // when the API is unreachable or the deployment has no shared-journey
+  // storage configured. The short server code is a best-effort upgrade for
+  // a prettier, shorter URL. Issue: "sharing a journey code does not work.
+  // Users cannot go on another client and use the generated code to view a
+  // journey."
+  let inlineToken = "";
+  try {
+    inlineToken = encodeJourneyToToken(payload);
+  } catch (err) {
+    console.warn("[mint] inline encode failed", err);
+  }
+  const inlineUrl = inlineToken
+    ? `${window.location.origin}/?j=${inlineToken}`
+    : "";
+
+  let serverCode = "";
+  let serverError = null;
   try {
     const result = await createSharedJourney(payload);
-    const code = result.code;
-    const resultEl = document.getElementById("builderResult");
-    const codeEl = document.getElementById("builderResultCode");
-    const linkEl = document.getElementById("builderResultLink");
-    if (codeEl) codeEl.textContent = code;
-    const absUrl = `${window.location.origin}/?journey=${code}`;
-    if (linkEl) linkEl.value = absUrl;
-    if (resultEl) resultEl.hidden = false;
+    serverCode = result.code;
+  } catch (err) {
+    serverError = err;
+    console.warn("[mint] server-side mint unavailable, share via inline URL only", err);
+  }
+
+  const resultEl = document.getElementById("builderResult");
+  const codeEl = document.getElementById("builderResultCode");
+  const linkEl = document.getElementById("builderResultLink");
+  const hintEl = resultEl?.querySelector(".journey-builder__result-hint");
+
+  // Prefer the short code when we have it; fall back to a recognisable label
+  // for inline-only journeys so the popup never reads as "broken".
+  if (codeEl) {
+    codeEl.textContent = serverCode || (inlineToken ? "INLINE LINK" : "—");
+  }
+  const shareUrl = serverCode
+    ? `${window.location.origin}/?journey=${encodeURIComponent(serverCode)}${inlineToken ? `&j=${inlineToken}` : ""}`
+    : inlineUrl;
+  if (linkEl) linkEl.value = shareUrl;
+  if (hintEl) {
+    if (serverCode) {
+      hintEl.textContent =
+        "Share this code or the full link — anyone who enters the code or opens the link can view your journey.";
+    } else if (inlineToken) {
+      hintEl.textContent =
+        "Share this link — it includes your journey, so anyone who opens it can view it.";
+    } else {
+      hintEl.textContent =
+        "We could not mint a share code. Please add at least 2 stops with valid coordinates.";
+    }
+  }
+  if (resultEl) resultEl.hidden = false;
+
+  // Stash whichever identifier we have so the "Open" button can re-open the
+  // journey reliably without another network round-trip.
+  resultEl?.setAttribute("data-server-code", serverCode || "");
+  resultEl?.setAttribute("data-inline-token", inlineToken || "");
+
+  if (serverCode) {
     addMintedJourney({
-      code,
+      code: serverCode,
       title: payload.title,
       region: payload.region,
       emoji: payload.emoji,
       stops: payload.stops.length,
+      inlineToken: inlineToken || undefined,
     });
     renderMintedJourneys();
-  } catch (err) {
-    alert(err.message || "Could not mint share code");
-  } finally {
-    if (mintBtn) mintBtn.disabled = false;
+  } else if (serverError && !inlineToken) {
+    alert(serverError.message || "Could not mint share code");
   }
+
+  if (mintBtn) mintBtn.disabled = false;
 }
 
 let builderDraftSaveTimer = null;
@@ -8346,8 +8527,9 @@ function renderMintedJourneys() {
       const emoji = entry.emoji || "🧭";
       const region = entry.region ? ` · ${escapeHtml(entry.region)}` : "";
       const dateStr = formatMintedDate(entry.createdAt);
+      const inlineToken = entry.inlineToken ? escapeAttr(entry.inlineToken) : "";
       return `
-        <article class="minted-journey" data-minted-code="${escapeAttr(entry.code)}">
+        <article class="minted-journey" data-minted-code="${escapeAttr(entry.code)}" data-inline-token="${inlineToken}">
           <button type="button" class="minted-journey__open" data-minted-open>
             <span class="minted-journey__emoji" aria-hidden="true">${emoji}</span>
             <span class="minted-journey__text">
@@ -8377,13 +8559,20 @@ function setupMintedJourneysList() {
     if (!card) return;
     const code = card.dataset.mintedCode;
     if (!code) return;
+    const inlineToken = card.dataset.inlineToken || "";
     if (event.target.closest("[data-minted-remove]")) {
       removeMintedJourney(code);
       renderMintedJourneys();
       return;
     }
     if (event.target.closest("[data-minted-copy]")) {
-      const link = `${window.location.origin}/?journey=${encodeURIComponent(code)}`;
+      // Self-contained URLs work even when the API is unreachable, so
+      // append the inline token if we have it. Plain `?journey=CODE` links
+      // depend on server-side storage and silently fail across clients
+      // when KV / Redis isn't configured.
+      const link = inlineToken
+        ? `${window.location.origin}/?journey=${encodeURIComponent(code)}&j=${inlineToken}`
+        : `${window.location.origin}/?journey=${encodeURIComponent(code)}`;
       try {
         navigator.clipboard.writeText(link);
       } catch {
@@ -8403,7 +8592,14 @@ function setupMintedJourneysList() {
     }
     if (event.target.closest("[data-minted-open]")) {
       closeTripOverlay();
-      void openSharedJourney(code);
+      void openSharedJourney(code).catch((err) => {
+        console.warn("[minted open] server fetch failed, trying inline", err);
+        if (!inlineToken) return;
+        const journey = decodeJourneyToken(inlineToken);
+        if (journey) {
+          void openInlineSharedJourney(journey, { source: "minted" });
+        }
+      });
     }
   });
 }

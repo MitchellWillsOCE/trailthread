@@ -5396,19 +5396,69 @@ body.media-lightbox-open {
 
 .journey-builder__result-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 10px;
+  align-items: stretch;
 }
 
 .journey-builder__result-row input {
-  flex: 1;
+  flex: 1 1 200px;
+  min-width: 0;
   border-radius: 10px;
   border: 0;
-  padding: 8px 10px;
+  padding: 10px 12px;
   background: rgba(255, 255, 255, 0.16);
   color: #f8fafc;
   font-family: inherit;
   font-size: 0.86rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.journey-builder__result-row input:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 1px;
+  background: rgba(255, 255, 255, 0.24);
+}
+
+.journey-builder__result-row .welcome-btn,
+.journey-builder__result-row button {
+  flex: 0 0 auto;
+  min-height: 40px;
+  padding: 10px 14px;
+  white-space: nowrap;
+}
+
+/* On phones the popup needs to remain comfortably readable: keep the input
+ * full-width above the Copy button so the URL is never squashed, and bump
+ * the touch targets. The popup otherwise uses identical styling to desktop
+ * to satisfy: "the little menu popup for when a journey is created needs
+ * to be the same on mobile as it is on desktop". */
+@media (max-width: 640px) {
+  .journey-builder__result {
+    padding: 16px;
+    margin-top: 16px;
+  }
+  .journey-builder__result-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .journey-builder__result-row input {
+    width: 100%;
+    flex-basis: auto;
+  }
+  .journey-builder__result-row .welcome-btn,
+  .journey-builder__result-row button {
+    width: 100%;
+    min-height: 44px;
+  }
+  .journey-builder__code {
+    font-size: 1.4rem;
+    word-break: break-all;
+  }
 }
 
 .journey-code-error {
@@ -6995,6 +7045,21 @@ path.leaflet-interactive:hover {
   z-index: 1500;
 }
 
+/* While the search dropdown is open, fade the action buttons below the
+ * search pill (Explore / Journeys / Favorites) so the floating results
+ * panel reads as the only thing on the column instead of bleeding over the
+ * buttons. The buttons return on close. Issue: "Search bar results overlap
+ * the explore, journey and favourite buttons on desktop". */
+.map-hud-left .hud-actions {
+  transition: opacity var(--dur-fast) ease, visibility 0s linear var(--dur-fast);
+}
+.map-hud-left:has(.city-search__results:not([hidden])) .hud-actions {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--dur-fast) ease, visibility 0s linear 0s;
+}
+
 @keyframes city-search-results-in {
   from { opacity: 0; transform: translateY(-4px) scale(0.99); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
@@ -8197,6 +8262,9 @@ body.welcome-open .journey-panel {
     min-height: 46px;
     z-index: 1;
     cursor: text;
+    pointer-events: auto;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     /* Defensive: kill any inherited backdrop-filter from the desktop
      * .hud-brand styling on this branch — backdrop-filter on input
      * ancestors has been linked to dropped taps on iOS Safari. */

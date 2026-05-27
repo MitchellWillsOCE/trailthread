@@ -140,11 +140,71 @@ export function clearJourneyDraft() {
 
 /* ---------------- Minted codes history ---------------- */
 
+const TOKENS_STORAGE_KEY = "tt-journey-tokens";
+const MAX_TOKENS = 50;
+
+function readInlineTokenMap() {
+  if (!isBrowser() || typeof localStorage === "undefined") return {};
+  try {
+    const raw = localStorage.getItem(TOKENS_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    return parsed && typeof parsed === "object" ? parsed : {};
+  } catch {
+    return {};
+  }
+}
+
+function writeInlineTokenMap(map) {
+  if (!isBrowser() || typeof localStorage === "undefined") return;
+  try {
+    const entries = Object.entries(map || {}).slice(0, MAX_TOKENS);
+    if (!entries.length) {
+      localStorage.removeItem(TOKENS_STORAGE_KEY);
+      return;
+    }
+    const next = Object.fromEntries(entries);
+    localStorage.setItem(TOKENS_STORAGE_KEY, JSON.stringify(next));
+  } catch {
+    /* quota exceeded — silently drop the tokens, the URL on the
+     * builder result still has the inline payload. */
+  }
+}
+
+export function getInlineTokenForCode(code) {
+  const target = String(code || "").toUpperCase();
+  if (!target) return "";
+  const map = readInlineTokenMap();
+  return map[target] || "";
+}
+
+export function setInlineTokenForCode(code, token) {
+  const target = String(code || "").toUpperCase();
+  if (!target) return;
+  const map = readInlineTokenMap();
+  if (token) {
+    map[target] = String(token);
+  } else {
+    delete map[target];
+  }
+  writeInlineTokenMap(map);
+}
+
+function clearInlineTokenForCode(code) {
+  setInlineTokenForCode(code, "");
+}
+
 export function readMintedJourneys() {
   const raw = getCookie(MINTS_COOKIE);
   const data = safeParse(raw, []);
   if (!Array.isArray(data)) return [];
-  return data.filter((entry) => entry && entry.code);
+  const tokens = readInlineTokenMap();
+  return data
+    .filter((entry) => entry && entry.code)
+    .map((entry) => ({
+      ...entry,
+      inlineToken: tokens[String(entry.code).toUpperCase()] || "",
+    }));
 }
 
 function writeMintedJourneys(list) {
@@ -173,20 +233,41 @@ function writeMintedJourneys(list) {
 export function addMintedJourney(entry) {
   if (!entry?.code) return readMintedJourneys();
   const code = String(entry.code).toUpperCase();
+  // Inline tokens are kept in localStorage rather than the cookie because
+  // they can be ~1–4KB each — too big to coexist with up to 50 mint
+  // entries inside the 4KB cookie budget.
+  if (entry.inlineToken) {
+    setInlineTokenForCode(code, entry.inlineToken);
+  }
   const existing = readMintedJourneys().filter((m) => m.code !== code);
   const next = [
-    { ...entry, code, createdAt: entry.createdAt || Date.now() },
+    {
+      ...entry,
+      code,
+      inlineToken: undefined,
+      createdAt: entry.createdAt || Date.now(),
+    },
     ...existing,
   ];
-  return writeMintedJourneys(next);
+  writeMintedJourneys(next);
+  return readMintedJourneys();
 }
 
 export function removeMintedJourney(code) {
   const target = String(code || "").toUpperCase();
+  clearInlineTokenForCode(target);
   const next = readMintedJourneys().filter((m) => m.code !== target);
-  return writeMintedJourneys(next);
+  writeMintedJourneys(next);
+  return readMintedJourneys();
 }
 
 export function clearMintedJourneys() {
   clearCookie(MINTS_COOKIE);
+  if (isBrowser() && typeof localStorage !== "undefined") {
+    try {
+      localStorage.removeItem(TOKENS_STORAGE_KEY);
+    } catch {
+      /* ignore */
+    }
+  }
 }
