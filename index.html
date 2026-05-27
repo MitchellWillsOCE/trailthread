@@ -246,18 +246,34 @@
                 <button id="closeTripMenuButton" class="trip-overlay-close" type="button" aria-label="Close journey picker">✕</button>
               </div>
             </div>
-            <p class="trip-overlay-note">Sample multi-day routes with mapped paths, stops, and day-by-day stories. Routes align to OpenStreetMap where possible.</p>
+            <p class="trip-overlay-note">Pick a curated sample route, reopen something you've built or opened, or enter a share code above.</p>
             <p id="journeyCodeError" class="journey-code-error" hidden></p>
-            <section id="mintedJourneysSection" class="minted-journeys" aria-label="Your journey codes" hidden>
-              <header class="minted-journeys__header">
-                <p class="hud-kicker">Your codes</p>
-                <h3>Journeys you've minted</h3>
-                <p class="minted-journeys__hint">Saved on this device. Re-open any code below or copy its share link.</p>
+            <section id="mintedJourneysSection" class="trip-library-section minted-journeys" aria-label="Journeys you created" hidden>
+              <header class="trip-library-section__header minted-journeys__header">
+                <p class="hud-kicker">Created by you</p>
+                <h3>Journeys you've built</h3>
+                <p class="trip-library-section__hint minted-journeys__hint">Made in the journey builder and saved on this device. Copy a share link or reopen anytime.</p>
               </header>
               <div id="mintedJourneysList" class="minted-journeys__list"></div>
             </section>
+            <section id="importedJourneysSection" class="trip-library-section trip-library-section--imported" aria-label="Downloaded journeys" hidden>
+              <header class="trip-library-section__header">
+                <p class="hud-kicker">Opened &amp; saved</p>
+                <h3>Downloaded journeys</h3>
+                <p class="trip-library-section__hint">Routes you opened from a share link or journey code. Stored on this device for quick access.</p>
+              </header>
+              <div id="importedTripsGrid" class="trip-grid"></div>
+            </section>
             <div class="continent-filters" id="continentFilters" role="group" aria-label="Filter by continent"></div>
-            <div id="tripMenuGrid" class="trip-grid"></div>
+            <section id="sampleJourneysSection" class="trip-library-section trip-library-section--sample" aria-label="Sample journeys">
+              <header class="trip-library-section__header">
+                <p class="hud-kicker">Sample routes</p>
+                <h3>Curated multi-day trips</h3>
+                <p class="trip-library-section__hint">Ready-made routes with mapped paths, stops, and day-by-day stories. Routes align to OpenStreetMap where possible.</p>
+              </header>
+              <div id="tripMenuGrid" class="trip-grid"></div>
+              <p id="sampleJourneysEmpty" class="trip-library-section__empty" hidden>No sample routes match this filter.</p>
+            </section>
           </section>
         </div>
 

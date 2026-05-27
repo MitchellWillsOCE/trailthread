@@ -2476,44 +2476,80 @@ body.hike-story-open .map-controls .route-legend {
 }
 
 .trip-overlay-note {
-  margin: 0 0 24px;
+  margin: 0 0 20px;
   color: #475569;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   line-height: 1.5;
 }
 
-.minted-journeys {
-  margin: 0 0 24px;
+/* Journey library sections — created / downloaded / sample */
+.trip-library-section {
+  margin: 0 0 22px;
   padding: 18px 18px 14px;
   border-radius: 18px;
-  background: linear-gradient(135deg, rgba(254, 243, 199, 0.55), rgba(255, 255, 255, 0.95));
-  border: 1px solid rgba(202, 138, 4, 0.18);
-  box-shadow: 0 6px 18px rgba(202, 138, 4, 0.08);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.72);
 }
 
-.minted-journeys__header {
+.trip-library-section__header {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
-.minted-journeys__header .hud-kicker {
-  color: #b45309;
-  margin: 0;
-}
-
-.minted-journeys__header h3 {
+.trip-library-section__header h3 {
   margin: 0;
   font-size: 1.05rem;
   color: #0f172a;
   letter-spacing: -0.01em;
 }
 
-.minted-journeys__hint {
+.trip-library-section__hint {
   margin: 0;
   color: #64748b;
   font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.trip-library-section__empty {
+  margin: 4px 0 0;
+  padding: 16px 12px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #64748b;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.04);
+}
+
+.trip-library-section--sample {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+.trip-library-section--sample .trip-library-section__header .hud-kicker {
+  color: #475569;
+}
+
+.trip-library-section--imported {
+  background: linear-gradient(135deg, rgba(204, 251, 241, 0.45), rgba(255, 255, 255, 0.96));
+  border-color: rgba(15, 118, 110, 0.22);
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.06);
+}
+
+.trip-library-section--imported .trip-library-section__header .hud-kicker {
+  color: #0f766e;
+}
+
+.minted-journeys {
+  background: linear-gradient(135deg, rgba(254, 243, 199, 0.55), rgba(255, 255, 255, 0.95));
+  border-color: rgba(202, 138, 4, 0.18);
+  box-shadow: 0 6px 18px rgba(202, 138, 4, 0.08);
+}
+
+.minted-journeys__header .hud-kicker {
+  color: #b45309;
+  margin: 0;
 }
 
 .minted-journeys__list {
@@ -2566,6 +2602,13 @@ body.hike-story-open .map-controls .route-legend {
   min-width: 0;
 }
 
+.minted-journey__title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
 .minted-journey__title {
   font-weight: 600;
   font-size: 0.95rem;
@@ -2573,6 +2616,20 @@ body.hike-story-open .map-controls .route-legend {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
+  flex: 1;
+}
+
+.minted-journey__badge {
+  flex-shrink: 0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(202, 138, 4, 0.14);
+  color: #b45309;
 }
 
 .minted-journey__meta {
@@ -3139,6 +3196,45 @@ body.hike-story-open .map-controls .route-legend {
   text-align: left;
   box-shadow: 0 4px 12px rgba(8, 19, 31, 0.06);
   transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease, background-color 140ms ease;
+}
+
+.trip-card--imported {
+  border-color: rgba(15, 118, 110, 0.22);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.trip-card--sample {
+  border-color: rgba(15, 23, 42, 0.1);
+}
+
+.trip-card-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(8, 19, 31, 0.18);
+}
+
+.trip-card-badge--sample {
+  background: rgba(255, 255, 255, 0.92);
+  color: #475569;
+}
+
+.trip-card-badge--imported {
+  background: rgba(15, 118, 110, 0.92);
+  color: #f0fdfa;
+}
+
+.trip-card-author {
+  display: inline-flex;
+  font-size: 0.78rem;
+  color: #64748b;
 }
 
 .trip-card-cover {

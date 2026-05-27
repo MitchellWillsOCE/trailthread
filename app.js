@@ -260,6 +260,30 @@ let tripEnrichGeneration = 0;
 const layoutRoot = document.getElementById("layoutRoot");
 const tripOverlay = document.getElementById("tripOverlay");
 const tripMenuGrid = document.getElementById("tripMenuGrid");
+const importedTripsGrid = document.getElementById("importedTripsGrid");
+
+const TRIP_CATALOG = {
+  SAMPLE: "sample",
+  IMPORTED: "imported",
+};
+
+function isImportedTrip(trip) {
+  return (
+    trip?.catalog === TRIP_CATALOG.IMPORTED ||
+    (typeof trip?.key === "string" && trip.key.startsWith("shared-"))
+  );
+}
+
+function isSampleTrip(trip) {
+  if (isImportedTrip(trip)) {
+    return false;
+  }
+  return trip?.catalog === TRIP_CATALOG.SAMPLE || !String(trip?.key || "").startsWith("shared-");
+}
+
+function tagSampleTrips(trips) {
+  return (trips || []).map((trip) => ({ ...trip, catalog: TRIP_CATALOG.SAMPLE }));
+}
 const openJourneysMenuButton = document.getElementById("openJourneysMenuButton");
 const closeTripMenuButton = document.getElementById("closeTripMenuButton");
 const hudNav = document.getElementById("hudNav");
@@ -6038,43 +6062,72 @@ async function loadTrip(tripKey, fit = true, { animate = true } = {}) {
   void enrichTripLinesInBackground(lineFeatures, enrichGeneration);
 }
 
+function renderTripCardHtml(trip) {
+  const active = trip.key === state.selectedTrip;
+  const imported = isImportedTrip(trip);
+  const badgeClass = imported ? "trip-card-badge--imported" : "trip-card-badge--sample";
+  const badgeLabel = imported ? "Downloaded" : "Sample";
+  const budget =
+    trip.budgetAudMin && trip.budgetAudMax
+      ? `<span class="trip-card-budget">${formatAud(trip.budgetAudMin)}–${formatAud(trip.budgetAudMax).replace(/^AUD /, "")}</span>`
+      : "";
+  const distance = trip.distanceKm ? `<span class="trip-card-distance">${trip.distanceKm} km</span>` : "";
+  const coverImg = trip.cover
+    ? `<img class="trip-card-cover-img" src="${escapeHtml(trip.cover)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentElement?.classList.add('is-loaded')" onerror="this.remove()" />`
+    : "";
+  const authorLine =
+    imported && trip.author
+      ? `<span class="trip-card-author">by ${escapeHtml(trip.author)}</span>`
+      : "";
+
+  return `
+    <button
+      class="trip-card trip-card--${imported ? "imported" : "sample"}"
+      type="button"
+      data-trip-key="${escapeAttr(trip.key)}"
+      data-trip-catalog="${imported ? TRIP_CATALOG.IMPORTED : TRIP_CATALOG.SAMPLE}"
+      data-active="${String(active)}"
+    >
+      <div class="trip-card-cover">
+        ${coverImg}
+        <span class="trip-card-cover-fallback" aria-hidden="true"></span>
+        <span class="trip-card-badge ${badgeClass}">${badgeLabel}</span>
+        <span class="trip-card-emoji">${trip.emoji || "🧭"}</span>
+        ${trip.region ? `<span class="trip-card-region">${escapeHtml(trip.region)}</span>` : ""}
+        <span class="trip-card-days">${trip.days} days</span>
+      </div>
+      <div class="trip-card-body">
+        <h3>${escapeHtml(trip.title)}</h3>
+        <p>${escapeHtml(trip.description)}</p>
+        <div class="trip-card-meta">${distance}${budget}${authorLine}</div>
+      </div>
+    </button>
+  `;
+}
+
 function renderTripMenu() {
-  if (!tripMenuGrid) {
-    return;
+  const trips = getFilteredTrips();
+  const imported = trips.filter(isImportedTrip);
+  const samples = trips.filter(isSampleTrip);
+
+  const importedSection = document.getElementById("importedJourneysSection");
+  if (importedTripsGrid && importedSection) {
+    if (!imported.length) {
+      importedSection.hidden = true;
+      importedTripsGrid.innerHTML = "";
+    } else {
+      importedSection.hidden = false;
+      importedTripsGrid.innerHTML = imported.map((trip) => renderTripCardHtml(trip)).join("");
+    }
   }
 
-  const trips = getFilteredTrips();
-
-  tripMenuGrid.innerHTML = trips
-    .map((trip) => {
-      const active = trip.key === state.selectedTrip;
-      const budget =
-        trip.budgetAudMin && trip.budgetAudMax
-          ? `<span class="trip-card-budget">${formatAud(trip.budgetAudMin)}–${formatAud(trip.budgetAudMax).replace(/^AUD /, "")}</span>`
-          : "";
-      const distance = trip.distanceKm ? `<span class="trip-card-distance">${trip.distanceKm} km</span>` : "";
-      const coverImg = trip.cover
-        ? `<img class="trip-card-cover-img" src="${escapeHtml(trip.cover)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentElement?.classList.add('is-loaded')" onerror="this.remove()" />`
-        : "";
-
-      return `
-        <button class="trip-card" type="button" data-trip-key="${trip.key}" data-active="${String(active)}">
-          <div class="trip-card-cover">
-            ${coverImg}
-            <span class="trip-card-cover-fallback" aria-hidden="true"></span>
-            <span class="trip-card-emoji">${trip.emoji || "🧭"}</span>
-            ${trip.region ? `<span class="trip-card-region">${escapeHtml(trip.region)}</span>` : ""}
-            <span class="trip-card-days">${trip.days} days</span>
-          </div>
-          <div class="trip-card-body">
-            <h3>${escapeHtml(trip.title)}</h3>
-            <p>${escapeHtml(trip.description)}</p>
-            <div class="trip-card-meta">${distance}${budget}</div>
-          </div>
-        </button>
-      `;
-    })
-    .join("");
+  const sampleEmpty = document.getElementById("sampleJourneysEmpty");
+  if (tripMenuGrid) {
+    tripMenuGrid.innerHTML = samples.map((trip) => renderTripCardHtml(trip)).join("");
+    if (sampleEmpty) {
+      sampleEmpty.hidden = samples.length > 0;
+    }
+  }
 }
 
 function isJourneysMenuOpen() {
@@ -6187,8 +6240,13 @@ function setupTripOverlay() {
     });
   }
 
-  if (tripMenuGrid) {
-    tripMenuGrid.addEventListener(
+  const wireTripCardGrid = (grid) => {
+    if (!grid || grid.dataset.wired === "true") {
+      return;
+    }
+    grid.dataset.wired = "true";
+
+    grid.addEventListener(
       "pointerenter",
       (event) => {
         const card = event.target.closest("button[data-trip-key]");
@@ -6199,14 +6257,14 @@ function setupTripOverlay() {
       true
     );
 
-    tripMenuGrid.addEventListener("focusin", (event) => {
+    grid.addEventListener("focusin", (event) => {
       const card = event.target.closest("button[data-trip-key]");
       if (card) {
         prefetchTrip(card.dataset.tripKey);
       }
     });
 
-    tripMenuGrid.addEventListener("click", async (event) => {
+    grid.addEventListener("click", async (event) => {
       const card = event.target.closest("button[data-trip-key]");
       if (!card) {
         return;
@@ -6214,11 +6272,6 @@ function setupTripOverlay() {
 
       const tripKey = card.dataset.tripKey;
 
-      // Close the library and pop the journey panel open immediately so the
-      // user gets instant feedback. Previously this only happened after
-      // loadTrip resolved, which on mobile left the library closed but the
-      // panel still in its collapsed (width 0) state if the geojson fetch
-      // was slow or failed — making it look like the click did nothing.
       closeTripOverlay();
       setPanelCollapsed(false);
       setActiveView("map");
@@ -6238,7 +6291,10 @@ function setupTripOverlay() {
         }
       }
     });
-  }
+  };
+
+  wireTripCardGrid(tripMenuGrid);
+  wireTripCardGrid(importedTripsGrid);
 }
 
 let panelCollapsed = false;
@@ -6681,7 +6737,7 @@ async function initializeTrips() {
   }
 
   const manifest = await response.json();
-  state.trips = manifest.trips || [];
+  state.trips = tagSampleTrips(manifest.trips || []);
   updateJourneysMenuHint();
 
   state.selectedTrip = null;
@@ -6842,7 +6898,8 @@ async function openSharedJourney(code) {
     highlights: journey.highlights || [],
     cover: journey.cover || journey.stops?.[0]?.photo || "",
     sharedCode: journey.code,
-    author: journey.author || ""
+    author: journey.author || "",
+    catalog: TRIP_CATALOG.IMPORTED,
   };
   const existing = state.trips.findIndex((trip) => trip.key === tripKey);
   if (existing >= 0) {
@@ -6850,6 +6907,7 @@ async function openSharedJourney(code) {
   } else {
     state.trips = [tripEntry, ...state.trips];
   }
+  renderTripMenu();
   closeTripOverlay();
   dismissWelcomeOverlay();
   try {
@@ -6891,6 +6949,7 @@ async function openInlineSharedJourney(journey, { source = "inline" } = {}) {
     sharedCode,
     author: journey.author || "",
     inlineSource: source,
+    catalog: TRIP_CATALOG.IMPORTED,
   };
   const existing = state.trips.findIndex((trip) => trip.key === tripKey);
   if (existing >= 0) {
@@ -6898,6 +6957,7 @@ async function openInlineSharedJourney(journey, { source = "inline" } = {}) {
   } else {
     state.trips = [tripEntry, ...state.trips];
   }
+  renderTripMenu();
   closeTripOverlay();
   dismissWelcomeOverlay();
   try {
@@ -8566,7 +8626,10 @@ function renderMintedJourneys() {
           <button type="button" class="minted-journey__open" data-minted-open>
             <span class="minted-journey__emoji" aria-hidden="true">${emoji}</span>
             <span class="minted-journey__text">
-              <span class="minted-journey__title">${escapeHtml(entry.title || "Untitled journey")}</span>
+              <span class="minted-journey__title-row">
+                <span class="minted-journey__title">${escapeHtml(entry.title || "Untitled journey")}</span>
+                <span class="minted-journey__badge">Created</span>
+              </span>
               <span class="minted-journey__meta">
                 <code>${escapeHtml(entry.code)}</code>
                 <span>${entry.stops || 0} stops${region}</span>
