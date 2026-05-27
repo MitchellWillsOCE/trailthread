@@ -10,7 +10,7 @@
     { "source": "/api/parks/:path*", "destination": "/api/parks" },
     { "source": "/api/poi/:path*", "destination": "/api/poi" },
     { "source": "/api/country/:path*", "destination": "/api/country" },
-    { "source": "/api/journeys/:path*", "destination": "/api/journeys" }
+    { "source": "/api/journeys/:path*", "destination": "/api/journeys?path=:path*" }
   ],
   "headers": [
     {

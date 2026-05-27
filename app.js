@@ -66,6 +66,7 @@ import {
   upsertImportedTrip,
   removeImportedTrip,
   writeJourneyDraft,
+  getInlineTokenForCode,
 } from "./journey-storage.js";
 import { loadSeasonHints, buildTimeOfYearHtml } from "./seasons.js";
 import {
@@ -5771,6 +5772,10 @@ async function fetchTripGeojson(tripKey, geojsonPath) {
     return tripGeojsonCache.get(tripKey);
   }
 
+  if (String(geojsonPath || "").startsWith("inline:")) {
+    throw new Error("Inline journey route is not cached");
+  }
+
   const fetchPath = normalizeTripAssetPath(geojsonPath);
   const response = await fetch(fetchPath);
   if (!response.ok) {
@@ -7417,35 +7422,61 @@ function parseJourneyShareInput(raw) {
   };
 }
 
-async function maybeOpenSharedJourneyFromUrl() {
-  const params = new URLSearchParams(window.location.search);
-  const code = params.get("journey");
-  const inlineToken = params.get("j");
-  // Self-contained share links (`?j=...`) work without server storage so
-  // they always succeed across clients. The short-code form (`?journey=...`)
-  // requires the server to find the record, so we try it first if present
-  // but fall back to the inline payload when both are present.
-  if (code) {
-    const source = isMintedJourneyCode(code) ? "minted" : "import";
+async function resolveAndOpenSharedJourney({
+  code = "",
+  inlineToken = "",
+  source = "import",
+} = {}) {
+  const normalized = String(code || "")
+    .trim()
+    .toUpperCase()
+    .replace(/[^A-Z2-9]/g, "");
+  const token =
+    String(inlineToken || "").trim() ||
+    (normalized ? getInlineTokenForCode(normalized) : "");
+
+  if (normalized) {
     try {
-      await openSharedJourney(code, { source, inlineToken });
+      await openSharedJourney(normalized, { source, inlineToken: token });
       return;
     } catch (err) {
-      console.warn("[shared journey] code lookup failed, falling back to inline payload", err);
-      if (!inlineToken) return;
+      if (!token) {
+        throw err;
+      }
+      console.warn("[shared journey] server lookup failed, trying inline payload", err);
     }
   }
-  if (inlineToken) {
-    const journey = decodeJourneyToken(inlineToken);
+
+  if (token) {
+    const journey = decodeJourneyToken(token);
     if (!journey) {
-      console.warn("[shared journey] inline token could not be decoded");
-      return;
+      throw new Error("Invalid share link");
     }
-    try {
-      await openInlineSharedJourney(journey, { source: "url", inlineToken });
-    } catch (err) {
-      console.warn("[shared journey] inline open failed", err);
+    if (normalized) {
+      journey.code = journey.code || normalized;
     }
+    await openInlineSharedJourney(journey, {
+      source: normalized && isMintedJourneyCode(normalized) ? "minted" : source,
+      inlineToken: token,
+    });
+    return;
+  }
+
+  throw new Error("Journey not found");
+}
+
+async function maybeOpenSharedJourneyFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get("journey") || "";
+  const inlineToken = params.get("j") || "";
+  if (!code && !inlineToken) {
+    return;
+  }
+  try {
+    const source = code && isMintedJourneyCode(code) ? "minted" : "import";
+    await resolveAndOpenSharedJourney({ code, inlineToken, source });
+  } catch (err) {
+    console.warn("[shared journey] could not open from URL", err);
   }
 }
 
@@ -7466,8 +7497,8 @@ async function openSharedJourney(code, { source = "import", inlineToken = "" } =
     }
     throw fetchErr;
   }
-  const geojsonUrl = `/api/journeys/code/${encodeURIComponent(journey.code)}/geojson`;
   const tripKey = `shared-${journey.code}`;
+  tripGeojsonCache.set(tripKey, buildJourneyGeojson(journey));
   const catalog = resolveTripCatalog({ source, code: journey.code });
   const tripEntry = {
     key: tripKey,
@@ -7475,7 +7506,7 @@ async function openSharedJourney(code, { source = "import", inlineToken = "" } =
     continent: journey.continent || "europe",
     title: journey.title,
     description: journey.description || "",
-    geojson: geojsonUrl,
+    geojson: `inline:${tripKey}`,
     days: journey.days || journey.stops?.length || 1,
     distanceKm: journey.distanceKm || 0,
     region: journey.region || "",
@@ -8283,18 +8314,8 @@ function setupJourneyBuilder() {
       return;
     }
     try {
-      if (inlineToken) {
-        const journey = decodeJourneyToken(inlineToken);
-        if (!journey) {
-          throw new Error("Invalid share link");
-        }
-        await openInlineSharedJourney(journey, {
-          source: code && isMintedJourneyCode(code) ? "minted" : "import",
-          inlineToken,
-        });
-      } else {
-        await openSharedJourney(code, { inlineToken });
-      }
+      const source = code && isMintedJourneyCode(code) ? "minted" : "import";
+      await resolveAndOpenSharedJourney({ code, inlineToken, source });
       if (input) input.value = "";
     } catch (err) {
       if (errEl) {

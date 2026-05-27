@@ -262,8 +262,33 @@ async function writeStored(code, record) {
   );
 }
 
+/**
+ * Vercel rewrites `/api/journeys/*` → `/api/journeys?path=*` so the function
+ * receives the subpath in a query param; dev passes the full pathname as-is.
+ */
+function resolveJourneysPathname(req, url) {
+  const pathParam = url.searchParams.get("path");
+  if (pathParam) {
+    const segment = String(pathParam).replace(/^\/+|\/+$/g, "");
+    if (segment) {
+      return `/api/journeys/${segment}`;
+    }
+  }
+  const forwarded =
+    req.headers["x-vercel-original-path"] ||
+    req.headers["x-invoke-path"] ||
+    req.headers["x-forwarded-uri"];
+  if (forwarded) {
+    const raw = String(forwarded).split("?")[0];
+    if (raw.startsWith("/api/journeys")) {
+      return raw;
+    }
+  }
+  return url.pathname;
+}
+
 export async function handleJourneys(req, res, url) {
-  const { pathname } = url;
+  const pathname = resolveJourneysPathname(req, url);
   res.setHeader("Cache-Control", "no-store");
 
   if (pathname === "/api/journeys/status" && req.method === "GET") {
