@@ -9,7 +9,7 @@
 // behaviour so old SW caches (which serve stale assets via
 // stale-while-revalidate) are dropped on next visit. The build pipeline
 // hashes asset paths but the previous SW could still hand back old HTML.
-const SW_VERSION = "tt-v5-pick-banner";
+const SW_VERSION = "tt-v6-loading-ui";
 const SHELL_CACHE = `${SW_VERSION}-shell`;
 const RUNTIME_CACHE = `${SW_VERSION}-runtime`;
 const PHOTOS_CACHE = `${SW_VERSION}-photos`;

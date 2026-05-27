@@ -269,6 +269,7 @@ const welcomeOverlay = document.getElementById("welcomeOverlay");
 const exploreModeBtn = document.getElementById("exploreModeBtn");
 const mapHintBar = document.getElementById("mapHintBar");
 const journeyEmptyState = document.getElementById("journeyEmptyState");
+const journeyLoadingState = document.getElementById("journeyLoadingState");
 const tripQuickStats = document.getElementById("tripQuickStats");
 
 const VIEW_IDS = ["map", "story", "stops"];
@@ -565,7 +566,56 @@ function dismissWelcomeOverlay() {
   }, 320);
 }
 
+function hideJourneyPanelLoading() {
+  itineraryPanel?.classList.remove("journey-panel--loading");
+  journeyLoadingState?.setAttribute("hidden", "");
+  journeyLoadingState?.removeAttribute("aria-busy");
+}
+
+function setJourneyPanelLoading(trip) {
+  itineraryPanel?.classList.remove("journey-panel--empty");
+  itineraryPanel?.classList.add("journey-panel--loading");
+  journeyEmptyState?.setAttribute("hidden", "");
+  journeyLoadingState?.removeAttribute("hidden");
+  journeyLoadingState?.setAttribute("aria-busy", "true");
+
+  document.getElementById("itineraryContent")?.setAttribute("hidden", "");
+  document.getElementById("stopsPanel")?.setAttribute("hidden", "");
+  tripQuickStats?.setAttribute("hidden", "");
+
+  const loadingLabel = document.getElementById("journeyLoadingLabel");
+  const titleEl = document.getElementById("tripTitle");
+  const descEl = document.getElementById("tripDescription");
+  const regionEl = document.getElementById("tripRegion");
+
+  if (trip) {
+    if (loadingLabel) {
+      loadingLabel.textContent = `Loading ${trip.title}…`;
+    }
+    if (titleEl) {
+      titleEl.textContent = trip.title;
+    }
+    if (descEl) {
+      descEl.textContent = "Fetching route, stops, and story…";
+    }
+    if (regionEl) {
+      if (trip.region) {
+        regionEl.hidden = false;
+        regionEl.textContent = trip.region;
+      } else {
+        regionEl.hidden = true;
+        regionEl.textContent = "";
+      }
+    }
+    updateHudJourneyState();
+    syncHudNavAvailability();
+  } else if (loadingLabel) {
+    loadingLabel.textContent = "Loading journey…";
+  }
+}
+
 function renderEmptyJourneyPanel() {
+  hideJourneyPanelLoading();
   itineraryPanel?.classList.add("journey-panel--empty");
   journeyEmptyState?.removeAttribute("hidden");
 
@@ -5667,6 +5717,7 @@ function updateTripHeader(trip, features) {
 
   animateHudTitle(trip.title);
 
+  hideJourneyPanelLoading();
   itineraryPanel?.classList.remove("journey-panel--empty");
   journeyEmptyState?.setAttribute("hidden", "");
   tripQuickStats?.removeAttribute("hidden");
@@ -5725,6 +5776,12 @@ async function loadItinerary(path, { animate = true } = {}) {
 
   if (animate) {
     content.classList.add("is-swapping");
+    content.innerHTML = `
+      <div class="itinerary-loading" role="status" aria-live="polite">
+        <span class="ui-spinner ui-spinner--lg" aria-hidden="true"></span>
+        <p class="loading-note">Loading itinerary…</p>
+      </div>
+    `;
     await wait(140);
   }
 
@@ -5930,6 +5987,8 @@ async function loadTrip(tripKey, fit = true, { animate = true } = {}) {
   const geojsonPath = trip.route || trip.geojson;
   const itineraryPath = trip.itineraryFile || trip.itinerary;
 
+  setJourneyPanelLoading(trip);
+
   if (animate) {
     layoutRoot?.classList.add("is-trip-loading");
   }
@@ -5945,6 +6004,7 @@ async function loadTrip(tripKey, fit = true, { animate = true } = {}) {
     geojson = geojsonResult;
   } catch (error) {
     layoutRoot?.classList.remove("is-trip-loading");
+    hideJourneyPanelLoading();
     throw error;
   }
 
@@ -6169,9 +6229,12 @@ function setupTripOverlay() {
       } catch (error) {
         console.error(error);
         layoutRoot?.classList.remove("is-trip-loading");
+        hideJourneyPanelLoading();
+        itineraryPanel?.classList.remove("journey-panel--empty");
         const content = document.getElementById("itineraryContent");
         if (content) {
-          content.innerHTML = "<p>There was an issue loading the selected trip.</p>";
+          content.removeAttribute("hidden");
+          content.innerHTML = "<p class=\"itinerary-error\">There was an issue loading the selected trip.</p>";
         }
       }
     });
