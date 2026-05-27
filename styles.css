@@ -5574,16 +5574,27 @@ body.media-lightbox-open {
   pointer-events: none;
   transform: translateY(-12px);
   opacity: 0;
-  transition: transform 220ms ease, opacity 220ms ease;
+  visibility: hidden;
+  transition: transform 220ms ease, opacity 220ms ease, visibility 0s linear 220ms;
+}
+
+.builder-pick-banner[hidden] {
+  display: none !important;
 }
 
 .builder-pick-banner.is-visible {
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
+  transition: transform 220ms ease, opacity 220ms ease, visibility 0s linear 0s;
+}
+
+.builder-pick-banner.is-visible .builder-pick-banner__inner {
+  pointer-events: auto;
 }
 
 .builder-pick-banner__inner {
-  pointer-events: auto;
+  pointer-events: none;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -5610,6 +5621,20 @@ body.media-lightbox-open {
   }
   .builder-pick-banner__text span {
     font-size: 0.7rem;
+  }
+}
+
+/* On phones the floating search HUD owns the top of the screen. The pick
+ * banner used to sit at top:0 with z-index 1100 (above the HUD at 940),
+ * which blocked taps on the search pill and made it look like the search
+ * bar was broken. Sit the banner just below the HUD using the live inset
+ * that updateLayoutInsets() writes to #layoutRoot. */
+@media (max-width: 640px) {
+  body.is-builder-picking .builder-pick-banner.is-visible {
+    top: var(--layout-hud-bottom, 72px);
+    z-index: 920;
+    padding-top: 6px;
+    padding-bottom: 0;
   }
 }
 
@@ -8028,20 +8053,6 @@ body.welcome-open .journey-panel {
     display: inline;
   }
 
-  /* Builder pick banner — keep cancel button reachable on narrow screens. */
-  .builder-pick-banner__inner {
-    padding: 8px 12px;
-    gap: 8px;
-  }
-  .builder-pick-banner__text {
-    font-size: 0.78rem;
-    line-height: 1.25;
-  }
-  .builder-pick-banner__cancel {
-    font-size: 0.74rem;
-    padding: 6px 10px;
-    flex-shrink: 0;
-  }
 
   /* Builder search results: avoid being clipped by the parent's overflow.
      Become a normal-flow block under the search field instead of absolute. */
@@ -8182,12 +8193,6 @@ body.welcome-open .journey-panel {
     display: block !important;
     grid-template-columns: none !important;
     flex: none;
-    /* Was pointer-events: none with explicit auto on children — that pattern
-     * is fragile on iOS Safari (iPhone 16, iOS 18+) when combined with
-     * backdrop-filter, sometimes dropping taps on the search input entirely.
-     * Letting the shelf be a normal interactive surface fixes that; the
-     * "dead space" around the pill is small (a few px of padding) so the
-     * UX trade is negligible. */
     pointer-events: auto;
     max-height: none;
     overflow: visible;
@@ -8244,19 +8249,7 @@ body.welcome-open .journey-panel {
     pointer-events: auto;
   }
 
-  /* ----------------------------------------------------------------------
-   * Mobile search-bar layout: the <input> fills the entire pill. The icon,
-   * spinner, and kbd hint are absolutely positioned on top of it with
-   * `pointer-events: none` so taps on those areas reach the input. The ✕
-   * clear button is the only other interactive overlay and sits at the
-   * highest z-index so its own click handler always wins.
-   *
-   * This pattern is the most iOS-Safari-robust possible: there is exactly
-   * ONE tap target spanning the whole visible pill. No `pointer-events:
-   * none` parent juggling, no `<label>` indirection — the input is the
-   * thing the finger lands on. The earlier (more clever) layouts kept
-   * failing on iPhone 16 / iOS 18.
-   * ---------------------------------------------------------------------- */
+  /* Mobile search: input fills the pill; icon/spinner are decorative overlays. */
   .map-hud .city-search {
     position: relative;
     z-index: 2;
@@ -8272,20 +8265,10 @@ body.welcome-open .journey-panel {
     pointer-events: auto;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
-    /* Defensive: kill any inherited backdrop-filter from the desktop
-     * .hud-brand styling on this branch — backdrop-filter on input
-     * ancestors has been linked to dropped taps on iOS Safari. */
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
 
-  /* The icon button is decorative on phones — it sits visually inside the
-   * pill but `pointer-events: none` lets every tap on the icon area fall
-   * straight through to the <input> beneath it. This is the only reliable
-   * way to bring up the iOS Safari keyboard, since calling `.focus()`
-   * programmatically in response to a click on a *different* element does
-   * not always activate the on-screen keyboard. The desktop breakpoint
-   * keeps the icon clickable for the "search from the icon" affordance. */
   .map-hud .city-search__icon-button {
     position: absolute;
     left: 6px;
@@ -8302,10 +8285,6 @@ body.welcome-open .journey-panel {
     color: #0f766e;
   }
 
-  /* The input is absolutely positioned to fill the ENTIRE field box (border
-   * included) so the hit target is the full visible pill — no seam at the
-   * top/bottom border, no padding-only "dead" strip. The right padding
-   * leaves room for the (wider) ✕ clear button when it is visible. */
   .map-hud .city-search__input {
     position: absolute;
     inset: 0;
@@ -8339,11 +8318,6 @@ body.welcome-open .journey-panel {
     z-index: 1;
   }
 
-  /* Bigger, more forgiving hit area for the ✕ on phones — previously the
-   * button was a 28×28 dot which made it both hard to hit cleanly AND a
-   * source of click-through when iOS Safari synthesized a follow-up click
-   * after the button hid itself. The wider hit zone plus pointerdown
-   * capture in JS keeps the touch contained to this control. */
   .map-hud .city-search__clear {
     width: 44px;
     height: 44px;
