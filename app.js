@@ -2949,13 +2949,15 @@ function setupCitySearch() {
     // Don't steal focus from the X or icon — those have their own actions.
     if (target.closest("#citySearchClear")) return;
     if (target.closest("#citySearchIconButton")) return;
+    // Don't pop the keyboard when the user is trying to pick a result —
+    // the option click handler navigates away and re-popping the keyboard
+    // would interrupt that navigation visually.
+    if (target.closest(".city-search__results")) return;
     if (document.activeElement !== input) {
-      // Synchronous focus call inside the user-gesture handler.
       try { input.focus({ preventScroll: false }); } catch (_) { input.focus(); }
     }
   };
   field?.addEventListener("pointerdown", fieldPointerDownFocus);
-  // Also wire the wrapper so taps on padding outside the field still focus.
   root?.addEventListener("pointerdown", fieldPointerDownFocus);
 
   list.addEventListener("click", (event) => {
