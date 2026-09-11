@@ -656,5 +656,33 @@
     "country": "United Kingdom",
     "cc": "gb",
     "popularity": 87
+  },
+  {
+    "osm_id": 17234436,
+    "name": "Via Alpina (Swiss Alpine Pass Route)",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 89
+  },
+  {
+    "osm_id": 14526156,
+    "name": "Jura Crest Trail",
+    "country": "Switzerland",
+    "cc": "ch",
+    "popularity": 84
+  },
+  {
+    "osm_id": 12371607,
+    "name": "Peaks of the Balkans Trail",
+    "country": "Albania",
+    "cc": "al",
+    "popularity": 90
+  },
+  {
+    "osm_id": 14907641,
+    "name": "High Scardus Trail",
+    "country": "Albania",
+    "cc": "al",
+    "popularity": 86
   }
 ]

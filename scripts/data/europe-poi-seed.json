@@ -35,6 +35,8 @@
   { "name": "Gjirokastër Old Bazaar", "country": "Albania", "cc": "al", "lat": 40.075, "lng": 20.138, "category": "heritage", "popularity": 88, "tagline": "Stone-city of a thousand steps—Ottoman Albania preserved" },
   { "name": "Berat Castle Quarter", "country": "Albania", "cc": "al", "lat": 40.706, "lng": 19.952, "category": "fortress", "popularity": 87, "tagline": "City of a thousand windows beneath a living castle" },
   { "name": "Krujë Castle", "country": "Albania", "cc": "al", "lat": 41.508, "lng": 19.793, "category": "fortress", "popularity": 86, "tagline": "Skanderbeg's mountain stronghold and national identity shrine" },
+  { "name": "Maja Jezercë", "country": "Albania", "cc": "al", "lat": 42.445, "lng": 19.801, "category": "mountain", "popularity": 89, "tagline": "Highest peak of the Accursed Mountains and Albania's alpine crown" },
+  { "name": "Mount Korab", "country": "Albania", "cc": "al", "lat": 41.791, "lng": 20.546, "category": "mountain", "popularity": 87, "tagline": "Border summit above alpine meadows and one of the Balkans' classic climbs" },
 
   { "name": "Belgrade Fortress", "country": "Serbia", "cc": "rs", "lat": 44.823, "lng": 20.449, "category": "fortress", "popularity": 88, "tagline": "Kalemegdan citadel where the Danube meets the Sava" },
   { "name": "Studenica Monastery", "country": "Serbia", "cc": "rs", "lat": 43.480, "lng": 20.536, "category": "monument", "popularity": 85, "tagline": "Medieval Serbian Orthodox jewel of white marble and frescoes" },
@@ -84,6 +86,8 @@
 
   { "name": "Mont Blanc", "country": "France", "cc": "fr", "lat": 45.833, "lng": 6.865, "category": "mountain", "popularity": 96, "tagline": "Western Europe's highest peak on the Franco-Italian border" },
   { "name": "Matterhorn", "country": "Switzerland", "cc": "ch", "lat": 45.976, "lng": 7.659, "category": "mountain", "popularity": 95, "tagline": "Pyramidal Alp that defines Swiss mountaineering" },
+  { "name": "Eiger", "country": "Switzerland", "cc": "ch", "lat": 46.577, "lng": 8.005, "category": "mountain", "popularity": 93, "tagline": "Iconic Bernese Oberland peak famed for its north-face climbing history" },
+  { "name": "Dufourspitze", "country": "Switzerland", "cc": "ch", "lat": 45.936, "lng": 7.867, "category": "mountain", "popularity": 90, "tagline": "Switzerland's highest summit on the Monte Rosa massif" },
   { "name": "Triglav", "country": "Slovenia", "cc": "si", "lat": 46.378, "lng": 13.836, "category": "mountain", "popularity": 88, "tagline": "Slovenia's sacred summit in the Julian Alps" },
   { "name": "Mount Etna", "country": "Italy", "cc": "it", "lat": 37.751, "lng": 14.993, "category": "mountain", "popularity": 92, "tagline": "Europe's most active volcano towering over eastern Sicily" },
   { "name": "Grossglockner", "country": "Austria", "cc": "at", "lat": 47.074, "lng": 12.694, "category": "mountain", "popularity": 86, "tagline": "Austria's highest peak above the High Tauern" },
