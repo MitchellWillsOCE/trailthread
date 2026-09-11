@@ -583,7 +583,13 @@ body.hike-story-open .map-controls .route-legend {
   justify-content: center;
 }
 
-.explore-cities-on .leaflet-pane.leaflet-countryRegions-pane {
+.region-chip-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.explore-mode-on .leaflet-pane.leaflet-countryRegions-pane,
+.explore-cities-on .leaflet-pane.leaflet-countryRegions-pane,
+.region-preview-on .leaflet-pane.leaflet-countryRegions-pane {
   pointer-events: none;
 }
 
@@ -617,11 +623,23 @@ body.hike-story-open .map-controls .route-legend {
   box-shadow: 0 8px 18px rgba(8, 19, 31, 0.16);
 }
 
+.layer-chip:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+  transform: none;
+}
+
 .layer-chip[data-active="true"] {
   background: #0f766e;
   border-color: #0c5f59;
   color: #f8fafc;
   box-shadow: 0 8px 20px rgba(15, 118, 110, 0.28);
+}
+
+.layer-chip--region[data-preview="true"]:not([data-active="true"]) {
+  border-color: #0f766e;
+  background: rgba(240, 253, 250, 0.92);
+  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.16);
 }
 
 .layer-chip--overlay[data-active="true"] {

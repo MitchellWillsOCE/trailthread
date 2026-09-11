@@ -1,0 +1,591 @@
+{
+  "sydney-au": {
+    "id": "sydney-au",
+    "name": "Sydney",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 5312000,
+    "tier": "major",
+    "category": "metropolis",
+    "locale": "coastal",
+    "tagline": "Harbour city of beaches, ferries, and sandstone headlands",
+    "enriched": 1,
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "general": "Sydney wraps a world-famous harbour with surf beaches, coastal walks, ferry rides, and national-park headlands. It is the natural starting point for east-coast journeys, Blue Mountains day trips, and food-led city stays.",
+    "stay": "3-5 days",
+    "itinerary": "",
+    "activities": [
+      "Ride the ferry to Manly at sunset",
+      "Walk from Bondi to Coogee",
+      "Explore The Rocks and Circular Quay",
+      "Take a day trip into the Blue Mountains"
+    ],
+    "tips": [
+      "Use an Opal or contactless card for ferries and trains",
+      "Book harbour restaurants ahead on weekends",
+      "Beach conditions change quickly; swim between the flags"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "melbourne-au": {
+    "id": "melbourne-au",
+    "name": "Melbourne",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 5078000,
+    "tier": "major",
+    "category": "metropolis",
+    "locale": "coastal",
+    "tagline": "Laneway culture, galleries, trams, and Great Ocean Road access",
+    "enriched": 1,
+    "lat": -37.8136,
+    "lng": 144.9631,
+    "general": "Melbourne is Australia's culture capital: laneway cafes, street art, live music, major galleries, and easy tram travel. It also anchors road trips to the Great Ocean Road, Phillip Island, the Yarra Valley, and the Grampians.",
+    "stay": "3-5 days",
+    "itinerary": "",
+    "activities": [
+      "Follow a laneway coffee and street-art walk",
+      "Ride the tram to St Kilda Pier",
+      "Visit the NGV and Federation Square",
+      "Start a Great Ocean Road drive"
+    ],
+    "tips": [
+      "Weather can swing in a day; carry layers",
+      "The free tram zone covers central sights",
+      "Reserve popular restaurants before Friday and Saturday nights"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "brisbane-au": {
+    "id": "brisbane-au",
+    "name": "Brisbane",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 2560000,
+    "tier": "major",
+    "category": "city",
+    "locale": "river",
+    "tagline": "Subtropical river city between islands and rainforest hinterland",
+    "enriched": 1,
+    "lat": -27.4698,
+    "lng": 153.0251,
+    "general": "Brisbane follows the bends of the Brisbane River with galleries, riverside dining, bike paths, and easy access to Moreton Bay islands. It is a practical base for Lamington, the Scenic Rim, and south-east Queensland beaches.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Walk South Bank and the riverfront",
+      "Catch a CityCat ferry",
+      "Visit QAGOMA",
+      "Plan a hinterland day trip"
+    ],
+    "tips": [
+      "Summer storms can be sudden",
+      "Use go card or contactless payment on public transport",
+      "Book island ferries during school holidays"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "perth-au": {
+    "id": "perth-au",
+    "name": "Perth",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 2143000,
+    "tier": "major",
+    "category": "city",
+    "locale": "coastal",
+    "tagline": "Indian Ocean beaches, Swan River sunsets, and Rottnest escapes",
+    "enriched": 1,
+    "lat": -31.9523,
+    "lng": 115.8613,
+    "general": "Perth pairs Indian Ocean beaches with a relaxed riverfront city, Kings Park views, Fremantle heritage, and short ferry rides to Rottnest Island. It is the west-coast launch point for wine regions, coral coast drives, and the Cape to Cape Track.",
+    "stay": "3-5 days",
+    "itinerary": "",
+    "activities": [
+      "Watch sunset at Cottesloe Beach",
+      "Explore Fremantle's markets and heritage streets",
+      "Ride a ferry to Rottnest Island",
+      "Walk Kings Park's botanical trails"
+    ],
+    "tips": [
+      "Distances in Western Australia are large; plan fuel stops",
+      "Book Rottnest ferries and bikes early in summer",
+      "A hat and sun protection are essential year-round"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "adelaide-au": {
+    "id": "adelaide-au",
+    "name": "Adelaide",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 1387000,
+    "tier": "major",
+    "category": "city",
+    "locale": "coastal",
+    "tagline": "Parkland city for wine valleys, beaches, and festivals",
+    "enriched": 1,
+    "lat": -34.9285,
+    "lng": 138.6007,
+    "general": "Adelaide is a compact city ringed by parklands and close to beaches, the Adelaide Hills, Barossa, McLaren Vale, and Kangaroo Island. Its markets, festivals, and wine access make it an easy South Australia base.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Browse Adelaide Central Market",
+      "Taste wine in the Adelaide Hills",
+      "Ride the tram to Glenelg",
+      "Plan a Kangaroo Island side trip"
+    ],
+    "tips": [
+      "Festival season fills rooms quickly",
+      "Wine tours are easiest with a designated driver or guide",
+      "Summer heat can be extreme inland"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "canberra-au": {
+    "id": "canberra-au",
+    "name": "Canberra",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 466000,
+    "tier": "regional",
+    "category": "capital",
+    "locale": "inland",
+    "tagline": "Planned capital of museums, lake loops, and bushland ridges",
+    "enriched": 1,
+    "lat": -35.2809,
+    "lng": 149.13,
+    "general": "Canberra is Australia's planned capital, built around Lake Burley Griffin and framed by bushland hills. National museums, parliament, galleries, cycling paths, and nearby Namadgi National Park make it a thoughtful inland stop.",
+    "stay": "1-3 days",
+    "itinerary": "",
+    "activities": [
+      "Visit Parliament House and the National Gallery",
+      "Cycle around Lake Burley Griffin",
+      "Climb Mount Ainslie for the city axis view",
+      "Drive to Tidbinbilla or Namadgi"
+    ],
+    "tips": [
+      "Winter mornings are cold and frosty",
+      "Many national institutions are free",
+      "A car helps for nature reserves and suburban dining"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "hobart-au": {
+    "id": "hobart-au",
+    "name": "Hobart",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 247000,
+    "tier": "regional",
+    "category": "capital",
+    "locale": "island",
+    "tagline": "Tasmanian harbour capital below kunanyi / Mount Wellington",
+    "enriched": 1,
+    "lat": -42.8821,
+    "lng": 147.3272,
+    "general": "Hobart sits between the Derwent River and kunanyi / Mount Wellington, with Georgian streets, Salamanca markets, ferries, MONA, and access to southern Tasmania's wild coast and convict heritage.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Climb or drive to kunanyi / Mount Wellington",
+      "Browse Salamanca Market",
+      "Take the ferry to MONA",
+      "Visit Port Arthur as a day trip"
+    ],
+    "tips": [
+      "Mountain weather is colder than the waterfront",
+      "Book Bruny Island and Port Arthur tours ahead",
+      "Saturday market mornings are busiest"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "darwin-au": {
+    "id": "darwin-au",
+    "name": "Darwin",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 150000,
+    "tier": "regional",
+    "category": "city",
+    "locale": "coastal",
+    "tagline": "Top End gateway for markets, sunsets, Kakadu, and Litchfield",
+    "enriched": 1,
+    "lat": -12.4634,
+    "lng": 130.8456,
+    "general": "Darwin is the tropical Top End capital, known for waterfront sunsets, markets, World War II history, and access to Kakadu, Litchfield, and Arnhem Land touring.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Watch sunset at Mindil Beach",
+      "Visit the Museum and Art Gallery of the Northern Territory",
+      "Swim at the Waterfront precinct",
+      "Use Darwin as a Kakadu launch point"
+    ],
+    "tips": [
+      "The dry season from May to September is most comfortable",
+      "Observe crocodile warning signs around waterways",
+      "Many remote trips require permits or guided access"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "cairns-au": {
+    "id": "cairns-au",
+    "name": "Cairns",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 153000,
+    "tier": "regional",
+    "category": "city",
+    "locale": "coastal",
+    "tagline": "Reef and rainforest base in tropical Far North Queensland",
+    "enriched": 1,
+    "lat": -16.9186,
+    "lng": 145.7781,
+    "general": "Cairns is the main base for Great Barrier Reef trips, Wet Tropics rainforest, Kuranda rail journeys, and Daintree excursions. The city is compact, tour-friendly, and built around tropical outdoor travel.",
+    "stay": "3-5 days",
+    "itinerary": "",
+    "activities": [
+      "Take a reef snorkel or dive day trip",
+      "Ride the Kuranda Scenic Railway",
+      "Walk the Esplanade lagoon",
+      "Drive north toward the Daintree"
+    ],
+    "tips": [
+      "Reef boats book out in school holidays",
+      "Marine stinger season usually runs November to May",
+      "Summer is humid and wet; carry rain protection"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "gold-coast-au": {
+    "id": "gold-coast-au",
+    "name": "Gold Coast",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 720000,
+    "tier": "regional",
+    "category": "city",
+    "locale": "coastal",
+    "tagline": "Surf beaches, skyline stays, and rainforest hinterland trails",
+    "enriched": 1,
+    "lat": -28.0167,
+    "lng": 153.4,
+    "general": "The Gold Coast mixes surf beaches and high-rise resorts with rainforest hinterland parks, waterfalls, and family attractions. It is a bright, easy stop between Brisbane and northern New South Wales.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Walk Burleigh Head National Park",
+      "Swim at patrolled surf beaches",
+      "Visit Springbrook or Lamington rainforest",
+      "Explore local dining around Broadbeach"
+    ],
+    "tips": [
+      "Swim only between flags",
+      "Weekend traffic builds around theme parks",
+      "Hinterland roads can be misty after rain"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "alice-springs-au": {
+    "id": "alice-springs-au",
+    "name": "Alice Springs",
+    "country": "Australia",
+    "cc": "AU",
+    "pop": 26000,
+    "tier": "town",
+    "category": "town",
+    "locale": "desert",
+    "tagline": "Red Centre town for desert ranges and Larapinta Trail access",
+    "enriched": 1,
+    "lat": -23.698,
+    "lng": 133.8807,
+    "general": "Alice Springs is the practical hub of Australia's Red Centre, backed by the MacDonnell Ranges and the Larapinta Trail. It works best for self-drive desert trips, Aboriginal art, and outback landscapes.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Walk sections of the Larapinta Trail",
+      "Visit the Alice Springs Desert Park",
+      "Drive the West MacDonnell Ranges",
+      "Browse local Aboriginal art galleries"
+    ],
+    "tips": [
+      "Carry far more water than you expect to need",
+      "Avoid exposed hikes in midday heat",
+      "Remote-road fuel and supplies need planning"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "auckland-nz": {
+    "id": "auckland-nz",
+    "name": "Auckland",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 1695000,
+    "tier": "major",
+    "category": "metropolis",
+    "locale": "coastal",
+    "tagline": "Harbour city of volcanic cones, islands, and Pacific food",
+    "enriched": 1,
+    "lat": -36.8509,
+    "lng": 174.7645,
+    "general": "Auckland spreads across twin harbours, volcanic cones, island ferries, black-sand surf beaches, and diverse Pacific dining. It is New Zealand's biggest gateway and a flexible start for North Island journeys.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Climb Mount Eden for crater and skyline views",
+      "Take a ferry to Waiheke Island",
+      "Walk the waterfront and Wynyard Quarter",
+      "Explore west-coast beaches"
+    ],
+    "tips": [
+      "Traffic can be slow at peak times",
+      "Book Waiheke ferries and restaurants on sunny weekends",
+      "Weather changes quickly; carry a light shell"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "wellington-nz": {
+    "id": "wellington-nz",
+    "name": "Wellington",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 215000,
+    "tier": "regional",
+    "category": "capital",
+    "locale": "coastal",
+    "tagline": "Compact capital of harbour hills, cafes, museums, and film craft",
+    "enriched": 1,
+    "lat": -41.2865,
+    "lng": 174.7762,
+    "general": "Wellington compresses parliament, museums, coffee, craft beer, hillside walks, and a working harbour into a walkable capital. It is also the ferry link between the North and South Islands.",
+    "stay": "2-3 days",
+    "itinerary": "",
+    "activities": [
+      "Visit Te Papa",
+      "Ride the cable car to the Botanic Garden",
+      "Walk the Mount Victoria lookout",
+      "Tour Weta Workshop"
+    ],
+    "tips": [
+      "Wind is part of the experience; pack a shell",
+      "Cook Strait ferries need advance booking with vehicles",
+      "Central Wellington is easy without a car"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "christchurch-nz": {
+    "id": "christchurch-nz",
+    "name": "Christchurch",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 389000,
+    "tier": "regional",
+    "category": "city",
+    "locale": "coastal",
+    "tagline": "Garden city rebuilt with creativity and Canterbury access",
+    "enriched": 1,
+    "lat": -43.5321,
+    "lng": 172.6362,
+    "general": "Christchurch blends botanic gardens, new architecture, markets, street art, and easy access to Banks Peninsula, Arthur's Pass, and the Canterbury high country.",
+    "stay": "2-3 days",
+    "itinerary": "",
+    "activities": [
+      "Punt or walk along the Avon",
+      "Visit Riverside Market",
+      "Ride the tram loop",
+      "Day-trip to Akaroa or Arthur's Pass"
+    ],
+    "tips": [
+      "Layer for cool evenings even in summer",
+      "Book rental cars early in peak South Island season",
+      "Road trips west can be affected by alpine weather"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "queenstown-nz": {
+    "id": "queenstown-nz",
+    "name": "Queenstown",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 48000,
+    "tier": "town",
+    "category": "town",
+    "locale": "mountain",
+    "tagline": "Alpine lake base for adventure, wine, and Great Walks",
+    "enriched": 1,
+    "lat": -45.0312,
+    "lng": 168.6626,
+    "general": "Queenstown sits on Lake Wakatipu beneath the Remarkables, with jet boats, gondola views, wineries, ski fields, and access to Routeburn, Fiordland, and Mount Aspiring landscapes.",
+    "stay": "3-5 days",
+    "itinerary": "",
+    "activities": [
+      "Ride the Skyline gondola",
+      "Cruise or drive Lake Wakatipu",
+      "Taste wine in Gibbston Valley",
+      "Use town as a Great Walks base"
+    ],
+    "tips": [
+      "Accommodation prices spike in ski season and summer",
+      "Book Milford and Routeburn logistics early",
+      "Mountain weather changes fast"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "rotorua-nz": {
+    "id": "rotorua-nz",
+    "name": "Rotorua",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 78000,
+    "tier": "town",
+    "category": "town",
+    "locale": "thermal",
+    "tagline": "Geothermal lakes, Maori culture, and forest trails",
+    "enriched": 1,
+    "lat": -38.1368,
+    "lng": 176.2497,
+    "general": "Rotorua is known for geothermal valleys, steaming lakes, Maori cultural experiences, and mountain-bike trails in Whakarewarewa Forest. It is a strong North Island nature and culture stop.",
+    "stay": "2-3 days",
+    "itinerary": "",
+    "activities": [
+      "Visit a geothermal valley",
+      "Walk or ride Whakarewarewa Forest",
+      "Experience a cultural performance and hangi",
+      "Soak in thermal pools"
+    ],
+    "tips": [
+      "Geothermal steam has a sulphur smell around town",
+      "Book cultural evenings ahead",
+      "Forest trails drain well but can be muddy after rain"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "dunedin-nz": {
+    "id": "dunedin-nz",
+    "name": "Dunedin",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 106000,
+    "tier": "regional",
+    "category": "city",
+    "locale": "coastal",
+    "tagline": "Southern heritage city with wildlife-rich Otago Peninsula",
+    "enriched": 1,
+    "lat": -45.8788,
+    "lng": 170.5028,
+    "general": "Dunedin combines Scottish-influenced streets, student energy, railway architecture, surf beaches, and Otago Peninsula wildlife. It is a rewarding southern city stop before the Catlins or Central Otago.",
+    "stay": "2-3 days",
+    "itinerary": "",
+    "activities": [
+      "Tour the railway station precinct",
+      "Look for albatross and penguins on Otago Peninsula",
+      "Walk Tunnel Beach",
+      "Explore local breweries and cafes"
+    ],
+    "tips": [
+      "Wildlife viewing is best with low-impact guided operators",
+      "Coastal weather can be cool and windy",
+      "Respect closed beach areas during nesting season"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "nelson-nz": {
+    "id": "nelson-nz",
+    "name": "Nelson",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 54000,
+    "tier": "town",
+    "category": "town",
+    "locale": "coastal",
+    "tagline": "Sunny arts town near Abel Tasman beaches and alpine parks",
+    "enriched": 1,
+    "lat": -41.2706,
+    "lng": 173.284,
+    "general": "Nelson is a sunny South Island base for galleries, markets, wineries, Abel Tasman beaches, and inland alpine parks. It works well for slower coastal travel and Great Walk logistics.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Browse Saturday market and local galleries",
+      "Taste wine around Moutere or Mapua",
+      "Day-trip into Abel Tasman",
+      "Walk to the Centre of New Zealand viewpoint"
+    ],
+    "tips": [
+      "Summer accommodation fills early",
+      "Book Abel Tasman water taxis in advance",
+      "A car helps connect beaches, wineries, and trailheads"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  },
+  "wanaka-nz": {
+    "id": "wanaka-nz",
+    "name": "Wanaka",
+    "country": "New Zealand",
+    "cc": "NZ",
+    "pop": 13000,
+    "tier": "town",
+    "category": "town",
+    "locale": "mountain",
+    "tagline": "Lakeside mountain town for day hikes and Mount Aspiring access",
+    "enriched": 1,
+    "lat": -44.7032,
+    "lng": 169.1321,
+    "general": "Wanaka is a calmer alpine-lake base than Queenstown, with day hikes, ski fields, bike trails, and access to Mount Aspiring National Park. It suits outdoors-focused road trips through Otago.",
+    "stay": "2-4 days",
+    "itinerary": "",
+    "activities": [
+      "Walk Mount Iron or Roys Peak",
+      "Picnic on the lakefront",
+      "Drive toward Matukituki Valley",
+      "Explore local breweries and cafes"
+    ],
+    "tips": [
+      "Roys Peak is exposed; start early and carry water",
+      "Winter roads may require chains",
+      "Trailhead parking can fill before sunrise"
+    ],
+    "photos": [],
+    "highlights": [],
+    "source": "curated"
+  }
+}

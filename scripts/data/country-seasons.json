@@ -202,6 +202,48 @@
       "low": ["Nov", "Dec", "Jan", "Feb"],
       "note": "Long daylight Jun–Jul; expect showers all year. Wild Atlantic Way drive best May–Sep.",
       "best": "May–Sep"
+    },
+    "Australia": {
+      "peak": ["Dec", "Jan", "Feb"],
+      "shoulder": ["Mar", "Apr", "Sep", "Oct", "Nov"],
+      "low": ["Jun", "Jul", "Aug"],
+      "note": "Southern Australia peaks in summer, while the tropical north is most comfortable in the dry season from May to September. Red Centre hikes are best in cooler months.",
+      "best": "Mar-May, Sep-Nov",
+      "weather": {
+        "Jan": {"high": 27, "low": 19, "rain": 85},
+        "Feb": {"high": 27, "low": 19, "rain": 95},
+        "Mar": {"high": 25, "low": 17, "rain": 80},
+        "Apr": {"high": 22, "low": 14, "rain": 65},
+        "May": {"high": 19, "low": 11, "rain": 60},
+        "Jun": {"high": 16, "low": 8, "rain": 65},
+        "Jul": {"high": 16, "low": 7, "rain": 55},
+        "Aug": {"high": 17, "low": 8, "rain": 55},
+        "Sep": {"high": 20, "low": 10, "rain": 55},
+        "Oct": {"high": 22, "low": 13, "rain": 65},
+        "Nov": {"high": 24, "low": 15, "rain": 75},
+        "Dec": {"high": 26, "low": 18, "rain": 80}
+      }
+    },
+    "New Zealand": {
+      "peak": ["Dec", "Jan", "Feb"],
+      "shoulder": ["Mar", "Apr", "Oct", "Nov"],
+      "low": ["Jun", "Jul", "Aug"],
+      "note": "Summer is prime for Great Walks and alpine roads. Spring and autumn are quieter but changeable; winter brings snow and avalanche risk on high routes.",
+      "best": "Nov-Apr",
+      "weather": {
+        "Jan": {"high": 22, "low": 13, "rain": 65},
+        "Feb": {"high": 22, "low": 13, "rain": 55},
+        "Mar": {"high": 20, "low": 11, "rain": 70},
+        "Apr": {"high": 17, "low": 8, "rain": 75},
+        "May": {"high": 14, "low": 6, "rain": 85},
+        "Jun": {"high": 11, "low": 3, "rain": 90},
+        "Jul": {"high": 10, "low": 2, "rain": 85},
+        "Aug": {"high": 12, "low": 3, "rain": 80},
+        "Sep": {"high": 14, "low": 5, "rain": 75},
+        "Oct": {"high": 16, "low": 7, "rain": 75},
+        "Nov": {"high": 18, "low": 9, "rain": 70},
+        "Dec": {"high": 20, "low": 11, "rain": 70}
+      }
     }
   }
 }

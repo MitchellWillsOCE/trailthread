@@ -1,0 +1,225 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.0756,
+          -41.8802
+        ]
+      },
+      "properties": {
+        "id": "overland-track-au",
+        "name": "Overland Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 65,
+        "popularity": 96,
+        "tier": "major",
+        "tagline": "65 km alpine traverse from Cradle Mountain to Lake St Clair"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.148,
+          -23.6736
+        ]
+      },
+      "properties": {
+        "id": "larapinta-trail-au",
+        "name": "Larapinta Trail",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 223,
+        "popularity": 94,
+        "tier": "major",
+        "tagline": "223 km Red Centre traverse through the West MacDonnell Ranges"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.03620000000001,
+          -33.9842
+        ]
+      },
+      "properties": {
+        "id": "cape-to-cape-track-au",
+        "name": "Cape to Cape Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 123,
+        "popularity": 90,
+        "tier": "regional",
+        "tagline": "Coastal walk between Cape Naturaliste and Cape Leeuwin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.3494,
+          -38.7338
+        ]
+      },
+      "properties": {
+        "id": "great-ocean-walk-au",
+        "name": "Great Ocean Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 104,
+        "popularity": 91,
+        "tier": "regional",
+        "tagline": "Clifftop and beach walk from Apollo Bay to the Twelve Apostles"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.1655,
+          -33.76825
+        ]
+      },
+      "properties": {
+        "id": "six-foot-track-au",
+        "name": "Six Foot Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 44,
+        "popularity": 84,
+        "tier": "regional",
+        "tagline": "Historic Blue Mountains track from Katoomba to Jenolan Caves"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.13475,
+          -44.788
+        ]
+      },
+      "properties": {
+        "id": "routeburn-track-nz",
+        "name": "Routeburn Track",
+        "country": "New Zealand",
+        "cc": "nz",
+        "length_km": 33,
+        "popularity": 97,
+        "tier": "major",
+        "tagline": "Alpine Great Walk between Mount Aspiring and Fiordland"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.79825,
+          -44.75
+        ]
+      },
+      "properties": {
+        "id": "milford-track-nz",
+        "name": "Milford Track",
+        "country": "New Zealand",
+        "cc": "nz",
+        "length_km": 53,
+        "popularity": 98,
+        "tier": "major",
+        "tagline": "Classic Fiordland Great Walk to Milford Sound"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.659,
+          -39.11625
+        ]
+      },
+      "properties": {
+        "id": "tongariro-alpine-crossing-nz",
+        "name": "Tongariro Alpine Crossing",
+        "country": "New Zealand",
+        "cc": "nz",
+        "length_km": 19,
+        "popularity": 96,
+        "tier": "major",
+        "tagline": "Volcanic day walk past crater lakes and lava fields"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.94275,
+          -40.90075
+        ]
+      },
+      "properties": {
+        "id": "abel-tasman-coast-track-nz",
+        "name": "Abel Tasman Coast Track",
+        "country": "New Zealand",
+        "cc": "nz",
+        "length_km": 60,
+        "popularity": 90,
+        "tier": "regional",
+        "tagline": "Beach-hopping Great Walk with tidal crossings and water taxis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.64180000000002,
+          -45.431
+        ]
+      },
+      "properties": {
+        "id": "kepler-track-nz",
+        "name": "Kepler Track",
+        "country": "New Zealand",
+        "cc": "nz",
+        "length_km": 60,
+        "popularity": 92,
+        "tier": "regional",
+        "tagline": "Fiordland circuit of lake shore, beech forest, and alpine ridges"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.09325,
+          -43.71175
+        ]
+      },
+      "properties": {
+        "id": "hooker-valley-track-nz",
+        "name": "Hooker Valley Track",
+        "country": "New Zealand",
+        "cc": "nz",
+        "length_km": 10,
+        "popularity": 89,
+        "tier": "regional",
+        "tagline": "Glacial valley walk to Aoraki Mount Cook viewpoints"
+      }
+    }
+  ]
+}

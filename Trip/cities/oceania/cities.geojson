@@ -1,0 +1,423 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2093,
+          -33.8688
+        ]
+      },
+      "properties": {
+        "id": "sydney-au",
+        "name": "Sydney",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5312000,
+        "tier": "major",
+        "category": "metropolis",
+        "locale": "coastal",
+        "tagline": "Harbour city of beaches, ferries, and sandstone headlands",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9631,
+          -37.8136
+        ]
+      },
+      "properties": {
+        "id": "melbourne-au",
+        "name": "Melbourne",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5078000,
+        "tier": "major",
+        "category": "metropolis",
+        "locale": "coastal",
+        "tagline": "Laneway culture, galleries, trams, and Great Ocean Road access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.0251,
+          -27.4698
+        ]
+      },
+      "properties": {
+        "id": "brisbane-au",
+        "name": "Brisbane",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2560000,
+        "tier": "major",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Subtropical river city between islands and rainforest hinterland",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.8613,
+          -31.9523
+        ]
+      },
+      "properties": {
+        "id": "perth-au",
+        "name": "Perth",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2143000,
+        "tier": "major",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Indian Ocean beaches, Swan River sunsets, and Rottnest escapes",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.6007,
+          -34.9285
+        ]
+      },
+      "properties": {
+        "id": "adelaide-au",
+        "name": "Adelaide",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1387000,
+        "tier": "major",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Parkland city for wine valleys, beaches, and festivals",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.13,
+          -35.2809
+        ]
+      },
+      "properties": {
+        "id": "canberra-au",
+        "name": "Canberra",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 466000,
+        "tier": "regional",
+        "category": "capital",
+        "locale": "inland",
+        "tagline": "Planned capital of museums, lake loops, and bushland ridges",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.3272,
+          -42.8821
+        ]
+      },
+      "properties": {
+        "id": "hobart-au",
+        "name": "Hobart",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 247000,
+        "tier": "regional",
+        "category": "capital",
+        "locale": "island",
+        "tagline": "Tasmanian harbour capital below kunanyi / Mount Wellington",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.8456,
+          -12.4634
+        ]
+      },
+      "properties": {
+        "id": "darwin-au",
+        "name": "Darwin",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 150000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Top End gateway for markets, sunsets, Kakadu, and Litchfield",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.7781,
+          -16.9186
+        ]
+      },
+      "properties": {
+        "id": "cairns-au",
+        "name": "Cairns",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 153000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Reef and rainforest base in tropical Far North Queensland",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.4,
+          -28.0167
+        ]
+      },
+      "properties": {
+        "id": "gold-coast-au",
+        "name": "Gold Coast",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 720000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Surf beaches, skyline stays, and rainforest hinterland trails",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.8807,
+          -23.698
+        ]
+      },
+      "properties": {
+        "id": "alice-springs-au",
+        "name": "Alice Springs",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 26000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Red Centre town for desert ranges and Larapinta Trail access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7645,
+          -36.8509
+        ]
+      },
+      "properties": {
+        "id": "auckland-nz",
+        "name": "Auckland",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 1695000,
+        "tier": "major",
+        "category": "metropolis",
+        "locale": "coastal",
+        "tagline": "Harbour city of volcanic cones, islands, and Pacific food",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          174.7762,
+          -41.2865
+        ]
+      },
+      "properties": {
+        "id": "wellington-nz",
+        "name": "Wellington",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 215000,
+        "tier": "regional",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Compact capital of harbour hills, cafes, museums, and film craft",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.6362,
+          -43.5321
+        ]
+      },
+      "properties": {
+        "id": "christchurch-nz",
+        "name": "Christchurch",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 389000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Garden city rebuilt with creativity and Canterbury access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.6626,
+          -45.0312
+        ]
+      },
+      "properties": {
+        "id": "queenstown-nz",
+        "name": "Queenstown",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 48000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Alpine lake base for adventure, wine, and Great Walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.2497,
+          -38.1368
+        ]
+      },
+      "properties": {
+        "id": "rotorua-nz",
+        "name": "Rotorua",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 78000,
+        "tier": "town",
+        "category": "town",
+        "locale": "thermal",
+        "tagline": "Geothermal lakes, Maori culture, and forest trails",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          170.5028,
+          -45.8788
+        ]
+      },
+      "properties": {
+        "id": "dunedin-nz",
+        "name": "Dunedin",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 106000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Southern heritage city with wildlife-rich Otago Peninsula",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.284,
+          -41.2706
+        ]
+      },
+      "properties": {
+        "id": "nelson-nz",
+        "name": "Nelson",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 54000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Sunny arts town near Abel Tasman beaches and alpine parks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.1321,
+          -44.7032
+        ]
+      },
+      "properties": {
+        "id": "wanaka-nz",
+        "name": "Wanaka",
+        "country": "New Zealand",
+        "cc": "NZ",
+        "pop": 13000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Lakeside mountain town for day hikes and Mount Aspiring access",
+        "enriched": 1
+      }
+    }
+  ]
+}

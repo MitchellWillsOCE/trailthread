@@ -86,7 +86,33 @@ import { injectSpeedInsights } from "@vercel/speed-insights";
 injectVercelAnalytics();
 injectSpeedInsights();
 
-const DEFAULT_MAP_VIEW = { center: [52, 15], zoom: 4 };
+const DEFAULT_REGION_ID = "europe";
+const mapRegionConfig = {
+  europe: {
+    id: "europe",
+    label: "Europe",
+    shortLabel: "Europe",
+    center: [52, 15],
+    zoom: 4,
+    previewZoom: 4,
+    countryOverlayMaxZoom: 8,
+    countriesGeojson: "./Trip/geo/europe-countries.geojson"
+  },
+  oceania: {
+    id: "oceania",
+    label: "Oceania",
+    shortLabel: "Oceania",
+    center: [-29, 146],
+    zoom: 4,
+    previewZoom: 4,
+    countryOverlayMaxZoom: 7,
+    countriesGeojson: "./Trip/geo/oceania-countries.geojson"
+  }
+};
+const DEFAULT_MAP_VIEW = {
+  center: mapRegionConfig[DEFAULT_REGION_ID].center,
+  zoom: mapRegionConfig[DEFAULT_REGION_ID].zoom
+};
 
 const map = L.map("map", {
   zoomControl: false,
@@ -207,7 +233,8 @@ const modeConfig = {
 const continentConfig = {
   all: { label: "All" },
   europe: { label: "Europe" },
-  asia: { label: "Asia" }
+  asia: { label: "Asia" },
+  oceania: { label: "Oceania" }
 };
 
 let placeDetails = {};
@@ -219,8 +246,10 @@ let cityCatalogLayer = null;
 let cityCatalogMarkersInView = new Map();
 let cityCatalogFetchId = 0;
 let cityCatalogRefreshTimer = null;
-let countryRegionsGeo = null;
+const countryRegionsGeoCache = new Map();
 let countryRegionsLayer = null;
+let countryRegionsLayerRegionId = null;
+let countryRegionsBuildToken = 0;
 let mapSearchCountries = [];
 let hikeCatalog = null;
 let hikeCatalogLayer = null;
@@ -243,6 +272,7 @@ let activeHikeRouteLayer = null;
 let activeHikeRouteGlowLayer = null;
 let activeHikeEndpointsLayer = null;
 let hikeDetailFetchToken = 0;
+let activeRegionLoadToken = 0;
 let state = {
   basemap: "voyager",
   overlays: { labels: false, transit: false },
@@ -250,6 +280,8 @@ let state = {
   trips: [],
   selectedTrip: null,
   continentFilter: "all",
+  activeRegionId: DEFAULT_REGION_ID,
+  previewRegionId: null,
   activeView: "map",
   exploreCities: false,
   exploreParks: false,
@@ -714,6 +746,9 @@ function updateHudJourneyState() {
       if (state.exploreCities) {
         parts.push("cities");
       }
+      if (state.exploreParks) {
+        parts.push("parks");
+      }
       if (state.exploreHikes) {
         parts.push("trails");
       }
@@ -721,7 +756,7 @@ function updateHudJourneyState() {
         parts.push("landmarks");
       }
       subtitleEl.textContent = parts.length
-        ? `${parts.join(" & ")} on the map — pan to browse, tap for details`
+        ? `${parts.join(" & ")} in ${activeRegionLabel()} — pan to browse, tap for details`
         : "Browse sample routes or discover cities, parks, trails, and landmarks on the map";
     }
     return;
@@ -881,7 +916,8 @@ function syncRouteControlsVisibility() {
 }
 
 function enterExploreMode(options = {}) {
-  const { dismissWelcome = true, flyToEurope = true } = options;
+  const { dismissWelcome = true } = options;
+  const flyToRegion = options.flyToRegion ?? options.flyToEurope ?? true;
 
   if (!state.exploreCities) {
     setExploreCities(true);
@@ -906,8 +942,9 @@ function enterExploreMode(options = {}) {
     setPanelCollapsed(true);
   }
 
-  if (flyToEurope && !hasActiveJourney()) {
-    map.flyTo(DEFAULT_MAP_VIEW.center, DEFAULT_MAP_VIEW.zoom, { duration: 0.9 });
+  if (flyToRegion && !hasActiveJourney()) {
+    const region = getMapRegionConfig();
+    map.flyTo(region.center, region.zoom, { duration: 0.9 });
   }
 
   showMapExploreHint();
@@ -922,7 +959,7 @@ function showMapExploreHint(options = {}) {
   const hint = document.getElementById("mapHintText");
   if (hint) {
     hint.textContent =
-      "Zoom out for country outlines. Zoom in, then tap a city, park, trail, or landmark marker for details.";
+      `Exploring ${activeRegionLabel()}. Hover Regional maps to preview another overlay; zoom in, then tap a city, park, trail, or landmark marker.`;
   }
   mapHintBar.hidden = false;
   layoutRoot?.classList.add("map-hint-visible");
@@ -1358,22 +1395,43 @@ function styleCountryRegion(feature) {
   };
 }
 
-async function loadCountryRegionsGeo() {
-  if (countryRegionsGeo) {
-    return countryRegionsGeo;
+function isExploreActive() {
+  return state.exploreCities || state.exploreParks || state.exploreHikes || state.explorePoi;
+}
+
+function getMapRegionConfig(regionId = state.activeRegionId) {
+  return mapRegionConfig[regionId] || mapRegionConfig[DEFAULT_REGION_ID];
+}
+
+function activeRegionLabel() {
+  return getMapRegionConfig().label;
+}
+
+function displayedCountryRegionId() {
+  return state.previewRegionId || state.activeRegionId || DEFAULT_REGION_ID;
+}
+
+async function loadCountryRegionsGeo(regionId = displayedCountryRegionId()) {
+  const config = getMapRegionConfig(regionId);
+  const cacheKey = config.id;
+  if (countryRegionsGeoCache.has(cacheKey)) {
+    return countryRegionsGeoCache.get(cacheKey);
   }
-  const response = await fetch("./Trip/geo/europe-countries.geojson");
+  const response = await fetch(config.countriesGeojson);
   if (!response.ok) {
-    throw new Error("Could not load country borders.");
+    throw new Error(`Could not load ${config.label} country borders.`);
   }
-  countryRegionsGeo = await response.json();
-  return countryRegionsGeo;
+  const geo = await response.json();
+  countryRegionsGeoCache.set(cacheKey, geo);
+  return geo;
 }
 
 function syncCountryRegionsLayer() {
   const zoom = map.getZoom();
+  const regionId = displayedCountryRegionId();
+  const region = getMapRegionConfig(regionId);
   const showBorders =
-    (state.exploreCities || state.exploreParks || state.exploreHikes || state.explorePoi) && zoom <= 8;
+    Boolean(state.previewRegionId) || (isExploreActive() && zoom <= region.countryOverlayMaxZoom);
 
   if (!showBorders) {
     if (countryRegionsLayer && map.hasLayer(countryRegionsLayer)) {
@@ -1382,7 +1440,8 @@ function syncCountryRegionsLayer() {
     return;
   }
 
-  if (!countryRegionsLayer || !countryRegionsGeo) {
+  if (!countryRegionsLayer || countryRegionsLayerRegionId !== regionId) {
+    void buildCountryRegionsLayer(regionId);
     return;
   }
 
@@ -1397,9 +1456,13 @@ function syncCountryRegionsLayer() {
   });
 }
 
-async function buildCountryRegionsLayer() {
+async function buildCountryRegionsLayer(regionId = displayedCountryRegionId()) {
+  const token = ++countryRegionsBuildToken;
   try {
-    const geo = await loadCountryRegionsGeo();
+    const geo = await loadCountryRegionsGeo(regionId);
+    if (token !== countryRegionsBuildToken || displayedCountryRegionId() !== regionId) {
+      return;
+    }
     if (countryRegionsLayer) {
       map.removeLayer(countryRegionsLayer);
     }
@@ -1408,6 +1471,7 @@ async function buildCountryRegionsLayer() {
       style: styleCountryRegion,
       interactive: false
     });
+    countryRegionsLayerRegionId = regionId;
     syncCountryRegionsLayer();
   } catch (error) {
     console.warn("Country borders not loaded:", error);
@@ -1416,10 +1480,236 @@ async function buildCountryRegionsLayer() {
 
 async function initCountryBorders() {
   try {
-    await buildCountryRegionsLayer();
+    await buildCountryRegionsLayer(state.activeRegionId);
   } catch (error) {
     console.warn("Country borders not loaded:", error);
   }
+}
+
+function refreshActiveExploreLayers() {
+  syncCountryRegionsLayer();
+  if (state.exploreCities) {
+    if (!cityCatalogLayer && cityCatalog) {
+      buildCityCatalogLayer();
+    }
+    if (cityCatalogLayer && !map.hasLayer(cityCatalogLayer)) {
+      cityCatalogLayer.addTo(map);
+    }
+    void refreshCityCatalogMarkers();
+  }
+  if (state.exploreParks) {
+    if (!parkCatalogLayer && parkCatalog) {
+      buildParkCatalogLayer();
+    }
+    if (parkCatalogLayer && !map.hasLayer(parkCatalogLayer)) {
+      parkCatalogLayer.addTo(map);
+    }
+    void refreshParkCatalogMarkers();
+  }
+  if (state.exploreHikes) {
+    if (!hikeCatalogLayer && hikeCatalog) {
+      buildHikeCatalogLayer();
+    }
+    if (hikeCatalogLayer && !map.hasLayer(hikeCatalogLayer)) {
+      hikeCatalogLayer.addTo(map);
+    }
+    void refreshHikeCatalogMarkers();
+  }
+  if (state.explorePoi) {
+    if (!poiCatalogLayer && poiCatalog) {
+      buildPoiCatalogLayer();
+    }
+    if (poiCatalogLayer && !map.hasLayer(poiCatalogLayer)) {
+      poiCatalogLayer.addTo(map);
+    }
+    void refreshPoiCatalogMarkers();
+  }
+}
+
+function clearRegionalCatalogMarkers() {
+  clearCityCatalogMarkers();
+  clearParkCatalogMarkers();
+  clearHikeCatalogMarkers();
+  clearPoiCatalogMarkers();
+  activeCityCatalogId = null;
+  activeParkCatalogId = null;
+  activeHikeCatalogId = null;
+  activePoiCatalogId = null;
+  clearActiveHikeRoute();
+}
+
+function renderRegionalMapSwitcher() {
+  const container = document.getElementById("regionalMapSwitcher");
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = Object.entries(mapRegionConfig)
+    .map(([key, item]) => {
+      const active = state.activeRegionId === key;
+      const preview = state.previewRegionId === key;
+      return `
+        <button
+          type="button"
+          class="layer-chip layer-chip--region"
+          data-region-map="${key}"
+          data-active="${String(active)}"
+          data-preview="${String(preview)}"
+          aria-pressed="${String(active)}"
+          title="Preview ${item.label} country overlay; click to explore this region"
+        >${item.shortLabel || item.label}</button>
+      `;
+    })
+    .join("");
+}
+
+function previewRegionalMap(regionId) {
+  if (!mapRegionConfig[regionId]) {
+    return;
+  }
+  state.previewRegionId = regionId;
+  mapEl?.classList.add("region-preview-on");
+  renderRegionalMapSwitcher();
+  void buildCountryRegionsLayer(regionId);
+}
+
+function clearRegionalMapPreview(regionId = null) {
+  if (regionId && state.previewRegionId !== regionId) {
+    return;
+  }
+  if (!state.previewRegionId) {
+    return;
+  }
+  state.previewRegionId = null;
+  mapEl?.classList.remove("region-preview-on");
+  renderRegionalMapSwitcher();
+  syncCountryRegionsLayer();
+}
+
+async function setActiveMapRegion(regionId, options = {}) {
+  const { flyToRegion = true } = options;
+  const config = mapRegionConfig[regionId];
+  if (!config) {
+    return;
+  }
+
+  const token = ++activeRegionLoadToken;
+  state.activeRegionId = regionId;
+  state.previewRegionId = null;
+  mapEl?.classList.remove("region-preview-on");
+  mapSearchCountries = [];
+  cityCountryPopStats = null;
+  cityCatalog = null;
+  hikeCatalog = null;
+  parkCatalog = null;
+  poiCatalog = null;
+  clearRegionalCatalogMarkers();
+  closeCitySearchResults();
+  renderRegionalMapSwitcher();
+  renderExploreCitiesToggle();
+  renderExploreParksToggle();
+  renderExploreHikesToggle();
+  renderExplorePoisToggle();
+  updateHudJourneyState();
+
+  const [nextCity, nextHike, nextPark, nextPoi] = await Promise.all([
+    loadCityRegion(regionId).catch((error) => {
+      console.warn(`${config.label} city catalog not loaded:`, error);
+      return null;
+    }),
+    loadHikeRegion(regionId).catch((error) => {
+      console.warn(`${config.label} hike catalog not loaded:`, error);
+      return null;
+    }),
+    loadParkRegion(regionId).catch((error) => {
+      console.warn(`${config.label} park catalog not loaded:`, error);
+      return null;
+    }),
+    loadPoiRegion(regionId).catch((error) => {
+      console.warn(`${config.label} POI catalog not loaded:`, error);
+      return null;
+    })
+  ]);
+
+  if (token !== activeRegionLoadToken) {
+    return;
+  }
+
+  cityCatalog = nextCity;
+  hikeCatalog = nextHike;
+  parkCatalog = nextPark;
+  poiCatalog = nextPoi;
+
+  renderExploreCitiesToggle();
+  renderExploreParksToggle();
+  renderExploreHikesToggle();
+  renderExplorePoisToggle();
+
+  if (cityCatalog) {
+    try {
+      cityCountryPopStats = await fetchCountryPopStats(cityCatalog.id);
+    } catch (error) {
+      console.warn("Country population stats not loaded:", error);
+    }
+    try {
+      mapSearchCountries = await fetchCountries(cityCatalog.id);
+    } catch (error) {
+      console.warn("Country search list not loaded:", error);
+    }
+  }
+
+  if (token !== activeRegionLoadToken) {
+    return;
+  }
+
+  await buildCountryRegionsLayer(regionId);
+  refreshActiveExploreLayers();
+  if (flyToRegion && !hasActiveJourney()) {
+    map.flyTo(config.center, config.zoom, { duration: 0.75 });
+  }
+  updateHudJourneyState();
+}
+
+function setupRegionalMapSwitcher() {
+  const container = document.getElementById("regionalMapSwitcher");
+  if (!container || container.dataset.regionsBound === "true") {
+    return;
+  }
+  container.dataset.regionsBound = "true";
+  container.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (!button) {
+      return;
+    }
+    void setActiveMapRegion(button.dataset.regionMap);
+  });
+  container.addEventListener("mouseover", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (!button || !container.contains(button)) {
+      return;
+    }
+    previewRegionalMap(button.dataset.regionMap);
+  });
+  container.addEventListener("mouseout", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (!button || button.contains(event.relatedTarget)) {
+      return;
+    }
+    clearRegionalMapPreview(button.dataset.regionMap);
+  });
+  container.addEventListener("focusin", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (button) {
+      previewRegionalMap(button.dataset.regionMap);
+    }
+  });
+  container.addEventListener("focusout", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (button) {
+      clearRegionalMapPreview(button.dataset.regionMap);
+    }
+  });
+  renderRegionalMapSwitcher();
 }
 
 const COUNTRY_FLAG_CODES = {
@@ -1465,7 +1755,9 @@ const COUNTRY_FLAG_CODES = {
   "North Macedonia": "mk",
   Luxembourg: "lu",
   Monaco: "mc",
-  Malta: "mt"
+  Malta: "mt",
+  Australia: "au",
+  "New Zealand": "nz"
 };
 
 function countryFlagUrl(country) {
@@ -2780,12 +3072,12 @@ function scheduleCitySearch(query) {
   setCitySearchLoading(true);
   citySearchDebounceTimer = window.setTimeout(async () => {
     const fetchId = ++citySearchFetchId;
-    const regionId = cityCatalog?.id || "europe";
+    const regionId = cityCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
 
     try {
-      const hikeRegionId = hikeCatalog?.id || "europe";
-      const parkRegionId = parkCatalog?.id || "europe";
-      const poiRegionId = poiCatalog?.id || "europe";
+      const hikeRegionId = hikeCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
+      const parkRegionId = parkCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
+      const poiRegionId = poiCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
       const [placeResults, parkHits, hikeHits, poiHits] = await Promise.all([
         searchPlaces(trimmed, {
           regionId,
@@ -3603,6 +3895,8 @@ function renderExploreCitiesToggle() {
 
   const count = cityCatalog?.count || 0;
   const active = state.exploreCities === true;
+  const disabled = !cityCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -3610,7 +3904,8 @@ function renderExploreCitiesToggle() {
       class="layer-chip layer-chip--explore"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Show European city markers on the map"
+      ${disabled ? "disabled" : ""}
+      title="Show ${escapeAttr(regionLabel)} city markers on the map"
     >Cities${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExploreCitiesUi();
@@ -3632,7 +3927,7 @@ function setupExploreCitiesToggle() {
 
 async function initCityCatalog() {
   try {
-    cityCatalog = await loadCityRegion("europe");
+    cityCatalog = await loadCityRegion(state.activeRegionId);
     renderExploreCitiesToggle();
     await initCountryBorders();
     try {
@@ -3978,7 +4273,7 @@ function openHikeStory(detail, props = {}) {
   const title = resolved.name || props.name || "Trail";
   const country = resolved.country || props.country || "";
   const difficulty = formatHikeDifficultyLabel(resolved.difficulty || props.difficulty);
-  const summary = resolved.summary || resolved.tagline || props.tagline || "European hiking route from OpenStreetMap.";
+  const summary = resolved.summary || resolved.tagline || props.tagline || `${activeRegionLabel()} hiking route from OpenStreetMap.`;
 
   hikeStoryCloseGeneration += 1;
   if (hikeStoryCloseTimer) {
@@ -4030,7 +4325,7 @@ function openHikeStory(detail, props = {}) {
     tipsEl.innerHTML = buildHikeTipsHtml(resolved);
   }
   if (countryEl) {
-    countryEl.textContent = country || "Europe";
+    countryEl.textContent = country || activeRegionLabel();
   }
   if (creditEl) {
     creditEl.textContent = `Route geometry: ${resolved.source || "OpenStreetMap"}. Always verify conditions locally.`;
@@ -4682,6 +4977,8 @@ function renderExploreParksToggle() {
 
   const count = parkCatalog?.count || 0;
   const active = state.exploreParks === true;
+  const disabled = !parkCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -4689,7 +4986,8 @@ function renderExploreParksToggle() {
       class="layer-chip layer-chip--parks"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Show European national parks — tap for photos, biodiversity, and visitor tips"
+      ${disabled ? "disabled" : ""}
+      title="Show ${escapeAttr(regionLabel)} national parks — tap for photos, biodiversity, and visitor tips"
     >Parks${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExploreParksUi();
@@ -4711,7 +5009,7 @@ function setupExploreParksToggle() {
 
 async function initParkCatalog() {
   try {
-    parkCatalog = await loadParkRegion("europe");
+    parkCatalog = await loadParkRegion(state.activeRegionId);
     renderExploreParksToggle();
   } catch (error) {
     console.warn("Park catalog not loaded:", error);
@@ -4956,6 +5254,8 @@ function renderExplorePoisToggle() {
 
   const count = poiCatalog?.count || 0;
   const active = state.explorePoi === true;
+  const disabled = !poiCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -4963,7 +5263,8 @@ function renderExplorePoisToggle() {
       class="layer-chip layer-chip--poi"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Historic sites, fortresses, famous mountains, and landmarks — purple markers"
+      ${disabled ? "disabled" : ""}
+      title="${escapeAttr(regionLabel)} historic sites, famous mountains, and landmarks — purple markers"
     >Landmarks${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExplorePoiUi();
@@ -4985,7 +5286,7 @@ function setupExplorePoisToggle() {
 
 async function initPoiCatalog() {
   try {
-    poiCatalog = await loadPoiRegion("europe");
+    poiCatalog = await loadPoiRegion(state.activeRegionId);
     renderExplorePoisToggle();
   } catch (error) {
     console.warn("POI catalog not loaded:", error);
@@ -5095,6 +5396,8 @@ function renderExploreHikesToggle() {
 
   const count = hikeCatalog?.count || 0;
   const active = state.exploreHikes === true;
+  const disabled = !hikeCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -5102,7 +5405,8 @@ function renderExploreHikesToggle() {
       class="layer-chip layer-chip--hikes"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Show European hiking trails — tap for route and trail details"
+      ${disabled ? "disabled" : ""}
+      title="Show ${escapeAttr(regionLabel)} hiking trails — tap for route and trail details"
     >Trails${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExploreHikesUi();
@@ -5124,7 +5428,7 @@ function setupExploreHikesToggle() {
 
 async function initHikeCatalog() {
   try {
-    hikeCatalog = await loadHikeRegion("europe");
+    hikeCatalog = await loadHikeRegion(state.activeRegionId);
     renderExploreHikesToggle();
   } catch (error) {
     console.warn("Hike catalog not loaded:", error);
@@ -7353,7 +7657,7 @@ function setupWelcomeAndExplore() {
       syncExploreHudButton();
       return;
     }
-    enterExploreMode({ dismissWelcome: true, flyToEurope: !hasActiveJourney() });
+    enterExploreMode({ dismissWelcome: true, flyToRegion: !hasActiveJourney() });
   });
 
   setupMapHintBar();
@@ -8938,12 +9242,13 @@ async function runBuilderSearch(query) {
     return;
   }
   const token = ++builderState.searchToken;
+  const regionId = state.activeRegionId || DEFAULT_REGION_ID;
   try {
     const [cityHits, parkHits, hikeHits, poiHits] = await Promise.all([
-      searchPlaces(trimmed, { regionId: "europe", countries: mapSearchCountries, cityLimit: 6, countryLimit: 0 }).catch(() => []),
-      searchParks(trimmed, { regionId: "europe", limit: 4 }).catch(() => []),
-      searchHikes(trimmed, { regionId: "europe", limit: 4 }).catch(() => []),
-      searchPois(trimmed, { regionId: "europe", limit: 4 }).catch(() => []),
+      searchPlaces(trimmed, { regionId, countries: mapSearchCountries, cityLimit: 6, countryLimit: 0 }).catch(() => []),
+      searchParks(trimmed, { regionId, limit: 4 }).catch(() => []),
+      searchHikes(trimmed, { regionId, limit: 4 }).catch(() => []),
+      searchPois(trimmed, { regionId, limit: 4 }).catch(() => []),
     ]);
     if (token !== builderState.searchToken) return;
     const placeRows = (cityHits || [])
@@ -9139,7 +9444,7 @@ async function mintBuilderJourney() {
     author: document.getElementById("builderAuthor")?.value || "",
     days: Number(document.getElementById("builderDays")?.value || builderState.stops.length),
     emoji: "🧭",
-    continent: "europe",
+    continent: state.activeRegionId || DEFAULT_REGION_ID,
     stops: builderState.stops,
     highlights: builderState.stops.slice(0, 4).map((stop) =>
       [stop.name, stop.country].filter(Boolean).join(", ")
@@ -9323,6 +9628,7 @@ function renderMintedJourneys() {
 
 function setupFilters() {
   setupMapLayers();
+  setupRegionalMapSwitcher();
   renderBasemapSwitcher();
   renderOverlaySwitcher();
   setupExploreCitiesToggle();

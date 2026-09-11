@@ -10,6 +10,12 @@
       "label": "Europe",
       "count": 96,
       "legacyGeojson": "./Trip/hikes/europe/hikes-index.geojson"
+    },
+    {
+      "id": "oceania",
+      "label": "Oceania",
+      "count": 11,
+      "legacyGeojson": "./Trip/hikes/oceania/hikes-index.geojson"
     }
   ]
 }
