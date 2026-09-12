@@ -96,17 +96,19 @@ const mapRegionConfig = {
     zoom: 4,
     previewZoom: 4,
     countryOverlayMaxZoom: 8,
+    viewBounds: { south: 34, west: -25, north: 72, east: 45 },
     countriesGeojson: "./Trip/geo/europe-countries.geojson"
   },
   oceania: {
     id: "oceania",
     label: "Oceania",
     shortLabel: "Oceania",
-    center: [-29, 146],
-    zoom: 4,
-    previewZoom: 4,
+    center: [-18, 165],
+    zoom: 3,
+    previewZoom: 3,
     countryOverlayMaxZoom: 7,
-    countriesGeojson: "./Trip/geo/oceania-countries.geojson"
+    viewBounds: { south: -55, west: 110, north: 20, east: -120 },
+    countriesGeojson: "./Trip/geo/oceania-countries.geojson?v=20260912"
   }
 };
 const DEFAULT_MAP_VIEW = {
@@ -1407,8 +1409,43 @@ function activeRegionLabel() {
   return getMapRegionConfig().label;
 }
 
+function normalizeLongitude(lng) {
+  return ((((Number(lng) || 0) + 180) % 360) + 360) % 360 - 180;
+}
+
+function longitudeInRange(lng, west, east) {
+  const normalized = normalizeLongitude(lng);
+  const normalizedWest = normalizeLongitude(west);
+  const normalizedEast = normalizeLongitude(east);
+  if (normalizedWest <= normalizedEast) {
+    return normalized >= normalizedWest && normalized <= normalizedEast;
+  }
+  return normalized >= normalizedWest || normalized <= normalizedEast;
+}
+
+function mapCenterIsInsideRegion(region) {
+  const bounds = region?.viewBounds;
+  if (!bounds) {
+    return false;
+  }
+  const center = map.getCenter();
+  return (
+    center.lat >= bounds.south &&
+    center.lat <= bounds.north &&
+    longitudeInRange(center.lng, bounds.west, bounds.east)
+  );
+}
+
+function viewedMapRegionId() {
+  const activeRegion = getMapRegionConfig();
+  if (mapCenterIsInsideRegion(activeRegion)) {
+    return activeRegion.id;
+  }
+  return Object.values(mapRegionConfig).find(mapCenterIsInsideRegion)?.id || null;
+}
+
 function displayedCountryRegionId() {
-  return state.previewRegionId || state.activeRegionId || DEFAULT_REGION_ID;
+  return state.previewRegionId || viewedMapRegionId() || state.activeRegionId || DEFAULT_REGION_ID;
 }
 
 async function loadCountryRegionsGeo(regionId = displayedCountryRegionId()) {
@@ -1431,7 +1468,9 @@ function syncCountryRegionsLayer() {
   const regionId = displayedCountryRegionId();
   const region = getMapRegionConfig(regionId);
   const showBorders =
-    Boolean(state.previewRegionId) || (isExploreActive() && zoom <= region.countryOverlayMaxZoom);
+    Boolean(state.previewRegionId) ||
+    (mapCenterIsInsideRegion(region) && zoom <= region.countryOverlayMaxZoom) ||
+    (isExploreActive() && zoom <= region.countryOverlayMaxZoom);
 
   if (!showBorders) {
     if (countryRegionsLayer && map.hasLayer(countryRegionsLayer)) {
@@ -1456,6 +1495,14 @@ function syncCountryRegionsLayer() {
   });
 }
 
+function bindRegionalMapViewEvents() {
+  if (map._regionalMapViewEventsBound) {
+    return;
+  }
+  map._regionalMapViewEventsBound = true;
+  map.on("moveend zoomend", syncCountryRegionsLayer);
+}
+
 async function buildCountryRegionsLayer(regionId = displayedCountryRegionId()) {
   const token = ++countryRegionsBuildToken;
   try {
@@ -1469,7 +1516,8 @@ async function buildCountryRegionsLayer(regionId = displayedCountryRegionId()) {
     countryRegionsLayer = L.geoJSON(geo, {
       pane: "countryRegions",
       style: styleCountryRegion,
-      interactive: false
+      interactive: false,
+      smoothFactor: 0.25
     });
     countryRegionsLayerRegionId = regionId;
     syncCountryRegionsLayer();
@@ -9666,6 +9714,7 @@ function setupFilters() {
   setupMapLayers();
   setupMapControlsDrawer();
   setupRegionalMapSwitcher();
+  bindRegionalMapViewEvents();
   renderBasemapSwitcher();
   renderOverlaySwitcher();
   setupExploreCitiesToggle();
