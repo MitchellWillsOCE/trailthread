@@ -14,7 +14,7 @@
     {
       "id": "oceania",
       "label": "Oceania",
-      "count": 11,
+      "count": 19,
       "legacyGeojson": "./Trip/hikes/oceania/hikes-index.geojson"
     }
   ]

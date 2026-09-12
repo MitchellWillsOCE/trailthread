@@ -220,6 +220,166 @@
         "tier": "regional",
         "tagline": "Glacial valley walk to Aoraki Mount Cook viewpoints"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.98,
+          -43.1884
+        ]
+      },
+      "properties": {
+        "id": "three-capes-track-au",
+        "name": "Three Capes Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 48,
+        "popularity": 91,
+        "tier": "major",
+        "tagline": "Clifftop Tasman Peninsula walk with dolerite sea stacks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.55760000000001,
+          -33.480599999999995
+        ]
+      },
+      "properties": {
+        "id": "bibbulmun-track-au",
+        "name": "Bibbulmun Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 1000,
+        "popularity": 88,
+        "tier": "major",
+        "tagline": "Western Australia end-to-end walk from Perth hills to Albany"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.61880000000002,
+          -33.9668
+        ]
+      },
+      "properties": {
+        "id": "heysen-trail-au",
+        "name": "Heysen Trail",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 1200,
+        "popularity": 83,
+        "tier": "regional",
+        "tagline": "South Australian traverse from Cape Jervis to the Flinders Ranges"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.572,
+          -36.82
+        ]
+      },
+      "properties": {
+        "id": "australian-alps-walking-track-au",
+        "name": "Australian Alps Walking Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 655,
+        "popularity": 82,
+        "tier": "regional",
+        "tagline": "High-country traverse through Victoria, New South Wales, and ACT"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.2955,
+          -14.215499999999999
+        ]
+      },
+      "properties": {
+        "id": "jatbula-trail-au",
+        "name": "Jatbula Trail",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 62,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Top End escarpment walk from Nitmiluk Gorge to Edith Falls"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.24325,
+          -18.35
+        ]
+      },
+      "properties": {
+        "id": "thorsborne-trail-au",
+        "name": "Thorsborne Trail",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 32,
+        "popularity": 87,
+        "tier": "regional",
+        "tagline": "Remote Hinchinbrook Island rainforest, beaches, and peaks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.30440000000002,
+          -36.452000000000005
+        ]
+      },
+      "properties": {
+        "id": "kosciuszko-main-range-walk-au",
+        "name": "Kosciuszko Main Range Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 22,
+        "popularity": 89,
+        "tier": "regional",
+        "tagline": "Alpine loop over Australia's highest summit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.29833333333332,
+          -42.13333333333333
+        ]
+      },
+      "properties": {
+        "id": "wineglass-bay-lookout-track-au",
+        "name": "Wineglass Bay Lookout Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Short Freycinet climb to the classic Wineglass Bay view"
+      }
     }
   ]
 }

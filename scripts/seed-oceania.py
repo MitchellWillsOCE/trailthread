@@ -606,7 +606,8 @@ def seed_hikes(seed: dict) -> None:
 
 
 def seed_auxiliary_files() -> None:
-    write_json(REGION_GEOJSON, OCEANIA_COUNTRY_GEOJSON)
+    if not REGION_GEOJSON.is_file():
+        write_json(REGION_GEOJSON, OCEANIA_COUNTRY_GEOJSON)
 
     populations = read_json(COUNTRY_POPULATIONS, {"schemaVersion": 1, "populations": {}})
     populations.setdefault("populations", {})

@@ -418,6 +418,182 @@
         "tagline": "Lakeside mountain town for day hikes and Mount Aspiring access",
         "enriched": 1
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.2359,
+          -17.9614
+        ]
+      },
+      "properties": {
+        "id": "broome-au",
+        "name": "Broome",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 14000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Kimberley beach town of red cliffs, pearls, and sunset camels",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.1235,
+          -21.9319
+        ]
+      },
+      "properties": {
+        "id": "exmouth-au",
+        "name": "Exmouth",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Ningaloo Reef base for whale sharks, beaches, and canyon country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.0739,
+          -33.9537
+        ]
+      },
+      "properties": {
+        "id": "margaret-river-au",
+        "name": "Margaret River",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 9000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Wine, surf, karri forest, caves, and the Cape to Cape coast",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.7169,
+          -20.2675
+        ]
+      },
+      "properties": {
+        "id": "airlie-beach-au",
+        "name": "Airlie Beach",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 12000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Whitsundays harbour town for island sailing and reef flights",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.3119,
+          -33.7128
+        ]
+      },
+      "properties": {
+        "id": "katoomba-au",
+        "name": "Katoomba",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 8000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Blue Mountains town for sandstone lookouts and canyon walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.8169,
+          -19.2589
+        ]
+      },
+      "properties": {
+        "id": "townsville-au",
+        "name": "Townsville",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 180000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Dry tropics city for Magnetic Island and reef-country access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.1441,
+          -41.4332
+        ]
+      },
+      "properties": {
+        "id": "launceston-au",
+        "name": "Launceston",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 90000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Northern Tasmania base for Cataract Gorge and Tamar Valley",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.4667,
+          -16.4833
+        ]
+      },
+      "properties": {
+        "id": "port-douglas-au",
+        "name": "Port Douglas",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 4000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tropical resort town between reef boats and Daintree rainforest",
+        "enriched": 1
+      }
     }
   ]
 }
