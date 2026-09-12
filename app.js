@@ -1563,13 +1563,28 @@ function renderRegionalMapSwitcher() {
     .join("");
 }
 
+function syncRegionalMapSwitcherState() {
+  const container = document.getElementById("regionalMapSwitcher");
+  if (!container) {
+    return;
+  }
+  container.querySelectorAll("button[data-region-map]").forEach((button) => {
+    const regionId = button.dataset.regionMap;
+    const active = state.activeRegionId === regionId;
+    const preview = state.previewRegionId === regionId;
+    button.dataset.active = String(active);
+    button.dataset.preview = String(preview);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
 function previewRegionalMap(regionId) {
   if (!mapRegionConfig[regionId]) {
     return;
   }
   state.previewRegionId = regionId;
   mapEl?.classList.add("region-preview-on");
-  renderRegionalMapSwitcher();
+  syncRegionalMapSwitcherState();
   void buildCountryRegionsLayer(regionId);
 }
 
@@ -1582,7 +1597,7 @@ function clearRegionalMapPreview(regionId = null) {
   }
   state.previewRegionId = null;
   mapEl?.classList.remove("region-preview-on");
-  renderRegionalMapSwitcher();
+  syncRegionalMapSwitcherState();
   syncCountryRegionsLayer();
 }
 
@@ -1710,6 +1725,27 @@ function setupRegionalMapSwitcher() {
     }
   });
   renderRegionalMapSwitcher();
+}
+
+function setupMapControlsDrawer() {
+  const drawer = document.getElementById("mapControlsDrawer");
+  const hint = document.getElementById("mapControlsHint");
+  if (!drawer || drawer.dataset.controlsBound === "true") {
+    return;
+  }
+  drawer.dataset.controlsBound = "true";
+  drawer.open = false;
+  const syncHint = () => {
+    if (hint) {
+      hint.textContent = drawer.open ? "Click to collapse" : "Click to expand";
+    }
+  };
+  drawer.addEventListener("toggle", syncHint);
+  syncHint();
+  requestAnimationFrame(() => {
+    drawer.open = false;
+    syncHint();
+  });
 }
 
 const COUNTRY_FLAG_CODES = {
@@ -9628,6 +9664,7 @@ function renderMintedJourneys() {
 
 function setupFilters() {
   setupMapLayers();
+  setupMapControlsDrawer();
   setupRegionalMapSwitcher();
   renderBasemapSwitcher();
   renderOverlaySwitcher();

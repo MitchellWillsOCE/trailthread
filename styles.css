@@ -44,13 +44,6 @@ html {
   text-size-adjust: 100%;
 }
 
-@media (min-width: 981px) {
-  .map-controls-drawer[open] .map-controls-card,
-  .map-controls-drawer .map-controls-card {
-    display: flex;
-  }
-}
-
 body {
   margin: 0;
   min-height: 100dvh;
@@ -1731,7 +1724,21 @@ body.hike-story-open .map-controls .route-legend {
 }
 
 .map-controls-drawer__summary {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(8, 19, 31, 0.1);
+  cursor: pointer;
+  list-style: none;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .map-controls-drawer__summary::-webkit-details-marker {
@@ -1742,6 +1749,7 @@ body.hike-story-open .map-controls .route-legend {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 8px;
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid var(--line);
@@ -1749,6 +1757,43 @@ body.hike-story-open .map-controls .route-legend {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(8, 19, 31, 0.14);
   max-width: 100%;
+}
+
+.map-controls-drawer:not([open]) .map-controls-card {
+  display: none;
+}
+
+.map-controls-drawer__label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.map-controls-drawer__hint {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.map-controls-drawer__chev {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #64748b;
+  border-bottom: 2px solid #64748b;
+  transform: rotate(45deg);
+  transition: transform var(--dur-fast) ease;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.map-controls-drawer[open] .map-controls-drawer__chev {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.map-controls-drawer[open] .map-controls-drawer__hint {
+  color: #0f766e;
 }
 
 .map-controls-card .control-group:last-of-type {
