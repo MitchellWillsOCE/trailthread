@@ -226,12 +226,12 @@ function queryFeaturesGeojson(regionId, west, south, east, north, zoom, countryC
     .filter((feature) => {
       const row = featureToRow(feature);
       if (isParkPlaceName(row.name)) return false;
-      if (!tiers.has(row.tier)) return false;
+      if (!tiers.has(row.tier) && !(tiers.has("major") && row.category === "capital")) return false;
       if (countryCc && row.cc !== countryCc) return false;
       const { lat, lng } = row;
       return lat >= south && lat <= north && lng >= west && lng <= east;
     })
-    .slice(0, 900)
+    .slice(0, 220)
     .map((feature) => {
       const row = featureToRow(feature);
       return {
@@ -244,6 +244,7 @@ function queryFeaturesGeojson(regionId, west, south, east, north, zoom, countryC
           cc: row.cc,
           pop: row.pop,
           tier: row.tier,
+          category: row.category || "",
           tagline: row.tagline,
           enriched: cityEnrichedFlag(row),
         },
@@ -256,14 +257,15 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
   const tiers = tiersForZoom(zoom);
   const placeholders = tiers.map(() => "?").join(", ");
   const countryClause = countryCc ? " AND cc = ?" : "";
+  const includeCapitals = tiers.includes("major") ? " OR category = 'capital'" : "";
   const sql = `
     SELECT id, name, country, cc, lat, lng, pop, tier, category, locale, tagline, enriched
     FROM cities
     WHERE region_id = ?
       AND lat >= ? AND lat <= ?
       AND lng >= ? AND lng <= ?
-      AND tier IN (${placeholders})${countryClause}
-    LIMIT 900
+      AND (tier IN (${placeholders})${includeCapitals})${countryClause}
+    LIMIT 220
   `;
   const params = [regionId, south, north, west, east, ...tiers];
   if (countryCc) params.push(countryCc);

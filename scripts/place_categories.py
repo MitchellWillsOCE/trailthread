@@ -96,13 +96,23 @@ CAPITALS_BY_CC: dict[str, str] = {
     "SI": "ljubljana", "ES": "madrid", "SE": "stockholm", "CH": "bern",
     "TR": "ankara", "UA": "kyiv", "GB": "london", "VA": "vatican city",
     "XK": "pristina", "AM": "yerevan", "AZ": "baku", "GE": "tbilisi",
+    "FJ": "suva", "PG": "port moresby", "SB": "honiara", "VU": "port vila",
+    "NC": "noumea", "PF": "papeete", "WS": "apia", "AS": "pago pago",
+    "TO": "nuku alofa", "CK": "avarua", "NU": "alofi", "PW": "melekeok",
+    "GU": "hagatna", "MP": "garapan", "FM": "palikir", "MH": "majuro",
+    "KI": "bairiki", "NR": "yaren", "TV": "funafuti", "WF": "mata utu",
+    "NF": "kingston",
 }
 
 # Country codes that are unambiguously a single small island — every
 # settlement in them is tagged `island`. Larger island/archipelago
 # nations (GB, IE, IS) fall through to coastal/inland detection so
 # coastal capitals stay coastal.
-ISLAND_COUNTRY_CCS = {"MT", "CY"}
+ISLAND_COUNTRY_CCS = {
+    "MT", "CY",
+    "FJ", "VU", "SB", "NC", "PF", "WS", "AS", "TO", "CK", "NU",
+    "PW", "GU", "MP", "FM", "MH", "KI", "NR", "TV", "WF", "NF",
+}
 
 # Known island settlement names (lowercase, ASCII normalised) within
 # continental countries. Conservative list — better to miss than mis-tag.

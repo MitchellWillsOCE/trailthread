@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rome to Florence",
+        "mode": "train",
+        "day": "5",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            12.4964,
+            41.9028
+          ],
+          [
+            11.2558,
+            43.7696
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Florence to Venice",
+        "mode": "train",
+        "day": "8",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            11.2558,
+            43.7696
+          ],
+          [
+            12.3155,
+            45.4408
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rome",
+        "country": "Italy",
+        "stopType": "start",
+        "day": "1",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4964,
+          41.9028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Florence",
+        "country": "Italy",
+        "stopType": "city",
+        "day": "5",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2558,
+          43.7696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Venice",
+        "country": "Italy",
+        "stopType": "end",
+        "day": "8",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.3155,
+          45.4408
+        ]
+      }
+    }
+  ]
+}

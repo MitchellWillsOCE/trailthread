@@ -200,34 +200,61 @@
         <div id="welcomeOverlay" class="welcome-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
           <div class="welcome-overlay__backdrop" data-welcome-dismiss></div>
           <section class="welcome-card">
-            <p class="hud-kicker">Welcome</p>
-            <h1 id="welcomeTitle">Plan routes. Explore places.</h1>
+            <header class="welcome-brand">
+              <span class="welcome-brand__mark" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                  <circle cx="7" cy="21" r="2.4" fill="#0f766e"/>
+                  <circle cx="21" cy="7" r="2.4" fill="#ea580c"/>
+                  <path d="M8.2 19.2C10.6 14.4 14.2 12.2 19.6 8.6" stroke="#0f766e" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <p class="welcome-brand__name">Trailthread</p>
+            </header>
+            <h1 id="welcomeTitle">Follow the thread.</h1>
             <p class="welcome-lead">
-              Trailthread is a travel map for browsing multi-day routes, reading day-by-day stories, and discovering cities, national parks, and hiking trails—similar to a digital trip journal on a map.
+              A live map for multi-day journeys — sample routes with day-by-day notes, or wander cities, parks, and trails on your own.
             </p>
-            <ol class="welcome-steps">
-              <li>
-                <strong>Explore</strong>
-                <span>Turn on city, park, trail, and landmark layers in Map options—no journey required.</span>
-              </li>
-              <li>
-                <strong>Pick a journey</strong>
-                <span>Open a sample route to see the path, stops, and full itinerary.</span>
-              </li>
-              <li>
-                <strong>Read &amp; navigate</strong>
-                <span>Use Story and Stops tabs once a journey is loaded.</span>
-              </li>
-            </ol>
-            <div class="welcome-actions">
-              <button type="button" id="welcomeExploreBtn" class="welcome-btn welcome-btn--primary">
-                Explore
+
+            <div class="welcome-paths">
+              <button type="button" id="welcomeExploreBtn" class="welcome-path">
+                <span class="welcome-path__icon welcome-path__icon--explore" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M12 4v3M12 17v3M4 12h3M17 12h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="welcome-path__copy">
+                  <strong>Explore the map</strong>
+                  <span>Turn on cities, parks, trails, and landmarks — no journey required.</span>
+                </span>
               </button>
-              <button type="button" id="welcomeJourneysBtn" class="welcome-btn welcome-btn--secondary">
-                Browse journeys
+              <button type="button" id="welcomeJourneysBtn" class="welcome-path">
+                <span class="welcome-path__icon welcome-path__icon--journeys" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 7h10M5 12h14M5 17h8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <circle cx="18" cy="7" r="1.6" fill="currentColor"/>
+                    <circle cx="8" cy="17" r="1.6" fill="currentColor"/>
+                  </svg>
+                </span>
+                <span class="welcome-path__copy">
+                  <strong>Open a journey</strong>
+                  <span>Sample routes with stops, mapped paths, and written itineraries.</span>
+                </span>
               </button>
             </div>
-            <button type="button" class="welcome-skip" data-welcome-dismiss>Skip intro</button>
+
+            <div class="welcome-regions">
+              <p class="welcome-section-label">Look around</p>
+              <div class="welcome-region-row" id="welcomeRegionSwitcher" role="group" aria-label="Map region"></div>
+            </div>
+
+            <div class="welcome-featured" id="welcomeFeatured">
+              <p class="welcome-section-label">Or start a sample route</p>
+              <div class="welcome-featured__grid" id="welcomeFeaturedJourneys"></div>
+            </div>
+
+            <button type="button" class="welcome-skip" data-welcome-dismiss>Skip and stay on the map</button>
           </section>
         </div>
 

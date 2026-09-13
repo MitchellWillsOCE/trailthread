@@ -1,42 +1,31 @@
 {
   "Rome": {
     "country": "Italy",
-    "stay": "2 nights",
-    "general": "Historic core, layered neighbourhoods, and an easy first-day orientation loop before the rail leg south to Bari.",
+    "stay": "4 nights",
+    "tagline": "Historic core and the usual first Italian base",
+    "general": "Start here: the Forum and Colosseum, a neighbourhood evening, and one big indoor morning.",
     "activities": [
-      "Colosseum exterior walk",
-      "Trastevere food crawl",
-      "Sunset from Gianicolo"
+      "Colosseum and Forum",
+      "Trastevere evening",
+      "Vatican or Appian day"
     ],
     "tips": [
-      "Book Vatican timed entry if visiting",
-      "Use metro for cross-town hops",
-      "Carry cash for small trattorias"
+      "Book Vatican timed entry",
+      "August many Romans leave town"
     ],
-    "itinerary": "Days 1–2 — keep logistics light and focus on walkable districts near the centre.",
+    "itinerary": "Days 1–4 — walkable centre.",
     "photos": [
       {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?width=1200",
-        "caption": "Colosseum, Rome",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Forum-photos_taken_by_Hans_Hoffmann.jpg?width=1200",
-        "caption": "Roman Forum — Rome",
+        "caption": "Colosseum",
         "source": "Wikimedia Commons"
       },
       {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon_Rome_1.jpg?width=1200",
-        "caption": "Pantheon, Rome",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Rome%2C_Italy_by_Hodoyoshi-1.jpg/1280px-Rome%2C_Italy_by_Hodoyoshi-1.jpg",
-        "caption": "Rome, Italy by Hodoyoshi-1",
+        "caption": "Pantheon",
         "source": "Wikimedia Commons"
       }
-    ],
-    "tagline": "Colosseum exterior walk"
+    ]
   },
   "Naples": {
     "country": "Italy",
@@ -1779,46 +1768,26 @@
   },
   "Madrid": {
     "country": "Spain",
-    "stay": "2 nights",
-    "general": "Grand boulevards, world-class museums, and late-night tapas — Spain's energetic capital.",
+    "stay": "3 nights",
+    "tagline": "Prado, Retiro, and late dinners",
+    "general": "The AVE hub in the middle of the country — museums by day, tapas after 21:00.",
     "activities": [
-      "Prado Museum",
-      "Retiro park rowboats",
-      "La Latina tapas crawl"
+      "Prado or Reina Sofía",
+      "Retiro",
+      "La Latina tapas"
     ],
     "tips": [
-      "Book Prado timed entry",
-      "Dinner starts late — 21:00 is normal"
+      "Many kitchens open late",
+      "Toledo is an easy day trip"
     ],
-    "itinerary": "Days 4–5 — culture pause on the drive south.",
+    "itinerary": "Days 5–7 — the capital.",
     "photos": [
       {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Cristal%2C_Madrid%2C_Espa%C3%B1a%2C_2014-05-11%2C_DD_01.jpg?width=1200",
-        "caption": "Retiro Park, Madrid",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_Mayor_Madrid.jpg?width=1200",
-        "caption": "Plaza Mayor, Madrid",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/2019-06-22_RealMadrid20182019.jpg/1280px-2019-06-22_RealMadrid20182019.jpg",
-        "caption": "2019-06-22 RealMadrid20182019",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Madrid%2C_Spain_%28Unsplash_vw4-IpWQu94%29.jpg/1280px-Madrid%2C_Spain_%28Unsplash_vw4-IpWQu94%29.jpg",
-        "caption": "Madrid, Spain (Unsplash vw4-IpWQu94)",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Pro_Life_protest_Madrid_%287011612803%29.jpg/1280px-Pro_Life_protest_Madrid_%287011612803%29.jpg",
-        "caption": "Pro Life protest Madrid (7011612803)",
+        "caption": "Retiro Park",
         "source": "Wikimedia Commons"
       }
-    ],
-    "tagline": "Prado Museum"
+    ]
   },
   "Granada": {
     "country": "Spain",
@@ -1956,51 +1925,31 @@
   },
   "Tokyo": {
     "country": "Japan",
-    "stay": "3 nights",
-    "general": "Neon districts, shrine calm, and food obsession — start and end anchor of the cultural arc.",
+    "stay": "4 nights",
+    "tagline": "Neighbourhoods, rail, and the usual first Japan base",
+    "general": "Asakusa and Shibuya, a food street, and an optional Hakone day before the Shinkansen west.",
     "activities": [
-      "Senso-ji temple",
+      "Asakusa and Sensō-ji",
       "Shibuya crossing",
-      "Tsukiji outer market breakfast"
+      "Tsukiji outer or a neighbourhood ramen crawl"
     ],
     "tips": [
-      "Get Suica card for trains",
-      "Reserve teamLab if visiting"
+      "Suica/Pasmo on your phone",
+      "Hakone is the common extra night"
     ],
-    "itinerary": "Days 1 and 9 — bookend city with different neighbourhoods each time.",
+    "itinerary": "Days 1–4 — the capital.",
     "photos": [
       {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibuya_Crossing_2018.jpg?width=1200",
-        "caption": "Shibuya Crossing, Tokyo",
+        "caption": "Shibuya Crossing",
         "source": "Wikimedia Commons"
       },
       {
         "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sensoji_Temple_Tokyo_Skytree_View.jpg?width=1200",
-        "caption": "Senso-ji temple, Asakusa — Tokyo",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Mahsa_Salar%2C_Iranian_karateka_and_bronze_medalist_at_the_2006_SKIF_World_Karate_Championship_in_Tokyo%2C_Japan.jpg/1280px-Mahsa_Salar%2C_Iranian_karateka_and_bronze_medalist_at_the_2006_SKIF_World_Karate_Championship_in_Tokyo%2C_Japan.jpg",
-        "caption": "Mahsa Salar, Iranian karateka and bronze medalist at the 2006 SKIF World Karate Championship in Tokyo, Japan",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tokyo%2C_Japan_%28Unsplash_mEaYSkucTys%29.jpg/1280px-Tokyo%2C_Japan_%28Unsplash_mEaYSkucTys%29.jpg",
-        "caption": "Tokyo, Japan (Unsplash mEaYSkucTys)",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Tokyo_-_panoramio_-_sasikan_%285%29.jpg",
-        "caption": "Tokyo - panoramio - sasikan (5)",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Tokyo_-_panoramio_-_sasikan_%286%29.jpg",
-        "caption": "Tokyo - panoramio - sasikan (6)",
+        "caption": "Sensō-ji",
         "source": "Wikimedia Commons"
       }
-    ],
-    "tagline": "Senso-ji temple"
+    ]
   },
   "Tokyo Return": {
     "country": "Japan",
@@ -2149,49 +2098,557 @@
   "Osaka": {
     "country": "Japan",
     "stay": "2 nights",
-    "general": "Street-food capital with castle park — neon Dotonbori and friendly Kansai energy.",
+    "tagline": "Castle park and Dotonbori food",
+    "general": "Short hop from Kyoto. Street food, a castle park, and Nara if you have a spare day.",
     "activities": [
-      "Dotonbori takoyaki crawl",
       "Osaka Castle park",
-      "Kuromon market"
+      "Dotonbori",
+      "Nara day trip"
     ],
     "tips": [
-      "Try okonomiyaki in local joints",
-      "IC card works on most Kansai lines"
+      "KIX is the usual departure",
+      "Eat early or late to skip the worst queues"
     ],
-    "itinerary": "Days 6–7 — food-focused stay before return north.",
+    "itinerary": "Days 8–9 — food city.",
     "photos": [
       {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Buddhist_Temple_In_Old_Town_Osaka_%28254929875%29.jpeg/1280px-Buddhist_Temple_In_Old_Town_Osaka_%28254929875%29.jpeg",
-        "caption": "Buddhist Temple In Old Town Osaka",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Buddhist_Temple_In_Old_Town_Osaka_%28254929877%29.jpeg/1280px-Buddhist_Temple_In_Old_Town_Osaka_%28254929877%29.jpeg",
-        "caption": "Buddhist Temple In Old Town Osaka",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Osaka_Castle_%28218116207%29.jpeg/1280px-Osaka_Castle_%28218116207%29.jpeg",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Osaka_Castle_02bs5.jpg?width=1200",
         "caption": "Osaka Castle",
         "source": "Wikimedia Commons"
-      },
+      }
+    ]
+  },
+  "Sydney": {
+    "country": "Australia",
+    "stay": "3 nights",
+    "tagline": "Harbour ferries, coastal walks, and an easy first base",
+    "general": "Most Australia trips start here: Circular Quay, a ferry, a beach walk, and a day inland to the Blue Mountains.",
+    "activities": [
+      "Ferry to Manly",
+      "Bondi to Coogee walk",
+      "The Rocks and Opera House precinct"
+    ],
+    "tips": [
+      "Opal or contactless for trains and ferries",
+      "Swim between the flags"
+    ],
+    "itinerary": "Days 1–3 — keep the first days walkable around the harbour.",
+    "photos": [
       {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Osaka_Castle_Moat_%28218116215%29.jpeg/1280px-Osaka_Castle_Moat_%28218116215%29.jpeg",
-        "caption": "Osaka Castle Moat",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Harbour_Bridge_from_Circular_Quay.jpg?width=1200",
+        "caption": "Sydney Harbour",
         "source": "Wikimedia Commons"
       },
       {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Osaka_Restaurant_At_Night_%28254930029%29.jpeg/1280px-Osaka_Restaurant_At_Night_%28254930029%29.jpeg",
-        "caption": "Osaka Restaurant At Night",
-        "source": "Wikimedia Commons"
-      },
-      {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Street_In_Old_Town_Osaka_%28254929941%29.jpeg/1280px-Street_In_Old_Town_Osaka_%28254929941%29.jpeg",
-        "caption": "Street In Old Town Osaka",
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Opera_House_Sails.jpg?width=1200",
+        "caption": "Sydney Opera House",
         "source": "Wikimedia Commons"
       }
+    ]
+  },
+  "Katoomba": {
+    "country": "Australia",
+    "stay": "1–2 nights",
+    "tagline": "Three Sisters and Jamison Valley lookouts",
+    "general": "The usual Blue Mountains overnight from Sydney — cliff walks, Scenic World if you want the railway, and cool evenings.",
+    "activities": [
+      "Three Sisters lookout",
+      "Prince Henry Cliff Walk",
+      "Scenic World or a waterfall track"
     ],
-    "tagline": "Dotonbori takoyaki crawl"
+    "tips": [
+      "Train from Central is simpler than driving on weekends",
+      "Weather turns quickly on the escarpment"
+    ],
+    "itinerary": "Days 4–5 — mountains after the city.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Three_Sisters_Katoomba.jpg?width=1200",
+        "caption": "Three Sisters, Katoomba",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Canberra": {
+    "country": "Australia",
+    "stay": "1–2 nights",
+    "tagline": "Planned capital between Sydney and Melbourne",
+    "general": "A practical overnight on the inland drive: galleries, Parliament, and a lake circuit.",
+    "activities": [
+      "Australian War Memorial",
+      "Lake Burley Griffin",
+      "Parliamentary zone"
+    ],
+    "tips": [
+      "A car helps between precincts",
+      "Monday some museums close"
+    ],
+    "itinerary": "Days 6–7 — break the east-coast transfer.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canberra_from_Mount_Ainslie.jpg?width=1200",
+        "caption": "Canberra from Mount Ainslie",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Melbourne": {
+    "country": "Australia",
+    "stay": "3 nights",
+    "tagline": "Laneways, trams, and the jump-off for the Great Ocean Road",
+    "general": "Coffee, galleries, and a tram-shaped city before you point west along the coast.",
+    "activities": [
+      "Laneway walk",
+      "Tram around the loop",
+      "Day on the peninsula or in the Yarra Valley"
+    ],
+    "tips": [
+      "Myki for trams",
+      "Book Great Ocean Road tours if not self-driving"
+    ],
+    "itinerary": "Days 8–10 — city days before the coast.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flinders_Street_Station_Melbourne_2010.jpg?width=1200",
+        "caption": "Flinders Street Station",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Torquay": {
+    "country": "Australia",
+    "stay": "1–2 nights",
+    "tagline": "Start of the Great Ocean Road",
+    "general": "Surf town where the Great Ocean Road begins; use it as a base for Lorne and the Twelve Apostles.",
+    "activities": [
+      "Surf coast walk",
+      "Drive toward Lorne and Apollo Bay",
+      "Twelve Apostles at lower light"
+    ],
+    "tips": [
+      "Leave Melbourne early to beat traffic",
+      "Apostles car parks fill by late morning"
+    ],
+    "itinerary": "Days 11–12 — coastal finish.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Twelve_Apostles%2C_Victoria%2C_Australia.jpg?width=1200",
+        "caption": "Twelve Apostles",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Christchurch": {
+    "country": "New Zealand",
+    "stay": "2 nights",
+    "tagline": "Garden-city start for a South Island drive",
+    "general": "Collect a car, walk the rebuild precincts and gardens, then head inland.",
+    "activities": [
+      "Botanic Gardens",
+      "Port Hills lookout",
+      "Riverside market"
+    ],
+    "tips": [
+      "One-way camper drop in Queenstown is common",
+      "Nor'west winds can be strong"
+    ],
+    "itinerary": "Days 1–2 — arrival and the car.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_from_the_Port_Hills.jpg?width=1200",
+        "caption": "Christchurch from the Port Hills",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Queenstown": {
+    "country": "New Zealand",
+    "stay": "3 nights",
+    "tagline": "Lake Wakatipu adventure base",
+    "general": "The South Island hub: lake, gondola, and day trips to vineyards or Glenorchy.",
+    "activities": [
+      "Lake walk or gondola",
+      "Gibbston wine",
+      "Glenorchy or a jet-boat if you want it"
+    ],
+    "tips": [
+      "Beds book out in summer",
+      "This Queenstown is the NZ one, not Tasmania"
+    ],
+    "itinerary": "Days 3–5 — lakes and day trips.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Queenstown_New_Zealand.jpg?width=1200",
+        "caption": "Queenstown",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Te Anau": {
+    "country": "New Zealand",
+    "stay": "2 nights",
+    "tagline": "Fiordland gateway",
+    "general": "Quiet lake town used as the base for Milford or Doubtful Sound.",
+    "activities": [
+      "Milford Sound day",
+      "Lake Te Anau foreshore",
+      "Glowworm caves if time"
+    ],
+    "tips": [
+      "Milford road can close for weather or ice",
+      "Book cruises ahead in January"
+    ],
+    "itinerary": "Days 6–7 — fiords.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Milford_Sound%2C_New_Zealand.jpg?width=1200",
+        "caption": "Milford Sound",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Wanaka": {
+    "country": "New Zealand",
+    "stay": "2 nights",
+    "tagline": "Quieter lake than Queenstown",
+    "general": "The usual calmer last stop: lake swims, a lookout walk, then back to a flight.",
+    "activities": [
+      "Lake Wanaka waterfront",
+      "Roy's Peak or a shorter ridge",
+      "Outlet walk"
+    ],
+    "tips": [
+      "Roy's Peak starts before dawn in season",
+      "Fuel up before remote legs"
+    ],
+    "itinerary": "Days 8–9 — quieter lake days.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Wanaka.jpg?width=1200",
+        "caption": "Lake Wānaka",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Nadi": {
+    "country": "Fiji",
+    "stay": "3 nights",
+    "tagline": "International gateway and west-coast temples",
+    "general": "Almost every Fiji trip lands here. Use it for the temple, Denarau boats, and a first reef day.",
+    "activities": [
+      "Sri Siva Subramaniya Temple",
+      "Denarau marina",
+      "Mamanuca day boat"
+    ],
+    "tips": [
+      "Cover shoulders at the temple",
+      "Airport days are busy — book transfers"
+    ],
+    "itinerary": "Days 1–3 — arrive and reset.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Siva_Subramaniya_Temple.jpg?width=1200",
+        "caption": "Sri Siva Subramaniya Temple",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Pacific Harbour": {
+    "country": "Fiji",
+    "stay": "2 nights",
+    "tagline": "South-coast reefs, rivers, and Beqa",
+    "general": "The adventure strip on the Coral Coast — shark dives, river trips, and a slower night than Nadi.",
+    "activities": [
+      "Beqa Lagoon snorkel or dive",
+      "River kayak",
+      "Arts village"
+    ],
+    "tips": [
+      "Book shark dives ahead",
+      "Afternoons often bring showers"
+    ],
+    "itinerary": "Days 4–5 — Coral Coast.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beqa_Lagoon.jpg?width=1200",
+        "caption": "Beqa Lagoon",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Suva": {
+    "country": "Fiji",
+    "stay": "2 nights",
+    "tagline": "Harbour capital of markets and rainforest parks",
+    "general": "Fiji's political city: museum, market, and an easy forest walk at Colo-i-Suva.",
+    "activities": [
+      "Fiji Museum",
+      "Municipal market",
+      "Colo-i-Suva"
+    ],
+    "tips": [
+      "Weekday traffic around Victoria Parade",
+      "Carry cash for the market"
+    ],
+    "itinerary": "Days 6–7 — capital nights.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suva_Fiji.jpg?width=1200",
+        "caption": "Suva",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Florence": {
+    "country": "Italy",
+    "stay": "3 nights",
+    "tagline": "Duomo, galleries, and a Tuscan day",
+    "general": "The middle of the classic rail triangle — dense, walkable, and an easy jump to Chianti or Pisa.",
+    "activities": [
+      "Duomo complex",
+      "Uffizi or Accademia",
+      "Piazzale Michelangelo at dusk"
+    ],
+    "tips": [
+      "Uffizi slots sell out",
+      "The centro is compact — skip the car"
+    ],
+    "itinerary": "Days 5–7 — Tuscany.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence_Duomo_from_Michelangelo_hill.jpg?width=1200",
+        "caption": "Florence Duomo",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Venice": {
+    "country": "Italy",
+    "stay": "3 nights",
+    "tagline": "Vaporetti and quieter sestieri after the mainland",
+    "general": "Finish on the water. Walk early, ride a vaporetto, and leave San Marco for off-peak hours.",
+    "activities": [
+      "Grand Canal vaporetto",
+      "San Marco off-peak",
+      "Cannaregio or Giudecca wander"
+    ],
+    "tips": [
+      "A 48-hour vaporetto pass usually beats single tickets",
+      "Acqua alta season is autumn–winter"
+    ],
+    "itinerary": "Days 8–10 — lagoon finish.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg?width=1200",
+        "caption": "Grand Canal",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Edinburgh": {
+    "country": "United Kingdom",
+    "stay": "3 nights",
+    "tagline": "Castle ridge and the usual Scottish start",
+    "general": "Old Town, New Town, and a hill walk before you head north.",
+    "activities": [
+      "Castle and Royal Mile",
+      "Arthur's Seat",
+      "New Town streets"
+    ],
+    "tips": [
+      "Festival month (August) needs rooms booked early",
+      "Weather does four seasons in a day"
+    ],
+    "itinerary": "Days 1–3 — the capital.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edinburgh_Castle_from_the_south_east.jpg?width=1200",
+        "caption": "Edinburgh Castle",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Inverness": {
+    "country": "United Kingdom",
+    "stay": "2 nights",
+    "tagline": "Highland railhead and Loch Ness base",
+    "general": "The practical Highlands hub: loch, battlefield, and the jump toward Skye.",
+    "activities": [
+      "Loch Ness / Urquhart",
+      "Culloden",
+      "River Ness walk"
+    ],
+    "tips": [
+      "The sleeper or daytime rail from Edinburgh is the usual arrival",
+      "Midges in still summer evenings"
+    ],
+    "itinerary": "Days 4–5 — Highlands.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Urquhart_Castle_and_Loch_Ness.jpg?width=1200",
+        "caption": "Urquhart Castle",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Portree": {
+    "country": "United Kingdom",
+    "stay": "2 nights",
+    "tagline": "Skye harbour town",
+    "general": "The usual Skye overnight: coloured harbour, and a Storr or Quiraing morning.",
+    "activities": [
+      "Old Man of Storr",
+      "Harbour walk",
+      "Quiraing or a quieter peninsula"
+    ],
+    "tips": [
+      "Single-track roads and summer coaches",
+      "Fuel and dinners book out in July"
+    ],
+    "itinerary": "Days 6–7 — Skye.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Man_of_Storr.jpg?width=1200",
+        "caption": "Old Man of Storr",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Glasgow": {
+    "country": "United Kingdom",
+    "stay": "1–2 nights",
+    "tagline": "West-coast city and the usual departure airport",
+    "general": "One night for music, the West End, and a morning flight.",
+    "activities": [
+      "Kelvingrove or the riverside",
+      "West End cafes",
+      "Mackintosh details"
+    ],
+    "tips": [
+      "Airport is west of the city — allow transfer time"
+    ],
+    "itinerary": "Days 8–9 — fly-out.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_University_main_building.jpg?width=1200",
+        "caption": "University of Glasgow",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Barcelona": {
+    "country": "Spain",
+    "stay": "4 nights",
+    "tagline": "Gaudí, beach, and the Mediterranean start",
+    "general": "Most first Spain trips begin here: Gothic streets, one big Gaudí visit, and a swim.",
+    "activities": [
+      "Gothic Quarter",
+      "Sagrada Família",
+      "Barceloneta or Park Güell"
+    ],
+    "tips": [
+      "Book Sagrada Família",
+      "Pickpockets on the metro and Ramblas"
+    ],
+    "itinerary": "Days 1–4 — Mediterranean city.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada_Familia_01.jpg?width=1200",
+        "caption": "Sagrada Família",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Seville": {
+    "country": "Spain",
+    "stay": "3 nights",
+    "tagline": "Alcázar, cathedral, and Andalusian evenings",
+    "general": "The usual Andalusian finish — orange trees, a big cathedral, and heat in summer.",
+    "activities": [
+      "Alcázar",
+      "Cathedral and Giralda",
+      "Triana evening"
+    ],
+    "tips": [
+      "Alcázar tickets online",
+      "August afternoons are for shade"
+    ],
+    "itinerary": "Days 8–10 — Andalusia.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Sevilla_y_Giralda.jpg?width=1200",
+        "caption": "Seville Cathedral",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Kyoto": {
+    "country": "Japan",
+    "stay": "3 nights",
+    "tagline": "Temples and the classic middle of the Golden Route",
+    "general": "Fushimi Inari at opening, Gion after dark, and one bamboo or gold-pavilion morning.",
+    "activities": [
+      "Fushimi Inari",
+      "Gion",
+      "Arashiyama or Kinkaku-ji"
+    ],
+    "tips": [
+      "Temple mornings beat buses",
+      "Gion has photography rules on some lanes"
+    ],
+    "itinerary": "Days 5–7 — Kansai temples.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiyomizu-dera_in_Kyoto.jpg?width=1200",
+        "caption": "Kiyomizu-dera",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Bangkok": {
+    "country": "Thailand",
+    "stay": "5 nights",
+    "tagline": "River, palaces, and the usual first Thailand week",
+    "general": "River boats, one palace morning, Chinatown or a cooking class, then fly north.",
+    "activities": [
+      "Wat Arun by river boat",
+      "Grand Palace or Wat Pho",
+      "Chinatown night food"
+    ],
+    "tips": [
+      "Cover knees and shoulders at palaces",
+      "BTS and river boats beat taxis in traffic"
+    ],
+    "itinerary": "Days 1–5 — the capital.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Arun_Bangkok.jpg?width=1200",
+        "caption": "Wat Arun",
+        "source": "Wikimedia Commons"
+      }
+    ]
+  },
+  "Chiang Mai": {
+    "country": "Thailand",
+    "stay": "4 nights",
+    "tagline": "Old-city temples and cooler northern evenings",
+    "general": "Walled old city, a mountain temple, and a walking-street night.",
+    "activities": [
+      "Old-city wat loop",
+      "Doi Suthep",
+      "Saturday or Sunday walking street"
+    ],
+    "tips": [
+      "Songthaews are the local hop",
+      "Burning-season haze is worst Feb–Apr"
+    ],
+    "itinerary": "Days 6–9 — the north.",
+    "photos": [
+      {
+        "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wat_Phra_Singh_Chiang_Mai.jpg?width=1200",
+        "caption": "Wat Phra Singh",
+        "source": "Wikimedia Commons"
+      }
+    ]
   }
 }

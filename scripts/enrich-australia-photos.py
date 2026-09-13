@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fetch and seed photos for Australian Oceania catalog rows.
+"""Fetch and seed photos for Oceania catalog rows.
 
 The worker updates scripts/data/oceania-seed.json first, then reruns the
 Oceania seeder by default so SQLite catalogs and fallback JSON receive the same
@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import random
 import subprocess
 import sys
@@ -30,6 +31,57 @@ BUILD_CITIES_DB = ROOT / "scripts" / "build-cities-db.py"
 CITIES_DB = ROOT / "Trip" / "cities" / "cities.db"
 PHOTO_HELPER = ROOT / "scripts" / "fetch-location-photos.py"
 DEFAULT_COLLECTIONS = ("cities", "parks", "pois", "hikes")
+PACIFIC_CCS = {
+    "fj", "pg", "sb", "vu", "nc", "pf", "ws", "as", "to", "ck",
+    "nu", "pw", "gu", "mp", "fm", "mh", "ki", "nr", "tv", "wf", "nf",
+}
+PHOTO_QUERY_ALIASES = {
+    "Jatbula Trail": ["Nitmiluk National Park", "Katherine Gorge"],
+    "Thorsborne Trail": ["Hinchinbrook Island", "Hinchinbrook Island National Park"],
+    "Wineglass Bay Lookout Track": ["Wineglass Bay", "Freycinet National Park"],
+    "Cloud 9 Fiji": ["Cloud 9 pontoon Fiji", "Malolo reef Fiji"],
+    "Heart of Voh": ["Coeur de Voh", "Heart of Voh mangrove"],
+    "To Sua Ocean Trench": ["To Sua Ocean Trench Samoa"],
+    "Yasur / Lake Siwi area": ["Mount Yasur", "Yasur volcano Tanna"],
+    "Owen Stanley Ranges / Kokoda": ["Kokoda Track", "Owen Stanley Range"],
+    "War in the Pacific National Historical Park": ["Asan Beach Guam", "War in the Pacific Park Guam"],
+    "Kingston and Arthur's Vale": ["Kingston Norfolk Island"],
+    "We": ["We Lifou", "Wé Lifou New Caledonia"],
+    "Fare": ["Fare Huahine", "Huahine Fare"],
+    "London": ["London Kiritimati", "Christmas Island Kiribati"],
+    "Jellyfish Lake": ["Jellyfish Lake Palau", "Ongeim'l Tketau"],
+    "Nan Madol": ["Nan Madol Pohnpei"],
+    "Te Rua Manga Cross-Island Track": ["Te Rua Manga", "The Needle Rarotonga"],
+    "Mount Alava Adventure Trail": ["Mount Alava American Samoa"],
+    "National Park of American Samoa": ["National Park of American Samoa", "Pola Island"],
+    "Bouma National Heritage Park": ["Tavoro Falls", "Lavena Taveuni", "Bouma Taveuni"],
+    "Te Fa'aiti Territorial Park": ["Papenoo Valley Tahiti", "Papenoo"],
+    "Ritidian / Litekyan": ["Ritidian Point Guam", "Ritidian Beach"],
+    "Huvalu Forest Conservation Area": ["Huvalu Forest Niue", "Niue rainforest"],
+    "Mount Talau National Park": ["Mount Talau Vava'u", "Neiafu harbour"],
+    "Mataniko Falls": ["Mataniko Falls Guadalcanal", "Mataniko Honiara"],
+    "Parliament Haus": ["Parliament House Port Moresby", "National Parliament Papua New Guinea"],
+    "Mapu'a 'a Vaea Blowholes": ["Mapu a Vaea", "Tongatapu blowholes"],
+    "Kepirohi Falls": ["Kepirohi Pohnpei", "Kepirohi waterfall"],
+    "Two Lovers Point": ["Puntan Dos Amantes", "Two Lovers Point Guam"],
+    "Alele Museum": ["Alele Museum Majuro", "Majuro Atoll"],
+    "Fautaua Valley": ["Fautaua Falls", "Fautaua Tahiti"],
+    "Varirata Lookout Walk": ["Varirata National Park", "Sogeri Plateau"],
+    "Mount Yasur Crater Walk": ["Mount Yasur", "Yasur volcano"],
+    "Riviere Bleue Giant Kaori Walk": ["Rivière Bleue", "Riviere Bleue kaori"],
+    "Lavena Coastal Walk": ["Lavena Taveuni", "Lavena coastline"],
+    "Colo-i-Suva Nature Trail": ["Colo-i-Suva", "Colo i Suva forest"],
+    "Moorea Belvedere Walk": ["Belvedere Moorea", "Opunohu Valley"],
+    "Fautaua Waterfall Walk": ["Fautaua Falls Tahiti"],
+    "Mount Talau Walk": ["Mount Talau", "Neiafu Vava'u"],
+    "'Eua Clifftop Walk": ["Eua Island Tonga", "Eua cliffs"],
+    "Ngardmau Waterfall Walk": ["Ngardmau Falls", "Ngardmau Palau"],
+    "Mount Lamlam Walk": ["Mount Lamlam Guam"],
+    "Mount Tapochau Walk": ["Mount Tapochau Saipan"],
+    "Sokehs Rock": ["Sokehs Rock Pohnpei"],
+    "Aorai Trail": ["Mont Aorai", "Aorai Tahiti"],
+    "Lake Lanoto'o Walk": ["Lake Lanoto'o", "Lanotoo Samoa"],
+}
 
 
 def load_photo_helper():
@@ -45,7 +97,21 @@ def read_json(path: Path) -> dict:
 
 
 def write_json(path: Path, payload: dict) -> None:
-    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    text = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    last_err = None
+    for attempt in range(8):
+        try:
+            tmp.replace(path)
+            return
+        except OSError as err:
+            last_err = err
+            time.sleep(0.35 * (attempt + 1))
+    path.write_text(text, encoding="utf-8")
+    tmp.unlink(missing_ok=True)
+    if last_err:
+        print(f"warn: wrote {path.name} directly after {last_err}", flush=True)
 
 
 def normalize_key(text: str) -> str:
@@ -82,7 +148,8 @@ def merge_photo_lists(*lists: list[dict], cap: int, name: str, validate: bool) -
 def extra_commons_queries(row: dict, collection: str) -> list[str]:
     name = row.get("name", "")
     country = row.get("country", "Australia")
-    queries = [f"{name} {country}"]
+    queries = [f"{alias} {country}" for alias in PHOTO_QUERY_ALIASES.get(name, [])]
+    queries.append(f"{name} {country}")
     if collection == "parks":
         queries.extend([f"{name} landscape", f"{name} national park"])
     elif collection == "hikes":
@@ -128,12 +195,21 @@ def fetch_photos_for_row(
     return row_key(row), merged, f"{name}: {len(existing)} -> {len(merged)} photos"
 
 
-def iter_targets(seed: dict, collections: tuple[str, ...], cc: str, min_photos: int, all_rows: bool) -> list[tuple[str, dict]]:
+def parse_ccs(raw: str) -> set[str] | None:
+    text = (raw or "").strip().lower()
+    if text in {"*", "all"}:
+        return None
+    if text == "pacific":
+        return set(PACIFIC_CCS)
+    codes = {item.strip().lower() for item in text.split(",") if item.strip()}
+    return codes or {"au"}
+
+
+def iter_targets(seed: dict, collections: tuple[str, ...], ccs: set[str] | None, min_photos: int, all_rows: bool) -> list[tuple[str, dict]]:
     targets = []
-    cc_norm = cc.lower()
     for collection in collections:
         for row in seed.get(collection, []):
-            if str(row.get("cc", "")).lower() != cc_norm:
+            if ccs is not None and str(row.get("cc", "")).lower() not in ccs:
                 continue
             if all_rows or len(row.get("photos") or []) < min_photos:
                 targets.append((collection, row))
@@ -167,12 +243,18 @@ def parse_collections(raw: str) -> tuple[str, ...]:
     return requested or DEFAULT_COLLECTIONS
 
 
+def default_workers(requested: int, total_targets: int) -> int:
+    if requested > 0:
+        return max(1, min(requested, total_targets))
+    return max(1, min(os.cpu_count() or 1, total_targets))
+
+
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Fetch and seed photos for Australian Oceania catalog rows.")
+    parser = argparse.ArgumentParser(description="Fetch and seed photos for Oceania catalog rows.")
     parser.add_argument("--collections", default=",".join(DEFAULT_COLLECTIONS), help="Comma-separated: cities,parks,pois,hikes")
-    parser.add_argument("--cc", default="au", help="Country code to process; default au")
+    parser.add_argument("--cc", default="au", help="Country code(s): au, comma list, pacific, or all")
     parser.add_argument("--limit", type=int, default=0, help="Max rows to process after filtering")
-    parser.add_argument("--workers", type=int, default=3, help="Parallel workers")
+    parser.add_argument("--workers", type=int, default=0, help="Parallel workers (0 = all CPU cores)")
     parser.add_argument("--min-photos", type=int, default=4, help="Process rows with fewer than this many photos")
     parser.add_argument("--max-photos", type=int, default=8, help="Store up to this many photos per row")
     parser.add_argument("--all", action="store_true", help="Process all matching rows even if they already have enough photos")
@@ -184,14 +266,14 @@ def main() -> None:
 
     collections = parse_collections(args.collections)
     seed = read_json(OCEANIA_SEED)
-    targets = iter_targets(seed, collections, args.cc, args.min_photos, args.all)
+    targets = iter_targets(seed, collections, parse_ccs(args.cc), args.min_photos, args.all)
     if args.limit:
         targets = targets[: args.limit]
     if not targets:
         print("No matching rows need photos.", flush=True)
         return
 
-    worker_count = max(1, min(args.workers, len(targets)))
+    worker_count = default_workers(args.workers, len(targets))
     validate = not args.no_validate
     print(f"Fetching photos for {len(targets)} row(s) with {worker_count} worker(s).", flush=True)
 

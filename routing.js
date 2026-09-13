@@ -239,6 +239,18 @@ export async function refineHikeTrailGeometry(coords, { maxGapKm = 2.5 } = {}) {
     return null;
   }
 
+  let widestGapKm = 0;
+  for (let i = 1; i < coords.length; i += 1) {
+    widestGapKm = Math.max(widestGapKm, haversineKm(coords[i - 1], coords[i]));
+  }
+  // Sparse catalog sketches (3–5 widely spaced waypoints) must not be split and
+  // OSRM-snapped independently — that draws disconnected road fragments and
+  // leaves start/finish markers off the visible path. Dense OSM traces should
+  // also stay as-is so foot routing does not pull them onto nearby roads.
+  if (coords.length >= 20 || widestGapKm > maxGapKm) {
+    return { type: "LineString", coordinates: coords };
+  }
+
   const chains = splitCoordsAtJumps(coords, maxGapKm);
   if (!chains.length) {
     return { type: "LineString", coordinates: coords };

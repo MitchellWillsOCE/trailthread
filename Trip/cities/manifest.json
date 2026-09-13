@@ -13,7 +13,7 @@
     {
       "id": "oceania",
       "label": "Oceania",
-      "count": 27,
+      "count": 299,
       "legacyGeojson": "./Trip/cities/oceania/cities.geojson"
     }
   ]

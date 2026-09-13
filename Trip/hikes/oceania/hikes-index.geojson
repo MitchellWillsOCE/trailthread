@@ -6,8 +6,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          146.0756,
-          -41.8802
+          146.0371937372024,
+          -41.85918256785715
         ]
       },
       "properties": {
@@ -26,8 +26,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          133.148,
-          -23.6736
+          132.97447602713177,
+          -23.694143673089698
         ]
       },
       "properties": {
@@ -46,8 +46,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          115.03620000000001,
-          -33.9842
+          115.00099285738523,
+          -33.754227844610774
         ]
       },
       "properties": {
@@ -66,8 +66,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          143.3494,
-          -38.7338
+          143.37926231875,
+          -38.7697575625
         ]
       },
       "properties": {
@@ -86,8 +86,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          150.1655,
-          -33.76825
+          150.1451228810842,
+          -33.75382432329873
         ]
       },
       "properties": {
@@ -106,8 +106,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          168.13475,
-          -44.788
+          168.18400986283368,
+          -44.74510105759754
         ]
       },
       "properties": {
@@ -126,8 +126,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          167.79825,
-          -44.75
+          167.81198834386655,
+          -44.80504787556428
         ]
       },
       "properties": {
@@ -146,8 +146,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          175.659,
-          -39.11625
+          175.63595652437337,
+          -39.123542067070005
         ]
       },
       "properties": {
@@ -166,8 +166,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          172.94275,
-          -40.90075
+          173.04284507042254,
+          -40.93196676661143
         ]
       },
       "properties": {
@@ -186,8 +186,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          167.64180000000002,
-          -45.431
+          167.60655312831437,
+          -45.423482999337125
         ]
       },
       "properties": {
@@ -206,8 +206,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          170.09325,
-          -43.71175
+          170.09880544962567,
+          -43.70611964770053
         ]
       },
       "properties": {
@@ -226,8 +226,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          147.98,
-          -43.1884
+          147.95403310229568,
+          -43.18758733774105
         ]
       },
       "properties": {
@@ -246,8 +246,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          116.55760000000001,
-          -33.480599999999995
+          116.52459892651265,
+          -33.93967278360836
         ]
       },
       "properties": {
@@ -266,8 +266,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          138.61880000000002,
-          -33.9668
+          138.47651013678413,
+          -33.249427337885464
         ]
       },
       "properties": {
@@ -286,8 +286,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          147.572,
-          -36.82
+          147.66089534100107,
+          -36.69616870117146
         ]
       },
       "properties": {
@@ -306,8 +306,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          132.2955,
-          -14.215499999999999
+          132.3203320005544,
+          -14.160812187248787
         ]
       },
       "properties": {
@@ -326,8 +326,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          146.24325,
-          -18.35
+          146.30791816193695,
+          -18.385084385360358
         ]
       },
       "properties": {
@@ -346,8 +346,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          148.30440000000002,
-          -36.452000000000005
+          148.29298099845857,
+          -36.430778226589595
         ]
       },
       "properties": {
@@ -366,8 +366,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          148.29833333333332,
-          -42.13333333333333
+          148.2897929889764,
+          -42.14938366535433
         ]
       },
       "properties": {
@@ -379,6 +379,1766 @@
         "popularity": 88,
         "tier": "regional",
         "tagline": "Short Freycinet climb to the classic Wineglass Bay view"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.26765,
+          -33.90846428571429
+        ]
+      },
+      "properties": {
+        "id": "bondi-to-coogee-walk-au",
+        "name": "Bondi to Coogee Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 6,
+        "popularity": 93,
+        "tier": "major",
+        "tagline": "Sydney clifftop walk linking beaches, baths, and sandstone coves"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.09209675329174,
+          -34.153586325433125
+        ]
+      },
+      "properties": {
+        "id": "royal-national-park-coast-track-au",
+        "name": "Royal National Park Coast Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 26,
+        "popularity": 87,
+        "tier": "regional",
+        "tagline": "Cliff, heath, beach, and lagoon walk between Bundeena and Otford"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.32031421584506,
+          -33.653872799295776
+        ]
+      },
+      "properties": {
+        "id": "blue-mountains-grand-canyon-walk-au",
+        "name": "Grand Canyon Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 6,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Historic loop through rainforest canyon near Blackheath"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.63356631000002,
+          -28.636243655454546
+        ]
+      },
+      "properties": {
+        "id": "cape-byron-walking-track-au",
+        "name": "Cape Byron Walking Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Rainforest, beaches, lighthouse views, and Australia's easternmost point"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.47056,
+          -37.29024
+        ]
+      },
+      "properties": {
+        "id": "grampians-peaks-trail-au",
+        "name": "Grampians Peaks Trail",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 160,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Gariwerd ridgeline traverse of sandstone peaks and cultural landscapes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.416827690058,
+          -39.045565928500416
+        ]
+      },
+      "properties": {
+        "id": "wilsons-prom-southern-circuit-au",
+        "name": "Wilsons Promontory Southern Circuit",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 59,
+        "popularity": 84,
+        "tier": "regional",
+        "tagline": "Remote beaches, granite peaks, and southern mainland wilderness"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.00217268483073,
+          -37.17783671881511
+        ]
+      },
+      "properties": {
+        "id": "light-to-light-walk-au",
+        "name": "Light to Light Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 31,
+        "popularity": 82,
+        "tier": "regional",
+        "tagline": "Ben Boyd coastal walk between Boyds Tower and Green Cape"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.96018152629108,
+          -41.660054938967136
+        ]
+      },
+      "properties": {
+        "id": "dove-lake-circuit-au",
+        "name": "Dove Lake Circuit",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 6,
+        "popularity": 90,
+        "tier": "regional",
+        "tagline": "Boardwalk and lakeshore loop under Cradle Mountain"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.51412090688524,
+          -37.153234838688526
+        ]
+      },
+      "properties": {
+        "id": "pinnacle-walk-grampians-au",
+        "name": "The Pinnacle Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Stepped sandstone climb to the Halls Gap viewpoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          159.074775,
+          -31.567625
+        ]
+      },
+      "properties": {
+        "id": "mount-gower-track-au",
+        "name": "Mount Gower Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 14,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Guided cloudforest climb on Lord Howe Island"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.57708269963368,
+          -24.252200287545786
+        ]
+      },
+      "properties": {
+        "id": "kings-canyon-rim-walk-au",
+        "name": "Kings Canyon Rim Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 6,
+        "popularity": 91,
+        "tier": "major",
+        "tagline": "Red sandstone rim circuit above Watarrka's canyon floor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.55700209166666,
+          -22.47765914642857
+        ]
+      },
+      "properties": {
+        "id": "fortescue-falls-loop-au",
+        "name": "Dales Gorge Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Karijini gorge loop of Fortescue Falls, Fern Pool, and rim views"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.51175,
+          -38.858
+        ]
+      },
+      "properties": {
+        "id": "cape-otway-lightstation-walk-au",
+        "name": "Cape Otway Lightstation Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Coastal woodland walk to the Otway lighthouse"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.48899999999998,
+          -34.65185
+        ]
+      },
+      "properties": {
+        "id": "fitzroy-falls-east-rim-au",
+        "name": "Fitzroy Falls East Rim Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4,
+        "popularity": 81,
+        "tier": "regional",
+        "tagline": "Plateau lookouts above Morton National Park's sandstone gorge"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.18148304262536,
+          -28.244196692772864
+        ]
+      },
+      "properties": {
+        "id": "lamington-border-track-au",
+        "name": "Border Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 21,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Lamington plateau rainforest walk between O'Reilly's and Binna Burra"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.16206364269664,
+          -28.245571729213484
+        ]
+      },
+      "properties": {
+        "id": "toolona-creek-circuit-au",
+        "name": "Toolona Creek Circuit",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 18,
+        "popularity": 78,
+        "tier": "regional",
+        "tagline": "Waterfall gorge and Antarctic beech circuit from O'Reilly's"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.2333412409091,
+          -28.38558053363636
+        ]
+      },
+      "properties": {
+        "id": "mount-warning-wollumbin-au",
+        "name": "Wollumbin Summit Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 9,
+        "popularity": 83,
+        "tier": "regional",
+        "tagline": "Steep rainforest climb of the Tweed volcanic plug"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.16908711803279,
+          -33.968245149180326
+        ]
+      },
+      "properties": {
+        "id": "frenchman-peak-au",
+        "name": "Frenchman Peak Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3,
+        "popularity": 84,
+        "tier": "regional",
+        "tagline": "Steep granite climb above Cape Le Grand's white beaches"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.25072513430233,
+          -34.37516369534884
+        ]
+      },
+      "properties": {
+        "id": "bluff-knoll-walk-au",
+        "name": "Bluff Knoll Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 6,
+        "popularity": 83,
+        "tier": "regional",
+        "tagline": "Stirling Range summit climb through cloud-forest heath"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.56962588624998,
+          -42.674358958125
+        ]
+      },
+      "properties": {
+        "id": "mount-field-tarn-shelf-au",
+        "name": "Tarn Shelf Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 12,
+        "popularity": 82,
+        "tier": "regional",
+        "tagline": "Alpine lakes and pandani above Mount Field's plateau"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.71418662222223,
+          -42.680002726666665
+        ]
+      },
+      "properties": {
+        "id": "russell-falls-walk-au",
+        "name": "Russell Falls Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 2,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Short rainforest walk to Tasmania's most famous waterfall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.26463157894736,
+          -33.80126315789473
+        ]
+      },
+      "properties": {
+        "id": "spit-bridge-to-manly-au",
+        "name": "Spit Bridge to Manly Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 10,
+        "popularity": 89,
+        "tier": "regional",
+        "tagline": "Harbour bushland walk from The Spit to Manly Wharf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.29529411764705,
+          -33.80988235294118
+        ]
+      },
+      "properties": {
+        "id": "manly-scenic-walkway-au",
+        "name": "Manly Scenic Walkway",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 10,
+        "popularity": 85,
+        "tier": "regional",
+        "tagline": "North Head and harbour-edge walk from Manly"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.98834923432835,
+          -43.14164410522388
+        ]
+      },
+      "properties": {
+        "id": "cape-hauy-track-au",
+        "name": "Cape Hauy Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 9,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Dolerite cliffs and sea stacks at the end of the Three Capes country"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.9525,
+          -18.249000000000002
+        ]
+      },
+      "properties": {
+        "id": "hinchinbrook-lookout-walk-au",
+        "name": "Hinchinbrook Lookout Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 2,
+        "popularity": 74,
+        "tier": "local",
+        "tagline": "Short Cardwell-range lookout toward Hinchinbrook Island"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.28226823442623,
+          -36.451588934972676
+        ]
+      },
+      "properties": {
+        "id": "mount-kosciuszko-summit-walk-au",
+        "name": "Mount Kosciuszko Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 13,
+        "popularity": 90,
+        "tier": "major",
+        "tagline": "High-country walk from Thredbo or Charlotte Pass to Australia's summit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.93514663855422,
+          -26.90058436746988
+        ]
+      },
+      "properties": {
+        "id": "mount-ngungun-summit-walk-au",
+        "name": "Mount Ngungun Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 2.6,
+        "popularity": 89,
+        "tier": "regional",
+        "tagline": "Short steep climb to the best Glass House Mountains viewpoint"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.94497828731707,
+          -26.927034597560976
+        ]
+      },
+      "properties": {
+        "id": "mount-tibrogargan-summit-walk-au",
+        "name": "Mount Tibrogargan Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Exposed volcanic-plug scramble above Beerwah township"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.87930007777777,
+          -26.890240111111112
+        ]
+      },
+      "properties": {
+        "id": "mount-beerwah-walk-au",
+        "name": "Mount Beerwah Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 2.8,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Steep climb of the highest Glass House Mountains plug"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.94493772038837,
+          -26.927035845631067
+        ]
+      },
+      "properties": {
+        "id": "tibrogargan-circuit-au",
+        "name": "Tibrogargan Circuit",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3.2,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Easy woodland loop around the base of Mount Tibrogargan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.86581570093458,
+          -26.672477488785045
+        ]
+      },
+      "properties": {
+        "id": "kondalilla-falls-circuit-au",
+        "name": "Kondalilla Falls Circuit",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4.7,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Steep rainforest descent to the waterfall and swimming hole"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.08709601377245,
+          -26.56101878802395
+        ]
+      },
+      "properties": {
+        "id": "mount-coolum-summit-walk-au",
+        "name": "Mount Coolum Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 1.8,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Steep coastal-plug climb above Coolum Beach"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.97383436206897,
+          -26.388617813793104
+        ]
+      },
+      "properties": {
+        "id": "mount-tinbeerwah-lookout-walk-au",
+        "name": "Mount Tinbeerwah Lookout Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 1.6,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Short hinterland climb to a Noosa-coast lookout"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.84199889277107,
+          -26.369236212048193
+        ]
+      },
+      "properties": {
+        "id": "mount-cooroora-summit-walk-au",
+        "name": "Mount Cooroora Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 2.4,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Steep rocky climb from Pomona to the Cooroora plug"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.6998246776,
+          -28.2924166408
+        ]
+      },
+      "properties": {
+        "id": "mount-barney-south-ridge-au",
+        "name": "Mount Barney South Ridge",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 10.0,
+        "popularity": 87,
+        "tier": "major",
+        "tagline": "Classic steep route to South East Queensland's biggest peak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.81738416613996,
+          -17.404877761399547
+        ]
+      },
+      "properties": {
+        "id": "bartle-frere-west-summit-au",
+        "name": "Bartle Frere Western Summit Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 15.0,
+        "popularity": 84,
+        "tier": "major",
+        "tagline": "Queensland's highest mountain through Wet Tropics rainforest"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.7923357142857,
+          -17.11755
+        ]
+      },
+      "properties": {
+        "id": "walshs-pyramid-walk-au",
+        "name": "Walshs Pyramid Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 6.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Steep standalone climb south of Cairns"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9587,
+          -27.47615
+        ]
+      },
+      "properties": {
+        "id": "mount-coot-tha-summit-track-au",
+        "name": "Mount Coot-tha Summit Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3.6,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Brisbane lookout mountain from the botanic gardens"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.09739543193717,
+          -36.89200620418848
+        ]
+      },
+      "properties": {
+        "id": "mount-feathertop-bungalow-spur-au",
+        "name": "Mount Feathertop via Bungalow Spur",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 22.0,
+        "popularity": 90,
+        "tier": "major",
+        "tagline": "Victoria's classic hut-and-summit climb from Harrietville"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.25207104522613,
+          -36.74870363768844
+        ]
+      },
+      "properties": {
+        "id": "mount-bogong-staircase-spur-au",
+        "name": "Mount Bogong via Staircase Spur",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 16.0,
+        "popularity": 90,
+        "tier": "major",
+        "tagline": "Victoria's highest mountain from Mountain Creek"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.76582814666665,
+          -36.77621282333334
+        ]
+      },
+      "properties": {
+        "id": "mount-buffalo-horn-walk-au",
+        "name": "The Horn Walk Mount Buffalo",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3.0,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Short granite climb to the highest point on Mount Buffalo"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.59712080714286,
+          -37.37109701071428
+        ]
+      },
+      "properties": {
+        "id": "mount-macedon-cross-walk-au",
+        "name": "Mount Macedon Memorial Cross Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 3.2,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Forest walk to the Memorial Cross above the Macedon Ranges"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.57614113419118,
+          -37.28006792867647
+        ]
+      },
+      "properties": {
+        "id": "mount-william-walk-au",
+        "name": "Mount William Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Highest Grampians peak from the sealed summit road"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.27348032837838,
+          -35.348035902702705
+        ]
+      },
+      "properties": {
+        "id": "pigeon-house-didthul-walk-au",
+        "name": "Didthul / Pigeon House Mountain Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 5.0,
+        "popularity": 87,
+        "tier": "regional",
+        "tagline": "Sandstone peak with ladders to a Morton National Park summit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.33065708670694,
+          -33.78264885135952
+        ]
+      },
+      "properties": {
+        "id": "mount-solitary-walk-au",
+        "name": "Mount Solitary Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 13.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Blue Mountains ridge above the Jamison Valley"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.1523896251462,
+          -30.297501871345027
+        ]
+      },
+      "properties": {
+        "id": "mount-kaputar-summit-walk-au",
+        "name": "Mount Kaputar Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 2.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Short high-country walk to the Nandewar Range summit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.57452105263158,
+          -31.507899999999996
+        ]
+      },
+      "properties": {
+        "id": "st-mary-peak-circuit-au",
+        "name": "St Mary Peak Circuit",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 22.0,
+        "popularity": 88,
+        "tier": "major",
+        "tagline": "Highest walk in Ikara / Wilpena Pound"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.6907620887468,
+          -34.97224411432225
+        ]
+      },
+      "properties": {
+        "id": "mount-lofty-summit-walk-au",
+        "name": "Mount Lofty Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 8.0,
+        "popularity": 90,
+        "tier": "regional",
+        "tagline": "Adelaide Hills climb from Waterfall Gully to the summit lookout"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.17143148074865,
+          -32.81133414491979
+        ]
+      },
+      "properties": {
+        "id": "mount-remarkable-summit-hike-au",
+        "name": "Mount Remarkable Summit Hike",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 12.4,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Southern Flinders climb from Melrose"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.05337010380953,
+          -34.38818611714286
+        ]
+      },
+      "properties": {
+        "id": "toolbrunup-peak-walk-au",
+        "name": "Toolbrunup Peak Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Steep Stirling Range scramble near Bluff Knoll"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.92811138584906,
+          -34.69187870283019
+        ]
+      },
+      "properties": {
+        "id": "castle-rock-porongurup-walk-au",
+        "name": "Castle Rock and Granite Skywalk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4.4,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Granite castle and skywalk in the Porongurup Range"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.85091,
+          -24.32459
+        ]
+      },
+      "properties": {
+        "id": "mount-augustus-summit-loop-au",
+        "name": "Mount Augustus Summit Loop",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 12.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Long hot climb of Burringurrah in the Gascoyne"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.5453617770671,
+          -23.574823797347893
+        ]
+      },
+      "properties": {
+        "id": "mount-sonder-lookout-walk-au",
+        "name": "Mount Sonder Lookout Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 12.0,
+        "popularity": 88,
+        "tier": "major",
+        "tagline": "Larapinta western high point above the Redbank valley"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.73429324324326,
+          -42.24724864864865
+        ]
+      },
+      "properties": {
+        "id": "frenchmans-cap-walk-au",
+        "name": "Frenchmans Cap Track",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 46.0,
+        "popularity": 86,
+        "tier": "major",
+        "tagline": "Western Tasmania quartzite dome from Lake Tahune"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.0446177076923,
+          -41.8678278331361
+        ]
+      },
+      "properties": {
+        "id": "mount-ossa-side-trip-au",
+        "name": "Mount Ossa Side Trip",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 6.0,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Tasmania's highest mountain from Pelion Gap"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.7701616055944,
+          -43.233595592307694
+        ]
+      },
+      "properties": {
+        "id": "hartz-peak-walk-au",
+        "name": "Hartz Peak Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 7.4,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Dolerite summit above Hartz Lake in southern Tasmania"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.9550238095238,
+          -41.66789523809524
+        ]
+      },
+      "properties": {
+        "id": "cradle-mountain-summit-walk-au",
+        "name": "Cradle Mountain Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 12.0,
+        "popularity": 93,
+        "tier": "major",
+        "tagline": "Dolerite scramble from Dove Lake to the Cradle summit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.24029427142855,
+          -42.896093725274724
+        ]
+      },
+      "properties": {
+        "id": "kunanyi-organ-pipes-walk-au",
+        "name": "kunanyi / Mount Wellington Organ Pipes Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 4.0,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Alpine pad beneath the Organ Pipes above Hobart"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.98062,
+          -33.346379999999996
+        ]
+      },
+      "properties": {
+        "id": "mount-canobolas-summit-walk-au",
+        "name": "Mount Canobolas Summit Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 2.2,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Short volcanic summit above Orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.9884355648773,
+          -31.320235338190187
+        ]
+      },
+      "properties": {
+        "id": "breadknife-and-grand-high-tops-au",
+        "name": "Breadknife and Grand High Tops Walk",
+        "country": "Australia",
+        "cc": "au",
+        "length_km": 14.5,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Warrumbungle circuit to the rhyolite Breadknife"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -179.8773,
+          -16.8381
+        ]
+      },
+      "properties": {
+        "id": "lavena-coastal-walk-fj",
+        "name": "Lavena Coastal Walk",
+        "country": "Fiji",
+        "cc": "fj",
+        "length_km": 5,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Village coastal path to a waterfall on eastern Taveuni"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.01,
+          -17.623444444444445
+        ]
+      },
+      "properties": {
+        "id": "mount-tomanivi-fj",
+        "name": "Mount Tomanivi",
+        "country": "Fiji",
+        "cc": "fj",
+        "length_km": 10,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Muddy climb to Viti Levu's highest summit"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.4136,
+          -18.0562
+        ]
+      },
+      "properties": {
+        "id": "colo-i-suva-nature-trail-fj",
+        "name": "Colo-i-Suva Nature Trail",
+        "country": "Fiji",
+        "cc": "fj",
+        "length_km": 3,
+        "popularity": 82,
+        "tier": "local",
+        "tagline": "Short mahogany-forest circuit with swimming holes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -179.97255555555554,
+          -16.820277777777775
+        ]
+      },
+      "properties": {
+        "id": "des-voeux-peak-fj",
+        "name": "Des Voeux Peak",
+        "country": "Fiji",
+        "cc": "fj",
+        "length_km": 8,
+        "popularity": 76,
+        "tier": "local",
+        "tagline": "4WD-and-walk ascent to Taveuni's communications peak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.365,
+          -9.435999999999998
+        ]
+      },
+      "properties": {
+        "id": "varirata-lookout-walk-pg",
+        "name": "Varirata Lookout Walk",
+        "country": "Papua New Guinea",
+        "cc": "pg",
+        "length_km": 4,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Sogeri-plateau forest walk to the Port Moresby lookout"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.48923076923077,
+          -9.325576923076923
+        ]
+      },
+      "properties": {
+        "id": "kokoda-owers-imitia-pg",
+        "name": "Kokoda Track — Owers Corner to Imita",
+        "country": "Papua New Guinea",
+        "cc": "pg",
+        "length_km": 8,
+        "popularity": 86,
+        "tier": "major",
+        "tagline": "First steep section of the wartime Kokoda crossing"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.05942307692308,
+          -5.7875
+        ]
+      },
+      "properties": {
+        "id": "mount-wilhelm-pg",
+        "name": "Mount Wilhelm Summit Walk",
+        "country": "Papua New Guinea",
+        "cc": "pg",
+        "length_km": 12,
+        "popularity": 82,
+        "tier": "major",
+        "tagline": "Highest summit in Papua New Guinea from Keglsugl"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.4447142857143,
+          -19.53
+        ]
+      },
+      "properties": {
+        "id": "mount-yasur-vu",
+        "name": "Mount Yasur Crater Walk",
+        "country": "Vanuatu",
+        "cc": "vu",
+        "length_km": 2,
+        "popularity": 92,
+        "tier": "major",
+        "tagline": "Ash-plain walk to a live crater rim on Tanna"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.249,
+          -17.68
+        ]
+      },
+      "properties": {
+        "id": "mele-cascades-walk-vu",
+        "name": "Mele Cascades Walk",
+        "country": "Vanuatu",
+        "cc": "vu",
+        "length_km": 2,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Stepped pools and a rainforest stair west of Port Vila"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          159.96,
+          -9.459999999999999
+        ]
+      },
+      "properties": {
+        "id": "mount-austen-sb",
+        "name": "Mount Austen Walk",
+        "country": "Solomon Islands",
+        "cc": "sb",
+        "length_km": 5,
+        "popularity": 74,
+        "tier": "local",
+        "tagline": "Ridge and wartime positions above Honiara"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          159.965,
+          -9.47
+        ]
+      },
+      "properties": {
+        "id": "mataniko-falls-walk-sb",
+        "name": "Mataniko Falls Walk",
+        "country": "Solomon Islands",
+        "cc": "sb",
+        "length_km": 4,
+        "popularity": 78,
+        "tier": "local",
+        "tagline": "River and cave walk to a waterfall behind Honiara"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          166.67000000000002,
+          -22.099999999999998
+        ]
+      },
+      "properties": {
+        "id": "riviere-bleue-kaori-nc",
+        "name": "Riviere Bleue Giant Kaori Walk",
+        "country": "New Caledonia",
+        "cc": "nc",
+        "length_km": 6,
+        "popularity": 86,
+        "tier": "regional",
+        "tagline": "Lakeside forest walk to the drowned giant kaori"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          166.58,
+          -22.26
+        ]
+      },
+      "properties": {
+        "id": "mont-dore-nc",
+        "name": "Mont Dore Walk",
+        "country": "New Caledonia",
+        "cc": "nc",
+        "length_km": 8,
+        "popularity": 76,
+        "tier": "local",
+        "tagline": "Ridge walk above the southern suburbs of Nouméa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.52772222222222,
+          -17.546
+        ]
+      },
+      "properties": {
+        "id": "fautaua-waterfall-pf",
+        "name": "Fautaua Waterfall Walk",
+        "country": "French Polynesia",
+        "cc": "pf",
+        "length_km": 6,
+        "popularity": 82,
+        "tier": "regional",
+        "tagline": "Permit valley walk to a high waterfall above Papeete"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.50561538461537,
+          -17.575
+        ]
+      },
+      "properties": {
+        "id": "aorai-trail-pf",
+        "name": "Aorai Trail",
+        "country": "French Polynesia",
+        "cc": "pf",
+        "length_km": 14,
+        "popularity": 80,
+        "tier": "major",
+        "tagline": "Knife-edge ridge toward one of Tahiti's classic peaks"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.82999999999998,
+          -17.525
+        ]
+      },
+      "properties": {
+        "id": "moorea-belvedere-pf",
+        "name": "Moorea Belvedere Walk",
+        "country": "French Polynesia",
+        "cc": "pf",
+        "length_km": 4,
+        "popularity": 84,
+        "tier": "regional",
+        "tagline": "Short ridge paths between Cook's and Opunohu bays"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -171.768,
+          -13.86
+        ]
+      },
+      "properties": {
+        "id": "mount-vaea-ws",
+        "name": "Mount Vaea Walk",
+        "country": "Samoa",
+        "cc": "ws",
+        "length_km": 3,
+        "popularity": 84,
+        "tier": "regional",
+        "tagline": "Short steep walk to Robert Louis Stevenson's grave"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -171.82500000000002,
+          -13.905
+        ]
+      },
+      "properties": {
+        "id": "lake-lanotoo-ws",
+        "name": "Lake Lanoto'o Walk",
+        "country": "Samoa",
+        "cc": "ws",
+        "length_km": 6,
+        "popularity": 76,
+        "tier": "local",
+        "tagline": "Muddy crater-lake walk in the hills above Apia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.69169230769234,
+          -14.253384615384617
+        ]
+      },
+      "properties": {
+        "id": "mount-alava-as",
+        "name": "Mount Alava Adventure Trail",
+        "country": "American Samoa",
+        "cc": "as",
+        "length_km": 7,
+        "popularity": 82,
+        "tier": "regional",
+        "tagline": "Ridge walk along the old tramway above Pago Pago"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -174.93,
+          -21.389999999999997
+        ]
+      },
+      "properties": {
+        "id": "eua-clifftop-to",
+        "name": "'Eua Clifftop Walk",
+        "country": "Tonga",
+        "cc": "to",
+        "length_km": 6,
+        "popularity": 74,
+        "tier": "local",
+        "tagline": "Forest and trench-edge lookouts on 'Eua"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -173.9812857142857,
+          -18.649285714285718
+        ]
+      },
+      "properties": {
+        "id": "mount-talau-to",
+        "name": "Mount Talau Walk",
+        "country": "Tonga",
+        "cc": "to",
+        "length_km": 2,
+        "popularity": 76,
+        "tier": "local",
+        "tagline": "Short climb to the Vava'u harbour lookout"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -159.768,
+          -21.23030769230769
+        ]
+      },
+      "properties": {
+        "id": "te-rua-manga-ck",
+        "name": "Te Rua Manga Cross-Island Track",
+        "country": "Cook Islands",
+        "cc": "ck",
+        "length_km": 6,
+        "popularity": 88,
+        "tier": "regional",
+        "tagline": "Muddy inland crossing past The Needle"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -169.838,
+          -19.121999999999996
+        ]
+      },
+      "properties": {
+        "id": "togo-chasm-walk-nu",
+        "name": "Togo Chasm Walk",
+        "country": "Niue",
+        "cc": "nu",
+        "length_km": 2,
+        "popularity": 80,
+        "tier": "local",
+        "tagline": "Forest and ladder descent to a hidden coral chasm"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.56971428571427,
+          7.600285714285714
+        ]
+      },
+      "properties": {
+        "id": "ngardmau-waterfall-pw",
+        "name": "Ngardmau Waterfall Walk",
+        "country": "Palau",
+        "cc": "pw",
+        "length_km": 4,
+        "popularity": 78,
+        "tier": "local",
+        "tagline": "Babeldaob forest walk to Palau's highest waterfall"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.66799999999998,
+          13.334
+        ]
+      },
+      "properties": {
+        "id": "mount-lamlam-gu",
+        "name": "Mount Lamlam Walk",
+        "country": "Guam",
+        "cc": "gu",
+        "length_km": 3,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Short climb to the highest point on Guam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.74414285714286,
+          15.183428571428573
+        ]
+      },
+      "properties": {
+        "id": "mount-tapochau-mp",
+        "name": "Mount Tapochau Walk",
+        "country": "Northern Mariana Islands",
+        "cc": "mp",
+        "length_km": 3,
+        "popularity": 76,
+        "tier": "local",
+        "tagline": "Saipan's summit lookout above the lagoon and cliffs"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          158.1577142857143,
+          6.97
+        ]
+      },
+      "properties": {
+        "id": "sokehs-rock-fm",
+        "name": "Sokehs Rock",
+        "country": "Federated States of Micronesia",
+        "cc": "fm",
+        "length_km": 3,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Fixed-rope basalt climb above Pohnpei harbour"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.9422857142857,
+          -29.025000000000002
+        ]
+      },
+      "properties": {
+        "id": "mount-pitt-nf",
+        "name": "Mount Pitt Walk",
+        "country": "Norfolk Island",
+        "cc": "nf",
+        "length_km": 3,
+        "popularity": 80,
+        "tier": "regional",
+        "tagline": "Pine-forest walk to Norfolk's second summit"
       }
     }
   ]

@@ -1,340 +1,267 @@
 {
-  "fxNote": "Budgets shown in AUD (EUR × 1.65 reference rate).",
+  "fxNote": "Budgets shown in AUD as mid-range per person, excluding long-haul flights into the region.",
   "trips": [
     {
-      "key": "barNorth",
-      "emoji": "🚗",
+      "key": "eastCoastAustralia",
+      "emoji": "🦘",
+      "continent": "oceania",
+      "folder": "east-coast-australia",
+      "title": "East Coast Australia",
+      "description": "The usual first Australia circuit: Sydney harbour, Blue Mountains, Canberra, Melbourne, and the Great Ocean Road.",
+      "builderNote": "A typical east-coast fly-drive. Recreate it in the builder with your own nights and side trips.",
+      "geojson": "./Trip/east-coast-australia/route.geojson",
+      "itinerary": "./Trip/east-coast-australia/itinerary.md",
+      "days": 12,
+      "distanceKm": 1680,
+      "budgetAudMin": 3800,
+      "budgetAudMax": 5600,
+      "region": "New South Wales · ACT · Victoria",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Harbour_Bridge_from_Circular_Quay.jpg?width=1200",
+      "highlights": [
+        "Harbour ferries and the Bondi-to-Coogee walk",
+        "Three Sisters and Jamison Valley lookouts",
+        "Great Ocean Road from Torquay toward the Twelve Apostles"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Harbour_Bridge_from_Circular_Quay.jpg?width=1200",
+          "caption": "Sydney Harbour from Circular Quay"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Commercial_buildings_top_of_Katoomba_Street.jpg?width=1200",
+          "caption": "Katoomba, Blue Mountains"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canberra_from_Mount_Ainslie.jpg?width=1200",
+          "caption": "Canberra from Mount Ainslie"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Flinders_Street_Station_Melbourne_2010.jpg?width=1200",
+          "caption": "Flinders Street Station, Melbourne"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Twelve_Apostles%2C_Victoria%2C_Australia.jpg?width=1200",
+          "caption": "Twelve Apostles, Great Ocean Road"
+        }
+      ]
+    },
+    {
+      "key": "southIslandNz",
+      "emoji": "🏔️",
+      "continent": "oceania",
+      "folder": "south-island-new-zealand",
+      "title": "South Island New Zealand",
+      "description": "The classic South Island loop: Christchurch to Queenstown, a Fiordland day, then Wanaka on the return.",
+      "builderNote": "Typical camper or fly-drive routing. Swap Te Anau for Milford if you book the coach-cruise.",
+      "geojson": "./Trip/south-island-new-zealand/route.geojson",
+      "itinerary": "./Trip/south-island-new-zealand/itinerary.md",
+      "days": 10,
+      "distanceKm": 980,
+      "budgetAudMin": 3200,
+      "budgetAudMax": 4900,
+      "region": "Canterbury · Otago · Fiordland",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Queenstown_New_Zealand.jpg?width=1200",
+      "highlights": [
+        "Christchurch restart and the inland alpine drive",
+        "Queenstown as the adventure and lake base",
+        "Te Anau or Milford Sound day, then Wanaka"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Queenstown_New_Zealand.jpg?width=1200",
+          "caption": "Queenstown, Lake Wakatipu"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Christchurch_from_the_Port_Hills.jpg?width=1200",
+          "caption": "Christchurch from the Port Hills"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Milford_Sound%2C_New_Zealand.jpg?width=1200",
+          "caption": "Milford Sound"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lake_Wanaka.jpg?width=1200",
+          "caption": "Lake Wānaka"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aoraki_Mount_Cook.jpg?width=1200",
+          "caption": "Aoraki / Mount Cook"
+        }
+      ]
+    },
+    {
+      "key": "fijiIslands",
+      "emoji": "🌴",
+      "continent": "oceania",
+      "folder": "fiji-islands",
+      "title": "Fiji Islands",
+      "description": "A typical first Fiji stay: Nadi as the gateway, Pacific Harbour for reefs and rivers, then Suva for the capital and markets.",
+      "builderNote": "Swap Pacific Harbour for a Mamanuca island if you want a resort week instead of a land circuit.",
+      "geojson": "./Trip/fiji-islands/route.geojson",
+      "itinerary": "./Trip/fiji-islands/itinerary.md",
+      "days": 8,
+      "distanceKm": 220,
+      "budgetAudMin": 2400,
+      "budgetAudMax": 3900,
+      "region": "Viti Levu · Fiji",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Fiji_from_the_air.jpg?width=1200",
+      "highlights": [
+        "Nadi temples and Denarau transfers",
+        "Pacific Harbour diving, rivers, and Beqa lagoon",
+        "Suva museum, market, and Colo-i-Suva forest"
+      ],
+      "gallery": [
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sri_Siva_Subramaniya_Temple.jpg?width=1200",
+          "caption": "Sri Siva Subramaniya Temple, Nadi"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suva_Fiji.jpg?width=1200",
+          "caption": "Suva harbour"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colo-i-Suva_Forest_Park.jpg?width=1200",
+          "caption": "Colo-i-Suva Forest Park"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beqa_Lagoon.jpg?width=1200",
+          "caption": "Beqa Lagoon"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nadi_airport_Fiji.jpg?width=1200",
+          "caption": "Nadi gateway"
+        }
+      ]
+    },
+    {
+      "key": "italyClassics",
+      "emoji": "🇮🇹",
       "continent": "europe",
-      "folder": "rome-bar-north-classic",
-      "title": "Rome to Bar to North Adriatic Classic",
-      "description": "14-stop example: Italian cities and ferries into Montenegro and Croatia, with drive, train, ferry, and hike legs between stops.",
-      "builderNote": "Includes a full written day-by-day guide and sample budget—you can recreate a similar route in the builder with your own stop notes.",
-      "geojson": "./Trip/rome-bar-north-classic/bar-north-route.geojson",
-      "itinerary": "./Trip/rome-bar-north-classic/bar-north-itinerary.md",
-      "days": 14,
-      "distanceKm": 1850,
-      "budgetAudMin": 3960,
-      "budgetAudMax": 5775,
-      "region": "Italy · Balkans · Adriatic",
+      "folder": "italy-classics",
+      "title": "Italy Classics",
+      "description": "The standard first Italy: Rome, Florence, and Venice on the high-speed train, with a Tuscan day in the middle.",
+      "builderNote": "The classic rail triangle. Add the Amalfi Coast or Cinque Terre if you have 14 days.",
+      "geojson": "./Trip/italy-classics/route.geojson",
+      "itinerary": "./Trip/italy-classics/itinerary.md",
+      "days": 10,
+      "distanceKm": 720,
+      "budgetAudMin": 3400,
+      "budgetAudMax": 5200,
+      "region": "Lazio · Tuscany · Veneto",
       "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?width=1200",
       "highlights": [
-        "High-speed train Rome–Naples–Bari through southern Italy",
-        "Coastal drive from Bari through Montenegro",
-        "Extended hikes at Kotor, Paklenica, and Plitvice",
-        "Heritage stops in Dubrovnik, Mostar, and Split"
+        "Rome's historic core and a Vatican morning",
+        "Florence Duomo, Uffizi, and a Chianti or Pisa day",
+        "Venice vaporetto, San Marco, and a quiet sestiere"
       ],
       "gallery": [
         {
           "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg?width=1200",
-          "caption": "Rome to Bar to North Adriatic Classic"
+          "caption": "Colosseum, Rome"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman_Forum-photos_taken_by_Hans_Hoffmann.jpg?width=1200",
-          "caption": "Roman Forum — Rome"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Florence_Duomo_from_Michelangelo_hill.jpg?width=1200",
+          "caption": "Florence Duomo"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bari_Vecchia_aerial_view.jpg?width=1200",
-          "caption": "Bari Vecchia (old town)"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Canal_Grande_Chiesa_della_Salute_e_Dogana_dal_ponte_dell_Accademia.jpg?width=1200",
+          "caption": "Grand Canal, Venice"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_di_San_Nicola_%28Bari%29_-_Esterno.jpg?width=1200",
-          "caption": "Basilica di San Nicola, Bari"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantheon_Rome_1.jpg?width=1200",
+          "caption": "Pantheon, Rome"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Bar%2C_Montenegro.jpg?width=1200",
-          "caption": "Stari Bar ruins"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bar%2C_Montenegro_-_panoramio.jpg?width=1200",
-          "caption": "Bar harbour area"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ponte_Vecchio_Firenze.jpg?width=1200",
+          "caption": "Ponte Vecchio, Florence"
         }
       ]
     },
     {
-      "key": "montenegroHeritage",
-      "emoji": "🏰",
+      "key": "scotlandHighlands",
+      "emoji": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
       "continent": "europe",
-      "folder": "montenegro-heritage-arc",
-      "title": "Montenegro and Heritage Arc",
-      "description": "9-day example along the Adriatic coast—heritage towns and viewpoints linked with drive and ferry segments.",
-      "builderNote": "Editorial demo with a written guide and sample budget. Build your own version with cities, modes, and per-stop notes.",
-      "geojson": "./Trip/montenegro-heritage-arc/montenegro-heritage-route.geojson",
-      "itinerary": "./Trip/montenegro-heritage-arc/montenegro-heritage-itinerary.md",
+      "folder": "scotland-highlands",
+      "title": "Scotland Highlands",
+      "description": "A typical first Scotland: Edinburgh, the Highlands around Inverness, a Skye night, then Glasgow to fly home.",
+      "builderNote": "The common fly-drive or rail-and-bus version of the Highlands. Add a whisky island if you have extra days.",
+      "geojson": "./Trip/scotland-highlands/route.geojson",
+      "itinerary": "./Trip/scotland-highlands/itinerary.md",
       "days": 9,
-      "distanceKm": 620,
+      "distanceKm": 780,
       "budgetAudMin": 2800,
-      "budgetAudMax": 4200,
-      "region": "Montenegro · Croatia · Bosnia",
-      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Bar%2C_Montenegro.jpg?width=1200",
+      "budgetAudMax": 4300,
+      "region": "Edinburgh · Highlands · Skye · Glasgow",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Edinburgh_Castle_from_the_south_east.jpg?width=1200",
       "highlights": [
-        "Fortresses from Bar to Kanli Kula",
-        "Bay of Kotor and Blue Cave boat day",
-        "Dubrovnik walls and Mostar bridge"
+        "Edinburgh old town and the castle ridge",
+        "Loch Ness / Inverness as the Highland base",
+        "Skye Cuillin views, then Glasgow for the flight"
       ],
       "gallery": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stari_Bar%2C_Montenegro.jpg?width=1200",
-          "caption": "Montenegro and Heritage Arc"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edinburgh_Castle_from_the_south_east.jpg?width=1200",
+          "caption": "Edinburgh Castle"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bar%2C_Montenegro_-_panoramio.jpg?width=1200",
-          "caption": "Bar harbour area"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Urquhart_Castle_and_Loch_Ness.jpg?width=1200",
+          "caption": "Urquhart Castle, Loch Ness"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Miljevci%2C_Montenegro_-_panoramio.jpg/1280px-Miljevci%2C_Montenegro_-_panoramio.jpg",
-          "caption": "Miljevci, Montenegro - panoramio — Haj Nehaj Fortress"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Man_of_Storr.jpg?width=1200",
+          "caption": "Old Man of Storr, Skye"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Zankovi%C4%87i%2C_Montenegro_-_panoramio.jpg/1280px-Zankovi%C4%87i%2C_Montenegro_-_panoramio.jpg",
-          "caption": "Zankovići, Montenegro - panoramio — Haj Nehaj Fortress"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glasgow_University_main_building.jpg?width=1200",
+          "caption": "University of Glasgow"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Budva_Old_Town%2C_Montenegro.jpg?width=1200",
-          "caption": "Budva old town — Old Town of Budva"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Budva%2C_Jadranski_put_IV.jpg/1280px-Budva%2C_Jadranski_put_IV.jpg",
-          "caption": "Budva, Jadranski put IV — Old Town of Budva"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Glenfinnan_Viaduct.jpg?width=1200",
+          "caption": "Glenfinnan Viaduct"
         }
       ]
     },
     {
-      "key": "parksIslands",
-      "emoji": "🌿",
+      "key": "spainClassics",
+      "emoji": "🇪🇸",
       "continent": "europe",
-      "folder": "parks-and-islands-explorer",
-      "title": "Parks and Islands Explorer",
-      "description": "10-day example mixing Croatian islands, national parks, and cities—ferries, drives, and hike days between stops.",
-      "builderNote": "Demo route with extra editorial content. In the builder you can link the same kinds of places and travel modes.",
-      "geojson": "./Trip/parks-and-islands-explorer/parks-islands-route.geojson",
-      "itinerary": "./Trip/parks-and-islands-explorer/parks-islands-itinerary.md",
+      "folder": "spain-classics",
+      "title": "Spain Classics",
+      "description": "Barcelona, Madrid, and Seville — the usual first Spain by high-speed train.",
+      "builderNote": "AVE links make this the default first itinerary. Add Granada's Alhambra if you can get tickets.",
+      "geojson": "./Trip/spain-classics/route.geojson",
+      "itinerary": "./Trip/spain-classics/itinerary.md",
       "days": 10,
-      "distanceKm": 980,
-      "budgetAudMin": 3200,
-      "budgetAudMax": 4800,
-      "region": "Croatia · Slovenia · Italy",
-      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_Old_Town_from_the_city_walls.jpg?width=1200",
-      "highlights": [
-        "Mljet island national park by ferry",
-        "Krka waterfalls and Paklenica canyon",
-        "Plitvice lakes full-day trek"
-      ],
-      "gallery": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubrovnik_Old_Town_from_the_city_walls.jpg?width=1200",
-          "caption": "Parks and Islands Explorer"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Stradun%2C_Dubrovnik%2C_Croatia.jpg?width=1200",
-          "caption": "Stradun, Dubrovnik"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Mljet%2C_Croatia_%28Unsplash%29.jpg/1280px-Mljet%2C_Croatia_%28Unsplash%29.jpg",
-          "caption": "Mljet, Croatia (Unsplash) — Mljet National Park"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Aerial_view_of_Mljet_National_Park_in_Croatia_%2848608842776%29.jpg/1280px-Aerial_view_of_Mljet_National_Park_in_Croatia_%2848608842776%29.jpg",
-          "caption": "Aerial view of Mljet National Park in Croatia (48608842776)"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Diocletian%27s_Palace%2C_Split%2C_Croatia.jpg?width=1200",
-          "caption": "Diocletian's Palace, Split"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riva%2C_Split%2C_Croatia.jpg?width=1200",
-          "caption": "Riva waterfront, Split"
-        }
-      ]
-    },
-    {
-      "key": "caucasusHighlands",
-      "emoji": "⛰️",
-      "continent": "asia",
-      "folder": "caucasus-highlands-expedition",
-      "title": "Caucasus Highlands Expedition",
-      "description": "10-stop example through Georgia and Armenia—fortresses, mountain towns, and hike segments on alpine roads.",
-      "builderNote": "Full written guide and sample budget included. Your journeys use the same stop list, modes, and optional notes.",
-      "geojson": "./Trip/caucasus-highlands-expedition/caucasus-highlands-route.geojson",
-      "itinerary": "./Trip/caucasus-highlands-expedition/caucasus-highlands-itinerary.md",
-      "days": 10,
-      "distanceKm": 740,
-      "budgetAudMin": 2900,
-      "budgetAudMax": 4500,
-      "region": "Georgia · Armenia",
-      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Tbilisi%2C_Georgia.jpg?width=1200",
-      "highlights": [
-        "Gergeti Trinity Church ridge hike",
-        "Ananuri fortress on the Aragvi River",
-        "Yerevan, Geghard, and volcanic Azhdahak"
-      ],
-      "gallery": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Tbilisi%2C_Georgia.jpg?width=1200",
-          "caption": "Caucasus Highlands Expedition"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Narikala_Fortress%2C_Tbilisi.jpg?width=1200",
-          "caption": "Narikala Fortress — Tbilisi"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ananuri_fortress_%28Georgia%29.jpg?width=1200",
-          "caption": "Ananuri fortress, Georgia — Ananuri Fortress Complex"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Ananuri%2C_Georgia_%E2%80%94_Interior_of_Ananuri_Deity_Church.jpg/1280px-Ananuri%2C_Georgia_%E2%80%94_Interior_of_Ananuri_Deity_Church.jpg",
-          "caption": "Ananuri, Georgia — Interior of Ananuri Deity Church — Ananuri Fortress Complex"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gergeti_Trinity_Church%2C_Georgia.jpg?width=1200",
-          "caption": "Gergeti Trinity Church with Kazbek"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gergetier_Dreifaltigkeitskirche.jpg?width=1200",
-          "caption": "Gergeti church and mountains — Gergeti Trinity Church"
-        }
-      ]
-    },
-    {
-      "key": "vietnamHeritage",
-      "emoji": "🛶",
-      "continent": "asia",
-      "folder": "vietnam-heritage-nature-route",
-      "title": "Vietnam Heritage and Nature Route",
-      "description": "11-stop example from Hanoi to central Vietnam—cities, bay cruises, and long drive or train legs between regions.",
-      "builderNote": "Editorial demo with a day-by-day story. Recreate the shape of the route yourself in the journey builder.",
-      "geojson": "./Trip/vietnam-heritage-nature-route/vietnam-heritage-route.geojson",
-      "itinerary": "./Trip/vietnam-heritage-nature-route/vietnam-heritage-itinerary.md",
-      "days": 11,
       "distanceKm": 1100,
-      "budgetAudMin": 2400,
-      "budgetAudMax": 3800,
-      "region": "Northern & Central Vietnam",
-      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoan_Kiem_Lake%2C_Hanoi%2C_Vietnam.jpg?width=1200",
+      "budgetAudMin": 3000,
+      "budgetAudMax": 4600,
+      "region": "Catalonia · Madrid · Andalusia",
+      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada_Familia_01.jpg?width=1200",
       "highlights": [
-        "Ha Long Bay overnight cruise",
-        "Hue Imperial City and Marble Mountains",
-        "Phong Nha cave trekking block"
+        "Barcelona Gothic Quarter, beach, and Gaudí",
+        "Madrid Prado / Retiro and tapas nights",
+        "Seville cathedral, Alcázar, and orange-scented evenings"
       ],
       "gallery": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoan_Kiem_Lake%2C_Hanoi%2C_Vietnam.jpg?width=1200",
-          "caption": "Vietnam Heritage and Nature Route"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Literature%2C_Hanoi.jpg?width=1200",
-          "caption": "Temple of Literature, Hanoi"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%281%29.jpg/1280px-Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%281%29.jpg",
-          "caption": "Christian propaganda outside of the St. Joseph's Cathedral, Hanoi (1) — St. Joseph Cathedral"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%282%29.jpg/1280px-Christian_propaganda_outside_of_the_St._Joseph%27s_Cathedral%2C_Hanoi_%282%29.jpg",
-          "caption": "Christian propaganda outside of the St. Joseph's Cathedral, Hanoi (2) — St. Joseph Cathedral"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ha_Long_Bay%2C_Vietnam.jpg?width=1200",
-          "caption": "Ha Long Bay karsts — Hạ Long"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Halong_Bay_Vietnam.jpg?width=1200",
-          "caption": "Ha Long Bay cruise — Hạ Long"
-        }
-      ]
-    },
-    {
-      "key": "iberiaFortress",
-      "emoji": "🗺️",
-      "continent": "europe",
-      "folder": "iberia-fortresses-old-cities",
-      "title": "Iberia Fortresses and Old Cities",
-      "description": "12-stop example across France, Spain, and Gibraltar—old cities and fort viewpoints connected by road.",
-      "builderNote": "Includes written planning notes and a sample budget not available in user-built journeys.",
-      "geojson": "./Trip/iberia-fortresses-old-cities/iberia-fortress-route.geojson",
-      "itinerary": "./Trip/iberia-fortresses-old-cities/iberia-fortress-itinerary.md",
-      "days": 12,
-      "distanceKm": 1420,
-      "budgetAudMin": 3500,
-      "budgetAudMax": 5200,
-      "region": "France · Spain · Gibraltar",
-      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Balma_de_Na_Cristiana_-_Sud_-_loin.JPG/1280px-Balma_de_Na_Cristiana_-_Sud_-_loin.JPG",
-      "highlights": [
-        "Pyrenees fortresses and Perpignan",
-        "Madrid and Granada heritage cores",
-        "Rock of Gibraltar summit hike"
-      ],
-      "gallery": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Balma_de_Na_Cristiana_-_Sud_-_loin.JPG/1280px-Balma_de_Na_Cristiana_-_Sud_-_loin.JPG",
-          "caption": "Iberia Fortresses and Old Cities"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Bellegarde_Canigou.jpg/1280px-Bellegarde_Canigou.jpg",
-          "caption": "Bellegarde Canigou — Bellegarde Fort"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Bellegarde_main_entrance.jpg/1280px-Bellegarde_main_entrance.jpg",
-          "caption": "Bellegarde main entrance — Bellegarde Fort"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839265793%29.jpg",
-          "caption": "Le Palais des Rois de Majorque (Perpignan) (8839265793)"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/3/30/Le_Palais_des_Rois_de_Majorque_%28Perpignan%29_%288839272083%29.jpg",
-          "caption": "Le Palais des Rois de Majorque (Perpignan) (8839272083)"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada_Familia_01.jpg?width=1200",
+          "caption": "Sagrada Família, Barcelona"
         },
         {
           "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Cristal%2C_Madrid%2C_Espa%C3%B1a%2C_2014-05-11%2C_DD_01.jpg?width=1200",
           "caption": "Retiro Park, Madrid"
-        }
-      ]
-    },
-    {
-      "key": "japanCultural",
-      "emoji": "🏯",
-      "continent": "asia",
-      "folder": "japan-cultural-arc",
-      "title": "Japan Cultural Arc",
-      "description": "9-stop example on Honshu—Tokyo, Kanazawa, Osaka, and more, linked by train and short city stops.",
-      "builderNote": "Demo with editorial guide and budget. Build a similar arc with your own stops, modes, and itinerary notes.",
-      "geojson": "./Trip/japan-cultural-arc/japan-cultural-route.geojson",
-      "itinerary": "./Trip/japan-cultural-arc/japan-cultural-itinerary.md",
-      "days": 9,
-      "distanceKm": 890,
-      "budgetAudMin": 4200,
-      "budgetAudMax": 6200,
-      "region": "Honshu · Japan",
-      "cover": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibuya_Crossing_2018.jpg?width=1200",
-      "highlights": [
-        "Tokyo neighbourhoods and food districts",
-        "Kenroku-en and Kanazawa samurai quarter",
-        "Osaka street food and return arc"
-      ],
-      "gallery": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shibuya_Crossing_2018.jpg?width=1200",
-          "caption": "Japan Cultural Arc"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sensoji_Temple_Tokyo_Skytree_View.jpg?width=1200",
-          "caption": "Senso-ji temple, Asakusa — Tokyo"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Sevilla_y_Giralda.jpg?width=1200",
+          "caption": "Seville Cathedral and Giralda"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/1_Chome_Hirosaka%2C_Kanazawa-shi%2C_Ishikawa-ken_920-0962%2C_Japan_-_panoramio.jpg/1280px-1_Chome_Hirosaka%2C_Kanazawa-shi%2C_Ishikawa-ken_920-0962%2C_Japan_-_panoramio.jpg",
-          "caption": "1 Chome Hirosaka, Kanazawa-shi, Ishikawa-ken 920-0962, Japan - panoramio — Kenroku-en"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Park_Guell_Barcelona.jpg?width=1200",
+          "caption": "Park Güell, Barcelona"
         },
         {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/20190705_Kenroku-en-6.jpg/1280px-20190705_Kenroku-en-6.jpg",
-          "caption": "20190705 Kenroku-en-6"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/150617kanazawa-omicho-PO.jpg/1280px-150617kanazawa-omicho-PO.jpg",
-          "caption": "150617kanazawa-omicho-PO — Kanazawa Old District"
-        },
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/20131007_36_Kanazawa_-_Higashi_Chaya_District_%2810477160465%29.jpg/1280px-20131007_36_Kanazawa_-_Higashi_Chaya_District_%2810477160465%29.jpg",
-          "caption": "20131007 36 Kanazawa - Higashi Chaya District (10477160465) — Kanazawa Old District"
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Plaza_de_Espana_%28Seville%29.jpg?width=1200",
+          "caption": "Plaza de España, Seville"
         }
       ]
     }

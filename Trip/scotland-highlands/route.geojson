@@ -1,0 +1,147 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Edinburgh to Inverness",
+        "mode": "train",
+        "day": "4",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.1883,
+            55.9533
+          ],
+          [
+            -4.2247,
+            57.4778
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Inverness to Portree",
+        "mode": "drive",
+        "day": "6",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -4.2247,
+            57.4778
+          ],
+          [
+            -5.1,
+            57.3
+          ],
+          [
+            -6.196,
+            57.4128
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Portree to Glasgow",
+        "mode": "drive",
+        "day": "8",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -6.196,
+            57.4128
+          ],
+          [
+            -5.1,
+            56.8
+          ],
+          [
+            -4.2518,
+            55.8642
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Edinburgh",
+        "country": "United Kingdom",
+        "stopType": "start",
+        "day": "1",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.1883,
+          55.9533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Inverness",
+        "country": "United Kingdom",
+        "stopType": "city",
+        "day": "4",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2247,
+          57.4778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Portree",
+        "country": "United Kingdom",
+        "stopType": "park",
+        "day": "6",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.196,
+          57.4128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Glasgow",
+        "country": "United Kingdom",
+        "stopType": "end",
+        "day": "8",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.2518,
+          55.8642
+        ]
+      }
+    }
+  ]
+}

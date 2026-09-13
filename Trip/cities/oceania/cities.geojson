@@ -126,7 +126,7 @@
         "country": "Australia",
         "cc": "AU",
         "pop": 466000,
-        "tier": "regional",
+        "tier": "major",
         "category": "capital",
         "locale": "inland",
         "tagline": "Planned capital of museums, lake loops, and bushland ridges",
@@ -148,7 +148,7 @@
         "country": "Australia",
         "cc": "AU",
         "pop": 247000,
-        "tier": "regional",
+        "tier": "major",
         "category": "capital",
         "locale": "island",
         "tagline": "Tasmanian harbour capital below kunanyi / Mount Wellington",
@@ -280,7 +280,7 @@
         "country": "New Zealand",
         "cc": "NZ",
         "pop": 215000,
-        "tier": "regional",
+        "tier": "major",
         "category": "capital",
         "locale": "coastal",
         "tagline": "Compact capital of harbour hills, cafes, museums, and film craft",
@@ -592,6 +592,5616 @@
         "category": "town",
         "locale": "coastal",
         "tagline": "Tropical resort town between reef boats and Daintree rainforest",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.7817,
+          -32.9283
+        ]
+      },
+      "properties": {
+        "id": "newcastle-au",
+        "name": "Newcastle",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 348000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Surf city of ocean baths, working harbour, and Hunter Valley access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.8931,
+          -34.4278
+        ]
+      },
+      "properties": {
+        "id": "wollongong-au",
+        "name": "Wollongong",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 306000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Escarpment-backed beach city south of Sydney",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.3617,
+          -38.1499
+        ]
+      },
+      "properties": {
+        "id": "geelong-au",
+        "name": "Geelong",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 289000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "bay",
+        "tagline": "Corio Bay waterfront gateway to the Bellarine and Surf Coast",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.602,
+          -28.6474
+        ]
+      },
+      "properties": {
+        "id": "byron-bay-au",
+        "name": "Byron Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 10000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Surf beaches, lighthouse walks, hinterland villages, and whale views",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.1135,
+          -30.2963
+        ]
+      },
+      "properties": {
+        "id": "coffs-harbour-au",
+        "name": "Coffs Harbour",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 78000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "North coast stop for beaches, forests, islands, and marine wildlife",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.884,
+          -35.0275
+        ]
+      },
+      "properties": {
+        "id": "albany-au",
+        "name": "Albany",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 41000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South coast harbour town of granite cliffs, beaches, and Anzac history",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.8917,
+          -33.8614
+        ]
+      },
+      "properties": {
+        "id": "esperance-au",
+        "name": "Esperance",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 12000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Turquoise bays, white beaches, granite islands, and Cape Le Grand access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.8503,
+          -37.5622
+        ]
+      },
+      "properties": {
+        "id": "ballarat-au",
+        "name": "Ballarat",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 116000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "inland",
+        "tagline": "Goldfields city of heritage streets, lakes, and Sovereign Hill",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.2794,
+          -36.757
+        ]
+      },
+      "properties": {
+        "id": "bendigo-au",
+        "name": "Bendigo",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 121000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "inland",
+        "tagline": "Gold rush architecture, galleries, trams, and central Victorian food",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.09,
+          -26.398
+        ]
+      },
+      "properties": {
+        "id": "noosa-heads-au",
+        "name": "Noosa Heads",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 9000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Sunshine Coast beach town beside headland national park",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.3,
+          -33.3
+        ]
+      },
+      "properties": {
+        "id": "central-coast-au",
+        "name": "Central Coast",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 350000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.55,
+          -32.733
+        ]
+      },
+      "properties": {
+        "id": "maitland-au",
+        "name": "Maitland",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 90000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.917,
+          -31.083
+        ]
+      },
+      "properties": {
+        "id": "tamworth-au",
+        "name": "Tamworth",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 65000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.359,
+          -35.108
+        ]
+      },
+      "properties": {
+        "id": "wagga-wagga-au",
+        "name": "Wagga Wagga",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 70000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.913,
+          -36.073
+        ]
+      },
+      "properties": {
+        "id": "albury-au",
+        "name": "Albury",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 56000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.1,
+          -33.283
+        ]
+      },
+      "properties": {
+        "id": "orange-au",
+        "name": "Orange",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 42000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.601,
+          -32.256
+        ]
+      },
+      "properties": {
+        "id": "dubbo-au",
+        "name": "Dubbo",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 44000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.578,
+          -33.419
+        ]
+      },
+      "properties": {
+        "id": "bathurst-au",
+        "name": "Bathurst",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 38000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.9,
+          -31.433
+        ]
+      },
+      "properties": {
+        "id": "port-macquarie-au",
+        "name": "Port Macquarie",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 51000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.278,
+          -28.813
+        ]
+      },
+      "properties": {
+        "id": "lismore-au",
+        "name": "Lismore",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 28000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.719,
+          -34.754
+        ]
+      },
+      "properties": {
+        "id": "goulburn-au",
+        "name": "Goulburn",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 24000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.467,
+          -31.956
+        ]
+      },
+      "properties": {
+        "id": "broken-hill-au",
+        "name": "Broken Hill",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 17000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "New South Wales outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.6,
+          -34.883
+        ]
+      },
+      "properties": {
+        "id": "nowra-au",
+        "name": "Nowra",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 37000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.666,
+          -30.514
+        ]
+      },
+      "properties": {
+        "id": "armidale-au",
+        "name": "Armidale",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 24000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "New South Wales high-country base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.043,
+          -34.29
+        ]
+      },
+      "properties": {
+        "id": "griffith-au",
+        "name": "Griffith",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 27000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.855,
+          -34.672
+        ]
+      },
+      "properties": {
+        "id": "kiama-au",
+        "name": "Kiama",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 23000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.399,
+          -36.381
+        ]
+      },
+      "properties": {
+        "id": "shepparton-au",
+        "name": "Shepparton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 55000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Victoria river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.136,
+          -34.209
+        ]
+      },
+      "properties": {
+        "id": "mildura-au",
+        "name": "Mildura",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 56000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Victoria river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.483,
+          -38.383
+        ]
+      },
+      "properties": {
+        "id": "warrnambool-au",
+        "name": "Warrnambool",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 35000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Victoria coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.541,
+          -38.195
+        ]
+      },
+      "properties": {
+        "id": "traralgon-au",
+        "name": "Traralgon",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 27000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Victoria regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.068,
+          -38.111
+        ]
+      },
+      "properties": {
+        "id": "sale-au",
+        "name": "Sale",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 15000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Victoria river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.326,
+          -36.355
+        ]
+      },
+      "properties": {
+        "id": "wangaratta-au",
+        "name": "Wangaratta",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 30000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Victoria river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.199,
+          -36.711
+        ]
+      },
+      "properties": {
+        "id": "horsham-au",
+        "name": "Horsham",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 20000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Victoria regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.629,
+          -37.826
+        ]
+      },
+      "properties": {
+        "id": "bairnsdale-au",
+        "name": "Bairnsdale",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 17000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Victoria river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.748,
+          -36.129
+        ]
+      },
+      "properties": {
+        "id": "echuca-au",
+        "name": "Echuca",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 15000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Victoria river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.559,
+          -35.341
+        ]
+      },
+      "properties": {
+        "id": "swan-hill-au",
+        "name": "Swan Hill",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 10000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Victoria river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.317,
+          -38.333
+        ]
+      },
+      "properties": {
+        "id": "torquay-au",
+        "name": "Torquay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 22000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Victoria coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.067,
+          -26.65
+        ]
+      },
+      "properties": {
+        "id": "sunshine-coast-au",
+        "name": "Sunshine Coast",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 365000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.953,
+          -27.561
+        ]
+      },
+      "properties": {
+        "id": "toowoomba-au",
+        "name": "Toowoomba",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 142000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "inland",
+        "tagline": "Queensland regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.761,
+          -27.614
+        ]
+      },
+      "properties": {
+        "id": "ipswich-au",
+        "name": "Ipswich",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 250000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Queensland river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.109,
+          -27.639
+        ]
+      },
+      "properties": {
+        "id": "logan-city-au",
+        "name": "Logan City",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 350000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Queensland river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.186,
+          -21.142
+        ]
+      },
+      "properties": {
+        "id": "mackay-au",
+        "name": "Mackay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 80000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.512,
+          -23.378
+        ]
+      },
+      "properties": {
+        "id": "rockhampton-au",
+        "name": "Rockhampton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 79000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Queensland river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.349,
+          -24.866
+        ]
+      },
+      "properties": {
+        "id": "bundaberg-au",
+        "name": "Bundaberg",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 71000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.768,
+          -25.288
+        ]
+      },
+      "properties": {
+        "id": "hervey-bay-au",
+        "name": "Hervey Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 58000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.256,
+          -23.842
+        ]
+      },
+      "properties": {
+        "id": "gladstone-au",
+        "name": "Gladstone",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 62000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.492,
+          -20.725
+        ]
+      },
+      "properties": {
+        "id": "mount-isa-au",
+        "name": "Mount Isa",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 18000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.249,
+          -23.442
+        ]
+      },
+      "properties": {
+        "id": "longreach-au",
+        "name": "Longreach",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.789,
+          -26.573
+        ]
+      },
+      "properties": {
+        "id": "roma-au",
+        "name": "Roma",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 7000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.25,
+          -15.466
+        ]
+      },
+      "properties": {
+        "id": "cooktown-au",
+        "name": "Cooktown",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2600,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.238,
+          -26.402
+        ]
+      },
+      "properties": {
+        "id": "charleville-au",
+        "name": "Charleville",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3300,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.742,
+          -32.536
+        ]
+      },
+      "properties": {
+        "id": "mandurah-au",
+        "name": "Mandurah",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 90000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.744,
+          -32.056
+        ]
+      },
+      "properties": {
+        "id": "fremantle-au",
+        "name": "Fremantle",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 32000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.641,
+          -33.327
+        ]
+      },
+      "properties": {
+        "id": "bunbury-au",
+        "name": "Bunbury",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 76000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.35,
+          -33.655
+        ]
+      },
+      "properties": {
+        "id": "busselton-au",
+        "name": "Busselton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 40000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.614,
+          -28.778
+        ]
+      },
+      "properties": {
+        "id": "geraldton-au",
+        "name": "Geraldton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 37000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.466,
+          -30.749
+        ]
+      },
+      "properties": {
+        "id": "kalgoorlie-au",
+        "name": "Kalgoorlie",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 29000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Western Australia outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.846,
+          -20.737
+        ]
+      },
+      "properties": {
+        "id": "karratha-au",
+        "name": "Karratha",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 23000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.606,
+          -20.31
+        ]
+      },
+      "properties": {
+        "id": "port-hedland-au",
+        "name": "Port Hedland",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 15000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.35,
+          -34.96
+        ]
+      },
+      "properties": {
+        "id": "denmark-au",
+        "name": "Denmark",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.16,
+          -34.315
+        ]
+      },
+      "properties": {
+        "id": "augusta-au",
+        "name": "Augusta",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1400,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.657,
+          -24.884
+        ]
+      },
+      "properties": {
+        "id": "carnarvon-au",
+        "name": "Carnarvon",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.782,
+          -37.829
+        ]
+      },
+      "properties": {
+        "id": "mount-gambier-au",
+        "name": "Mount Gambier",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 27000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "South Australia regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.584,
+          -33.033
+        ]
+      },
+      "properties": {
+        "id": "whyalla-au",
+        "name": "Whyalla",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 22000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.858,
+          -34.721
+        ]
+      },
+      "properties": {
+        "id": "port-lincoln-au",
+        "name": "Port Lincoln",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 16000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.763,
+          -32.492
+        ]
+      },
+      "properties": {
+        "id": "port-augusta-au",
+        "name": "Port Augusta",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 13000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "South Australia outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.754,
+          -29.013
+        ]
+      },
+      "properties": {
+        "id": "coober-pedy-au",
+        "name": "Coober Pedy",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1800,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "South Australia outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.621,
+          -35.55
+        ]
+      },
+      "properties": {
+        "id": "victor-harbor-au",
+        "name": "Victor Harbor",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 16000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South Australia coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          140.746,
+          -34.177
+        ]
+      },
+      "properties": {
+        "id": "renmark-au",
+        "name": "Renmark",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 7000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "South Australia river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.809,
+          -35.028
+        ]
+      },
+      "properties": {
+        "id": "hahndorf-au",
+        "name": "Hahndorf",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "South Australia regional base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.36,
+          -41.178
+        ]
+      },
+      "properties": {
+        "id": "devonport-au",
+        "name": "Devonport",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 26000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.906,
+          -41.052
+        ]
+      },
+      "properties": {
+        "id": "burnie-au",
+        "name": "Burnie",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 20000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.556,
+          -42.08
+        ]
+      },
+      "properties": {
+        "id": "queenstown-au",
+        "name": "Queenstown",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1700,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Tasmania high-country base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.327,
+          -42.151
+        ]
+      },
+      "properties": {
+        "id": "strahan-au",
+        "name": "Strahan",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 700,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.249,
+          -41.321
+        ]
+      },
+      "properties": {
+        "id": "st-helens-au",
+        "name": "St Helens",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2200,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.074,
+          -42.122
+        ]
+      },
+      "properties": {
+        "id": "swansea-au",
+        "name": "Swansea",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 900,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.264,
+          -14.465
+        ]
+      },
+      "properties": {
+        "id": "katherine-au",
+        "name": "Katherine",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 10000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Northern Territory river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.191,
+          -19.649
+        ]
+      },
+      "properties": {
+        "id": "tennant-creek-au",
+        "name": "Tennant Creek",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Northern Territory outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          136.782,
+          -12.182
+        ]
+      },
+      "properties": {
+        "id": "nhulunbuy-au",
+        "name": "Nhulunbuy",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3300,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Northern Territory coastal base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.988,
+          -25.24
+        ]
+      },
+      "properties": {
+        "id": "yulara-au",
+        "name": "Yulara",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Northern Territory outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.835,
+          -12.67
+        ]
+      },
+      "properties": {
+        "id": "jabiru-au",
+        "name": "Jabiru",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Northern Territory outback base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.232,
+          -35.354
+        ]
+      },
+      "properties": {
+        "id": "queanbeyan-au",
+        "name": "Queanbeyan",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 37000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.5464,
+          -28.1767
+        ]
+      },
+      "properties": {
+        "id": "tweed-heads-au",
+        "name": "Tweed Heads",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 63000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Twin-town gateway where the Tweed River meets the Gold Coast surf",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.56,
+          -28.868
+        ]
+      },
+      "properties": {
+        "id": "ballina-au",
+        "name": "Ballina",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 46000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Richmond River town of beaches, lighthouse walks, and hinterland access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.933,
+          -29.692
+        ]
+      },
+      "properties": {
+        "id": "grafton-au",
+        "name": "Grafton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 19000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Clarence River city of jacarandas, heritage streets, and hinterland roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.356,
+          -32.832
+        ]
+      },
+      "properties": {
+        "id": "cessnock-au",
+        "name": "Cessnock",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 30000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Hunter Valley wine-town base for cellar doors and vineyard cycling",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.17,
+          -32.567
+        ]
+      },
+      "properties": {
+        "id": "singleton-au",
+        "name": "Singleton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 17000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Hunter River town between vineyards, ranges, and coal-country roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.113,
+          -29.776
+        ]
+      },
+      "properties": {
+        "id": "inverell-au",
+        "name": "Inverell",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 12000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Sapphire-country New England town of parks, fossicking, and granite hills",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.842,
+          -29.464
+        ]
+      },
+      "properties": {
+        "id": "moree-au",
+        "name": "Moree",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 9300,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "North-west artesian spa town on the Gwydir floodplain",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.784,
+          -30.325
+        ]
+      },
+      "properties": {
+        "id": "narrabri-au",
+        "name": "Narrabri",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 7000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Namoi River town below Mount Kaputar's volcanic plugs",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.587,
+          -32.614
+        ]
+      },
+      "properties": {
+        "id": "mudgee-au",
+        "name": "Mudgee",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 12500,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Heritage wine town of cellar doors, food, and Cudgegong River walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.979,
+          -29.427
+        ]
+      },
+      "properties": {
+        "id": "lightning-ridge-au",
+        "name": "Lightning Ridge",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2300,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Outback opal town of mines, artesian baths, and desert night skies",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.936,
+          -30.09
+        ]
+      },
+      "properties": {
+        "id": "bourke-au",
+        "name": "Bourke",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1800,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Darling River outback town at the edge of the back of Bourke",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.126,
+          -36.235
+        ]
+      },
+      "properties": {
+        "id": "cooma-au",
+        "name": "Cooma",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 6800,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Snowy Mountains service town for alpine roads and ski-field access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.623,
+          -36.415
+        ]
+      },
+      "properties": {
+        "id": "jindabyne-au",
+        "name": "Jindabyne",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3500,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Lake and alpine town below Kosciuszko ski fields and summer trails",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.175,
+          -35.708
+        ]
+      },
+      "properties": {
+        "id": "batemans-bay-au",
+        "name": "Batemans Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 17000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Clyde River holiday town for beaches, oysters, and south-coast parks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.132,
+          -36.214
+        ]
+      },
+      "properties": {
+        "id": "narooma-au",
+        "name": "Narooma",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3400,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South-coast inlet town for Montague Island, beaches, and rock fishing",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.91,
+          -37.063
+        ]
+      },
+      "properties": {
+        "id": "eden-au",
+        "name": "Eden",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3100,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Twofold Bay whaling-history town and killer-whale lookout country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.91,
+          -36.888
+        ]
+      },
+      "properties": {
+        "id": "merimbula-au",
+        "name": "Merimbula",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3800,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Sapphire Coast lake-and-beach town for oysters, inlets, and coastal walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.418,
+          -34.479
+        ]
+      },
+      "properties": {
+        "id": "bowral-au",
+        "name": "Bowral",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 13000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Southern Highlands garden town of cool-climate food and heritage streets",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.158,
+          -33.481
+        ]
+      },
+      "properties": {
+        "id": "lithgow-au",
+        "name": "Lithgow",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 13000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Western Blue Mountains industrial town for Glow Worm Tunnel and pagoda country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.454,
+          -31.911
+        ]
+      },
+      "properties": {
+        "id": "taree-au",
+        "name": "Taree",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 26000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Manning River town between beaches, hinterland, and mid-north coast parks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.511,
+          -32.181
+        ]
+      },
+      "properties": {
+        "id": "forster-au",
+        "name": "Forster",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 14000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Twin-town lakeside base for beaches, Booti Booti, and dolphin cruises",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.151,
+          -32.715
+        ]
+      },
+      "properties": {
+        "id": "nelson-bay-au",
+        "name": "Nelson Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 15000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Port Stephens harbour town for dolphins, dunes, and Tomaree headland",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.898,
+          -30.453
+        ]
+      },
+      "properties": {
+        "id": "bellingen-au",
+        "name": "Bellingen",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3800,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Creative hinterland town below Dorrigo rainforest and the Bellinger River",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.001,
+          -30.643
+        ]
+      },
+      "properties": {
+        "id": "nambucca-heads-au",
+        "name": "Nambucca Heads",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 6500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Mid-north coast headland town of river mouth views and quiet beaches",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.217,
+          -37.068
+        ]
+      },
+      "properties": {
+        "id": "castlemaine-au",
+        "name": "Castlemaine",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 11000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Goldfields town of galleries, gardens, and Victorian streetscapes",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.143,
+          -37.341
+        ]
+      },
+      "properties": {
+        "id": "daylesford-au",
+        "name": "Daylesford",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2800,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Spa-country town of mineral springs, gardens, and lake walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.604,
+          -38.346
+        ]
+      },
+      "properties": {
+        "id": "portland-au",
+        "name": "Portland",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 11000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Victorian port of cliffs, maritime history, and whale lookouts",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.995,
+          -37.881
+        ]
+      },
+      "properties": {
+        "id": "lakes-entrance-au",
+        "name": "Lakes Entrance",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Gippsland Lakes holiday town for boating, beaches, and inlet views",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.239,
+          -38.451
+        ]
+      },
+      "properties": {
+        "id": "cowes-au",
+        "name": "Cowes",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 6400,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Phillip Island township for penguin arrivals, surf beaches, and coastal walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.038,
+          -38.218
+        ]
+      },
+      "properties": {
+        "id": "mornington-au",
+        "name": "Mornington",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 26000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Peninsula bay town of beaches, wineries, and clifftop walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.961,
+          -36.73
+        ]
+      },
+      "properties": {
+        "id": "bright-au",
+        "name": "Bright",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2800,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Alpine valley town of autumn colour, rail trails, and high-country walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.687,
+          -36.359
+        ]
+      },
+      "properties": {
+        "id": "beechworth-au",
+        "name": "Beechworth",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3200,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Gold-rush granite town of honey, heritage streets, and gorge walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.672,
+          -38.755
+        ]
+      },
+      "properties": {
+        "id": "apollo-bay-au",
+        "name": "Apollo Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1800,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Great Ocean Road harbour town for Otway rainforest and coastal walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.975,
+          -38.545
+        ]
+      },
+      "properties": {
+        "id": "lorne-au",
+        "name": "Lorne",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1100,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Surf-coast village of waterfalls, pier walks, and Great Ocean Road bends",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.237,
+          -38.385
+        ]
+      },
+      "properties": {
+        "id": "port-fairy-au",
+        "name": "Port Fairy",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Historic fishing village of bluestone streets, islands, and shipwreck coast",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.519,
+          -37.14
+        ]
+      },
+      "properties": {
+        "id": "halls-gap-au",
+        "name": "Halls Gap",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 600,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Gariwerd village base for Grampians peaks, waterfalls, and wildlife",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.09,
+          -26.655
+        ]
+      },
+      "properties": {
+        "id": "maroochydore-au",
+        "name": "Maroochydore",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 55000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Sunshine Coast river-mouth city for beaches, river cruises, and hinterland day trips",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.129,
+          -26.799
+        ]
+      },
+      "properties": {
+        "id": "caloundra-au",
+        "name": "Caloundra",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 52000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Southern Sunshine Coast town of headlands, lagoons, and family beaches",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.666,
+          -26.19
+        ]
+      },
+      "properties": {
+        "id": "gympie-au",
+        "name": "Gympie",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 22000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Mary Valley gold-town stop for heritage streets and hinterland drives",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.702,
+          -25.537
+        ]
+      },
+      "properties": {
+        "id": "maryborough-au",
+        "name": "Maryborough",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 27000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Mary River heritage city and mainland gateway toward K'gari",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.744,
+          -23.129
+        ]
+      },
+      "properties": {
+        "id": "yeppoon-au",
+        "name": "Yeppoon",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 19000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Capricorn Coast town for Great Keppel Island and headland walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.162,
+          -23.527
+        ]
+      },
+      "properties": {
+        "id": "emerald-au",
+        "name": "Emerald",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 15000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Central Queensland sapphire and farm town on the Capricorn Highway",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.262,
+          -20.077
+        ]
+      },
+      "properties": {
+        "id": "charters-towers-au",
+        "name": "Charters Towers",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 8000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Gold-rush inland city of wide streets and tropical dry-country heritage",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          141.846,
+          -12.66
+        ]
+      },
+      "properties": {
+        "id": "weipa-au",
+        "name": "Weipa",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 4000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Cape York mining town for bauxite country and remote gulf fishing",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.031,
+          -17.524
+        ]
+      },
+      "properties": {
+        "id": "innisfail-au",
+        "name": "Innisfail",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 11000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Wet-tropics river town between reef islands, waterfalls, and cane country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.107,
+          -17.869
+        ]
+      },
+      "properties": {
+        "id": "mission-beach-au",
+        "name": "Mission Beach",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 900,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Cassowary-coast village for Dunk Island, rainforest, and long beaches",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.478,
+          -17.267
+        ]
+      },
+      "properties": {
+        "id": "atherton-au",
+        "name": "Atherton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 7500,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Tablelands town for crater lakes, waterfalls, and cooler rainforest air",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.423,
+          -16.991
+        ]
+      },
+      "properties": {
+        "id": "mareeba-au",
+        "name": "Mareeba",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 11000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Dry-tropics tablelands town of wetlands, coffee, and savannah lookouts",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.934,
+          -28.655
+        ]
+      },
+      "properties": {
+        "id": "stanthorpe-au",
+        "name": "Stanthorpe",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5400,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Granite Belt wine town of cool nights, orchards, and boulder country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.035,
+          -28.217
+        ]
+      },
+      "properties": {
+        "id": "warwick-au",
+        "name": "Warwick",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 16000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Darling Downs heritage town on inland routes to the Granite Belt",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.631,
+          -17.309
+        ]
+      },
+      "properties": {
+        "id": "derby-au",
+        "name": "Derby",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3300,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Kimberley tidal town for Horizontal Falls flights and boab country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.739,
+          -15.773
+        ]
+      },
+      "properties": {
+        "id": "kununurra-au",
+        "name": "Kununurra",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5300,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "East Kimberley irrigation town for Lake Argyle, gorges, and Mirima",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.668,
+          -18.225
+        ]
+      },
+      "properties": {
+        "id": "halls-creek-au",
+        "name": "Halls Creek",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1500,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Kimberley crossroads town for China Wall and inland gorge country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          119.736,
+          -23.356
+        ]
+      },
+      "properties": {
+        "id": "newman-au",
+        "name": "Newman",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 4500,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Pilbara mining town and southern gateway toward Karijini gorges",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.795,
+          -22.694
+        ]
+      },
+      "properties": {
+        "id": "tom-price-au",
+        "name": "Tom Price",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Pilbara highland town closest to Karijini's western gorges",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.533,
+          -25.928
+        ]
+      },
+      "properties": {
+        "id": "denham-au",
+        "name": "Denham",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 800,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Shark Bay town for Monkey Mia dolphins, shell beaches, and World Heritage bays",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.776,
+          -23.141
+        ]
+      },
+      "properties": {
+        "id": "coral-bay-au",
+        "name": "Coral Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 250,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tiny Ningaloo village for walk-in reef snorkelling and turtle beaches",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.034,
+          -34.443
+        ]
+      },
+      "properties": {
+        "id": "pemberton-au",
+        "name": "Pemberton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 900,
+        "tier": "town",
+        "category": "town",
+        "locale": "forest",
+        "tagline": "Karri-forest town of tree lookouts, trout streams, and southern walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.146,
+          -34.241
+        ]
+      },
+      "properties": {
+        "id": "manjimup-au",
+        "name": "Manjimup",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 4300,
+        "tier": "town",
+        "category": "town",
+        "locale": "forest",
+        "tagline": "Southern forest service town for truffles, tall timber, and Bibbulmun access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.731,
+          -34.976
+        ]
+      },
+      "properties": {
+        "id": "walpole-au",
+        "name": "Walpole",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 400,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Inlet town for tingle forest, the Tree Top Walk, and wild southern coast",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.066,
+          -30.5
+        ]
+      },
+      "properties": {
+        "id": "cervantes-au",
+        "name": "Cervantes",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Crayfishing village beside the Pinnacles and Turquoise Coast lagoons",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.038,
+          -30.304
+        ]
+      },
+      "properties": {
+        "id": "jurien-bay-au",
+        "name": "Jurien Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1800,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Turquoise Coast town for sea lions, beaches, and quiet Indian Ocean days",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.267,
+          -35.12
+        ]
+      },
+      "properties": {
+        "id": "murray-bridge-au",
+        "name": "Murray Bridge",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 22000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Murray River service city for houseboats, cliffs, and wetland edges",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.61,
+          -33.833
+        ]
+      },
+      "properties": {
+        "id": "clare-au",
+        "name": "Clare",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3300,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Riesling Trail wine town in the Clare Valley hills",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.96,
+          -34.523
+        ]
+      },
+      "properties": {
+        "id": "tanunda-au",
+        "name": "Tanunda",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 4700,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Barossa village of cellar doors, church steeples, and food streets",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.543,
+          -35.218
+        ]
+      },
+      "properties": {
+        "id": "mclaren-vale-au",
+        "name": "McLaren Vale",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 4000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Coastal-edge wine town for Shiraz, beaches, and Willunga hills",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          137.638,
+          -35.657
+        ]
+      },
+      "properties": {
+        "id": "kingscote-au",
+        "name": "Kingscote",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1800,
+        "tier": "town",
+        "category": "town",
+        "locale": "island",
+        "tagline": "Kangaroo Island's main town for harbours, wildlife, and island touring",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.756,
+          -37.164
+        ]
+      },
+      "properties": {
+        "id": "robe-au",
+        "name": "Robe",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Limestone Coast fishing town of heritage cottages and wild beaches",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.675,
+          -32.127
+        ]
+      },
+      "properties": {
+        "id": "ceduna-au",
+        "name": "Ceduna",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2300,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Far-west Eyre Peninsula town and last major stop before the Nullarbor",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.937,
+          -33.671
+        ]
+      },
+      "properties": {
+        "id": "burra-au",
+        "name": "Burra",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 900,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Copper-triangle heritage town of mine ruins, cottages, and creek country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.419,
+          -31.887
+        ]
+      },
+      "properties": {
+        "id": "hawker-au",
+        "name": "Hawker",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 300,
+        "tier": "town",
+        "category": "town",
+        "locale": "desert",
+        "tagline": "Flinders Ranges roadhouse town for Wilpena, Moralana, and outback lookouts",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.059,
+          -42.78
+        ]
+      },
+      "properties": {
+        "id": "new-norfolk-au",
+        "name": "New Norfolk",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 6200,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Derwent Valley town of hops, heritage, and Mount Field access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.048,
+          -43.026
+        ]
+      },
+      "properties": {
+        "id": "huonville-au",
+        "name": "Huonville",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2800,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Huon Valley apple-country town for river, cider, and southern forest roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.44,
+          -42.734
+        ]
+      },
+      "properties": {
+        "id": "richmond-au",
+        "name": "Richmond",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 900,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Georgian village of Australia's oldest bridge and convict-era streets",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.66,
+          -41.525
+        ]
+      },
+      "properties": {
+        "id": "deloraine-au",
+        "name": "Deloraine",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Meander Valley town of crafts, murals, and Great Western Tiers views",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.298,
+          -40.762
+        ]
+      },
+      "properties": {
+        "id": "stanley-au",
+        "name": "Stanley",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Fishing village beneath The Nut, with high-chair views and west-coast light",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.302,
+          -41.875
+        ]
+      },
+      "properties": {
+        "id": "bicheno-au",
+        "name": "Bicheno",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 900,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "East-coast blowhole town for penguins, granite, and Freycinet access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.288,
+          -42.122
+        ]
+      },
+      "properties": {
+        "id": "coles-bay-au",
+        "name": "Coles Bay",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 400,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Freycinet village for Wineglass Bay, granite peaks, and coastal camps",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          130.983,
+          -12.486
+        ]
+      },
+      "properties": {
+        "id": "palmerston-au",
+        "name": "Palmerston",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 38000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Top End satellite city between Darwin, wetlands, and Litchfield roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          133.068,
+          -14.928
+        ]
+      },
+      "properties": {
+        "id": "mataranka-au",
+        "name": "Mataranka",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 350,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Thermal-pool town on the Roper Highway in Elsey country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.835,
+          -13.825
+        ]
+      },
+      "properties": {
+        "id": "pine-creek-au",
+        "name": "Pine Creek",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 350,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Gold-rush crossroads town between Kakadu, Katherine, and the Daly",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.342,
+          -33.426
+        ]
+      },
+      "properties": {
+        "id": "gosford-au",
+        "name": "Gosford",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 35000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Central Coast city of waterways, ridges, and Brisbane Water shoreline",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.444,
+          -33.448
+        ]
+      },
+      "properties": {
+        "id": "terrigal-au",
+        "name": "Terrigal",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 14000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Central Coast surf village of headland walks and a curved beach",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.854,
+          -34.632
+        ]
+      },
+      "properties": {
+        "id": "kiama-downs-au",
+        "name": "Kiama Downs",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South-coast village near blowholes, coastal walks, and Minnamurra",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.472,
+          -35.357
+        ]
+      },
+      "properties": {
+        "id": "ulladulla-au",
+        "name": "Ulladulla",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 17000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South-coast harbour town for beaches, headlands, and Murramarang parks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.868,
+          -32.05
+        ]
+      },
+      "properties": {
+        "id": "scone-au",
+        "name": "Scone",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5600,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Horse-capital town of studs, hills, and Upper Hunter ranges",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.176,
+          -33.137
+        ]
+      },
+      "properties": {
+        "id": "parkes-au",
+        "name": "Parkes",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 11000,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Central-west town of the radio telescope, Elvis festival, and wide plains",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.007,
+          -33.384
+        ]
+      },
+      "properties": {
+        "id": "forbes-au",
+        "name": "Forbes",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 8500,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Lachlan River gold-town of heritage streets and inland highway stops",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.96,
+          -35.53
+        ]
+      },
+      "properties": {
+        "id": "deniliquin-au",
+        "name": "Deniliquin",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 7000,
+        "tier": "town",
+        "category": "town",
+        "locale": "river",
+        "tagline": "Edward River town of wetlands, sheep-country roads, and Ute Muster fame",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.888,
+          -36.121
+        ]
+      },
+      "properties": {
+        "id": "wodonga-au",
+        "name": "Wodonga",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 43000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "river",
+        "tagline": "Murray twin-city with Albury for river walks, ranges, and Hume Highway stops",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.927,
+          -37.283
+        ]
+      },
+      "properties": {
+        "id": "ararat-au",
+        "name": "Ararat",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 8300,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Western Victorian town between Grampians peaks and Pyrenees wine hills",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.022,
+          -37.744
+        ]
+      },
+      "properties": {
+        "id": "hamilton-au",
+        "name": "Hamilton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 10000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Western District wool town for volcanic plains and south-west touring",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.092,
+          -25.904
+        ]
+      },
+      "properties": {
+        "id": "rainbow-beach-au",
+        "name": "Rainbow Beach",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1200,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Coloured-sand village and barge gateway to K'gari",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.879,
+          -24.177
+        ]
+      },
+      "properties": {
+        "id": "1770-au",
+        "name": "1770",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Town of 1770 and Agnes Water for reef trips and coastal national park",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.279,
+          -25.237
+        ]
+      },
+      "properties": {
+        "id": "childers-au",
+        "name": "Childers",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1600,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Heritage main-street town in Bundaberg cane and fruit country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.406,
+          -19.576
+        ]
+      },
+      "properties": {
+        "id": "ayr-au",
+        "name": "Ayr",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 8700,
+        "tier": "town",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Burdekin cane town between Townsville, Bowen, and wetland edges",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.247,
+          -20.013
+        ]
+      },
+      "properties": {
+        "id": "bowen-au",
+        "name": "Bowen",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 11000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Coral Coast mango town of quiet beaches and island views",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.03,
+          -18.268
+        ]
+      },
+      "properties": {
+        "id": "cardwell-au",
+        "name": "Cardwell",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1300,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Hinchinbrook Channel town for island views and waterfall hinterland",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.535,
+          -28.169
+        ]
+      },
+      "properties": {
+        "id": "coolangatta-au",
+        "name": "Coolangatta",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 6000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Southern Gold Coast surf point on the New South Wales border",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.428,
+          -28.002
+        ]
+      },
+      "properties": {
+        "id": "surfers-paradise-au",
+        "name": "Surfers Paradise",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 26000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "High-rise surf strip of patrolled beaches, nightlife, and coastal paths",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.114,
+          -27.228
+        ]
+      },
+      "properties": {
+        "id": "redcliffe-au",
+        "name": "Redcliffe",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 60000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Moreton Bay peninsula city of jetties, beaches, and island views",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.96,
+          -26.857
+        ]
+      },
+      "properties": {
+        "id": "beerwah-au",
+        "name": "Beerwah",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 7500,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Glass House Mountains town beneath Mount Beerwah and Tibrogargan",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.953,
+          -26.9
+        ]
+      },
+      "properties": {
+        "id": "glass-house-mountains-au",
+        "name": "Glass House Mountains",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 5500,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Hinterland village among volcanic plugs of the Sunshine Coast",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.851,
+          -26.758
+        ]
+      },
+      "properties": {
+        "id": "maleny-au",
+        "name": "Maleny",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3800,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Green hinterland town of views, waterfalls, and Glass House lookouts",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.893,
+          -26.69
+        ]
+      },
+      "properties": {
+        "id": "montville-au",
+        "name": "Montville",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1200,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Blackall Range village of galleries, escarpment views, and waterfall walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.966,
+          -26.808
+        ]
+      },
+      "properties": {
+        "id": "landsborough-au",
+        "name": "Landsborough",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 4300,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Rail-and-road town at the base of the Glass House Mountains",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.959,
+          -26.626
+        ]
+      },
+      "properties": {
+        "id": "nambour-au",
+        "name": "Nambour",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 21000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "inland",
+        "tagline": "Sunshine Coast hinterland service town for ranges, waterfalls, and Big Pineapple country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.868,
+          -26.625
+        ]
+      },
+      "properties": {
+        "id": "mapleton-au",
+        "name": "Mapleton",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1600,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Blackall Range village above Mapleton Falls and Lilyponds parkland",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.169,
+          -36.744
+        ]
+      },
+      "properties": {
+        "id": "mount-beauty-au",
+        "name": "Mount Beauty",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 1700,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Kiewa Valley town below Mount Bogong and the Falls Creek road",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.064,
+          -36.893
+        ]
+      },
+      "properties": {
+        "id": "harrietville-au",
+        "name": "Harrietville",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 400,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Ovens Valley village at the foot of Mount Feathertop",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.306,
+          -36.504
+        ]
+      },
+      "properties": {
+        "id": "thredbo-au",
+        "name": "Thredbo",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 500,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Snowy Mountains village for Kosciuszko walks and ski-season access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.279,
+          -36.865
+        ]
+      },
+      "properties": {
+        "id": "falls-creek-au",
+        "name": "Falls Creek",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 300,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "High-plains village above the Kiewa Valley and Bogong High Plains",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.856,
+          -26.367
+        ]
+      },
+      "properties": {
+        "id": "pomona-au",
+        "name": "Pomona",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Noosa hinterland town below Mount Cooroora",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.333,
+          -19.007
+        ]
+      },
+      "properties": {
+        "id": "paluma-au",
+        "name": "Paluma",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 150,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Wet-tropics village on the Mount Spec range above Townsville",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.865,
+          -28.213
+        ]
+      },
+      "properties": {
+        "id": "rathdowney-au",
+        "name": "Rathdowney",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 400,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Scenic Rim village on the road to Mount Barney",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.914,
+          -36.696
+        ]
+      },
+      "properties": {
+        "id": "porepunkah-au",
+        "name": "Porepunkah",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 2000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Ovens River village at the Mount Buffalo road junction",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          138.605,
+          -31.527
+        ]
+      },
+      "properties": {
+        "id": "wilpena-pound-au",
+        "name": "Wilpena Pound",
+        "country": "Australia",
+        "cc": "AU",
+        "pop": 50,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Ikara-Flinders Ranges resort and trailhead below St Mary Peak",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.4419,
+          -18.1416
+        ]
+      },
+      "properties": {
+        "id": "suva-fj",
+        "name": "Suva",
+        "country": "Fiji",
+        "cc": "FJ",
+        "pop": 186000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Harbour capital of markets, colonial streets, and rainforest parks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.4356,
+          -17.7765
+        ]
+      },
+      "properties": {
+        "id": "nadi-fj",
+        "name": "Nadi",
+        "country": "Fiji",
+        "cc": "FJ",
+        "pop": 71000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Gateway town for the Mamanucas, highlands, and west-coast temples",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.45,
+          -17.6167
+        ]
+      },
+      "properties": {
+        "id": "lautoka-fj",
+        "name": "Lautoka",
+        "country": "Fiji",
+        "cc": "FJ",
+        "pop": 72000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Sugar-port city and west-Viti Levu base for highland roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179.332,
+          -16.776
+        ]
+      },
+      "properties": {
+        "id": "savusavu-fj",
+        "name": "Savusavu",
+        "country": "Fiji",
+        "cc": "FJ",
+        "pop": 7000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Vanua Levu harbour town of hot springs, reefs, and yacht moorings",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.834,
+          -17.684
+        ]
+      },
+      "properties": {
+        "id": "levuka-fj",
+        "name": "Levuka",
+        "country": "Fiji",
+        "cc": "FJ",
+        "pop": 4400,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "UNESCO port town on Ovalau with wooden streets and harbour hills",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.074,
+          -18.241
+        ]
+      },
+      "properties": {
+        "id": "pacific-harbour-fj",
+        "name": "Pacific Harbour",
+        "country": "Fiji",
+        "cc": "FJ",
+        "pop": 3500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "South-coast adventure hub for rivers, reefs, and Beqa crossings",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179.3667,
+          -16.4333
+        ]
+      },
+      "properties": {
+        "id": "labasa-fj",
+        "name": "Labasa",
+        "country": "Fiji",
+        "cc": "FJ",
+        "pop": 28000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Northern sugar town and Vanua Levu inland service hub",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.1803,
+          -9.4438
+        ]
+      },
+      "properties": {
+        "id": "port-moresby-pg",
+        "name": "Port Moresby",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 410000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Harbour capital of parliament, museums, and Varirata day trips",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.9928,
+          -6.7248
+        ]
+      },
+      "properties": {
+        "id": "lae-pg",
+        "name": "Lae",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 100000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Morobe port city and gateway to the Highlands Highway",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.227,
+          -5.858
+        ]
+      },
+      "properties": {
+        "id": "mount-hagen-pg",
+        "name": "Mount Hagen",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 46000,
+        "tier": "regional",
+        "category": "city",
+        "locale": "mountain",
+        "tagline": "Western Highlands market town for culture shows and mountain roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.785,
+          -5.224
+        ]
+      },
+      "properties": {
+        "id": "madang-pg",
+        "name": "Madang",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 36000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "North-coast harbour town of reefs, islands, and wartime wrecks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.386,
+          -6.083
+        ]
+      },
+      "properties": {
+        "id": "goroka-pg",
+        "name": "Goroka",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 25000,
+        "tier": "town",
+        "category": "town",
+        "locale": "mountain",
+        "tagline": "Eastern Highlands town of coffee, museums, and the Goroka Show",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.459,
+          -10.316
+        ]
+      },
+      "properties": {
+        "id": "alotau-pg",
+        "name": "Alotau",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 16000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Milne Bay town for island hops, WWII sites, and whale season",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.263,
+          -4.352
+        ]
+      },
+      "properties": {
+        "id": "kokopo-pg",
+        "name": "Kokopo",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 26000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "East New Britain town under the Rabaul volcanoes",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.627,
+          -3.553
+        ]
+      },
+      "properties": {
+        "id": "wewak-pg",
+        "name": "Wewak",
+        "country": "Papua New Guinea",
+        "cc": "PG",
+        "pop": 25000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Sepik-coast town and gateway to river communities",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.3273,
+          -17.7333
+        ]
+      },
+      "properties": {
+        "id": "port-vila-vu",
+        "name": "Port Vila",
+        "country": "Vanuatu",
+        "cc": "VU",
+        "pop": 52000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Harbour capital for markets, Mele Cascades, and Efate loops",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.176,
+          -15.512
+        ]
+      },
+      "properties": {
+        "id": "luganville-vu",
+        "name": "Luganville",
+        "country": "Vanuatu",
+        "cc": "VU",
+        "pop": 18000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Espiritu Santo town for blue holes, wrecks, and Champagne Beach",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.265,
+          -19.532
+        ]
+      },
+      "properties": {
+        "id": "lenakel-vu",
+        "name": "Lenakel",
+        "country": "Vanuatu",
+        "cc": "VU",
+        "pop": 1800,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tanna west-coast town and gateway to Mount Yasur",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          159.972,
+          -9.437
+        ]
+      },
+      "properties": {
+        "id": "honiara-sb",
+        "name": "Honiara",
+        "country": "Solomon Islands",
+        "cc": "SB",
+        "pop": 92000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Guadalcanal capital of markets, WWII ridges, and Mataniko walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          156.842,
+          -8.103
+        ]
+      },
+      "properties": {
+        "id": "gizo-sb",
+        "name": "Gizo",
+        "country": "Solomon Islands",
+        "cc": "SB",
+        "pop": 6200,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Western Province lagoon town for wrecks, islands, and diving",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          160.7,
+          -8.767
+        ]
+      },
+      "properties": {
+        "id": "auki-sb",
+        "name": "Auki",
+        "country": "Solomon Islands",
+        "cc": "SB",
+        "pop": 7900,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Malaita harbour town for markets and bushland roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          157.263,
+          -8.328
+        ]
+      },
+      "properties": {
+        "id": "munda-sb",
+        "name": "Munda",
+        "country": "Solomon Islands",
+        "cc": "SB",
+        "pop": 3500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "New Georgia lagoon town for wrecks, bonefishing, and WWII airfields",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          166.458,
+          -22.2758
+        ]
+      },
+      "properties": {
+        "id": "noumea-nc",
+        "name": "Noumea",
+        "country": "New Caledonia",
+        "cc": "NC",
+        "pop": 180000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Lagoon capital of museums, beaches, and the Tjibaou centre",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          164.866,
+          -21.059
+        ]
+      },
+      "properties": {
+        "id": "kone-nc",
+        "name": "Kone",
+        "country": "New Caledonia",
+        "cc": "NC",
+        "pop": 8000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "West-coast town near the Heart of Voh and mining country",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.329,
+          -20.937
+        ]
+      },
+      "properties": {
+        "id": "poindimie-nc",
+        "name": "Poindimie",
+        "country": "New Caledonia",
+        "cc": "NC",
+        "pop": 5000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "East-coast wet-tropics town for waterfalls and tribal stays",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.262,
+          -20.916
+        ]
+      },
+      "properties": {
+        "id": "we-nc",
+        "name": "We",
+        "country": "New Caledonia",
+        "cc": "NC",
+        "pop": 3000,
+        "tier": "town",
+        "category": "town",
+        "locale": "island",
+        "tagline": "Lifou's main village for cliffs, caves, and Loyalty Island reefs",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.48,
+          -21.57
+        ]
+      },
+      "properties": {
+        "id": "bourail-nc",
+        "name": "Bourail",
+        "country": "New Caledonia",
+        "cc": "NC",
+        "pop": 5500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "West-coast town for Roche Percée, turtles, and surf beaches",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.5696,
+          -17.535
+        ]
+      },
+      "properties": {
+        "id": "papeete-pf",
+        "name": "Papeete",
+        "country": "French Polynesia",
+        "cc": "PF",
+        "pop": 27000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Tahiti harbour capital of markets, ferries, and island flights",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -149.61,
+          -17.633
+        ]
+      },
+      "properties": {
+        "id": "punaauia-pf",
+        "name": "Punaauia",
+        "country": "French Polynesia",
+        "cc": "PF",
+        "pop": 28000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "West-Tahiti lagoon town for museums and Faaa-side beaches",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -151.445,
+          -16.733
+        ]
+      },
+      "properties": {
+        "id": "uturoa-pf",
+        "name": "Uturoa",
+        "country": "French Polynesia",
+        "cc": "PF",
+        "pop": 4100,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Raiatea's main town and gateway to Taputapuatea",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -140.1,
+          -8.91
+        ]
+      },
+      "properties": {
+        "id": "taiohae-pf",
+        "name": "Taiohae",
+        "country": "French Polynesia",
+        "cc": "PF",
+        "pop": 2200,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Nuku Hiva bay town and Marquesas jumping-off point",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -151.034,
+          -16.727
+        ]
+      },
+      "properties": {
+        "id": "fare-pf",
+        "name": "Fare",
+        "country": "French Polynesia",
+        "cc": "PF",
+        "pop": 1500,
+        "tier": "town",
+        "category": "town",
+        "locale": "island",
+        "tagline": "Huahine's main village for lagoons, marae, and quiet roads",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -171.7667,
+          -13.8333
+        ]
+      },
+      "properties": {
+        "id": "apia-ws",
+        "name": "Apia",
+        "country": "Samoa",
+        "cc": "WS",
+        "pop": 37000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Harbour capital for markets, Mount Vaea, and Robert Louis Stevenson",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -172.22,
+          -13.737
+        ]
+      },
+      "properties": {
+        "id": "salelologa-ws",
+        "name": "Salelologa",
+        "country": "Samoa",
+        "cc": "WS",
+        "pop": 3500,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Savai'i ferry town and start of the big-island loop",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.7025,
+          -14.2781
+        ]
+      },
+      "properties": {
+        "id": "pago-pago-as",
+        "name": "Pago Pago",
+        "country": "American Samoa",
+        "cc": "AS",
+        "pop": 11000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Deep-harbour town under Rainmaker Mountain",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -170.72,
+          -14.335
+        ]
+      },
+      "properties": {
+        "id": "tafuna-as",
+        "name": "Tafuna",
+        "country": "American Samoa",
+        "cc": "AS",
+        "pop": 8000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Airport-side town for Tutuila services and west-island access",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -175.2048,
+          -21.1394
+        ]
+      },
+      "properties": {
+        "id": "nuku-alofa-to",
+        "name": "Nuku'alofa",
+        "country": "Tonga",
+        "cc": "TO",
+        "pop": 24000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Waterfront capital of palaces, markets, and Tongatapu loops",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -173.984,
+          -18.651
+        ]
+      },
+      "properties": {
+        "id": "neiafu-to",
+        "name": "Neiafu",
+        "country": "Tonga",
+        "cc": "TO",
+        "pop": 4000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Vava'u harbour town for whales, caves, and yacht moorings",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -159.775,
+          -21.2075
+        ]
+      },
+      "properties": {
+        "id": "avarua-ck",
+        "name": "Avarua",
+        "country": "Cook Islands",
+        "cc": "CK",
+        "pop": 5400,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Rarotonga's harbour town for markets, the Needle, and lagoon buses",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -159.801,
+          -18.858
+        ]
+      },
+      "properties": {
+        "id": "arutanga-ck",
+        "name": "Arutanga",
+        "country": "Cook Islands",
+        "cc": "CK",
+        "pop": 1400,
+        "tier": "town",
+        "category": "town",
+        "locale": "island",
+        "tagline": "Aitutaki's village hub for the lagoon and One Foot Island",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -169.918,
+          -19.055
+        ]
+      },
+      "properties": {
+        "id": "alofi-nu",
+        "name": "Alofi",
+        "country": "Niue",
+        "cc": "NU",
+        "pop": 640,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Cliff-top capital for chasms, reefs, and limestone coastal walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.479,
+          7.3419
+        ]
+      },
+      "properties": {
+        "id": "koror-pw",
+        "name": "Koror",
+        "country": "Palau",
+        "cc": "PW",
+        "pop": 11000,
+        "tier": "town",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Island-town hub for Rock Islands, reefs, and Jellyfish Lake",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          134.624,
+          7.5004
+        ]
+      },
+      "properties": {
+        "id": "melekeok-pw",
+        "name": "Melekeok",
+        "country": "Palau",
+        "cc": "PW",
+        "pop": 300,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Babeldaob village beside the hillside capital at Ngerulmud",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.7504,
+          13.4745
+        ]
+      },
+      "properties": {
+        "id": "hagatna-gu",
+        "name": "Hagatna",
+        "country": "Guam",
+        "cc": "GU",
+        "pop": 1000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Historic capital of the plaza, latte stones, and the Hagåtña River",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.781,
+          13.487
+        ]
+      },
+      "properties": {
+        "id": "tamuning-gu",
+        "name": "Tamuning",
+        "country": "Guam",
+        "cc": "GU",
+        "pop": 20000,
+        "tier": "regional",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Tumon-bay hotel strip for reefs, shopping, and cliff walks",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.72,
+          15.206
+        ]
+      },
+      "properties": {
+        "id": "garapan-mp",
+        "name": "Garapan",
+        "country": "Northern Mariana Islands",
+        "cc": "MP",
+        "pop": 4000,
+        "tier": "town",
+        "category": "town",
+        "locale": "coastal",
+        "tagline": "Saipan's main strip for beaches, WWII sites, and Mount Tapochau",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          158.208,
+          6.964
+        ]
+      },
+      "properties": {
+        "id": "kolonia-fm",
+        "name": "Kolonia",
+        "country": "Federated States of Micronesia",
+        "cc": "FM",
+        "pop": 6000,
+        "tier": "town",
+        "category": "city",
+        "locale": "coastal",
+        "tagline": "Pohnpei's harbour town for Nan Madol, waterfalls, and Sokehs Rock",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          158.185,
+          6.917
+        ]
+      },
+      "properties": {
+        "id": "palikir-fm",
+        "name": "Palikir",
+        "country": "Federated States of Micronesia",
+        "cc": "FM",
+        "pop": 5000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "inland",
+        "tagline": "Hilltop national capital above Pohnpei's harbour",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.85,
+          7.45
+        ]
+      },
+      "properties": {
+        "id": "weno-fm",
+        "name": "Weno",
+        "country": "Federated States of Micronesia",
+        "cc": "FM",
+        "pop": 14000,
+        "tier": "town",
+        "category": "town",
+        "locale": "island",
+        "tagline": "Chuuk's main island town and wreck-diving gateway",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          171.3803,
+          7.0897
+        ]
+      },
+      "properties": {
+        "id": "majuro-mh",
+        "name": "Majuro",
+        "country": "Marshall Islands",
+        "cc": "MH",
+        "pop": 30000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "island",
+        "tagline": "Long atoll capital of the lagoon road, Laura Beach, and Alele",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.976,
+          1.329
+        ]
+      },
+      "properties": {
+        "id": "bairiki-ki",
+        "name": "Bairiki",
+        "country": "Kiribati",
+        "cc": "KI",
+        "pop": 3500,
+        "tier": "major",
+        "category": "capital",
+        "locale": "island",
+        "tagline": "South Tarawa islet of government, causeways, and lagoon life",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -157.475,
+          1.983
+        ]
+      },
+      "properties": {
+        "id": "london-ki",
+        "name": "London",
+        "country": "Kiribati",
+        "cc": "KI",
+        "pop": 2000,
+        "tier": "town",
+        "category": "town",
+        "locale": "island",
+        "tagline": "Kiritimati village hub for bonefish flats and seabirds",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          166.9209,
+          -0.5467
+        ]
+      },
+      "properties": {
+        "id": "yaren-nr",
+        "name": "Yaren",
+        "country": "Nauru",
+        "cc": "NR",
+        "pop": 800,
+        "tier": "major",
+        "category": "capital",
+        "locale": "island",
+        "tagline": "District capital on a raised phosphate island",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          179.1942,
+          -8.5243
+        ]
+      },
+      "properties": {
+        "id": "funafuti-tv",
+        "name": "Funafuti",
+        "country": "Tuvalu",
+        "cc": "TV",
+        "pop": 7000,
+        "tier": "major",
+        "category": "capital",
+        "locale": "island",
+        "tagline": "Atoll capital on a thin motu between lagoon and ocean",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -176.174,
+          -13.282
+        ]
+      },
+      "properties": {
+        "id": "mata-utu-wf",
+        "name": "Mata-Utu",
+        "country": "Wallis and Futuna",
+        "cc": "WF",
+        "pop": 1200,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Uvea waterfront capital for the cathedral, lagoon, and crater lakes",
+        "enriched": 1
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.966,
+          -29.054
+        ]
+      },
+      "properties": {
+        "id": "kingston-nf",
+        "name": "Kingston",
+        "country": "Norfolk Island",
+        "cc": "NF",
+        "pop": 900,
+        "tier": "major",
+        "category": "capital",
+        "locale": "coastal",
+        "tagline": "Georgian Kingston and Arthur's Vale on a Pacific pine island",
         "enriched": 1
       }
     }

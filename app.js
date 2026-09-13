@@ -1,4 +1,6 @@
 import L from "leaflet";
+import { maplibreGL } from "@maplibre/maplibre-gl-leaflet";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { marked } from "marked";
 import {
   buildEmojiHeroHtml,
@@ -161,7 +163,7 @@ map.getPane("basemapOverlay").style.zIndex = "350";
 
 const basemapConfig = {
   voyager: { label: "Atlas", hint: "Balanced terrain and labels" },
-  streets: { label: "Streets", hint: "OpenStreetMap detail" },
+  streets: { label: "Streets", hint: "Detailed street map" },
   light: { label: "Light", hint: "Minimal light base" },
   dark: { label: "Night", hint: "Dark base for contrast" },
   satellite: { label: "Satellite", hint: "Aerial imagery" },
@@ -173,26 +175,17 @@ const overlayConfig = {
   transit: { label: "Transit", hint: "Public transport lines" }
 };
 
-const basemapLayers = {
-  voyager: L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    subdomains: "abcd",
-    maxZoom: 19
-  }),
-  streets: L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors",
-    maxZoom: 19
-  }),
-  light: L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    subdomains: "abcd",
-    maxZoom: 19
-  }),
-  dark: L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    subdomains: "abcd",
-    maxZoom: 19
-  }),
+const OPENFREEMAP_STYLES = {
+  voyager: "https://tiles.openfreemap.org/styles/liberty",
+  streets: "https://tiles.openfreemap.org/styles/bright",
+  light: "https://tiles.openfreemap.org/styles/positron",
+  dark: "https://tiles.openfreemap.org/styles/dark"
+};
+
+const OPENFREEMAP_ATTRIBUTION =
+  '&copy; <a href="https://openfreemap.org/" target="_blank" rel="noreferrer">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noreferrer">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a>';
+
+const rasterBasemapLayers = {
   satellite: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
     attribution: "Tiles &copy; Esri",
     maxZoom: 19
@@ -202,6 +195,21 @@ const basemapLayers = {
     maxZoom: 17
   })
 };
+
+function isVectorBasemap(key) {
+  return Object.prototype.hasOwnProperty.call(OPENFREEMAP_STYLES, key);
+}
+
+function createOpenFreeMapLayer(styleUrl) {
+  return maplibreGL({
+    style: styleUrl,
+    pane: "tilePane",
+    interactive: false,
+    attributionControl: false,
+    maplibreLogo: false,
+    attribution: OPENFREEMAP_ATTRIBUTION
+  });
+}
 
 const overlayLayers = {
   labels: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {
@@ -218,6 +226,7 @@ const overlayLayers = {
 };
 
 let activeBasemapLayer = null;
+let vectorBasemapLayer = null;
 
 const trailRouteStyle = {
   line: { color: "#ea580c", weight: 5, opacity: 0.95, dashArray: "" },
@@ -235,7 +244,6 @@ const modeConfig = {
 const continentConfig = {
   all: { label: "All" },
   europe: { label: "Europe" },
-  asia: { label: "Asia" },
   oceania: { label: "Oceania" }
 };
 
@@ -275,6 +283,10 @@ let activeHikeRouteGlowLayer = null;
 let activeHikeEndpointsLayer = null;
 let hikeDetailFetchToken = 0;
 let activeRegionLoadToken = 0;
+let regionFollowPaused = false;
+let regionFollowTimer = 0;
+let regionFollowResumeTimer = 0;
+let regionFollowSafetyTimer = 0;
 let state = {
   basemap: "voyager",
   overlays: { labels: false, transit: false },
@@ -800,10 +812,71 @@ function renderJourneyRequiredToast(view) {
   }
 }
 
+function welcomeFeaturedTrips() {
+  const samples = state.trips.filter(isSampleTrip);
+  const region = state.activeRegionId || DEFAULT_REGION_ID;
+  const local = samples.filter((trip) => trip.continent === region);
+  const rest = samples.filter((trip) => trip.continent !== region);
+  return [...local, ...rest].slice(0, 3);
+}
+
+function renderWelcomeOverlay() {
+  const regionRow = document.getElementById("welcomeRegionSwitcher");
+  if (regionRow) {
+    regionRow.innerHTML = Object.entries(mapRegionConfig)
+      .map(([key, item]) => {
+        const active = state.activeRegionId === key;
+        return `
+          <button
+            type="button"
+            class="welcome-region"
+            data-welcome-region="${escapeAttr(key)}"
+            aria-pressed="${String(active)}"
+          >${escapeHtml(item.shortLabel || item.label)}</button>
+        `;
+      })
+      .join("");
+  }
+
+  const featuredRoot = document.getElementById("welcomeFeatured");
+  const featuredGrid = document.getElementById("welcomeFeaturedJourneys");
+  const featured = welcomeFeaturedTrips();
+  if (featuredRoot && featuredGrid) {
+    featuredRoot.hidden = featured.length === 0;
+    featuredGrid.innerHTML = featured
+      .map((trip) => {
+        const cover = trip.cover || trip.gallery?.[0]?.url || "";
+        const days = trip.days ? `${trip.days} days` : "";
+        const region = trip.region || "";
+        const meta = [days, region].filter(Boolean).join(" · ");
+        return `
+          <button type="button" class="welcome-featured__card" data-welcome-trip="${escapeAttr(trip.key)}" data-welcome-emoji="${escapeAttr(trip.emoji || "🗺")}">
+            ${cover ? `<img src="${escapeAttr(cover)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : `<span class="welcome-featured__fallback" aria-hidden="true">${escapeHtml(trip.emoji || "🗺")}</span>`}
+            <span class="welcome-featured__meta">
+              <strong>${escapeHtml(trip.title)}</strong>
+              ${meta ? `<em>${escapeHtml(meta)}</em>` : ""}
+            </span>
+          </button>
+        `;
+      })
+      .join("");
+    featuredGrid.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("error", () => {
+        const fallback = document.createElement("span");
+        fallback.className = "welcome-featured__fallback";
+        fallback.setAttribute("aria-hidden", "true");
+        fallback.textContent = img.closest("[data-welcome-emoji]")?.dataset.welcomeEmoji || "🗺";
+        img.replaceWith(fallback);
+      });
+    });
+  }
+}
+
 function showWelcomeOverlay() {
   if (!welcomeOverlay || state.welcomeDismissed) {
     return;
   }
+  renderWelcomeOverlay();
   welcomeOverlay.classList.remove("hidden");
   welcomeOverlay.classList.add("open");
   document.body.classList.add("welcome-open");
@@ -927,12 +1000,6 @@ function enterExploreMode(options = {}) {
   if (!state.exploreParks) {
     setExploreParks(true);
   }
-  if (!state.exploreHikes) {
-    setExploreHikes(true);
-  }
-  if (!state.explorePoi) {
-    setExplorePoi(true);
-  }
 
   if (dismissWelcome) {
     dismissWelcomeOverlay();
@@ -946,6 +1013,7 @@ function enterExploreMode(options = {}) {
 
   if (flyToRegion && !hasActiveJourney()) {
     const region = getMapRegionConfig();
+    pauseRegionFollowForFlight();
     map.flyTo(region.center, region.zoom, { duration: 0.9 });
   }
 
@@ -958,14 +1026,19 @@ function showMapExploreHint(options = {}) {
   if (!mapHintBar || (!force && state.mapExploreHintDismissed)) {
     return;
   }
-  const hint = document.getElementById("mapHintText");
-  if (hint) {
-    hint.textContent =
-      `Exploring ${activeRegionLabel()}. Hover Regional maps to preview another overlay; zoom in, then tap a city, park, trail, or landmark marker.`;
-  }
+  syncExploreHintRegion();
   mapHintBar.hidden = false;
   layoutRoot?.classList.add("map-hint-visible");
   requestAnimationFrame(updateLayoutInsets);
+}
+
+function syncExploreHintRegion() {
+  const hint = document.getElementById("mapHintText");
+  if (!hint || !mapHintBar || mapHintBar.hidden) {
+    return;
+  }
+  hint.textContent =
+    `Exploring ${activeRegionLabel()}. Zoom in for more places, then tap a city or park. Turn on Trails or Landmarks in Map layers.`;
 }
 
 function hideMapExploreHint() {
@@ -1347,6 +1420,9 @@ function getPlaceDetail(name) {
   const normalized = name.toLowerCase();
   const fuzzyKey = Object.keys(placeDetails).find((key) => {
     const keyNorm = key.toLowerCase();
+    if (keyNorm.length < 5 || normalized.length < 5) {
+      return false;
+    }
     return keyNorm.includes(normalized) || normalized.includes(keyNorm);
   });
 
@@ -1500,7 +1576,44 @@ function bindRegionalMapViewEvents() {
     return;
   }
   map._regionalMapViewEventsBound = true;
-  map.on("moveend zoomend", syncCountryRegionsLayer);
+  map.on("moveend zoomend", () => {
+    syncCountryRegionsLayer();
+    scheduleFollowViewedMapRegion();
+  });
+}
+
+function pauseRegionFollowForFlight() {
+  regionFollowPaused = true;
+  window.clearTimeout(regionFollowResumeTimer);
+  window.clearTimeout(regionFollowSafetyTimer);
+  const onEnd = () => {
+    window.clearTimeout(regionFollowSafetyTimer);
+    regionFollowResumeTimer = window.setTimeout(() => {
+      regionFollowPaused = false;
+      followViewedMapRegion();
+    }, 80);
+  };
+  map.once("moveend", onEnd);
+  regionFollowSafetyTimer = window.setTimeout(() => {
+    map.off("moveend", onEnd);
+    regionFollowPaused = false;
+  }, 2500);
+}
+
+function scheduleFollowViewedMapRegion() {
+  window.clearTimeout(regionFollowTimer);
+  regionFollowTimer = window.setTimeout(followViewedMapRegion, 160);
+}
+
+function followViewedMapRegion() {
+  if (regionFollowPaused || !map) {
+    return;
+  }
+  const viewed = viewedMapRegionId();
+  if (!viewed || viewed === state.activeRegionId) {
+    return;
+  }
+  void setActiveMapRegion(viewed, { flyToRegion: false });
 }
 
 async function buildCountryRegionsLayer(regionId = displayedCountryRegionId()) {
@@ -1604,7 +1717,7 @@ function renderRegionalMapSwitcher() {
           data-active="${String(active)}"
           data-preview="${String(preview)}"
           aria-pressed="${String(active)}"
-          title="Preview ${item.label} country overlay; click to explore this region"
+          title="${item.label} is used when this area is in view; click to fly there"
         >${item.shortLabel || item.label}</button>
       `;
     })
@@ -1656,6 +1769,18 @@ async function setActiveMapRegion(regionId, options = {}) {
     return;
   }
 
+  const shouldFly = flyToRegion && !hasActiveJourney();
+  const alreadyLoaded = state.activeRegionId === regionId && cityCatalog?.id === regionId;
+  if (shouldFly) {
+    pauseRegionFollowForFlight();
+  }
+  if (alreadyLoaded) {
+    if (shouldFly) {
+      map.flyTo(config.center, config.zoom, { duration: 0.75 });
+    }
+    return;
+  }
+
   const token = ++activeRegionLoadToken;
   state.activeRegionId = regionId;
   state.previewRegionId = null;
@@ -1673,6 +1798,10 @@ async function setActiveMapRegion(regionId, options = {}) {
   renderExploreParksToggle();
   renderExploreHikesToggle();
   renderExplorePoisToggle();
+  if (welcomeOverlay?.classList.contains("open")) {
+    renderWelcomeOverlay();
+  }
+  syncExploreHintRegion();
   updateHudJourneyState();
 
   const [nextCity, nextHike, nextPark, nextPoi] = await Promise.all([
@@ -1727,7 +1856,7 @@ async function setActiveMapRegion(regionId, options = {}) {
 
   await buildCountryRegionsLayer(regionId);
   refreshActiveExploreLayers();
-  if (flyToRegion && !hasActiveJourney()) {
+  if (shouldFly) {
     map.flyTo(config.center, config.zoom, { duration: 0.75 });
   }
   updateHudJourneyState();
@@ -2701,6 +2830,47 @@ const TOUCH_HIT_BUMP = (() => {
   }
 })();
 
+function catalogMarkerMinPx(zoom = map.getZoom()) {
+  if (zoom <= 5) {
+    return 24;
+  }
+  if (zoom <= 7) {
+    return 16;
+  }
+  if (zoom <= 9) {
+    return 12;
+  }
+  return 0;
+}
+
+function catalogMarkerOverlaps(lat, lng, ignoreId = "") {
+  const minPx = catalogMarkerMinPx();
+  if (minPx <= 0 || !map) {
+    return false;
+  }
+  const point = map.latLngToContainerPoint([lat, lng]);
+  const groups = [
+    cityCatalogMarkersInView,
+    parkCatalogMarkersInView,
+    hikeCatalogMarkersInView,
+    poiCatalogMarkersInView,
+  ];
+  for (const group of groups) {
+    if (!group) {
+      continue;
+    }
+    for (const [id, marker] of group) {
+      if (id === ignoreId || !marker?.getLatLng) {
+        continue;
+      }
+      if (point.distanceTo(map.latLngToContainerPoint(marker.getLatLng())) < minPx) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
 function cityCatalogRadius(tier) {
   if (tier === "major") {
     return 7 + TOUCH_HIT_BUMP;
@@ -2827,7 +2997,7 @@ function cityCatalogPopupHtml(props, details) {
             resolved.locale || props.locale
           )
         )}</span>
-        <button type="button" class="popup-story-btn" data-place-story data-place-title="${escapeHtml(title)}">
+        <button type="button" class="popup-story-btn" data-marker-action data-marker-kind="city" data-marker-id="${escapeAttr(cityId)}">
           View city${photoCount > 0 ? ` · ${photoCount} photos` : ""}
         </button>
       </div>
@@ -3765,6 +3935,32 @@ function createCityCatalogMarker(props, lat, lng) {
   return marker;
 }
 
+async function openCityFromMarker(marker) {
+  const props = marker?._cityProps;
+  if (!props?.id || marker._cityOpening) {
+    return;
+  }
+
+  marker._cityOpening = true;
+  activeCityCatalogId = props.id;
+  map.closePopup();
+  closeHikeStory();
+
+  try {
+    let details = marker._cityDetails;
+    if (!details) {
+      details = await fetchCityById(props.id, props);
+      marker._cityDetails = details;
+    }
+    await openPlaceStory(details.name || props.name, { kind: "city", ...details });
+  } catch (error) {
+    console.warn("City detail fetch failed:", error);
+    await openPlaceStory(props.name, { kind: "city", ...props });
+  } finally {
+    marker._cityOpening = false;
+  }
+}
+
 function replaceCityCatalogMarker(props, lat, lng) {
   const id = props.id;
   const existing = cityCatalogMarkersInView.get(id);
@@ -3811,17 +4007,38 @@ async function refreshCityCatalogMarkers() {
   }
 
   const visibleIds = new Set();
-  const features = geojson?.features || [];
+  const features = [...(geojson?.features || [])].sort((a, b) => {
+    const rank = (props) => {
+      const cat = String(props.category || "").toLowerCase();
+      const tier = String(props.tier || "").toLowerCase();
+      if (cat === "capital" || tier === "major") {
+        return 0;
+      }
+      if (cityHasDeepDiveStory(props)) {
+        return 1;
+      }
+      return 2;
+    };
+    return rank(a.properties || {}) - rank(b.properties || {});
+  });
 
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    const hasStory = cityHasDeepDiveStory(props);
+    const keepAtOverview =
+      String(props.category || "").toLowerCase() === "capital" ||
+      String(props.tier || "").toLowerCase() === "major";
+    const hidePassive = !hasStory && !keepAtOverview && zoom < 9;
+    const skipOverlap = !hasStory && !keepAtOverview && catalogMarkerOverlaps(lat, lng, props.id);
+    if (hidePassive || skipOverlap) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
     const existing = cityCatalogMarkersInView.get(props.id);
     const hadStory = existing ? cityHasDeepDiveStory(existing._cityProps) : null;
-    const hasStory = cityHasDeepDiveStory(props);
 
     if (!existing) {
       replaceCityCatalogMarker(props, lat, lng);
@@ -3853,7 +4070,7 @@ function scheduleCityCatalogRefresh() {
   clearTimeout(cityCatalogRefreshTimer);
   cityCatalogRefreshTimer = setTimeout(() => {
     refreshCityCatalogMarkers();
-  }, 120);
+  }, 40);
 }
 
 function bindExploreCatalogMapEvents() {
@@ -3865,8 +4082,8 @@ function bindExploreCatalogMapEvents() {
     syncCountryRegionsLayer();
     scheduleCityCatalogRefresh();
     scheduleParkCatalogRefresh();
-    schedulePoiCatalogRefresh();
     scheduleHikeCatalogRefresh();
+    schedulePoiCatalogRefresh();
   });
 }
 
@@ -4589,6 +4806,34 @@ function clearActiveHikeRoute() {
   mapEl?.classList.remove("hike-route-visible");
 }
 
+function hikeGeometryEndpoints(geometry) {
+  if (!geometry) {
+    return { start: null, end: null };
+  }
+  if (geometry.type === "LineString" && geometry.coordinates?.length >= 2) {
+    const first = geometry.coordinates[0];
+    const last = geometry.coordinates[geometry.coordinates.length - 1];
+    return {
+      start: L.latLng(first[1], first[0]),
+      end: L.latLng(last[1], last[0])
+    };
+  }
+  if (geometry.type === "MultiLineString" && Array.isArray(geometry.coordinates)) {
+    const chains = geometry.coordinates.filter((ring) => ring?.length >= 2);
+    if (!chains.length) {
+      return { start: null, end: null };
+    }
+    const first = chains[0][0];
+    const lastChain = chains[chains.length - 1];
+    const last = lastChain[lastChain.length - 1];
+    return {
+      start: L.latLng(first[1], first[0]),
+      end: L.latLng(last[1], last[0])
+    };
+  }
+  return { start: null, end: null };
+}
+
 function createHikeEndpointMarker(role, latlng, label) {
   const isStart = role === "start";
   const fillColor = isStart ? "#15803d" : "#9a3412";
@@ -4596,9 +4841,7 @@ function createHikeEndpointMarker(role, latlng, label) {
   const icon = L.divIcon({
     className: `hike-endpoint hike-endpoint-${role}`,
     html:
-      `<span class="hike-endpoint__dot" style="--ring:${ringColor};--fill:${fillColor}">` +
-      `<span class="hike-endpoint__label">${role === "start" ? "Start" : "Finish"}</span>` +
-      `</span>`,
+      `<span class="hike-endpoint__dot" style="--ring:${ringColor};--fill:${fillColor}"></span>`,
     iconSize: [22, 22],
     iconAnchor: [11, 11]
   });
@@ -4609,9 +4852,8 @@ function createHikeEndpointMarker(role, latlng, label) {
     zIndexOffset: isStart ? 1000 : 900,
     interactive: true
   });
-  if (label) {
-    marker.bindTooltip(label, { direction: "top", offset: [0, -10], opacity: 0.95 });
-  }
+  const tip = `${isStart ? "Start" : "Finish"}${label ? ` · ${label}` : ""}`;
+  marker.bindTooltip(tip, { direction: "top", offset: [0, -10], opacity: 0.95 });
   return marker;
 }
 
@@ -4671,28 +4913,37 @@ async function showActiveHikeRoute(detail) {
   activeHikeRouteGlowLayer.addTo(map);
   activeHikeRouteLayer.addTo(map);
 
+  const lineEnds = hikeGeometryEndpoints(geometry);
+  const startLatLng = lineEnds.start || (
+    Number.isFinite(detail?.start?.lat) && Number.isFinite(detail?.start?.lng)
+      ? L.latLng(detail.start.lat, detail.start.lng)
+      : null
+  );
+  const endLatLng = lineEnds.end || (
+    Number.isFinite(detail?.end?.lat) && Number.isFinite(detail?.end?.lng)
+      ? L.latLng(detail.end.lat, detail.end.lng)
+      : null
+  );
+
   const endpoints = [];
-  if (Number.isFinite(detail?.start?.lat) && Number.isFinite(detail?.start?.lng)) {
+  if (startLatLng) {
     endpoints.push(
       createHikeEndpointMarker(
         "start",
-        L.latLng(detail.start.lat, detail.start.lng),
-        detail.start.name ? `Start: ${detail.start.name}` : "Trailhead"
+        startLatLng,
+        detail.start?.name ? `Start: ${detail.start.name}` : "Trailhead"
       )
     );
   }
   if (
-    Number.isFinite(detail?.end?.lat) &&
-    Number.isFinite(detail?.end?.lng) &&
-    (!detail.start ||
-      detail.end.lat !== detail.start.lat ||
-      detail.end.lng !== detail.start.lng)
+    endLatLng &&
+    (!startLatLng || startLatLng.distanceTo(endLatLng) > 40)
   ) {
     endpoints.push(
       createHikeEndpointMarker(
         "end",
-        L.latLng(detail.end.lat, detail.end.lng),
-        detail.end.name ? `Finish: ${detail.end.name}` : "Trail end"
+        endLatLng,
+        detail.end?.name ? `Finish: ${detail.end.name}` : "Trail end"
       )
     );
   }
@@ -4768,6 +5019,9 @@ async function refreshHikeCatalogMarkers() {
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    if (props.id !== activeHikeCatalogId && catalogMarkerOverlaps(lat, lng, props.id)) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
@@ -4799,7 +5053,7 @@ function scheduleHikeCatalogRefresh() {
   clearTimeout(hikeCatalogRefreshTimer);
   hikeCatalogRefreshTimer = setTimeout(() => {
     refreshHikeCatalogMarkers();
-  }, 120);
+  }, 220);
 }
 
 function clearHikeCatalogMarkers() {
@@ -4942,6 +5196,9 @@ async function refreshParkCatalogMarkers() {
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    if (props.id !== activeParkCatalogId && catalogMarkerOverlaps(lat, lng, props.id)) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
@@ -4977,7 +5234,7 @@ function scheduleParkCatalogRefresh() {
   clearTimeout(parkCatalogRefreshTimer);
   parkCatalogRefreshTimer = setTimeout(() => {
     refreshParkCatalogMarkers();
-  }, 120);
+  }, 160);
 }
 
 function clearParkCatalogMarkers() {
@@ -5219,6 +5476,9 @@ async function refreshPoiCatalogMarkers() {
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    if (props.id !== activePoiCatalogId && catalogMarkerOverlaps(lat, lng, props.id)) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
@@ -5254,7 +5514,7 @@ function schedulePoiCatalogRefresh() {
   clearTimeout(poiCatalogRefreshTimer);
   poiCatalogRefreshTimer = setTimeout(() => {
     refreshPoiCatalogMarkers();
-  }, 120);
+  }, 280);
 }
 
 function clearPoiCatalogMarkers() {
@@ -5623,8 +5883,9 @@ function setOverlay(key, enabled) {
 }
 
 function setBasemap(key) {
-  const layer = basemapLayers[key];
-  if (!layer) {
+  const nextIsVector = isVectorBasemap(key);
+  const rasterLayer = rasterBasemapLayers[key];
+  if (!nextIsVector && !rasterLayer) {
     return;
   }
 
@@ -5634,13 +5895,31 @@ function setBasemap(key) {
 
   mapEl?.classList.add("basemap-transitioning");
 
-  if (activeBasemapLayer && map.hasLayer(activeBasemapLayer)) {
-    map.removeLayer(activeBasemapLayer);
-  }
+  if (
+    nextIsVector &&
+    vectorBasemapLayer &&
+    activeBasemapLayer === vectorBasemapLayer &&
+    map.hasLayer(vectorBasemapLayer)
+  ) {
+    const glMap = vectorBasemapLayer.getMaplibreMap?.();
+    if (glMap) {
+      glMap.setStyle(OPENFREEMAP_STYLES[key]);
+    }
+  } else {
+    if (activeBasemapLayer && map.hasLayer(activeBasemapLayer)) {
+      map.removeLayer(activeBasemapLayer);
+    }
 
-  activeBasemapLayer = layer;
-  layer.addTo(map);
-  layer.bringToBack();
+    if (nextIsVector) {
+      vectorBasemapLayer = createOpenFreeMapLayer(OPENFREEMAP_STYLES[key]);
+      vectorBasemapLayer.addTo(map);
+      activeBasemapLayer = vectorBasemapLayer;
+    } else {
+      activeBasemapLayer = rasterLayer;
+      rasterLayer.addTo(map);
+      rasterLayer.bringToBack();
+    }
+  }
 
   state.basemap = key;
   applyBasemapClass(key);
@@ -6603,6 +6882,7 @@ function setupMapPopups() {
       const kind = previewBtn.dataset.markerKind;
       const id = previewBtn.dataset.markerId;
       const lookup = {
+        city: cityCatalogMarkersInView,
         hike: hikeCatalogMarkersInView,
         park: parkCatalogMarkersInView,
         poi: poiCatalogMarkersInView
@@ -6612,7 +6892,9 @@ function setupMapPopups() {
       catalogPreviewTransitioning = true;
       map.closePopup();
       catalogPreviewTransitioning = false;
-      if (kind === "hike") {
+      if (kind === "city") {
+        void openCityFromMarker(marker);
+      } else if (kind === "hike") {
         void openHikeFromMarker(marker);
       } else if (kind === "park") {
         void openParkFromMarker(marker);
@@ -7220,13 +7502,20 @@ function setPanelCollapsed(collapsed) {
   }
 
   panelCollapsed = collapsed;
-  // On phones the panel never fully hides — it just toggles between peek and
-  // expanded modes so the bottom sheet stays accessible above the bottom nav.
+  // On phones a loaded journey stays as a peek/expanded sheet. An empty
+  // panel hides so it cannot cover the map or the explore hint.
   if (typeof phoneMq === "function" && phoneMq()) {
-    itineraryPanel.classList.remove("collapsed");
-    itineraryPanel.classList.toggle("is-peek", collapsed);
-    itineraryPanel.classList.toggle("is-expanded", !collapsed);
-    panelCollapsed = false;
+    const hideEmpty = collapsed && !hasActiveJourney();
+    if (hideEmpty) {
+      itineraryPanel.classList.add("collapsed");
+      itineraryPanel.classList.remove("is-peek", "is-expanded");
+      panelCollapsed = true;
+    } else {
+      itineraryPanel.classList.remove("collapsed");
+      itineraryPanel.classList.toggle("is-peek", collapsed);
+      itineraryPanel.classList.toggle("is-expanded", !collapsed);
+      panelCollapsed = false;
+    }
   } else {
     itineraryPanel.classList.remove("is-peek", "is-expanded");
     itineraryPanel.classList.toggle("collapsed", collapsed);
@@ -7278,7 +7567,7 @@ function updateLayoutInsets() {
   let mapHintOffset = 0;
   if (mapHintVisible) {
     const hintRect = mapHintBar.getBoundingClientRect();
-    mapHintOffset = Math.ceil(hintRect.height + 12);
+    mapHintOffset = Math.ceil(hintRect.height + 10);
     stage.style.setProperty("--layout-map-hint", `${mapHintOffset}px`);
   } else {
     stage.style.setProperty("--layout-map-hint", "0px");
@@ -7286,7 +7575,7 @@ function updateLayoutInsets() {
 
   const narrow = window.innerWidth <= 980;
   const phone = window.innerWidth <= 640;
-  let leafletBottom = 12 + mapHintOffset;
+  let leafletBottom = 12;
 
   if (phone) {
     // Phones: leaflet bottom controls sit above the bottom nav AND above the
@@ -7496,8 +7785,14 @@ function syncMobilePanelMode() {
     panel.classList.remove("is-peek", "is-expanded");
     return;
   }
-  // On phones we always keep the panel visible (no more `.collapsed`) — it
-  // just toggles between peek and expanded.
+  if (!hasActiveJourney()) {
+    panel.classList.add("collapsed");
+    panel.classList.remove("is-peek", "is-expanded");
+    panelCollapsed = true;
+    syncStoryPanelLayout();
+    updateMobileBottomNavActive();
+    return;
+  }
   panel.classList.remove("collapsed");
   panelCollapsed = false;
   if (!panel.classList.contains("is-expanded") && !panel.classList.contains("is-peek")) {
@@ -7549,9 +7844,15 @@ function setupMobileBottomNav() {
 function handleMobileNavAction(action) {
   switch (action) {
     case "map": {
-      // Collapse the bottom sheet to peek so the map is fully visible.
-      setMobilePanelMode("peek");
-      // Also close any open sheet/overlay so the user sees only the map.
+      const panel = document.getElementById("itineraryPanel");
+      if (hasActiveJourney()) {
+        setMobilePanelMode("peek");
+      } else {
+        panel?.classList.add("collapsed");
+        panel?.classList.remove("is-peek", "is-expanded");
+        panelCollapsed = true;
+        requestAnimationFrame(updateLayoutInsets);
+      }
       closeMobileControlsSheet();
       break;
     }
@@ -7685,7 +7986,8 @@ async function initializeTrips() {
   }
 
   const manifest = await response.json();
-  state.trips = [...rehydrateImportedTrips(), ...tagSampleTrips(manifest.trips || [])];
+  const mappedSamples = (manifest.trips || []).filter((trip) => mapRegionConfig[trip.continent]);
+  state.trips = [...rehydrateImportedTrips(), ...tagSampleTrips(mappedSamples)];
   updateJourneysMenuHint();
 
   state.selectedTrip = null;
@@ -7707,6 +8009,20 @@ function setupWelcomeAndExplore() {
   document.getElementById("welcomeJourneysBtn")?.addEventListener("click", () => {
     dismissWelcomeOverlay();
     openTripOverlay();
+  });
+
+  welcomeOverlay?.addEventListener("click", (event) => {
+    const regionBtn = event.target.closest("[data-welcome-region]");
+    if (regionBtn) {
+      void setActiveMapRegion(regionBtn.dataset.welcomeRegion);
+      renderWelcomeOverlay();
+      return;
+    }
+
+    const tripBtn = event.target.closest("[data-welcome-trip]");
+    if (tripBtn) {
+      void loadTrip(tripBtn.dataset.welcomeTrip);
+    }
   });
 
   welcomeOverlay?.querySelectorAll("[data-welcome-dismiss]").forEach((el) => {
@@ -7764,6 +8080,12 @@ function setupWelcomeAndExplore() {
 
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) {
+    return;
+  }
+  if (import.meta.env.DEV) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((registration) => registration.unregister());
+    }).catch(() => {});
     return;
   }
   if (window.location.protocol !== "https:" && window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {

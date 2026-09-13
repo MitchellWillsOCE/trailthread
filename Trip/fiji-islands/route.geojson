@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nadi to Pacific Harbour",
+        "mode": "drive",
+        "day": "4",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            177.4356,
+            -17.7765
+          ],
+          [
+            178.074,
+            -18.241
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pacific Harbour to Suva",
+        "mode": "drive",
+        "day": "6",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            178.074,
+            -18.241
+          ],
+          [
+            178.4419,
+            -18.1416
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nadi",
+        "country": "Fiji",
+        "stopType": "start",
+        "day": "1",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.4356,
+          -17.7765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pacific Harbour",
+        "country": "Fiji",
+        "stopType": "city",
+        "day": "4",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.074,
+          -18.241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Suva",
+        "country": "Fiji",
+        "stopType": "end",
+        "day": "6",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.4419,
+          -18.1416
+        ]
+      }
+    }
+  ]
+}

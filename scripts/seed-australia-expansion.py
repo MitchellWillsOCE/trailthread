@@ -11,6 +11,7 @@ import argparse
 import json
 import subprocess
 import sys
+import time
 import unicodedata
 from pathlib import Path
 
@@ -28,7 +29,21 @@ def read_json(path: Path) -> dict:
 
 
 def write_json(path: Path, payload: dict) -> None:
-    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    text = json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(text, encoding="utf-8")
+    last_err = None
+    for attempt in range(8):
+        try:
+            tmp.replace(path)
+            return
+        except OSError as err:
+            last_err = err
+            time.sleep(0.35 * (attempt + 1))
+    path.write_text(text, encoding="utf-8")
+    tmp.unlink(missing_ok=True)
+    if last_err:
+        print(f"warn: wrote {path.name} directly after {last_err}", flush=True)
 
 
 def normalize_key(text: str) -> str:

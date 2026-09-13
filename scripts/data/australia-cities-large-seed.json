@@ -1,0 +1,1951 @@
+{
+  "cities": [
+    {
+      "id": "central-coast-au",
+      "name": "Central Coast",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.3,
+      "lng": 151.3,
+      "pop": 350000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+      "general": "Central Coast is a New South Wales coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "maitland-au",
+      "name": "Maitland",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.733,
+      "lng": 151.55,
+      "pop": 90000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+      "general": "Maitland is a New South Wales river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "tamworth-au",
+      "name": "Tamworth",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -31.083,
+      "lng": 150.917,
+      "pop": 65000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+      "general": "Tamworth is a New South Wales regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "wagga-wagga-au",
+      "name": "Wagga Wagga",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.108,
+      "lng": 147.359,
+      "pop": 70000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+      "general": "Wagga Wagga is a New South Wales river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "albury-au",
+      "name": "Albury",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.073,
+      "lng": 146.913,
+      "pop": 56000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+      "general": "Albury is a New South Wales river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "orange-au",
+      "name": "Orange",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.283,
+      "lng": 149.1,
+      "pop": 42000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+      "general": "Orange is a New South Wales regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "dubbo-au",
+      "name": "Dubbo",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.256,
+      "lng": 148.601,
+      "pop": 44000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+      "general": "Dubbo is a New South Wales regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bathurst-au",
+      "name": "Bathurst",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.419,
+      "lng": 149.578,
+      "pop": 38000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+      "general": "Bathurst is a New South Wales regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "port-macquarie-au",
+      "name": "Port Macquarie",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -31.433,
+      "lng": 152.9,
+      "pop": 51000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+      "general": "Port Macquarie is a New South Wales coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lismore-au",
+      "name": "Lismore",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.813,
+      "lng": 153.278,
+      "pop": 28000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+      "general": "Lismore is a New South Wales river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "goulburn-au",
+      "name": "Goulburn",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.754,
+      "lng": 149.719,
+      "pop": 24000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+      "general": "Goulburn is a New South Wales regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "broken-hill-au",
+      "name": "Broken Hill",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -31.956,
+      "lng": 141.467,
+      "pop": 17000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "New South Wales outback base for road trips, local food, and nearby nature",
+      "general": "Broken Hill is a New South Wales outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "nowra-au",
+      "name": "Nowra",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.883,
+      "lng": 150.6,
+      "pop": 37000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+      "general": "Nowra is a New South Wales coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "armidale-au",
+      "name": "Armidale",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.514,
+      "lng": 151.666,
+      "pop": 24000,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "New South Wales high-country base for road trips, local food, and nearby nature",
+      "general": "Armidale is a New South Wales high-country centre with cooler-climate walks, lookouts, heritage streets, and nearby national-park access. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk nearby lookouts and ridges",
+        "Explore heritage streets",
+        "Use the town as a national-park base",
+        "Check local galleries and cafes"
+      ],
+      "tips": [
+        "Weather can be cooler than the coast",
+        "Carry layers on exposed walks",
+        "Check park alerts before driving to trailheads"
+      ],
+      "photos": []
+    },
+    {
+      "id": "griffith-au",
+      "name": "Griffith",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.29,
+      "lng": 146.043,
+      "pop": 27000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "New South Wales regional base for road trips, local food, and nearby nature",
+      "general": "Griffith is a New South Wales regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kiama-au",
+      "name": "Kiama",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.672,
+      "lng": 150.855,
+      "pop": 23000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "New South Wales coastal base for road trips, local food, and nearby nature",
+      "general": "Kiama is a New South Wales coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "shepparton-au",
+      "name": "Shepparton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.381,
+      "lng": 145.399,
+      "pop": 55000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "Victoria river base for road trips, local food, and nearby nature",
+      "general": "Shepparton is a Victoria river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mildura-au",
+      "name": "Mildura",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.209,
+      "lng": 142.136,
+      "pop": 56000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "Victoria river base for road trips, local food, and nearby nature",
+      "general": "Mildura is a Victoria river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "warrnambool-au",
+      "name": "Warrnambool",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.383,
+      "lng": 142.483,
+      "pop": 35000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Victoria coastal base for road trips, local food, and nearby nature",
+      "general": "Warrnambool is a Victoria coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "traralgon-au",
+      "name": "Traralgon",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.195,
+      "lng": 146.541,
+      "pop": 27000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Victoria regional base for road trips, local food, and nearby nature",
+      "general": "Traralgon is a Victoria regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "sale-au",
+      "name": "Sale",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.111,
+      "lng": 147.068,
+      "pop": 15000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Victoria river base for road trips, local food, and nearby nature",
+      "general": "Sale is a Victoria river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "wangaratta-au",
+      "name": "Wangaratta",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.355,
+      "lng": 146.326,
+      "pop": 30000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "Victoria river base for road trips, local food, and nearby nature",
+      "general": "Wangaratta is a Victoria river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "horsham-au",
+      "name": "Horsham",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.711,
+      "lng": 142.199,
+      "pop": 20000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Victoria regional base for road trips, local food, and nearby nature",
+      "general": "Horsham is a Victoria regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bairnsdale-au",
+      "name": "Bairnsdale",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.826,
+      "lng": 147.629,
+      "pop": 17000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Victoria river base for road trips, local food, and nearby nature",
+      "general": "Bairnsdale is a Victoria river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "echuca-au",
+      "name": "Echuca",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.129,
+      "lng": 144.748,
+      "pop": 15000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Victoria river base for road trips, local food, and nearby nature",
+      "general": "Echuca is a Victoria river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "swan-hill-au",
+      "name": "Swan Hill",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.341,
+      "lng": 143.559,
+      "pop": 10000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Victoria river base for road trips, local food, and nearby nature",
+      "general": "Swan Hill is a Victoria river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "torquay-au",
+      "name": "Torquay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.333,
+      "lng": 144.317,
+      "pop": 22000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Victoria coastal base for road trips, local food, and nearby nature",
+      "general": "Torquay is a Victoria coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "sunshine-coast-au",
+      "name": "Sunshine Coast",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -26.65,
+      "lng": 153.067,
+      "pop": 365000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+      "general": "Sunshine Coast is a Queensland coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "toowoomba-au",
+      "name": "Toowoomba",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -27.561,
+      "lng": 151.953,
+      "pop": 142000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "Queensland regional base for road trips, local food, and nearby nature",
+      "general": "Toowoomba is a Queensland regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "ipswich-au",
+      "name": "Ipswich",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -27.614,
+      "lng": 152.761,
+      "pop": 250000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "2-4 days",
+      "tagline": "Queensland river base for road trips, local food, and nearby nature",
+      "general": "Ipswich is a Queensland river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "logan-city-au",
+      "name": "Logan City",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -27.639,
+      "lng": 153.109,
+      "pop": 350000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "2-4 days",
+      "tagline": "Queensland river base for road trips, local food, and nearby nature",
+      "general": "Logan City is a Queensland river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mackay-au",
+      "name": "Mackay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -21.142,
+      "lng": 149.186,
+      "pop": 80000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+      "general": "Mackay is a Queensland coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "rockhampton-au",
+      "name": "Rockhampton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -23.378,
+      "lng": 150.512,
+      "pop": 79000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "Queensland river base for road trips, local food, and nearby nature",
+      "general": "Rockhampton is a Queensland river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bundaberg-au",
+      "name": "Bundaberg",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -24.866,
+      "lng": 152.349,
+      "pop": 71000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+      "general": "Bundaberg is a Queensland coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "hervey-bay-au",
+      "name": "Hervey Bay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -25.288,
+      "lng": 152.768,
+      "pop": 58000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+      "general": "Hervey Bay is a Queensland coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "gladstone-au",
+      "name": "Gladstone",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -23.842,
+      "lng": 151.256,
+      "pop": 62000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+      "general": "Gladstone is a Queensland coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-isa-au",
+      "name": "Mount Isa",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -20.725,
+      "lng": 139.492,
+      "pop": 18000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+      "general": "Mount Isa is a Queensland outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "longreach-au",
+      "name": "Longreach",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -23.442,
+      "lng": 144.249,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+      "general": "Longreach is a Queensland outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "roma-au",
+      "name": "Roma",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -26.573,
+      "lng": 148.789,
+      "pop": 7000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+      "general": "Roma is a Queensland outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "cooktown-au",
+      "name": "Cooktown",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -15.466,
+      "lng": 145.25,
+      "pop": 2600,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Queensland coastal base for road trips, local food, and nearby nature",
+      "general": "Cooktown is a Queensland coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "charleville-au",
+      "name": "Charleville",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -26.402,
+      "lng": 146.238,
+      "pop": 3300,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Queensland outback base for road trips, local food, and nearby nature",
+      "general": "Charleville is a Queensland outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mandurah-au",
+      "name": "Mandurah",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.536,
+      "lng": 115.742,
+      "pop": 90000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Mandurah is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "fremantle-au",
+      "name": "Fremantle",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.056,
+      "lng": 115.744,
+      "pop": 32000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Fremantle is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bunbury-au",
+      "name": "Bunbury",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.327,
+      "lng": 115.641,
+      "pop": 76000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Bunbury is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "busselton-au",
+      "name": "Busselton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.655,
+      "lng": 115.35,
+      "pop": 40000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Busselton is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "geraldton-au",
+      "name": "Geraldton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.778,
+      "lng": 114.614,
+      "pop": 37000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Geraldton is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kalgoorlie-au",
+      "name": "Kalgoorlie",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.749,
+      "lng": 121.466,
+      "pop": 29000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Western Australia outback base for road trips, local food, and nearby nature",
+      "general": "Kalgoorlie is a Western Australia outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "karratha-au",
+      "name": "Karratha",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -20.737,
+      "lng": 116.846,
+      "pop": 23000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Karratha is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "port-hedland-au",
+      "name": "Port Hedland",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -20.31,
+      "lng": 118.606,
+      "pop": 15000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Port Hedland is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "denmark-au",
+      "name": "Denmark",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.96,
+      "lng": 117.35,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Denmark is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "augusta-au",
+      "name": "Augusta",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.315,
+      "lng": 115.16,
+      "pop": 1400,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Augusta is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "carnarvon-au",
+      "name": "Carnarvon",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -24.884,
+      "lng": 113.657,
+      "pop": 5500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Western Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Carnarvon is a Western Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-gambier-au",
+      "name": "Mount Gambier",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.829,
+      "lng": 140.782,
+      "pop": 27000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "South Australia regional base for road trips, local food, and nearby nature",
+      "general": "Mount Gambier is a South Australia regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "whyalla-au",
+      "name": "Whyalla",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.033,
+      "lng": 137.584,
+      "pop": 22000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "South Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Whyalla is a South Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "port-lincoln-au",
+      "name": "Port Lincoln",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.721,
+      "lng": 135.858,
+      "pop": 16000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "South Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Port Lincoln is a South Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "port-augusta-au",
+      "name": "Port Augusta",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.492,
+      "lng": 137.763,
+      "pop": 13000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "South Australia outback base for road trips, local food, and nearby nature",
+      "general": "Port Augusta is a South Australia outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "coober-pedy-au",
+      "name": "Coober Pedy",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -29.013,
+      "lng": 134.754,
+      "pop": 1800,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "South Australia outback base for road trips, local food, and nearby nature",
+      "general": "Coober Pedy is a South Australia outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "victor-harbor-au",
+      "name": "Victor Harbor",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.55,
+      "lng": 138.621,
+      "pop": 16000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "South Australia coastal base for road trips, local food, and nearby nature",
+      "general": "Victor Harbor is a South Australia coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "renmark-au",
+      "name": "Renmark",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.177,
+      "lng": 140.746,
+      "pop": 7000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "South Australia river base for road trips, local food, and nearby nature",
+      "general": "Renmark is a South Australia river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "hahndorf-au",
+      "name": "Hahndorf",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.028,
+      "lng": 138.809,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "South Australia regional base for road trips, local food, and nearby nature",
+      "general": "Hahndorf is a South Australia regional centre with heritage streets, regional galleries, food producers, and touring access to surrounding towns and parks. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Explore heritage streets and museums",
+        "Visit local food and wine producers",
+        "Use the city as a regional touring base",
+        "Walk nearby parks and lookouts"
+      ],
+      "tips": [
+        "Distances between towns can be large",
+        "Summer afternoons can be hot",
+        "Book regional events and festivals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "devonport-au",
+      "name": "Devonport",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -41.178,
+      "lng": 146.36,
+      "pop": 26000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+      "general": "Devonport is a Tasmania coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "burnie-au",
+      "name": "Burnie",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -41.052,
+      "lng": 145.906,
+      "pop": 20000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+      "general": "Burnie is a Tasmania coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "queenstown-au",
+      "name": "Queenstown",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -42.08,
+      "lng": 145.556,
+      "pop": 1700,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Tasmania high-country base for road trips, local food, and nearby nature",
+      "general": "Queenstown is a Tasmania high-country centre with cooler-climate walks, lookouts, heritage streets, and nearby national-park access. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk nearby lookouts and ridges",
+        "Explore heritage streets",
+        "Use the town as a national-park base",
+        "Check local galleries and cafes"
+      ],
+      "tips": [
+        "Weather can be cooler than the coast",
+        "Carry layers on exposed walks",
+        "Check park alerts before driving to trailheads"
+      ],
+      "photos": []
+    },
+    {
+      "id": "strahan-au",
+      "name": "Strahan",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -42.151,
+      "lng": 145.327,
+      "pop": 700,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+      "general": "Strahan is a Tasmania coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "st-helens-au",
+      "name": "St Helens",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -41.321,
+      "lng": 148.249,
+      "pop": 2200,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+      "general": "St Helens is a Tasmania coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "swansea-au",
+      "name": "Swansea",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -42.122,
+      "lng": 148.074,
+      "pop": 900,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Tasmania coastal base for road trips, local food, and nearby nature",
+      "general": "Swansea is a Tasmania coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "katherine-au",
+      "name": "Katherine",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -14.465,
+      "lng": 132.264,
+      "pop": 10000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Northern Territory river base for road trips, local food, and nearby nature",
+      "general": "Katherine is a Northern Territory river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "tennant-creek-au",
+      "name": "Tennant Creek",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -19.649,
+      "lng": 134.191,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Northern Territory outback base for road trips, local food, and nearby nature",
+      "general": "Tennant Creek is a Northern Territory outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "nhulunbuy-au",
+      "name": "Nhulunbuy",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -12.182,
+      "lng": 136.782,
+      "pop": 3300,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Northern Territory coastal base for road trips, local food, and nearby nature",
+      "general": "Nhulunbuy is a Northern Territory coastal centre with beaches, headlands, harbours, local seafood, and national-park side trips. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Walk the waterfront and beaches",
+        "Use the town as a road-trip base",
+        "Visit nearby lookouts and local markets",
+        "Plan a national-park or island day trip"
+      ],
+      "tips": [
+        "Swim only at patrolled beaches",
+        "Book ahead in summer and school holidays",
+        "Check wind, tide, and ferry conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "yulara-au",
+      "name": "Yulara",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -25.24,
+      "lng": 130.988,
+      "pop": 1000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Northern Territory outback base for road trips, local food, and nearby nature",
+      "general": "Yulara is a Northern Territory outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "jabiru-au",
+      "name": "Jabiru",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -12.67,
+      "lng": 132.835,
+      "pop": 1000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Northern Territory outback base for road trips, local food, and nearby nature",
+      "general": "Jabiru is a Northern Territory outback centre with big-sky landscapes, remote-road touring, local history, and practical outback services. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Visit outback museums and lookouts",
+        "Plan remote-road day trips",
+        "Watch sunrise or sunset viewpoints",
+        "Check visitor-centre road advice"
+      ],
+      "tips": [
+        "Carry extra water and fuel",
+        "Avoid midday heat on exposed walks",
+        "Check remote-road conditions before leaving town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "queanbeyan-au",
+      "name": "Queanbeyan",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.354,
+      "lng": 149.232,
+      "pop": 37000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-3 days",
+      "tagline": "New South Wales river base for road trips, local food, and nearby nature",
+      "general": "Queanbeyan is a New South Wales river centre with riverfront walks, regional heritage, food trails, and touring routes through surrounding country. It adds useful stopover coverage for Australian road trips and regional journey planning.",
+      "activities": [
+        "Follow the riverfront paths",
+        "Visit regional galleries or museums",
+        "Explore food, wine, or farm-gate stops",
+        "Use the town as a touring base"
+      ],
+      "tips": [
+        "Summer heat can build inland",
+        "A car helps connect surrounding towns",
+        "Check flood or road conditions after heavy rain"
+      ],
+      "photos": []
+    }
+  ],
+  "parks": [],
+  "pois": [],
+  "hikes": []
+}
