@@ -1,207 +1,2552 @@
 {
   "default": {
-    "peak": ["Jun", "Jul", "Aug"],
-    "shoulder": ["Apr", "May", "Sep", "Oct"],
-    "low": ["Jan", "Feb", "Mar", "Nov", "Dec"],
+    "peak": [
+      "Jun",
+      "Jul",
+      "Aug"
+    ],
+    "shoulder": [
+      "Apr",
+      "May",
+      "Sep",
+      "Oct"
+    ],
+    "low": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Nov",
+      "Dec"
+    ],
     "note": "Northern hemisphere baseline — peak summer, cooler shoulder months, quieter winter.",
     "best": "May–Sep",
     "weather": {
-      "Jan": {"high": 6, "low": -1, "rain": 60},
-      "Feb": {"high": 7, "low": 0, "rain": 55},
-      "Mar": {"high": 11, "low": 3, "rain": 60},
-      "Apr": {"high": 15, "low": 6, "rain": 60},
-      "May": {"high": 20, "low": 10, "rain": 55},
-      "Jun": {"high": 24, "low": 14, "rain": 45},
-      "Jul": {"high": 27, "low": 16, "rain": 40},
-      "Aug": {"high": 27, "low": 16, "rain": 50},
-      "Sep": {"high": 22, "low": 12, "rain": 60},
-      "Oct": {"high": 16, "low": 8, "rain": 70},
-      "Nov": {"high": 10, "low": 3, "rain": 70},
-      "Dec": {"high": 7, "low": 0, "rain": 65}
+      "Jan": {
+        "high": 6,
+        "low": -1,
+        "rain": 60
+      },
+      "Feb": {
+        "high": 7,
+        "low": 0,
+        "rain": 55
+      },
+      "Mar": {
+        "high": 11,
+        "low": 3,
+        "rain": 60
+      },
+      "Apr": {
+        "high": 15,
+        "low": 6,
+        "rain": 60
+      },
+      "May": {
+        "high": 20,
+        "low": 10,
+        "rain": 55
+      },
+      "Jun": {
+        "high": 24,
+        "low": 14,
+        "rain": 45
+      },
+      "Jul": {
+        "high": 27,
+        "low": 16,
+        "rain": 40
+      },
+      "Aug": {
+        "high": 27,
+        "low": 16,
+        "rain": 50
+      },
+      "Sep": {
+        "high": 22,
+        "low": 12,
+        "rain": 60
+      },
+      "Oct": {
+        "high": 16,
+        "low": 8,
+        "rain": 70
+      },
+      "Nov": {
+        "high": 10,
+        "low": 3,
+        "rain": 70
+      },
+      "Dec": {
+        "high": 7,
+        "low": 0,
+        "rain": 65
+      }
     }
   },
   "byCountry": {
     "Montenegro": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Coast is hot and busy in Jul/Aug. Inland parks (Durmitor, Biogradska) are best May–Sep; high passes can be snowed in until late May.",
       "best": "May–Sep",
       "weather": {
-        "Jan": {"high": 9, "low": 3, "rain": 130},
-        "Feb": {"high": 11, "low": 3, "rain": 110},
-        "Mar": {"high": 14, "low": 6, "rain": 100},
-        "Apr": {"high": 18, "low": 9, "rain": 85},
-        "May": {"high": 23, "low": 13, "rain": 70},
-        "Jun": {"high": 27, "low": 17, "rain": 40},
-        "Jul": {"high": 30, "low": 19, "rain": 30},
-        "Aug": {"high": 31, "low": 19, "rain": 45},
-        "Sep": {"high": 26, "low": 15, "rain": 80},
-        "Oct": {"high": 21, "low": 11, "rain": 110},
-        "Nov": {"high": 15, "low": 7, "rain": 160},
-        "Dec": {"high": 11, "low": 4, "rain": 150}
+        "Jan": {
+          "high": 9,
+          "low": 3,
+          "rain": 130
+        },
+        "Feb": {
+          "high": 11,
+          "low": 3,
+          "rain": 110
+        },
+        "Mar": {
+          "high": 14,
+          "low": 6,
+          "rain": 100
+        },
+        "Apr": {
+          "high": 18,
+          "low": 9,
+          "rain": 85
+        },
+        "May": {
+          "high": 23,
+          "low": 13,
+          "rain": 70
+        },
+        "Jun": {
+          "high": 27,
+          "low": 17,
+          "rain": 40
+        },
+        "Jul": {
+          "high": 30,
+          "low": 19,
+          "rain": 30
+        },
+        "Aug": {
+          "high": 31,
+          "low": 19,
+          "rain": 45
+        },
+        "Sep": {
+          "high": 26,
+          "low": 15,
+          "rain": 80
+        },
+        "Oct": {
+          "high": 21,
+          "low": 11,
+          "rain": 110
+        },
+        "Nov": {
+          "high": 15,
+          "low": 7,
+          "rain": 160
+        },
+        "Dec": {
+          "high": 11,
+          "low": 4,
+          "rain": 150
+        }
       }
     },
     "Croatia": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Dalmatian coast hot Jun–Aug; expect ferry surcharges. Plitvice & Krka most photogenic in late spring and autumn.",
       "best": "May–Oct",
       "weather": {
-        "Jan": {"high": 9, "low": 3, "rain": 90},
-        "Feb": {"high": 11, "low": 3, "rain": 80},
-        "Mar": {"high": 14, "low": 6, "rain": 75},
-        "Apr": {"high": 19, "low": 9, "rain": 65},
-        "May": {"high": 24, "low": 13, "rain": 55},
-        "Jun": {"high": 28, "low": 17, "rain": 50},
-        "Jul": {"high": 31, "low": 19, "rain": 35},
-        "Aug": {"high": 31, "low": 19, "rain": 45},
-        "Sep": {"high": 26, "low": 15, "rain": 75},
-        "Oct": {"high": 20, "low": 11, "rain": 100},
-        "Nov": {"high": 14, "low": 7, "rain": 110},
-        "Dec": {"high": 10, "low": 4, "rain": 105}
+        "Jan": {
+          "high": 9,
+          "low": 3,
+          "rain": 90
+        },
+        "Feb": {
+          "high": 11,
+          "low": 3,
+          "rain": 80
+        },
+        "Mar": {
+          "high": 14,
+          "low": 6,
+          "rain": 75
+        },
+        "Apr": {
+          "high": 19,
+          "low": 9,
+          "rain": 65
+        },
+        "May": {
+          "high": 24,
+          "low": 13,
+          "rain": 55
+        },
+        "Jun": {
+          "high": 28,
+          "low": 17,
+          "rain": 50
+        },
+        "Jul": {
+          "high": 31,
+          "low": 19,
+          "rain": 35
+        },
+        "Aug": {
+          "high": 31,
+          "low": 19,
+          "rain": 45
+        },
+        "Sep": {
+          "high": 26,
+          "low": 15,
+          "rain": 75
+        },
+        "Oct": {
+          "high": 20,
+          "low": 11,
+          "rain": 100
+        },
+        "Nov": {
+          "high": 14,
+          "low": 7,
+          "rain": 110
+        },
+        "Dec": {
+          "high": 10,
+          "low": 4,
+          "rain": 105
+        }
       }
     },
     "Slovenia": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["May", "Jun", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb", "Mar"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Jun",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
       "note": "Julian Alps best Jul–Sep; lower trails open from late May. Winters cold but excellent for ski resorts.",
       "best": "Jun–Sep",
       "weather": {
-        "Jan": {"high": 3, "low": -3, "rain": 75},
-        "Feb": {"high": 5, "low": -2, "rain": 65},
-        "Mar": {"high": 11, "low": 2, "rain": 80},
-        "Apr": {"high": 16, "low": 6, "rain": 85},
-        "May": {"high": 21, "low": 11, "rain": 100},
-        "Jun": {"high": 25, "low": 14, "rain": 110},
-        "Jul": {"high": 27, "low": 16, "rain": 105},
-        "Aug": {"high": 26, "low": 15, "rain": 110},
-        "Sep": {"high": 21, "low": 11, "rain": 100},
-        "Oct": {"high": 15, "low": 7, "rain": 105},
-        "Nov": {"high": 8, "low": 2, "rain": 95},
-        "Dec": {"high": 4, "low": -1, "rain": 85}
+        "Jan": {
+          "high": 3,
+          "low": -3,
+          "rain": 75
+        },
+        "Feb": {
+          "high": 5,
+          "low": -2,
+          "rain": 65
+        },
+        "Mar": {
+          "high": 11,
+          "low": 2,
+          "rain": 80
+        },
+        "Apr": {
+          "high": 16,
+          "low": 6,
+          "rain": 85
+        },
+        "May": {
+          "high": 21,
+          "low": 11,
+          "rain": 100
+        },
+        "Jun": {
+          "high": 25,
+          "low": 14,
+          "rain": 110
+        },
+        "Jul": {
+          "high": 27,
+          "low": 16,
+          "rain": 105
+        },
+        "Aug": {
+          "high": 26,
+          "low": 15,
+          "rain": 110
+        },
+        "Sep": {
+          "high": 21,
+          "low": 11,
+          "rain": 100
+        },
+        "Oct": {
+          "high": 15,
+          "low": 7,
+          "rain": 105
+        },
+        "Nov": {
+          "high": 8,
+          "low": 2,
+          "rain": 95
+        },
+        "Dec": {
+          "high": 4,
+          "low": -1,
+          "rain": 85
+        }
       }
     },
     "Italy": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["Apr", "May", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "Apr",
+        "May",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Big cities hot and crowded Jul/Aug; coastal areas peak. Dolomiti hiking season Jun–Sep.",
       "best": "Apr–Jun, Sep–Oct"
     },
     "France": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["May", "Jun", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Jun",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Alps hut season mid-Jun to mid-Sep; Provence lavender peaks early Jul.",
       "best": "May–Sep"
     },
     "Spain": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["Apr", "May", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "Apr",
+        "May",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Andalucía very hot Jul/Aug — go shoulder. Picos & Pyrenees Jun–Sep.",
       "best": "Apr–Jun, Sep–Oct"
     },
     "Portugal": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["Apr", "May", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "Apr",
+        "May",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Algarve packed Jul/Aug; Peneda-Gerês best late spring and early autumn.",
       "best": "May–Oct"
     },
     "Greece": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["May", "Jun", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Jun",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Cyclades very hot/dry Jul/Aug. Mainland hikes (Olympus, Samaria) Jun–Oct.",
       "best": "May–Jun, Sep–Oct"
     },
     "Norway": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Most mountain huts open mid-Jun to mid-Sep. Northern lights season Sep–Mar.",
       "best": "Jun–Aug"
     },
     "Sweden": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Midnight sun in north Jun/Jul; Kungsleden hut season mid-Jun to mid-Sep.",
       "best": "Jun–Aug"
     },
     "Iceland": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Highlands roads (F-roads) open ~late Jun to mid-Sep. Aurora season Sep–Mar.",
       "best": "Jun–Aug for hiking, Sep–Mar for aurora"
     },
     "Switzerland": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["Jun", "Sep"],
-      "low": ["Apr", "May", "Oct", "Nov"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "Jun",
+        "Sep"
+      ],
+      "low": [
+        "Apr",
+        "May",
+        "Oct",
+        "Nov"
+      ],
       "note": "Alpine hiking Jul–Sep; cable cars often closed in shoulder. Ski season Dec–Mar.",
       "best": "Jul–Sep"
     },
     "Austria": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["Jun", "Sep"],
-      "low": ["Apr", "May", "Oct", "Nov"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "Jun",
+        "Sep"
+      ],
+      "low": [
+        "Apr",
+        "May",
+        "Oct",
+        "Nov"
+      ],
       "note": "Hohe Tauern hut season Jun–Sep; Vienna pleasant May–Oct.",
       "best": "Jun–Sep"
     },
     "Germany": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Bavarian Alps & Black Forest best Jun–Sep; Christmas markets late Nov–Dec.",
       "best": "May–Sep"
     },
     "Poland": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["May", "Jun", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Jun",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Tatra peaks safe Jul–Sep; Białowieża best in late spring for biodiversity.",
       "best": "Jun–Sep"
     },
     "Romania": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["May", "Jun", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Jun",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Carpathian hikes Jul–Sep; Danube Delta best May–Jun for migratory birds.",
       "best": "May–Sep"
     },
     "Bulgaria": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["May", "Jun", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Jun",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Pirin & Rila hut season Jun–Sep; Black Sea coast Jul/Aug.",
       "best": "May–Sep"
     },
     "Turkey": {
-      "peak": ["Jul", "Aug"],
-      "shoulder": ["Apr", "May", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "Apr",
+        "May",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Istanbul/Aegean pleasant Apr–Jun & Sep–Oct. Cappadocia balloons fly year-round but autumn light is exceptional.",
       "best": "Apr–Jun, Sep–Oct"
     },
     "United Kingdom": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep", "Oct"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep",
+        "Oct"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Highlands and Lake District best Jun–Sep; bring rain gear in any season.",
       "best": "May–Sep"
     },
     "Ireland": {
-      "peak": ["Jun", "Jul", "Aug"],
-      "shoulder": ["May", "Sep"],
-      "low": ["Nov", "Dec", "Jan", "Feb"],
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "shoulder": [
+        "May",
+        "Sep"
+      ],
+      "low": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
       "note": "Long daylight Jun–Jul; expect showers all year. Wild Atlantic Way drive best May–Sep.",
       "best": "May–Sep"
+    },
+    "Australia": {
+      "peak": [
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
+      "shoulder": [
+        "Mar",
+        "Apr",
+        "Sep",
+        "Oct",
+        "Nov"
+      ],
+      "low": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "note": "Southern Australia peaks in summer, while the tropical north is most comfortable in the dry season from May to September. Red Centre hikes are best in cooler months.",
+      "best": "Mar-May, Sep-Nov",
+      "weather": {
+        "Jan": {
+          "high": 27,
+          "low": 19,
+          "rain": 85
+        },
+        "Feb": {
+          "high": 27,
+          "low": 19,
+          "rain": 95
+        },
+        "Mar": {
+          "high": 25,
+          "low": 17,
+          "rain": 80
+        },
+        "Apr": {
+          "high": 22,
+          "low": 14,
+          "rain": 65
+        },
+        "May": {
+          "high": 19,
+          "low": 11,
+          "rain": 60
+        },
+        "Jun": {
+          "high": 16,
+          "low": 8,
+          "rain": 65
+        },
+        "Jul": {
+          "high": 16,
+          "low": 7,
+          "rain": 55
+        },
+        "Aug": {
+          "high": 17,
+          "low": 8,
+          "rain": 55
+        },
+        "Sep": {
+          "high": 20,
+          "low": 10,
+          "rain": 55
+        },
+        "Oct": {
+          "high": 22,
+          "low": 13,
+          "rain": 65
+        },
+        "Nov": {
+          "high": 24,
+          "low": 15,
+          "rain": 75
+        },
+        "Dec": {
+          "high": 26,
+          "low": 18,
+          "rain": 80
+        }
+      }
+    },
+    "New Zealand": {
+      "peak": [
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
+      "shoulder": [
+        "Mar",
+        "Apr",
+        "Oct",
+        "Nov"
+      ],
+      "low": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "note": "Summer is prime for Great Walks and alpine roads. Spring and autumn are quieter but changeable; winter brings snow and avalanche risk on high routes.",
+      "best": "Nov-Apr",
+      "weather": {
+        "Jan": {
+          "high": 22,
+          "low": 13,
+          "rain": 65
+        },
+        "Feb": {
+          "high": 22,
+          "low": 13,
+          "rain": 55
+        },
+        "Mar": {
+          "high": 20,
+          "low": 11,
+          "rain": 70
+        },
+        "Apr": {
+          "high": 17,
+          "low": 8,
+          "rain": 75
+        },
+        "May": {
+          "high": 14,
+          "low": 6,
+          "rain": 85
+        },
+        "Jun": {
+          "high": 11,
+          "low": 3,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 10,
+          "low": 2,
+          "rain": 85
+        },
+        "Aug": {
+          "high": 12,
+          "low": 3,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 14,
+          "low": 5,
+          "rain": 75
+        },
+        "Oct": {
+          "high": 16,
+          "low": 7,
+          "rain": 75
+        },
+        "Nov": {
+          "high": 18,
+          "low": 9,
+          "rain": 70
+        },
+        "Dec": {
+          "high": 20,
+          "low": 11,
+          "rain": 70
+        }
+      }
+    },
+    "Fiji": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Papua New Guinea": {
+      "peak": [
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "Apr",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb"
+      ],
+      "note": "The dry season is the usual window for Highlands roads and the Kokoda Track. Highland nights are cold year-round; the north coast stays hot and wet.",
+      "best": "May-Sep",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 23,
+          "rain": 220
+        },
+        "Feb": {
+          "high": 31,
+          "low": 23,
+          "rain": 210
+        },
+        "Mar": {
+          "high": 30,
+          "low": 23,
+          "rain": 200
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 140
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 110
+        },
+        "Jul": {
+          "high": 28,
+          "low": 21,
+          "rain": 100
+        },
+        "Aug": {
+          "high": 28,
+          "low": 21,
+          "rain": 110
+        },
+        "Sep": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Oct": {
+          "high": 30,
+          "low": 22,
+          "rain": 160
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 31,
+          "low": 23,
+          "rain": 210
+        }
+      }
+    },
+    "Vanuatu": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Solomon Islands": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "New Caledonia": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "French Polynesia": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Samoa": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "American Samoa": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Tonga": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Cook Islands": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Niue": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Palau": {
+      "peak": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ],
+      "shoulder": [
+        "May",
+        "Dec"
+      ],
+      "low": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "note": "Micronesia is usually drier from December to May. July to November is wetter, with typhoon risk in the Marianas, Guam, and Palau.",
+      "best": "Dec-May",
+      "weather": {
+        "Jan": {
+          "high": 29,
+          "low": 24,
+          "rain": 110
+        },
+        "Feb": {
+          "high": 29,
+          "low": 24,
+          "rain": 90
+        },
+        "Mar": {
+          "high": 30,
+          "low": 24,
+          "rain": 90
+        },
+        "Apr": {
+          "high": 30,
+          "low": 25,
+          "rain": 100
+        },
+        "May": {
+          "high": 31,
+          "low": 25,
+          "rain": 140
+        },
+        "Jun": {
+          "high": 31,
+          "low": 25,
+          "rain": 180
+        },
+        "Jul": {
+          "high": 31,
+          "low": 25,
+          "rain": 250
+        },
+        "Aug": {
+          "high": 31,
+          "low": 25,
+          "rain": 280
+        },
+        "Sep": {
+          "high": 31,
+          "low": 25,
+          "rain": 270
+        },
+        "Oct": {
+          "high": 31,
+          "low": 25,
+          "rain": 230
+        },
+        "Nov": {
+          "high": 30,
+          "low": 25,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 30,
+          "low": 24,
+          "rain": 140
+        }
+      }
+    },
+    "Guam": {
+      "peak": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ],
+      "shoulder": [
+        "May",
+        "Dec"
+      ],
+      "low": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "note": "Micronesia is usually drier from December to May. July to November is wetter, with typhoon risk in the Marianas, Guam, and Palau.",
+      "best": "Dec-May",
+      "weather": {
+        "Jan": {
+          "high": 29,
+          "low": 24,
+          "rain": 110
+        },
+        "Feb": {
+          "high": 29,
+          "low": 24,
+          "rain": 90
+        },
+        "Mar": {
+          "high": 30,
+          "low": 24,
+          "rain": 90
+        },
+        "Apr": {
+          "high": 30,
+          "low": 25,
+          "rain": 100
+        },
+        "May": {
+          "high": 31,
+          "low": 25,
+          "rain": 140
+        },
+        "Jun": {
+          "high": 31,
+          "low": 25,
+          "rain": 180
+        },
+        "Jul": {
+          "high": 31,
+          "low": 25,
+          "rain": 250
+        },
+        "Aug": {
+          "high": 31,
+          "low": 25,
+          "rain": 280
+        },
+        "Sep": {
+          "high": 31,
+          "low": 25,
+          "rain": 270
+        },
+        "Oct": {
+          "high": 31,
+          "low": 25,
+          "rain": 230
+        },
+        "Nov": {
+          "high": 30,
+          "low": 25,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 30,
+          "low": 24,
+          "rain": 140
+        }
+      }
+    },
+    "Northern Mariana Islands": {
+      "peak": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ],
+      "shoulder": [
+        "May",
+        "Dec"
+      ],
+      "low": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "note": "Micronesia is usually drier from December to May. July to November is wetter, with typhoon risk in the Marianas, Guam, and Palau.",
+      "best": "Dec-May",
+      "weather": {
+        "Jan": {
+          "high": 29,
+          "low": 24,
+          "rain": 110
+        },
+        "Feb": {
+          "high": 29,
+          "low": 24,
+          "rain": 90
+        },
+        "Mar": {
+          "high": 30,
+          "low": 24,
+          "rain": 90
+        },
+        "Apr": {
+          "high": 30,
+          "low": 25,
+          "rain": 100
+        },
+        "May": {
+          "high": 31,
+          "low": 25,
+          "rain": 140
+        },
+        "Jun": {
+          "high": 31,
+          "low": 25,
+          "rain": 180
+        },
+        "Jul": {
+          "high": 31,
+          "low": 25,
+          "rain": 250
+        },
+        "Aug": {
+          "high": 31,
+          "low": 25,
+          "rain": 280
+        },
+        "Sep": {
+          "high": 31,
+          "low": 25,
+          "rain": 270
+        },
+        "Oct": {
+          "high": 31,
+          "low": 25,
+          "rain": 230
+        },
+        "Nov": {
+          "high": 30,
+          "low": 25,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 30,
+          "low": 24,
+          "rain": 140
+        }
+      }
+    },
+    "Federated States of Micronesia": {
+      "peak": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ],
+      "shoulder": [
+        "May",
+        "Dec"
+      ],
+      "low": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "note": "Micronesia is usually drier from December to May. July to November is wetter, with typhoon risk in the Marianas, Guam, and Palau.",
+      "best": "Dec-May",
+      "weather": {
+        "Jan": {
+          "high": 29,
+          "low": 24,
+          "rain": 110
+        },
+        "Feb": {
+          "high": 29,
+          "low": 24,
+          "rain": 90
+        },
+        "Mar": {
+          "high": 30,
+          "low": 24,
+          "rain": 90
+        },
+        "Apr": {
+          "high": 30,
+          "low": 25,
+          "rain": 100
+        },
+        "May": {
+          "high": 31,
+          "low": 25,
+          "rain": 140
+        },
+        "Jun": {
+          "high": 31,
+          "low": 25,
+          "rain": 180
+        },
+        "Jul": {
+          "high": 31,
+          "low": 25,
+          "rain": 250
+        },
+        "Aug": {
+          "high": 31,
+          "low": 25,
+          "rain": 280
+        },
+        "Sep": {
+          "high": 31,
+          "low": 25,
+          "rain": 270
+        },
+        "Oct": {
+          "high": 31,
+          "low": 25,
+          "rain": 230
+        },
+        "Nov": {
+          "high": 30,
+          "low": 25,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 30,
+          "low": 24,
+          "rain": 140
+        }
+      }
+    },
+    "Marshall Islands": {
+      "peak": [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr"
+      ],
+      "shoulder": [
+        "May",
+        "Dec"
+      ],
+      "low": [
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "note": "Micronesia is usually drier from December to May. July to November is wetter, with typhoon risk in the Marianas, Guam, and Palau.",
+      "best": "Dec-May",
+      "weather": {
+        "Jan": {
+          "high": 29,
+          "low": 24,
+          "rain": 110
+        },
+        "Feb": {
+          "high": 29,
+          "low": 24,
+          "rain": 90
+        },
+        "Mar": {
+          "high": 30,
+          "low": 24,
+          "rain": 90
+        },
+        "Apr": {
+          "high": 30,
+          "low": 25,
+          "rain": 100
+        },
+        "May": {
+          "high": 31,
+          "low": 25,
+          "rain": 140
+        },
+        "Jun": {
+          "high": 31,
+          "low": 25,
+          "rain": 180
+        },
+        "Jul": {
+          "high": 31,
+          "low": 25,
+          "rain": 250
+        },
+        "Aug": {
+          "high": 31,
+          "low": 25,
+          "rain": 280
+        },
+        "Sep": {
+          "high": 31,
+          "low": 25,
+          "rain": 270
+        },
+        "Oct": {
+          "high": 31,
+          "low": 25,
+          "rain": 230
+        },
+        "Nov": {
+          "high": 30,
+          "low": 25,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 30,
+          "low": 24,
+          "rain": 140
+        }
+      }
+    },
+    "Kiribati": {
+      "peak": [
+        "Apr",
+        "May",
+        "Jun",
+        "Sep",
+        "Oct"
+      ],
+      "shoulder": [
+        "Mar",
+        "Jul",
+        "Aug",
+        "Nov"
+      ],
+      "low": [
+        "Jan",
+        "Feb",
+        "Dec"
+      ],
+      "note": "Near the equator, heat and humidity stay high all year. Slightly drier spells are more comfortable for atoll travel; king tides and storms still shape the calendar.",
+      "best": "Apr-Jun, Sep-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 26,
+          "rain": 220
+        },
+        "Feb": {
+          "high": 31,
+          "low": 26,
+          "rain": 200
+        },
+        "Mar": {
+          "high": 31,
+          "low": 26,
+          "rain": 180
+        },
+        "Apr": {
+          "high": 31,
+          "low": 26,
+          "rain": 160
+        },
+        "May": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Jun": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Jul": {
+          "high": 31,
+          "low": 26,
+          "rain": 170
+        },
+        "Aug": {
+          "high": 31,
+          "low": 26,
+          "rain": 160
+        },
+        "Sep": {
+          "high": 31,
+          "low": 26,
+          "rain": 140
+        },
+        "Oct": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Nov": {
+          "high": 31,
+          "low": 26,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 31,
+          "low": 26,
+          "rain": 210
+        }
+      }
+    },
+    "Nauru": {
+      "peak": [
+        "Apr",
+        "May",
+        "Jun",
+        "Sep",
+        "Oct"
+      ],
+      "shoulder": [
+        "Mar",
+        "Jul",
+        "Aug",
+        "Nov"
+      ],
+      "low": [
+        "Jan",
+        "Feb",
+        "Dec"
+      ],
+      "note": "Near the equator, heat and humidity stay high all year. Slightly drier spells are more comfortable for atoll travel; king tides and storms still shape the calendar.",
+      "best": "Apr-Jun, Sep-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 26,
+          "rain": 220
+        },
+        "Feb": {
+          "high": 31,
+          "low": 26,
+          "rain": 200
+        },
+        "Mar": {
+          "high": 31,
+          "low": 26,
+          "rain": 180
+        },
+        "Apr": {
+          "high": 31,
+          "low": 26,
+          "rain": 160
+        },
+        "May": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Jun": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Jul": {
+          "high": 31,
+          "low": 26,
+          "rain": 170
+        },
+        "Aug": {
+          "high": 31,
+          "low": 26,
+          "rain": 160
+        },
+        "Sep": {
+          "high": 31,
+          "low": 26,
+          "rain": 140
+        },
+        "Oct": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Nov": {
+          "high": 31,
+          "low": 26,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 31,
+          "low": 26,
+          "rain": 210
+        }
+      }
+    },
+    "Tuvalu": {
+      "peak": [
+        "Apr",
+        "May",
+        "Jun",
+        "Sep",
+        "Oct"
+      ],
+      "shoulder": [
+        "Mar",
+        "Jul",
+        "Aug",
+        "Nov"
+      ],
+      "low": [
+        "Jan",
+        "Feb",
+        "Dec"
+      ],
+      "note": "Near the equator, heat and humidity stay high all year. Slightly drier spells are more comfortable for atoll travel; king tides and storms still shape the calendar.",
+      "best": "Apr-Jun, Sep-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 26,
+          "rain": 220
+        },
+        "Feb": {
+          "high": 31,
+          "low": 26,
+          "rain": 200
+        },
+        "Mar": {
+          "high": 31,
+          "low": 26,
+          "rain": 180
+        },
+        "Apr": {
+          "high": 31,
+          "low": 26,
+          "rain": 160
+        },
+        "May": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Jun": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Jul": {
+          "high": 31,
+          "low": 26,
+          "rain": 170
+        },
+        "Aug": {
+          "high": 31,
+          "low": 26,
+          "rain": 160
+        },
+        "Sep": {
+          "high": 31,
+          "low": 26,
+          "rain": 140
+        },
+        "Oct": {
+          "high": 31,
+          "low": 26,
+          "rain": 150
+        },
+        "Nov": {
+          "high": 31,
+          "low": 26,
+          "rain": 180
+        },
+        "Dec": {
+          "high": 31,
+          "low": 26,
+          "rain": 210
+        }
+      }
+    },
+    "Wallis and Futuna": {
+      "peak": [
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep"
+      ],
+      "shoulder": [
+        "May",
+        "Oct"
+      ],
+      "low": [
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "note": "The drier, cooler months from May to October are the most comfortable for islands, reefs, and village travel. November to April is hotter, wetter, and the main cyclone window.",
+      "best": "May-Oct",
+      "weather": {
+        "Jan": {
+          "high": 31,
+          "low": 24,
+          "rain": 280
+        },
+        "Feb": {
+          "high": 31,
+          "low": 24,
+          "rain": 270
+        },
+        "Mar": {
+          "high": 31,
+          "low": 24,
+          "rain": 260
+        },
+        "Apr": {
+          "high": 30,
+          "low": 23,
+          "rain": 180
+        },
+        "May": {
+          "high": 29,
+          "low": 22,
+          "rain": 120
+        },
+        "Jun": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Jul": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Aug": {
+          "high": 27,
+          "low": 20,
+          "rain": 80
+        },
+        "Sep": {
+          "high": 28,
+          "low": 21,
+          "rain": 90
+        },
+        "Oct": {
+          "high": 29,
+          "low": 22,
+          "rain": 130
+        },
+        "Nov": {
+          "high": 30,
+          "low": 23,
+          "rain": 190
+        },
+        "Dec": {
+          "high": 31,
+          "low": 24,
+          "rain": 250
+        }
+      }
+    },
+    "Norfolk Island": {
+      "peak": [
+        "Nov",
+        "Dec",
+        "Jan",
+        "Feb",
+        "Mar"
+      ],
+      "shoulder": [
+        "Apr",
+        "Oct"
+      ],
+      "low": [
+        "Jun",
+        "Jul",
+        "Aug"
+      ],
+      "note": "Norfolk is mild year-round. Summer is busiest for swimming and walking; winter is cooler, windier, and quieter.",
+      "best": "Oct-Apr",
+      "weather": {
+        "Jan": {
+          "high": 25,
+          "low": 19,
+          "rain": 90
+        },
+        "Feb": {
+          "high": 25,
+          "low": 19,
+          "rain": 100
+        },
+        "Mar": {
+          "high": 24,
+          "low": 18,
+          "rain": 110
+        },
+        "Apr": {
+          "high": 22,
+          "low": 17,
+          "rain": 120
+        },
+        "May": {
+          "high": 20,
+          "low": 15,
+          "rain": 130
+        },
+        "Jun": {
+          "high": 18,
+          "low": 13,
+          "rain": 140
+        },
+        "Jul": {
+          "high": 17,
+          "low": 12,
+          "rain": 140
+        },
+        "Aug": {
+          "high": 17,
+          "low": 12,
+          "rain": 120
+        },
+        "Sep": {
+          "high": 18,
+          "low": 13,
+          "rain": 100
+        },
+        "Oct": {
+          "high": 20,
+          "low": 14,
+          "rain": 90
+        },
+        "Nov": {
+          "high": 22,
+          "low": 16,
+          "rain": 80
+        },
+        "Dec": {
+          "high": 24,
+          "low": 18,
+          "rain": 80
+        }
+      }
     }
   }
 }

@@ -11,7 +11,7 @@ import {
 } from "../sql-shared.js";
 import { PATHS } from "../paths.js";
 
-const tiersForZoom = makeTiersForZoom({ thresholds: [6, 8], bottom: "local" });
+const tiersForZoom = makeTiersForZoom({ thresholds: [7, 9], bottom: "local" });
 
 const ensureSqlDatabase = createSqlDatabaseLoader({
   dbPath: PATHS.hikesDb,

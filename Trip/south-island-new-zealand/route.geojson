@@ -1,0 +1,147 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Christchurch to Queenstown",
+        "mode": "drive",
+        "day": "3",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            172.6362,
+            -43.5321
+          ],
+          [
+            170.5,
+            -44.2
+          ],
+          [
+            168.6626,
+            -45.0312
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queenstown to Te Anau",
+        "mode": "drive",
+        "day": "6",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            168.6626,
+            -45.0312
+          ],
+          [
+            167.718,
+            -45.416
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Te Anau to Wanaka",
+        "mode": "drive",
+        "day": "8",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            167.718,
+            -45.416
+          ],
+          [
+            168.7,
+            -44.9
+          ],
+          [
+            169.1321,
+            -44.7032
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Christchurch",
+        "country": "New Zealand",
+        "stopType": "start",
+        "day": "1",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          172.6362,
+          -43.5321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Queenstown",
+        "country": "New Zealand",
+        "stopType": "city",
+        "day": "3",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          168.6626,
+          -45.0312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Te Anau",
+        "country": "New Zealand",
+        "stopType": "park",
+        "day": "6",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.718,
+          -45.416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wanaka",
+        "country": "New Zealand",
+        "stopType": "end",
+        "day": "8",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          169.1321,
+          -44.7032
+        ]
+      }
+    }
+  ]
+}

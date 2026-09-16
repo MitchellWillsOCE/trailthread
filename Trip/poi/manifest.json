@@ -8,6 +8,11 @@
       "id": "europe",
       "label": "Europe",
       "count": 95
+    },
+    {
+      "id": "oceania",
+      "label": "Oceania",
+      "count": 241
     }
   ]
 }

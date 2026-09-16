@@ -14,8 +14,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = ROOT / "scripts" / "schema" / "parks.sql"
 SEED_PATH = ROOT / "scripts" / "data" / "europe-parks-seed.json"
+OCEANIA_SEED_PATH = ROOT / "scripts" / "data" / "oceania-seed.json"
 DB_PATH = ROOT / "Trip" / "parks" / "parks.db"
 MANIFEST_PATH = ROOT / "Trip" / "parks" / "manifest.json"
+
+REGIONS = {
+    "europe": "Europe",
+    "oceania": "Oceania",
+}
 
 
 def slugify(name: str, country: str) -> str:
@@ -39,11 +45,22 @@ def bbox_from_point(lat: float, lng: float, km: float = 18.0) -> tuple[float, fl
     return lng - dlng, lat - dlat, lng + dlng, lat + dlat
 
 
+def load_seed_rows() -> list[dict]:
+    rows = []
+    for entry in json.loads(SEED_PATH.read_text(encoding="utf-8")):
+        rows.append({**entry, "region_id": "europe"})
+    if OCEANIA_SEED_PATH.is_file():
+        oceania = json.loads(OCEANIA_SEED_PATH.read_text(encoding="utf-8"))
+        for entry in oceania.get("parks", []):
+            rows.append({**entry, "region_id": "oceania"})
+    return rows
+
+
 def main() -> None:
     if not SEED_PATH.is_file():
         raise SystemExit(f"Missing {SEED_PATH}")
 
-    seeds = json.loads(SEED_PATH.read_text(encoding="utf-8"))
+    seeds = load_seed_rows()
     DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     tmp = DB_PATH.with_suffix(".db.build.tmp")
     if tmp.exists():
@@ -58,16 +75,18 @@ def main() -> None:
             id, region_id, osm_id, name, country, cc, lat, lng, area_km2, biodiversity,
             popularity, tier, west, south, east, north,
             summary, tagline, stay, activities_json, tips_json, photos_json, highlights_json,
-            iucn_category, source, enriched, updated_at
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            iucn_category, source, enriched, updated_at, category
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     """
 
     rows = []
+    counts: dict[str, int] = {}
     for entry in seeds:
         name = entry.get("name", "").strip()
         country = entry.get("country", "").strip()
         if not name:
             continue
+        region_id = entry.get("region_id", "europe")
         lat = float(entry.get("lat", 0))
         lng = float(entry.get("lng", 0))
         area = float(entry.get("area_km2") or 50)
@@ -78,7 +97,7 @@ def main() -> None:
         rows.append(
             (
                 park_id,
-                "europe",
+                region_id,
                 entry.get("osm_id"),
                 name,
                 country,
@@ -93,25 +112,28 @@ def main() -> None:
                 south,
                 east,
                 north,
-                None,
-                f"Explore {name}",
+                entry.get("summary"),
+                entry.get("tagline") or f"Explore {name}",
                 entry.get("stay") or "1–2 days",
-                "[]",
-                "[]",
-                "[]",
-                "[]",
-                "II",
-                "seed",
-                0,
+                json.dumps(entry.get("activities") or [], ensure_ascii=False),
+                json.dumps(entry.get("tips") or [], ensure_ascii=False),
+                json.dumps(entry.get("photos") or [], ensure_ascii=False),
+                json.dumps(entry.get("highlights") or [], ensure_ascii=False),
+                entry.get("iucn_category") or "II",
+                entry.get("source", "seed"),
+                1 if region_id == "oceania" else 0,
                 now,
+                entry.get("category", ""),
             )
         )
+        counts[region_id] = counts.get(region_id, 0) + 1
 
     conn.executemany(insert, rows)
-    conn.execute(
-        "INSERT INTO regions (id, label, park_count) VALUES (?, ?, ?)",
-        ("europe", "Europe", len(rows)),
-    )
+    for region_id, count in counts.items():
+        conn.execute(
+            "INSERT INTO regions (id, label, park_count) VALUES (?, ?, ?)",
+            (region_id, REGIONS.get(region_id, region_id.title()), count),
+        )
     conn.commit()
     conn.close()
 
@@ -135,7 +157,10 @@ def main() -> None:
         "version": 1,
         "storage": "sqlite",
         "database": "./Trip/parks/parks.db",
-        "regions": [{"id": "europe", "label": "Europe", "count": len(rows)}],
+        "regions": [
+            {"id": region_id, "label": REGIONS.get(region_id, region_id.title()), "count": counts[region_id]}
+            for region_id in sorted(counts.keys(), key=lambda item: 0 if item == "europe" else 1)
+        ],
     }
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     print(f"Built {len(rows)} parks -> {DB_PATH}", flush=True)

@@ -22,6 +22,16 @@
     "build:hikes:known": "python scripts/build-hikes-db.py --discover --limit 200 --min-discover-km 25 --sleep 0.85",
     "build:hikes:full": "python scripts/build-hikes-db.py --discover --limit 200 --min-discover-km 25 --sleep 0.85",
     "build:hikes:expand": "python scripts/build-hikes-db.py --discover --limit 200 --min-discover-km 25 --sleep 0.7",
+    "seed:oceania": "python3 scripts/seed-oceania.py",
+    "seed:oceania-pacific": "python scripts/data/build-oceania-pacific.py && python scripts/seed-australia-expansion.py --expansion scripts/data/oceania-pacific-seed.json",
+    "seed:australia": "python scripts/seed-australia-expansion.py",
+    "seed:australia-mountains": "python scripts/data/build-australia-mountains.py && python scripts/seed-australia-expansion.py --expansion scripts/data/australia-sunshine-coast-mountains.json --no-apply && python scripts/seed-australia-expansion.py --expansion scripts/data/australia-mountains.json --no-apply",
+    "seed:australia-mountains:round2": "python scripts/data/build-australia-mountains-round2.py && python scripts/seed-australia-expansion.py --expansion scripts/data/australia-mountains-round2.json --no-apply",
+    "seed:australia-parks:round2": "python scripts/data/build-australia-parks-round2.py && python scripts/seed-australia-expansion.py --expansion scripts/data/australia-parks-round2.json",
+    "refine:oceania-hikes": "python scripts/refine-oceania-hike-geometry.py",
+    "enrich:australia-photos": "python scripts/enrich-australia-photos.py --workers 0 --max-photos 8 --min-photos 4",
+    "enrich:australia-photos:fast": "python scripts/enrich-australia-photos.py --workers 0 --max-photos 8 --min-photos 4 --fast-commons --no-validate",
+    "enrich:oceania-photos:pacific": "python scripts/enrich-australia-photos.py --cc pacific --workers 6 --max-photos 8 --min-photos 4 --fast-commons --no-validate",
     "enrich:cities": "python scripts/enrich-cities-db.py --photos fast --workers 12 --tier all --progress",
     "enrich:cities:full": "python scripts/enrich-cities-db.py --photos full --workers 10 --tier all --progress",
     "enrich:cities:batch": "python scripts/enrich-cities-db.py --photos fast --workers 12 --limit 800 --tier all --progress",
@@ -39,7 +49,7 @@
     "enrich:major-cards": "python scripts/enrich-major-cards.py --limit 40",
     "build:parks": "python scripts/build-parks-db.py",
     "build:poi": "python scripts/build-poi-db.py",
-    "build:catalogs": "python scripts/build-parks-db.py && python scripts/build-poi-db.py && python scripts/build-hikes-db.py --curated-only",
+    "build:catalogs": "python scripts/build-parks-db.py && python scripts/build-poi-db.py && python scripts/build-hikes-db.py --curated-only && npm run seed:oceania",
     "consolidate:catalogs": "python scripts/consolidate-catalog-dbs.py",
     "catalog:stats": "python scripts/print-catalog-stats.py",
     "classify:places": "python scripts/classify-places.py --apply --stats",
@@ -56,10 +66,12 @@
     "enrich:parks:all": "python scripts/enrich-parks-db.py --by-country --tier all"
   },
   "dependencies": {
+    "@maplibre/maplibre-gl-leaflet": "^0.1.4",
     "@upstash/redis": "^1.38.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "leaflet": "^1.9.4",
+    "maplibre-gl": "^5.24.0",
     "marked": "^13.0.2"
   },
   "devDependencies": {

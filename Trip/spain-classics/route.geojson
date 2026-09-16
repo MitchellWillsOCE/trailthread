@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barcelona to Madrid",
+        "mode": "train",
+        "day": "5",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.1686,
+            41.3874
+          ],
+          [
+            -3.7038,
+            40.4168
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madrid to Seville",
+        "mode": "train",
+        "day": "8",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -3.7038,
+            40.4168
+          ],
+          [
+            -5.9845,
+            37.3891
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barcelona",
+        "country": "Spain",
+        "stopType": "start",
+        "day": "1",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1686,
+          41.3874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madrid",
+        "country": "Spain",
+        "stopType": "city",
+        "day": "5",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7038,
+          40.4168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Seville",
+        "country": "Spain",
+        "stopType": "end",
+        "day": "8",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9845,
+          37.3891
+        ]
+      }
+    }
+  ]
+}

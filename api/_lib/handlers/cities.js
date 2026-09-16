@@ -64,6 +64,7 @@ function cityEnrichedFlag(row) {
 function rowToDetail(row) {
   return {
     id: row.id,
+    region_id: row.region_id || "",
     name: row.name,
     country: row.country,
     cc: row.cc,
@@ -123,18 +124,19 @@ function augmentMajorCityDetail(db, detail) {
   if (!detail || detail.tier !== "major") return detail;
   const pop = Number(detail.pop) || 0;
   const country = detail.country || "";
+  const regionId = detail.region_id || "europe";
 
   let popularity = null;
   if (db && country && pop > 0) {
     const rankRow = sqlGet(
       db,
-      `SELECT COUNT(*) + 1 AS rank FROM cities WHERE country = ? AND pop > ? AND region_id = 'europe'`,
-      [country, pop]
+      `SELECT COUNT(*) + 1 AS rank FROM cities WHERE country = ? AND pop > ? AND region_id = ?`,
+      [country, pop, regionId]
     );
     const totalRow = sqlGet(
       db,
-      `SELECT COUNT(*) AS total FROM cities WHERE country = ? AND pop > 0 AND region_id = 'europe'`,
-      [country]
+      `SELECT COUNT(*) AS total FROM cities WHERE country = ? AND pop > 0 AND region_id = ?`,
+      [country, regionId]
     );
     const rank = rankRow?.rank || null;
     const total = totalRow?.total || 0;
@@ -158,11 +160,11 @@ function augmentMajorCityDetail(db, detail) {
           sin(radians(?)) * sin(radians(lat))
         )))) AS distance_km
        FROM cities
-       WHERE id != ? AND region_id = 'europe' AND pop >= 50000
+       WHERE id != ? AND region_id = ? AND pop >= 50000
          AND tier IN ('major', 'regional')
        ORDER BY distance_km
        LIMIT 10`,
-      [detail.lat, detail.lng, detail.lat, detail.id]
+      [detail.lat, detail.lng, detail.lat, detail.id, regionId]
     )
       .filter((row) => row.distance_km <= 180)
       .slice(0, 8)
@@ -224,12 +226,12 @@ function queryFeaturesGeojson(regionId, west, south, east, north, zoom, countryC
     .filter((feature) => {
       const row = featureToRow(feature);
       if (isParkPlaceName(row.name)) return false;
-      if (!tiers.has(row.tier)) return false;
+      if (!tiers.has(row.tier) && !(tiers.has("major") && row.category === "capital")) return false;
       if (countryCc && row.cc !== countryCc) return false;
       const { lat, lng } = row;
       return lat >= south && lat <= north && lng >= west && lng <= east;
     })
-    .slice(0, 900)
+    .slice(0, 220)
     .map((feature) => {
       const row = featureToRow(feature);
       return {
@@ -242,6 +244,7 @@ function queryFeaturesGeojson(regionId, west, south, east, north, zoom, countryC
           cc: row.cc,
           pop: row.pop,
           tier: row.tier,
+          category: row.category || "",
           tagline: row.tagline,
           enriched: cityEnrichedFlag(row),
         },
@@ -254,14 +257,15 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
   const tiers = tiersForZoom(zoom);
   const placeholders = tiers.map(() => "?").join(", ");
   const countryClause = countryCc ? " AND cc = ?" : "";
+  const includeCapitals = tiers.includes("major") ? " OR category = 'capital'" : "";
   const sql = `
     SELECT id, name, country, cc, lat, lng, pop, tier, category, locale, tagline, enriched
     FROM cities
     WHERE region_id = ?
       AND lat >= ? AND lat <= ?
       AND lng >= ? AND lng <= ?
-      AND tier IN (${placeholders})${countryClause}
-    LIMIT 900
+      AND (tier IN (${placeholders})${includeCapitals})${countryClause}
+    LIMIT 220
   `;
   const params = [regionId, south, north, west, east, ...tiers];
   if (countryCc) params.push(countryCc);

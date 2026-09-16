@@ -35,6 +35,7 @@ SCHEMA_PATH = ROOT / "scripts" / "schema" / "hikes.sql"
 SEED_PATH = ROOT / "scripts" / "data" / "europe-hikes-seed.json"
 MONTENEGRO_SEED_PATH = ROOT / "scripts" / "data" / "montenegro-hikes-seed.json"
 CROATIA_SEED_PATH = ROOT / "scripts" / "data" / "croatia-adriatic-hikes-seed.json"
+OCEANIA_SEED_PATH = ROOT / "scripts" / "data" / "oceania-seed.json"
 DISCOVERED_CACHE_PATH = ROOT / "scripts" / "data" / "europe-hikes-discovered-cache.json"
 
 CC_TO_COUNTRY = {
@@ -74,7 +75,10 @@ CC_TO_COUNTRY = {
 }
 DB_PATH = ROOT / "Trip" / "hikes" / "hikes.db"
 MANIFEST_PATH = ROOT / "Trip" / "hikes" / "manifest.json"
-LEGACY_GEOJSON = ROOT / "Trip" / "hikes" / "europe" / "hikes-index.geojson"
+REGION_LABELS = {
+    "europe": "Europe",
+    "oceania": "Oceania",
+}
 OVERPASS_ENDPOINTS = (
     "https://overpass-api.de/api/interpreter",
     "https://overpass.kumi.systems/api/interpreter",
@@ -728,6 +732,15 @@ def _build_start_instructions(
 
 
 def write_legacy_geojson(rows: list[dict]) -> None:
+    by_region: dict[str, list[dict]] = {}
+    for row in rows:
+        by_region.setdefault(row.get("region_id", "europe"), []).append(row)
+
+    for region_id, region_rows in by_region.items():
+        write_region_legacy_geojson(region_id, region_rows)
+
+
+def write_region_legacy_geojson(region_id: str, rows: list[dict]) -> None:
     features = []
     for row in rows:
         features.append(
@@ -746,8 +759,9 @@ def write_legacy_geojson(rows: list[dict]) -> None:
                 },
             }
         )
-    LEGACY_GEOJSON.parent.mkdir(parents=True, exist_ok=True)
-    LEGACY_GEOJSON.write_text(
+    legacy_geojson = ROOT / "Trip" / "hikes" / region_id / "hikes-index.geojson"
+    legacy_geojson.parent.mkdir(parents=True, exist_ok=True)
+    legacy_geojson.write_text(
         json.dumps({"type": "FeatureCollection", "features": features}, ensure_ascii=False),
         encoding="utf-8",
     )
@@ -763,6 +777,61 @@ def load_seed_files(*, montenegro_only: bool = False, include_montenegro: bool =
     if not montenegro_only and CROATIA_SEED_PATH.exists():
         seeds.extend(json.loads(CROATIA_SEED_PATH.read_text(encoding="utf-8")))
     return seeds
+
+
+def load_oceania_hikes() -> list[dict]:
+    if not OCEANIA_SEED_PATH.is_file():
+        return []
+    payload = json.loads(OCEANIA_SEED_PATH.read_text(encoding="utf-8"))
+    rows = []
+    for entry in payload.get("hikes", []):
+        coords = entry.get("geometry") or []
+        if len(coords) < 2:
+            continue
+        chains = [coords]
+        west, south, east, north = bbox_from_chains(chains)
+        lng, lat = centroid_of_chains(chains)
+        start_lng, start_lat = coords[0]
+        end_lng, end_lat = coords[-1]
+        geometry = {"type": "LineString", "coordinates": coords}
+        rows.append(
+            {
+                "id": entry["id"],
+                "region_id": "oceania",
+                "osm_id": entry.get("osm_id"),
+                "name": entry["name"],
+                "country": entry.get("country") or "Oceania",
+                "cc": (entry.get("cc") or "").lower(),
+                "lat": lat,
+                "lng": lng,
+                "length_km": float(entry.get("length_km") or total_length_km(chains)),
+                "ascent_m": entry.get("ascent_m"),
+                "difficulty": entry.get("difficulty"),
+                "network": entry.get("network") or "",
+                "route_type": entry.get("route_type") or "hiking",
+                "popularity": int(entry.get("popularity") or 70),
+                "tier": entry.get("tier") or tier_from_popularity(int(entry.get("popularity") or 70)),
+                "west": west,
+                "south": south,
+                "east": east,
+                "north": north,
+                "summary": entry.get("summary") or f"{entry['name']} hiking route.",
+                "tagline": entry.get("tagline") or f"{float(entry.get('length_km') or 0):.0f} km trail",
+                "tips_json": json.dumps(entry.get("tips") or [], ensure_ascii=False),
+                "photos_json": json.dumps(entry.get("photos") or [], ensure_ascii=False),
+                "geometry_json": json.dumps(geometry, ensure_ascii=False),
+                "source": "curated",
+                "enriched": 1,
+                "start_lat": start_lat,
+                "start_lng": start_lng,
+                "end_lat": end_lat,
+                "end_lng": end_lng,
+                "start_name": entry.get("start_name"),
+                "end_name": entry.get("end_name"),
+                "start_instructions": entry.get("start_instructions"),
+            }
+        )
+    return rows
 
 
 def main() -> None:
@@ -859,6 +928,9 @@ def main() -> None:
             ):
                 hikes.append(record)
 
+    if not args.montenegro:
+        hikes.extend(load_oceania_hikes())
+
     if not hikes:
         raise SystemExit("No hikes imported. Check network access to Overpass API.")
 
@@ -875,10 +947,14 @@ def main() -> None:
     conn.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))
     now = datetime.now(timezone.utc).isoformat()
 
-    conn.execute(
-        "INSERT INTO regions (id, label, hike_count) VALUES (?, ?, ?)",
-        ("europe", "Europe", len(hikes)),
-    )
+    region_counts: dict[str, int] = {}
+    for row in hikes:
+        region_counts[row.get("region_id", "europe")] = region_counts.get(row.get("region_id", "europe"), 0) + 1
+    for region_id, count in region_counts.items():
+        conn.execute(
+            "INSERT INTO regions (id, label, hike_count) VALUES (?, ?, ?)",
+            (region_id, REGION_LABELS.get(region_id, region_id.replace("-", " ").title()), count),
+        )
 
     insert = """
         INSERT INTO hikes (
@@ -945,11 +1021,12 @@ def main() -> None:
         "source": "OpenStreetMap via Overpass API",
         "regions": [
             {
-                "id": "europe",
-                "label": "Europe",
-                "count": len(hikes),
-                "legacyGeojson": "./Trip/hikes/europe/hikes-index.geojson",
+                "id": region_id,
+                "label": REGION_LABELS.get(region_id, region_id.replace("-", " ").title()),
+                "count": region_counts[region_id],
+                "legacyGeojson": f"./Trip/hikes/{region_id}/hikes-index.geojson",
             }
+            for region_id in sorted(region_counts.keys(), key=lambda item: 0 if item == "europe" else 1)
         ],
     }
     MANIFEST_PATH.parent.mkdir(parents=True, exist_ok=True)

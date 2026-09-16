@@ -7,8 +7,14 @@
     {
       "id": "europe",
       "label": "Europe",
-      "count": 8589,
+      "count": 8596,
       "legacyGeojson": "./Trip/cities/europe/cities.geojson"
+    },
+    {
+      "id": "oceania",
+      "label": "Oceania",
+      "count": 299,
+      "legacyGeojson": "./Trip/cities/oceania/cities.geojson"
     }
   ]
 }

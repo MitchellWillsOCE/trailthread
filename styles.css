@@ -44,13 +44,6 @@ html {
   text-size-adjust: 100%;
 }
 
-@media (min-width: 981px) {
-  .map-controls-drawer[open] .map-controls-card,
-  .map-controls-drawer .map-controls-card {
-    display: flex;
-  }
-}
-
 body {
   margin: 0;
   min-height: 100dvh;
@@ -583,7 +576,13 @@ body.hike-story-open .map-controls .route-legend {
   justify-content: center;
 }
 
-.explore-cities-on .leaflet-pane.leaflet-countryRegions-pane {
+.region-chip-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.explore-mode-on .leaflet-pane.leaflet-countryRegions-pane,
+.explore-cities-on .leaflet-pane.leaflet-countryRegions-pane,
+.region-preview-on .leaflet-pane.leaflet-countryRegions-pane {
   pointer-events: none;
 }
 
@@ -617,11 +616,23 @@ body.hike-story-open .map-controls .route-legend {
   box-shadow: 0 8px 18px rgba(8, 19, 31, 0.16);
 }
 
+.layer-chip:disabled {
+  cursor: not-allowed;
+  opacity: 0.56;
+  transform: none;
+}
+
 .layer-chip[data-active="true"] {
   background: #0f766e;
   border-color: #0c5f59;
   color: #f8fafc;
   box-shadow: 0 8px 20px rgba(15, 118, 110, 0.28);
+}
+
+.layer-chip--region[data-preview="true"]:not([data-active="true"]) {
+  border-color: #0f766e;
+  background: rgba(240, 253, 250, 0.92);
+  box-shadow: 0 8px 18px rgba(15, 118, 110, 0.16);
 }
 
 .layer-chip--overlay[data-active="true"] {
@@ -1713,7 +1724,21 @@ body.hike-story-open .map-controls .route-legend {
 }
 
 .map-controls-drawer__summary {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(8, 19, 31, 0.1);
+  cursor: pointer;
+  list-style: none;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .map-controls-drawer__summary::-webkit-details-marker {
@@ -1724,6 +1749,7 @@ body.hike-story-open .map-controls .route-legend {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 8px;
   padding: 12px 14px;
   border-radius: 14px;
   border: 1px solid var(--line);
@@ -1731,6 +1757,43 @@ body.hike-story-open .map-controls .route-legend {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 24px rgba(8, 19, 31, 0.14);
   max-width: 100%;
+}
+
+.map-controls-drawer:not([open]) .map-controls-card {
+  display: none;
+}
+
+.map-controls-drawer__label {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.map-controls-drawer__hint {
+  margin-left: auto;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.map-controls-drawer__chev {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #64748b;
+  border-bottom: 2px solid #64748b;
+  transform: rotate(45deg);
+  transition: transform var(--dur-fast) ease;
+  flex-shrink: 0;
+  margin-left: 4px;
+}
+
+.map-controls-drawer[open] .map-controls-drawer__chev {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+}
+
+.map-controls-drawer[open] .map-controls-drawer__hint {
+  color: #0f766e;
 }
 
 .map-controls-card .control-group:last-of-type {
@@ -1840,13 +1903,25 @@ body.hike-story-open .map-controls .route-legend {
   opacity: 0.72;
 }
 
+#map .leaflet-gl-layer,
+#map .leaflet-gl-layer canvas,
+#map .leaflet-gl-layer .maplibregl-canvas,
+#map .leaflet-gl-layer .maplibregl-canvas-container {
+  pointer-events: none !important;
+}
+
+#map .leaflet-gl-layer .maplibregl-ctrl,
+#map .leaflet-gl-layer .maplibregl-ctrl-logo {
+  display: none;
+}
+
 .map-stage #map .leaflet-right {
   margin-right: calc(var(--panel-reserve) + 4px);
   transition: margin-right var(--dur-med) var(--ease-smooth);
 }
 
 .map-stage #map .leaflet-bottom.leaflet-right {
-  margin-bottom: var(--leaflet-bottom-offset, 12px);
+  margin-bottom: calc(var(--leaflet-bottom-offset, 12px) + var(--layout-map-hint, 0px));
   transition: margin-bottom var(--dur-med) var(--ease-smooth);
 }
 
@@ -1854,6 +1929,10 @@ body.hike-story-open .map-controls .route-legend {
   margin-left: max(12px, env(safe-area-inset-left, 0px));
   margin-bottom: calc(var(--leaflet-bottom-offset, 12px) + var(--builder-resume-clearance, 0px));
   transition: margin-bottom var(--dur-med) var(--ease-smooth);
+}
+
+.map-stage.map-hint-visible #map .leaflet-bottom.leaflet-left {
+  margin-bottom: calc(var(--leaflet-bottom-offset, 12px) + var(--layout-map-hint, 0px) + var(--builder-resume-clearance, 0px));
 }
 
 .leaflet-control-zoom {
@@ -5919,7 +5998,7 @@ body.media-lightbox-open {
   position: fixed;
   left: calc(var(--shell-pad, 14px) + max(12px, env(safe-area-inset-left, 0px)));
   bottom: calc(var(--leaflet-bottom-offset, 12px) + max(10px, env(safe-area-inset-bottom, 0px)));
-  z-index: 950;
+  z-index: 960;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -7792,8 +7871,8 @@ path.leaflet-interactive:hover {
    * bar can't paint over the intro card while the welcome overlay is up. */
   z-index: 970;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   padding: max(20px, env(safe-area-inset-top)) 20px max(20px, env(safe-area-inset-bottom));
   pointer-events: none;
   opacity: 0;
@@ -7814,20 +7893,22 @@ path.leaflet-interactive:hover {
 .welcome-overlay__backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(8, 19, 31, 0.42);
-  backdrop-filter: blur(6px);
+  background:
+    linear-gradient(90deg, rgba(8, 19, 31, 0.46) 0%, rgba(8, 19, 31, 0.18) 42%, rgba(8, 19, 31, 0.08) 100%),
+    linear-gradient(180deg, rgba(8, 19, 31, 0.08) 0%, rgba(8, 19, 31, 0.28) 100%);
+  backdrop-filter: blur(2px);
 }
 
 .welcome-card {
   position: relative;
   z-index: 1;
-  width: min(480px, 100%);
-  max-height: min(90dvh, 720px);
+  width: min(440px, 100%);
+  max-height: min(88dvh, 820px);
   overflow: auto;
-  padding: 28px 26px 22px;
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.96) 100%);
+  padding: 26px 24px 18px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.96) 0%, rgba(244, 247, 242, 0.94) 100%);
   box-shadow: 0 28px 70px rgba(8, 19, 31, 0.28);
   animation: welcome-card-enter var(--dur-slow) var(--ease-spring) both;
 }
@@ -7835,7 +7916,7 @@ path.leaflet-interactive:hover {
 @keyframes welcome-card-enter {
   from {
     opacity: 0;
-    transform: translateY(18px) scale(0.97);
+    transform: translateY(22px) scale(0.98);
   }
   to {
     opacity: 1;
@@ -7843,46 +7924,195 @@ path.leaflet-interactive:hover {
   }
 }
 
+.welcome-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.welcome-brand__mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: rgba(15, 118, 110, 0.1);
+}
+
+.welcome-brand__name {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #0f766e;
+}
+
 .welcome-card h1 {
-  margin: 8px 0 0;
-  font-size: clamp(1.5rem, 4vw, 1.85rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  margin: 14px 0 0;
+  font-family: Newsreader, Georgia, serif;
+  font-size: clamp(1.85rem, 4.4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
 }
 
 .welcome-lead {
   margin: 12px 0 0;
   color: #475569;
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   line-height: 1.55;
 }
 
-.welcome-steps {
-  margin: 20px 0 0;
-  padding: 0;
-  list-style: none;
+.welcome-paths {
   display: grid;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.welcome-path {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
   gap: 12px;
+  width: 100%;
+  padding: 14px 14px 14px 12px;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 118, 110, 0.14);
+  background: rgba(255, 255, 255, 0.78);
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform var(--dur-fast) var(--ease-spring), border-color var(--dur-fast) ease, box-shadow var(--dur-fast) ease;
 }
 
-.welcome-steps li {
+.welcome-path__icon {
   display: grid;
-  gap: 4px;
-  padding: 12px 14px;
-  border-radius: 14px;
-  background: rgba(15, 118, 110, 0.06);
-  border: 1px solid rgba(15, 118, 110, 0.12);
-}
-
-.welcome-steps strong {
-  font-size: 0.82rem;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
   color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
 }
 
-.welcome-steps span {
+.welcome-path__icon--journeys {
+  color: #c2410c;
+  background: rgba(234, 88, 12, 0.1);
+}
+
+.welcome-path__copy {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.welcome-path__copy strong {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.welcome-path__copy span {
   font-size: 0.8rem;
-  color: #475569;
   line-height: 1.45;
+  color: #64748b;
+}
+
+.welcome-section-label {
+  margin: 0 0 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #64748b;
+}
+
+.welcome-regions,
+.welcome-featured {
+  margin-top: 16px;
+}
+
+.welcome-region-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.welcome-region {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.welcome-region[aria-pressed="true"] {
+  background: #0f766e;
+  border-color: #0c5f59;
+  color: #f8fafc;
+}
+
+.welcome-featured__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.welcome-featured__card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  border: 1px solid rgba(8, 19, 31, 0.1);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  text-align: left;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.welcome-featured__card img,
+.welcome-featured__fallback {
+  width: 100%;
+  height: 74px;
+  object-fit: cover;
+  background: #d6e2d8;
+}
+
+.welcome-featured__fallback {
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+}
+
+.welcome-featured__meta {
+  display: grid;
+  align-content: center;
+  gap: 2px;
+  min-width: 0;
+  padding: 8px 9px 10px;
+}
+
+.welcome-featured__meta strong {
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.welcome-featured__meta em {
+  font-style: normal;
+  font-size: 0.72rem;
+  color: #64748b;
 }
 
 .welcome-actions {
@@ -7937,16 +8167,46 @@ path.leaflet-interactive:hover {
   color: #0f172a;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .welcome-path:hover,
+  .welcome-featured__card:hover,
+  .welcome-region:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(8, 19, 31, 0.1);
+  }
+
+  .welcome-path:hover {
+    border-color: rgba(15, 118, 110, 0.28);
+  }
+}
+
+@media (min-width: 900px) {
+  .welcome-overlay {
+    align-items: center;
+    padding-left: max(28px, env(safe-area-inset-left));
+  }
+
+  .welcome-card {
+    width: min(460px, calc(100vw - 56px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .welcome-card {
+    animation: none;
+  }
+}
+
 .map-hint-bar {
   position: absolute;
   left: 50%;
-  bottom: calc(var(--leaflet-bottom-offset, 12px) + 52px);
+  bottom: calc(var(--leaflet-bottom-offset, 12px) + 8px);
   transform: translateX(-50%);
-  z-index: 1200;
+  z-index: 520;
   display: flex;
   align-items: center;
   gap: 10px;
-  width: min(520px, calc(100% - 2 * var(--hud-pad) - var(--panel-reserve)));
+  width: min(440px, calc(100% - 2 * var(--hud-pad) - var(--panel-reserve) - 72px));
   padding: 10px 12px 10px 14px;
   border-radius: 14px;
   border: 1px solid var(--line);
@@ -8089,17 +8349,30 @@ body.welcome-open .journey-panel {
 }
 
 @media (max-width: 980px) {
+  .welcome-overlay {
+    align-items: flex-end;
+    padding: 12px 12px max(12px, env(safe-area-inset-bottom));
+  }
+
+  .welcome-overlay__backdrop {
+    background:
+      linear-gradient(180deg, rgba(8, 19, 31, 0.08) 0%, rgba(8, 19, 31, 0.22) 46%, rgba(8, 19, 31, 0.4) 100%);
+    backdrop-filter: blur(1px);
+  }
+
+  .welcome-card {
+    width: 100%;
+    max-height: min(82dvh, 760px);
+    border-radius: 28px 28px 22px 22px;
+    padding: 22px 18px 14px;
+  }
+
   .welcome-actions {
     grid-template-columns: 1fr;
   }
 
   .map-hint-bar {
-    width: calc(100% - 2 * var(--hud-pad));
-    bottom: calc(var(--leaflet-bottom-offset, 12px) + 8px);
-  }
-
-  .map-stage.map-hint-visible #map .leaflet-bottom.leaflet-right {
-    margin-bottom: calc(var(--leaflet-bottom-offset, 12px) + 8px);
+    width: min(440px, calc(100% - 2 * var(--hud-pad) - 72px));
   }
 }
 
@@ -8466,8 +8739,23 @@ body.welcome-open .journey-panel {
 .media-lightbox {
   z-index: 1300;
 }
-.map-hint-bar {
-  z-index: 880;
+/* Journey library / welcome sit inside .map-stage (isolation). Hide the
+   sibling story panel so it cannot paint over those overlays on desktop. */
+body.welcome-open #itineraryPanel,
+body.place-story-open #itineraryPanel,
+body.hike-story-open #itineraryPanel,
+body.country-dossier-open #itineraryPanel,
+body:has(#tripOverlay.open) #itineraryPanel,
+body:has(#favoritesOverlay.is-open) #itineraryPanel,
+body:has(.dest-panel.is-open) #itineraryPanel {
+  display: none !important;
+}
+
+body.story-panel-open .map-hint-bar,
+body.map-popup-raised .map-hint-bar,
+body:has(#itineraryPanel.is-peek:not(.journey-panel--empty)) .map-hint-bar,
+body:has(#itineraryPanel.is-expanded) .map-hint-bar {
+  display: none;
 }
 
 /* ------------------------------------------------------------- */
@@ -8906,6 +9194,10 @@ body.welcome-open .journey-panel {
   /* Peek state — show only the drag handle, an "eyebrow" label, and the
      title. Everything else (gallery, description, stats, stops, content,
      hud-nav, empty state) is hidden so the sheet is a slim strip. */
+  #itineraryPanel.journey-panel--empty:not(.is-expanded) {
+    display: none !important;
+  }
+
   .journey-panel.is-peek {
     max-height: 110px;
     overflow: hidden;
@@ -8988,6 +9280,8 @@ body.welcome-open .journey-panel {
   /* The map-hint-bar should sit above the nav. */
   .map-hint-bar {
     bottom: calc(var(--mobile-bottom-nav-height) + 12px);
+    width: min(360px, calc(100% - 88px));
+    left: calc(50% - 18px);
   }
 
   /* The journey panel reopen FAB is replaced by the bottom-nav Story state;

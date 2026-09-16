@@ -85,9 +85,9 @@
   ],
   "Gibraltar": [
     "Border queues vary — allow buffer time",
-    "Cable car and Upper Rock walks are steep — wear grippy shoes",
+    "Upper Rock walks are steep — wear grippy shoes",
     "Monkeys steal food — keep bags closed",
-    "Pound and euro circulate — confirm change given"
+    "Pound and euro circulate — confirm change"
   ],
   "Greece": [
     "Island ferries need buffer days for weather",
@@ -245,16 +245,148 @@
     "Pub last orders vary — food kitchens close earlier",
     "Oyster or contactless caps fares in London"
   ],
-  "Gibraltar": [
-    "Border queues vary — allow buffer time",
-    "Upper Rock walks are steep — wear grippy shoes",
-    "Monkeys steal food — keep bags closed",
-    "Pound and euro circulate — confirm change"
+  "Australia": [
+    "Distances are large — plan fuel, water, and rest stops carefully",
+    "Sun protection is essential in every season",
+    "Swim only between the flags on surf beaches",
+    "Remote and Aboriginal-managed areas may require permits"
+  ],
+  "New Zealand": [
+    "Book Great Walk huts and campsites as early as possible",
+    "Weather can change quickly in alpine areas",
+    "Carry insect repellent for sandflies on the west coast and fiords",
+    "Allow buffer time for ferry crossings and mountain roads"
   ],
   "default": [
     "Check local holiday hours for museums and restaurants",
     "Save offline maps for old-town wandering",
     "Learn hello and thanks in the local language",
     "Morning light is best for photos and walks"
+  ],
+  "Fiji": [
+    "Village visits usually need a sevusevu or local invitation",
+    "Cover shoulders and knees at temples and in villages",
+    "Cyclone season runs roughly November to April",
+    "Island transfers fill on weekends — book boats and flights"
+  ],
+  "Papua New Guinea": [
+    "Use trusted transport and local advice, especially after dark",
+    "Highland nights are cold even when the coast is hot",
+    "Mosquito protection is essential in lowland and river country",
+    "Cultural shows and flights book out — plan ahead"
+  ],
+  "Vanuatu": [
+    "Reef shoes help on coral beaches",
+    "Volcano visits are guided — respect exclusion zones",
+    "Cash is useful outside Port Vila",
+    "Sunday is quiet on many islands"
+  ],
+  "Solomon Islands": [
+    "Boats and weather set the day's plan more than clocks",
+    "Cash is more useful than cards outside Honiara",
+    "Ask before photographing people or custom sites",
+    "WWII sites are spread out — a local driver helps"
+  ],
+  "New Caledonia": [
+    "Sunday services are limited outside Nouméa",
+    "Ask before entering tribal land on the east coast",
+    "Lagoon sun is intense even on breezy days",
+    "A car is the practical way to see Grande Terre"
+  ],
+  "French Polynesia": [
+    "Inter-island flights are the usual hop — book early",
+    "Sunday is quiet in towns and villages",
+    "Pearl and market prices vary — compare before buying",
+    "Mountain valleys can require a municipal permit"
+  ],
+  "Samoa": [
+    "Sunday is a rest day in villages — plan meals and travel",
+    "Cover knees at churches and when visiting villages",
+    "A car or 4WD is essential on Savai'i",
+    "Lava-hot sun — carry water on short walks"
+  ],
+  "American Samoa": [
+    "Sunday village rules apply",
+    "The harbour is often rainy and humid",
+    "National-park ridges get muddy — wear grip",
+    "Honolulu flights set the busy days"
+  ],
+  "Tonga": [
+    "Sunday is strictly observed on Tongatapu",
+    "Dress modestly in towns and villages",
+    "Whale trips are seasonal and based in Vava'u",
+    "Ferries to outer islands can cancel in wind"
+  ],
+  "Cook Islands": [
+    "Sunday is quiet on Rarotonga and Aitutaki",
+    "The circle-island bus is the easy way around Rarotonga",
+    "Scooters need care on wet inland roads",
+    "Book Aitutaki flights and lagoon cruises ahead"
+  ],
+  "Niue": [
+    "Hire a car on arrival — there is no public bus",
+    "Reef entries can be sharp — reef shoes help",
+    "Shops close early and on Sunday",
+    "Sea tracks are safest at lower swell"
+  ],
+  "Palau": [
+    "Rock Islands boats and Jellyfish Lake permits sell out",
+    "The visitor fee is paid on arrival — keep the receipt",
+    "Sun and glare on the water are intense",
+    "A hire car is needed for Babeldaob"
+  ],
+  "Guam": [
+    "Heat and humidity are high — start walks early",
+    "Typhoon season can close northern parks",
+    "A rental car makes the island easy in a day",
+    "Reef sun is stronger than it feels in the wind"
+  ],
+  "Northern Mariana Islands": [
+    "A car is the practical way around Saipan",
+    "Cliff memorials are sobering — visit quietly",
+    "Midday heat is strong on exposed lookouts",
+    "Some north-island roads are narrow"
+  ],
+  "Federated States of Micronesia": [
+    "Rain is frequent on Pohnpei — trails get slick",
+    "Nan Madol access depends on tide and a boat",
+    "Cash is useful outside Kolonia",
+    "Chuuk wreck dives are advanced and need booking"
+  ],
+  "Marshall Islands": [
+    "The road is the island — allow time for Laura",
+    "Sun and lagoon glare are intense",
+    "Supplies thin toward the west end of Majuro",
+    "Fresh water is limited — refill when you can"
+  ],
+  "Kiribati": [
+    "The South Tarawa causeway is busy and hot",
+    "Ask before photographing people or maneaba",
+    "Fresh water is limited",
+    "Kiritimati flights are infrequent — build slack"
+  ],
+  "Nauru": [
+    "A car or scooter covers the island loop in a day",
+    "Visitor facilities are limited — carry water and cash",
+    "Heat on the plateau is intense",
+    "Ask before entering district land"
+  ],
+  "Tuvalu": [
+    "Flights are few — confirm the schedule twice",
+    "King tides can flood low paths",
+    "Cash and patience are essential",
+    "The airstrip is also the evening park"
+  ],
+  "Wallis and Futuna": [
+    "Flights via Nouméa or Nadi are limited",
+    "Sunday is quiet",
+    "A car is the easy way around Uvea",
+    "Ask before entering customary land"
+  ],
+  "Norfolk Island": [
+    "Flights are limited — hire a car on arrival",
+    "Wind is strong on the southern lawns",
+    "Many sites close on Sunday",
+    "Drive on the left and watch for cattle"
   ]
 }

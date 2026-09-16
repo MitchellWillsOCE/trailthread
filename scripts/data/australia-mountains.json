@@ -1,0 +1,2600 @@
+{
+  "cities": [
+    {
+      "id": "mount-beauty-au",
+      "name": "Mount Beauty",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.744,
+      "lng": 147.169,
+      "pop": 1700,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Kiewa Valley town below Mount Bogong and the Falls Creek road",
+      "general": "Mount Beauty sits in the Kiewa Valley as the practical base for Mount Bogong, Falls Creek, and high-country walking in Alpine National Park.",
+      "activities": [
+        "Climb Mount Bogong via Staircase Spur",
+        "Drive to Falls Creek",
+        "Walk the Kiewa River trail",
+        "Visit the dam lookout"
+      ],
+      "tips": [
+        "Alpine weather changes quickly",
+        "Book summer trailhead parking on weekends",
+        "Carry chains in winter"
+      ],
+      "photos": []
+    },
+    {
+      "id": "harrietville-au",
+      "name": "Harrietville",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.893,
+      "lng": 147.064,
+      "pop": 400,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Ovens Valley village at the foot of Mount Feathertop",
+      "general": "Harrietville is the trailhead village for Mount Feathertop, with the Bungalow Spur and Razorback approaches, gold-history streets, and a quiet alpine-valley setting.",
+      "activities": [
+        "Walk Bungalow Spur to Feathertop",
+        "Drive the Great Alpine Road",
+        "See the old gold sites",
+        "Continue to Bright or Hotham"
+      ],
+      "tips": [
+        "Start Feathertop early",
+        "Snow can linger into spring",
+        "Village services are limited"
+      ],
+      "photos": []
+    },
+    {
+      "id": "thredbo-au",
+      "name": "Thredbo",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.504,
+      "lng": 148.306,
+      "pop": 500,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Snowy Mountains village for Kosciuszko walks and ski-season access",
+      "general": "Thredbo is the main Kosciuszko resort village, with summer summit walks from the Kosciuszko Express chairlift and winter ski access into Australia's highest country.",
+      "activities": [
+        "Walk to Mount Kosciuszko",
+        "Ride the chairlift in summer",
+        "Walk the Thredbo River track",
+        "Continue to Charlotte Pass"
+      ],
+      "tips": [
+        "Chairlift hours define the easiest summit start",
+        "Alpine weather turns fast",
+        "Book rooms in school holidays"
+      ],
+      "photos": []
+    },
+    {
+      "id": "falls-creek-au",
+      "name": "Falls Creek",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.865,
+      "lng": 147.279,
+      "pop": 300,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "High-plains village above the Kiewa Valley and Bogong High Plains",
+      "general": "Falls Creek sits on the Bogong High Plains with summer wildflower walks, hut country, and winter ski fields above Mount Beauty.",
+      "activities": [
+        "Walk the high plains",
+        "Visit Wallace and Cope Huts",
+        "See Pretty Valley",
+        "Drive down to Mount Beauty"
+      ],
+      "tips": [
+        "The road is seasonal",
+        "Carry layers even in January",
+        "Check road closures after snow"
+      ],
+      "photos": []
+    },
+    {
+      "id": "pomona-au",
+      "name": "Pomona",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -26.367,
+      "lng": 152.856,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Noosa hinterland town below Mount Cooroora",
+      "general": "Pomona is a small Noosa hinterland town with a heritage main street and the steep Mount Cooroora summit walk rising directly above the village.",
+      "activities": [
+        "Climb Mount Cooroora",
+        "Walk the village heritage street",
+        "Continue to Noosa or Kin Kin",
+        "See the Majestic Theatre"
+      ],
+      "tips": [
+        "The Cooroora climb is steep and rocky",
+        "Start early in summer",
+        "Weekend parking is limited"
+      ],
+      "photos": []
+    },
+    {
+      "id": "paluma-au",
+      "name": "Paluma",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -19.007,
+      "lng": 146.333,
+      "pop": 150,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Wet-tropics village on the Mount Spec range above Townsville",
+      "general": "Paluma is a tiny rainforest village on the Paluma Range, with cloud-forest walks, dams, and lookouts back to the Coral Sea.",
+      "activities": [
+        "Walk to Paluma Dam",
+        "See McClelland's Lookout",
+        "Visit Little Crystal Creek",
+        "Continue to Hidden Valley"
+      ],
+      "tips": [
+        "The range road is winding and wet",
+        "Leeches are common after rain",
+        "Carry a jacket; it is cooler than the coast"
+      ],
+      "photos": []
+    },
+    {
+      "id": "rathdowney-au",
+      "name": "Rathdowney",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.213,
+      "lng": 152.865,
+      "pop": 400,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Scenic Rim village on the road to Mount Barney",
+      "general": "Rathdowney is the last service village before Mount Barney National Park, with paddocks, a small main street, and access to South East Queensland's biggest walk-up peak.",
+      "activities": [
+        "Drive to Mount Barney trailheads",
+        "Visit the heritage museum",
+        "Continue to Boonah or the border ranges"
+      ],
+      "tips": [
+        "Start Barney walks before dawn in summer",
+        "Phone coverage drops in the park",
+        "Carry more water than you expect"
+      ],
+      "photos": []
+    },
+    {
+      "id": "porepunkah-au",
+      "name": "Porepunkah",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.696,
+      "lng": 146.914,
+      "pop": 2000,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Ovens River village at the Mount Buffalo road junction",
+      "general": "Porepunkah sits where the Mount Buffalo road leaves the Ovens Valley, with river camping, Bright-cycle-path access, and the climb onto the Buffalo plateau.",
+      "activities": [
+        "Drive the Mount Buffalo road",
+        "Ride the Bright rail trail",
+        "Walk the Ovens River",
+        "Visit Bright or Myrtleford"
+      ],
+      "tips": [
+        "The plateau road is steep and can ice",
+        "Summer weekends are busy",
+        "Book plateau walks around weather windows"
+      ],
+      "photos": []
+    },
+    {
+      "id": "wilpena-pound-au",
+      "name": "Wilpena Pound",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -31.527,
+      "lng": 138.605,
+      "pop": 50,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "2-3 days",
+      "tagline": "Ikara-Flinders Ranges resort and trailhead below St Mary Peak",
+      "general": "Wilpena Pound is the main trailhead inside Ikara-Flinders Ranges National Park, with hut-country walks and the St Mary Peak circuit around the pound rim.",
+      "activities": [
+        "Walk St Mary Peak",
+        "See Wangara Lookout",
+        "Visit Sacred Canyon by tour",
+        "Drive to Brachina Gorge"
+      ],
+      "tips": [
+        "Walk in the cooler months",
+        "Carry extra water",
+        "Check fire and heat warnings"
+      ],
+      "photos": []
+    }
+  ],
+  "parks": [
+    {
+      "name": "Glass House Mountains National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.9,
+      "lng": 152.94,
+      "biodiversity": 5,
+      "popularity": 90,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Volcanic plugs and short summit walks on the Sunshine Coast hinterland",
+      "summary": "Glass House Mountains National Park protects the rhyolite plugs of Beerwah, Tibrogargan, Ngungun, and neighbouring peaks, with steep summit scrambles and easier base walks.",
+      "photos": [],
+      "area_km2": 22
+    },
+    {
+      "name": "Kondalilla National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.675,
+      "lng": 152.868,
+      "biodiversity": 5,
+      "popularity": 84,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Blackall Range rainforest and Kondalilla Falls",
+      "summary": "Kondalilla National Park drops from the Blackall Range escarpment through subtropical rainforest to Kondalilla Falls and rock pools.",
+      "photos": [],
+      "area_km2": 3
+    },
+    {
+      "name": "Mapleton National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.57,
+      "lng": 152.84,
+      "biodiversity": 5,
+      "popularity": 80,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Blackall Range forest, lookouts, and waterfall walks above Nambour",
+      "summary": "Mapleton National Park covers escarpment forest on the Blackall Range, with Mapleton Falls, day walks, and views over the Sunshine Coast.",
+      "photos": [],
+      "area_km2": 102
+    },
+    {
+      "name": "Mount Barney National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.28,
+      "lng": 152.7,
+      "biodiversity": 5,
+      "popularity": 86,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "South East Queensland's biggest walk-up mountain massif",
+      "summary": "Mount Barney National Park protects granite peaks on the Scenic Rim, with steep routes to Barney, Lindesay, and Maroon and a remote border-range setting.",
+      "photos": [],
+      "area_km2": 180
+    },
+    {
+      "name": "Wooroonooran National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -17.4,
+      "lng": 145.8,
+      "biodiversity": 5,
+      "popularity": 85,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Wet Tropics rainforest around Bartle Frere and Bellenden Ker",
+      "summary": "Wooroonooran National Park holds Queensland's two highest peaks, with rainforest, waterfalls, and the long Bartle Frere summit climb from the west or east.",
+      "photos": [],
+      "area_km2": 805
+    },
+    {
+      "name": "Mount Buffalo National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.74,
+      "lng": 146.77,
+      "biodiversity": 5,
+      "popularity": 88,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Granite plateau of gorges, snow gums, and Horn walk lookouts",
+      "summary": "Mount Buffalo National Park is a granite plateau above the Ovens Valley, with The Horn, gorge lookouts, lakes, and winter snow on a short drive from Bright.",
+      "photos": [],
+      "area_km2": 310
+    },
+    {
+      "name": "Mount Kaputar National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -30.28,
+      "lng": 150.16,
+      "biodiversity": 5,
+      "popularity": 80,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Nandewar Range volcanic high country above Narrabri",
+      "summary": "Mount Kaputar National Park rises from the north-west slopes as a cool volcanic range, with lookouts, snow gums, and the Mount Kaputar summit walk.",
+      "photos": [],
+      "area_km2": 502
+    },
+    {
+      "name": "Mount Remarkable National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -32.81,
+      "lng": 138.16,
+      "biodiversity": 5,
+      "popularity": 81,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Southern Flinders peak and Alligator Gorge",
+      "summary": "Mount Remarkable National Park covers the southern Flinders Ranges around Melrose and Alligator Gorge, with a steep summit walk and red-rock gorge trails.",
+      "photos": [],
+      "area_km2": 182
+    },
+    {
+      "name": "Mount Augustus National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -24.33,
+      "lng": 116.84,
+      "biodiversity": 5,
+      "popularity": 78,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "One of the world's largest monoclines, with a long summit loop",
+      "summary": "Mount Augustus National Park protects Burringurrah, a vast sandstone monocline in the Gascoyne, with a long hot summit walk and gorge side trips.",
+      "photos": [],
+      "area_km2": 92
+    },
+    {
+      "name": "Hartz Mountains National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -43.22,
+      "lng": 146.77,
+      "biodiversity": 5,
+      "popularity": 80,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Tasmanian dolerite peaks and tarns above the Huon",
+      "summary": "Hartz Mountains National Park is a compact alpine park south of Hobart, with boardwalks to lookouts and a rocky climb to Hartz Peak.",
+      "photos": [],
+      "area_km2": 71
+    },
+    {
+      "name": "Ben Lomond National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -41.53,
+      "lng": 147.67,
+      "biodiversity": 5,
+      "popularity": 79,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Dolerite plateau and Tasmania's main ski field",
+      "summary": "Ben Lomond National Park is a high dolerite plateau in north-east Tasmania, with Jacobs Ladder, winter skiing, and summer plateau walks.",
+      "photos": [],
+      "area_km2": 165
+    },
+    {
+      "name": "Mount Coolum National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.563,
+      "lng": 153.09,
+      "biodiversity": 5,
+      "popularity": 87,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Coastal volcanic plug above the Sunshine Coast beach strip",
+      "summary": "Mount Coolum National Park is a small reserve around the rhyolite plug of Mount Coolum, with a steep summit track and wide coastal views.",
+      "photos": [],
+      "area_km2": 2
+    },
+    {
+      "name": "D'Aguilar National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -27.33,
+      "lng": 152.77,
+      "biodiversity": 5,
+      "popularity": 82,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Forest ranges immediately west of Brisbane",
+      "summary": "D'Aguilar National Park covers the forested ranges west of Brisbane, including Mount Glorious, Mount Nebo, and walks above the city catchment.",
+      "photos": [],
+      "area_km2": 360
+    },
+    {
+      "name": "Wollumbin National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.397,
+      "lng": 153.271,
+      "biodiversity": 5,
+      "popularity": 88,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Sacred volcanic plug and steep rainforest summit track",
+      "summary": "Wollumbin National Park protects the volcanic plug of Wollumbin / Mount Warning, with a steep rainforest climb and cultural access rules.",
+      "photos": [],
+      "area_km2": 24
+    },
+    {
+      "name": "Mount Canobolas State Conservation Area",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.344,
+      "lng": 148.982,
+      "biodiversity": 5,
+      "popularity": 78,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Extinct volcano and highest point on the central tablelands",
+      "summary": "Mount Canobolas is an extinct volcano west of Orange, with a short summit walk, lookouts, and cool-climate forest above the orchards.",
+      "photos": [],
+      "area_km2": 15
+    }
+  ],
+  "pois": [
+    {
+      "name": "Mount Beerwah",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.897,
+      "lng": 152.89,
+      "category": "landmark",
+      "popularity": 91,
+      "tagline": "Highest Glass House Mountains volcanic plug",
+      "photos": []
+    },
+    {
+      "name": "Mount Tibrogargan",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.928,
+      "lng": 152.948,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Crouching-gorilla volcanic plug above the Bruce Highway",
+      "photos": []
+    },
+    {
+      "name": "Mount Ngungun",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.9,
+      "lng": 152.93,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Most accessible Glass House summit with Beerwah and Tibrogargan views",
+      "photos": []
+    },
+    {
+      "name": "Mount Coonowrin",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.904,
+      "lng": 152.914,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Sharp Crookneck plug in the Glass House Mountains group",
+      "photos": []
+    },
+    {
+      "name": "Glass House Mountains Lookout",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.911,
+      "lng": 152.925,
+      "category": "landmark",
+      "popularity": 87,
+      "tagline": "Roadside viewpoint across the main volcanic plugs",
+      "photos": []
+    },
+    {
+      "name": "Mount Coolum",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.563,
+      "lng": 153.09,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Coastal rhyolite plug above Coolum Beach",
+      "photos": []
+    },
+    {
+      "name": "Mount Tinbeerwah",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.39,
+      "lng": 152.975,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Noosa hinterland lookout peak with a steep summit track",
+      "photos": []
+    },
+    {
+      "name": "Mount Cooroora",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.372,
+      "lng": 152.813,
+      "category": "landmark",
+      "popularity": 83,
+      "tagline": "Steep volcanic plug above Pomona",
+      "photos": []
+    },
+    {
+      "name": "Mount Ninderry",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.54,
+      "lng": 152.995,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Short hinterland summit above Yandina",
+      "photos": []
+    },
+    {
+      "name": "Mount Barney",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.279,
+      "lng": 152.698,
+      "category": "landmark",
+      "popularity": 89,
+      "tagline": "South East Queensland's highest walk-up peak",
+      "photos": []
+    },
+    {
+      "name": "Mount Bartle Frere",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -17.383,
+      "lng": 145.818,
+      "category": "landmark",
+      "popularity": 87,
+      "tagline": "Queensland's highest mountain in the Wet Tropics",
+      "photos": []
+    },
+    {
+      "name": "Walshs Pyramid",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -17.108,
+      "lng": 145.798,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Steep standalone peak south of Cairns",
+      "photos": []
+    },
+    {
+      "name": "Mount Coot-tha",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -27.475,
+      "lng": 152.958,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Brisbane's city lookout mountain and botanic-garden ridge",
+      "photos": []
+    },
+    {
+      "name": "Mount Glorious",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -27.333,
+      "lng": 152.768,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Rainforest high point on the D'Aguilar Range",
+      "photos": []
+    },
+    {
+      "name": "Mount Feathertop",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.896,
+      "lng": 147.138,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Victoria's second-highest peak above Harrietville",
+      "photos": []
+    },
+    {
+      "name": "Mount Bogong",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.732,
+      "lng": 147.297,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Victoria's highest mountain above the Kiewa Valley",
+      "photos": []
+    },
+    {
+      "name": "Mount Buffalo",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.778,
+      "lng": 146.777,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Granite plateau and The Horn above Porepunkah",
+      "photos": []
+    },
+    {
+      "name": "The Horn Mount Buffalo",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.759,
+      "lng": 146.767,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Highest point on the Mount Buffalo plateau",
+      "photos": []
+    },
+    {
+      "name": "Mount Stirling",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.125,
+      "lng": 146.494,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Cross-country and hut-country peak near Mount Buller",
+      "photos": []
+    },
+    {
+      "name": "Mount Buller",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.145,
+      "lng": 146.437,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Victorian ski-resort summit above Mansfield",
+      "photos": []
+    },
+    {
+      "name": "Mount Macedon",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.384,
+      "lng": 144.576,
+      "category": "landmark",
+      "popularity": 85,
+      "tagline": "Memorial Cross mountain on Melbourne's north-west fringe",
+      "photos": []
+    },
+    {
+      "name": "Mount Donna Buang",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.706,
+      "lng": 145.681,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Rainforest summit and lookout above Warburton",
+      "photos": []
+    },
+    {
+      "name": "Mount William",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.293,
+      "lng": 142.601,
+      "category": "landmark",
+      "popularity": 83,
+      "tagline": "Highest Grampians peak above Halls Gap",
+      "photos": []
+    },
+    {
+      "name": "Mount Townsend",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.422,
+      "lng": 148.259,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Australia's second-highest peak on the Main Range",
+      "photos": []
+    },
+    {
+      "name": "Mount Jagungal",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.143,
+      "lng": 148.387,
+      "category": "landmark",
+      "popularity": 78,
+      "tagline": "Remote snow-country peak north of Guthega",
+      "photos": []
+    },
+    {
+      "name": "Mount Kaputar",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -30.271,
+      "lng": 150.156,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Nandewar Range summit above Narrabri",
+      "photos": []
+    },
+    {
+      "name": "Mount Canobolas",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.344,
+      "lng": 148.982,
+      "category": "landmark",
+      "popularity": 79,
+      "tagline": "Highest point of the central tablelands west of Orange",
+      "photos": []
+    },
+    {
+      "name": "Didthul / Pigeon House Mountain",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -35.351,
+      "lng": 150.269,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Morton National Park sandstone peak with ladders to the summit",
+      "photos": []
+    },
+    {
+      "name": "Mount Solitary",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.778,
+      "lng": 150.327,
+      "category": "landmark",
+      "popularity": 83,
+      "tagline": "Blue Mountains ridge walk above the Jamison Valley",
+      "photos": []
+    },
+    {
+      "name": "Mount Keira",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.402,
+      "lng": 150.854,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Illawarra lookout mountain above Wollongong",
+      "photos": []
+    },
+    {
+      "name": "The Breadknife",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -31.277,
+      "lng": 149.002,
+      "category": "landmark",
+      "popularity": 85,
+      "tagline": "Thin rhyolite wall in Warrumbungle National Park",
+      "photos": []
+    },
+    {
+      "name": "St Mary Peak / Ngarri Mudlanha",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -31.486,
+      "lng": 138.543,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Highest point of Ikara / Wilpena Pound",
+      "photos": []
+    },
+    {
+      "name": "Mount Lofty",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.976,
+      "lng": 138.709,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Adelaide Hills summit and lookout above the city",
+      "photos": []
+    },
+    {
+      "name": "Mount Remarkable",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -32.808,
+      "lng": 138.161,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Southern Flinders summit above Melrose",
+      "photos": []
+    },
+    {
+      "name": "Toolbrunup Peak",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.387,
+      "lng": 118.055,
+      "category": "landmark",
+      "popularity": 81,
+      "tagline": "Steep Stirling Range scramble near Bluff Knoll",
+      "photos": []
+    },
+    {
+      "name": "Castle Rock Porongurup",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.681,
+      "lng": 117.872,
+      "category": "landmark",
+      "popularity": 83,
+      "tagline": "Granite castle and skywalk in the Porongurup Range",
+      "photos": []
+    },
+    {
+      "name": "Mount Augustus / Burringurrah",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -24.313,
+      "lng": 116.838,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Vast Gascoyne sandstone monocline",
+      "photos": []
+    },
+    {
+      "name": "Mount Sonder / Rwetyepme",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -23.585,
+      "lng": 132.568,
+      "category": "landmark",
+      "popularity": 87,
+      "tagline": "Larapinta Trail western high point in the West MacDonnells",
+      "photos": []
+    },
+    {
+      "name": "Mount Zeil / Urlatherrke",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -23.397,
+      "lng": 132.393,
+      "category": "landmark",
+      "popularity": 76,
+      "tagline": "Highest peak in the Northern Territory",
+      "photos": []
+    },
+    {
+      "name": "Frenchmans Cap",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.271,
+      "lng": 145.822,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "White quartzite dome in Tasmania's western wilderness",
+      "photos": []
+    },
+    {
+      "name": "Mount Ossa",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -41.871,
+      "lng": 146.032,
+      "category": "landmark",
+      "popularity": 85,
+      "tagline": "Tasmania's highest mountain, reached from the Overland Track",
+      "photos": []
+    },
+    {
+      "name": "Hartz Peak",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -43.245,
+      "lng": 146.77,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Dolerite summit above Hartz Lake in southern Tasmania",
+      "photos": []
+    },
+    {
+      "name": "Ben Lomond Tasmania",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -41.534,
+      "lng": 147.667,
+      "category": "landmark",
+      "popularity": 78,
+      "tagline": "Dolerite plateau and Legges Tor, Tasmania's second-highest point",
+      "photos": []
+    },
+    {
+      "name": "Mount Anne",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.946,
+      "lng": 146.425,
+      "category": "landmark",
+      "popularity": 77,
+      "tagline": "Remote south-west Tasmanian quartzite peak",
+      "photos": []
+    },
+    {
+      "name": "Cradle Mountain Summit",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -41.685,
+      "lng": 145.947,
+      "category": "landmark",
+      "popularity": 92,
+      "tagline": "Classic dolerite summit above Dove Lake",
+      "photos": []
+    },
+    {
+      "name": "kunanyi / Mount Wellington Summit",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.896,
+      "lng": 147.238,
+      "category": "landmark",
+      "popularity": 91,
+      "tagline": "Hobart's mountain, with alpine boardwalks above the city",
+      "photos": []
+    },
+    {
+      "name": "Mary Cairncross Scenic Reserve",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.78,
+      "lng": 152.87,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Hilltop rainforest reserve with Glass House Mountains views",
+      "photos": []
+    },
+    {
+      "name": "Kondalilla Falls",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.675,
+      "lng": 152.868,
+      "category": "landmark",
+      "popularity": 85,
+      "tagline": "Blackall Range waterfall and swimming hole near Montville",
+      "photos": []
+    }
+  ],
+  "hikes": [
+    {
+      "id": "mount-ngungun-summit-walk-au",
+      "name": "Mount Ngungun Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 2.6,
+      "ascent_m": 220,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 89,
+      "tier": "regional",
+      "tagline": "Short steep climb to the best Glass House Mountains viewpoint",
+      "summary": "The Mount Ngungun Summit Walk is the most accessible Glass House Mountains climb, rising through woodland to a rocky summit with views of Beerwah, Tibrogargan, and Coonowrin.",
+      "tips": [
+        "Rock is slippery after rain",
+        "Start early on weekends",
+        "Carry water; the climb is short but steep"
+      ],
+      "geometry": [
+        [
+          152.9282,
+          -26.9024
+        ],
+        [
+          152.9294,
+          -26.9011
+        ],
+        [
+          152.9303,
+          -26.9001
+        ],
+        [
+          152.9311,
+          -26.8992
+        ]
+      ],
+      "start_name": "Ngungun car park",
+      "end_name": "Mount Ngungun summit",
+      "start_instructions": "Start from the signed Ngungun car park off Fullertons Road.",
+      "osm_aliases": [
+        "Mount Ngungun",
+        "Ngungun",
+        "Ngungun Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-tibrogargan-summit-walk-au",
+      "name": "Mount Tibrogargan Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 3.0,
+      "ascent_m": 290,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Exposed volcanic-plug scramble above Beerwah township",
+      "summary": "The Tibrogargan Summit Walk climbs steep rock on the crouching-gorilla plug, with exposure, loose sections, and wide hinterland views.",
+      "tips": [
+        "Not a beginner walk",
+        "Avoid in rain or high wind",
+        "Check current park access before climbing"
+      ],
+      "geometry": [
+        [
+          152.9464,
+          -26.9312
+        ],
+        [
+          152.9474,
+          -26.9296
+        ],
+        [
+          152.9482,
+          -26.9283
+        ],
+        [
+          152.9488,
+          -26.9274
+        ]
+      ],
+      "start_name": "Tibrogargan car park",
+      "end_name": "Mount Tibrogargan summit",
+      "start_instructions": "Start from the Tibrogargan day-use area off Marshs Road.",
+      "osm_aliases": [
+        "Mount Tibrogargan",
+        "Tibrogargan",
+        "Tibrogargan Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-beerwah-walk-au",
+      "name": "Mount Beerwah Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 2.8,
+      "ascent_m": 350,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Steep climb of the highest Glass House Mountains plug",
+      "summary": "The Mount Beerwah Walk is a steep volcanic-plug climb from the western trailhead, with rock slabs, exposure, and summit views across the Sunshine Coast hinterland.",
+      "tips": [
+        "Confirm the track is open; access has been restricted at times",
+        "Rock slabs are dangerous when wet",
+        "This is a serious short climb, not a stroll"
+      ],
+      "geometry": [
+        [
+          152.8798,
+          -26.8984
+        ],
+        [
+          152.8835,
+          -26.8976
+        ],
+        [
+          152.8868,
+          -26.8971
+        ],
+        [
+          152.8898,
+          -26.8968
+        ]
+      ],
+      "start_name": "Mount Beerwah car park",
+      "end_name": "Mount Beerwah summit",
+      "start_instructions": "Start from the Mount Beerwah car park west of the peak if the summit route is open.",
+      "osm_aliases": [
+        "Mount Beerwah",
+        "Beerwah",
+        "Beerwah Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "tibrogargan-circuit-au",
+      "name": "Tibrogargan Circuit",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 3.2,
+      "ascent_m": 80,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Easy woodland loop around the base of Mount Tibrogargan",
+      "summary": "The Tibrogargan Circuit is a mostly easy loop around the base of the plug, with changing views of the cliff faces and nearby peaks.",
+      "tips": [
+        "Good alternative if the summit is closed or too exposed",
+        "Carry water in summer",
+        "Trailhead parking fills on weekends"
+      ],
+      "geometry": [
+        [
+          152.9464,
+          -26.9312
+        ],
+        [
+          152.9502,
+          -26.9288
+        ],
+        [
+          152.9496,
+          -26.9254
+        ],
+        [
+          152.9458,
+          -26.9266
+        ],
+        [
+          152.9464,
+          -26.9312
+        ]
+      ],
+      "start_name": "Tibrogargan car park",
+      "end_name": "Tibrogargan car park",
+      "start_instructions": "Start from the Tibrogargan day-use area and follow the signed circuit.",
+      "osm_aliases": [
+        "Tibrogargan Circuit",
+        "Tibrogargan"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kondalilla-falls-circuit-au",
+      "name": "Kondalilla Falls Circuit",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 4.7,
+      "ascent_m": 270,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Steep rainforest descent to the waterfall and swimming hole",
+      "summary": "The Kondalilla Falls Circuit drops from the Blackall Range picnic area through rainforest to the waterfall and rock pools, then climbs back to the escarpment.",
+      "tips": [
+        "The return climb is steep",
+        "Rocks around the pool are slippery",
+        "Start early on hot days"
+      ],
+      "geometry": [
+        [
+          152.8678,
+          -26.6722
+        ],
+        [
+          152.8684,
+          -26.6748
+        ],
+        [
+          152.8688,
+          -26.6768
+        ],
+        [
+          152.8694,
+          -26.6784
+        ],
+        [
+          152.8678,
+          -26.6722
+        ]
+      ],
+      "start_name": "Kondalilla picnic area",
+      "end_name": "Kondalilla picnic area",
+      "start_instructions": "Start from the Kondalilla National Park picnic area near Montville.",
+      "osm_aliases": [
+        "Kondalilla Falls",
+        "Kondalilla Falls Circuit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-coolum-summit-walk-au",
+      "name": "Mount Coolum Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 1.8,
+      "ascent_m": 200,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Steep coastal-plug climb above Coolum Beach",
+      "summary": "The Mount Coolum Summit Walk climbs the rhyolite plug from Tanah Street West, with a short, steep pad to a broad summit and views along the Sunshine Coast.",
+      "tips": [
+        "Start early; the slope has little shade",
+        "Rock is slippery after rain",
+        "Parking on Tanah Street fills quickly"
+      ],
+      "geometry": [
+        [
+          153.0866,
+          -26.5608
+        ],
+        [
+          153.0882,
+          -26.5618
+        ],
+        [
+          153.0896,
+          -26.5628
+        ],
+        [
+          153.0904,
+          -26.5634
+        ]
+      ],
+      "start_name": "Tanah Street West trailhead",
+      "end_name": "Mount Coolum summit",
+      "start_instructions": "Start from the signed trailhead on Tanah Street West, Mount Coolum.",
+      "osm_aliases": [
+        "Mount Coolum",
+        "Coolum Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-tinbeerwah-lookout-walk-au",
+      "name": "Mount Tinbeerwah Lookout Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 1.6,
+      "ascent_m": 140,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Short hinterland climb to a Noosa-coast lookout",
+      "summary": "The Mount Tinbeerwah walk climbs from the sealed lookout road to a summit platform with views over lakes, forest, and the Noosa coast.",
+      "tips": [
+        "The last rock steps are steep",
+        "Go early for clearer views",
+        "Combine with Tewantin or Noosa"
+      ],
+      "geometry": [
+        [
+          152.9738,
+          -26.3924
+        ],
+        [
+          152.9748,
+          -26.3912
+        ],
+        [
+          152.9756,
+          -26.3902
+        ]
+      ],
+      "start_name": "Tinbeerwah car park",
+      "end_name": "Mount Tinbeerwah lookout",
+      "start_instructions": "Start from the Mount Tinbeerwah car park off Tinbeerwah Road.",
+      "osm_aliases": [
+        "Mount Tinbeerwah",
+        "Tinbeerwah"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-cooroora-summit-walk-au",
+      "name": "Mount Cooroora Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 2.4,
+      "ascent_m": 300,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Steep rocky climb from Pomona to the Cooroora plug",
+      "summary": "The Mount Cooroora Summit Walk rises directly from Pomona through woodland and rock to a sharp volcanic summit above the Noosa hinterland.",
+      "tips": [
+        "A serious short climb with exposure",
+        "Avoid in rain",
+        "Carry water"
+      ],
+      "geometry": [
+        [
+          152.8558,
+          -26.3688
+        ],
+        [
+          152.8388,
+          -26.3702
+        ],
+        [
+          152.8218,
+          -26.3714
+        ],
+        [
+          152.8132,
+          -26.3722
+        ]
+      ],
+      "start_name": "Pomona trailhead",
+      "end_name": "Mount Cooroora summit",
+      "start_instructions": "Start from the signed trailhead on Reserve Street in Pomona.",
+      "osm_aliases": [
+        "Mount Cooroora",
+        "Cooroora"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-barney-south-ridge-au",
+      "name": "Mount Barney South Ridge",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 10.0,
+      "ascent_m": 900,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 87,
+      "tier": "major",
+      "tagline": "Classic steep route to South East Queensland's biggest peak",
+      "summary": "The South Ridge route is the usual walkers' line on Mount Barney, climbing from Yellow Pinch through open forest and steep rock to East Peak.",
+      "tips": [
+        "Start before dawn in summer",
+        "Carry 3+ litres of water",
+        "The descent is hard on knees and navigation"
+      ],
+      "geometry": [
+        [
+          152.7306,
+          -28.2688
+        ],
+        [
+          152.7204,
+          -28.2724
+        ],
+        [
+          152.7108,
+          -28.2758
+        ],
+        [
+          152.7024,
+          -28.2778
+        ],
+        [
+          152.6982,
+          -28.2788
+        ]
+      ],
+      "start_name": "Yellow Pinch car park",
+      "end_name": "Mount Barney East Peak",
+      "start_instructions": "Start from Yellow Pinch car park and follow the South Ridge / Peasants Ridge signs.",
+      "osm_aliases": [
+        "Mount Barney",
+        "South Ridge",
+        "Peasants Ridge"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bartle-frere-west-summit-au",
+      "name": "Bartle Frere Western Summit Track",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 15.0,
+      "ascent_m": 1500,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 84,
+      "tier": "major",
+      "tagline": "Queensland's highest mountain through Wet Tropics rainforest",
+      "summary": "The western Bartle Frere track climbs from Josephine Falls / Broken Nose country through rainforest, boulders, and cloud forest to Queensland's highest summit.",
+      "tips": [
+        "This is a long, wet, and serious day",
+        "Leeches and cloud are normal",
+        "Carry a map; the top can be socked in"
+      ],
+      "geometry": [
+        [
+          145.7478,
+          -17.4378
+        ],
+        [
+          145.7688,
+          -17.4224
+        ],
+        [
+          145.7888,
+          -17.4088
+        ],
+        [
+          145.8048,
+          -17.3948
+        ],
+        [
+          145.8176,
+          -17.3834
+        ]
+      ],
+      "start_name": "Western trailhead",
+      "end_name": "Bartle Frere summit",
+      "start_instructions": "Start from the western Bartle Frere trailhead near Josephine Falls / Broken Nose access.",
+      "osm_aliases": [
+        "Bartle Frere",
+        "Mount Bartle Frere",
+        "Bartle Frere West"
+      ],
+      "photos": []
+    },
+    {
+      "id": "walshs-pyramid-walk-au",
+      "name": "Walshs Pyramid Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 6.0,
+      "ascent_m": 870,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Steep standalone climb south of Cairns",
+      "summary": "Walshs Pyramid is a relentless grassy and rocky climb from Gordonvale's southern flats to a sharp summit with Wet Tropics and coast views.",
+      "tips": [
+        "Almost no shade",
+        "Start at first light",
+        "Carry more water than the distance suggests"
+      ],
+      "geometry": [
+        [
+          145.7868,
+          -17.1268
+        ],
+        [
+          145.7908,
+          -17.1198
+        ],
+        [
+          145.7948,
+          -17.1138
+        ],
+        [
+          145.7978,
+          -17.1084
+        ]
+      ],
+      "start_name": "Walshs Pyramid car park",
+      "end_name": "Walshs Pyramid summit",
+      "start_instructions": "Start from the signed car park on the Gordonvale–Gillies side of the peak.",
+      "osm_aliases": [
+        "Walshs Pyramid",
+        "Walsh's Pyramid"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-coot-tha-summit-track-au",
+      "name": "Mount Coot-tha Summit Track",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 3.6,
+      "ascent_m": 180,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Brisbane lookout mountain from the botanic gardens",
+      "summary": "The Mount Coot-tha tracks climb from the botanic gardens and JC Slaughter Falls to the summit lookout above Brisbane.",
+      "tips": [
+        "Weekends are busy",
+        "Go early for clearer views",
+        "The summit lookout has traffic; the tracks are quieter"
+      ],
+      "geometry": [
+        [
+          152.9588,
+          -27.4778
+        ],
+        [
+          152.9596,
+          -27.4766
+        ],
+        [
+          152.9588,
+          -27.4754
+        ],
+        [
+          152.9576,
+          -27.4748
+        ]
+      ],
+      "start_name": "JC Slaughter Falls",
+      "end_name": "Mount Coot-tha lookout",
+      "start_instructions": "Start from JC Slaughter Falls or the botanic gardens and follow summit-track signs.",
+      "osm_aliases": [
+        "Mount Coot-tha",
+        "Coot-tha Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-feathertop-bungalow-spur-au",
+      "name": "Mount Feathertop via Bungalow Spur",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 22.0,
+      "ascent_m": 1500,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 90,
+      "tier": "major",
+      "tagline": "Victoria's classic hut-and-summit climb from Harrietville",
+      "summary": "Bungalow Spur is the standard walkers' route to Mount Feathertop, climbing from Harrietville through forest to Federation Hut and the exposed summit ridge.",
+      "tips": [
+        "Start before dawn",
+        "The summit ridge is dangerous in high wind or snow",
+        "Carry an emergency layer even in summer"
+      ],
+      "geometry": [
+        [
+          147.0642,
+          -36.8908
+        ],
+        [
+          147.0824,
+          -36.8924
+        ],
+        [
+          147.1028,
+          -36.8942
+        ],
+        [
+          147.1228,
+          -36.8954
+        ],
+        [
+          147.1382,
+          -36.8962
+        ]
+      ],
+      "start_name": "Feathertop Track car park",
+      "end_name": "Mount Feathertop summit",
+      "start_instructions": "Start from the Feathertop Track car park on Feathertop Track, Harrietville.",
+      "osm_aliases": [
+        "Bungalow Spur",
+        "Mount Feathertop",
+        "Feathertop"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-bogong-staircase-spur-au",
+      "name": "Mount Bogong via Staircase Spur",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 16.0,
+      "ascent_m": 1400,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 90,
+      "tier": "major",
+      "tagline": "Victoria's highest mountain from Mountain Creek",
+      "summary": "Staircase Spur is the classic Mount Bogong route, climbing from Mountain Creek through mountain ash to Bivouac Hut and the exposed high plains summit.",
+      "tips": [
+        "Alpine weather kills; turn back if it closes in",
+        "Start early",
+        "Snow and ice linger into spring"
+      ],
+      "geometry": [
+        [
+          147.2288,
+          -36.8088
+        ],
+        [
+          147.2488,
+          -36.7868
+        ],
+        [
+          147.2688,
+          -36.7628
+        ],
+        [
+          147.2868,
+          -36.7448
+        ],
+        [
+          147.2972,
+          -36.7324
+        ]
+      ],
+      "start_name": "Mountain Creek campground",
+      "end_name": "Mount Bogong summit",
+      "start_instructions": "Start from Mountain Creek campground and follow Staircase Spur signs.",
+      "osm_aliases": [
+        "Staircase Spur",
+        "Mount Bogong",
+        "Bogong"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-buffalo-horn-walk-au",
+      "name": "The Horn Walk Mount Buffalo",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 3.0,
+      "ascent_m": 150,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Short granite climb to the highest point on Mount Buffalo",
+      "summary": "The Horn Walk crosses snow-gum woodland and granite slabs to the highest point of the Mount Buffalo plateau, with views over the Ovens Valley.",
+      "tips": [
+        "The last slabs are exposed in wind",
+        "Ice is common in winter",
+        "Combine with the Gorge and Lake Catani"
+      ],
+      "geometry": [
+        [
+          146.7768,
+          -36.7718
+        ],
+        [
+          146.7738,
+          -36.7678
+        ],
+        [
+          146.7708,
+          -36.7638
+        ],
+        [
+          146.7674,
+          -36.7592
+        ]
+      ],
+      "start_name": "The Horn car park",
+      "end_name": "The Horn",
+      "start_instructions": "Drive the plateau road to The Horn car park and take the signed walk.",
+      "osm_aliases": [
+        "The Horn",
+        "Mount Buffalo",
+        "Horn Track"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-macedon-cross-walk-au",
+      "name": "Mount Macedon Memorial Cross Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 3.2,
+      "ascent_m": 180,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Forest walk to the Memorial Cross above the Macedon Ranges",
+      "summary": "The Mount Macedon walk climbs through cool forest to the Memorial Cross and lookout, with views across the volcanic plains toward Melbourne.",
+      "tips": [
+        "The cross precinct can be busy on weekends",
+        "Fog is common",
+        "Combine with Sanatorium Lake"
+      ],
+      "geometry": [
+        [
+          144.5738,
+          -37.3888
+        ],
+        [
+          144.5752,
+          -37.3864
+        ],
+        [
+          144.5764,
+          -37.3842
+        ]
+      ],
+      "start_name": "Camels Hump / Macedon trailhead",
+      "end_name": "Memorial Cross",
+      "start_instructions": "Start from the signed Macedon Ranges walks near the Memorial Cross road.",
+      "osm_aliases": [
+        "Mount Macedon",
+        "Memorial Cross",
+        "Camels Hump"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-william-walk-au",
+      "name": "Mount William Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 4.0,
+      "ascent_m": 250,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Highest Grampians peak from the sealed summit road",
+      "summary": "The Mount William walk uses the sealed access road and a short summit pad to the highest peak in Gariwerd / the Grampians, with wide western-district views.",
+      "tips": [
+        "The top is cold and windy",
+        "Cloud can wipe the view",
+        "The road is steep; walkers share it with cars"
+      ],
+      "geometry": [
+        [
+          142.6098,
+          -37.3048
+        ],
+        [
+          142.6068,
+          -37.3008
+        ],
+        [
+          142.6038,
+          -37.2968
+        ],
+        [
+          142.6012,
+          -37.2932
+        ]
+      ],
+      "start_name": "Mount William car park",
+      "end_name": "Mount William summit",
+      "start_instructions": "Drive the Mount William Road to the upper car park and walk the summit track.",
+      "osm_aliases": [
+        "Mount William",
+        "Mount William Track"
+      ],
+      "photos": []
+    },
+    {
+      "id": "pigeon-house-didthul-walk-au",
+      "name": "Didthul / Pigeon House Mountain Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 5.0,
+      "ascent_m": 490,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 87,
+      "tier": "regional",
+      "tagline": "Sandstone peak with ladders to a Morton National Park summit",
+      "summary": "The Didthul walk climbs from Yadboro country through forest and sandstone to steel ladders and a small summit with coast and Budawang views.",
+      "tips": [
+        "The ladders are steep",
+        "Start early; the last kilometres of road are unsealed",
+        "Carry water"
+      ],
+      "geometry": [
+        [
+          150.2638,
+          -35.3648
+        ],
+        [
+          150.2668,
+          -35.3588
+        ],
+        [
+          150.2688,
+          -35.3548
+        ],
+        [
+          150.2694,
+          -35.3512
+        ]
+      ],
+      "start_name": "Pigeon House car park",
+      "end_name": "Didthul summit",
+      "start_instructions": "Start from the Pigeon House Mountain car park off Yadboro Road.",
+      "osm_aliases": [
+        "Pigeon House",
+        "Didthul",
+        "Pigeon House Mountain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-solitary-walk-au",
+      "name": "Mount Solitary Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 13.0,
+      "ascent_m": 800,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Blue Mountains ridge above the Jamison Valley",
+      "summary": "The Mount Solitary walk drops from the Golden Stairs or Katoomba cliffs, crosses the Ruined Castle saddle, and climbs the solitary ridge above the valley floor.",
+      "tips": [
+        "This is a long, steep day",
+        "Carry a light; the descent is slow",
+        "Check fire-season closures"
+      ],
+      "geometry": [
+        [
+          150.3018,
+          -33.7358
+        ],
+        [
+          150.3128,
+          -33.7488
+        ],
+        [
+          150.3228,
+          -33.7628
+        ],
+        [
+          150.3272,
+          -33.7782
+        ]
+      ],
+      "start_name": "Golden Stairs",
+      "end_name": "Mount Solitary",
+      "start_instructions": "Start from the Golden Stairs car park on Glenraphael Drive, Katoomba.",
+      "osm_aliases": [
+        "Mount Solitary",
+        "Ruined Castle",
+        "Golden Stairs"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-kaputar-summit-walk-au",
+      "name": "Mount Kaputar Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 2.0,
+      "ascent_m": 80,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Short high-country walk to the Nandewar Range summit",
+      "summary": "The Mount Kaputar summit walk is a short high-plateau stroll from the road to the lookout on the Nandewar Range above Narrabri.",
+      "tips": [
+        "The access road is long and winding",
+        "It can be cold even in summer",
+        "Watch for ice in winter"
+      ],
+      "geometry": [
+        [
+          150.1528,
+          -30.2768
+        ],
+        [
+          150.1548,
+          -30.2742
+        ],
+        [
+          150.1562,
+          -30.2714
+        ]
+      ],
+      "start_name": "Kaputar summit car park",
+      "end_name": "Mount Kaputar lookout",
+      "start_instructions": "Drive the Mount Kaputar road to the summit car park.",
+      "osm_aliases": [
+        "Mount Kaputar",
+        "Kaputar Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "st-mary-peak-circuit-au",
+      "name": "St Mary Peak Circuit",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 22.0,
+      "ascent_m": 740,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 88,
+      "tier": "major",
+      "tagline": "Highest walk in Ikara / Wilpena Pound",
+      "summary": "The St Mary Peak circuit climbs from Wilpena through Tanderra Saddle to Ngarri Mudlanha, then returns around the pound rim with huge Flinders views.",
+      "tips": [
+        "Walk in the cooler months",
+        "Carry a lot of water",
+        "The outer loop is long and exposed"
+      ],
+      "geometry": [
+        [
+          138.6052,
+          -31.5278
+        ],
+        [
+          138.5828,
+          -31.5128
+        ],
+        [
+          138.5588,
+          -31.4988
+        ],
+        [
+          138.5432,
+          -31.4864
+        ]
+      ],
+      "start_name": "Wilpena visitor centre",
+      "end_name": "St Mary Peak",
+      "start_instructions": "Start from the Wilpena visitor centre and follow Tanderra Saddle / St Mary Peak signs.",
+      "osm_aliases": [
+        "St Mary Peak",
+        "Ngarri Mudlanha",
+        "Tanderra Saddle"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-lofty-summit-walk-au",
+      "name": "Mount Lofty Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 8.0,
+      "ascent_m": 350,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 90,
+      "tier": "regional",
+      "tagline": "Adelaide Hills climb from Waterfall Gully to the summit lookout",
+      "summary": "The Waterfall Gully to Mount Lofty walk is Adelaide's staple mountain path, climbing beside First Falls and through stringybark forest to the summit lookout.",
+      "tips": [
+        "Start early on weekends",
+        "The sealed path is steep",
+        "Carry water in summer"
+      ],
+      "geometry": [
+        [
+          138.6758,
+          -34.9608
+        ],
+        [
+          138.6888,
+          -34.9668
+        ],
+        [
+          138.6988,
+          -34.9728
+        ],
+        [
+          138.7088,
+          -34.9758
+        ]
+      ],
+      "start_name": "Waterfall Gully",
+      "end_name": "Mount Lofty summit",
+      "start_instructions": "Start from Waterfall Gully car park and follow the Mount Lofty Summit track.",
+      "osm_aliases": [
+        "Mount Lofty",
+        "Waterfall Gully",
+        "Mount Lofty Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-remarkable-summit-hike-au",
+      "name": "Mount Remarkable Summit Hike",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 12.4,
+      "ascent_m": 680,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Southern Flinders climb from Melrose",
+      "summary": "The Mount Remarkable summit hike climbs from Melrose through forest and steep ridgeline to the highest point of the southern Flinders.",
+      "tips": [
+        "Start early",
+        "The ridge is exposed",
+        "Carry extra water"
+      ],
+      "geometry": [
+        [
+          138.1868,
+          -32.8288
+        ],
+        [
+          138.1768,
+          -32.8208
+        ],
+        [
+          138.1688,
+          -32.8148
+        ],
+        [
+          138.1612,
+          -32.8082
+        ]
+      ],
+      "start_name": "Melrose trailhead",
+      "end_name": "Mount Remarkable summit",
+      "start_instructions": "Start from the signed trailhead in Melrose.",
+      "osm_aliases": [
+        "Mount Remarkable",
+        "Remarkable Summit"
+      ],
+      "photos": []
+    },
+    {
+      "id": "toolbrunup-peak-walk-au",
+      "name": "Toolbrunup Peak Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 4.0,
+      "ascent_m": 600,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Steep Stirling Range scramble near Bluff Knoll",
+      "summary": "Toolbrunup is a steep, rocky Stirling Range climb with loose gullies and a sharp summit, shorter than Bluff Knoll but more technical.",
+      "tips": [
+        "Not a beginner walk",
+        "Rockfall is a risk",
+        "Avoid in wet or high wind"
+      ],
+      "geometry": [
+        [
+          118.0428,
+          -34.3968
+        ],
+        [
+          118.0488,
+          -34.3928
+        ],
+        [
+          118.0538,
+          -34.3892
+        ],
+        [
+          118.0554,
+          -34.3872
+        ]
+      ],
+      "start_name": "Toolbrunup car park",
+      "end_name": "Toolbrunup Peak",
+      "start_instructions": "Start from the Toolbrunup car park on Stirling Range Drive.",
+      "osm_aliases": [
+        "Toolbrunup",
+        "Toolbrunup Peak"
+      ],
+      "photos": []
+    },
+    {
+      "id": "castle-rock-porongurup-walk-au",
+      "name": "Castle Rock and Granite Skywalk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 4.4,
+      "ascent_m": 250,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Granite castle and skywalk in the Porongurup Range",
+      "summary": "The Castle Rock walk climbs through karri and granite to the Granite Skywalk platform on the Porongurup Range east of Albany.",
+      "tips": [
+        "The skywalk is exposed",
+        "Rock is slippery when wet",
+        "Start early for parking"
+      ],
+      "geometry": [
+        [
+          117.8698,
+          -34.6908
+        ],
+        [
+          117.8712,
+          -34.6868
+        ],
+        [
+          117.8722,
+          -34.6828
+        ],
+        [
+          117.8726,
+          -34.6812
+        ]
+      ],
+      "start_name": "Castle Rock car park",
+      "end_name": "Granite Skywalk",
+      "start_instructions": "Start from the Castle Rock car park in Porongurup National Park.",
+      "osm_aliases": [
+        "Castle Rock",
+        "Granite Skywalk",
+        "Porongurup"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-augustus-summit-loop-au",
+      "name": "Mount Augustus Summit Loop",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 12.0,
+      "ascent_m": 650,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Long hot climb of Burringurrah in the Gascoyne",
+      "summary": "The Mount Augustus summit loop is a long exposed walk up the sandstone monocline, with gorge views and a huge Gascoyne horizon.",
+      "tips": [
+        "Walk in the cooler months only",
+        "Start before sunrise",
+        "Carry more water than you think you need"
+      ],
+      "geometry": [
+        [
+          116.8628,
+          -24.3348
+        ],
+        [
+          116.8528,
+          -24.3268
+        ],
+        [
+          116.8448,
+          -24.3188
+        ],
+        [
+          116.8382,
+          -24.3134
+        ]
+      ],
+      "start_name": "Summit trail car park",
+      "end_name": "Mount Augustus summit",
+      "start_instructions": "Start from the signed summit car park inside Mount Augustus National Park.",
+      "osm_aliases": [
+        "Mount Augustus",
+        "Burringurrah",
+        "Gus Beecroft"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-sonder-lookout-walk-au",
+      "name": "Mount Sonder Lookout Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 12.0,
+      "ascent_m": 600,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 88,
+      "tier": "major",
+      "tagline": "Larapinta western high point above the Redbank valley",
+      "summary": "The Mount Sonder walk climbs from Redbank Gorge along the Larapinta's last ridge to Rwetyepme, often done for sunrise over the West MacDonnells.",
+      "tips": [
+        "Start in the dark for sunrise",
+        "There is little shade",
+        "Carry a lot of water"
+      ],
+      "geometry": [
+        [
+          132.5088,
+          -23.5648
+        ],
+        [
+          132.5288,
+          -23.5728
+        ],
+        [
+          132.5488,
+          -23.5808
+        ],
+        [
+          132.5682,
+          -23.5854
+        ]
+      ],
+      "start_name": "Redbank Gorge",
+      "end_name": "Mount Sonder summit",
+      "start_instructions": "Start from Redbank Gorge car park at the western end of the Larapinta Trail.",
+      "osm_aliases": [
+        "Mount Sonder",
+        "Rwetyepme",
+        "Larapinta Trail Section 12"
+      ],
+      "photos": []
+    },
+    {
+      "id": "frenchmans-cap-walk-au",
+      "name": "Frenchmans Cap Track",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 46.0,
+      "ascent_m": 2100,
+      "difficulty": "hard",
+      "network": "Long-distance trail",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "major",
+      "tagline": "Western Tasmania quartzite dome from Lake Tahune",
+      "summary": "The Frenchmans Cap Track crosses the Loddon Plains and climbs to Lake Tahune hut, then a steep quartzite pad to one of Tasmania's most striking summits.",
+      "tips": [
+        "The Loddon can be a mud slog",
+        "Book or carry a tent for Tahune",
+        "The summit is dangerous in ice and high wind"
+      ],
+      "geometry": [
+        [
+          145.6488,
+          -42.2188
+        ],
+        [
+          145.6988,
+          -42.2388
+        ],
+        [
+          145.7488,
+          -42.2528
+        ],
+        [
+          145.7988,
+          -42.2648
+        ],
+        [
+          145.8218,
+          -42.2712
+        ]
+      ],
+      "start_name": "Lyell Highway trailhead",
+      "end_name": "Frenchmans Cap summit",
+      "start_instructions": "Start from the Frenchmans Cap trackhead on the Lyell Highway west of Derwent Bridge.",
+      "osm_aliases": [
+        "Frenchmans Cap",
+        "Frenchmans Cap Track"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-ossa-side-trip-au",
+      "name": "Mount Ossa Side Trip",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 6.0,
+      "ascent_m": 650,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Tasmania's highest mountain from Pelion Gap",
+      "summary": "The Mount Ossa side trip leaves the Overland Track at Pelion Gap and climbs dolerite toward Tasmania's highest summit, often combined with Pelion West views.",
+      "tips": [
+        "Only in stable weather",
+        "The upper rock is exposed",
+        "This is a side trip, not a shortcut"
+      ],
+      "geometry": [
+        [
+          146.0468,
+          -41.8528
+        ],
+        [
+          146.0408,
+          -41.8608
+        ],
+        [
+          146.0358,
+          -41.8668
+        ],
+        [
+          146.0322,
+          -41.8712
+        ]
+      ],
+      "start_name": "Pelion Gap",
+      "end_name": "Mount Ossa summit",
+      "start_instructions": "Leave the Overland Track at Pelion Gap and follow the Mount Ossa pad.",
+      "osm_aliases": [
+        "Mount Ossa",
+        "Pelion Gap"
+      ],
+      "photos": []
+    },
+    {
+      "id": "hartz-peak-walk-au",
+      "name": "Hartz Peak Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 7.4,
+      "ascent_m": 400,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Dolerite summit above Hartz Lake in southern Tasmania",
+      "summary": "The Hartz Peak walk follows boardwalk and alpine pad from the Hartz Mountains car park past lookouts and Lake Esperance to the rocky summit.",
+      "tips": [
+        "Weather closes in fast",
+        "Boardwalks are icy in winter",
+        "Carry a jacket even in summer"
+      ],
+      "geometry": [
+        [
+          146.7678,
+          -43.2158
+        ],
+        [
+          146.7688,
+          -43.2268
+        ],
+        [
+          146.7698,
+          -43.2368
+        ],
+        [
+          146.7704,
+          -43.2452
+        ]
+      ],
+      "start_name": "Hartz Mountains car park",
+      "end_name": "Hartz Peak",
+      "start_instructions": "Start from the Hartz Mountains National Park car park south of Geeveston.",
+      "osm_aliases": [
+        "Hartz Peak",
+        "Hartz Mountains"
+      ],
+      "photos": []
+    },
+    {
+      "id": "cradle-mountain-summit-walk-au",
+      "name": "Cradle Mountain Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 12.0,
+      "ascent_m": 700,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 93,
+      "tier": "major",
+      "tagline": "Dolerite scramble from Dove Lake to the Cradle summit",
+      "summary": "The Cradle Mountain summit walk leaves the Dove Lake circuit, climbs past Lake Wilks and the Face Track, and finishes on exposed dolerite to the summit.",
+      "tips": [
+        "Turn back if the top is in cloud or ice",
+        "Start early from the Dove Lake shuttle",
+        "This is a scramble, not a staircase"
+      ],
+      "geometry": [
+        [
+          145.9622,
+          -41.6508
+        ],
+        [
+          145.9568,
+          -41.6628
+        ],
+        [
+          145.9528,
+          -41.6748
+        ],
+        [
+          145.9474,
+          -41.6848
+        ]
+      ],
+      "start_name": "Dove Lake",
+      "end_name": "Cradle Mountain summit",
+      "start_instructions": "Take the Dove Lake shuttle and follow Face Track / summit signs.",
+      "osm_aliases": [
+        "Cradle Mountain",
+        "Cradle Mountain Summit",
+        "Face Track"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kunanyi-organ-pipes-walk-au",
+      "name": "kunanyi / Mount Wellington Organ Pipes Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 4.0,
+      "ascent_m": 250,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Alpine pad beneath the Organ Pipes above Hobart",
+      "summary": "The Organ Pipes Walk traverses the dolerite columns on kunanyi / Mount Wellington, linking the Pinnacle area with Lost World and city views.",
+      "tips": [
+        "Weather can be wintery in any month",
+        "Rockfall occurs under the pipes",
+        "Carry a layer even if Hobart is warm"
+      ],
+      "geometry": [
+        [
+          147.2382,
+          -42.8898
+        ],
+        [
+          147.2368,
+          -42.8928
+        ],
+        [
+          147.2374,
+          -42.8958
+        ],
+        [
+          147.2384,
+          -42.8968
+        ]
+      ],
+      "start_name": "The Springs or Pinnacle",
+      "end_name": "Organ Pipes",
+      "start_instructions": "Start from The Springs or the Pinnacle and follow Organ Pipes Track signs.",
+      "osm_aliases": [
+        "Organ Pipes",
+        "Mount Wellington",
+        "kunanyi"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-canobolas-summit-walk-au",
+      "name": "Mount Canobolas Summit Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 2.2,
+      "ascent_m": 120,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Short volcanic summit above Orange",
+      "summary": "The Mount Canobolas walk is a short climb to the highest point of the central tablelands, with lookouts over Orange and the western slopes.",
+      "tips": [
+        "It can be cold and windy",
+        "Combine with Federal Falls",
+        "The access road is winding"
+      ],
+      "geometry": [
+        [
+          148.9788,
+          -33.3488
+        ],
+        [
+          148.9808,
+          -33.3462
+        ],
+        [
+          148.9822,
+          -33.3442
+        ]
+      ],
+      "start_name": "Canobolas picnic area",
+      "end_name": "Mount Canobolas summit",
+      "start_instructions": "Start from the picnic area on Mount Canobolas Road.",
+      "osm_aliases": [
+        "Mount Canobolas",
+        "Canobolas"
+      ],
+      "photos": []
+    },
+    {
+      "id": "breadknife-and-grand-high-tops-au",
+      "name": "Breadknife and Grand High Tops Walk",
+      "country": "Australia",
+      "cc": "au",
+      "length_km": 14.5,
+      "ascent_m": 480,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "route_type": "hiking",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Warrumbungle circuit to the rhyolite Breadknife",
+      "summary": "The Grand High Tops walk climbs from Pincham through forest and volcanic walls to the Breadknife and ridge lookouts in Warrumbungle National Park.",
+      "tips": [
+        "Start early in summer",
+        "Carry water; the tops are exposed",
+        "The stairs are steep"
+      ],
+      "geometry": [
+        [
+          149.0088,
+          -31.2948
+        ],
+        [
+          149.0068,
+          -31.2888
+        ],
+        [
+          149.0048,
+          -31.2828
+        ],
+        [
+          149.0022,
+          -31.2772
+        ]
+      ],
+      "start_name": "Pincham car park",
+      "end_name": "The Breadknife",
+      "start_instructions": "Start from Pincham car park in Warrumbungle National Park.",
+      "osm_aliases": [
+        "Breadknife",
+        "Grand High Tops",
+        "Pincham"
+      ],
+      "photos": []
+    }
+  ]
+}

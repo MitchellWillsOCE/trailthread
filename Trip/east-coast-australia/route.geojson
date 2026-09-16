@@ -1,0 +1,182 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sydney to Katoomba",
+        "mode": "train",
+        "day": "4",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            151.2093,
+            -33.8688
+          ],
+          [
+            150.3119,
+            -33.7128
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Katoomba to Canberra",
+        "mode": "drive",
+        "day": "6",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            150.3119,
+            -33.7128
+          ],
+          [
+            149.13,
+            -35.2809
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Canberra to Melbourne",
+        "mode": "fly",
+        "day": "8",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            149.13,
+            -35.2809
+          ],
+          [
+            147.0,
+            -36.6
+          ],
+          [
+            144.9631,
+            -37.8136
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Melbourne to Torquay",
+        "mode": "drive",
+        "day": "11",
+        "section": "core"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            144.9631,
+            -37.8136
+          ],
+          [
+            144.317,
+            -38.333
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sydney",
+        "country": "Australia",
+        "stopType": "start",
+        "day": "1",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2093,
+          -33.8688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Katoomba",
+        "country": "Australia",
+        "stopType": "park",
+        "day": "4",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.3119,
+          -33.7128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Canberra",
+        "country": "Australia",
+        "stopType": "city",
+        "day": "6",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.13,
+          -35.2809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Melbourne",
+        "country": "Australia",
+        "stopType": "city",
+        "day": "8",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9631,
+          -37.8136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Torquay",
+        "country": "Australia",
+        "stopType": "end",
+        "day": "11",
+        "section": "cities"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.317,
+          -38.333
+        ]
+      }
+    }
+  ]
+}

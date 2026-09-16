@@ -1,4 +1,6 @@
 import L from "leaflet";
+import { maplibreGL } from "@maplibre/maplibre-gl-leaflet";
+import "maplibre-gl/dist/maplibre-gl.css";
 import { marked } from "marked";
 import {
   buildEmojiHeroHtml,
@@ -86,7 +88,35 @@ import { injectSpeedInsights } from "@vercel/speed-insights";
 injectVercelAnalytics();
 injectSpeedInsights();
 
-const DEFAULT_MAP_VIEW = { center: [52, 15], zoom: 4 };
+const DEFAULT_REGION_ID = "europe";
+const mapRegionConfig = {
+  europe: {
+    id: "europe",
+    label: "Europe",
+    shortLabel: "Europe",
+    center: [52, 15],
+    zoom: 4,
+    previewZoom: 4,
+    countryOverlayMaxZoom: 8,
+    viewBounds: { south: 34, west: -25, north: 72, east: 45 },
+    countriesGeojson: "./Trip/geo/europe-countries.geojson"
+  },
+  oceania: {
+    id: "oceania",
+    label: "Oceania",
+    shortLabel: "Oceania",
+    center: [-18, 165],
+    zoom: 3,
+    previewZoom: 3,
+    countryOverlayMaxZoom: 7,
+    viewBounds: { south: -55, west: 110, north: 20, east: -120 },
+    countriesGeojson: "./Trip/geo/oceania-countries.geojson?v=20260912"
+  }
+};
+const DEFAULT_MAP_VIEW = {
+  center: mapRegionConfig[DEFAULT_REGION_ID].center,
+  zoom: mapRegionConfig[DEFAULT_REGION_ID].zoom
+};
 
 const map = L.map("map", {
   zoomControl: false,
@@ -133,7 +163,7 @@ map.getPane("basemapOverlay").style.zIndex = "350";
 
 const basemapConfig = {
   voyager: { label: "Atlas", hint: "Balanced terrain and labels" },
-  streets: { label: "Streets", hint: "OpenStreetMap detail" },
+  streets: { label: "Streets", hint: "Detailed street map" },
   light: { label: "Light", hint: "Minimal light base" },
   dark: { label: "Night", hint: "Dark base for contrast" },
   satellite: { label: "Satellite", hint: "Aerial imagery" },
@@ -145,26 +175,17 @@ const overlayConfig = {
   transit: { label: "Transit", hint: "Public transport lines" }
 };
 
-const basemapLayers = {
-  voyager: L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    subdomains: "abcd",
-    maxZoom: 19
-  }),
-  streets: L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution: "&copy; OpenStreetMap contributors",
-    maxZoom: 19
-  }),
-  light: L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    subdomains: "abcd",
-    maxZoom: 19
-  }),
-  dark: L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
-    attribution: "&copy; OpenStreetMap &copy; CARTO",
-    subdomains: "abcd",
-    maxZoom: 19
-  }),
+const OPENFREEMAP_STYLES = {
+  voyager: "https://tiles.openfreemap.org/styles/liberty",
+  streets: "https://tiles.openfreemap.org/styles/bright",
+  light: "https://tiles.openfreemap.org/styles/positron",
+  dark: "https://tiles.openfreemap.org/styles/dark"
+};
+
+const OPENFREEMAP_ATTRIBUTION =
+  '&copy; <a href="https://openfreemap.org/" target="_blank" rel="noreferrer">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/" target="_blank" rel="noreferrer">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a>';
+
+const rasterBasemapLayers = {
   satellite: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
     attribution: "Tiles &copy; Esri",
     maxZoom: 19
@@ -174,6 +195,21 @@ const basemapLayers = {
     maxZoom: 17
   })
 };
+
+function isVectorBasemap(key) {
+  return Object.prototype.hasOwnProperty.call(OPENFREEMAP_STYLES, key);
+}
+
+function createOpenFreeMapLayer(styleUrl) {
+  return maplibreGL({
+    style: styleUrl,
+    pane: "tilePane",
+    interactive: false,
+    attributionControl: false,
+    maplibreLogo: false,
+    attribution: OPENFREEMAP_ATTRIBUTION
+  });
+}
 
 const overlayLayers = {
   labels: L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {
@@ -190,6 +226,7 @@ const overlayLayers = {
 };
 
 let activeBasemapLayer = null;
+let vectorBasemapLayer = null;
 
 const trailRouteStyle = {
   line: { color: "#ea580c", weight: 5, opacity: 0.95, dashArray: "" },
@@ -207,7 +244,7 @@ const modeConfig = {
 const continentConfig = {
   all: { label: "All" },
   europe: { label: "Europe" },
-  asia: { label: "Asia" }
+  oceania: { label: "Oceania" }
 };
 
 let placeDetails = {};
@@ -219,8 +256,10 @@ let cityCatalogLayer = null;
 let cityCatalogMarkersInView = new Map();
 let cityCatalogFetchId = 0;
 let cityCatalogRefreshTimer = null;
-let countryRegionsGeo = null;
+const countryRegionsGeoCache = new Map();
 let countryRegionsLayer = null;
+let countryRegionsLayerRegionId = null;
+let countryRegionsBuildToken = 0;
 let mapSearchCountries = [];
 let hikeCatalog = null;
 let hikeCatalogLayer = null;
@@ -243,6 +282,11 @@ let activeHikeRouteLayer = null;
 let activeHikeRouteGlowLayer = null;
 let activeHikeEndpointsLayer = null;
 let hikeDetailFetchToken = 0;
+let activeRegionLoadToken = 0;
+let regionFollowPaused = false;
+let regionFollowTimer = 0;
+let regionFollowResumeTimer = 0;
+let regionFollowSafetyTimer = 0;
 let state = {
   basemap: "voyager",
   overlays: { labels: false, transit: false },
@@ -250,6 +294,8 @@ let state = {
   trips: [],
   selectedTrip: null,
   continentFilter: "all",
+  activeRegionId: DEFAULT_REGION_ID,
+  previewRegionId: null,
   activeView: "map",
   exploreCities: false,
   exploreParks: false,
@@ -714,6 +760,9 @@ function updateHudJourneyState() {
       if (state.exploreCities) {
         parts.push("cities");
       }
+      if (state.exploreParks) {
+        parts.push("parks");
+      }
       if (state.exploreHikes) {
         parts.push("trails");
       }
@@ -721,7 +770,7 @@ function updateHudJourneyState() {
         parts.push("landmarks");
       }
       subtitleEl.textContent = parts.length
-        ? `${parts.join(" & ")} on the map — pan to browse, tap for details`
+        ? `${parts.join(" & ")} in ${activeRegionLabel()} — pan to browse, tap for details`
         : "Browse sample routes or discover cities, parks, trails, and landmarks on the map";
     }
     return;
@@ -763,10 +812,71 @@ function renderJourneyRequiredToast(view) {
   }
 }
 
+function welcomeFeaturedTrips() {
+  const samples = state.trips.filter(isSampleTrip);
+  const region = state.activeRegionId || DEFAULT_REGION_ID;
+  const local = samples.filter((trip) => trip.continent === region);
+  const rest = samples.filter((trip) => trip.continent !== region);
+  return [...local, ...rest].slice(0, 3);
+}
+
+function renderWelcomeOverlay() {
+  const regionRow = document.getElementById("welcomeRegionSwitcher");
+  if (regionRow) {
+    regionRow.innerHTML = Object.entries(mapRegionConfig)
+      .map(([key, item]) => {
+        const active = state.activeRegionId === key;
+        return `
+          <button
+            type="button"
+            class="welcome-region"
+            data-welcome-region="${escapeAttr(key)}"
+            aria-pressed="${String(active)}"
+          >${escapeHtml(item.shortLabel || item.label)}</button>
+        `;
+      })
+      .join("");
+  }
+
+  const featuredRoot = document.getElementById("welcomeFeatured");
+  const featuredGrid = document.getElementById("welcomeFeaturedJourneys");
+  const featured = welcomeFeaturedTrips();
+  if (featuredRoot && featuredGrid) {
+    featuredRoot.hidden = featured.length === 0;
+    featuredGrid.innerHTML = featured
+      .map((trip) => {
+        const cover = trip.cover || trip.gallery?.[0]?.url || "";
+        const days = trip.days ? `${trip.days} days` : "";
+        const region = trip.region || "";
+        const meta = [days, region].filter(Boolean).join(" · ");
+        return `
+          <button type="button" class="welcome-featured__card" data-welcome-trip="${escapeAttr(trip.key)}" data-welcome-emoji="${escapeAttr(trip.emoji || "🗺")}">
+            ${cover ? `<img src="${escapeAttr(cover)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : `<span class="welcome-featured__fallback" aria-hidden="true">${escapeHtml(trip.emoji || "🗺")}</span>`}
+            <span class="welcome-featured__meta">
+              <strong>${escapeHtml(trip.title)}</strong>
+              ${meta ? `<em>${escapeHtml(meta)}</em>` : ""}
+            </span>
+          </button>
+        `;
+      })
+      .join("");
+    featuredGrid.querySelectorAll("img").forEach((img) => {
+      img.addEventListener("error", () => {
+        const fallback = document.createElement("span");
+        fallback.className = "welcome-featured__fallback";
+        fallback.setAttribute("aria-hidden", "true");
+        fallback.textContent = img.closest("[data-welcome-emoji]")?.dataset.welcomeEmoji || "🗺";
+        img.replaceWith(fallback);
+      });
+    });
+  }
+}
+
 function showWelcomeOverlay() {
   if (!welcomeOverlay || state.welcomeDismissed) {
     return;
   }
+  renderWelcomeOverlay();
   welcomeOverlay.classList.remove("hidden");
   welcomeOverlay.classList.add("open");
   document.body.classList.add("welcome-open");
@@ -881,19 +991,14 @@ function syncRouteControlsVisibility() {
 }
 
 function enterExploreMode(options = {}) {
-  const { dismissWelcome = true, flyToEurope = true } = options;
+  const { dismissWelcome = true } = options;
+  const flyToRegion = options.flyToRegion ?? options.flyToEurope ?? true;
 
   if (!state.exploreCities) {
     setExploreCities(true);
   }
   if (!state.exploreParks) {
     setExploreParks(true);
-  }
-  if (!state.exploreHikes) {
-    setExploreHikes(true);
-  }
-  if (!state.explorePoi) {
-    setExplorePoi(true);
   }
 
   if (dismissWelcome) {
@@ -906,8 +1011,10 @@ function enterExploreMode(options = {}) {
     setPanelCollapsed(true);
   }
 
-  if (flyToEurope && !hasActiveJourney()) {
-    map.flyTo(DEFAULT_MAP_VIEW.center, DEFAULT_MAP_VIEW.zoom, { duration: 0.9 });
+  if (flyToRegion && !hasActiveJourney()) {
+    const region = getMapRegionConfig();
+    pauseRegionFollowForFlight();
+    map.flyTo(region.center, region.zoom, { duration: 0.9 });
   }
 
   showMapExploreHint();
@@ -919,14 +1026,19 @@ function showMapExploreHint(options = {}) {
   if (!mapHintBar || (!force && state.mapExploreHintDismissed)) {
     return;
   }
-  const hint = document.getElementById("mapHintText");
-  if (hint) {
-    hint.textContent =
-      "Zoom out for country outlines. Zoom in, then tap a city, park, trail, or landmark marker for details.";
-  }
+  syncExploreHintRegion();
   mapHintBar.hidden = false;
   layoutRoot?.classList.add("map-hint-visible");
   requestAnimationFrame(updateLayoutInsets);
+}
+
+function syncExploreHintRegion() {
+  const hint = document.getElementById("mapHintText");
+  if (!hint || !mapHintBar || mapHintBar.hidden) {
+    return;
+  }
+  hint.textContent =
+    `Exploring ${activeRegionLabel()}. Zoom in for more places, then tap a city or park. Turn on Trails or Landmarks in Map layers.`;
 }
 
 function hideMapExploreHint() {
@@ -1308,6 +1420,9 @@ function getPlaceDetail(name) {
   const normalized = name.toLowerCase();
   const fuzzyKey = Object.keys(placeDetails).find((key) => {
     const keyNorm = key.toLowerCase();
+    if (keyNorm.length < 5 || normalized.length < 5) {
+      return false;
+    }
     return keyNorm.includes(normalized) || normalized.includes(keyNorm);
   });
 
@@ -1358,22 +1473,80 @@ function styleCountryRegion(feature) {
   };
 }
 
-async function loadCountryRegionsGeo() {
-  if (countryRegionsGeo) {
-    return countryRegionsGeo;
+function isExploreActive() {
+  return state.exploreCities || state.exploreParks || state.exploreHikes || state.explorePoi;
+}
+
+function getMapRegionConfig(regionId = state.activeRegionId) {
+  return mapRegionConfig[regionId] || mapRegionConfig[DEFAULT_REGION_ID];
+}
+
+function activeRegionLabel() {
+  return getMapRegionConfig().label;
+}
+
+function normalizeLongitude(lng) {
+  return ((((Number(lng) || 0) + 180) % 360) + 360) % 360 - 180;
+}
+
+function longitudeInRange(lng, west, east) {
+  const normalized = normalizeLongitude(lng);
+  const normalizedWest = normalizeLongitude(west);
+  const normalizedEast = normalizeLongitude(east);
+  if (normalizedWest <= normalizedEast) {
+    return normalized >= normalizedWest && normalized <= normalizedEast;
   }
-  const response = await fetch("./Trip/geo/europe-countries.geojson");
+  return normalized >= normalizedWest || normalized <= normalizedEast;
+}
+
+function mapCenterIsInsideRegion(region) {
+  const bounds = region?.viewBounds;
+  if (!bounds) {
+    return false;
+  }
+  const center = map.getCenter();
+  return (
+    center.lat >= bounds.south &&
+    center.lat <= bounds.north &&
+    longitudeInRange(center.lng, bounds.west, bounds.east)
+  );
+}
+
+function viewedMapRegionId() {
+  const activeRegion = getMapRegionConfig();
+  if (mapCenterIsInsideRegion(activeRegion)) {
+    return activeRegion.id;
+  }
+  return Object.values(mapRegionConfig).find(mapCenterIsInsideRegion)?.id || null;
+}
+
+function displayedCountryRegionId() {
+  return state.previewRegionId || viewedMapRegionId() || state.activeRegionId || DEFAULT_REGION_ID;
+}
+
+async function loadCountryRegionsGeo(regionId = displayedCountryRegionId()) {
+  const config = getMapRegionConfig(regionId);
+  const cacheKey = config.id;
+  if (countryRegionsGeoCache.has(cacheKey)) {
+    return countryRegionsGeoCache.get(cacheKey);
+  }
+  const response = await fetch(config.countriesGeojson);
   if (!response.ok) {
-    throw new Error("Could not load country borders.");
+    throw new Error(`Could not load ${config.label} country borders.`);
   }
-  countryRegionsGeo = await response.json();
-  return countryRegionsGeo;
+  const geo = await response.json();
+  countryRegionsGeoCache.set(cacheKey, geo);
+  return geo;
 }
 
 function syncCountryRegionsLayer() {
   const zoom = map.getZoom();
+  const regionId = displayedCountryRegionId();
+  const region = getMapRegionConfig(regionId);
   const showBorders =
-    (state.exploreCities || state.exploreParks || state.exploreHikes || state.explorePoi) && zoom <= 8;
+    Boolean(state.previewRegionId) ||
+    (mapCenterIsInsideRegion(region) && zoom <= region.countryOverlayMaxZoom) ||
+    (isExploreActive() && zoom <= region.countryOverlayMaxZoom);
 
   if (!showBorders) {
     if (countryRegionsLayer && map.hasLayer(countryRegionsLayer)) {
@@ -1382,7 +1555,8 @@ function syncCountryRegionsLayer() {
     return;
   }
 
-  if (!countryRegionsLayer || !countryRegionsGeo) {
+  if (!countryRegionsLayer || countryRegionsLayerRegionId !== regionId) {
+    void buildCountryRegionsLayer(regionId);
     return;
   }
 
@@ -1397,17 +1571,68 @@ function syncCountryRegionsLayer() {
   });
 }
 
-async function buildCountryRegionsLayer() {
+function bindRegionalMapViewEvents() {
+  if (map._regionalMapViewEventsBound) {
+    return;
+  }
+  map._regionalMapViewEventsBound = true;
+  map.on("moveend zoomend", () => {
+    syncCountryRegionsLayer();
+    scheduleFollowViewedMapRegion();
+  });
+}
+
+function pauseRegionFollowForFlight() {
+  regionFollowPaused = true;
+  window.clearTimeout(regionFollowResumeTimer);
+  window.clearTimeout(regionFollowSafetyTimer);
+  const onEnd = () => {
+    window.clearTimeout(regionFollowSafetyTimer);
+    regionFollowResumeTimer = window.setTimeout(() => {
+      regionFollowPaused = false;
+      followViewedMapRegion();
+    }, 80);
+  };
+  map.once("moveend", onEnd);
+  regionFollowSafetyTimer = window.setTimeout(() => {
+    map.off("moveend", onEnd);
+    regionFollowPaused = false;
+  }, 2500);
+}
+
+function scheduleFollowViewedMapRegion() {
+  window.clearTimeout(regionFollowTimer);
+  regionFollowTimer = window.setTimeout(followViewedMapRegion, 160);
+}
+
+function followViewedMapRegion() {
+  if (regionFollowPaused || !map) {
+    return;
+  }
+  const viewed = viewedMapRegionId();
+  if (!viewed || viewed === state.activeRegionId) {
+    return;
+  }
+  void setActiveMapRegion(viewed, { flyToRegion: false });
+}
+
+async function buildCountryRegionsLayer(regionId = displayedCountryRegionId()) {
+  const token = ++countryRegionsBuildToken;
   try {
-    const geo = await loadCountryRegionsGeo();
+    const geo = await loadCountryRegionsGeo(regionId);
+    if (token !== countryRegionsBuildToken || displayedCountryRegionId() !== regionId) {
+      return;
+    }
     if (countryRegionsLayer) {
       map.removeLayer(countryRegionsLayer);
     }
     countryRegionsLayer = L.geoJSON(geo, {
       pane: "countryRegions",
       style: styleCountryRegion,
-      interactive: false
+      interactive: false,
+      smoothFactor: 0.25
     });
+    countryRegionsLayerRegionId = regionId;
     syncCountryRegionsLayer();
   } catch (error) {
     console.warn("Country borders not loaded:", error);
@@ -1416,10 +1641,288 @@ async function buildCountryRegionsLayer() {
 
 async function initCountryBorders() {
   try {
-    await buildCountryRegionsLayer();
+    await buildCountryRegionsLayer(state.activeRegionId);
   } catch (error) {
     console.warn("Country borders not loaded:", error);
   }
+}
+
+function refreshActiveExploreLayers() {
+  syncCountryRegionsLayer();
+  if (state.exploreCities) {
+    if (!cityCatalogLayer && cityCatalog) {
+      buildCityCatalogLayer();
+    }
+    if (cityCatalogLayer && !map.hasLayer(cityCatalogLayer)) {
+      cityCatalogLayer.addTo(map);
+    }
+    void refreshCityCatalogMarkers();
+  }
+  if (state.exploreParks) {
+    if (!parkCatalogLayer && parkCatalog) {
+      buildParkCatalogLayer();
+    }
+    if (parkCatalogLayer && !map.hasLayer(parkCatalogLayer)) {
+      parkCatalogLayer.addTo(map);
+    }
+    void refreshParkCatalogMarkers();
+  }
+  if (state.exploreHikes) {
+    if (!hikeCatalogLayer && hikeCatalog) {
+      buildHikeCatalogLayer();
+    }
+    if (hikeCatalogLayer && !map.hasLayer(hikeCatalogLayer)) {
+      hikeCatalogLayer.addTo(map);
+    }
+    void refreshHikeCatalogMarkers();
+  }
+  if (state.explorePoi) {
+    if (!poiCatalogLayer && poiCatalog) {
+      buildPoiCatalogLayer();
+    }
+    if (poiCatalogLayer && !map.hasLayer(poiCatalogLayer)) {
+      poiCatalogLayer.addTo(map);
+    }
+    void refreshPoiCatalogMarkers();
+  }
+}
+
+function clearRegionalCatalogMarkers() {
+  clearCityCatalogMarkers();
+  clearParkCatalogMarkers();
+  clearHikeCatalogMarkers();
+  clearPoiCatalogMarkers();
+  activeCityCatalogId = null;
+  activeParkCatalogId = null;
+  activeHikeCatalogId = null;
+  activePoiCatalogId = null;
+  clearActiveHikeRoute();
+}
+
+function renderRegionalMapSwitcher() {
+  const container = document.getElementById("regionalMapSwitcher");
+  if (!container) {
+    return;
+  }
+
+  container.innerHTML = Object.entries(mapRegionConfig)
+    .map(([key, item]) => {
+      const active = state.activeRegionId === key;
+      const preview = state.previewRegionId === key;
+      return `
+        <button
+          type="button"
+          class="layer-chip layer-chip--region"
+          data-region-map="${key}"
+          data-active="${String(active)}"
+          data-preview="${String(preview)}"
+          aria-pressed="${String(active)}"
+          title="${item.label} is used when this area is in view; click to fly there"
+        >${item.shortLabel || item.label}</button>
+      `;
+    })
+    .join("");
+}
+
+function syncRegionalMapSwitcherState() {
+  const container = document.getElementById("regionalMapSwitcher");
+  if (!container) {
+    return;
+  }
+  container.querySelectorAll("button[data-region-map]").forEach((button) => {
+    const regionId = button.dataset.regionMap;
+    const active = state.activeRegionId === regionId;
+    const preview = state.previewRegionId === regionId;
+    button.dataset.active = String(active);
+    button.dataset.preview = String(preview);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+function previewRegionalMap(regionId) {
+  if (!mapRegionConfig[regionId]) {
+    return;
+  }
+  state.previewRegionId = regionId;
+  mapEl?.classList.add("region-preview-on");
+  syncRegionalMapSwitcherState();
+  void buildCountryRegionsLayer(regionId);
+}
+
+function clearRegionalMapPreview(regionId = null) {
+  if (regionId && state.previewRegionId !== regionId) {
+    return;
+  }
+  if (!state.previewRegionId) {
+    return;
+  }
+  state.previewRegionId = null;
+  mapEl?.classList.remove("region-preview-on");
+  syncRegionalMapSwitcherState();
+  syncCountryRegionsLayer();
+}
+
+async function setActiveMapRegion(regionId, options = {}) {
+  const { flyToRegion = true } = options;
+  const config = mapRegionConfig[regionId];
+  if (!config) {
+    return;
+  }
+
+  const shouldFly = flyToRegion && !hasActiveJourney();
+  const alreadyLoaded = state.activeRegionId === regionId && cityCatalog?.id === regionId;
+  if (shouldFly) {
+    pauseRegionFollowForFlight();
+  }
+  if (alreadyLoaded) {
+    if (shouldFly) {
+      map.flyTo(config.center, config.zoom, { duration: 0.75 });
+    }
+    return;
+  }
+
+  const token = ++activeRegionLoadToken;
+  state.activeRegionId = regionId;
+  state.previewRegionId = null;
+  mapEl?.classList.remove("region-preview-on");
+  mapSearchCountries = [];
+  cityCountryPopStats = null;
+  cityCatalog = null;
+  hikeCatalog = null;
+  parkCatalog = null;
+  poiCatalog = null;
+  clearRegionalCatalogMarkers();
+  closeCitySearchResults();
+  renderRegionalMapSwitcher();
+  renderExploreCitiesToggle();
+  renderExploreParksToggle();
+  renderExploreHikesToggle();
+  renderExplorePoisToggle();
+  if (welcomeOverlay?.classList.contains("open")) {
+    renderWelcomeOverlay();
+  }
+  syncExploreHintRegion();
+  updateHudJourneyState();
+
+  const [nextCity, nextHike, nextPark, nextPoi] = await Promise.all([
+    loadCityRegion(regionId).catch((error) => {
+      console.warn(`${config.label} city catalog not loaded:`, error);
+      return null;
+    }),
+    loadHikeRegion(regionId).catch((error) => {
+      console.warn(`${config.label} hike catalog not loaded:`, error);
+      return null;
+    }),
+    loadParkRegion(regionId).catch((error) => {
+      console.warn(`${config.label} park catalog not loaded:`, error);
+      return null;
+    }),
+    loadPoiRegion(regionId).catch((error) => {
+      console.warn(`${config.label} POI catalog not loaded:`, error);
+      return null;
+    })
+  ]);
+
+  if (token !== activeRegionLoadToken) {
+    return;
+  }
+
+  cityCatalog = nextCity;
+  hikeCatalog = nextHike;
+  parkCatalog = nextPark;
+  poiCatalog = nextPoi;
+
+  renderExploreCitiesToggle();
+  renderExploreParksToggle();
+  renderExploreHikesToggle();
+  renderExplorePoisToggle();
+
+  if (cityCatalog) {
+    try {
+      cityCountryPopStats = await fetchCountryPopStats(cityCatalog.id);
+    } catch (error) {
+      console.warn("Country population stats not loaded:", error);
+    }
+    try {
+      mapSearchCountries = await fetchCountries(cityCatalog.id);
+    } catch (error) {
+      console.warn("Country search list not loaded:", error);
+    }
+  }
+
+  if (token !== activeRegionLoadToken) {
+    return;
+  }
+
+  await buildCountryRegionsLayer(regionId);
+  refreshActiveExploreLayers();
+  if (shouldFly) {
+    map.flyTo(config.center, config.zoom, { duration: 0.75 });
+  }
+  updateHudJourneyState();
+}
+
+function setupRegionalMapSwitcher() {
+  const container = document.getElementById("regionalMapSwitcher");
+  if (!container || container.dataset.regionsBound === "true") {
+    return;
+  }
+  container.dataset.regionsBound = "true";
+  container.addEventListener("click", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (!button) {
+      return;
+    }
+    void setActiveMapRegion(button.dataset.regionMap);
+  });
+  container.addEventListener("mouseover", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (!button || !container.contains(button)) {
+      return;
+    }
+    previewRegionalMap(button.dataset.regionMap);
+  });
+  container.addEventListener("mouseout", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (!button || button.contains(event.relatedTarget)) {
+      return;
+    }
+    clearRegionalMapPreview(button.dataset.regionMap);
+  });
+  container.addEventListener("focusin", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (button) {
+      previewRegionalMap(button.dataset.regionMap);
+    }
+  });
+  container.addEventListener("focusout", (event) => {
+    const button = event.target.closest("button[data-region-map]");
+    if (button) {
+      clearRegionalMapPreview(button.dataset.regionMap);
+    }
+  });
+  renderRegionalMapSwitcher();
+}
+
+function setupMapControlsDrawer() {
+  const drawer = document.getElementById("mapControlsDrawer");
+  const hint = document.getElementById("mapControlsHint");
+  if (!drawer || drawer.dataset.controlsBound === "true") {
+    return;
+  }
+  drawer.dataset.controlsBound = "true";
+  drawer.open = false;
+  const syncHint = () => {
+    if (hint) {
+      hint.textContent = drawer.open ? "Click to collapse" : "Click to expand";
+    }
+  };
+  drawer.addEventListener("toggle", syncHint);
+  syncHint();
+  requestAnimationFrame(() => {
+    drawer.open = false;
+    syncHint();
+  });
 }
 
 const COUNTRY_FLAG_CODES = {
@@ -1465,7 +1968,9 @@ const COUNTRY_FLAG_CODES = {
   "North Macedonia": "mk",
   Luxembourg: "lu",
   Monaco: "mc",
-  Malta: "mt"
+  Malta: "mt",
+  Australia: "au",
+  "New Zealand": "nz"
 };
 
 function countryFlagUrl(country) {
@@ -2325,6 +2830,47 @@ const TOUCH_HIT_BUMP = (() => {
   }
 })();
 
+function catalogMarkerMinPx(zoom = map.getZoom()) {
+  if (zoom <= 5) {
+    return 24;
+  }
+  if (zoom <= 7) {
+    return 16;
+  }
+  if (zoom <= 9) {
+    return 12;
+  }
+  return 0;
+}
+
+function catalogMarkerOverlaps(lat, lng, ignoreId = "") {
+  const minPx = catalogMarkerMinPx();
+  if (minPx <= 0 || !map) {
+    return false;
+  }
+  const point = map.latLngToContainerPoint([lat, lng]);
+  const groups = [
+    cityCatalogMarkersInView,
+    parkCatalogMarkersInView,
+    hikeCatalogMarkersInView,
+    poiCatalogMarkersInView,
+  ];
+  for (const group of groups) {
+    if (!group) {
+      continue;
+    }
+    for (const [id, marker] of group) {
+      if (id === ignoreId || !marker?.getLatLng) {
+        continue;
+      }
+      if (point.distanceTo(map.latLngToContainerPoint(marker.getLatLng())) < minPx) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
+
 function cityCatalogRadius(tier) {
   if (tier === "major") {
     return 7 + TOUCH_HIT_BUMP;
@@ -2451,7 +2997,7 @@ function cityCatalogPopupHtml(props, details) {
             resolved.locale || props.locale
           )
         )}</span>
-        <button type="button" class="popup-story-btn" data-place-story data-place-title="${escapeHtml(title)}">
+        <button type="button" class="popup-story-btn" data-marker-action data-marker-kind="city" data-marker-id="${escapeAttr(cityId)}">
           View city${photoCount > 0 ? ` · ${photoCount} photos` : ""}
         </button>
       </div>
@@ -2780,12 +3326,12 @@ function scheduleCitySearch(query) {
   setCitySearchLoading(true);
   citySearchDebounceTimer = window.setTimeout(async () => {
     const fetchId = ++citySearchFetchId;
-    const regionId = cityCatalog?.id || "europe";
+    const regionId = cityCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
 
     try {
-      const hikeRegionId = hikeCatalog?.id || "europe";
-      const parkRegionId = parkCatalog?.id || "europe";
-      const poiRegionId = poiCatalog?.id || "europe";
+      const hikeRegionId = hikeCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
+      const parkRegionId = parkCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
+      const poiRegionId = poiCatalog?.id || state.activeRegionId || DEFAULT_REGION_ID;
       const [placeResults, parkHits, hikeHits, poiHits] = await Promise.all([
         searchPlaces(trimmed, {
           regionId,
@@ -3389,6 +3935,32 @@ function createCityCatalogMarker(props, lat, lng) {
   return marker;
 }
 
+async function openCityFromMarker(marker) {
+  const props = marker?._cityProps;
+  if (!props?.id || marker._cityOpening) {
+    return;
+  }
+
+  marker._cityOpening = true;
+  activeCityCatalogId = props.id;
+  map.closePopup();
+  closeHikeStory();
+
+  try {
+    let details = marker._cityDetails;
+    if (!details) {
+      details = await fetchCityById(props.id, props);
+      marker._cityDetails = details;
+    }
+    await openPlaceStory(details.name || props.name, { kind: "city", ...details });
+  } catch (error) {
+    console.warn("City detail fetch failed:", error);
+    await openPlaceStory(props.name, { kind: "city", ...props });
+  } finally {
+    marker._cityOpening = false;
+  }
+}
+
 function replaceCityCatalogMarker(props, lat, lng) {
   const id = props.id;
   const existing = cityCatalogMarkersInView.get(id);
@@ -3435,17 +4007,38 @@ async function refreshCityCatalogMarkers() {
   }
 
   const visibleIds = new Set();
-  const features = geojson?.features || [];
+  const features = [...(geojson?.features || [])].sort((a, b) => {
+    const rank = (props) => {
+      const cat = String(props.category || "").toLowerCase();
+      const tier = String(props.tier || "").toLowerCase();
+      if (cat === "capital" || tier === "major") {
+        return 0;
+      }
+      if (cityHasDeepDiveStory(props)) {
+        return 1;
+      }
+      return 2;
+    };
+    return rank(a.properties || {}) - rank(b.properties || {});
+  });
 
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    const hasStory = cityHasDeepDiveStory(props);
+    const keepAtOverview =
+      String(props.category || "").toLowerCase() === "capital" ||
+      String(props.tier || "").toLowerCase() === "major";
+    const hidePassive = !hasStory && !keepAtOverview && zoom < 9;
+    const skipOverlap = !hasStory && !keepAtOverview && catalogMarkerOverlaps(lat, lng, props.id);
+    if (hidePassive || skipOverlap) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
     const existing = cityCatalogMarkersInView.get(props.id);
     const hadStory = existing ? cityHasDeepDiveStory(existing._cityProps) : null;
-    const hasStory = cityHasDeepDiveStory(props);
 
     if (!existing) {
       replaceCityCatalogMarker(props, lat, lng);
@@ -3477,7 +4070,7 @@ function scheduleCityCatalogRefresh() {
   clearTimeout(cityCatalogRefreshTimer);
   cityCatalogRefreshTimer = setTimeout(() => {
     refreshCityCatalogMarkers();
-  }, 120);
+  }, 40);
 }
 
 function bindExploreCatalogMapEvents() {
@@ -3489,8 +4082,8 @@ function bindExploreCatalogMapEvents() {
     syncCountryRegionsLayer();
     scheduleCityCatalogRefresh();
     scheduleParkCatalogRefresh();
-    schedulePoiCatalogRefresh();
     scheduleHikeCatalogRefresh();
+    schedulePoiCatalogRefresh();
   });
 }
 
@@ -3603,6 +4196,8 @@ function renderExploreCitiesToggle() {
 
   const count = cityCatalog?.count || 0;
   const active = state.exploreCities === true;
+  const disabled = !cityCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -3610,7 +4205,8 @@ function renderExploreCitiesToggle() {
       class="layer-chip layer-chip--explore"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Show European city markers on the map"
+      ${disabled ? "disabled" : ""}
+      title="Show ${escapeAttr(regionLabel)} city markers on the map"
     >Cities${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExploreCitiesUi();
@@ -3632,7 +4228,7 @@ function setupExploreCitiesToggle() {
 
 async function initCityCatalog() {
   try {
-    cityCatalog = await loadCityRegion("europe");
+    cityCatalog = await loadCityRegion(state.activeRegionId);
     renderExploreCitiesToggle();
     await initCountryBorders();
     try {
@@ -3978,7 +4574,7 @@ function openHikeStory(detail, props = {}) {
   const title = resolved.name || props.name || "Trail";
   const country = resolved.country || props.country || "";
   const difficulty = formatHikeDifficultyLabel(resolved.difficulty || props.difficulty);
-  const summary = resolved.summary || resolved.tagline || props.tagline || "European hiking route from OpenStreetMap.";
+  const summary = resolved.summary || resolved.tagline || props.tagline || `${activeRegionLabel()} hiking route from OpenStreetMap.`;
 
   hikeStoryCloseGeneration += 1;
   if (hikeStoryCloseTimer) {
@@ -4030,7 +4626,7 @@ function openHikeStory(detail, props = {}) {
     tipsEl.innerHTML = buildHikeTipsHtml(resolved);
   }
   if (countryEl) {
-    countryEl.textContent = country || "Europe";
+    countryEl.textContent = country || activeRegionLabel();
   }
   if (creditEl) {
     creditEl.textContent = `Route geometry: ${resolved.source || "OpenStreetMap"}. Always verify conditions locally.`;
@@ -4210,6 +4806,34 @@ function clearActiveHikeRoute() {
   mapEl?.classList.remove("hike-route-visible");
 }
 
+function hikeGeometryEndpoints(geometry) {
+  if (!geometry) {
+    return { start: null, end: null };
+  }
+  if (geometry.type === "LineString" && geometry.coordinates?.length >= 2) {
+    const first = geometry.coordinates[0];
+    const last = geometry.coordinates[geometry.coordinates.length - 1];
+    return {
+      start: L.latLng(first[1], first[0]),
+      end: L.latLng(last[1], last[0])
+    };
+  }
+  if (geometry.type === "MultiLineString" && Array.isArray(geometry.coordinates)) {
+    const chains = geometry.coordinates.filter((ring) => ring?.length >= 2);
+    if (!chains.length) {
+      return { start: null, end: null };
+    }
+    const first = chains[0][0];
+    const lastChain = chains[chains.length - 1];
+    const last = lastChain[lastChain.length - 1];
+    return {
+      start: L.latLng(first[1], first[0]),
+      end: L.latLng(last[1], last[0])
+    };
+  }
+  return { start: null, end: null };
+}
+
 function createHikeEndpointMarker(role, latlng, label) {
   const isStart = role === "start";
   const fillColor = isStart ? "#15803d" : "#9a3412";
@@ -4217,9 +4841,7 @@ function createHikeEndpointMarker(role, latlng, label) {
   const icon = L.divIcon({
     className: `hike-endpoint hike-endpoint-${role}`,
     html:
-      `<span class="hike-endpoint__dot" style="--ring:${ringColor};--fill:${fillColor}">` +
-      `<span class="hike-endpoint__label">${role === "start" ? "Start" : "Finish"}</span>` +
-      `</span>`,
+      `<span class="hike-endpoint__dot" style="--ring:${ringColor};--fill:${fillColor}"></span>`,
     iconSize: [22, 22],
     iconAnchor: [11, 11]
   });
@@ -4230,9 +4852,8 @@ function createHikeEndpointMarker(role, latlng, label) {
     zIndexOffset: isStart ? 1000 : 900,
     interactive: true
   });
-  if (label) {
-    marker.bindTooltip(label, { direction: "top", offset: [0, -10], opacity: 0.95 });
-  }
+  const tip = `${isStart ? "Start" : "Finish"}${label ? ` · ${label}` : ""}`;
+  marker.bindTooltip(tip, { direction: "top", offset: [0, -10], opacity: 0.95 });
   return marker;
 }
 
@@ -4292,28 +4913,37 @@ async function showActiveHikeRoute(detail) {
   activeHikeRouteGlowLayer.addTo(map);
   activeHikeRouteLayer.addTo(map);
 
+  const lineEnds = hikeGeometryEndpoints(geometry);
+  const startLatLng = lineEnds.start || (
+    Number.isFinite(detail?.start?.lat) && Number.isFinite(detail?.start?.lng)
+      ? L.latLng(detail.start.lat, detail.start.lng)
+      : null
+  );
+  const endLatLng = lineEnds.end || (
+    Number.isFinite(detail?.end?.lat) && Number.isFinite(detail?.end?.lng)
+      ? L.latLng(detail.end.lat, detail.end.lng)
+      : null
+  );
+
   const endpoints = [];
-  if (Number.isFinite(detail?.start?.lat) && Number.isFinite(detail?.start?.lng)) {
+  if (startLatLng) {
     endpoints.push(
       createHikeEndpointMarker(
         "start",
-        L.latLng(detail.start.lat, detail.start.lng),
-        detail.start.name ? `Start: ${detail.start.name}` : "Trailhead"
+        startLatLng,
+        detail.start?.name ? `Start: ${detail.start.name}` : "Trailhead"
       )
     );
   }
   if (
-    Number.isFinite(detail?.end?.lat) &&
-    Number.isFinite(detail?.end?.lng) &&
-    (!detail.start ||
-      detail.end.lat !== detail.start.lat ||
-      detail.end.lng !== detail.start.lng)
+    endLatLng &&
+    (!startLatLng || startLatLng.distanceTo(endLatLng) > 40)
   ) {
     endpoints.push(
       createHikeEndpointMarker(
         "end",
-        L.latLng(detail.end.lat, detail.end.lng),
-        detail.end.name ? `Finish: ${detail.end.name}` : "Trail end"
+        endLatLng,
+        detail.end?.name ? `Finish: ${detail.end.name}` : "Trail end"
       )
     );
   }
@@ -4389,6 +5019,9 @@ async function refreshHikeCatalogMarkers() {
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    if (props.id !== activeHikeCatalogId && catalogMarkerOverlaps(lat, lng, props.id)) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
@@ -4420,7 +5053,7 @@ function scheduleHikeCatalogRefresh() {
   clearTimeout(hikeCatalogRefreshTimer);
   hikeCatalogRefreshTimer = setTimeout(() => {
     refreshHikeCatalogMarkers();
-  }, 120);
+  }, 220);
 }
 
 function clearHikeCatalogMarkers() {
@@ -4563,6 +5196,9 @@ async function refreshParkCatalogMarkers() {
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    if (props.id !== activeParkCatalogId && catalogMarkerOverlaps(lat, lng, props.id)) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
@@ -4598,7 +5234,7 @@ function scheduleParkCatalogRefresh() {
   clearTimeout(parkCatalogRefreshTimer);
   parkCatalogRefreshTimer = setTimeout(() => {
     refreshParkCatalogMarkers();
-  }, 120);
+  }, 160);
 }
 
 function clearParkCatalogMarkers() {
@@ -4682,6 +5318,8 @@ function renderExploreParksToggle() {
 
   const count = parkCatalog?.count || 0;
   const active = state.exploreParks === true;
+  const disabled = !parkCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -4689,7 +5327,8 @@ function renderExploreParksToggle() {
       class="layer-chip layer-chip--parks"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Show European national parks — tap for photos, biodiversity, and visitor tips"
+      ${disabled ? "disabled" : ""}
+      title="Show ${escapeAttr(regionLabel)} national parks — tap for photos, biodiversity, and visitor tips"
     >Parks${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExploreParksUi();
@@ -4711,7 +5350,7 @@ function setupExploreParksToggle() {
 
 async function initParkCatalog() {
   try {
-    parkCatalog = await loadParkRegion("europe");
+    parkCatalog = await loadParkRegion(state.activeRegionId);
     renderExploreParksToggle();
   } catch (error) {
     console.warn("Park catalog not loaded:", error);
@@ -4837,6 +5476,9 @@ async function refreshPoiCatalogMarkers() {
   features.forEach((feature) => {
     const props = feature.properties || {};
     const [lng, lat] = feature.geometry.coordinates;
+    if (props.id !== activePoiCatalogId && catalogMarkerOverlaps(lat, lng, props.id)) {
+      return;
+    }
 
     visibleIds.add(props.id);
 
@@ -4872,7 +5514,7 @@ function schedulePoiCatalogRefresh() {
   clearTimeout(poiCatalogRefreshTimer);
   poiCatalogRefreshTimer = setTimeout(() => {
     refreshPoiCatalogMarkers();
-  }, 120);
+  }, 280);
 }
 
 function clearPoiCatalogMarkers() {
@@ -4956,6 +5598,8 @@ function renderExplorePoisToggle() {
 
   const count = poiCatalog?.count || 0;
   const active = state.explorePoi === true;
+  const disabled = !poiCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -4963,7 +5607,8 @@ function renderExplorePoisToggle() {
       class="layer-chip layer-chip--poi"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Historic sites, fortresses, famous mountains, and landmarks — purple markers"
+      ${disabled ? "disabled" : ""}
+      title="${escapeAttr(regionLabel)} historic sites, famous mountains, and landmarks — purple markers"
     >Landmarks${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExplorePoiUi();
@@ -4985,7 +5630,7 @@ function setupExplorePoisToggle() {
 
 async function initPoiCatalog() {
   try {
-    poiCatalog = await loadPoiRegion("europe");
+    poiCatalog = await loadPoiRegion(state.activeRegionId);
     renderExplorePoisToggle();
   } catch (error) {
     console.warn("POI catalog not loaded:", error);
@@ -5095,6 +5740,8 @@ function renderExploreHikesToggle() {
 
   const count = hikeCatalog?.count || 0;
   const active = state.exploreHikes === true;
+  const disabled = !hikeCatalog;
+  const regionLabel = activeRegionLabel();
   container.innerHTML = `
     <button
       type="button"
@@ -5102,7 +5749,8 @@ function renderExploreHikesToggle() {
       class="layer-chip layer-chip--hikes"
       data-active="${String(active)}"
       aria-pressed="${String(active)}"
-      title="Show European hiking trails — tap for route and trail details"
+      ${disabled ? "disabled" : ""}
+      title="Show ${escapeAttr(regionLabel)} hiking trails — tap for route and trail details"
     >Trails${count ? ` (${count.toLocaleString()})` : ""}</button>
   `;
   updateExploreHikesUi();
@@ -5124,7 +5772,7 @@ function setupExploreHikesToggle() {
 
 async function initHikeCatalog() {
   try {
-    hikeCatalog = await loadHikeRegion("europe");
+    hikeCatalog = await loadHikeRegion(state.activeRegionId);
     renderExploreHikesToggle();
   } catch (error) {
     console.warn("Hike catalog not loaded:", error);
@@ -5235,8 +5883,9 @@ function setOverlay(key, enabled) {
 }
 
 function setBasemap(key) {
-  const layer = basemapLayers[key];
-  if (!layer) {
+  const nextIsVector = isVectorBasemap(key);
+  const rasterLayer = rasterBasemapLayers[key];
+  if (!nextIsVector && !rasterLayer) {
     return;
   }
 
@@ -5246,13 +5895,31 @@ function setBasemap(key) {
 
   mapEl?.classList.add("basemap-transitioning");
 
-  if (activeBasemapLayer && map.hasLayer(activeBasemapLayer)) {
-    map.removeLayer(activeBasemapLayer);
-  }
+  if (
+    nextIsVector &&
+    vectorBasemapLayer &&
+    activeBasemapLayer === vectorBasemapLayer &&
+    map.hasLayer(vectorBasemapLayer)
+  ) {
+    const glMap = vectorBasemapLayer.getMaplibreMap?.();
+    if (glMap) {
+      glMap.setStyle(OPENFREEMAP_STYLES[key]);
+    }
+  } else {
+    if (activeBasemapLayer && map.hasLayer(activeBasemapLayer)) {
+      map.removeLayer(activeBasemapLayer);
+    }
 
-  activeBasemapLayer = layer;
-  layer.addTo(map);
-  layer.bringToBack();
+    if (nextIsVector) {
+      vectorBasemapLayer = createOpenFreeMapLayer(OPENFREEMAP_STYLES[key]);
+      vectorBasemapLayer.addTo(map);
+      activeBasemapLayer = vectorBasemapLayer;
+    } else {
+      activeBasemapLayer = rasterLayer;
+      rasterLayer.addTo(map);
+      rasterLayer.bringToBack();
+    }
+  }
 
   state.basemap = key;
   applyBasemapClass(key);
@@ -6215,6 +6882,7 @@ function setupMapPopups() {
       const kind = previewBtn.dataset.markerKind;
       const id = previewBtn.dataset.markerId;
       const lookup = {
+        city: cityCatalogMarkersInView,
         hike: hikeCatalogMarkersInView,
         park: parkCatalogMarkersInView,
         poi: poiCatalogMarkersInView
@@ -6224,7 +6892,9 @@ function setupMapPopups() {
       catalogPreviewTransitioning = true;
       map.closePopup();
       catalogPreviewTransitioning = false;
-      if (kind === "hike") {
+      if (kind === "city") {
+        void openCityFromMarker(marker);
+      } else if (kind === "hike") {
         void openHikeFromMarker(marker);
       } else if (kind === "park") {
         void openParkFromMarker(marker);
@@ -6832,13 +7502,20 @@ function setPanelCollapsed(collapsed) {
   }
 
   panelCollapsed = collapsed;
-  // On phones the panel never fully hides — it just toggles between peek and
-  // expanded modes so the bottom sheet stays accessible above the bottom nav.
+  // On phones a loaded journey stays as a peek/expanded sheet. An empty
+  // panel hides so it cannot cover the map or the explore hint.
   if (typeof phoneMq === "function" && phoneMq()) {
-    itineraryPanel.classList.remove("collapsed");
-    itineraryPanel.classList.toggle("is-peek", collapsed);
-    itineraryPanel.classList.toggle("is-expanded", !collapsed);
-    panelCollapsed = false;
+    const hideEmpty = collapsed && !hasActiveJourney();
+    if (hideEmpty) {
+      itineraryPanel.classList.add("collapsed");
+      itineraryPanel.classList.remove("is-peek", "is-expanded");
+      panelCollapsed = true;
+    } else {
+      itineraryPanel.classList.remove("collapsed");
+      itineraryPanel.classList.toggle("is-peek", collapsed);
+      itineraryPanel.classList.toggle("is-expanded", !collapsed);
+      panelCollapsed = false;
+    }
   } else {
     itineraryPanel.classList.remove("is-peek", "is-expanded");
     itineraryPanel.classList.toggle("collapsed", collapsed);
@@ -6890,7 +7567,7 @@ function updateLayoutInsets() {
   let mapHintOffset = 0;
   if (mapHintVisible) {
     const hintRect = mapHintBar.getBoundingClientRect();
-    mapHintOffset = Math.ceil(hintRect.height + 12);
+    mapHintOffset = Math.ceil(hintRect.height + 10);
     stage.style.setProperty("--layout-map-hint", `${mapHintOffset}px`);
   } else {
     stage.style.setProperty("--layout-map-hint", "0px");
@@ -6898,7 +7575,7 @@ function updateLayoutInsets() {
 
   const narrow = window.innerWidth <= 980;
   const phone = window.innerWidth <= 640;
-  let leafletBottom = 12 + mapHintOffset;
+  let leafletBottom = 12;
 
   if (phone) {
     // Phones: leaflet bottom controls sit above the bottom nav AND above the
@@ -7108,8 +7785,14 @@ function syncMobilePanelMode() {
     panel.classList.remove("is-peek", "is-expanded");
     return;
   }
-  // On phones we always keep the panel visible (no more `.collapsed`) — it
-  // just toggles between peek and expanded.
+  if (!hasActiveJourney()) {
+    panel.classList.add("collapsed");
+    panel.classList.remove("is-peek", "is-expanded");
+    panelCollapsed = true;
+    syncStoryPanelLayout();
+    updateMobileBottomNavActive();
+    return;
+  }
   panel.classList.remove("collapsed");
   panelCollapsed = false;
   if (!panel.classList.contains("is-expanded") && !panel.classList.contains("is-peek")) {
@@ -7161,9 +7844,15 @@ function setupMobileBottomNav() {
 function handleMobileNavAction(action) {
   switch (action) {
     case "map": {
-      // Collapse the bottom sheet to peek so the map is fully visible.
-      setMobilePanelMode("peek");
-      // Also close any open sheet/overlay so the user sees only the map.
+      const panel = document.getElementById("itineraryPanel");
+      if (hasActiveJourney()) {
+        setMobilePanelMode("peek");
+      } else {
+        panel?.classList.add("collapsed");
+        panel?.classList.remove("is-peek", "is-expanded");
+        panelCollapsed = true;
+        requestAnimationFrame(updateLayoutInsets);
+      }
       closeMobileControlsSheet();
       break;
     }
@@ -7297,7 +7986,8 @@ async function initializeTrips() {
   }
 
   const manifest = await response.json();
-  state.trips = [...rehydrateImportedTrips(), ...tagSampleTrips(manifest.trips || [])];
+  const mappedSamples = (manifest.trips || []).filter((trip) => mapRegionConfig[trip.continent]);
+  state.trips = [...rehydrateImportedTrips(), ...tagSampleTrips(mappedSamples)];
   updateJourneysMenuHint();
 
   state.selectedTrip = null;
@@ -7319,6 +8009,20 @@ function setupWelcomeAndExplore() {
   document.getElementById("welcomeJourneysBtn")?.addEventListener("click", () => {
     dismissWelcomeOverlay();
     openTripOverlay();
+  });
+
+  welcomeOverlay?.addEventListener("click", (event) => {
+    const regionBtn = event.target.closest("[data-welcome-region]");
+    if (regionBtn) {
+      void setActiveMapRegion(regionBtn.dataset.welcomeRegion);
+      renderWelcomeOverlay();
+      return;
+    }
+
+    const tripBtn = event.target.closest("[data-welcome-trip]");
+    if (tripBtn) {
+      void loadTrip(tripBtn.dataset.welcomeTrip);
+    }
   });
 
   welcomeOverlay?.querySelectorAll("[data-welcome-dismiss]").forEach((el) => {
@@ -7353,7 +8057,7 @@ function setupWelcomeAndExplore() {
       syncExploreHudButton();
       return;
     }
-    enterExploreMode({ dismissWelcome: true, flyToEurope: !hasActiveJourney() });
+    enterExploreMode({ dismissWelcome: true, flyToRegion: !hasActiveJourney() });
   });
 
   setupMapHintBar();
@@ -7376,6 +8080,12 @@ function setupWelcomeAndExplore() {
 
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) {
+    return;
+  }
+  if (import.meta.env.DEV) {
+    navigator.serviceWorker.getRegistrations().then((registrations) => {
+      registrations.forEach((registration) => registration.unregister());
+    }).catch(() => {});
     return;
   }
   if (window.location.protocol !== "https:" && window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1") {
@@ -8938,12 +9648,13 @@ async function runBuilderSearch(query) {
     return;
   }
   const token = ++builderState.searchToken;
+  const regionId = state.activeRegionId || DEFAULT_REGION_ID;
   try {
     const [cityHits, parkHits, hikeHits, poiHits] = await Promise.all([
-      searchPlaces(trimmed, { regionId: "europe", countries: mapSearchCountries, cityLimit: 6, countryLimit: 0 }).catch(() => []),
-      searchParks(trimmed, { regionId: "europe", limit: 4 }).catch(() => []),
-      searchHikes(trimmed, { regionId: "europe", limit: 4 }).catch(() => []),
-      searchPois(trimmed, { regionId: "europe", limit: 4 }).catch(() => []),
+      searchPlaces(trimmed, { regionId, countries: mapSearchCountries, cityLimit: 6, countryLimit: 0 }).catch(() => []),
+      searchParks(trimmed, { regionId, limit: 4 }).catch(() => []),
+      searchHikes(trimmed, { regionId, limit: 4 }).catch(() => []),
+      searchPois(trimmed, { regionId, limit: 4 }).catch(() => []),
     ]);
     if (token !== builderState.searchToken) return;
     const placeRows = (cityHits || [])
@@ -9139,7 +9850,7 @@ async function mintBuilderJourney() {
     author: document.getElementById("builderAuthor")?.value || "",
     days: Number(document.getElementById("builderDays")?.value || builderState.stops.length),
     emoji: "🧭",
-    continent: "europe",
+    continent: state.activeRegionId || DEFAULT_REGION_ID,
     stops: builderState.stops,
     highlights: builderState.stops.slice(0, 4).map((stop) =>
       [stop.name, stop.country].filter(Boolean).join(", ")
@@ -9323,6 +10034,9 @@ function renderMintedJourneys() {
 
 function setupFilters() {
   setupMapLayers();
+  setupMapControlsDrawer();
+  setupRegionalMapSwitcher();
+  bindRegionalMapViewEvents();
   renderBasemapSwitcher();
   renderOverlaySwitcher();
   setupExploreCitiesToggle();

@@ -1,0 +1,555 @@
+{
+  "overland-track-au": {
+    "source": "osm",
+    "note": "ways:Overland Track:73.6km/1008pts",
+    "points": 1008,
+    "km": 73.61,
+    "osm_id": 7765182
+  },
+  "routeburn-track-nz": {
+    "source": "osm",
+    "note": "relation:1385139:30.4km",
+    "points": 974,
+    "km": 30.36,
+    "osm_id": 1385139
+  },
+  "dove-lake-circuit-au": {
+    "source": "osm",
+    "note": "ways:Dove Lake Circuit:5.6km/213pts",
+    "points": 213,
+    "km": 5.61,
+    "osm_id": null
+  },
+  "mount-kosciuszko-summit-walk-au": {
+    "source": "osm",
+    "note": "relation:3838572:9.3km",
+    "points": 183,
+    "km": 9.26,
+    "osm_id": 3838572
+  },
+  "mount-ngungun-summit-walk-au": {
+    "source": "osm",
+    "note": "relation:11601491:1.5km",
+    "points": 83,
+    "km": 1.52,
+    "osm_id": 11601491
+  },
+  "larapinta-trail-au": {
+    "source": "osm",
+    "note": "ways:Larapinta Trail:140.5km/903pts",
+    "points": 903,
+    "km": 140.47,
+    "osm_id": null
+  },
+  "cape-to-cape-track-au": {
+    "source": "osm",
+    "note": "relation:401769:62.5km",
+    "points": 1002,
+    "km": 62.48,
+    "osm_id": 401769
+  },
+  "great-ocean-walk-au": {
+    "source": "osm",
+    "note": "relation:1951913:91.3km",
+    "points": 960,
+    "km": 91.35,
+    "osm_id": 1951913
+  },
+  "six-foot-track-au": {
+    "source": "osm",
+    "note": "relation:3735948:44.5km",
+    "points": 1734,
+    "km": 44.46,
+    "osm_id": 3735948
+  },
+  "milford-track-nz": {
+    "source": "osm",
+    "note": "relation:1385121:51.9km",
+    "points": 1019,
+    "km": 51.9,
+    "osm_id": 1385121
+  },
+  "tongariro-alpine-crossing-nz": {
+    "source": "osm",
+    "note": "relation:104369:19.4km",
+    "points": 1157,
+    "km": 19.37,
+    "osm_id": 104369
+  },
+  "abel-tasman-coast-track-nz": {
+    "source": "osm",
+    "note": "relation:5987159:37.5km",
+    "points": 1207,
+    "km": 37.52,
+    "osm_id": 5987159
+  },
+  "kepler-track-nz": {
+    "source": "osm",
+    "note": "relation:1385141:62.8km",
+    "points": 1056,
+    "km": 62.85,
+    "osm_id": 1385141
+  },
+  "hooker-valley-track-nz": {
+    "source": "osm",
+    "note": "relation:6204716:7.9km",
+    "points": 935,
+    "km": 7.93,
+    "osm_id": 6204716
+  },
+  "three-capes-track-au": {
+    "source": "osm",
+    "note": "relation:5693084:41.1km",
+    "points": 1089,
+    "km": 41.11,
+    "osm_id": 5693084
+  },
+  "bibbulmun-track-au": {
+    "source": "osm",
+    "note": "relation:400098:780.3km",
+    "points": 909,
+    "km": 780.33,
+    "osm_id": 400098
+  },
+  "heysen-trail-au": {
+    "source": "osm",
+    "note": "relation:124080:572.6km",
+    "points": 908,
+    "km": 572.65,
+    "osm_id": 124080
+  },
+  "australian-alps-walking-track-au": {
+    "source": "osm",
+    "note": "relation:1644959:602.1km",
+    "points": 939,
+    "km": 602.11,
+    "osm_id": 1644959
+  },
+  "jatbula-trail-au": {
+    "source": "osm",
+    "note": "ways:Jatbula Trail:52.1km/1443pts",
+    "points": 1443,
+    "km": 52.12,
+    "osm_id": null
+  },
+  "thorsborne-trail-au": {
+    "source": "osm",
+    "note": "relation:19347052:28.8km",
+    "points": 444,
+    "km": 28.76,
+    "osm_id": 19347052
+  },
+  "kosciuszko-main-range-walk-au": {
+    "source": "osm",
+    "note": "relation:3838571:19.9km",
+    "points": 519,
+    "km": 19.92,
+    "osm_id": 3838571
+  },
+  "wineglass-bay-lookout-track-au": {
+    "source": "osm",
+    "note": "ways:Wineglass Bay Lookout:2.0km/127pts",
+    "points": 127,
+    "km": 2.04,
+    "osm_id": null
+  },
+  "bondi-to-coogee-walk-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 21,
+    "km": 4.12,
+    "osm_id": null
+  },
+  "royal-national-park-coast-track-au": {
+    "source": "osm",
+    "note": "relation:4609482:25.3km",
+    "points": 1443,
+    "km": 25.27,
+    "osm_id": 4609482
+  },
+  "blue-mountains-grand-canyon-walk-au": {
+    "source": "osm",
+    "note": "ways:Grand Canyon:5.7km/284pts",
+    "points": 284,
+    "km": 5.69,
+    "osm_id": null
+  },
+  "cape-byron-walking-track-au": {
+    "source": "osm",
+    "note": "ways:Cape Byron Walking Track:1.9km/110pts",
+    "points": 110,
+    "km": 1.91,
+    "osm_id": null
+  },
+  "grampians-peaks-trail-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 250,
+    "km": 54.47,
+    "osm_id": null
+  },
+  "wilsons-prom-southern-circuit-au": {
+    "source": "osm",
+    "note": "relation:12307018:33.9km",
+    "points": 1207,
+    "km": 33.89,
+    "osm_id": 12307018
+  },
+  "light-to-light-walk-au": {
+    "source": "osm",
+    "note": "relation:15102193:29.5km",
+    "points": 1536,
+    "km": 29.46,
+    "osm_id": 15102193
+  },
+  "pinnacle-walk-grampians-au": {
+    "source": "osm",
+    "note": "ways:Pinnacle:5.4km/305pts",
+    "points": 305,
+    "km": 5.43,
+    "osm_id": null
+  },
+  "mount-gower-track-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 20,
+    "km": 3.98,
+    "osm_id": null
+  },
+  "kings-canyon-rim-walk-au": {
+    "source": "osm",
+    "note": "relation:13434586:4.9km",
+    "points": 273,
+    "km": 4.87,
+    "osm_id": 13434586
+  },
+  "fortescue-falls-loop-au": {
+    "source": "osm",
+    "note": "ways:Dales Gorge:2.6km/84pts",
+    "points": 84,
+    "km": 2.64,
+    "osm_id": null
+  },
+  "cape-otway-lightstation-walk-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 6,
+    "km": 0.76,
+    "osm_id": null
+  },
+  "fitzroy-falls-east-rim-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 10,
+    "km": 1.78,
+    "osm_id": null
+  },
+  "lamington-border-track-au": {
+    "source": "osm",
+    "note": "ways:Border Track:20.8km/678pts",
+    "points": 678,
+    "km": 20.84,
+    "osm_id": null
+  },
+  "toolona-creek-circuit-au": {
+    "source": "osm",
+    "note": "ways:Toolona Creek Circuit:10.0km/267pts",
+    "points": 267,
+    "km": 10.0,
+    "osm_id": null
+  },
+  "mount-warning-wollumbin-au": {
+    "source": "osm",
+    "note": "ways:Wollumbin:5.0km/110pts",
+    "points": 110,
+    "km": 5.01,
+    "osm_id": null
+  },
+  "frenchman-peak-au": {
+    "source": "osm",
+    "note": "ways:Frenchman Peak:1.2km/61pts",
+    "points": 61,
+    "km": 1.21,
+    "osm_id": null
+  },
+  "bluff-knoll-walk-au": {
+    "source": "osm",
+    "note": "ways:Bluff Knoll:3.2km/172pts",
+    "points": 172,
+    "km": 3.16,
+    "osm_id": null
+  },
+  "mount-field-tarn-shelf-au": {
+    "source": "osm",
+    "note": "ways:Tarn Shelf Track:6.6km/160pts",
+    "points": 160,
+    "km": 6.6,
+    "osm_id": null
+  },
+  "russell-falls-walk-au": {
+    "source": "osm",
+    "note": "ways:Russell Falls:1.4km/45pts",
+    "points": 45,
+    "km": 1.41,
+    "osm_id": null
+  },
+  "spit-bridge-to-manly-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 19,
+    "km": 3.67,
+    "osm_id": null
+  },
+  "manly-scenic-walkway-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 17,
+    "km": 3.18,
+    "osm_id": null
+  },
+  "cape-hauy-track-au": {
+    "source": "osm",
+    "note": "ways:Cape Hauy:5.0km/268pts",
+    "points": 268,
+    "km": 5.05,
+    "osm_id": null
+  },
+  "hinchinbrook-lookout-walk-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 4,
+    "km": 0.57,
+    "osm_id": null
+  },
+  "mount-tibrogargan-summit-walk-au": {
+    "source": "osm",
+    "note": "relation:11601490:3.6km",
+    "points": 205,
+    "km": 3.58,
+    "osm_id": 11601490
+  },
+  "mount-beerwah-walk-au": {
+    "source": "osm",
+    "note": "ways:Mount Beerwah:1.3km/18pts",
+    "points": 18,
+    "km": 1.32,
+    "osm_id": null
+  },
+  "tibrogargan-circuit-au": {
+    "source": "osm",
+    "note": "relation:11601490:4.1km",
+    "points": 206,
+    "km": 4.11,
+    "osm_id": 11601490
+  },
+  "kondalilla-falls-circuit-au": {
+    "source": "osm",
+    "note": "relation:11601493:4.0km",
+    "points": 214,
+    "km": 4.02,
+    "osm_id": 11601493
+  },
+  "mount-coolum-summit-walk-au": {
+    "source": "osm",
+    "note": "ways:Mount Coolum Summit Walk:0.9km/167pts",
+    "points": 167,
+    "km": 0.95,
+    "osm_id": null
+  },
+  "mount-tinbeerwah-lookout-walk-au": {
+    "source": "osm",
+    "note": "ways:Mount Tinbeerwah Lookout Walk:0.5km/29pts",
+    "points": 29,
+    "km": 0.48,
+    "osm_id": null
+  },
+  "mount-cooroora-summit-walk-au": {
+    "source": "osm",
+    "note": "ways:Cooroora:1.3km/83pts",
+    "points": 83,
+    "km": 1.27,
+    "osm_id": null
+  },
+  "mount-barney-south-ridge-au": {
+    "source": "osm",
+    "note": "ways:South Ridge:3.5km/125pts",
+    "points": 125,
+    "km": 3.46,
+    "osm_id": null
+  },
+  "bartle-frere-west-summit-au": {
+    "source": "osm",
+    "note": "ways:Bartle Frere:15.0km/443pts",
+    "points": 443,
+    "km": 15.03,
+    "osm_id": null
+  },
+  "walshs-pyramid-walk-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 14,
+    "km": 2.36,
+    "osm_id": null
+  },
+  "mount-coot-tha-summit-track-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 4,
+    "km": 0.45,
+    "osm_id": null
+  },
+  "mount-feathertop-bungalow-spur-au": {
+    "source": "osm",
+    "note": "ways:Bungalow Spur:9.2km/382pts",
+    "points": 382,
+    "km": 9.23,
+    "osm_id": null
+  },
+  "mount-bogong-staircase-spur-au": {
+    "source": "osm",
+    "note": "ways:Bogong:7.7km/199pts",
+    "points": 199,
+    "km": 7.66,
+    "osm_id": null
+  },
+  "mount-buffalo-horn-walk-au": {
+    "source": "osm",
+    "note": "ways:The Horn:0.4km/60pts",
+    "points": 60,
+    "km": 0.43,
+    "osm_id": null
+  },
+  "mount-macedon-cross-walk-au": {
+    "source": "osm",
+    "note": "ways:Camels Hump:0.5km/28pts",
+    "points": 28,
+    "km": 0.51,
+    "osm_id": null
+  },
+  "mount-william-walk-au": {
+    "source": "osm",
+    "note": "ways:Mount William:8.1km/272pts",
+    "points": 272,
+    "km": 8.06,
+    "osm_id": null
+  },
+  "pigeon-house-didthul-walk-au": {
+    "source": "osm",
+    "note": "ways:Pigeon House:9.1km/148pts",
+    "points": 148,
+    "km": 9.14,
+    "osm_id": null
+  },
+  "mount-solitary-walk-au": {
+    "source": "osm",
+    "note": "ways:Mount Solitary:10.4km/331pts",
+    "points": 331,
+    "km": 10.36,
+    "osm_id": null
+  },
+  "mount-kaputar-summit-walk-au": {
+    "source": "osm",
+    "note": "relation:20737017:5.8km",
+    "points": 171,
+    "km": 5.78,
+    "osm_id": 20737017
+  },
+  "st-mary-peak-circuit-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 38,
+    "km": 14.94,
+    "osm_id": null
+  },
+  "mount-lofty-summit-walk-au": {
+    "source": "osm",
+    "note": "ways:Waterfall Gully:4.5km/391pts",
+    "points": 391,
+    "km": 4.53,
+    "osm_id": 13838
+  },
+  "mount-remarkable-summit-hike-au": {
+    "source": "osm",
+    "note": "relation:6628549:6.6km",
+    "points": 187,
+    "km": 6.6,
+    "osm_id": 6628549
+  },
+  "toolbrunup-peak-walk-au": {
+    "source": "osm",
+    "note": "ways:Toolbrunup Peak Walk:1.9km/105pts",
+    "points": 105,
+    "km": 1.93,
+    "osm_id": null
+  },
+  "castle-rock-porongurup-walk-au": {
+    "source": "osm",
+    "note": "ways:Castle Rock:2.1km/106pts",
+    "points": 106,
+    "km": 2.13,
+    "osm_id": null
+  },
+  "mount-augustus-summit-loop-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 20,
+    "km": 6.9,
+    "osm_id": null
+  },
+  "mount-sonder-lookout-walk-au": {
+    "source": "osm",
+    "note": "relation:3959489:7.6km",
+    "points": 641,
+    "km": 7.56,
+    "osm_id": 3959489
+  },
+  "frenchmans-cap-walk-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 74,
+    "km": 15.43,
+    "osm_id": null
+  },
+  "mount-ossa-side-trip-au": {
+    "source": "osm",
+    "note": "ways:Mount Ossa:2.7km/169pts",
+    "points": 169,
+    "km": 2.69,
+    "osm_id": null
+  },
+  "hartz-peak-walk-au": {
+    "source": "osm",
+    "note": "ways:Hartz Peak:3.7km/143pts",
+    "points": 143,
+    "km": 3.75,
+    "osm_id": null
+  },
+  "cradle-mountain-summit-walk-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 21,
+    "km": 3.98,
+    "osm_id": null
+  },
+  "kunanyi-organ-pipes-walk-au": {
+    "source": "osm",
+    "note": "ways:Organ Pipes:2.2km/91pts",
+    "points": 91,
+    "km": 2.17,
+    "osm_id": null
+  },
+  "mount-canobolas-summit-walk-au": {
+    "source": "densify",
+    "note": "no-match",
+    "points": 5,
+    "km": 0.6,
+    "osm_id": null
+  },
+  "breadknife-and-grand-high-tops-au": {
+    "source": "osm",
+    "note": "ways:Grand High Tops:10.4km/652pts",
+    "points": 652,
+    "km": 10.4,
+    "osm_id": null
+  }
+}

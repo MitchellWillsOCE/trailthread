@@ -1,0 +1,4473 @@
+{
+  "cities": [
+    {
+      "id": "tweed-heads-au",
+      "name": "Tweed Heads",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.1767,
+      "lng": 153.5464,
+      "pop": 63000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Twin-town gateway where the Tweed River meets the Gold Coast surf",
+      "general": "Tweed Heads sits on the New South Wales–Queensland border with river walks, Point Danger views, and easy access to hinterland national parks and Gold Coast beaches.",
+      "activities": [
+        "Walk Point Danger",
+        "Cruise or paddle the Tweed River",
+        "Visit hinterland lookouts",
+        "Cross to Coolangatta beaches"
+      ],
+      "tips": [
+        "Weekend traffic builds on the highway",
+        "State border services can differ",
+        "Book river tours in school holidays"
+      ],
+      "photos": []
+    },
+    {
+      "id": "ballina-au",
+      "name": "Ballina",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.868,
+      "lng": 153.56,
+      "pop": 46000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Richmond River town of beaches, lighthouse walks, and hinterland access",
+      "general": "Ballina is a north-coast river and surf town with Lighthouse Beach, the Richmond River, markets, and a practical base for Byron hinterland and coastal drives.",
+      "activities": [
+        "Walk to Ballina Lighthouse",
+        "Swim at Lighthouse Beach",
+        "Explore the riverfront",
+        "Drive toward Lennox Head"
+      ],
+      "tips": [
+        "Summer parking is tight near beaches",
+        "River tides affect boat trips",
+        "Book accommodation in whale season"
+      ],
+      "photos": []
+    },
+    {
+      "id": "grafton-au",
+      "name": "Grafton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -29.692,
+      "lng": 152.933,
+      "pop": 19000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Clarence River city of jacarandas, heritage streets, and hinterland roads",
+      "general": "Grafton is a Clarence River service town known for jacaranda season, heritage streetscapes, river crossings, and access to hinterland parks and the Pacific coast.",
+      "activities": [
+        "Walk the riverbank",
+        "See jacarandas in late spring",
+        "Visit heritage streets",
+        "Day-trip to Yamba or the hinterland"
+      ],
+      "tips": [
+        "Jacaranda festival fills rooms",
+        "Summer storms can be sudden",
+        "A car helps for hinterland parks"
+      ],
+      "photos": []
+    },
+    {
+      "id": "cessnock-au",
+      "name": "Cessnock",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.832,
+      "lng": 151.356,
+      "pop": 30000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Hunter Valley wine-town base for cellar doors and vineyard cycling",
+      "general": "Cessnock is the practical town hub of the Hunter Valley, with cellar doors, restaurants, balloon flights, and cycling routes through vineyard country.",
+      "activities": [
+        "Taste wine at cellar doors",
+        "Cycle vineyard roads",
+        "Take a balloon flight",
+        "Visit nearby Pokolbin"
+      ],
+      "tips": [
+        "Book tastings on weekends",
+        "Designate a driver",
+        "Summer heat is strong inland"
+      ],
+      "photos": []
+    },
+    {
+      "id": "singleton-au",
+      "name": "Singleton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.567,
+      "lng": 151.17,
+      "pop": 17000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Hunter River town between vineyards, ranges, and coal-country roads",
+      "general": "Singleton sits on the Hunter River between wine country, national-park ranges, and inland highway routes, with a compact town centre and nearby lookouts.",
+      "activities": [
+        "Walk the river parklands",
+        "Visit nearby lookouts",
+        "Use as a Hunter Valley side base",
+        "Drive toward the Barringtons"
+      ],
+      "tips": [
+        "Highway traffic can be heavy",
+        "Summer heat builds quickly",
+        "A car is essential"
+      ],
+      "photos": []
+    },
+    {
+      "id": "inverell-au",
+      "name": "Inverell",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -29.776,
+      "lng": 151.113,
+      "pop": 12000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Sapphire-country New England town of parks, fossicking, and granite hills",
+      "general": "Inverell is a New England tablelands town known for sapphires, parks, nearby fossicking, and granite-hill landscapes on inland New South Wales routes.",
+      "activities": [
+        "Visit town parks and the river",
+        "Try sapphire fossicking",
+        "Drive surrounding tablelands",
+        "Explore local museums"
+      ],
+      "tips": [
+        "Winter nights are cold",
+        "Fossicking needs local advice",
+        "Distances between towns are large"
+      ],
+      "photos": []
+    },
+    {
+      "id": "moree-au",
+      "name": "Moree",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -29.464,
+      "lng": 149.842,
+      "pop": 9300,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "North-west artesian spa town on the Gwydir floodplain",
+      "general": "Moree is known for artesian hot mineral pools, wide inland streets, and a practical stop on north-west New South Wales touring routes.",
+      "activities": [
+        "Soak in artesian pools",
+        "Walk the town parks",
+        "Visit local galleries",
+        "Use as an inland touring base"
+      ],
+      "tips": [
+        "Summer heat is extreme",
+        "Book spa sessions in peak periods",
+        "Carry water on remote drives"
+      ],
+      "photos": []
+    },
+    {
+      "id": "narrabri-au",
+      "name": "Narrabri",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.325,
+      "lng": 149.784,
+      "pop": 7000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Namoi River town below Mount Kaputar's volcanic plugs",
+      "general": "Narrabri sits on the Namoi plains below Mount Kaputar, with a compact service town, dark-sky access, and day trips into volcanic national-park country.",
+      "activities": [
+        "Drive to Mount Kaputar lookouts",
+        "Walk town river parks",
+        "Visit nearby cotton-country viewpoints",
+        "Stay for night-sky viewing"
+      ],
+      "tips": [
+        "Park roads can close after rain",
+        "Summer heat is intense",
+        "Fuel up before remote drives"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mudgee-au",
+      "name": "Mudgee",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.614,
+      "lng": 149.587,
+      "pop": 12500,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "2-3 days",
+      "tagline": "Heritage wine town of cellar doors, food, and Cudgegong River walks",
+      "general": "Mudgee is a compact inland wine and food town with heritage streets, cellar doors, markets, and easy cycling between vineyards and the Cudgegong River.",
+      "activities": [
+        "Taste local wine and produce",
+        "Walk heritage streets",
+        "Visit nearby Gulgong",
+        "Cycle cellar-door routes"
+      ],
+      "tips": [
+        "Weekends book out quickly",
+        "Designate a driver",
+        "Winter mornings are frosty"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lightning-ridge-au",
+      "name": "Lightning Ridge",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -29.427,
+      "lng": 147.979,
+      "pop": 2300,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Outback opal town of mines, artesian baths, and desert night skies",
+      "general": "Lightning Ridge is a remote opal-mining town with fossicking fields, artesian bore baths, quirky galleries, and big-sky outback nights.",
+      "activities": [
+        "Visit opal fields and galleries",
+        "Soak in bore baths",
+        "See the Chambers of the Black Hand",
+        "Watch the desert sunset"
+      ],
+      "tips": [
+        "Summer heat is extreme",
+        "Carry extra water",
+        "Respect working mine areas"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bourke-au",
+      "name": "Bourke",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.09,
+      "lng": 145.936,
+      "pop": 1800,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Darling River outback town at the edge of the back of Bourke",
+      "general": "Bourke is a classic Darling River outback town with river history, paddle-steamer stories, and a launch point for remote north-west New South Wales touring.",
+      "activities": [
+        "Walk the Darling riverfront",
+        "Visit the Back O' Bourke Exhibition Centre",
+        "See historic buildings",
+        "Drive nearby outback roads if prepared"
+      ],
+      "tips": [
+        "Remote roads need planning",
+        "Summer heat is dangerous",
+        "Fuel and water stops are sparse"
+      ],
+      "photos": []
+    },
+    {
+      "id": "cooma-au",
+      "name": "Cooma",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.235,
+      "lng": 149.126,
+      "pop": 6800,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Snowy Mountains service town for alpine roads and ski-field access",
+      "general": "Cooma is the main eastern gateway to the Snowy Mountains, with alpine history, highway services, and routes to Jindabyne, Kosciuszko, and high-country walks.",
+      "activities": [
+        "Visit Snowy Hydro information sites",
+        "Drive toward Jindabyne",
+        "Walk town heritage streets",
+        "Use as a Kosciuszko base"
+      ],
+      "tips": [
+        "Winter roads may need chains",
+        "Book ski-season rooms early",
+        "Weather changes quickly in the alps"
+      ],
+      "photos": []
+    },
+    {
+      "id": "jindabyne-au",
+      "name": "Jindabyne",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.415,
+      "lng": 148.623,
+      "pop": 3500,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "2-4 days",
+      "tagline": "Lake and alpine town below Kosciuszko ski fields and summer trails",
+      "general": "Jindabyne sits beside Lake Jindabyne as the main base for Thredbo, Perisher, summer alpine walking, mountain biking, and Kosciuszko National Park access.",
+      "activities": [
+        "Walk the lakeside path",
+        "Drive to Charlotte Pass or Thredbo",
+        "Mountain-bike local trails",
+        "Visit the national park in summer"
+      ],
+      "tips": [
+        "Winter accommodation books out",
+        "Alpine weather is exposed",
+        "Carry chains in snow season"
+      ],
+      "photos": []
+    },
+    {
+      "id": "batemans-bay-au",
+      "name": "Batemans Bay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.708,
+      "lng": 150.175,
+      "pop": 17000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Clyde River holiday town for beaches, oysters, and south-coast parks",
+      "general": "Batemans Bay is a south-coast river-mouth town with beaches, oyster leases, river cruises, and access to Murramarang and nearby coastal national parks.",
+      "activities": [
+        "Eat local oysters",
+        "Walk Corrigans Beach",
+        "Cruise the Clyde River",
+        "Visit nearby national-park beaches"
+      ],
+      "tips": [
+        "School holidays are busy",
+        "Book river tours ahead",
+        "Check surf conditions"
+      ],
+      "photos": []
+    },
+    {
+      "id": "narooma-au",
+      "name": "Narooma",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.214,
+      "lng": 150.132,
+      "pop": 3400,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "South-coast inlet town for Montague Island, beaches, and rock fishing",
+      "general": "Narooma sits on a tidal inlet with beaches, a famous golf-course view, Montague Island tours, and easy access to Gulaga and coastal walking.",
+      "activities": [
+        "Take a Montague Island tour",
+        "Walk Bar Beach",
+        "See the inlet from lookouts",
+        "Drive toward Central Tilba"
+      ],
+      "tips": [
+        "Island tours are weather dependent",
+        "Book in whale and seal seasons",
+        "Parking is limited near the inlet"
+      ],
+      "photos": []
+    },
+    {
+      "id": "eden-au",
+      "name": "Eden",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.063,
+      "lng": 149.91,
+      "pop": 3100,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Twofold Bay whaling-history town and killer-whale lookout country",
+      "general": "Eden sits on Twofold Bay with whale-watching history, Killer Whale Museum stories, coastal lookouts, and access to Ben Boyd and South East Forests parks.",
+      "activities": [
+        "Visit the Killer Whale Museum",
+        "Watch whales in season",
+        "Walk coastal lookouts",
+        "Drive toward Green Cape"
+      ],
+      "tips": [
+        "Whale season is winter-spring",
+        "Coastal weather is changeable",
+        "A car is needed for park access"
+      ],
+      "photos": []
+    },
+    {
+      "id": "merimbula-au",
+      "name": "Merimbula",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.888,
+      "lng": 149.91,
+      "pop": 3800,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Sapphire Coast lake-and-beach town for oysters, inlets, and coastal walks",
+      "general": "Merimbula combines a tidal lake, surf beaches, oyster leases, and a compact holiday centre on the Sapphire Coast.",
+      "activities": [
+        "Walk the lake boardwalk",
+        "Eat local oysters",
+        "Swim at Main Beach",
+        "Visit nearby Pambula or Tura Head"
+      ],
+      "tips": [
+        "Holiday periods are busy",
+        "Lake tides affect swimming spots",
+        "Book restaurants on weekends"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bowral-au",
+      "name": "Bowral",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.479,
+      "lng": 150.418,
+      "pop": 13000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Southern Highlands garden town of cool-climate food and heritage streets",
+      "general": "Bowral is a Southern Highlands town known for gardens, autumn colour, food, Bradman history, and nearby Morton and Budderoo plateau walks.",
+      "activities": [
+        "Walk Corbett Gardens",
+        "Visit the Bradman Museum",
+        "Browse cafes and galleries",
+        "Drive to Fitzroy Falls"
+      ],
+      "tips": [
+        "Weekends from Sydney are busy",
+        "Winter mornings are cold",
+        "Book popular restaurants ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lithgow-au",
+      "name": "Lithgow",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.481,
+      "lng": 150.158,
+      "pop": 13000,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-2 days",
+      "tagline": "Western Blue Mountains industrial town for Glow Worm Tunnel and pagoda country",
+      "general": "Lithgow sits west of the Blue Mountains with industrial heritage, nearby state forests, the Glow Worm Tunnel, and sandstone pagoda landscapes.",
+      "activities": [
+        "Visit the Glow Worm Tunnel",
+        "See Hassans Walls lookout",
+        "Explore industrial heritage",
+        "Drive into Newnes Plateau country"
+      ],
+      "tips": [
+        "Tunnel visits need a torch",
+        "Forest roads can be rough",
+        "Weather is colder than the coast"
+      ],
+      "photos": []
+    },
+    {
+      "id": "taree-au",
+      "name": "Taree",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -31.911,
+      "lng": 152.454,
+      "pop": 26000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Manning River town between beaches, hinterland, and mid-north coast parks",
+      "general": "Taree is a Manning River service town with riverside parks, nearby beaches at Old Bar and Diamond Beach, and hinterland access toward Wingham and the Comboyne plateau.",
+      "activities": [
+        "Walk the Manning riverfront",
+        "Visit Wingham Brush",
+        "Drive to Old Bar Beach",
+        "Explore hinterland lookouts"
+      ],
+      "tips": [
+        "Summer storms are common",
+        "A car helps connect beaches",
+        "River parks flood after heavy rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "forster-au",
+      "name": "Forster",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.181,
+      "lng": 152.511,
+      "pop": 14000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Twin-town lakeside base for beaches, Booti Booti, and dolphin cruises",
+      "general": "Forster and Tuncurry sit on a coastal lake entrance with surf beaches, Booti Booti National Park, dolphin cruises, and easy island and headland walks.",
+      "activities": [
+        "Walk to Cape Hawke lookout",
+        "Cruise the lakes",
+        "Swim at Main Beach",
+        "Visit Booti Booti"
+      ],
+      "tips": [
+        "Holiday traffic is heavy",
+        "Book lake cruises ahead",
+        "Swim between the flags"
+      ],
+      "photos": []
+    },
+    {
+      "id": "nelson-bay-au",
+      "name": "Nelson Bay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.715,
+      "lng": 152.151,
+      "pop": 15000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Port Stephens harbour town for dolphins, dunes, and Tomaree headland",
+      "general": "Nelson Bay is the main Port Stephens base, with dolphin cruises, Stockton sand dunes, Tomaree Head, and sheltered harbour beaches.",
+      "activities": [
+        "Climb Tomaree Head",
+        "Join a dolphin cruise",
+        "Visit the Stockton dunes",
+        "Walk Zenith Beach"
+      ],
+      "tips": [
+        "Summer parking is limited",
+        "Dune tours book out",
+        "Harbour weather can change quickly"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bellingen-au",
+      "name": "Bellingen",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.453,
+      "lng": 152.898,
+      "pop": 3800,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Creative hinterland town below Dorrigo rainforest and the Bellinger River",
+      "general": "Bellingen is a leafy hinterland town of markets, music, river swimming holes, and a gateway to Dorrigo National Park and Waterfall Way.",
+      "activities": [
+        "Browse the Saturday market",
+        "Swim in the Bellinger",
+        "Drive Waterfall Way to Dorrigo",
+        "Walk Promised Land roads"
+      ],
+      "tips": [
+        "Weekend accommodation fills fast",
+        "Hinterland roads are winding",
+        "River levels rise after rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "nambucca-heads-au",
+      "name": "Nambucca Heads",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.643,
+      "lng": 153.001,
+      "pop": 6500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Mid-north coast headland town of river mouth views and quiet beaches",
+      "general": "Nambucca Heads sits where the Nambucca River meets the sea, with headland lookouts, a historic breakwall, and quieter beaches than larger holiday towns.",
+      "activities": [
+        "Walk the breakwall",
+        "See the river mouth from lookouts",
+        "Swim at Main Beach",
+        "Visit nearby Valla Beach"
+      ],
+      "tips": [
+        "Holiday periods still get busy",
+        "Check surf conditions",
+        "A car helps for nearby beaches"
+      ],
+      "photos": []
+    },
+    {
+      "id": "castlemaine-au",
+      "name": "Castlemaine",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.068,
+      "lng": 144.217,
+      "pop": 11000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Goldfields town of galleries, gardens, and Victorian streetscapes",
+      "general": "Castlemaine is a compact goldfields town with theatres, gardens, food, nearby bushland reserves, and easy links to Bendigo and Daylesford.",
+      "activities": [
+        "Walk heritage streets",
+        "Visit Buda Historic Home",
+        "Browse galleries",
+        "Drive to nearby reserves"
+      ],
+      "tips": [
+        "Weekends from Melbourne are busy",
+        "Winter is cold",
+        "Book popular restaurants ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "daylesford-au",
+      "name": "Daylesford",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.341,
+      "lng": 144.143,
+      "pop": 2800,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "Spa-country town of mineral springs, gardens, and lake walks",
+      "general": "Daylesford is the heart of Victorian spa country, with mineral springs, Hepburn Bathhouse, Lake Daylesford, gardens, and nearby forest walks.",
+      "activities": [
+        "Walk Lake Daylesford",
+        "Visit mineral springs",
+        "Browse markets and food streets",
+        "Drive to Hepburn Springs"
+      ],
+      "tips": [
+        "Weekends book out far ahead",
+        "Winter mornings are frosty",
+        "A car helps for surrounding springs"
+      ],
+      "photos": []
+    },
+    {
+      "id": "portland-au",
+      "name": "Portland",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.346,
+      "lng": 141.604,
+      "pop": 11000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Western Victorian port of cliffs, maritime history, and whale lookouts",
+      "general": "Portland is a working harbour town with cliff walks, maritime history, nearby Cape Nelson, and seasonal whale watching on Victoria's far south-west coast.",
+      "activities": [
+        "Walk the cliff paths",
+        "Visit Cape Nelson",
+        "See harbour lookouts",
+        "Watch whales in season"
+      ],
+      "tips": [
+        "Weather is windy and changeable",
+        "Whale season is winter",
+        "Distances to other towns are large"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lakes-entrance-au",
+      "name": "Lakes Entrance",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.881,
+      "lng": 147.995,
+      "pop": 5000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Gippsland Lakes holiday town for boating, beaches, and inlet views",
+      "general": "Lakes Entrance sits where the Gippsland Lakes meet the Tasman Sea, with boat hire, inlet lookouts, Ninety Mile Beach access, and seafood.",
+      "activities": [
+        "Walk the footbridge to the entrance",
+        "Hire a boat on the lakes",
+        "Visit Ninety Mile Beach",
+        "Eat local seafood"
+      ],
+      "tips": [
+        "School holidays are busy",
+        "Wind affects lake boating",
+        "Book accommodation in summer"
+      ],
+      "photos": []
+    },
+    {
+      "id": "cowes-au",
+      "name": "Cowes",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.451,
+      "lng": 145.239,
+      "pop": 6400,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Phillip Island township for penguin arrivals, surf beaches, and coastal walks",
+      "general": "Cowes is the main town on Phillip Island, with a sheltered bay beach, easy access to the Penguin Parade, Cape Woolamai, and coastal boardwalks.",
+      "activities": [
+        "See the Penguin Parade",
+        "Walk Cowes foreshore",
+        "Visit Cape Woolamai",
+        "Drive the coastal circuit"
+      ],
+      "tips": [
+        "Penguin tickets sell out",
+        "Weekend traffic is heavy",
+        "Weather is exposed on the south coast"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mornington-au",
+      "name": "Mornington",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.218,
+      "lng": 145.038,
+      "pop": 26000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Peninsula bay town of beaches, wineries, and clifftop walks",
+      "general": "Mornington is a Port Phillip town with a harbour, beaches, nearby wineries, and access to the Mornington Peninsula's ocean beaches and national park.",
+      "activities": [
+        "Walk the harbour and Main Street",
+        "Visit nearby wineries",
+        "Drive to ocean beaches",
+        "See Mornington Peninsula National Park"
+      ],
+      "tips": [
+        "Weekend traffic from Melbourne is slow",
+        "Book cellar doors ahead",
+        "Ocean beaches have strong surf"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bright-au",
+      "name": "Bright",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.73,
+      "lng": 146.961,
+      "pop": 2800,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "2-4 days",
+      "tagline": "Alpine valley town of autumn colour, rail trails, and high-country walks",
+      "general": "Bright is a north-east Victorian alpine-valley town known for autumn leaves, cycling, river swimming, and access to Mount Buffalo, Falls Creek, and Mount Beauty.",
+      "activities": [
+        "Cycle the rail trail",
+        "Walk the Ovens River",
+        "Drive to Mount Buffalo",
+        "See autumn colour in April"
+      ],
+      "tips": [
+        "Autumn and holiday weekends book out",
+        "Alpine roads close in snow",
+        "Summer storms build in the ranges"
+      ],
+      "photos": []
+    },
+    {
+      "id": "beechworth-au",
+      "name": "Beechworth",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.359,
+      "lng": 146.687,
+      "pop": 3200,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Gold-rush granite town of honey, heritage streets, and gorge walks",
+      "general": "Beechworth is a preserved goldfields town with granite buildings, honey and beer, nearby gorges, and cycling links across north-east Victoria.",
+      "activities": [
+        "Walk Ford Street",
+        "Visit Beechworth Gorge",
+        "Taste local honey or beer",
+        "Cycle toward Yackandandah"
+      ],
+      "tips": [
+        "Weekends are busy",
+        "Winter is cold",
+        "Gorge walks are slippery after rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "apollo-bay-au",
+      "name": "Apollo Bay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.755,
+      "lng": 143.672,
+      "pop": 1800,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Great Ocean Road harbour town for Otway rainforest and coastal walks",
+      "general": "Apollo Bay is a key Great Ocean Road stop with a working harbour, beaches, Otway rainforest drives, and the start of the Great Ocean Walk.",
+      "activities": [
+        "Walk the harbour foreshore",
+        "Drive to Cape Otway",
+        "Start the Great Ocean Walk",
+        "Visit Maits Rest rainforest"
+      ],
+      "tips": [
+        "Summer and holiday traffic is heavy",
+        "Book rooms early",
+        "Weather is changeable on the coast"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lorne-au",
+      "name": "Lorne",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.545,
+      "lng": 143.975,
+      "pop": 1100,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Surf-coast village of waterfalls, pier walks, and Great Ocean Road bends",
+      "general": "Lorne is a compact Great Ocean Road village with a pier, surf beach, Erskine Falls, and rainforest walks into the Otways.",
+      "activities": [
+        "Walk the pier",
+        "Visit Erskine Falls",
+        "Swim at the main beach",
+        "Walk Teddy's Lookout"
+      ],
+      "tips": [
+        "Parking is scarce in summer",
+        "Book accommodation far ahead",
+        "Falls tracks are slippery after rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "port-fairy-au",
+      "name": "Port Fairy",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -38.385,
+      "lng": 142.237,
+      "pop": 3500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Historic fishing village of bluestone streets, islands, and shipwreck coast",
+      "general": "Port Fairy is a heritage fishing town with bluestone cottages, Griffiths Island, a working harbour, and access to the western Great Ocean Road.",
+      "activities": [
+        "Walk Griffiths Island",
+        "Explore heritage streets",
+        "Visit the harbour",
+        "See nearby Tower Hill"
+      ],
+      "tips": [
+        "Folk festival fills the town",
+        "Island paths are exposed",
+        "Book summer weekends early"
+      ],
+      "photos": []
+    },
+    {
+      "id": "halls-gap-au",
+      "name": "Halls Gap",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.14,
+      "lng": 142.519,
+      "pop": 600,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "2-4 days",
+      "tagline": "Gariwerd village base for Grampians peaks, waterfalls, and wildlife",
+      "general": "Halls Gap sits in a valley of the Grampians with trailheads, lookouts, kangaroos at dusk, and access to the Grampians Peaks Trail and waterfall walks.",
+      "activities": [
+        "Walk to The Pinnacle",
+        "See MacKenzie Falls",
+        "Watch wildlife at dusk",
+        "Start a Peaks Trail section"
+      ],
+      "tips": [
+        "Trailhead parking fills early",
+        "Summer heat and winter storms both matter",
+        "Book rooms in holiday periods"
+      ],
+      "photos": []
+    },
+    {
+      "id": "maroochydore-au",
+      "name": "Maroochydore",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -26.655,
+      "lng": 153.09,
+      "pop": 55000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Sunshine Coast river-mouth city for beaches, river cruises, and hinterland day trips",
+      "general": "Maroochydore sits at the Maroochy River mouth with patrolled beaches, river parks, and easy access to Noosa, the Glass House Mountains, and hinterland walks.",
+      "activities": [
+        "Walk Cotton Tree",
+        "Cruise the Maroochy River",
+        "Swim at patrolled beaches",
+        "Day-trip to the hinterland"
+      ],
+      "tips": [
+        "School holidays are busy",
+        "River tides affect boat trips",
+        "A car helps for hinterland parks"
+      ],
+      "photos": []
+    },
+    {
+      "id": "caloundra-au",
+      "name": "Caloundra",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -26.799,
+      "lng": 153.129,
+      "pop": 52000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Southern Sunshine Coast town of headlands, lagoons, and family beaches",
+      "general": "Caloundra wraps around headlands and Pumicestone Passage with family beaches, coastal walks, and views toward Bribie Island and the Glass House Mountains.",
+      "activities": [
+        "Walk the coastal path",
+        "Visit Kings Beach",
+        "See Pumicestone Passage",
+        "Drive to the Glass House Mountains"
+      ],
+      "tips": [
+        "Holiday traffic is heavy",
+        "Swim between the flags",
+        "Book weekends in summer"
+      ],
+      "photos": []
+    },
+    {
+      "id": "gympie-au",
+      "name": "Gympie",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -26.19,
+      "lng": 152.666,
+      "pop": 22000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Mary Valley gold-town stop for heritage streets and hinterland drives",
+      "general": "Gympie is a Mary Valley service town with gold-rush history, a compact centre, and access to hinterland parks, Mary Valley railway country, and the Cooloola coast.",
+      "activities": [
+        "Visit the Gold Mining Museum",
+        "Walk heritage streets",
+        "Drive toward Rainbow Beach",
+        "Explore the Mary Valley"
+      ],
+      "tips": [
+        "Summer storms are common",
+        "A car is essential",
+        "Hinterland roads are winding"
+      ],
+      "photos": []
+    },
+    {
+      "id": "maryborough-au",
+      "name": "Maryborough",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -25.537,
+      "lng": 152.702,
+      "pop": 27000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Mary River heritage city and mainland gateway toward K'gari",
+      "general": "Maryborough is a riverside heritage city with wide streets, colonial buildings, and a practical mainland base for Hervey Bay and K'gari ferry connections.",
+      "activities": [
+        "Walk the riverfront",
+        "See heritage buildings",
+        "Visit Bond Store Museum",
+        "Continue to Hervey Bay"
+      ],
+      "tips": [
+        "Summer humidity is high",
+        "Ferry connections need planning",
+        "A car helps for regional touring"
+      ],
+      "photos": []
+    },
+    {
+      "id": "yeppoon-au",
+      "name": "Yeppoon",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -23.129,
+      "lng": 150.744,
+      "pop": 19000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Capricorn Coast town for Great Keppel Island and headland walks",
+      "general": "Yeppoon is the main Capricorn Coast base, with beaches, headland walks, and boat access to Great Keppel Island and nearby coastal parks.",
+      "activities": [
+        "Walk the foreshore",
+        "Take a boat to Great Keppel Island",
+        "Visit nearby Byfield",
+        "Swim at Rosslyn Bay beaches"
+      ],
+      "tips": [
+        "Cyclone season can disrupt plans",
+        "Book island transfers ahead",
+        "Summer heat is intense"
+      ],
+      "photos": []
+    },
+    {
+      "id": "emerald-au",
+      "name": "Emerald",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -23.527,
+      "lng": 148.162,
+      "pop": 15000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Central Queensland sapphire and farm town on the Capricorn Highway",
+      "general": "Emerald is a central Queensland service town with sapphire-country access, a large lake, and a practical stop between the coast and Carnarvon Gorge.",
+      "activities": [
+        "Visit Lake Maraboon",
+        "See town parks",
+        "Use as a Carnarvon Gorge gateway",
+        "Explore nearby gemfields"
+      ],
+      "tips": [
+        "Summer heat is extreme",
+        "Distances are large",
+        "Book gorge accommodation ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "charters-towers-au",
+      "name": "Charters Towers",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -20.077,
+      "lng": 146.262,
+      "pop": 8000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Gold-rush inland city of wide streets and tropical dry-country heritage",
+      "general": "Charters Towers is a well-preserved gold-rush city west of Townsville, with grand buildings, underground mine tours, and dry-tropics inland touring.",
+      "activities": [
+        "Walk Mosman Street",
+        "Take a mine or ghost tour",
+        "Visit Venus Gold Battery",
+        "See Stock Exchange Arcade"
+      ],
+      "tips": [
+        "Summer heat is intense",
+        "Many attractions close midday",
+        "A car is useful for outskirts"
+      ],
+      "photos": []
+    },
+    {
+      "id": "weipa-au",
+      "name": "Weipa",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -12.66,
+      "lng": 141.846,
+      "pop": 4000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Western Cape York mining town for bauxite country and remote gulf fishing",
+      "general": "Weipa is a remote Cape York town on Albatross Bay, known for bauxite mining, fishing, and a far-north base toward Mapoon and the Wenlock.",
+      "activities": [
+        "Visit town lookouts",
+        "Fish local waters with a guide",
+        "Learn bauxite-country history",
+        "Drive surrounding Cape tracks if prepared"
+      ],
+      "tips": [
+        "The wet season isolates roads",
+        "Permits may be required",
+        "Supplies are limited and expensive"
+      ],
+      "photos": []
+    },
+    {
+      "id": "innisfail-au",
+      "name": "Innisfail",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -17.524,
+      "lng": 146.031,
+      "pop": 11000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Wet-tropics river town between reef islands, waterfalls, and cane country",
+      "general": "Innisfail sits on the Johnstone River in the wet tropics, with art-deco streets, nearby waterfalls, and access to Etty Bay, Paronella Park, and coastal islands.",
+      "activities": [
+        "See town art-deco buildings",
+        "Visit nearby waterfalls",
+        "Drive to Etty Bay",
+        "Continue toward Mission Beach"
+      ],
+      "tips": [
+        "Rain is frequent",
+        "Cassowaries use coastal roads",
+        "Cyclone season needs flexibility"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mission-beach-au",
+      "name": "Mission Beach",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -17.869,
+      "lng": 146.107,
+      "pop": 900,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Cassowary-coast village for Dunk Island, rainforest, and long beaches",
+      "general": "Mission Beach is a low-rise coastal village between rainforest and a long beach, with Dunk Island views, cassowary habitat, and access to the Family Islands.",
+      "activities": [
+        "Walk the beach at sunrise",
+        "Take a Dunk Island trip",
+        "Look for cassowaries carefully",
+        "Visit nearby Licuala fan-palm forest"
+      ],
+      "tips": [
+        "Respect cassowary habitat",
+        "Marine stingers occur in warmer months",
+        "Book island trips ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "atherton-au",
+      "name": "Atherton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -17.267,
+      "lng": 145.478,
+      "pop": 7500,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-3 days",
+      "tagline": "Tablelands town for crater lakes, waterfalls, and cooler rainforest air",
+      "general": "Atherton is a Tablelands service town with crater lakes, waterfalls, waterhole swimming, and a cooler base above Cairns and the wet-tropics coast.",
+      "activities": [
+        "Visit Lake Eacham or Barrine",
+        "See Millaa Millaa Falls",
+        "Walk crater-lake circuits",
+        "Drive the waterfall circuit"
+      ],
+      "tips": [
+        "Afternoon storms are common",
+        "A car is essential",
+        "Lake tracks can be slippery"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mareeba-au",
+      "name": "Mareeba",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -16.991,
+      "lng": 145.423,
+      "pop": 11000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Dry-tropics tablelands town of wetlands, coffee, and savannah lookouts",
+      "general": "Mareeba sits on the drier side of the Tablelands with wetlands, coffee farms, savannah viewpoints, and a gateway toward Chillagoe and Cape York roads.",
+      "activities": [
+        "Visit Mareeba Wetlands",
+        "Taste local coffee",
+        "Drive toward Chillagoe if prepared",
+        "See nearby lookouts"
+      ],
+      "tips": [
+        "The dry season is most comfortable",
+        "Remote roads need planning",
+        "Carry water inland"
+      ],
+      "photos": []
+    },
+    {
+      "id": "stanthorpe-au",
+      "name": "Stanthorpe",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.655,
+      "lng": 151.934,
+      "pop": 5400,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "1-3 days",
+      "tagline": "Granite Belt wine town of cool nights, orchards, and boulder country",
+      "general": "Stanthorpe is Queensland's cool-climate wine and orchard town, with granite tors, cellar doors, and access to Girraween National Park.",
+      "activities": [
+        "Taste Granite Belt wine",
+        "Visit Girraween",
+        "Walk among granite boulders",
+        "Browse farm gates"
+      ],
+      "tips": [
+        "Winter nights are cold",
+        "Book cellar doors on weekends",
+        "Park walks are exposed"
+      ],
+      "photos": []
+    },
+    {
+      "id": "warwick-au",
+      "name": "Warwick",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.217,
+      "lng": 152.035,
+      "pop": 16000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Darling Downs heritage town on inland routes to the Granite Belt",
+      "general": "Warwick is a Darling Downs service town with heritage buildings, river parks, and a practical stop between Brisbane, Toowoomba, and Stanthorpe.",
+      "activities": [
+        "Walk heritage streets",
+        "Visit river parks",
+        "Continue to the Granite Belt",
+        "See local museums"
+      ],
+      "tips": [
+        "Summer heat is strong",
+        "A car is essential",
+        "Weekend events can fill rooms"
+      ],
+      "photos": []
+    },
+    {
+      "id": "derby-au",
+      "name": "Derby",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -17.309,
+      "lng": 123.631,
+      "pop": 3300,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Kimberley tidal town for Horizontal Falls flights and boab country",
+      "general": "Derby is a Kimberley town on King Sound, known for huge tides, boab trees, and flight or boat access toward Horizontal Falls and the Buccaneer Archipelago.",
+      "activities": [
+        "See the town boab landmark",
+        "Join a Horizontal Falls tour",
+        "Visit Prison Tree and Windjana if touring",
+        "Watch the huge tides"
+      ],
+      "tips": [
+        "The dry season is prime",
+        "Tours book out early",
+        "Remote roads need a capable vehicle"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kununurra-au",
+      "name": "Kununurra",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -15.773,
+      "lng": 128.739,
+      "pop": 5300,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "2-4 days",
+      "tagline": "East Kimberley irrigation town for Lake Argyle, gorges, and Mirima",
+      "general": "Kununurra is the east Kimberley hub, with Lake Argyle, Ord River cruises, Mirima National Park, and access toward Purnululu and El Questro country.",
+      "activities": [
+        "Cruise Lake Argyle or the Ord",
+        "Walk Mirima / Hidden Valley",
+        "Visit a lookout at sunset",
+        "Plan a Purnululu trip"
+      ],
+      "tips": [
+        "The dry season is busiest",
+        "Book cruises ahead",
+        "Heat remains strong even in winter"
+      ],
+      "photos": []
+    },
+    {
+      "id": "halls-creek-au",
+      "name": "Halls Creek",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -18.225,
+      "lng": 127.668,
+      "pop": 1500,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1 day",
+      "tagline": "Kimberley crossroads town for China Wall and inland gorge country",
+      "general": "Halls Creek is a small inland Kimberley service town and a practical stop between Fitzroy Crossing, Kununurra, and the Bungle Bungle approach roads.",
+      "activities": [
+        "See China Wall",
+        "Use as a Purnululu staging point",
+        "Visit town lookouts",
+        "Restock fuel and water"
+      ],
+      "tips": [
+        "Remote roads close in the wet",
+        "Fuel up here",
+        "Heat is extreme"
+      ],
+      "photos": []
+    },
+    {
+      "id": "newman-au",
+      "name": "Newman",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -23.356,
+      "lng": 119.736,
+      "pop": 4500,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Pilbara mining town and southern gateway toward Karijini gorges",
+      "general": "Newman is a Pilbara mining town below Ophthalmia Range and a practical southern approach to Karijini National Park and inland iron-ore country.",
+      "activities": [
+        "Visit the mine lookout if open",
+        "Use as a Karijini gateway",
+        "See town parks",
+        "Watch desert sunset"
+      ],
+      "tips": [
+        "Summer heat is dangerous",
+        "Book Karijini camps early",
+        "Distances are very large"
+      ],
+      "photos": []
+    },
+    {
+      "id": "tom-price-au",
+      "name": "Tom Price",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -22.694,
+      "lng": 117.795,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-3 days",
+      "tagline": "Pilbara highland town closest to Karijini's western gorges",
+      "general": "Tom Price is the nearest service town to western Karijini, with highland air, mine-country views, and trailheads toward Dales, Weano, and Hancock Gorges.",
+      "activities": [
+        "Drive into Karijini",
+        "Walk a gorge rim",
+        "Visit town lookouts",
+        "Restock before park days"
+      ],
+      "tips": [
+        "Gorge walks are exposed",
+        "Carry more water than you expect",
+        "Cyclone remnants can close roads"
+      ],
+      "photos": []
+    },
+    {
+      "id": "denham-au",
+      "name": "Denham",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -25.928,
+      "lng": 113.533,
+      "pop": 800,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Shark Bay town for Monkey Mia dolphins, shell beaches, and World Heritage bays",
+      "general": "Denham is the main Shark Bay township, with shell-block buildings, Francois Peron access, and the road to Monkey Mia's dolphin beach.",
+      "activities": [
+        "Visit Monkey Mia",
+        "See Shell Beach",
+        "Drive Francois Peron if equipped",
+        "Walk the Denham foreshore"
+      ],
+      "tips": [
+        "Book Monkey Mia ahead",
+        "The peninsula is remote",
+        "Summer heat is extreme"
+      ],
+      "photos": []
+    },
+    {
+      "id": "coral-bay-au",
+      "name": "Coral Bay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -23.141,
+      "lng": 113.776,
+      "pop": 250,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Tiny Ningaloo village for walk-in reef snorkelling and turtle beaches",
+      "general": "Coral Bay is a small Ningaloo settlement where the reef sits close to shore, with snorkel beaches, manta tours, and a quieter alternative to Exmouth.",
+      "activities": [
+        "Snorkel from the beach",
+        "Join a manta or turtle tour",
+        "Walk the point at sunset",
+        "Stay after the day-trippers leave"
+      ],
+      "tips": [
+        "Accommodation is limited",
+        "Book tours early",
+        "Sun protection is essential"
+      ],
+      "photos": []
+    },
+    {
+      "id": "pemberton-au",
+      "name": "Pemberton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.443,
+      "lng": 116.034,
+      "pop": 900,
+      "tier": "town",
+      "category": "town",
+      "locale": "forest",
+      "stay": "1-3 days",
+      "tagline": "Karri-forest town of tree lookouts, trout streams, and southern walks",
+      "general": "Pemberton sits among tall karri forest with climbing trees, forest drives, nearby Yeagarup dunes, and access to the Warren and Greater Beedelup parks.",
+      "activities": [
+        "Climb the Gloucester Tree if open",
+        "Walk karri forest trails",
+        "Visit Warren River lookouts",
+        "Drive toward Northcliffe"
+      ],
+      "tips": [
+        "Forest weather is damp",
+        "Some lookouts close for maintenance",
+        "Roads are narrow and winding"
+      ],
+      "photos": []
+    },
+    {
+      "id": "manjimup-au",
+      "name": "Manjimup",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.241,
+      "lng": 116.146,
+      "pop": 4300,
+      "tier": "town",
+      "category": "town",
+      "locale": "forest",
+      "stay": "1-2 days",
+      "tagline": "Southern forest service town for truffles, tall timber, and Bibbulmun access",
+      "general": "Manjimup is a southern forest town with timber history, seasonal truffles, nearby karri and tingle country, and Bibbulmun Track resupply.",
+      "activities": [
+        "Visit timber heritage sites",
+        "Walk nearby forest trails",
+        "Taste seasonal produce",
+        "Use as a Bibbulmun resupply"
+      ],
+      "tips": [
+        "Winter is wet and cold",
+        "A car is essential",
+        "Book truffle-season meals ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "walpole-au",
+      "name": "Walpole",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.976,
+      "lng": 116.731,
+      "pop": 400,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Inlet town for tingle forest, the Tree Top Walk, and wild southern coast",
+      "general": "Walpole sits between inlets and tingle forest, with the Valley of the Giants Tree Top Walk, inlets, and access to Walpole-Nornalup National Park.",
+      "activities": [
+        "Walk the Tree Top Walk",
+        "Cruise the inlets",
+        "Visit the Giant Tingle Tree",
+        "See coastal lookouts"
+      ],
+      "tips": [
+        "Weather is wet and windy",
+        "Book the Tree Top Walk in peak times",
+        "Roads are winding"
+      ],
+      "photos": []
+    },
+    {
+      "id": "cervantes-au",
+      "name": "Cervantes",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.5,
+      "lng": 115.066,
+      "pop": 500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Crayfishing village beside the Pinnacles and Turquoise Coast lagoons",
+      "general": "Cervantes is a small Turquoise Coast town and the usual base for Nambung National Park's Pinnacles Desert and nearby lagoon beaches.",
+      "activities": [
+        "Visit the Pinnacles",
+        "Walk nearby lagoons",
+        "Eat local seafood",
+        "See Lake Thetis stromatolites"
+      ],
+      "tips": [
+        "Pinnacles sunsets are popular",
+        "Summer heat is strong",
+        "Fuel up before remote coast drives"
+      ],
+      "photos": []
+    },
+    {
+      "id": "jurien-bay-au",
+      "name": "Jurien Bay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -30.304,
+      "lng": 115.038,
+      "pop": 1800,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Turquoise Coast town for sea lions, beaches, and quiet Indian Ocean days",
+      "general": "Jurien Bay is a low-key coastal town with beaches, a marina, nearby sea-lion tours, and a quieter stop on the drive north of Perth.",
+      "activities": [
+        "Join a sea-lion tour",
+        "Walk the beach",
+        "Visit the marina",
+        "Continue to the Pinnacles"
+      ],
+      "tips": [
+        "Tours are weather dependent",
+        "Wind can be strong",
+        "Services are limited compared with Perth"
+      ],
+      "photos": []
+    },
+    {
+      "id": "murray-bridge-au",
+      "name": "Murray Bridge",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.12,
+      "lng": 139.267,
+      "pop": 22000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "1 day",
+      "tagline": "Murray River service city for houseboats, cliffs, and wetland edges",
+      "general": "Murray Bridge is a practical Murray River city with river cliffs, houseboat access, and a stop between Adelaide and the Riverland.",
+      "activities": [
+        "Walk the riverfront",
+        "See the rail and road bridges",
+        "Visit nearby wetlands",
+        "Continue to the Riverland"
+      ],
+      "tips": [
+        "Summer heat is strong",
+        "River levels vary",
+        "A car helps for wetland reserves"
+      ],
+      "photos": []
+    },
+    {
+      "id": "clare-au",
+      "name": "Clare",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.833,
+      "lng": 138.61,
+      "pop": 3300,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "Riesling Trail wine town in the Clare Valley hills",
+      "general": "Clare is the main town of the Clare Valley, with cellar doors, the Riesling Trail cycle path, and heritage main-street stops between rows of vines.",
+      "activities": [
+        "Cycle the Riesling Trail",
+        "Taste local riesling",
+        "Walk the main street",
+        "Visit nearby Auburn or Mintaro"
+      ],
+      "tips": [
+        "Book tastings on weekends",
+        "Designate a driver",
+        "Summer afternoons are hot"
+      ],
+      "photos": []
+    },
+    {
+      "id": "tanunda-au",
+      "name": "Tanunda",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.523,
+      "lng": 138.96,
+      "pop": 4700,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-3 days",
+      "tagline": "Barossa village of cellar doors, church steeples, and food streets",
+      "general": "Tanunda is a central Barossa town with church steeples, cellar doors, butchers and bakeries, and easy cycling between vineyards.",
+      "activities": [
+        "Walk Murray Street",
+        "Visit nearby cellar doors",
+        "Taste regional food",
+        "Cycle quiet vineyard roads"
+      ],
+      "tips": [
+        "Weekends are busy",
+        "Designate a driver",
+        "Festival periods fill rooms"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mclaren-vale-au",
+      "name": "McLaren Vale",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.218,
+      "lng": 138.543,
+      "pop": 4000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Coastal-edge wine town for Shiraz, beaches, and Willunga hills",
+      "general": "McLaren Vale sits between vines and the Gulf St Vincent, with cellar doors, the Shiraz Trail, and nearby Port Willunga cliffs and beaches.",
+      "activities": [
+        "Taste local shiraz",
+        "Cycle the Shiraz Trail",
+        "Visit Port Willunga",
+        "Walk between cellar doors"
+      ],
+      "tips": [
+        "Book popular cellar doors",
+        "Designate a driver",
+        "Summer weekends are crowded"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kingscote-au",
+      "name": "Kingscote",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.657,
+      "lng": 137.638,
+      "pop": 1800,
+      "tier": "town",
+      "category": "town",
+      "locale": "island",
+      "stay": "2-4 days",
+      "tagline": "Kangaroo Island's main town for harbours, wildlife, and island touring",
+      "general": "Kingscote is Kangaroo Island's largest town, with a harbour, coastal walks, and a practical base for Flinders Chase, Seal Bay, and island wildlife tours.",
+      "activities": [
+        "Walk the foreshore",
+        "Visit nearby Emu Bay",
+        "Use as an island touring hub",
+        "See local galleries"
+      ],
+      "tips": [
+        "Book the ferry and cars early",
+        "Island distances take time",
+        "Wildlife is most active at dusk"
+      ],
+      "photos": []
+    },
+    {
+      "id": "robe-au",
+      "name": "Robe",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.164,
+      "lng": 139.756,
+      "pop": 1500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Limestone Coast fishing town of heritage cottages and wild beaches",
+      "general": "Robe is a limestone fishing town with heritage cottages, a working harbour, long beaches, and access to Canunda and Coorong country.",
+      "activities": [
+        "Walk the heritage streets",
+        "Visit the harbour",
+        "See Long Beach",
+        "Drive toward Beachport"
+      ],
+      "tips": [
+        "Summer and cray season are busy",
+        "Weather is windy",
+        "Book cottages early"
+      ],
+      "photos": []
+    },
+    {
+      "id": "ceduna-au",
+      "name": "Ceduna",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.127,
+      "lng": 133.675,
+      "pop": 2300,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Far-west Eyre Peninsula town and last major stop before the Nullarbor",
+      "general": "Ceduna is a far-west South Australian service town on Denial Bay, with oyster leases, a practical Nullarbor staging point, and nearby coastal lookouts.",
+      "activities": [
+        "Eat local oysters",
+        "Walk the foreshore",
+        "Visit nearby lookouts",
+        "Prepare for Nullarbor driving"
+      ],
+      "tips": [
+        "Fuel up before long hauls",
+        "Wind is strong",
+        "Services thin out quickly west of town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "burra-au",
+      "name": "Burra",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.671,
+      "lng": 138.937,
+      "pop": 900,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Copper-triangle heritage town of mine ruins, cottages, and creek country",
+      "general": "Burra is a preserved copper-mining town in the mid-north, with mine ruins, miner cottages, a heritage passport trail, and nearby gorge country.",
+      "activities": [
+        "Follow the heritage trail",
+        "See mine ruins",
+        "Walk creek-side streets",
+        "Visit nearby gorges"
+      ],
+      "tips": [
+        "A heritage passport is useful",
+        "Summer heat is strong",
+        "Many sites are outdoors and exposed"
+      ],
+      "photos": []
+    },
+    {
+      "id": "hawker-au",
+      "name": "Hawker",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -31.887,
+      "lng": 138.419,
+      "pop": 300,
+      "tier": "town",
+      "category": "town",
+      "locale": "desert",
+      "stay": "1-2 days",
+      "tagline": "Flinders Ranges roadhouse town for Wilpena, Moralana, and outback lookouts",
+      "general": "Hawker is a small Flinders Ranges service town and a practical stop for Wilpena Pound, Moralana Scenic Drive, and surrounding outback lookouts.",
+      "activities": [
+        "Drive Moralana Scenic Drive",
+        "Use as a Wilpena gateway",
+        "Visit nearby lookouts",
+        "Restock fuel and water"
+      ],
+      "tips": [
+        "Fuel up here",
+        "Summer heat is extreme",
+        "Unsealed roads close after rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "new-norfolk-au",
+      "name": "New Norfolk",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -42.78,
+      "lng": 147.059,
+      "pop": 6200,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Derwent Valley town of hops, heritage, and Mount Field access",
+      "general": "New Norfolk sits on the Derwent above Hobart, with heritage buildings, hop-country history, and the main road toward Mount Field National Park.",
+      "activities": [
+        "Walk the riverfront",
+        "Visit heritage streets",
+        "Drive to Mount Field",
+        "See nearby hop-country valleys"
+      ],
+      "tips": [
+        "Winter mornings are cold",
+        "A car is needed for the park",
+        "Weekend traffic heads to Mount Field"
+      ],
+      "photos": []
+    },
+    {
+      "id": "huonville-au",
+      "name": "Huonville",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -43.026,
+      "lng": 147.048,
+      "pop": 2800,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Huon Valley apple-country town for river, cider, and southern forest roads",
+      "general": "Huonville is the Huon Valley's main town, with river access, farm gates, cider, and roads toward Geeveston, Hartz Mountains, and the far south.",
+      "activities": [
+        "Walk the Huon riverfront",
+        "Taste local cider or produce",
+        "Drive toward Geeveston",
+        "Visit nearby farm gates"
+      ],
+      "tips": [
+        "Winter is cold and damp",
+        "A car is essential",
+        "Far-south roads are winding"
+      ],
+      "photos": []
+    },
+    {
+      "id": "richmond-au",
+      "name": "Richmond",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -42.734,
+      "lng": 147.44,
+      "pop": 900,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "0.5-1 day",
+      "tagline": "Georgian village of Australia's oldest bridge and convict-era streets",
+      "general": "Richmond is a compact Georgian village near Hobart, with Australia's oldest bridge, galleries, tea rooms, and a popular day-trip streetscape.",
+      "activities": [
+        "See Richmond Bridge",
+        "Walk the village streets",
+        "Visit galleries",
+        "Combine with Coal River wine"
+      ],
+      "tips": [
+        "Day-trip crowds peak at midday",
+        "Parking is limited",
+        "Go early or late"
+      ],
+      "photos": []
+    },
+    {
+      "id": "deloraine-au",
+      "name": "Deloraine",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -41.525,
+      "lng": 146.66,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Meander Valley town of crafts, murals, and Great Western Tiers views",
+      "general": "Deloraine is a Meander Valley town with murals, craft, river walks, and a gateway to the Great Western Tiers, Mole Creek, and Cradle Mountain roads.",
+      "activities": [
+        "Walk the Meander River",
+        "Browse craft shops",
+        "See town murals",
+        "Drive toward Mole Creek caves"
+      ],
+      "tips": [
+        "Winter frosts are common",
+        "A car is essential",
+        "Book Cradle Mountain stays separately"
+      ],
+      "photos": []
+    },
+    {
+      "id": "stanley-au",
+      "name": "Stanley",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -40.762,
+      "lng": 145.298,
+      "pop": 500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Fishing village beneath The Nut, with high-chair views and west-coast light",
+      "general": "Stanley is a tiny north-west fishing village beneath the volcanic Nut, with a chairlift or steep walk, heritage cottages, and wild coastal light.",
+      "activities": [
+        "Climb or ride to The Nut",
+        "Walk heritage streets",
+        "See Highfield Historic Site",
+        "Watch sunset over the west"
+      ],
+      "tips": [
+        "Wind is strong on The Nut",
+        "Rooms are limited",
+        "Weather changes quickly"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bicheno-au",
+      "name": "Bicheno",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -41.875,
+      "lng": 148.302,
+      "pop": 900,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "East-coast blowhole town for penguins, granite, and Freycinet access",
+      "general": "Bicheno is an east-coast fishing town with a blowhole, penguin tours, granite foreshore, and a practical stop toward Freycinet and the Bay of Fires.",
+      "activities": [
+        "See the blowhole",
+        "Join a penguin tour",
+        "Walk the granite foreshore",
+        "Continue to Coles Bay"
+      ],
+      "tips": [
+        "Penguin tours book out",
+        "East-coast weather is changeable",
+        "Book Freycinet stays early"
+      ],
+      "photos": []
+    },
+    {
+      "id": "coles-bay-au",
+      "name": "Coles Bay",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -42.122,
+      "lng": 148.288,
+      "pop": 400,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Freycinet village for Wineglass Bay, granite peaks, and coastal camps",
+      "general": "Coles Bay is the small village gateway to Freycinet National Park, with trailheads for Wineglass Bay, Hazards Beach, and pink-granite peaks.",
+      "activities": [
+        "Walk to Wineglass Bay Lookout",
+        "Continue to the beach if time allows",
+        "Kayak the peninsula",
+        "Watch sunrise on the Hazards"
+      ],
+      "tips": [
+        "Park parking fills early",
+        "Carry water on granite climbs",
+        "Book village rooms far ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "palmerston-au",
+      "name": "Palmerston",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -12.486,
+      "lng": 130.983,
+      "pop": 38000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1 day",
+      "tagline": "Top End satellite city between Darwin, wetlands, and Litchfield roads",
+      "general": "Palmerston is a planned Top End city south of Darwin, with parks, a practical base for commuters, and easy highway access toward Litchfield and the rural hinterland.",
+      "activities": [
+        "Use as a Darwin-side base",
+        "Drive toward Litchfield",
+        "Visit local parks",
+        "Connect to rural markets"
+      ],
+      "tips": [
+        "The dry season is most comfortable",
+        "Crocodile safety applies on waterways",
+        "A car is essential"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mataranka-au",
+      "name": "Mataranka",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -14.928,
+      "lng": 133.068,
+      "pop": 350,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Thermal-pool town on the Roper Highway in Elsey country",
+      "general": "Mataranka is a small Top End town known for thermal pools, paperbark forest, and Elsey National Park on the road between Katherine and the Gulf.",
+      "activities": [
+        "Swim in thermal pools",
+        "Walk paperbark forest",
+        "Visit Elsey National Park",
+        "Rest on the north-south drive"
+      ],
+      "tips": [
+        "The dry season is best",
+        "Respect pool etiquette",
+        "Remote roads need planning"
+      ],
+      "photos": []
+    },
+    {
+      "id": "pine-creek-au",
+      "name": "Pine Creek",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -13.825,
+      "lng": 131.835,
+      "pop": 350,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Gold-rush crossroads town between Kakadu, Katherine, and the Daly",
+      "general": "Pine Creek is a small gold-history town at a Top End crossroads, useful as a stop between Kakadu, Katherine, and the Daly River road.",
+      "activities": [
+        "See gold-history remnants",
+        "Restock fuel",
+        "Use as a Kakadu-Katherine stop",
+        "Visit nearby lookouts"
+      ],
+      "tips": [
+        "Services are limited",
+        "Heat is intense",
+        "Plan fuel carefully"
+      ],
+      "photos": []
+    },
+    {
+      "id": "gosford-au",
+      "name": "Gosford",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.426,
+      "lng": 151.342,
+      "pop": 35000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Central Coast city of waterways, ridges, and Brisbane Water shoreline",
+      "general": "Gosford sits on Brisbane Water with ridge lookouts, waterway parks, and a practical Central Coast base between Sydney and Newcastle.",
+      "activities": [
+        "Walk Brisbane Water foreshore",
+        "Visit nearby lookouts",
+        "Explore West Gosford parks",
+        "Continue to coastal beaches"
+      ],
+      "tips": [
+        "Peak-hour traffic is heavy",
+        "Trains from Sydney are useful",
+        "A car helps for beaches"
+      ],
+      "photos": []
+    },
+    {
+      "id": "terrigal-au",
+      "name": "Terrigal",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.448,
+      "lng": 151.444,
+      "pop": 14000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Central Coast surf village of headland walks and a curved beach",
+      "general": "Terrigal is a busy Central Coast beach village with a curved surf beach, The Skillion headland, rock pools, and cafe streets.",
+      "activities": [
+        "Walk The Skillion",
+        "Swim at the patrolled beach",
+        "Explore rock pools",
+        "Browse the village foreshore"
+      ],
+      "tips": [
+        "Weekends are crowded",
+        "Parking is limited",
+        "Swim between the flags"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kiama-downs-au",
+      "name": "Kiama Downs",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -34.632,
+      "lng": 150.854,
+      "pop": 5000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1 day",
+      "tagline": "South-coast village near blowholes, coastal walks, and Minnamurra",
+      "general": "Kiama Downs sits just north of Kiama with beach access, coastal-walk links, and a quieter stay near the famous blowhole and Minnamurra rainforest.",
+      "activities": [
+        "Walk the coastal path",
+        "Visit Kiama Blowhole",
+        "See Minnamurra Rainforest",
+        "Swim at nearby beaches"
+      ],
+      "tips": [
+        "Blowhole crowds peak at midday",
+        "Weekend traffic from Sydney is heavy",
+        "Rainforest tracks are slippery after rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "ulladulla-au",
+      "name": "Ulladulla",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.357,
+      "lng": 150.472,
+      "pop": 17000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "South-coast harbour town for beaches, headlands, and Murramarang parks",
+      "general": "Ulladulla is a working harbour town with beaches, coastal walks, and access to Murramarang National Park, Batemans Bay, and Milton's food streets.",
+      "activities": [
+        "Walk the harbour",
+        "Visit nearby beaches",
+        "Drive into Murramarang",
+        "Explore Milton"
+      ],
+      "tips": [
+        "Holiday periods are busy",
+        "A car helps for park beaches",
+        "Surf can be strong"
+      ],
+      "photos": []
+    },
+    {
+      "id": "scone-au",
+      "name": "Scone",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -32.05,
+      "lng": 150.868,
+      "pop": 5600,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Horse-capital town of studs, hills, and Upper Hunter ranges",
+      "general": "Scone is the Upper Hunter's horse-country town, with studs, hills, and a stop on inland routes toward the Liverpool Range and Barrington country.",
+      "activities": [
+        "See town horse-country landmarks",
+        "Drive surrounding hills",
+        "Visit nearby lookouts",
+        "Continue toward Barrington"
+      ],
+      "tips": [
+        "A car is essential",
+        "Summer heat is strong",
+        "Event weekends fill rooms"
+      ],
+      "photos": []
+    },
+    {
+      "id": "parkes-au",
+      "name": "Parkes",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.137,
+      "lng": 148.176,
+      "pop": 11000,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Central-west town of the radio telescope, Elvis festival, and wide plains",
+      "general": "Parkes is a central-west service town known for the CSIRO radio telescope, wide plains, and a practical stop on inland New South Wales touring routes.",
+      "activities": [
+        "Visit the radio telescope visitor centre",
+        "Walk town parks",
+        "See heritage main streets",
+        "Use as an inland touring base"
+      ],
+      "tips": [
+        "Elvis festival fills the town",
+        "Summer heat is strong",
+        "A car is essential"
+      ],
+      "photos": []
+    },
+    {
+      "id": "forbes-au",
+      "name": "Forbes",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -33.384,
+      "lng": 148.007,
+      "pop": 8500,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Lachlan River gold-town of heritage streets and inland highway stops",
+      "general": "Forbes sits on the Lachlan River with gold-rush heritage, a compact centre, and a useful stop between Parkes, Cowra, and the western plains.",
+      "activities": [
+        "Walk heritage streets",
+        "Visit the river parks",
+        "See local museums",
+        "Continue west or south"
+      ],
+      "tips": [
+        "Summer heat is strong",
+        "A car is essential",
+        "River parks can flood after rain"
+      ],
+      "photos": []
+    },
+    {
+      "id": "deniliquin-au",
+      "name": "Deniliquin",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -35.53,
+      "lng": 144.96,
+      "pop": 7000,
+      "tier": "town",
+      "category": "town",
+      "locale": "river",
+      "stay": "1 day",
+      "tagline": "Edward River town of wetlands, sheep-country roads, and Ute Muster fame",
+      "general": "Deniliquin is a Riverina town on the Edward River, with river parks, nearby wetlands, and a service hub for western New South Wales and northern Victoria routes.",
+      "activities": [
+        "Walk the river parks",
+        "Visit nearby wetlands",
+        "See town heritage",
+        "Use as a Riverina stop"
+      ],
+      "tips": [
+        "Summer heat is extreme",
+        "Festival weekends are packed",
+        "A car is essential"
+      ],
+      "photos": []
+    },
+    {
+      "id": "wodonga-au",
+      "name": "Wodonga",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -36.121,
+      "lng": 146.888,
+      "pop": 43000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "river",
+      "stay": "1-2 days",
+      "tagline": "Murray twin-city with Albury for river walks, ranges, and Hume Highway stops",
+      "general": "Wodonga sits across the Murray from Albury, with river parklands, nearby ranges, and a practical twin-city base for north-east Victoria and southern New South Wales.",
+      "activities": [
+        "Walk Murray river parklands",
+        "Visit nearby ranges",
+        "Explore the twin-city waterfront",
+        "Drive toward Beechworth or Bright"
+      ],
+      "tips": [
+        "The two-city layout needs a car or bus",
+        "Summer heat is strong",
+        "Holiday traffic uses the Hume"
+      ],
+      "photos": []
+    },
+    {
+      "id": "ararat-au",
+      "name": "Ararat",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.283,
+      "lng": 142.927,
+      "pop": 8300,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1-2 days",
+      "tagline": "Western Victorian town between Grampians peaks and Pyrenees wine hills",
+      "general": "Ararat is a western Victorian service town with heritage streets and a practical base between the Grampians, Pyrenees wineries, and the Western Highway.",
+      "activities": [
+        "Walk heritage streets",
+        "Drive to the Grampians",
+        "Visit nearby Pyrenees cellar doors",
+        "See local lookouts"
+      ],
+      "tips": [
+        "A car is essential",
+        "Summer heat is strong",
+        "Book Grampians stays separately"
+      ],
+      "photos": []
+    },
+    {
+      "id": "hamilton-au",
+      "name": "Hamilton",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -37.744,
+      "lng": 142.022,
+      "pop": 10000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Western District wool town for volcanic plains and south-west touring",
+      "general": "Hamilton is a Western District service town on volcanic plains, useful for routes toward the Grampians, Portland, and the south-west coast.",
+      "activities": [
+        "Walk town parks",
+        "Visit the regional gallery",
+        "Drive volcanic-plains roads",
+        "Continue to the coast or Grampians"
+      ],
+      "tips": [
+        "Weather is changeable",
+        "A car is essential",
+        "Distances are large"
+      ],
+      "photos": []
+    },
+    {
+      "id": "rainbow-beach-au",
+      "name": "Rainbow Beach",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -25.904,
+      "lng": 153.092,
+      "pop": 1200,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Coloured-sand village and barge gateway to K'gari",
+      "general": "Rainbow Beach is a small Cooloola-coast town of coloured cliffs, long beaches, and the Inskip Point barge to K'gari (Fraser Island).",
+      "activities": [
+        "See the coloured sands",
+        "Walk the beach",
+        "Take the barge to K'gari",
+        "Visit nearby Carlo Sandblow"
+      ],
+      "tips": [
+        "Barge queues form in holidays",
+        "4WD is needed for island beaches",
+        "Swim only in safe areas"
+      ],
+      "photos": []
+    },
+    {
+      "id": "1770-au",
+      "name": "1770",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -24.177,
+      "lng": 151.879,
+      "pop": 2000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Town of 1770 and Agnes Water for reef trips and coastal national park",
+      "general": "The Town of 1770 and neighbouring Agnes Water sit at the southern end of the Great Barrier Reef, with quiet beaches, headland walks, and island trips.",
+      "activities": [
+        "Walk the 1770 headland",
+        "Take a reef or island trip",
+        "Swim at Agnes Water",
+        "Visit Eurimbula or Deepwater parks"
+      ],
+      "tips": [
+        "Reef trips are weather dependent",
+        "Services are limited",
+        "Book holiday stays early"
+      ],
+      "photos": []
+    },
+    {
+      "id": "childers-au",
+      "name": "Childers",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -25.237,
+      "lng": 152.279,
+      "pop": 1600,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Heritage main-street town in Bundaberg cane and fruit country",
+      "general": "Childers is a compact heritage town on the Bruce Highway, with a famous main street, nearby farm stalls, and a stop between Hervey Bay and Bundaberg.",
+      "activities": [
+        "Walk the main street",
+        "Visit local museums",
+        "Stop at farm stalls",
+        "Continue to the coast"
+      ],
+      "tips": [
+        "Highway traffic is constant",
+        "Summer heat is strong",
+        "A short stop still needs shade and water"
+      ],
+      "photos": []
+    },
+    {
+      "id": "ayr-au",
+      "name": "Ayr",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -19.576,
+      "lng": 147.406,
+      "pop": 8700,
+      "tier": "town",
+      "category": "town",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Burdekin cane town between Townsville, Bowen, and wetland edges",
+      "general": "Ayr is a Burdekin service town in cane country, with a practical stop on the Bruce Highway and access toward wetlands and the coast.",
+      "activities": [
+        "Walk town parks",
+        "See cane-country surrounds",
+        "Continue to Townsville or Bowen",
+        "Visit nearby coastal villages"
+      ],
+      "tips": [
+        "Summer heat is intense",
+        "Highway driving needs breaks",
+        "A car is essential"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bowen-au",
+      "name": "Bowen",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -20.013,
+      "lng": 148.247,
+      "pop": 11000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Coral Coast mango town of quiet beaches and island views",
+      "general": "Bowen is a quieter Coral Coast town with beaches, island views, mango country, and a less crowded alternative to the Whitsundays strip.",
+      "activities": [
+        "Walk the foreshore",
+        "Swim at Horseshoe Bay",
+        "See island viewpoints",
+        "Eat local mangoes in season"
+      ],
+      "tips": [
+        "Summer heat is intense",
+        "Stinger season applies",
+        "Services are smaller than Airlie Beach"
+      ],
+      "photos": []
+    },
+    {
+      "id": "cardwell-au",
+      "name": "Cardwell",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -18.268,
+      "lng": 146.03,
+      "pop": 1300,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Hinchinbrook Channel town for island views and waterfall hinterland",
+      "general": "Cardwell sits on the Hinchinbrook Channel with island views, a long foreshore, and access to waterfalls and the Thorsborne Trail boat transfers.",
+      "activities": [
+        "Walk the jetty and foreshore",
+        "See Hinchinbrook views",
+        "Visit nearby waterfalls",
+        "Arrange island transfers if hiking"
+      ],
+      "tips": [
+        "Cyclone history still shapes the town",
+        "Trail permits are limited",
+        "Summer humidity is high"
+      ],
+      "photos": []
+    },
+    {
+      "id": "coolangatta-au",
+      "name": "Coolangatta",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.169,
+      "lng": 153.535,
+      "pop": 6000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Southern Gold Coast surf point on the New South Wales border",
+      "general": "Coolangatta is the southern Gold Coast surf town with point breaks, airport access, coastal walks, and an easy crossing to Tweed Heads.",
+      "activities": [
+        "Walk Snapper Rocks to Greenmount",
+        "Surf or watch the points",
+        "Visit Point Danger",
+        "Continue into the hinterland"
+      ],
+      "tips": [
+        "Surf contests fill the town",
+        "Airport noise is nearby",
+        "Swim between the flags"
+      ],
+      "photos": []
+    },
+    {
+      "id": "surfers-paradise-au",
+      "name": "Surfers Paradise",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -28.002,
+      "lng": 153.428,
+      "pop": 26000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "High-rise surf strip of patrolled beaches, nightlife, and coastal paths",
+      "general": "Surfers Paradise is the Gold Coast's high-rise beach strip, with a patrolled surf beach, foreshore paths, and easy access to hinterland rainforests.",
+      "activities": [
+        "Walk the foreshore",
+        "Swim at the patrolled beach",
+        "See hinterland waterfalls",
+        "Ride the tram along the coast"
+      ],
+      "tips": [
+        "School holidays are extremely busy",
+        "Swim between the flags",
+        "Weekend nightlife is loud"
+      ],
+      "photos": []
+    },
+    {
+      "id": "redcliffe-au",
+      "name": "Redcliffe",
+      "country": "Australia",
+      "cc": "AU",
+      "lat": -27.228,
+      "lng": 153.114,
+      "pop": 60000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Moreton Bay peninsula city of jetties, beaches, and island views",
+      "general": "Redcliffe sits on a Moreton Bay peninsula with jetties, family beaches, coastal paths, and views toward Moreton Island and the bay.",
+      "activities": [
+        "Walk the jetty",
+        "Cycle the coastal path",
+        "Swim at family beaches",
+        "See bay lookouts"
+      ],
+      "tips": [
+        "Weekends are busy",
+        "Bay weather changes quickly",
+        "A car or train-bus link helps from Brisbane"
+      ],
+      "photos": []
+    }
+  ],
+  "parks": [
+    {
+      "name": "Namadgi National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -35.65,
+      "lng": 148.95,
+      "area_km2": 1061,
+      "biodiversity": 4,
+      "popularity": 80,
+      "stay": "2-4 days",
+      "category": "national-park",
+      "tagline": "Canberra alpine-ash ranges, snow gums, and Namadgi ridgelines",
+      "summary": "Namadgi National Park protects mountain ranges, snow gums, historic huts, and walking country immediately south of Canberra."
+    },
+    {
+      "name": "Dorrigo National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -30.37,
+      "lng": 152.73,
+      "area_km2": 118,
+      "biodiversity": 5,
+      "popularity": 86,
+      "stay": "0.5-2 days",
+      "category": "rainforest",
+      "tagline": "World Heritage escarpment rainforest and Waterfall Way lookouts",
+      "summary": "Dorrigo National Park covers wet subtropical rainforest, waterfalls, and escarpment lookouts on Waterfall Way east of Armidale."
+    },
+    {
+      "name": "Lamington National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.21,
+      "lng": 153.12,
+      "area_km2": 206,
+      "biodiversity": 5,
+      "popularity": 88,
+      "stay": "1-3 days",
+      "category": "rainforest",
+      "tagline": "Gondwana rainforest plateaus, cliff walks, and Border Ranges views",
+      "summary": "Lamington National Park protects ancient rainforest, cliff-edge walks, and mountain lodges on the Queensland–New South Wales border ranges."
+    },
+    {
+      "name": "Springbrook National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.19,
+      "lng": 153.27,
+      "area_km2": 62,
+      "biodiversity": 5,
+      "popularity": 87,
+      "stay": "0.5-2 days",
+      "category": "rainforest",
+      "tagline": "Waterfalls, canyon lookouts, and glow-worm caves behind the Gold Coast",
+      "summary": "Springbrook National Park is a Gold Coast hinterland plateau of waterfalls, canyon lookouts, Antarctic beech, and cave walks."
+    },
+    {
+      "name": "Girraween National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.83,
+      "lng": 151.91,
+      "area_km2": 117,
+      "biodiversity": 4,
+      "popularity": 82,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Granite tors, wildflowers, and Bald Rock country on the Granite Belt",
+      "summary": "Girraween National Park is a landscape of granite domes, balancing tors, wildflowers, and walking tracks near Stanthorpe."
+    },
+    {
+      "name": "Carnarvon National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -25.05,
+      "lng": 148.23,
+      "area_km2": 2980,
+      "biodiversity": 5,
+      "popularity": 85,
+      "stay": "2-4 days",
+      "category": "national-park",
+      "tagline": "Sandstone gorge, palm pockets, and rock-art galleries in central Queensland",
+      "summary": "Carnarvon National Park is famous for Carnarvon Gorge, a deep sandstone system of palms, creeks, side gorges, and Aboriginal rock art."
+    },
+    {
+      "name": "Eungella National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -21.13,
+      "lng": 148.5,
+      "area_km2": 512,
+      "biodiversity": 5,
+      "popularity": 80,
+      "stay": "1-2 days",
+      "category": "rainforest",
+      "tagline": "Cloudforest plateau above Mackay with platypus pools and escarpment views",
+      "summary": "Eungella National Park sits on a high plateau west of Mackay, with rainforest, platypus-watching pools, and cool escarpment lookouts."
+    },
+    {
+      "name": "Whitsunday Islands National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -20.28,
+      "lng": 148.95,
+      "area_km2": 170,
+      "biodiversity": 4,
+      "popularity": 90,
+      "stay": "1-3 days",
+      "category": "island-park",
+      "tagline": "Island peaks, fringing reef, and Whitehaven's silica beach country",
+      "summary": "Whitsunday Islands National Park protects forested peaks, bays, and beach camps across the island group off Airlie Beach."
+    },
+    {
+      "name": "Great Sandy National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -25.5,
+      "lng": 153.1,
+      "area_km2": 2210,
+      "biodiversity": 5,
+      "popularity": 91,
+      "stay": "2-5 days",
+      "category": "coastal-park",
+      "tagline": "K'gari dunes, coloured sands, rainforest pockets, and long surf beaches",
+      "summary": "Great Sandy National Park includes K'gari (Fraser Island) and Cooloola, with dunes, lakes, rainforest, and long 4WD beaches."
+    },
+    {
+      "name": "Barrington Tops National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -32.05,
+      "lng": 151.48,
+      "area_km2": 765,
+      "biodiversity": 5,
+      "popularity": 83,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Gondwana rainforest, subalpine plateau, and Hunter hinterland walks",
+      "summary": "Barrington Tops National Park rises from subtropical rainforest to a subalpine plateau of snow gums, swamps, and long walks."
+    },
+    {
+      "name": "Wollemi National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -32.85,
+      "lng": 150.2,
+      "area_km2": 5017,
+      "biodiversity": 5,
+      "popularity": 81,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Vast sandstone wilderness of canyons, pagodas, and Wollemi pine country",
+      "summary": "Wollemi National Park is one of New South Wales' largest wilderness areas, with sandstone canyons, pagoda rock, and remote walking."
+    },
+    {
+      "name": "Alpine National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.1,
+      "lng": 147.15,
+      "area_km2": 6460,
+      "biodiversity": 5,
+      "popularity": 86,
+      "stay": "2-5 days",
+      "category": "national-park",
+      "tagline": "Victorian high country of snow plains, cattle-country huts, and peaks",
+      "summary": "Alpine National Park covers Victoria's high country, with snow plains, mountain huts, summer wildflowers, and winter ski access."
+    },
+    {
+      "name": "Great Otway National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -38.7,
+      "lng": 143.5,
+      "area_km2": 1031,
+      "biodiversity": 5,
+      "popularity": 87,
+      "stay": "1-3 days",
+      "category": "coastal-park",
+      "tagline": "Rainforest, waterfalls, and shipwreck-coast cliffs of the Otways",
+      "summary": "Great Otway National Park combines wet forest, waterfalls, Cape Otway lightstation country, and Great Ocean Road coastal cliffs."
+    },
+    {
+      "name": "Port Campbell National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -38.65,
+      "lng": 143.07,
+      "area_km2": 18,
+      "biodiversity": 3,
+      "popularity": 92,
+      "stay": "0.5-1 day",
+      "category": "coastal-park",
+      "tagline": "Limestone stacks, arches, and the Twelve Apostles coast",
+      "summary": "Port Campbell National Park protects the famous limestone stacks, gorges, and clifftop walks of Victoria's shipwreck coast."
+    },
+    {
+      "name": "Croajingolong National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.6,
+      "lng": 149.7,
+      "area_km2": 884,
+      "biodiversity": 5,
+      "popularity": 80,
+      "stay": "2-4 days",
+      "category": "coastal-park",
+      "tagline": "Wilderness coast of inlets, heath, and far-east Gippsland beaches",
+      "summary": "Croajingolong National Park is a long wilderness coast of inlets, heathland, beaches, and remote camps in far-east Victoria."
+    },
+    {
+      "name": "Murray-Sunset National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.7,
+      "lng": 141.5,
+      "area_km2": 6330,
+      "biodiversity": 4,
+      "popularity": 74,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Mallee dunes, pink lakes, and remote north-west Victorian tracks",
+      "summary": "Murray-Sunset National Park protects mallee woodland, dunes, salt lakes, and remote 4WD tracks in Victoria's far north-west."
+    },
+    {
+      "name": "Coffin Bay National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.55,
+      "lng": 135.35,
+      "area_km2": 310,
+      "biodiversity": 4,
+      "popularity": 81,
+      "stay": "1-3 days",
+      "category": "coastal-park",
+      "tagline": "Eyre Peninsula beaches, dunes, and wild limestone headlands",
+      "summary": "Coffin Bay National Park covers dunes, beaches, limestone headlands, and coastal wilderness west of Port Lincoln."
+    },
+    {
+      "name": "Lincoln National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.8,
+      "lng": 135.9,
+      "area_km2": 216,
+      "biodiversity": 4,
+      "popularity": 80,
+      "stay": "1-2 days",
+      "category": "coastal-park",
+      "tagline": "Granite headlands, beaches, and memory-cove country near Port Lincoln",
+      "summary": "Lincoln National Park protects granite headlands, beaches, and coastal woodland on the southern tip of the Eyre Peninsula."
+    },
+    {
+      "name": "Innes National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -35.22,
+      "lng": 136.89,
+      "area_km2": 92,
+      "biodiversity": 4,
+      "popularity": 79,
+      "stay": "1-2 days",
+      "category": "coastal-park",
+      "tagline": "Yorke Peninsula surf, lighthouses, and shipwreck beaches",
+      "summary": "Innes National Park occupies the toe of Yorke Peninsula with surf beaches, lighthouses, inland saline lakes, and shipwreck history."
+    },
+    {
+      "name": "Coorong National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -35.7,
+      "lng": 139.15,
+      "area_km2": 467,
+      "biodiversity": 5,
+      "popularity": 82,
+      "stay": "1-3 days",
+      "category": "coastal-park",
+      "tagline": "Lagoon wilderness of dunes, birdlife, and the Murray Mouth",
+      "summary": "Coorong National Park is a long lagoon and dune system of birdlife, Ngarrindjeri country, and the Murray Mouth."
+    },
+    {
+      "name": "Flinders Chase National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -35.95,
+      "lng": 136.72,
+      "area_km2": 327,
+      "biodiversity": 5,
+      "popularity": 88,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Kangaroo Island wilderness of Remarkable Rocks, Admirals Arch, and wildlife",
+      "summary": "Flinders Chase National Park protects western Kangaroo Island's coastal sculptures, lighthouses, woodland, and abundant wildlife."
+    },
+    {
+      "name": "Southwest National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -43.1,
+      "lng": 146.3,
+      "area_km2": 6183,
+      "biodiversity": 5,
+      "popularity": 84,
+      "stay": "2-6 days",
+      "category": "national-park",
+      "tagline": "Tasmania's wild south-west of button grass, quartzite peaks, and rivers",
+      "summary": "Southwest National Park is a vast World Heritage wilderness of ranges, rivers, button-grass plains, and remote multi-day walks."
+    },
+    {
+      "name": "Franklin-Gordon Wild Rivers National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.4,
+      "lng": 145.75,
+      "area_km2": 4463,
+      "biodiversity": 5,
+      "popularity": 83,
+      "stay": "1-4 days",
+      "category": "national-park",
+      "tagline": "Rainforest rivers, Frenchmans Cap, and the Lyell Highway gorges",
+      "summary": "Franklin-Gordon Wild Rivers National Park protects wild rivers, rainforest, and the Frenchmans Cap massif in western Tasmania."
+    },
+    {
+      "name": "Walls of Jerusalem National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -41.85,
+      "lng": 146.2,
+      "area_km2": 518,
+      "biodiversity": 5,
+      "popularity": 82,
+      "stay": "2-5 days",
+      "category": "national-park",
+      "tagline": "Alpine tarns, pencil pines, and dolerite walls on Tasmania's Central Plateau",
+      "summary": "Walls of Jerusalem National Park is an alpine wilderness of tarns, pencil pines, and dolerite ramparts west of Cradle Mountain."
+    },
+    {
+      "name": "Mount Field National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.68,
+      "lng": 146.57,
+      "area_km2": 159,
+      "biodiversity": 5,
+      "popularity": 86,
+      "stay": "0.5-2 days",
+      "category": "national-park",
+      "tagline": "Russell Falls, tall forest, and alpine boardwalks close to Hobart",
+      "summary": "Mount Field National Park combines waterfalls, giant swamp gum forest, and alpine tarns within easy reach of Hobart."
+    },
+    {
+      "name": "Tasman National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -43.14,
+      "lng": 147.96,
+      "area_km2": 107,
+      "biodiversity": 4,
+      "popularity": 87,
+      "stay": "1-3 days",
+      "category": "coastal-park",
+      "tagline": "Dolerite sea cliffs, Three Capes country, and Tasman Peninsula blowholes",
+      "summary": "Tasman National Park protects some of the world's highest sea cliffs, coastal heath, and the Three Capes walking country."
+    },
+    {
+      "name": "Cape Range National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -22.15,
+      "lng": 113.98,
+      "area_km2": 506,
+      "biodiversity": 5,
+      "popularity": 90,
+      "stay": "2-4 days",
+      "category": "national-park",
+      "tagline": "Ningaloo hinterland of gorges, canyons, and reef-side beaches",
+      "summary": "Cape Range National Park backs Ningaloo Reef with limestone gorges, canyon walks, and beaches where the reef sits close to shore."
+    },
+    {
+      "name": "Francois Peron National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -25.75,
+      "lng": 113.55,
+      "area_km2": 525,
+      "biodiversity": 4,
+      "popularity": 80,
+      "stay": "1-3 days",
+      "category": "coastal-park",
+      "tagline": "Red cliffs, white beaches, and Shark Bay 4WD lagoons",
+      "summary": "Francois Peron National Park occupies the Peron Peninsula with red cliffs, white beaches, inland lagoons, and 4WD-only tracks."
+    },
+    {
+      "name": "Fitzgerald River National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.95,
+      "lng": 119.6,
+      "area_km2": 2972,
+      "biodiversity": 5,
+      "popularity": 81,
+      "stay": "1-3 days",
+      "category": "coastal-park",
+      "tagline": "World-class wildflower coast of ranges, inlets, and rare plants",
+      "summary": "Fitzgerald River National Park is a globally significant wildflower wilderness of ranges, inlets, and southern ocean cliffs."
+    },
+    {
+      "name": "Leeuwin-Naturaliste National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.9,
+      "lng": 115.03,
+      "area_km2": 191,
+      "biodiversity": 4,
+      "popularity": 88,
+      "stay": "1-3 days",
+      "category": "coastal-park",
+      "tagline": "Cape to Cape limestone, caves, karri pockets, and surf points",
+      "summary": "Leeuwin-Naturaliste National Park follows the cape-to-cape coast of limestone cliffs, caves, beaches, and forest pockets."
+    },
+    {
+      "name": "Yanchep National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -31.55,
+      "lng": 115.68,
+      "area_km2": 29,
+      "biodiversity": 4,
+      "popularity": 78,
+      "stay": "0.5-1 day",
+      "category": "national-park",
+      "tagline": "Near-Perth woodland, caves, koalas, and wetland boardwalks",
+      "summary": "Yanchep National Park is a close-to-Perth landscape of woodland, caves, wetlands, and introduced koala viewing."
+    },
+    {
+      "name": "Judbarra / Gregory National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -15.6,
+      "lng": 130.6,
+      "area_km2": 13000,
+      "biodiversity": 4,
+      "popularity": 76,
+      "stay": "2-4 days",
+      "category": "national-park",
+      "tagline": "Victoria River sandstone, boabs, and vast north-west ranges",
+      "summary": "Judbarra / Gregory National Park covers huge Victoria River sandstone country, boabs, gorges, and remote 4WD routes."
+    },
+    {
+      "name": "Tjoritja / West MacDonnell National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -23.7,
+      "lng": 132.7,
+      "area_km2": 2568,
+      "biodiversity": 4,
+      "popularity": 88,
+      "stay": "2-5 days",
+      "category": "national-park",
+      "tagline": "Red Centre ridges, waterholes, and Larapinta Trail country",
+      "summary": "Tjoritja / West MacDonnell National Park protects the West MacDonnell Ranges, waterholes, ochre cliffs, and much of the Larapinta Trail."
+    },
+    {
+      "name": "Finke Gorge National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -24.15,
+      "lng": 132.8,
+      "area_km2": 458,
+      "biodiversity": 4,
+      "popularity": 79,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Palm Valley red gorge and ancient cabbage palms west of Alice",
+      "summary": "Finke Gorge National Park is known for Palm Valley, a red sandstone gorge sheltering ancient red cabbage palms."
+    },
+    {
+      "name": "Warrumbungle National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -31.28,
+      "lng": 149.0,
+      "area_km2": 233,
+      "biodiversity": 4,
+      "popularity": 84,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Volcanic plugs, Breadknife ridge, and dark-sky observatory country",
+      "summary": "Warrumbungle National Park is a volcanic landscape of spires, the Breadknife, and one of Australia's best dark-sky parks."
+    },
+    {
+      "name": "Oxley Wild Rivers National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -30.75,
+      "lng": 152.05,
+      "area_km2": 1453,
+      "biodiversity": 5,
+      "popularity": 78,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Gorges, waterfalls, and wild rivers on the New England escarpment",
+      "summary": "Oxley Wild Rivers National Park protects deep gorges, waterfalls, and wild-river wilderness east of Armidale and Walcha."
+    },
+    {
+      "name": "Nightcap National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.55,
+      "lng": 153.33,
+      "area_km2": 81,
+      "biodiversity": 5,
+      "popularity": 80,
+      "stay": "0.5-2 days",
+      "category": "rainforest",
+      "tagline": "Gondwana rainforest, Minyon Falls, and Nightcap Range walks",
+      "summary": "Nightcap National Park covers World Heritage rainforest, waterfalls, and ridge walks in the Nightcap Range behind Byron Bay."
+    },
+    {
+      "name": "Morton National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -35.1,
+      "lng": 150.2,
+      "area_km2": 1763,
+      "biodiversity": 4,
+      "popularity": 82,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Southern Highlands plateaus, Fitzroy Falls, and Shoalhaven gorges",
+      "summary": "Morton National Park includes plateau lookouts, Fitzroy Falls, Bundanoon walks, and deep Shoalhaven gorges."
+    },
+    {
+      "name": "Ben Boyd National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.15,
+      "lng": 149.95,
+      "area_km2": 104,
+      "biodiversity": 4,
+      "popularity": 79,
+      "stay": "1-2 days",
+      "category": "coastal-park",
+      "tagline": "Red-rock coastline, Light to Light walks, and Twofold Bay heath",
+      "summary": "Ben Boyd National Park protects red coastal rock, heath, historic ruins, and the Light to Light Walk near Eden."
+    },
+    {
+      "name": "Mutawintji National Park",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -31.28,
+      "lng": 142.3,
+      "area_km2": 689,
+      "biodiversity": 4,
+      "popularity": 75,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Bynguano Range gorges, rock art, and far-west desert ranges",
+      "summary": "Mutawintji National Park is a far-west New South Wales range of gorges, permanent water, and important Aboriginal rock-art sites."
+    }
+  ],
+  "pois": [
+    {
+      "name": "Bondi Icebergs",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.894,
+      "lng": 151.274,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Clifftop ocean pool at the south end of Bondi Beach"
+    },
+    {
+      "name": "Manly Beach",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.797,
+      "lng": 151.288,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Harbour-to-ocean beach at the end of the Manly ferry"
+    },
+    {
+      "name": "The Rocks",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.86,
+      "lng": 151.208,
+      "category": "heritage",
+      "popularity": 88,
+      "tagline": "Sandstone laneways and harbour-edge historic quarter in Sydney"
+    },
+    {
+      "name": "Federation Square",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.818,
+      "lng": 144.969,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Melbourne's civic square of galleries, events, and river views"
+    },
+    {
+      "name": "Great Ocean Road Memorial Arch",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -38.428,
+      "lng": 144.058,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Gateway arch on the surf-coast start of the Great Ocean Road"
+    },
+    {
+      "name": "Mount Wellington / kunanyi",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.896,
+      "lng": 147.238,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Dolerite plateau lookout rising behind Hobart"
+    },
+    {
+      "name": "Port Arthur Penitentiary",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -43.148,
+      "lng": 147.853,
+      "category": "heritage",
+      "popularity": 89,
+      "tagline": "Convict ruins at the heart of the Port Arthur Historic Site"
+    },
+    {
+      "name": "Mindil Beach Sunset Market",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -12.445,
+      "lng": 130.832,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Dry-season Darwin sunset market on a tropical beach"
+    },
+    {
+      "name": "Cable Beach",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -17.961,
+      "lng": 122.208,
+      "category": "landmark",
+      "popularity": 91,
+      "tagline": "Broad Kimberley beach famous for camel sunsets"
+    },
+    {
+      "name": "The Pinnacle Lookout",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.16,
+      "lng": 142.53,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Classic Gariwerd sandstone viewpoint above Halls Gap"
+    },
+    {
+      "name": "MacKenzie Falls",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -37.11,
+      "lng": 142.41,
+      "category": "landmark",
+      "popularity": 85,
+      "tagline": "Powerful Grampians waterfall reached by a stepped gorge path"
+    },
+    {
+      "name": "Remarkable Rocks",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.0,
+      "lng": 136.71,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Wind-carved granite sculptures in Flinders Chase"
+    },
+    {
+      "name": "Admirals Arch",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.07,
+      "lng": 136.7,
+      "category": "landmark",
+      "popularity": 87,
+      "tagline": "Coastal rock arch and New Zealand fur-seal colony on Kangaroo Island"
+    },
+    {
+      "name": "The Nut",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -40.764,
+      "lng": 145.303,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Volcanic plug rising above Stanley on Tasmania's north-west coast"
+    },
+    {
+      "name": "Bay of Fires",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -41.1,
+      "lng": 148.3,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Orange-lichen granite and pale beaches of Tasmania's north-east"
+    },
+    {
+      "name": "Lake Argyle",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -16.38,
+      "lng": 128.75,
+      "category": "landmark",
+      "popularity": 85,
+      "tagline": "Vast East Kimberley reservoir among red ranges"
+    },
+    {
+      "name": "Bungle Bungle Range",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -17.45,
+      "lng": 128.4,
+      "category": "landmark",
+      "popularity": 91,
+      "tagline": "Striped sandstone beehive domes of Purnululu"
+    },
+    {
+      "name": "Turquoise Bay",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -21.87,
+      "lng": 114.01,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Ningaloo snorkel beach with a strong current drift"
+    },
+    {
+      "name": "Shell Beach",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -26.23,
+      "lng": 113.81,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Shark Bay beach made of billions of tiny cockle shells"
+    },
+    {
+      "name": "Monkey Mia",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -25.793,
+      "lng": 113.721,
+      "category": "wildlife",
+      "popularity": 88,
+      "tagline": "Shark Bay beach known for wild bottlenose dolphin visits"
+    },
+    {
+      "name": "Valley of the Giants Tree Top Walk",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.98,
+      "lng": 116.9,
+      "category": "landmark",
+      "popularity": 87,
+      "tagline": "Elevated walk through tingle forest near Walpole"
+    },
+    {
+      "name": "Gloucester Tree",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.45,
+      "lng": 116.06,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Historic fire-lookout karri climb near Pemberton"
+    },
+    {
+      "name": "Wave Rock Hyden",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -32.443,
+      "lng": 118.897,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Granite wave formation in inland Western Australia"
+    },
+    {
+      "name": "Lake Pedder",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.96,
+      "lng": 146.18,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Expansive south-west Tasmanian lake among quartzite ranges"
+    },
+    {
+      "name": "Wineglass Bay Beach",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -42.166,
+      "lng": 148.309,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "White-sand bay reached by the Freycinet saddle walk"
+    },
+    {
+      "name": "Cape Hauy",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -43.14,
+      "lng": 148.01,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Dolerite sea stacks and clifftop walk on the Tasman Peninsula"
+    },
+    {
+      "name": "Fitzroy Falls",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -34.649,
+      "lng": 150.48,
+      "category": "landmark",
+      "popularity": 83,
+      "tagline": "Southern Highlands waterfall plunging into Morton sandstone gorge"
+    },
+    {
+      "name": "Minyon Falls",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.614,
+      "lng": 153.392,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Nightcap Range waterfall and rainforest lookout"
+    },
+    {
+      "name": "Purling Brook Falls",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -28.189,
+      "lng": 153.271,
+      "category": "landmark",
+      "popularity": 83,
+      "tagline": "Springbrook plateau waterfall and canyon-rim walk"
+    },
+    {
+      "name": "Millaa Millaa Falls",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -17.496,
+      "lng": 145.607,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Classic Tablelands waterfall in a rainforest amphitheatre"
+    },
+    {
+      "name": "Cape Tribulation Beach",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -16.081,
+      "lng": 145.464,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Rainforest-to-reef beach in the Daintree"
+    },
+    {
+      "name": "Whitehaven Hill Inlet",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -20.274,
+      "lng": 149.013,
+      "category": "landmark",
+      "popularity": 92,
+      "tagline": "Swirling silica sands at the northern end of Whitehaven Beach"
+    },
+    {
+      "name": "K'gari Lake McKenzie",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -25.45,
+      "lng": 153.05,
+      "category": "landmark",
+      "popularity": 89,
+      "tagline": "Clear perched lake in the dunes of K'gari"
+    },
+    {
+      "name": "Indian Head K'gari",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -25.0,
+      "lng": 153.36,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Headland lookout for marine life on K'gari's east coast"
+    },
+    {
+      "name": "Three Sisters Echo Point",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.732,
+      "lng": 150.312,
+      "category": "landmark",
+      "popularity": 93,
+      "tagline": "Main lookout terrace for the Blue Mountains Three Sisters"
+    },
+    {
+      "name": "Jenolan Caves",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -33.82,
+      "lng": 150.02,
+      "category": "landmark",
+      "popularity": 88,
+      "tagline": "Limestone cave system at the western end of the Six Foot Track"
+    },
+    {
+      "name": "Mount Kosciuszko Summit",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -36.456,
+      "lng": 148.263,
+      "category": "landmark",
+      "popularity": 89,
+      "tagline": "Australia's highest summit on the Main Range"
+    },
+    {
+      "name": "Wilpena Pound",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -31.56,
+      "lng": 138.6,
+      "category": "landmark",
+      "popularity": 87,
+      "tagline": "Natural amphitheatre at the heart of the Flinders Ranges"
+    },
+    {
+      "name": "Simpson Desert Dunes",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -24.6,
+      "lng": 137.0,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Parallel red dunes of Australia's great central desert"
+    },
+    {
+      "name": "Gantheaume Point",
+      "country": "Australia",
+      "cc": "au",
+      "lat": -17.97,
+      "lng": 122.18,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Red pindan cliffs and dinosaur footprints near Broome"
+    }
+  ],
+  "hikes": [
+    {
+      "id": "light-to-light-walk-au",
+      "name": "Light to Light Walk",
+      "length_km": 31,
+      "ascent_m": 700,
+      "difficulty": "moderate",
+      "network": "NSW coastal walk",
+      "popularity": 82,
+      "tier": "regional",
+      "tagline": "Ben Boyd coastal walk between Boyds Tower and Green Cape",
+      "summary": "The Light to Light Walk follows red coastal rock, heath, beaches, and historic ruins between Boyds Tower and Green Cape Lightstation.",
+      "tips": [
+        "Campsites should be booked",
+        "Weather is exposed",
+        "Check park alerts for fire or storms"
+      ],
+      "geometry": [
+        [
+          149.925,
+          -37.104
+        ],
+        [
+          149.94,
+          -37.16
+        ],
+        [
+          149.97,
+          -37.22
+        ],
+        [
+          150.05,
+          -37.26
+        ]
+      ],
+      "start_name": "Boyds Tower",
+      "end_name": "Green Cape",
+      "start_instructions": "Most walkers start at Boyds Tower south of Eden and finish at Green Cape.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "dove-lake-circuit-au",
+      "name": "Dove Lake Circuit",
+      "length_km": 6,
+      "ascent_m": 150,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 90,
+      "tier": "regional",
+      "tagline": "Boardwalk and lakeshore loop under Cradle Mountain",
+      "summary": "The Dove Lake Circuit is an accessible loop of boardwalk, lakeshore, and rainforest beneath Cradle Mountain.",
+      "tips": [
+        "Start early for parking",
+        "Weather changes quickly",
+        "Stay on boardwalks to protect vegetation"
+      ],
+      "geometry": [
+        [
+          145.961,
+          -41.661
+        ],
+        [
+          145.968,
+          -41.655
+        ],
+        [
+          145.958,
+          -41.65
+        ],
+        [
+          145.961,
+          -41.661
+        ]
+      ],
+      "start_name": "Dove Lake car park",
+      "end_name": "Dove Lake car park",
+      "start_instructions": "Start from the Dove Lake car park after the Cradle Mountain shuttle.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "pinnacle-walk-grampians-au",
+      "name": "The Pinnacle Walk",
+      "length_km": 4,
+      "ascent_m": 280,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Stepped sandstone climb to the Halls Gap viewpoint",
+      "summary": "The Pinnacle Walk climbs from Halls Gap through Wonderland sandstone to a classic Gariwerd lookout.",
+      "tips": [
+        "Start early in heat",
+        "Rock is slippery after rain",
+        "Carry water on the climb"
+      ],
+      "geometry": [
+        [
+          142.52,
+          -37.147
+        ],
+        [
+          142.528,
+          -37.155
+        ],
+        [
+          142.533,
+          -37.16
+        ]
+      ],
+      "start_name": "Wonderland car park",
+      "end_name": "The Pinnacle",
+      "start_instructions": "Start from the Wonderland car park above Halls Gap.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-gower-track-au",
+      "name": "Mount Gower Track",
+      "length_km": 14,
+      "ascent_m": 875,
+      "difficulty": "hard",
+      "network": "Lord Howe guided walk",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Guided cloudforest climb on Lord Howe Island",
+      "summary": "The Mount Gower Track is a guided climb through palm forest and cloudforest to the summit of Lord Howe Island.",
+      "tips": [
+        "A licensed guide is required",
+        "The walk is long and exposed in places",
+        "Book well ahead"
+      ],
+      "geometry": [
+        [
+          159.07,
+          -31.55
+        ],
+        [
+          159.075,
+          -31.565
+        ],
+        [
+          159.078,
+          -31.585
+        ]
+      ],
+      "start_name": "Lower Road",
+      "end_name": "Mount Gower",
+      "start_instructions": "Guided groups start from the southern settlement end of Lord Howe Island.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "kings-canyon-rim-walk-au",
+      "name": "Kings Canyon Rim Walk",
+      "length_km": 6,
+      "ascent_m": 300,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 91,
+      "tier": "major",
+      "tagline": "Red sandstone rim circuit above Watarrka's canyon floor",
+      "summary": "The Kings Canyon Rim Walk climbs steeply then circuits the canyon rim past the Garden of Eden and sheer red walls.",
+      "tips": [
+        "Start at dawn in warm months",
+        "Carry more water than you think",
+        "The first climb is the steepest"
+      ],
+      "geometry": [
+        [
+          131.545,
+          -24.255
+        ],
+        [
+          131.56,
+          -24.248
+        ],
+        [
+          131.57,
+          -24.251
+        ],
+        [
+          131.545,
+          -24.255
+        ]
+      ],
+      "start_name": "Kings Canyon car park",
+      "end_name": "Kings Canyon car park",
+      "start_instructions": "Start from the signed rim-walk car park in Watarrka National Park.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "fortescue-falls-loop-au",
+      "name": "Dales Gorge Walk",
+      "length_km": 4,
+      "ascent_m": 180,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Karijini gorge loop of Fortescue Falls, Fern Pool, and rim views",
+      "summary": "The Dales Gorge Walk links Fortescue Falls, Fern Pool, and a rim return through Karijini's red banded iron formations.",
+      "tips": [
+        "Steps are steep",
+        "Pools may close after rain",
+        "Carry water and sun protection"
+      ],
+      "geometry": [
+        [
+          118.55,
+          -22.48
+        ],
+        [
+          118.555,
+          -22.478
+        ],
+        [
+          118.56,
+          -22.476
+        ],
+        [
+          118.55,
+          -22.48
+        ]
+      ],
+      "start_name": "Dales Gorge car park",
+      "end_name": "Dales Gorge car park",
+      "start_instructions": "Start from the Dales Gorge day-use car park in Karijini National Park.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "cape-otway-lightstation-walk-au",
+      "name": "Cape Otway Lightstation Walk",
+      "length_km": 3,
+      "ascent_m": 80,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Coastal woodland walk to the Otway lighthouse",
+      "summary": "A short Great Otway walk through coastal woodland to Cape Otway Lightstation, with koala habitat and shipwreck-coast views.",
+      "tips": [
+        "Lighthouse entry is ticketed",
+        "Koalas are often in roadside trees",
+        "Weather is changeable"
+      ],
+      "geometry": [
+        [
+          143.512,
+          -38.857
+        ],
+        [
+          143.512,
+          -38.86
+        ],
+        [
+          143.511,
+          -38.857
+        ]
+      ],
+      "start_name": "Cape Otway car park",
+      "end_name": "Cape Otway Lightstation",
+      "start_instructions": "Start from the Cape Otway Lightstation car park off the Great Ocean Road.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "fitzroy-falls-east-rim-au",
+      "name": "Fitzroy Falls East Rim Track",
+      "length_km": 4,
+      "ascent_m": 80,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 81,
+      "tier": "regional",
+      "tagline": "Plateau lookouts above Morton National Park's sandstone gorge",
+      "summary": "The East Rim Track follows the plateau edge from Fitzroy Falls visitor centre past multiple gorge lookouts.",
+      "tips": [
+        "Boardwalks can be slippery",
+        "Stay behind fences",
+        "Combine with the west rim if time allows"
+      ],
+      "geometry": [
+        [
+          150.48,
+          -34.649
+        ],
+        [
+          150.49,
+          -34.652
+        ],
+        [
+          150.498,
+          -34.655
+        ]
+      ],
+      "start_name": "Fitzroy Falls visitor centre",
+      "end_name": "East Rim lookouts",
+      "start_instructions": "Start at the Fitzroy Falls visitor centre in Morton National Park.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "lamington-border-track-au",
+      "name": "Border Track",
+      "length_km": 21,
+      "ascent_m": 700,
+      "difficulty": "moderate",
+      "network": "Gondwana rainforest walk",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Lamington plateau rainforest walk between O'Reilly's and Binna Burra",
+      "summary": "The Border Track crosses Lamington's rainforest plateau between O'Reilly's and Binna Burra through World Heritage forest.",
+      "tips": [
+        "Leeches are common after rain",
+        "Carry a headlamp for late finishes",
+        "Transport is needed between ends"
+      ],
+      "geometry": [
+        [
+          153.13,
+          -28.23
+        ],
+        [
+          153.16,
+          -28.22
+        ],
+        [
+          153.19,
+          -28.2
+        ]
+      ],
+      "start_name": "O'Reilly's",
+      "end_name": "Binna Burra",
+      "start_instructions": "Walkers usually start at O'Reilly's Green Mountains and finish at Binna Burra.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "toolona-creek-circuit-au",
+      "name": "Toolona Creek Circuit",
+      "length_km": 18,
+      "ascent_m": 900,
+      "difficulty": "hard",
+      "network": "Lamington day walk",
+      "popularity": 78,
+      "tier": "regional",
+      "tagline": "Waterfall gorge and Antarctic beech circuit from O'Reilly's",
+      "summary": "The Toolona Creek Circuit follows a rainforest gorge of waterfalls before returning along the Border Track through Antarctic beech.",
+      "tips": [
+        "The gorge is slippery",
+        "Start early",
+        "Carry leech protection after rain"
+      ],
+      "geometry": [
+        [
+          153.13,
+          -28.23
+        ],
+        [
+          153.145,
+          -28.24
+        ],
+        [
+          153.15,
+          -28.235
+        ],
+        [
+          153.13,
+          -28.23
+        ]
+      ],
+      "start_name": "O'Reilly's",
+      "end_name": "O'Reilly's",
+      "start_instructions": "Start from the signed circuit at O'Reilly's Green Mountains.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-warning-wollumbin-au",
+      "name": "Wollumbin Summit Track",
+      "length_km": 9,
+      "ascent_m": 850,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "popularity": 83,
+      "tier": "regional",
+      "tagline": "Steep rainforest climb of the Tweed volcanic plug",
+      "summary": "The Wollumbin Summit Track climbs steep rainforest and rock to the remnant volcanic plug of the Tweed caldera.",
+      "tips": [
+        "Check current access and cultural guidance before going",
+        "The climb is steep and slippery",
+        "Start before dawn for sunrise"
+      ],
+      "geometry": [
+        [
+          153.27,
+          -28.4
+        ],
+        [
+          153.271,
+          -28.397
+        ],
+        [
+          153.27,
+          -28.395
+        ]
+      ],
+      "start_name": "Wollumbin car park",
+      "end_name": "Wollumbin summit",
+      "start_instructions": "Start from the signed national-park car park if the summit track is open.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "frenchman-peak-au",
+      "name": "Frenchman Peak Walk",
+      "length_km": 3,
+      "ascent_m": 260,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 84,
+      "tier": "regional",
+      "tagline": "Steep granite climb above Cape Le Grand's white beaches",
+      "summary": "The Frenchman Peak Walk climbs a granite dome above Cape Le Grand for views of Lucky Bay, Thistle Cove, and the Recherche islands.",
+      "tips": [
+        "Rock is steep and exposed",
+        "Start early",
+        "Carry water and sun protection"
+      ],
+      "geometry": [
+        [
+          122.14,
+          -33.99
+        ],
+        [
+          122.145,
+          -33.987
+        ],
+        [
+          122.15,
+          -33.985
+        ]
+      ],
+      "start_name": "Frenchman Peak car park",
+      "end_name": "Frenchman Peak",
+      "start_instructions": "Start from the signed car park inside Cape Le Grand National Park.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "bluff-knoll-walk-au",
+      "name": "Bluff Knoll Walk",
+      "length_km": 6,
+      "ascent_m": 650,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "popularity": 83,
+      "tier": "regional",
+      "tagline": "Stirling Range summit climb through cloud-forest heath",
+      "summary": "The Bluff Knoll Walk climbs the Stirling Range's best-known peak through heath and cloud-prone slopes to a wide southern-ocean view.",
+      "tips": [
+        "Weather closes in quickly",
+        "Carry warm layers even in summer",
+        "Dieback hygiene stations must be used"
+      ],
+      "geometry": [
+        [
+          118.25,
+          -34.37
+        ],
+        [
+          118.255,
+          -34.365
+        ],
+        [
+          118.257,
+          -34.36
+        ]
+      ],
+      "start_name": "Bluff Knoll car park",
+      "end_name": "Bluff Knoll",
+      "start_instructions": "Start from the Bluff Knoll car park in Stirling Range National Park.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-field-tarn-shelf-au",
+      "name": "Tarn Shelf Track",
+      "length_km": 12,
+      "ascent_m": 450,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 82,
+      "tier": "regional",
+      "tagline": "Alpine lakes and pandani above Mount Field's plateau",
+      "summary": "The Tarn Shelf Track visits alpine lakes, pandani, and ski-field country above Mount Field, often combined with Lake Webster or Rodway Hut.",
+      "tips": [
+        "Snow is possible in any season",
+        "Boardwalks are icy in winter",
+        "Start from Lake Dobson"
+      ],
+      "geometry": [
+        [
+          146.59,
+          -42.68
+        ],
+        [
+          146.58,
+          -42.67
+        ],
+        [
+          146.57,
+          -42.665
+        ],
+        [
+          146.59,
+          -42.68
+        ]
+      ],
+      "start_name": "Lake Dobson",
+      "end_name": "Lake Dobson",
+      "start_instructions": "Start from Lake Dobson at the top of the Mount Field road.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "russell-falls-walk-au",
+      "name": "Russell Falls Walk",
+      "length_km": 2,
+      "ascent_m": 60,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Short rainforest walk to Tasmania's most famous waterfall",
+      "summary": "The Russell Falls Walk is an easy rainforest path from Mount Field visitor centre to the three-tier waterfall.",
+      "tips": [
+        "The path is popular and easy",
+        "Continue to Horseshoe Falls if time allows",
+        "Winter spray is cold"
+      ],
+      "geometry": [
+        [
+          146.71,
+          -42.682
+        ],
+        [
+          146.708,
+          -42.676
+        ]
+      ],
+      "start_name": "Mount Field visitor centre",
+      "end_name": "Russell Falls",
+      "start_instructions": "Start from the Mount Field visitor centre car park.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "spit-bridge-to-manly-au",
+      "name": "Spit Bridge to Manly Walk",
+      "length_km": 10,
+      "ascent_m": 280,
+      "difficulty": "easy",
+      "network": "Sydney harbour walk",
+      "popularity": 89,
+      "tier": "regional",
+      "tagline": "Harbour bushland walk from The Spit to Manly Wharf",
+      "summary": "The Spit to Manly Walk follows Sydney Harbour through bushland, coves, Clontarf, and headlands to Manly Wharf.",
+      "tips": [
+        "Go at low tide for some rock sections",
+        "Buses or ferries connect both ends",
+        "Carry water on hot days"
+      ],
+      "geometry": [
+        [
+          151.246,
+          -33.806
+        ],
+        [
+          151.26,
+          -33.8
+        ],
+        [
+          151.284,
+          -33.8
+        ]
+      ],
+      "start_name": "Spit Bridge",
+      "end_name": "Manly Wharf",
+      "start_instructions": "Start at the northern end of Spit Bridge and follow the signed harbour track.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "manly-scenic-walkway-au",
+      "name": "Manly Scenic Walkway",
+      "length_km": 10,
+      "ascent_m": 250,
+      "difficulty": "easy",
+      "network": "Sydney harbour walk",
+      "popularity": 85,
+      "tier": "regional",
+      "tagline": "North Head and harbour-edge walk from Manly",
+      "summary": "The Manly Scenic Walkway links harbour coves, North Head views, and coastal bushland around the Manly peninsula.",
+      "tips": [
+        "Sections can be walked separately",
+        "North Head is exposed to wind",
+        "Combine with the ferry"
+      ],
+      "geometry": [
+        [
+          151.284,
+          -33.8
+        ],
+        [
+          151.3,
+          -33.81
+        ],
+        [
+          151.3,
+          -33.822
+        ]
+      ],
+      "start_name": "Manly Wharf",
+      "end_name": "North Head",
+      "start_instructions": "Start from Manly Wharf and follow signs toward North Head or The Spit.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "cape-hauy-track-au",
+      "name": "Cape Hauy Track",
+      "length_km": 9,
+      "ascent_m": 450,
+      "difficulty": "moderate",
+      "network": "Tasman Peninsula day walk",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Dolerite cliffs and sea stacks at the end of the Three Capes country",
+      "summary": "The Cape Hauy Track runs from Fortescue Bay through coastal heath to one of Tasmania's most dramatic dolerite lookouts.",
+      "tips": [
+        "The last lookout is exposed",
+        "Carry layers",
+        "Add time if combining with Fortescue Bay swimming"
+      ],
+      "geometry": [
+        [
+          147.96,
+          -43.14
+        ],
+        [
+          147.99,
+          -43.145
+        ],
+        [
+          148.01,
+          -43.15
+        ]
+      ],
+      "start_name": "Fortescue Bay",
+      "end_name": "Cape Hauy",
+      "start_instructions": "Start from the Fortescue Bay car park on the Tasman Peninsula.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "hinchinbrook-lookout-walk-au",
+      "name": "Hinchinbrook Lookout Walk",
+      "length_km": 2,
+      "ascent_m": 80,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 74,
+      "tier": "local",
+      "tagline": "Short Cardwell-range lookout toward Hinchinbrook Island",
+      "summary": "A short hinterland walk to a lookout over the Hinchinbrook Channel and island massif near Cardwell.",
+      "tips": [
+        "The road is winding",
+        "Carry water",
+        "Cassowaries may be on nearby roads"
+      ],
+      "geometry": [
+        [
+          145.95,
+          -18.25
+        ],
+        [
+          145.955,
+          -18.248
+        ]
+      ],
+      "start_name": "Lookout car park",
+      "end_name": "Hinchinbrook Lookout",
+      "start_instructions": "Start from the signed lookout car park west of Cardwell.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-kosciuszko-summit-walk-au",
+      "name": "Mount Kosciuszko Summit Walk",
+      "length_km": 13,
+      "ascent_m": 300,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 90,
+      "tier": "major",
+      "tagline": "High-country walk from Thredbo or Charlotte Pass to Australia's summit",
+      "summary": "The Kosciuszko Summit Walk crosses alpine herbfields and metal walkway to the highest point on the Australian mainland.",
+      "tips": [
+        "Weather can be severe in any season",
+        "The Thredbo chairlift shortens the walk",
+        "Carry sun and wind protection"
+      ],
+      "geometry": [
+        [
+          148.305,
+          -36.504
+        ],
+        [
+          148.28,
+          -36.48
+        ],
+        [
+          148.263,
+          -36.456
+        ]
+      ],
+      "start_name": "Thredbo Kosciuszko Express",
+      "end_name": "Mount Kosciuszko",
+      "start_instructions": "Most summer walkers start from the top of the Thredbo Kosciuszko Express chairlift.",
+      "country": "Australia",
+      "cc": "au",
+      "route_type": "hiking",
+      "photos": []
+    }
+  ]
+}

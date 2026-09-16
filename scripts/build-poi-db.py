@@ -17,10 +17,16 @@ from place_kinds import infer_poi_category, is_park_place_name, load_park_names
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = ROOT / "scripts" / "schema" / "poi.sql"
 SEED_PATH = ROOT / "scripts" / "data" / "europe-poi-seed.json"
+OCEANIA_SEED_PATH = ROOT / "scripts" / "data" / "oceania-seed.json"
 TRIP_DIR = ROOT / "Trip"
 DB_PATH = ROOT / "Trip" / "poi" / "poi.db"
 MANIFEST_PATH = ROOT / "Trip" / "poi" / "manifest.json"
 PLACE_DETAILS = ROOT / "Trip" / "place-details.json"
+
+REGIONS = {
+    "europe": "Europe",
+    "oceania": "Oceania",
+}
 
 
 def slugify(name: str, country: str) -> str:
@@ -86,11 +92,13 @@ def merge_entry(by_key: dict[str, dict], entry: dict, *, prefer: bool = False) -
     country = entry.get("country", "").strip()
     if not name:
         return
-    key = slugify(name, country or "europe")
+    region_id = entry.get("region_id", "europe")
+    key = f"{region_id}:{slugify(name, country or region_id)}"
     entry = {
         **entry,
         "name": name,
         "country": country,
+        "region_id": region_id,
         "source": entry.get("source", "curated"),
     }
     if prefer or key not in by_key:
@@ -116,7 +124,13 @@ def main() -> None:
 
     if SEED_PATH.is_file():
         for entry in json.loads(SEED_PATH.read_text(encoding="utf-8")):
-            row = {**entry, "source": "curated"}
+            row = {**entry, "source": "curated", "region_id": "europe"}
+            merge_entry(by_key, row, prefer=True)
+
+    if OCEANIA_SEED_PATH.is_file():
+        oceania = json.loads(OCEANIA_SEED_PATH.read_text(encoding="utf-8"))
+        for entry in oceania.get("pois", []):
+            row = {**entry, "source": "curated", "region_id": "oceania"}
             merge_entry(by_key, row, prefer=True)
 
     if args.include_journey:
@@ -144,10 +158,12 @@ def main() -> None:
     """
 
     rows_out = []
-    for entry in sorted(by_key.values(), key=lambda r: (r.get("country", ""), r.get("name", ""))):
+    counts: dict[str, int] = {}
+    for entry in sorted(by_key.values(), key=lambda r: (r.get("region_id", ""), r.get("country", ""), r.get("name", ""))):
         name = entry["name"]
         if is_park_place_name(name, park_names):
             continue
+        region_id = entry.get("region_id", "europe")
         country = entry.get("country") or ""
         lat = float(entry.get("lat", 0))
         lng = float(entry.get("lng", 0))
@@ -178,7 +194,7 @@ def main() -> None:
         rows_out.append(
             (
                 poi_id,
-                "europe",
+                region_id,
                 entry.get("osm_id"),
                 name,
                 country,
@@ -199,16 +215,18 @@ def main() -> None:
                 photos,
                 highlights,
                 entry.get("source", "catalog"),
-                enriched,
+                1 if region_id == "oceania" else enriched,
                 now,
             )
         )
+        counts[region_id] = counts.get(region_id, 0) + 1
 
     conn.executemany(insert, rows_out)
-    conn.execute(
-        "INSERT INTO regions (id, label, poi_count) VALUES (?, ?, ?)",
-        ("europe", "Europe", len(rows_out)),
-    )
+    for region_id, count in counts.items():
+        conn.execute(
+            "INSERT INTO regions (id, label, poi_count) VALUES (?, ?, ?)",
+            (region_id, REGIONS.get(region_id, region_id.title()), count),
+        )
     conn.commit()
     conn.close()
 
@@ -221,7 +239,10 @@ def main() -> None:
         "storage": "sqlite",
         "database": "./Trip/poi/poi.db",
         "apiBase": "/api/poi",
-        "regions": [{"id": "europe", "label": "Europe", "count": len(rows_out)}],
+        "regions": [
+            {"id": region_id, "label": REGIONS.get(region_id, region_id.title()), "count": counts[region_id]}
+            for region_id in sorted(counts.keys(), key=lambda item: 0 if item == "europe" else 1)
+        ],
     }
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {len(rows_out)} POIs to {DB_PATH}")

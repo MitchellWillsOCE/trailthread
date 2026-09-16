@@ -1,0 +1,4105 @@
+{
+  "cities": [
+    {
+      "id": "suva-fj",
+      "name": "Suva",
+      "country": "Fiji",
+      "cc": "FJ",
+      "lat": -18.1416,
+      "lng": 178.4419,
+      "pop": 186000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Harbour capital of markets, colonial streets, and rainforest parks",
+      "general": "Suva is Fiji's political and cultural capital, with a working harbour, the Fiji Museum, Thurston Gardens, and easy access to Colo-i-Suva forest walks.",
+      "activities": [
+        "Visit the Fiji Museum and Thurston Gardens",
+        "Walk the harbourfront and municipal market",
+        "Day-trip to Colo-i-Suva",
+        "Explore nearby beaches toward Pacific Harbour"
+      ],
+      "tips": [
+        "Weekday traffic is heavy around Victoria Parade",
+        "Carry cash for the market",
+        "Rain showers are common year-round"
+      ],
+      "photos": []
+    },
+    {
+      "id": "nadi-fj",
+      "name": "Nadi",
+      "country": "Fiji",
+      "cc": "FJ",
+      "lat": -17.7765,
+      "lng": 177.4356,
+      "pop": 71000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-3 days",
+      "tagline": "Gateway town for the Mamanucas, highlands, and west-coast temples",
+      "general": "Nadi is Fiji's main international gateway, with the Sri Siva Subramaniya Temple, Denarau marina, and transfers to the Mamanuca and Yasawa islands.",
+      "activities": [
+        "Visit the Sri Siva Subramaniya Temple",
+        "Transfer to island resorts from Denarau",
+        "See the Garden of the Sleeping Giant",
+        "Shop the handicraft market"
+      ],
+      "tips": [
+        "Airport days are busy — book transfers",
+        "Temple dress should cover shoulders and knees",
+        "West-coast sun is strong"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lautoka-fj",
+      "name": "Lautoka",
+      "country": "Fiji",
+      "cc": "FJ",
+      "lat": -17.6167,
+      "lng": 177.45,
+      "pop": 72000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Sugar-port city and west-Viti Levu base for highland roads",
+      "general": "Lautoka is Fiji's second city, a working sugar port with markets, colonial streets, and a practical base for Koroyanitu and the northern highlands.",
+      "activities": [
+        "Walk Churchill Park and the market",
+        "Drive toward Abaca and Koroyanitu",
+        "See the waterfront",
+        "Visit nearby sugar-mill heritage"
+      ],
+      "tips": [
+        "Port traffic can be noisy",
+        "A 4WD helps for highland roads after rain",
+        "Markets are busiest in the morning"
+      ],
+      "photos": []
+    },
+    {
+      "id": "savusavu-fj",
+      "name": "Savusavu",
+      "country": "Fiji",
+      "cc": "FJ",
+      "lat": -16.776,
+      "lng": 179.332,
+      "pop": 7000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Vanua Levu harbour town of hot springs, reefs, and yacht moorings",
+      "general": "Savusavu sits on a deep harbour on Vanua Levu, with hot springs, snorkel reefs, copra-town streets, and a slower alternative to the Viti Levu circuit.",
+      "activities": [
+        "See the waterfront hot springs",
+        "Snorkel nearby reefs",
+        "Walk the harbour road",
+        "Day-trip toward Vuadomo Waterfall"
+      ],
+      "tips": [
+        "Flights and ferries fill in peak season",
+        "Mosquitoes are active at dusk",
+        "Cash helps outside resort desks"
+      ],
+      "photos": []
+    },
+    {
+      "id": "levuka-fj",
+      "name": "Levuka",
+      "country": "Fiji",
+      "cc": "FJ",
+      "lat": -17.684,
+      "lng": 178.834,
+      "pop": 4400,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "UNESCO port town on Ovalau with wooden streets and harbour hills",
+      "general": "Levuka is Fiji's first colonial capital, a UNESCO-listed timber port with a steep green backdrop, historic storefronts, and a compact harbour walk.",
+      "activities": [
+        "Walk Beach Street heritage buildings",
+        "Climb Mission Hill",
+        "Visit the old port",
+        "See nearby Ovalau villages"
+      ],
+      "tips": [
+        "The ferry from Suva can be weather-dependent",
+        "Rooms are limited — book ahead",
+        "Respect village Sunday customs"
+      ],
+      "photos": []
+    },
+    {
+      "id": "pacific-harbour-fj",
+      "name": "Pacific Harbour",
+      "country": "Fiji",
+      "cc": "FJ",
+      "lat": -18.241,
+      "lng": 178.074,
+      "pop": 3500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "South-coast adventure hub for rivers, reefs, and Beqa crossings",
+      "general": "Pacific Harbour is a planned south-coast town used as a base for shark dives, river trips, cultural shows, and Beqa Lagoon crossings.",
+      "activities": [
+        "Join a Beqa Lagoon dive or snorkel",
+        "Visit the arts village",
+        "Kayak the river",
+        "Day-trip toward Navua"
+      ],
+      "tips": [
+        "Book shark dives in advance",
+        "Afternoons often bring showers",
+        "Resort prices are higher than Suva"
+      ],
+      "photos": []
+    },
+    {
+      "id": "labasa-fj",
+      "name": "Labasa",
+      "country": "Fiji",
+      "cc": "FJ",
+      "lat": -16.4333,
+      "lng": 179.3667,
+      "pop": 28000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Northern sugar town and Vanua Levu inland service hub",
+      "general": "Labasa is the main town of northern Vanua Levu, a hot sugar-cane centre with markets and access to hinterland villages and the Natewa coast.",
+      "activities": [
+        "Visit the market",
+        "Drive the Natewa Peninsula",
+        "See nearby waterfalls after rain",
+        "Walk the town river parks"
+      ],
+      "tips": [
+        "Heat and humidity are high",
+        "Roads flood in the wet season",
+        "Services thin out quickly outside town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "port-moresby-pg",
+      "name": "Port Moresby",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -9.4438,
+      "lng": 147.1803,
+      "pop": 410000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Harbour capital of parliament, museums, and Varirata day trips",
+      "general": "Port Moresby is PNG's capital on Fairfax Harbour, with the National Museum, Parliament Haus, craft markets, and the nearest national-park walks at Varirata.",
+      "activities": [
+        "Visit Parliament Haus and the National Museum",
+        "Walk Ela Beach at quieter hours",
+        "Day-trip to Varirata National Park",
+        "See the Nature Park"
+      ],
+      "tips": [
+        "Use trusted transport after dark",
+        "Heat is intense at sea level",
+        "Book intercity flights early"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lae-pg",
+      "name": "Lae",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -6.7248,
+      "lng": 146.9928,
+      "pop": 100000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Morobe port city and gateway to the Highlands Highway",
+      "general": "Lae is PNG's industrial port and the usual start of the Highlands Highway, with botanic gardens, a working harbour, and access to Salamaua and the Markham.",
+      "activities": [
+        "Visit the Rainforest Habitat or botanic gardens",
+        "See the waterfront",
+        "Start a Highlands Highway journey",
+        "Day-trip toward Salamaua if conditions allow"
+      ],
+      "tips": [
+        "The highway needs a prepared vehicle and local advice",
+        "Port areas are industrial",
+        "Rain can be sudden"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mount-hagen-pg",
+      "name": "Mount Hagen",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -5.858,
+      "lng": 144.227,
+      "pop": 46000,
+      "tier": "regional",
+      "category": "city",
+      "locale": "mountain",
+      "stay": "2-3 days",
+      "tagline": "Western Highlands market town for culture shows and mountain roads",
+      "general": "Mount Hagen is the main Western Highlands town, known for produce markets, sing-sing culture, and access to high valleys and Mount Giluwe country.",
+      "activities": [
+        "Visit the Mount Hagen market",
+        "Time a trip for the cultural show",
+        "Drive surrounding highland valleys",
+        "See nearby coffee country"
+      ],
+      "tips": [
+        "Nights are cold at altitude",
+        "Roadblocks can occur — travel with local knowledge",
+        "Show weeks book out months ahead"
+      ],
+      "photos": []
+    },
+    {
+      "id": "madang-pg",
+      "name": "Madang",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -5.224,
+      "lng": 145.785,
+      "pop": 36000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "North-coast harbour town of reefs, islands, and wartime wrecks",
+      "general": "Madang sits on a coral-fringed harbour with nearby islands, snorkel reefs, and a slower north-coast pace than Lae or Port Moresby.",
+      "activities": [
+        "Snorkel harbour reefs",
+        "Visit nearby islands",
+        "Walk the waterfront",
+        "See wartime relics"
+      ],
+      "tips": [
+        "Dive operators need booking in peak months",
+        "Mosquito protection is essential",
+        "Boats depend on weather"
+      ],
+      "photos": []
+    },
+    {
+      "id": "goroka-pg",
+      "name": "Goroka",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -6.083,
+      "lng": 145.386,
+      "pop": 25000,
+      "tier": "town",
+      "category": "town",
+      "locale": "mountain",
+      "stay": "2-3 days",
+      "tagline": "Eastern Highlands town of coffee, museums, and the Goroka Show",
+      "general": "Goroka is a cool highland town on the highway, with a museum, coffee country, and one of PNG's best-known cultural shows each September.",
+      "activities": [
+        "Visit the JK McCarthy Museum",
+        "Time a stay for the Goroka Show",
+        "Walk cool highland streets",
+        "See nearby Asaro valley"
+      ],
+      "tips": [
+        "Show week rooms sell out",
+        "Nights need a warm layer",
+        "Highway travel needs daylight"
+      ],
+      "photos": []
+    },
+    {
+      "id": "alotau-pg",
+      "name": "Alotau",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -10.316,
+      "lng": 150.459,
+      "pop": 16000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Milne Bay town for island hops, WWII sites, and whale season",
+      "general": "Alotau is the Milne Bay provincial capital, a jumping-off point for island communities, wartime history, and seasonal whale watching.",
+      "activities": [
+        "Visit the waterfront and markets",
+        "Island-hop with local boats",
+        "See WWII memorials",
+        "Watch for whales in season"
+      ],
+      "tips": [
+        "Boat trips need calm seas",
+        "Cash is useful on outer islands",
+        "Confirm flight schedules"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kokopo-pg",
+      "name": "Kokopo",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -4.352,
+      "lng": 152.263,
+      "pop": 26000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "East New Britain town under the Rabaul volcanoes",
+      "general": "Kokopo replaced Rabaul as the provincial centre after the 1994 eruptions and is the base for Tavurvur views, hot springs, and the old Rabaul harbour.",
+      "activities": [
+        "View Tavurvur and the caldera",
+        "Visit the Rabaul museum",
+        "See hot springs and black-sand beaches",
+        "Explore wartime tunnels"
+      ],
+      "tips": [
+        "Volcanic activity can close roads",
+        "Ash and heat are intense near the crater",
+        "Hire a local driver for the caldera"
+      ],
+      "photos": []
+    },
+    {
+      "id": "wewak-pg",
+      "name": "Wewak",
+      "country": "Papua New Guinea",
+      "cc": "PG",
+      "lat": -3.553,
+      "lng": 143.627,
+      "pop": 25000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Sepik-coast town and gateway to river communities",
+      "general": "Wewak is the coastal gateway to the Sepik, with a long beach, wartime history, and boat connections toward river villages and markets.",
+      "activities": [
+        "Walk the beachfront",
+        "Arrange a Sepik river trip",
+        "Visit wartime sites",
+        "See the town market"
+      ],
+      "tips": [
+        "River trips need trusted operators",
+        "Mosquito protection is critical",
+        "Fuel and cash planning matters"
+      ],
+      "photos": []
+    },
+    {
+      "id": "port-vila-vu",
+      "name": "Port Vila",
+      "country": "Vanuatu",
+      "cc": "VU",
+      "lat": -17.7333,
+      "lng": 168.3273,
+      "pop": 52000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Harbour capital for markets, Mele Cascades, and Efate loops",
+      "general": "Port Vila wraps a sheltered harbour with markets, waterfront restaurants, and day trips to Mele Cascades, Hideaway Island, and Chief Roi Mata sites.",
+      "activities": [
+        "Visit the waterfront market",
+        "Walk or swim at Hideaway Island",
+        "See Mele Cascades",
+        "Drive the Efate loop"
+      ],
+      "tips": [
+        "Cruise days fill the waterfront",
+        "ATMs can run low on weekends",
+        "Reef shoes help on coral beaches"
+      ],
+      "photos": []
+    },
+    {
+      "id": "luganville-vu",
+      "name": "Luganville",
+      "country": "Vanuatu",
+      "cc": "VU",
+      "lat": -15.512,
+      "lng": 167.176,
+      "pop": 18000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Espiritu Santo town for blue holes, wrecks, and Champagne Beach",
+      "general": "Luganville is Santo's service town, the base for Million Dollar Point, SS President Coolidge dives, blue holes, and the road to Champagne Beach.",
+      "activities": [
+        "Visit a blue hole",
+        "See Million Dollar Point",
+        "Day-trip to Champagne Beach",
+        "Arrange a Coolidge dive if certified"
+      ],
+      "tips": [
+        "The east-coast road is rough in places",
+        "Book dive charters ahead",
+        "Carry cash for remote beaches"
+      ],
+      "photos": []
+    },
+    {
+      "id": "lenakel-vu",
+      "name": "Lenakel",
+      "country": "Vanuatu",
+      "cc": "VU",
+      "lat": -19.532,
+      "lng": 169.265,
+      "pop": 1800,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Tanna west-coast town and gateway to Mount Yasur",
+      "general": "Lenakel is Tanna's main west-coast town, used as a staging point for Yasur volcano, kava bars, and villages on the ash plains.",
+      "activities": [
+        "Arrange a Yasur sunset visit",
+        "Visit a local kava nakamal",
+        "See west-coast villages",
+        "Walk the black-sand shore"
+      ],
+      "tips": [
+        "4WD is needed for the volcano road",
+        "Respect village photography rules",
+        "Flights are weather-dependent"
+      ],
+      "photos": []
+    },
+    {
+      "id": "honiara-sb",
+      "name": "Honiara",
+      "country": "Solomon Islands",
+      "cc": "SB",
+      "lat": -9.437,
+      "lng": 159.972,
+      "pop": 92000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Guadalcanal capital of markets, WWII ridges, and Mataniko walks",
+      "general": "Honiara stretches along Guadalcanal's north coast, with the Central Market, wartime ridges, Mataniko Falls, and boat links to other islands.",
+      "activities": [
+        "Visit the Central Market",
+        "Walk Mount Austen viewpoints",
+        "See Mataniko Falls",
+        "Visit the National Museum"
+      ],
+      "tips": [
+        "Use taxis after dark",
+        "Heat and humidity are high",
+        "WWII sites are spread out — hire a guide"
+      ],
+      "photos": []
+    },
+    {
+      "id": "gizo-sb",
+      "name": "Gizo",
+      "country": "Solomon Islands",
+      "cc": "SB",
+      "lat": -8.103,
+      "lng": 156.842,
+      "pop": 6200,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Western Province lagoon town for wrecks, islands, and diving",
+      "general": "Gizo is the main town of the New Georgia group, a dive and island-hopping base near Kennedy Island, wrecks, and barrier reefs.",
+      "activities": [
+        "Dive or snorkel nearby reefs",
+        "Boat to Kennedy Island",
+        "Walk the waterfront market",
+        "Visit Skull Island with a guide"
+      ],
+      "tips": [
+        "Boats need calm weather",
+        "Cash is more useful than cards",
+        "Book dives before you fly in"
+      ],
+      "photos": []
+    },
+    {
+      "id": "auki-sb",
+      "name": "Auki",
+      "country": "Solomon Islands",
+      "cc": "SB",
+      "lat": -8.767,
+      "lng": 160.7,
+      "pop": 7900,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Malaita harbour town for markets and bushland roads",
+      "general": "Auki is Malaita's provincial centre, a harbour town with markets and access to inland villages and coastal passages.",
+      "activities": [
+        "Visit the market",
+        "Walk the harbour",
+        "Arrange a village visit",
+        "See nearby lagoons"
+      ],
+      "tips": [
+        "Ferry schedules change",
+        "Ask permission before photographing people",
+        "Roads are rough inland"
+      ],
+      "photos": []
+    },
+    {
+      "id": "munda-sb",
+      "name": "Munda",
+      "country": "Solomon Islands",
+      "cc": "SB",
+      "lat": -8.328,
+      "lng": 157.263,
+      "pop": 3500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "New Georgia lagoon town for wrecks, bonefishing, and WWII airfields",
+      "general": "Munda sits on Roviana Lagoon with a wartime airfield, wreck dives, and a quieter Western Province alternative to Gizo.",
+      "activities": [
+        "Snorkel lagoon reefs",
+        "See wartime relics",
+        "Fish the lagoon flats",
+        "Boat toward Vonavona"
+      ],
+      "tips": [
+        "Flights are small and book out",
+        "Bring cash",
+        "Sun protection on open boats"
+      ],
+      "photos": []
+    },
+    {
+      "id": "noumea-nc",
+      "name": "Noumea",
+      "country": "New Caledonia",
+      "cc": "NC",
+      "lat": -22.2758,
+      "lng": 166.458,
+      "pop": 180000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Lagoon capital of museums, beaches, and the Tjibaou centre",
+      "general": "Nouméa is a Pacific-French capital on a UNESCO lagoon, with Anse Vata, the Tjibaou Cultural Centre, markets, and day trips to Rivière Bleue.",
+      "activities": [
+        "Visit the Tjibaou Cultural Centre",
+        "Swim at Anse Vata or Baie des Citrons",
+        "See the municipal market",
+        "Day-trip to Rivière Bleue"
+      ],
+      "tips": [
+        "Sunday services are limited",
+        "Lagoon sun is intense",
+        "Book Île des Pins flights early"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kone-nc",
+      "name": "Kone",
+      "country": "New Caledonia",
+      "cc": "NC",
+      "lat": -21.059,
+      "lng": 164.866,
+      "pop": 8000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "West-coast town near the Heart of Voh and mining country",
+      "general": "Koné is a west-coast service town used as a base for the Heart of Voh mangrove heart, coastal roads, and inland ranges.",
+      "activities": [
+        "See the Heart of Voh by air or lookout",
+        "Drive the west-coast road",
+        "Visit nearby beaches",
+        "Explore local markets"
+      ],
+      "tips": [
+        "A car is essential",
+        "Mangrove flights depend on weather",
+        "Mining traffic uses the highway"
+      ],
+      "photos": []
+    },
+    {
+      "id": "poindimie-nc",
+      "name": "Poindimie",
+      "country": "New Caledonia",
+      "cc": "NC",
+      "lat": -20.937,
+      "lng": 165.329,
+      "pop": 5000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "East-coast wet-tropics town for waterfalls and tribal stays",
+      "general": "Poindimié sits on the greener east coast, with rivers, tribal gîtes, and access to waterfalls and the Central Range.",
+      "activities": [
+        "Visit nearby waterfalls",
+        "Stay in a tribal gîte",
+        "Walk coastal paths",
+        "Drive toward Hienghène"
+      ],
+      "tips": [
+        "Rain is frequent on this coast",
+        "Ask before entering tribal land",
+        "Roads can wash out"
+      ],
+      "photos": []
+    },
+    {
+      "id": "we-nc",
+      "name": "We",
+      "country": "New Caledonia",
+      "cc": "NC",
+      "lat": -20.916,
+      "lng": 167.262,
+      "pop": 3000,
+      "tier": "town",
+      "category": "town",
+      "locale": "island",
+      "stay": "2-3 days",
+      "tagline": "Lifou's main village for cliffs, caves, and Loyalty Island reefs",
+      "general": "Wé is the chief village of Lifou, with limestone cliffs, caves, vanilla, and a slower Loyalty Islands pace than Grande Terre.",
+      "activities": [
+        "Visit Jokin cliffs",
+        "See vanilla farms",
+        "Snorkel nearby bays",
+        "Walk to coastal caves"
+      ],
+      "tips": [
+        "Flights from Nouméa book out in holidays",
+        "Respect customary land",
+        "Cash helps in villages"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bourail-nc",
+      "name": "Bourail",
+      "country": "New Caledonia",
+      "cc": "NC",
+      "lat": -21.57,
+      "lng": 165.48,
+      "pop": 5500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "West-coast town for Roche Percée, turtles, and surf beaches",
+      "general": "Bourail is the gateway to Roche Percée, La Roche Percée surf, and turtle-nesting beaches on the west coast.",
+      "activities": [
+        "See Roche Percée",
+        "Walk the beach toward Poé",
+        "Visit the war cemetery",
+        "Watch for turtles in season"
+      ],
+      "tips": [
+        "Surf conditions change quickly",
+        "A car is needed",
+        "Weekends are busy from Nouméa"
+      ],
+      "photos": []
+    },
+    {
+      "id": "papeete-pf",
+      "name": "Papeete",
+      "country": "French Polynesia",
+      "cc": "PF",
+      "lat": -17.535,
+      "lng": -149.5696,
+      "pop": 27000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Tahiti harbour capital of markets, ferries, and island flights",
+      "general": "Papeete is the administrative heart of French Polynesia, with the municipal market, waterfront, ferry links, and the start of circle-island drives.",
+      "activities": [
+        "Visit the Marché de Papeete",
+        "Walk the waterfront",
+        "Drive the circle island toward Point Venus",
+        "Catch an inter-island flight or ferry"
+      ],
+      "tips": [
+        "Traffic jams on weekday mornings",
+        "Sunday is quiet",
+        "Pearl and market prices vary — compare"
+      ],
+      "photos": []
+    },
+    {
+      "id": "punaauia-pf",
+      "name": "Punaauia",
+      "country": "French Polynesia",
+      "cc": "PF",
+      "lat": -17.633,
+      "lng": -149.61,
+      "pop": 28000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "West-Tahiti lagoon town for museums and Faaa-side beaches",
+      "general": "Punaauia stretches along Tahiti's west lagoon with the Musée de Tahiti, lagoon swimming, and a residential alternative to central Papeete.",
+      "activities": [
+        "Visit the Musée de Tahiti",
+        "Swim the lagoon",
+        "See sunset along the west coast",
+        "Access nearby valley walks"
+      ],
+      "tips": [
+        "The coast road is busy",
+        "Reef shoes help",
+        "Museum days vary"
+      ],
+      "photos": []
+    },
+    {
+      "id": "uturoa-pf",
+      "name": "Uturoa",
+      "country": "French Polynesia",
+      "cc": "PF",
+      "lat": -16.733,
+      "lng": -151.445,
+      "pop": 4100,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Raiatea's main town and gateway to Taputapuatea",
+      "general": "Uturoa is Raiatea's port town, used for yacht charters, the sacred marae of Taputapuatea, and hops to Taha'a.",
+      "activities": [
+        "Visit Marae Taputapuatea",
+        "Walk the waterfront",
+        "Boat to Taha'a",
+        "Hike inland waterfalls"
+      ],
+      "tips": [
+        "Yacht week fills rooms",
+        "Sacred sites need respectful dress",
+        "A scooter or car helps"
+      ],
+      "photos": []
+    },
+    {
+      "id": "taiohae-pf",
+      "name": "Taiohae",
+      "country": "French Polynesia",
+      "cc": "PF",
+      "lat": -8.91,
+      "lng": -140.1,
+      "pop": 2200,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Nuku Hiva bay town and Marquesas jumping-off point",
+      "general": "Taiohae sits in a collapsed volcanic bay on Nuku Hiva, the usual first stop in the Marquesas for sculptors, ridges, and boat days.",
+      "activities": [
+        "Walk the bayfront tikis",
+        "Visit Notre-Dame cathedral",
+        "Hike surrounding ridges",
+        "Arrange island 4WD loops"
+      ],
+      "tips": [
+        "Flights are limited and expensive",
+        "Roads are steep and unsealed",
+        "Cash and supplies are limited"
+      ],
+      "photos": []
+    },
+    {
+      "id": "fare-pf",
+      "name": "Fare",
+      "country": "French Polynesia",
+      "cc": "PF",
+      "lat": -16.727,
+      "lng": -151.034,
+      "pop": 1500,
+      "tier": "town",
+      "category": "town",
+      "locale": "island",
+      "stay": "2-3 days",
+      "tagline": "Huahine's main village for lagoons, marae, and quiet roads",
+      "general": "Fare is the small port village of Huahine, with a lagoon, marae, and one of the Society Islands' least-developed main towns.",
+      "activities": [
+        "Cycle or scooter the island",
+        "Visit coastal marae",
+        "Snorkel the lagoon",
+        "See sacred eels at Faie"
+      ],
+      "tips": [
+        "Services close early",
+        "Mosquitoes near the lagoon",
+        "Ferry days are the busy ones"
+      ],
+      "photos": []
+    },
+    {
+      "id": "apia-ws",
+      "name": "Apia",
+      "country": "Samoa",
+      "cc": "WS",
+      "lat": -13.8333,
+      "lng": -171.7667,
+      "pop": 37000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Harbour capital for markets, Mount Vaea, and Robert Louis Stevenson",
+      "general": "Apia is Samoa's compact capital, with the fish market, waterfront, Vailima, and the Mount Vaea walk above the harbour.",
+      "activities": [
+        "Visit Vailima and Mount Vaea",
+        "Walk the waterfront and market",
+        "See Immaculate Conception Cathedral",
+        "Day-trip to Piula or To Sua"
+      ],
+      "tips": [
+        "Sunday is a rest day in villages",
+        "Lava-hot sun — carry water",
+        "Lavalava or covered knees at churches"
+      ],
+      "photos": []
+    },
+    {
+      "id": "salelologa-ws",
+      "name": "Salelologa",
+      "country": "Samoa",
+      "cc": "WS",
+      "lat": -13.737,
+      "lng": -172.22,
+      "pop": 3500,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Savai'i ferry town and start of the big-island loop",
+      "general": "Salelologa is the ferry arrival on Savai'i, a small service town used to start loops toward blowholes, lava fields, and rainforest fales.",
+      "activities": [
+        "Start the Savai'i coastal loop",
+        "Visit the market",
+        "See nearby lava fields",
+        "Continue toward Manase or Falealupo"
+      ],
+      "tips": [
+        "Ferries book out on holidays",
+        "A car or 4WD is essential",
+        "Fuel up before remote coasts"
+      ],
+      "photos": []
+    },
+    {
+      "id": "pago-pago-as",
+      "name": "Pago Pago",
+      "country": "American Samoa",
+      "cc": "AS",
+      "lat": -14.2781,
+      "lng": -170.7025,
+      "pop": 11000,
+      "tier": "town",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Deep-harbour town under Rainmaker Mountain",
+      "general": "Pago Pago occupies one of the Pacific's finest natural harbours, with tuna-port industry, ridge walks, and the National Park of American Samoa nearby.",
+      "activities": [
+        "Ride or hike the Mount Alava tramway route",
+        "Visit the national park visitor centre",
+        "See the harbour from lookouts",
+        "Walk Fagatogo market"
+      ],
+      "tips": [
+        "The harbour can be rainy and humid",
+        "Sunday village rules apply",
+        "Tuna-cannery odour is part of town"
+      ],
+      "photos": []
+    },
+    {
+      "id": "tafuna-as",
+      "name": "Tafuna",
+      "country": "American Samoa",
+      "cc": "AS",
+      "lat": -14.335,
+      "lng": -170.72,
+      "pop": 8000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1 day",
+      "tagline": "Airport-side town for Tutuila services and west-island access",
+      "general": "Tafuna is the commercial and airport town of Tutuila, useful for services, car hire, and west-island beaches.",
+      "activities": [
+        "Pick up a hire car",
+        "Visit nearby beaches",
+        "Use as a west-Tutuila base",
+        "See local markets"
+      ],
+      "tips": [
+        "Airport traffic spikes with Honolulu flights",
+        "Reefs are sharp",
+        "Carry small bills"
+      ],
+      "photos": []
+    },
+    {
+      "id": "nuku-alofa-to",
+      "name": "Nuku'alofa",
+      "country": "Tonga",
+      "cc": "TO",
+      "lat": -21.1394,
+      "lng": -175.2048,
+      "pop": 24000,
+      "tier": "regional",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Waterfront capital of palaces, markets, and Tongatapu loops",
+      "general": "Nuku'alofa is Tonga's low-rise capital on Tongatapu, with the Royal Palace waterfront, Talamahu Market, and day loops to blowholes and Ha'amonga.",
+      "activities": [
+        "Visit Talamahu Market",
+        "Drive to Mapu'a 'a Vaea blowholes",
+        "See Ha'amonga 'a Maui",
+        "Walk the waterfront"
+      ],
+      "tips": [
+        "Sunday is strictly observed",
+        "Dress modestly in towns",
+        "Whales are a seasonal Vava'u trip, not here"
+      ],
+      "photos": []
+    },
+    {
+      "id": "neiafu-to",
+      "name": "Neiafu",
+      "country": "Tonga",
+      "cc": "TO",
+      "lat": -18.651,
+      "lng": -173.984,
+      "pop": 4000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "3-5 days",
+      "tagline": "Vava'u harbour town for whales, caves, and yacht moorings",
+      "general": "Neiafu sits on one of the Pacific's best yacht harbours and is the seasonal hub for humpback whales, Swallows Cave, and island hops.",
+      "activities": [
+        "Join a whale-swim trip in season",
+        "Boat to Swallows Cave",
+        "Walk the harbour ridge",
+        "Island-hop the group"
+      ],
+      "tips": [
+        "Whale season is roughly July to October",
+        "Book boats early",
+        "Cash and fuel planning matter"
+      ],
+      "photos": []
+    },
+    {
+      "id": "avarua-ck",
+      "name": "Avarua",
+      "country": "Cook Islands",
+      "cc": "CK",
+      "lat": -21.2075,
+      "lng": -159.775,
+      "pop": 5400,
+      "tier": "town",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Rarotonga's harbour town for markets, the Needle, and lagoon buses",
+      "general": "Avarua is the small main town of Rarotonga, with the Punanga Nui Market, the circle-island bus, and access to the Cross-Island Track.",
+      "activities": [
+        "Visit Punanga Nui Market",
+        "Ride the circle-island bus",
+        "Start the Cross-Island Track",
+        "Snorkel nearby lagoon motu"
+      ],
+      "tips": [
+        "Sunday is quiet",
+        "Scooters need care on wet roads",
+        "Book outer-island flights early"
+      ],
+      "photos": []
+    },
+    {
+      "id": "arutanga-ck",
+      "name": "Arutanga",
+      "country": "Cook Islands",
+      "cc": "CK",
+      "lat": -18.858,
+      "lng": -159.801,
+      "pop": 1400,
+      "tier": "town",
+      "category": "town",
+      "locale": "island",
+      "stay": "2-3 days",
+      "tagline": "Aitutaki's village hub for the lagoon and One Foot Island",
+      "general": "Arutanga is Aitutaki's main village, the staging point for lagoon cruises, motu landings, and one of the Pacific's most famous turquoise lagoons.",
+      "activities": [
+        "Take a lagoon cruise",
+        "Land on One Foot Island",
+        "Cycle village roads",
+        "Snorkel near the motu"
+      ],
+      "tips": [
+        "Cruises book out in peak season",
+        "Sun on the water is extreme",
+        "Respect church Sunday"
+      ],
+      "photos": []
+    },
+    {
+      "id": "alofi-nu",
+      "name": "Alofi",
+      "country": "Niue",
+      "cc": "NU",
+      "lat": -19.055,
+      "lng": -169.918,
+      "pop": 640,
+      "tier": "town",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-4 days",
+      "tagline": "Cliff-top capital for chasms, reefs, and limestone coastal walks",
+      "general": "Alofi is Niue's tiny capital on a raised coral island, with easy access to chasms, arches, and snorkel caves around the circumference road.",
+      "activities": [
+        "Visit Matapa Chasm and Limu Pools",
+        "See Talava Arches",
+        "Snorkel a sea-track",
+        "Drive the coastal loop"
+      ],
+      "tips": [
+        "Hire a car on arrival",
+        "Reef entries can be sharp",
+        "Shops close early and on Sunday"
+      ],
+      "photos": []
+    },
+    {
+      "id": "koror-pw",
+      "name": "Koror",
+      "country": "Palau",
+      "cc": "PW",
+      "lat": 7.3419,
+      "lng": 134.479,
+      "pop": 11000,
+      "tier": "town",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "3-5 days",
+      "tagline": "Island-town hub for Rock Islands, reefs, and Jellyfish Lake",
+      "general": "Koror is Palau's main town and marina hub, the base for Rock Islands day boats, Jellyfish Lake, and World Heritage lagoon trips.",
+      "activities": [
+        "Boat the Rock Islands",
+        "Visit Jellyfish Lake with a permit",
+        "Walk downtown Koror",
+        "Snorkel German Channel"
+      ],
+      "tips": [
+        "Boat days sell out — book ahead",
+        "Jellyfish Lake has a visitor cap",
+        "Sun and glare on the water are intense"
+      ],
+      "photos": []
+    },
+    {
+      "id": "melekeok-pw",
+      "name": "Melekeok",
+      "country": "Palau",
+      "cc": "PW",
+      "lat": 7.5004,
+      "lng": 134.624,
+      "pop": 300,
+      "tier": "town",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "1 day",
+      "tagline": "Babeldaob village beside the hillside capital at Ngerulmud",
+      "general": "Melekeok is the Babeldaob village nearest Palau's planned capital complex at Ngerulmud, with bai meeting houses and east-coast forest.",
+      "activities": [
+        "See the Capitol complex at Ngerulmud",
+        "Visit a bai if open",
+        "Drive Babeldaob's compact road",
+        "Continue to Ngardmau waterfall"
+      ],
+      "tips": [
+        "A hire car is needed",
+        "Services are limited",
+        "Ask before entering village land"
+      ],
+      "photos": []
+    },
+    {
+      "id": "hagatna-gu",
+      "name": "Hagatna",
+      "country": "Guam",
+      "cc": "GU",
+      "lat": 13.4745,
+      "lng": 144.7504,
+      "pop": 1000,
+      "tier": "town",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Historic capital of the plaza, latte stones, and the Hagåtña River",
+      "general": "Hagåtña is Guam's small historic capital, with the plaza, Dulce Nombre de Maria Cathedral, Latte Stone Park, and the start of cliff-top views.",
+      "activities": [
+        "Visit Latte Stone Park",
+        "Walk the plaza and cathedral",
+        "See the cliff-line toward Two Lovers Point",
+        "Explore Chamorro Village on Wednesday nights"
+      ],
+      "tips": [
+        "Heat and humidity are high",
+        "Typhoon season can close parks",
+        "Tumon hotels are a short drive away"
+      ],
+      "photos": []
+    },
+    {
+      "id": "tamuning-gu",
+      "name": "Tamuning",
+      "country": "Guam",
+      "cc": "GU",
+      "lat": 13.487,
+      "lng": 144.781,
+      "pop": 20000,
+      "tier": "regional",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Tumon-bay hotel strip for reefs, shopping, and cliff walks",
+      "general": "Tamuning includes Tumon Bay, Guam's main hotel and reef-snorkel strip, with easy access to Two Lovers Point and north-island parks.",
+      "activities": [
+        "Snorkel Tumon Bay",
+        "Visit Two Lovers Point",
+        "Walk the hotel beach path",
+        "Day-trip to Ritidian"
+      ],
+      "tips": [
+        "Hotel beach is busy at midday",
+        "Reefs have strong sun",
+        "Rental cars make the north coast easy"
+      ],
+      "photos": []
+    },
+    {
+      "id": "garapan-mp",
+      "name": "Garapan",
+      "country": "Northern Mariana Islands",
+      "cc": "MP",
+      "lat": 15.206,
+      "lng": 145.72,
+      "pop": 4000,
+      "tier": "town",
+      "category": "town",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Saipan's main strip for beaches, WWII sites, and Mount Tapochau",
+      "general": "Garapan is Saipan's tourism and service strip, with Micro Beach, American Memorial Park, and access to Tapochau and the north-island cliffs.",
+      "activities": [
+        "Walk Micro Beach",
+        "Visit American Memorial Park",
+        "Drive to Suicide Cliff",
+        "Climb Mount Tapochau"
+      ],
+      "tips": [
+        "A car is the practical way around",
+        "Midday heat is strong",
+        "Some cliff sites are sobering memorials"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kolonia-fm",
+      "name": "Kolonia",
+      "country": "Federated States of Micronesia",
+      "cc": "FM",
+      "lat": 6.964,
+      "lng": 158.208,
+      "pop": 6000,
+      "tier": "town",
+      "category": "city",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Pohnpei's harbour town for Nan Madol, waterfalls, and Sokehs Rock",
+      "general": "Kolonia is Pohnpei's main town, the usual base for Nan Madol, Kepirohi Falls, pepper farms, and the Sokehs Rock climb.",
+      "activities": [
+        "Boat to Nan Madol",
+        "Visit Kepirohi Falls",
+        "Climb Sokehs Rock",
+        "Walk the harbour"
+      ],
+      "tips": [
+        "Rain is frequent — trails get slick",
+        "Boat access to Nan Madol depends on tide",
+        "Cash is useful"
+      ],
+      "photos": []
+    },
+    {
+      "id": "palikir-fm",
+      "name": "Palikir",
+      "country": "Federated States of Micronesia",
+      "cc": "FM",
+      "lat": 6.917,
+      "lng": 158.185,
+      "pop": 5000,
+      "tier": "town",
+      "category": "capital",
+      "locale": "inland",
+      "stay": "1 day",
+      "tagline": "Hilltop national capital above Pohnpei's harbour",
+      "general": "Palikir is the planned national capital in the hills behind Kolonia, a quiet administrative campus rather than a visitor strip.",
+      "activities": [
+        "See the capitol buildings",
+        "Continue to Kolonia services",
+        "Drive surrounding farm roads",
+        "Use as a quiet inland stop"
+      ],
+      "tips": [
+        "There is little visitor infrastructure",
+        "A car is needed",
+        "Return to Kolonia for food and lodging"
+      ],
+      "photos": []
+    },
+    {
+      "id": "weno-fm",
+      "name": "Weno",
+      "country": "Federated States of Micronesia",
+      "cc": "FM",
+      "lat": 7.45,
+      "lng": 151.85,
+      "pop": 14000,
+      "tier": "town",
+      "category": "town",
+      "locale": "island",
+      "stay": "1-2 days",
+      "tagline": "Chuuk's main island town and wreck-diving gateway",
+      "general": "Weno is the main island of Chuuk Lagoon, the staging point for the famous WWII wreck dives and a compact island-town base.",
+      "activities": [
+        "Arrange a lagoon wreck dive",
+        "Visit the Japanese guns",
+        "Walk the lagoon shore",
+        "See local markets"
+      ],
+      "tips": [
+        "Dives are advanced and need booking",
+        "Island roads are rough",
+        "Cash and patience help"
+      ],
+      "photos": []
+    },
+    {
+      "id": "majuro-mh",
+      "name": "Majuro",
+      "country": "Marshall Islands",
+      "cc": "MH",
+      "lat": 7.0897,
+      "lng": 171.3803,
+      "pop": 30000,
+      "tier": "town",
+      "category": "capital",
+      "locale": "island",
+      "stay": "1-2 days",
+      "tagline": "Long atoll capital of the lagoon road, Laura Beach, and Alele",
+      "general": "Majuro is a narrow atoll capital stretched along a lagoon road, with Alele Museum, the downtown strip, and the drive to Laura Beach.",
+      "activities": [
+        "Visit Alele Museum",
+        "Drive to Laura Beach",
+        "Walk the downtown lagoon edge",
+        "See the outer-reef side"
+      ],
+      "tips": [
+        "The road is the island — allow time",
+        "Sun and glare are intense",
+        "Supplies thin toward Laura"
+      ],
+      "photos": []
+    },
+    {
+      "id": "bairiki-ki",
+      "name": "Bairiki",
+      "country": "Kiribati",
+      "cc": "KI",
+      "lat": 1.329,
+      "lng": 172.976,
+      "pop": 3500,
+      "tier": "town",
+      "category": "capital",
+      "locale": "island",
+      "stay": "1-2 days",
+      "tagline": "South Tarawa islet of government, causeways, and lagoon life",
+      "general": "Bairiki is the government islet of South Tarawa, linked by causeways to Betio and Bonriki, with maneaba, WWII relics nearby, and dense atoll life.",
+      "activities": [
+        "Visit the parliament area",
+        "Drive the causeway to Betio",
+        "See WWII coastal guns",
+        "Walk the lagoon shore"
+      ],
+      "tips": [
+        "The causeway is busy and hot",
+        "Fresh water is limited",
+        "Ask before photographing people"
+      ],
+      "photos": []
+    },
+    {
+      "id": "london-ki",
+      "name": "London",
+      "country": "Kiribati",
+      "cc": "KI",
+      "lat": 1.983,
+      "lng": -157.475,
+      "pop": 2000,
+      "tier": "town",
+      "category": "town",
+      "locale": "island",
+      "stay": "2-3 days",
+      "tagline": "Kiritimati village hub for bonefish flats and seabirds",
+      "general": "London is the main village on Kiritimati (Christmas Island), a remote Line Islands base for bonefishing, birds, and vast lagoon flats.",
+      "activities": [
+        "Bonefish the lagoon flats",
+        "Watch seabirds",
+        "Visit nearby village roads",
+        "See the lagoon edge at low tide"
+      ],
+      "tips": [
+        "Flights are infrequent",
+        "Sun and wind are extreme",
+        "Bring more cash than you expect"
+      ],
+      "photos": []
+    },
+    {
+      "id": "yaren-nr",
+      "name": "Yaren",
+      "country": "Nauru",
+      "cc": "NR",
+      "lat": -0.5467,
+      "lng": 166.9209,
+      "pop": 800,
+      "tier": "town",
+      "category": "capital",
+      "locale": "island",
+      "stay": "1 day",
+      "tagline": "District capital on a raised phosphate island",
+      "general": "Yaren is Nauru's de facto capital district, with government buildings, the airport, and access to Command Ridge and Buada Lagoon.",
+      "activities": [
+        "Visit Command Ridge",
+        "See Buada Lagoon",
+        "Drive the 19 km island loop",
+        "View the phosphate plateau"
+      ],
+      "tips": [
+        "A car or scooter covers the island in a day",
+        "Heat is intense",
+        "Visitor facilities are limited"
+      ],
+      "photos": []
+    },
+    {
+      "id": "funafuti-tv",
+      "name": "Funafuti",
+      "country": "Tuvalu",
+      "cc": "TV",
+      "lat": -8.5243,
+      "lng": 179.1942,
+      "pop": 7000,
+      "tier": "town",
+      "category": "capital",
+      "locale": "island",
+      "stay": "1-2 days",
+      "tagline": "Atoll capital on a thin motu between lagoon and ocean",
+      "general": "Funafuti is Tuvalu's capital atoll, a narrow strip of houses, the airport-as-park, and boat access to the Funafuti Conservation Area.",
+      "activities": [
+        "Walk the airstrip at dusk",
+        "Boat to the conservation motu",
+        "Visit the philatelic bureau if open",
+        "Swim the lagoon"
+      ],
+      "tips": [
+        "Flights are few",
+        "King tides flood low paths",
+        "Cash and patience are essential"
+      ],
+      "photos": []
+    },
+    {
+      "id": "mata-utu-wf",
+      "name": "Mata-Utu",
+      "country": "Wallis and Futuna",
+      "cc": "WF",
+      "lat": -13.282,
+      "lng": -176.174,
+      "pop": 1200,
+      "tier": "town",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "1-2 days",
+      "tagline": "Uvea waterfront capital for the cathedral, lagoon, and crater lakes",
+      "general": "Mata-Utu is the capital of Wallis, with a waterfront cathedral, royal palace precinct, and access to Lake Lalolalo and the lagoon.",
+      "activities": [
+        "See the cathedral and waterfront",
+        "Visit Lake Lalolalo",
+        "Drive the island loop",
+        "Snorkel the lagoon"
+      ],
+      "tips": [
+        "Flights via Nouméa or Nadi are limited",
+        "Sunday is quiet",
+        "A car is the easy way around"
+      ],
+      "photos": []
+    },
+    {
+      "id": "kingston-nf",
+      "name": "Kingston",
+      "country": "Norfolk Island",
+      "cc": "NF",
+      "lat": -29.054,
+      "lng": 167.966,
+      "pop": 900,
+      "tier": "town",
+      "category": "capital",
+      "locale": "coastal",
+      "stay": "2-3 days",
+      "tagline": "Georgian Kingston and Arthur's Vale on a Pacific pine island",
+      "general": "Kingston is Norfolk Island's historic capital, a UNESCO-listed Georgian precinct of convict buildings, pines, and ocean lawns.",
+      "activities": [
+        "Walk Kingston and Arthur's Vale",
+        "Visit the museums",
+        "See the cemetery by the sea",
+        "Continue to Mount Pitt"
+      ],
+      "tips": [
+        "Flights are limited",
+        "Hire a car on arrival",
+        "Wind can be strong on the southern lawns"
+      ],
+      "photos": []
+    }
+  ],
+  "parks": [
+    {
+      "name": "Bouma National Heritage Park",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -16.82,
+      "lng": -179.87,
+      "area_km2": 150,
+      "biodiversity": 5,
+      "popularity": 88,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Taveuni rainforest, coastal walks, and Tavoro falls",
+      "summary": "Bouma covers much of eastern Taveuni with the Lavena Coastal Walk, Tavoro waterfalls, and village-managed rainforest.",
+      "photos": []
+    },
+    {
+      "name": "Koroyanitu National Heritage Park",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -17.67,
+      "lng": 177.54,
+      "area_km2": 170,
+      "biodiversity": 4,
+      "popularity": 78,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "West-Viti Levu highland park above Abaca and Lautoka",
+      "summary": "Koroyanitu is a village-managed highland park of ridges, cloud forest, and views from the west-Viti Levu escarpment.",
+      "photos": []
+    },
+    {
+      "name": "Sigatoka Sand Dunes National Park",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -18.17,
+      "lng": 177.48,
+      "area_km2": 7,
+      "biodiversity": 3,
+      "popularity": 80,
+      "stay": "0.5-1 day",
+      "category": "national-park",
+      "tagline": "Wind-carved dunes and archaeological sites on the Coral Coast",
+      "summary": "Fiji's first national park protects coastal dunes, burial sites, and a short walk above the Sigatoka River mouth.",
+      "photos": []
+    },
+    {
+      "name": "Colo-i-Suva Forest Park",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -18.056,
+      "lng": 178.412,
+      "area_km2": 1,
+      "biodiversity": 3,
+      "popularity": 82,
+      "stay": "0.5-1 day",
+      "category": "forest-park",
+      "tagline": "Mahogany forest and swimming holes 15 minutes from Suva",
+      "summary": "Colo-i-Suva is a compact forestry park of pools, short trails, and rainforest birds on Suva's doorstep.",
+      "photos": []
+    },
+    {
+      "name": "Varirata National Park",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "lat": -9.436,
+      "lng": 147.365,
+      "area_km2": 10,
+      "biodiversity": 4,
+      "popularity": 80,
+      "stay": "0.5-1 day",
+      "category": "national-park",
+      "tagline": "Sogeri-plateau forest and lookouts above Port Moresby",
+      "summary": "Varirata is the closest national park to Port Moresby, with Raggiana bird-of-paradise habitat, lookouts, and short plateau walks.",
+      "photos": []
+    },
+    {
+      "name": "Owen Stanley Ranges / Kokoda",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "lat": -9.2,
+      "lng": 147.7,
+      "area_km2": 1200,
+      "biodiversity": 5,
+      "popularity": 86,
+      "stay": "4-10 days",
+      "category": "national-park",
+      "tagline": "Wartime mountain crossing between Port Moresby and Popondetta",
+      "summary": "The Owen Stanley Ranges hold the Kokoda Track, high rainforest, village communities, and one of the Pacific's most demanding historic walks.",
+      "photos": []
+    },
+    {
+      "name": "Vatthe Conservation Area",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "lat": -15.4,
+      "lng": 166.88,
+      "area_km2": 27,
+      "biodiversity": 4,
+      "popularity": 74,
+      "stay": "1-2 days",
+      "category": "conservation-area",
+      "tagline": "Santo west-coast forest and flying-fox river country",
+      "summary": "Vatthe protects lowland forest and river habitat on Espiritu Santo's west coast, with village-guided walks.",
+      "photos": []
+    },
+    {
+      "name": "Yasur / Lake Siwi area",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "lat": -19.53,
+      "lng": 169.447,
+      "area_km2": 15,
+      "biodiversity": 4,
+      "popularity": 90,
+      "stay": "1 day",
+      "category": "volcanic-reserve",
+      "tagline": "Live ash-plain volcano and the acid lake below Tanna's crater",
+      "summary": "The Yasur area is a constantly active cinder cone with a visitor crater rim, ash plains, and Lake Siwi in the old caldera.",
+      "photos": []
+    },
+    {
+      "name": "East Rennell / Lake Tegano",
+      "country": "Solomon Islands",
+      "cc": "sb",
+      "lat": -11.68,
+      "lng": 160.35,
+      "area_km2": 370,
+      "biodiversity": 5,
+      "popularity": 76,
+      "stay": "2-4 days",
+      "category": "world-heritage",
+      "tagline": "World Heritage lake island at the south of Rennell",
+      "summary": "East Rennell protects Lake Tegano, the Pacific's largest island lake, with forest, endemic birds, and a remote World Heritage community.",
+      "photos": []
+    },
+    {
+      "name": "Parc Provincial de la Riviere Bleue",
+      "country": "New Caledonia",
+      "cc": "nc",
+      "lat": -22.1,
+      "lng": 166.67,
+      "area_km2": 90,
+      "biodiversity": 5,
+      "popularity": 88,
+      "stay": "1-2 days",
+      "category": "provincial-park",
+      "tagline": "Blue-water river, giant kaori, and cagou forest near Nouméa",
+      "summary": "Rivière Bleue is Grande Terre's best-known park, with a drowned kaori, cagou habitat, and still blue water under the southern ranges.",
+      "photos": []
+    },
+    {
+      "name": "Parc des Grandes Fougeres",
+      "country": "New Caledonia",
+      "cc": "nc",
+      "lat": -21.62,
+      "lng": 165.77,
+      "area_km2": 45,
+      "biodiversity": 4,
+      "popularity": 74,
+      "stay": "1 day",
+      "category": "provincial-park",
+      "tagline": "Tree-fern forest on the central range above Bourail",
+      "summary": "Grandes Fougères protects humid forest and giant ferns in the central range, with walking tracks above the west-coast plains.",
+      "photos": []
+    },
+    {
+      "name": "Te Fa'aiti Territorial Park",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "lat": -17.62,
+      "lng": -149.43,
+      "area_km2": 13,
+      "biodiversity": 4,
+      "popularity": 72,
+      "stay": "1 day",
+      "category": "territorial-park",
+      "tagline": "Papenoo-valley rainforest on Tahiti's east side",
+      "summary": "Te Fa'aiti covers a slice of the Papenoo interior, with river gorges, rainforest, and 4WD access from the east coast.",
+      "photos": []
+    },
+    {
+      "name": "Fautaua Valley",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "lat": -17.545,
+      "lng": -149.53,
+      "area_km2": 8,
+      "biodiversity": 3,
+      "popularity": 80,
+      "stay": "0.5-1 day",
+      "category": "nature-reserve",
+      "tagline": "Waterfall valley above Papeete",
+      "summary": "Fautaua is the closest mountain walk to Papeete, a permit valley leading to a high waterfall under the Orohena massif.",
+      "photos": []
+    },
+    {
+      "name": "Lake Lanoto'o National Park",
+      "country": "Samoa",
+      "cc": "ws",
+      "lat": -13.91,
+      "lng": -171.83,
+      "area_km2": 5,
+      "biodiversity": 4,
+      "popularity": 78,
+      "stay": "0.5-1 day",
+      "category": "national-park",
+      "tagline": "Crater-lake walk in the hills above Apia",
+      "summary": "Lake Lanoto'o is a volcanic crater lake reached by a muddy highland track, with endemic birds and cool air above the capital.",
+      "photos": []
+    },
+    {
+      "name": "O Le Pupu Pu'e National Park",
+      "country": "Samoa",
+      "cc": "ws",
+      "lat": -13.98,
+      "lng": -171.78,
+      "area_km2": 29,
+      "biodiversity": 4,
+      "popularity": 76,
+      "stay": "1 day",
+      "category": "national-park",
+      "tagline": "South-coast lava tubes, lookouts, and rainforest",
+      "summary": "O Le Pupu Pu'e runs from the central ridge to the south coast, with a lookout walk, coastal lava, and Togitogiga nearby.",
+      "photos": []
+    },
+    {
+      "name": "National Park of American Samoa",
+      "country": "American Samoa",
+      "cc": "as",
+      "lat": -14.24,
+      "lng": -170.69,
+      "area_km2": 36,
+      "biodiversity": 5,
+      "popularity": 84,
+      "stay": "1-3 days",
+      "category": "national-park",
+      "tagline": "Rainforest ridges, Pola Island, and Ofu beach units",
+      "summary": "The National Park of American Samoa protects Tutuila ridges, the Pola sea cliffs, and separate Ofu and Ta'u units with some of the territory's best reefs.",
+      "photos": []
+    },
+    {
+      "name": "'Eua National Park",
+      "country": "Tonga",
+      "cc": "to",
+      "lat": -21.39,
+      "lng": -174.93,
+      "area_km2": 4,
+      "biodiversity": 4,
+      "popularity": 74,
+      "stay": "1 day",
+      "category": "national-park",
+      "tagline": "Clifftop rainforest on Tonga's oldest island",
+      "summary": "'Eua National Park covers a slice of the island's eastern cliffs, with lookouts, birds, and short forest walks above the trench.",
+      "photos": []
+    },
+    {
+      "name": "Mount Talau National Park",
+      "country": "Tonga",
+      "cc": "to",
+      "lat": -18.65,
+      "lng": -173.98,
+      "area_km2": 1,
+      "biodiversity": 3,
+      "popularity": 72,
+      "stay": "0.5 day",
+      "category": "national-park",
+      "tagline": "Short summit walk above Neiafu harbour",
+      "summary": "Mount Talau is a compact park above Vava'u's harbour, with a short climb to island and lagoon views.",
+      "photos": []
+    },
+    {
+      "name": "Takitumu Conservation Area",
+      "country": "Cook Islands",
+      "cc": "ck",
+      "lat": -21.25,
+      "lng": -159.76,
+      "area_km2": 2,
+      "biodiversity": 4,
+      "popularity": 75,
+      "stay": "0.5-1 day",
+      "category": "conservation-area",
+      "tagline": "Inland Rarotonga forest for kakerori and ridge walks",
+      "summary": "Takitumu is a community conservation area on Rarotonga's southeast interior, protecting kakerori and the start of inland trails.",
+      "photos": []
+    },
+    {
+      "name": "Huvalu Forest Conservation Area",
+      "country": "Niue",
+      "cc": "nu",
+      "lat": -19.1,
+      "lng": -169.85,
+      "area_km2": 54,
+      "biodiversity": 4,
+      "popularity": 70,
+      "stay": "1 day",
+      "category": "conservation-area",
+      "tagline": "Largest forest remnant on the world's smallest republic",
+      "summary": "Huvalu protects a large share of Niue's remaining coastal and interior forest, with birds, caves, and guided access.",
+      "photos": []
+    },
+    {
+      "name": "Rock Islands Southern Lagoon",
+      "country": "Palau",
+      "cc": "pw",
+      "lat": 7.25,
+      "lng": 134.4,
+      "area_km2": 1002,
+      "biodiversity": 5,
+      "popularity": 94,
+      "stay": "1-3 days",
+      "category": "world-heritage",
+      "tagline": "World Heritage mushroom islets, lakes, and reefs",
+      "summary": "The Rock Islands Southern Lagoon is Palau's signature seascape of limestone islets, marine lakes, and coral gardens reached only by boat.",
+      "photos": []
+    },
+    {
+      "name": "War in the Pacific National Historical Park",
+      "country": "Guam",
+      "cc": "gu",
+      "lat": 13.39,
+      "lng": 144.67,
+      "area_km2": 8,
+      "biodiversity": 3,
+      "popularity": 80,
+      "stay": "0.5-1 day",
+      "category": "national-park",
+      "tagline": "Asan and Agat invasion beaches and ridge guns",
+      "summary": "This US national historical park protects invasion beaches, guns, and ridge positions from the 1944 battle for Guam.",
+      "photos": []
+    },
+    {
+      "name": "Ritidian / Litekyan",
+      "country": "Guam",
+      "cc": "gu",
+      "lat": 13.65,
+      "lng": 144.86,
+      "area_km2": 4,
+      "biodiversity": 4,
+      "popularity": 82,
+      "stay": "0.5 day",
+      "category": "wildlife-refuge",
+      "tagline": "Northern Guam beach, limestone forest, and latte sites",
+      "summary": "Ritidian is a wild north-coast refuge of white sand, caves, and limestone forest at Guam's northern tip.",
+      "photos": []
+    },
+    {
+      "name": "American Memorial Park",
+      "country": "Northern Mariana Islands",
+      "cc": "mp",
+      "lat": 15.216,
+      "lng": 145.719,
+      "area_km2": 0.5,
+      "biodiversity": 2,
+      "popularity": 74,
+      "stay": "0.5 day",
+      "category": "memorial-park",
+      "tagline": "Saipan waterfront memorial and Micro Beach parkland",
+      "summary": "American Memorial Park remembers the Marianas campaign and sits beside Micro Beach in Garapan.",
+      "photos": []
+    },
+    {
+      "name": "Funafuti Conservation Area",
+      "country": "Tuvalu",
+      "cc": "tv",
+      "lat": -8.5,
+      "lng": 179.08,
+      "area_km2": 33,
+      "biodiversity": 4,
+      "popularity": 72,
+      "stay": "0.5-1 day",
+      "category": "conservation-area",
+      "tagline": "Uninhabited motu, turtles, and lagoon birds west of Fongafale",
+      "summary": "The Funafuti Conservation Area covers islets on the atoll's western rim, reached by boat for snorkelling and birdlife.",
+      "photos": []
+    },
+    {
+      "name": "Norfolk Island National Park",
+      "country": "Norfolk Island",
+      "cc": "nf",
+      "lat": -29.02,
+      "lng": 167.94,
+      "area_km2": 6,
+      "biodiversity": 4,
+      "popularity": 80,
+      "stay": "1-2 days",
+      "category": "national-park",
+      "tagline": "Norfolk pines, Mount Pitt, and the summit of Mount Bates",
+      "summary": "Norfolk Island National Park protects the island's highest ridges, palms, and the walks to Mount Pitt and Mount Bates.",
+      "photos": []
+    }
+  ],
+  "pois": [
+    {
+      "name": "Garden of the Sleeping Giant",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -17.74,
+      "lng": 177.45,
+      "category": "garden",
+      "popularity": 84,
+      "tagline": "Orchid garden in a valley under the Sabeto Range",
+      "photos": []
+    },
+    {
+      "name": "Sri Siva Subramaniya Temple",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -17.776,
+      "lng": 177.416,
+      "category": "temple",
+      "popularity": 88,
+      "tagline": "South Pacific's largest Hindu temple in Nadi",
+      "photos": []
+    },
+    {
+      "name": "Cloud 9 Fiji",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -17.75,
+      "lng": 177.13,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Overwater platform on the Malolo barrier reef",
+      "photos": []
+    },
+    {
+      "name": "Navala Village",
+      "country": "Fiji",
+      "cc": "fj",
+      "lat": -17.72,
+      "lng": 177.82,
+      "category": "village",
+      "popularity": 80,
+      "tagline": "Highland vale of traditional thatched bure",
+      "photos": []
+    },
+    {
+      "name": "Parliament Haus",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "lat": -9.428,
+      "lng": 147.19,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "National parliament with a haus-tambaran roof",
+      "photos": []
+    },
+    {
+      "name": "National Museum and Art Gallery",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "lat": -9.478,
+      "lng": 147.193,
+      "category": "museum",
+      "popularity": 78,
+      "tagline": "PNG's main museum of culture and natural history",
+      "photos": []
+    },
+    {
+      "name": "Tavurvur",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "lat": -4.239,
+      "lng": 152.21,
+      "category": "volcano",
+      "popularity": 88,
+      "tagline": "Active Rabaul caldera cone above Blanche Bay",
+      "photos": []
+    },
+    {
+      "name": "Tufi",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "lat": -9.076,
+      "lng": 149.32,
+      "category": "landmark",
+      "popularity": 80,
+      "tagline": "Fjords and dive bays on the Cape Nelson coast",
+      "photos": []
+    },
+    {
+      "name": "Mele Cascades",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "lat": -17.68,
+      "lng": 168.25,
+      "category": "waterfall",
+      "popularity": 88,
+      "tagline": "Stepped rainforest pools west of Port Vila",
+      "photos": []
+    },
+    {
+      "name": "Champagne Beach",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "lat": -15.14,
+      "lng": 167.11,
+      "category": "beach",
+      "popularity": 90,
+      "tagline": "White-sand Santo cove with clear lagoon water",
+      "photos": []
+    },
+    {
+      "name": "Chief Roi Mata's Domain",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "lat": -17.63,
+      "lng": 168.18,
+      "category": "unesco",
+      "popularity": 82,
+      "tagline": "World Heritage chiefly landscape on Efate",
+      "photos": []
+    },
+    {
+      "name": "Hideaway Island",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "lat": -17.75,
+      "lng": 168.25,
+      "category": "island",
+      "popularity": 84,
+      "tagline": "Tiny reef island with an underwater post office",
+      "photos": []
+    },
+    {
+      "name": "Vilu War Museum",
+      "country": "Solomon Islands",
+      "cc": "sb",
+      "lat": -9.4,
+      "lng": 159.85,
+      "category": "museum",
+      "popularity": 76,
+      "tagline": "Open-air WWII aircraft and guns west of Honiara",
+      "photos": []
+    },
+    {
+      "name": "Mataniko Falls",
+      "country": "Solomon Islands",
+      "cc": "sb",
+      "lat": -9.48,
+      "lng": 159.97,
+      "category": "waterfall",
+      "popularity": 80,
+      "tagline": "Cave waterfall inland from Honiara",
+      "photos": []
+    },
+    {
+      "name": "Kennedy Island",
+      "country": "Solomon Islands",
+      "cc": "sb",
+      "lat": -8.13,
+      "lng": 156.9,
+      "category": "island",
+      "popularity": 78,
+      "tagline": "Plum Pudding Island of the PT-109 story",
+      "photos": []
+    },
+    {
+      "name": "Tjibaou Cultural Centre",
+      "country": "New Caledonia",
+      "cc": "nc",
+      "lat": -22.256,
+      "lng": 166.482,
+      "category": "museum",
+      "popularity": 90,
+      "tagline": "Renzo Piano pavilions for Kanak culture",
+      "photos": []
+    },
+    {
+      "name": "Heart of Voh",
+      "country": "New Caledonia",
+      "cc": "nc",
+      "lat": -20.95,
+      "lng": 164.68,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Mangrove heart visible from the air on the west coast",
+      "photos": []
+    },
+    {
+      "name": "Kuto Bay",
+      "country": "New Caledonia",
+      "cc": "nc",
+      "lat": -22.66,
+      "lng": 167.44,
+      "category": "beach",
+      "popularity": 88,
+      "tagline": "Classic Île des Pins bay of pines and white sand",
+      "photos": []
+    },
+    {
+      "name": "Matira Beach",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "lat": -16.544,
+      "lng": -151.737,
+      "category": "beach",
+      "popularity": 94,
+      "tagline": "Bora Bora's public white-sand point",
+      "photos": []
+    },
+    {
+      "name": "Cook's Bay",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "lat": -17.49,
+      "lng": -149.82,
+      "category": "landmark",
+      "popularity": 90,
+      "tagline": "Moorea's deep northern bay under the ridge",
+      "photos": []
+    },
+    {
+      "name": "Marae Taputapuatea",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "lat": -16.837,
+      "lng": -151.359,
+      "category": "unesco",
+      "popularity": 88,
+      "tagline": "Voyaging marae on Raiatea's southeast coast",
+      "photos": []
+    },
+    {
+      "name": "Point Venus",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "lat": -17.48,
+      "lng": -149.494,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Black-sand cape of Cook's transit and a lighthouse",
+      "photos": []
+    },
+    {
+      "name": "To Sua Ocean Trench",
+      "country": "Samoa",
+      "cc": "ws",
+      "lat": -14.03,
+      "lng": -171.43,
+      "category": "landmark",
+      "popularity": 92,
+      "tagline": "Laddered swimming hole in a collapsed lava tube",
+      "photos": []
+    },
+    {
+      "name": "Piula Cave Pool",
+      "country": "Samoa",
+      "cc": "ws",
+      "lat": -13.87,
+      "lng": -171.6,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Spring-fed cave swim beside a Methodist college",
+      "photos": []
+    },
+    {
+      "name": "Robert Louis Stevenson Museum",
+      "country": "Samoa",
+      "cc": "ws",
+      "lat": -13.864,
+      "lng": -171.766,
+      "category": "museum",
+      "popularity": 80,
+      "tagline": "Vailima villa below the Mount Vaea grave",
+      "photos": []
+    },
+    {
+      "name": "Rainmaker Mountain",
+      "country": "American Samoa",
+      "cc": "as",
+      "lat": -14.27,
+      "lng": -170.65,
+      "category": "mountain",
+      "popularity": 78,
+      "tagline": "Cloud-catching massif above Pago Pago Harbour",
+      "photos": []
+    },
+    {
+      "name": "Fagatele Bay",
+      "country": "American Samoa",
+      "cc": "as",
+      "lat": -14.365,
+      "lng": -170.76,
+      "category": "marine-sanctuary",
+      "popularity": 80,
+      "tagline": "Collapsed-crater marine sanctuary on south Tutuila",
+      "photos": []
+    },
+    {
+      "name": "Mapu'a 'a Vaea Blowholes",
+      "country": "Tonga",
+      "cc": "to",
+      "lat": -21.27,
+      "lng": -175.15,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Coastal blowholes on Tongatapu's south shore",
+      "photos": []
+    },
+    {
+      "name": "Ha'amonga 'a Maui",
+      "country": "Tonga",
+      "cc": "to",
+      "lat": -21.05,
+      "lng": -175.05,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Trilithon gate of coral limestone on Tongatapu",
+      "photos": []
+    },
+    {
+      "name": "Wigmore's Waterfall",
+      "country": "Cook Islands",
+      "cc": "ck",
+      "lat": -21.26,
+      "lng": -159.76,
+      "category": "waterfall",
+      "popularity": 76,
+      "tagline": "Inland Rarotonga falls at the Cross-Island Track end",
+      "photos": []
+    },
+    {
+      "name": "One Foot Island",
+      "country": "Cook Islands",
+      "cc": "ck",
+      "lat": -18.9,
+      "lng": -159.72,
+      "category": "island",
+      "popularity": 90,
+      "tagline": "Aitutaki motu with a lagoon postmark",
+      "photos": []
+    },
+    {
+      "name": "Limu Pools",
+      "country": "Niue",
+      "cc": "nu",
+      "lat": -18.98,
+      "lng": -169.92,
+      "category": "landmark",
+      "popularity": 84,
+      "tagline": "Reef pools on Niue's west coast",
+      "photos": []
+    },
+    {
+      "name": "Matapa Chasm",
+      "country": "Niue",
+      "cc": "nu",
+      "lat": -18.97,
+      "lng": -169.91,
+      "category": "landmark",
+      "popularity": 86,
+      "tagline": "Narrow swimming chasm once reserved for royalty",
+      "photos": []
+    },
+    {
+      "name": "Talava Arches",
+      "country": "Niue",
+      "cc": "nu",
+      "lat": -18.96,
+      "lng": -169.89,
+      "category": "landmark",
+      "popularity": 82,
+      "tagline": "Sea arches in a north-coast cave",
+      "photos": []
+    },
+    {
+      "name": "Jellyfish Lake",
+      "country": "Palau",
+      "cc": "pw",
+      "lat": 7.161,
+      "lng": 134.376,
+      "category": "landmark",
+      "popularity": 94,
+      "tagline": "Marine lake of golden jellyfish in the Rock Islands",
+      "photos": []
+    },
+    {
+      "name": "Two Lovers Point",
+      "country": "Guam",
+      "cc": "gu",
+      "lat": 13.533,
+      "lng": 144.802,
+      "category": "lookout",
+      "popularity": 88,
+      "tagline": "Cliff lookout above Tumon Bay",
+      "photos": []
+    },
+    {
+      "name": "Suicide Cliff",
+      "country": "Northern Mariana Islands",
+      "cc": "mp",
+      "lat": 15.25,
+      "lng": 145.79,
+      "category": "memorial",
+      "popularity": 80,
+      "tagline": "North Saipan cliff memorial from 1944",
+      "photos": []
+    },
+    {
+      "name": "Bird Island",
+      "country": "Northern Mariana Islands",
+      "cc": "mp",
+      "lat": 15.26,
+      "lng": 145.81,
+      "category": "lookout",
+      "popularity": 78,
+      "tagline": "Lookout over a limestone stack on Saipan's east coast",
+      "photos": []
+    },
+    {
+      "name": "Nan Madol",
+      "country": "Federated States of Micronesia",
+      "cc": "fm",
+      "lat": 6.844,
+      "lng": 158.332,
+      "category": "unesco",
+      "popularity": 90,
+      "tagline": "Basalt canal city on Pohnpei's eastern reef",
+      "photos": []
+    },
+    {
+      "name": "Kepirohi Falls",
+      "country": "Federated States of Micronesia",
+      "cc": "fm",
+      "lat": 6.88,
+      "lng": 158.27,
+      "category": "waterfall",
+      "popularity": 78,
+      "tagline": "Wide curtain waterfall on Pohnpei",
+      "photos": []
+    },
+    {
+      "name": "Alele Museum",
+      "country": "Marshall Islands",
+      "cc": "mh",
+      "lat": 7.09,
+      "lng": 171.38,
+      "category": "museum",
+      "popularity": 70,
+      "tagline": "Majuro museum of navigation and atoll culture",
+      "photos": []
+    },
+    {
+      "name": "Laura Beach",
+      "country": "Marshall Islands",
+      "cc": "mh",
+      "lat": 7.15,
+      "lng": 171.03,
+      "category": "beach",
+      "popularity": 76,
+      "tagline": "West-end swimming beach on Majuro Atoll",
+      "photos": []
+    },
+    {
+      "name": "Betio WWII Guns",
+      "country": "Kiribati",
+      "cc": "ki",
+      "lat": 1.354,
+      "lng": 172.93,
+      "category": "memorial",
+      "popularity": 74,
+      "tagline": "Coastal defence guns from the Battle of Tarawa",
+      "photos": []
+    },
+    {
+      "name": "Command Ridge",
+      "country": "Nauru",
+      "cc": "nr",
+      "lat": -0.52,
+      "lng": 166.91,
+      "category": "lookout",
+      "popularity": 70,
+      "tagline": "Highest point and wartime lookout on Nauru",
+      "photos": []
+    },
+    {
+      "name": "Buada Lagoon",
+      "country": "Nauru",
+      "cc": "nr",
+      "lat": -0.533,
+      "lng": 166.927,
+      "category": "landmark",
+      "popularity": 68,
+      "tagline": "Inland freshwater lagoon in Nauru's central basin",
+      "photos": []
+    },
+    {
+      "name": "Lake Lalolalo",
+      "country": "Wallis and Futuna",
+      "cc": "wf",
+      "lat": -13.3,
+      "lng": -176.23,
+      "category": "landmark",
+      "popularity": 78,
+      "tagline": "Round crater lake in the forest of Uvea",
+      "photos": []
+    },
+    {
+      "name": "Kingston and Arthur's Vale",
+      "country": "Norfolk Island",
+      "cc": "nf",
+      "lat": -29.056,
+      "lng": 167.958,
+      "category": "unesco",
+      "popularity": 86,
+      "tagline": "Georgian convict precinct on the southern lawns",
+      "photos": []
+    }
+  ],
+  "hikes": [
+    {
+      "id": "lavena-coastal-walk-fj",
+      "name": "Lavena Coastal Walk",
+      "country": "Fiji",
+      "cc": "fj",
+      "length_km": 5,
+      "ascent_m": 120,
+      "difficulty": "easy",
+      "network": "Taveuni day walk",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Village coastal path to a waterfall on eastern Taveuni",
+      "summary": "The Lavena Coastal Walk follows black-sand coves, rainforest, and suspension bridges from Lavena village to a waterfall swim.",
+      "tips": [
+        "Pay the village fee at the kiosk",
+        "Wear shoes that can get wet",
+        "Start early before the heat"
+      ],
+      "geometry": [
+        [
+          -179.887,
+          -16.855
+        ],
+        [
+          -179.88467,
+          -16.85167
+        ],
+        [
+          -179.88233,
+          -16.84833
+        ],
+        [
+          -179.88,
+          -16.845
+        ],
+        [
+          -179.87767,
+          -16.84067
+        ],
+        [
+          -179.87533,
+          -16.83633
+        ],
+        [
+          -179.873,
+          -16.832
+        ],
+        [
+          -179.872,
+          -16.828
+        ],
+        [
+          -179.871,
+          -16.824
+        ],
+        [
+          -179.87,
+          -16.82
+        ]
+      ],
+      "start_name": "Lavena village",
+      "end_name": "Lavena waterfall",
+      "start_instructions": "Start at the Lavena visitor hut on Taveuni's east coast.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-tomanivi-fj",
+      "name": "Mount Tomanivi",
+      "country": "Fiji",
+      "cc": "fj",
+      "length_km": 10,
+      "ascent_m": 700,
+      "difficulty": "hard",
+      "network": "Day hike",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Muddy climb to Viti Levu's highest summit",
+      "summary": "The Tomanivi track climbs from Navai through cloud forest to Fiji's highest peak, often in mud and mist.",
+      "tips": [
+        "Hire a village guide from Navai",
+        "The track is steep and rooted",
+        "Carry layers for the summit"
+      ],
+      "geometry": [
+        [
+          178.002,
+          -17.632
+        ],
+        [
+          178.004,
+          -17.63
+        ],
+        [
+          178.006,
+          -17.628
+        ],
+        [
+          178.008,
+          -17.626
+        ],
+        [
+          178.01,
+          -17.624
+        ],
+        [
+          178.012,
+          -17.6215
+        ],
+        [
+          178.014,
+          -17.619
+        ],
+        [
+          178.016,
+          -17.6165
+        ],
+        [
+          178.018,
+          -17.614
+        ]
+      ],
+      "start_name": "Navai village",
+      "end_name": "Mount Tomanivi",
+      "start_instructions": "Start from Navai village with a local guide.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "colo-i-suva-nature-trail-fj",
+      "name": "Colo-i-Suva Nature Trail",
+      "country": "Fiji",
+      "cc": "fj",
+      "length_km": 3,
+      "ascent_m": 80,
+      "difficulty": "easy",
+      "network": "Forest park walk",
+      "popularity": 82,
+      "tier": "local",
+      "tagline": "Short mahogany-forest circuit with swimming holes",
+      "summary": "A compact network of trails links pools and lookouts inside Colo-i-Suva Forest Park near Suva.",
+      "tips": [
+        "Pools are slippery after rain",
+        "Do not leave valuables in cars",
+        "Weekends are popular"
+      ],
+      "geometry": [
+        [
+          178.41,
+          -18.058
+        ],
+        [
+          178.41133,
+          -18.05667
+        ],
+        [
+          178.41267,
+          -18.05533
+        ],
+        [
+          178.414,
+          -18.054
+        ],
+        [
+          178.41533,
+          -18.05467
+        ],
+        [
+          178.41667,
+          -18.05533
+        ],
+        [
+          178.418,
+          -18.056
+        ],
+        [
+          178.41533,
+          -18.05667
+        ],
+        [
+          178.41267,
+          -18.05733
+        ],
+        [
+          178.41,
+          -18.058
+        ]
+      ],
+      "start_name": "Colo-i-Suva visitor area",
+      "end_name": "Colo-i-Suva visitor area",
+      "start_instructions": "Start from the forest-park kiosk on the Princes Road.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "des-voeux-peak-fj",
+      "name": "Des Voeux Peak",
+      "country": "Fiji",
+      "cc": "fj",
+      "length_km": 8,
+      "ascent_m": 550,
+      "difficulty": "moderate",
+      "network": "Taveuni day walk",
+      "popularity": 76,
+      "tier": "local",
+      "tagline": "4WD-and-walk ascent to Taveuni's communications peak",
+      "summary": "The Des Voeux Peak route climbs Taveuni's central ridge for island-and-reef views, often finishing in cloud.",
+      "tips": [
+        "A 4WD is used for the lower road",
+        "Summit cloud is common",
+        "Carry water"
+      ],
+      "geometry": [
+        [
+          -179.98,
+          -16.8
+        ],
+        [
+          -179.978,
+          -16.805
+        ],
+        [
+          -179.976,
+          -16.81
+        ],
+        [
+          -179.974,
+          -16.815
+        ],
+        [
+          -179.972,
+          -16.82
+        ],
+        [
+          -179.9705,
+          -16.82525
+        ],
+        [
+          -179.969,
+          -16.8305
+        ],
+        [
+          -179.9675,
+          -16.83575
+        ],
+        [
+          -179.966,
+          -16.841
+        ]
+      ],
+      "start_name": "Des Voeux Peak road",
+      "end_name": "Des Voeux Peak",
+      "start_instructions": "Start from the signed mountain road south of Wairiki.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "varirata-lookout-walk-pg",
+      "name": "Varirata Lookout Walk",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "length_km": 4,
+      "ascent_m": 120,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Sogeri-plateau forest walk to the Port Moresby lookout",
+      "summary": "Short plateau trails lead to Varirata's lookout over the Astrolabe Range and the city far below.",
+      "tips": [
+        "Go early for birds-of-paradise",
+        "A vehicle is needed from Port Moresby",
+        "Stay on signed tracks"
+      ],
+      "geometry": [
+        [
+          147.36,
+          -9.44
+        ],
+        [
+          147.36167,
+          -9.43867
+        ],
+        [
+          147.36333,
+          -9.43733
+        ],
+        [
+          147.365,
+          -9.436
+        ],
+        [
+          147.36667,
+          -9.43467
+        ],
+        [
+          147.36833,
+          -9.43333
+        ],
+        [
+          147.37,
+          -9.432
+        ]
+      ],
+      "start_name": "Varirata picnic area",
+      "end_name": "Varirata lookout",
+      "start_instructions": "Start from the picnic area inside Varirata National Park.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "kokoda-owers-imitia-pg",
+      "name": "Kokoda Track — Owers Corner to Imita",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "length_km": 8,
+      "ascent_m": 450,
+      "difficulty": "hard",
+      "network": "Kokoda Track",
+      "popularity": 86,
+      "tier": "major",
+      "tagline": "First steep section of the wartime Kokoda crossing",
+      "summary": "From Owers Corner the Kokoda Track drops and climbs toward Imita Ridge, the usual first hard day of the historic crossing.",
+      "tips": [
+        "Independent walking is not advised",
+        "Hire a licensed operator",
+        "The clay is slick after rain"
+      ],
+      "geometry": [
+        [
+          147.456,
+          -9.373
+        ],
+        [
+          147.462,
+          -9.36475
+        ],
+        [
+          147.468,
+          -9.3565
+        ],
+        [
+          147.474,
+          -9.34825
+        ],
+        [
+          147.48,
+          -9.34
+        ],
+        [
+          147.485,
+          -9.3325
+        ],
+        [
+          147.49,
+          -9.325
+        ],
+        [
+          147.495,
+          -9.3175
+        ],
+        [
+          147.5,
+          -9.31
+        ],
+        [
+          147.505,
+          -9.3025
+        ],
+        [
+          147.51,
+          -9.295
+        ],
+        [
+          147.515,
+          -9.2875
+        ],
+        [
+          147.52,
+          -9.28
+        ]
+      ],
+      "start_name": "Owers Corner",
+      "end_name": "Imita Ridge",
+      "start_instructions": "Start at Owers Corner on the Sogeri Plateau, the southern trailhead.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-wilhelm-pg",
+      "name": "Mount Wilhelm Summit Walk",
+      "country": "Papua New Guinea",
+      "cc": "pg",
+      "length_km": 12,
+      "ascent_m": 1100,
+      "difficulty": "hard",
+      "network": "Alpine trek",
+      "popularity": 82,
+      "tier": "major",
+      "tagline": "Highest summit in Papua New Guinea from Keglsugl",
+      "summary": "The usual Wilhelm route climbs from Keglsugl past lakes and alpine grassland to the 4,509 m summit, often as an overnight.",
+      "tips": [
+        "Altitude is real — acclimatise",
+        "Start well before dawn for the summit",
+        "Weather closes in fast"
+      ],
+      "geometry": [
+        [
+          145.09,
+          -5.795
+        ],
+        [
+          145.085,
+          -5.79375
+        ],
+        [
+          145.08,
+          -5.7925
+        ],
+        [
+          145.075,
+          -5.79125
+        ],
+        [
+          145.07,
+          -5.79
+        ],
+        [
+          145.065,
+          -5.78875
+        ],
+        [
+          145.06,
+          -5.7875
+        ],
+        [
+          145.055,
+          -5.78625
+        ],
+        [
+          145.05,
+          -5.785
+        ],
+        [
+          145.04425,
+          -5.78375
+        ],
+        [
+          145.0385,
+          -5.7825
+        ],
+        [
+          145.03275,
+          -5.78125
+        ],
+        [
+          145.027,
+          -5.78
+        ]
+      ],
+      "start_name": "Keglsugl",
+      "end_name": "Mount Wilhelm",
+      "start_instructions": "Start from Keglsugl village or the nearby lodge in Simbu Province.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-yasur-vu",
+      "name": "Mount Yasur Crater Walk",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "length_km": 2,
+      "ascent_m": 150,
+      "difficulty": "moderate",
+      "network": "Volcano visit",
+      "popularity": 92,
+      "tier": "major",
+      "tagline": "Ash-plain walk to a live crater rim on Tanna",
+      "summary": "A short guided walk from the ash-plain parking area leads to Yasur's crater rim for sunset eruptions.",
+      "tips": [
+        "Go with an authorised guide",
+        "Respect exclusion zones",
+        "Bring a headlamp and wind layer"
+      ],
+      "geometry": [
+        [
+          169.441,
+          -19.528
+        ],
+        [
+          169.44233,
+          -19.52867
+        ],
+        [
+          169.44367,
+          -19.52933
+        ],
+        [
+          169.445,
+          -19.53
+        ],
+        [
+          169.446,
+          -19.53067
+        ],
+        [
+          169.447,
+          -19.53133
+        ],
+        [
+          169.448,
+          -19.532
+        ]
+      ],
+      "start_name": "Yasur parking",
+      "end_name": "Yasur crater rim",
+      "start_instructions": "Start from the visitor parking on the ash plain below the cone.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mele-cascades-walk-vu",
+      "name": "Mele Cascades Walk",
+      "country": "Vanuatu",
+      "cc": "vu",
+      "length_km": 2,
+      "ascent_m": 90,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Stepped pools and a rainforest stair west of Port Vila",
+      "summary": "A short paid walk climbs beside pools and a waterfall in a valley west of Port Vila.",
+      "tips": [
+        "The stairs are slippery",
+        "Swimwear is useful",
+        "Go earlier to avoid tour groups"
+      ],
+      "geometry": [
+        [
+          168.248,
+          -17.682
+        ],
+        [
+          168.24867,
+          -17.68067
+        ],
+        [
+          168.24933,
+          -17.67933
+        ],
+        [
+          168.25,
+          -17.678
+        ]
+      ],
+      "start_name": "Mele Cascades entrance",
+      "end_name": "Upper cascade",
+      "start_instructions": "Start from the signed entrance west of Port Vila.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-austen-sb",
+      "name": "Mount Austen Walk",
+      "country": "Solomon Islands",
+      "cc": "sb",
+      "length_km": 5,
+      "ascent_m": 220,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 74,
+      "tier": "local",
+      "tagline": "Ridge and wartime positions above Honiara",
+      "summary": "Tracks and a road climb Mount Austen for harbour views and Guadalcanal campaign positions.",
+      "tips": [
+        "A guide helps with wartime sites",
+        "Heat is strong on the ridge",
+        "Combine with a vehicle drop"
+      ],
+      "geometry": [
+        [
+          159.95,
+          -9.45
+        ],
+        [
+          159.95333,
+          -9.45333
+        ],
+        [
+          159.95667,
+          -9.45667
+        ],
+        [
+          159.96,
+          -9.46
+        ],
+        [
+          159.96333,
+          -9.46333
+        ],
+        [
+          159.96667,
+          -9.46667
+        ],
+        [
+          159.97,
+          -9.47
+        ]
+      ],
+      "start_name": "Mount Austen road",
+      "end_name": "Mount Austen lookout",
+      "start_instructions": "Start from the Mount Austen road above Honiara.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mataniko-falls-walk-sb",
+      "name": "Mataniko Falls Walk",
+      "country": "Solomon Islands",
+      "cc": "sb",
+      "length_km": 4,
+      "ascent_m": 160,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 78,
+      "tier": "local",
+      "tagline": "River and cave walk to a waterfall behind Honiara",
+      "summary": "A village-guided walk follows the Mataniko into a cave mouth where the river falls into a dark pool.",
+      "tips": [
+        "Hire a local guide",
+        "Shoes will get wet",
+        "The last section is rocky"
+      ],
+      "geometry": [
+        [
+          159.96,
+          -9.46
+        ],
+        [
+          159.96167,
+          -9.46333
+        ],
+        [
+          159.96333,
+          -9.46667
+        ],
+        [
+          159.965,
+          -9.47
+        ],
+        [
+          159.96667,
+          -9.47333
+        ],
+        [
+          159.96833,
+          -9.47667
+        ],
+        [
+          159.97,
+          -9.48
+        ]
+      ],
+      "start_name": "Mataniko trailhead",
+      "end_name": "Mataniko Falls",
+      "start_instructions": "Start from the inland trailhead with a Honiara guide.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "riviere-bleue-kaori-nc",
+      "name": "Riviere Bleue Giant Kaori Walk",
+      "country": "New Caledonia",
+      "cc": "nc",
+      "length_km": 6,
+      "ascent_m": 80,
+      "difficulty": "easy",
+      "network": "Park walk",
+      "popularity": 86,
+      "tier": "regional",
+      "tagline": "Lakeside forest walk to the drowned giant kaori",
+      "summary": "A mostly flat park walk follows the drowned river and lakeshore to Rivière Bleue's famous standing kaori.",
+      "tips": [
+        "The park gate has limited hours",
+        "Hire the park train or cycle the road",
+        "Look for cagou on quiet mornings"
+      ],
+      "geometry": [
+        [
+          166.66,
+          -22.105
+        ],
+        [
+          166.66333,
+          -22.10333
+        ],
+        [
+          166.66667,
+          -22.10167
+        ],
+        [
+          166.67,
+          -22.1
+        ],
+        [
+          166.67333,
+          -22.09833
+        ],
+        [
+          166.67667,
+          -22.09667
+        ],
+        [
+          166.68,
+          -22.095
+        ]
+      ],
+      "start_name": "Pont Perignon",
+      "end_name": "Giant kaori",
+      "start_instructions": "Start after the park gate near Pont Pérignon.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mont-dore-nc",
+      "name": "Mont Dore Walk",
+      "country": "New Caledonia",
+      "cc": "nc",
+      "length_km": 8,
+      "ascent_m": 500,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 76,
+      "tier": "local",
+      "tagline": "Ridge walk above the southern suburbs of Nouméa",
+      "summary": "The Mont Dore track climbs a southern massif for lagoon and Grande Terre views close to Nouméa.",
+      "tips": [
+        "Start early for shade",
+        "The ridge is exposed",
+        "Carry water"
+      ],
+      "geometry": [
+        [
+          166.57,
+          -22.27
+        ],
+        [
+          166.5725,
+          -22.2675
+        ],
+        [
+          166.575,
+          -22.265
+        ],
+        [
+          166.5775,
+          -22.2625
+        ],
+        [
+          166.58,
+          -22.26
+        ],
+        [
+          166.5825,
+          -22.2575
+        ],
+        [
+          166.585,
+          -22.255
+        ],
+        [
+          166.5875,
+          -22.2525
+        ],
+        [
+          166.59,
+          -22.25
+        ]
+      ],
+      "start_name": "Mont Dore trailhead",
+      "end_name": "Mont Dore ridge",
+      "start_instructions": "Start from the signed trailhead above Le Mont-Dore.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "fautaua-waterfall-pf",
+      "name": "Fautaua Waterfall Walk",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "length_km": 6,
+      "ascent_m": 280,
+      "difficulty": "moderate",
+      "network": "Tahiti valley walk",
+      "popularity": 82,
+      "tier": "regional",
+      "tagline": "Permit valley walk to a high waterfall above Papeete",
+      "summary": "The Fautaua track follows a locked valley from the Bain Loti area to a tall waterfall under Tahiti's interior.",
+      "tips": [
+        "A municipal permit is required",
+        "The river crossings rise after rain",
+        "Start early"
+      ],
+      "geometry": [
+        [
+          -149.535,
+          -17.552
+        ],
+        [
+          -149.53325,
+          -17.5505
+        ],
+        [
+          -149.5315,
+          -17.549
+        ],
+        [
+          -149.52975,
+          -17.5475
+        ],
+        [
+          -149.528,
+          -17.546
+        ],
+        [
+          -149.526,
+          -17.5445
+        ],
+        [
+          -149.524,
+          -17.543
+        ],
+        [
+          -149.522,
+          -17.5415
+        ],
+        [
+          -149.52,
+          -17.54
+        ]
+      ],
+      "start_name": "Bain Loti",
+      "end_name": "Fautaua waterfall",
+      "start_instructions": "Start from the Bain Loti / Fautaua valley gate with a permit.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "aorai-trail-pf",
+      "name": "Aorai Trail",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "length_km": 14,
+      "ascent_m": 1200,
+      "difficulty": "hard",
+      "network": "Tahiti ridge walk",
+      "popularity": 80,
+      "tier": "major",
+      "tagline": "Knife-edge ridge toward one of Tahiti's classic peaks",
+      "summary": "The Aorai trail climbs a long ridge from Fare Rau Ape with exposed sections and views over Papeete and the interior.",
+      "tips": [
+        "Turn around in cloud",
+        "The ridge is narrow and rooted",
+        "Carry a headlamp if starting early"
+      ],
+      "geometry": [
+        [
+          -149.51,
+          -17.56
+        ],
+        [
+          -149.5095,
+          -17.5625
+        ],
+        [
+          -149.509,
+          -17.565
+        ],
+        [
+          -149.5085,
+          -17.5675
+        ],
+        [
+          -149.508,
+          -17.57
+        ],
+        [
+          -149.507,
+          -17.5725
+        ],
+        [
+          -149.506,
+          -17.575
+        ],
+        [
+          -149.505,
+          -17.5775
+        ],
+        [
+          -149.504,
+          -17.58
+        ],
+        [
+          -149.503,
+          -17.5825
+        ],
+        [
+          -149.502,
+          -17.585
+        ],
+        [
+          -149.501,
+          -17.5875
+        ],
+        [
+          -149.5,
+          -17.59
+        ]
+      ],
+      "start_name": "Fare Rau Ape",
+      "end_name": "Aorai ridge",
+      "start_instructions": "Start from the Fare Rau Ape / Belvédère road trailhead above Pirae.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "moorea-belvedere-pf",
+      "name": "Moorea Belvedere Walk",
+      "country": "French Polynesia",
+      "cc": "pf",
+      "length_km": 4,
+      "ascent_m": 150,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 84,
+      "tier": "regional",
+      "tagline": "Short ridge paths between Cook's and Opunohu bays",
+      "summary": "Walks around the Belvédère link pineapple slopes, marae, and views down both of Moorea's great northern bays.",
+      "tips": [
+        "The lookout road is steep",
+        "Combine with the Opunohu marae",
+        "Afternoons cloud over"
+      ],
+      "geometry": [
+        [
+          -149.826,
+          -17.53
+        ],
+        [
+          -149.82733,
+          -17.52833
+        ],
+        [
+          -149.82867,
+          -17.52667
+        ],
+        [
+          -149.83,
+          -17.525
+        ],
+        [
+          -149.83133,
+          -17.52333
+        ],
+        [
+          -149.83267,
+          -17.52167
+        ],
+        [
+          -149.834,
+          -17.52
+        ]
+      ],
+      "start_name": "Belvedere lookout",
+      "end_name": "Opunohu ridge",
+      "start_instructions": "Start from the Belvédère lookout above Opunohu Valley.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-vaea-ws",
+      "name": "Mount Vaea Walk",
+      "country": "Samoa",
+      "cc": "ws",
+      "length_km": 3,
+      "ascent_m": 220,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 84,
+      "tier": "regional",
+      "tagline": "Short steep walk to Robert Louis Stevenson's grave",
+      "summary": "A steep forest path from Vailima climbs to the tomb of Robert Louis Stevenson on the summit of Mount Vaea.",
+      "tips": [
+        "The track is rooted and slippery after rain",
+        "Start from the museum grounds",
+        "Carry water"
+      ],
+      "geometry": [
+        [
+          -171.766,
+          -13.864
+        ],
+        [
+          -171.76667,
+          -13.86267
+        ],
+        [
+          -171.76733,
+          -13.86133
+        ],
+        [
+          -171.768,
+          -13.86
+        ],
+        [
+          -171.76867,
+          -13.85867
+        ],
+        [
+          -171.76933,
+          -13.85733
+        ],
+        [
+          -171.77,
+          -13.856
+        ]
+      ],
+      "start_name": "Vailima",
+      "end_name": "Mount Vaea tomb",
+      "start_instructions": "Start from the Robert Louis Stevenson Museum at Vailima.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "lake-lanotoo-ws",
+      "name": "Lake Lanoto'o Walk",
+      "country": "Samoa",
+      "cc": "ws",
+      "length_km": 6,
+      "ascent_m": 180,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 76,
+      "tier": "local",
+      "tagline": "Muddy crater-lake walk in the hills above Apia",
+      "summary": "A 4WD approach and forest walk lead to the green crater lake of Lanoto'o National Park.",
+      "tips": [
+        "The last kilometres are often 4WD-only",
+        "Expect mud",
+        "Guide recommended if the road is unclear"
+      ],
+      "geometry": [
+        [
+          -171.82,
+          -13.9
+        ],
+        [
+          -171.82167,
+          -13.90167
+        ],
+        [
+          -171.82333,
+          -13.90333
+        ],
+        [
+          -171.825,
+          -13.905
+        ],
+        [
+          -171.82667,
+          -13.90667
+        ],
+        [
+          -171.82833,
+          -13.90833
+        ],
+        [
+          -171.83,
+          -13.91
+        ]
+      ],
+      "start_name": "Lanoto'o road",
+      "end_name": "Lake Lanoto'o",
+      "start_instructions": "Start from the highland road above Apia toward the crater lake.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-alava-as",
+      "name": "Mount Alava Adventure Trail",
+      "country": "American Samoa",
+      "cc": "as",
+      "length_km": 7,
+      "ascent_m": 350,
+      "difficulty": "moderate",
+      "network": "National park walk",
+      "popularity": 82,
+      "tier": "regional",
+      "tagline": "Ridge walk along the old tramway above Pago Pago",
+      "summary": "The Mount Alava trail follows the old tramway ridge to a lookout over Pago Pago Harbour and Rainmaker Mountain.",
+      "tips": [
+        "The ridge is humid and can be muddy",
+        "Start from Fagasa Pass",
+        "Carry water"
+      ],
+      "geometry": [
+        [
+          -170.702,
+          -14.268
+        ],
+        [
+          -170.70025,
+          -14.2655
+        ],
+        [
+          -170.6985,
+          -14.263
+        ],
+        [
+          -170.69675,
+          -14.2605
+        ],
+        [
+          -170.695,
+          -14.258
+        ],
+        [
+          -170.69325,
+          -14.2555
+        ],
+        [
+          -170.6915,
+          -14.253
+        ],
+        [
+          -170.68975,
+          -14.2505
+        ],
+        [
+          -170.688,
+          -14.248
+        ],
+        [
+          -170.6865,
+          -14.246
+        ],
+        [
+          -170.685,
+          -14.244
+        ],
+        [
+          -170.6835,
+          -14.242
+        ],
+        [
+          -170.682,
+          -14.24
+        ]
+      ],
+      "start_name": "Fagasa Pass",
+      "end_name": "Mount Alava",
+      "start_instructions": "Start at Fagasa Pass on the road between Pago Pago and Fagasa.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "eua-clifftop-to",
+      "name": "'Eua Clifftop Walk",
+      "country": "Tonga",
+      "cc": "to",
+      "length_km": 6,
+      "ascent_m": 160,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 74,
+      "tier": "local",
+      "tagline": "Forest and trench-edge lookouts on 'Eua",
+      "summary": "Short park and clifftop paths on 'Eua look down the Pacific trench and through the island's older forest.",
+      "tips": [
+        "The ferry from Tongatapu can cancel",
+        "Edges are unfenced",
+        "Birds are best in the morning"
+      ],
+      "geometry": [
+        [
+          -174.935,
+          -21.385
+        ],
+        [
+          -174.93333,
+          -21.38667
+        ],
+        [
+          -174.93167,
+          -21.38833
+        ],
+        [
+          -174.93,
+          -21.39
+        ],
+        [
+          -174.92833,
+          -21.39167
+        ],
+        [
+          -174.92667,
+          -21.39333
+        ],
+        [
+          -174.925,
+          -21.395
+        ]
+      ],
+      "start_name": "'Eua National Park",
+      "end_name": "'Eua cliffs",
+      "start_instructions": "Start from the national-park access on 'Eua's eastern side.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-talau-to",
+      "name": "Mount Talau Walk",
+      "country": "Tonga",
+      "cc": "to",
+      "length_km": 2,
+      "ascent_m": 130,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 76,
+      "tier": "local",
+      "tagline": "Short climb to the Vava'u harbour lookout",
+      "summary": "A short signed walk from Neiafu climbs Mount Talau for a view over the yacht harbour and outer islands.",
+      "tips": [
+        "Go early or late for shade",
+        "The last minutes are steep",
+        "Combine with a harbour afternoon"
+      ],
+      "geometry": [
+        [
+          -173.983,
+          -18.652
+        ],
+        [
+          -173.98233,
+          -18.651
+        ],
+        [
+          -173.98167,
+          -18.65
+        ],
+        [
+          -173.981,
+          -18.649
+        ],
+        [
+          -173.98067,
+          -18.64833
+        ],
+        [
+          -173.98033,
+          -18.64767
+        ],
+        [
+          -173.98,
+          -18.647
+        ]
+      ],
+      "start_name": "Neiafu",
+      "end_name": "Mount Talau",
+      "start_instructions": "Start from the signed trail off the Neiafu ridge road.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "te-rua-manga-ck",
+      "name": "Te Rua Manga Cross-Island Track",
+      "country": "Cook Islands",
+      "cc": "ck",
+      "length_km": 6,
+      "ascent_m": 350,
+      "difficulty": "moderate",
+      "network": "Rarotonga day walk",
+      "popularity": 88,
+      "tier": "regional",
+      "tagline": "Muddy inland crossing past The Needle",
+      "summary": "Rarotonga's Cross-Island Track climbs from the north through forest to Te Rua Manga, then drops toward Wigmore's Waterfall.",
+      "tips": [
+        "The rock of The Needle is slippery",
+        "Hire a guide if the route is new to you",
+        "Start on the Avatiu side"
+      ],
+      "geometry": [
+        [
+          -159.776,
+          -21.207
+        ],
+        [
+          -159.77467,
+          -21.21133
+        ],
+        [
+          -159.77333,
+          -21.21567
+        ],
+        [
+          -159.772,
+          -21.22
+        ],
+        [
+          -159.77067,
+          -21.22333
+        ],
+        [
+          -159.76933,
+          -21.22667
+        ],
+        [
+          -159.768,
+          -21.23
+        ],
+        [
+          -159.76667,
+          -21.23333
+        ],
+        [
+          -159.76533,
+          -21.23667
+        ],
+        [
+          -159.764,
+          -21.24
+        ],
+        [
+          -159.76267,
+          -21.245
+        ],
+        [
+          -159.76133,
+          -21.25
+        ],
+        [
+          -159.76,
+          -21.255
+        ]
+      ],
+      "start_name": "Avatiu valley",
+      "end_name": "Wigmore's Waterfall",
+      "start_instructions": "Start from the Avatiu valley trailhead inland from Avarua.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "togo-chasm-walk-nu",
+      "name": "Togo Chasm Walk",
+      "country": "Niue",
+      "cc": "nu",
+      "length_km": 2,
+      "ascent_m": 40,
+      "difficulty": "easy",
+      "network": "Coastal walk",
+      "popularity": 80,
+      "tier": "local",
+      "tagline": "Forest and ladder descent to a hidden coral chasm",
+      "summary": "A short forest boardwalk and ladder lead into Togo Chasm, a palm-filled collapse on Niue's east coast.",
+      "tips": [
+        "The ladder is steep",
+        "Go at low swell if continuing to the reef",
+        "Insect repellent helps"
+      ],
+      "geometry": [
+        [
+          -169.84,
+          -19.12
+        ],
+        [
+          -169.83933,
+          -19.12067
+        ],
+        [
+          -169.83867,
+          -19.12133
+        ],
+        [
+          -169.838,
+          -19.122
+        ],
+        [
+          -169.83733,
+          -19.12267
+        ],
+        [
+          -169.83667,
+          -19.12333
+        ],
+        [
+          -169.836,
+          -19.124
+        ]
+      ],
+      "start_name": "Togo car park",
+      "end_name": "Togo Chasm",
+      "start_instructions": "Start from the signed Togo Chasm car park on the east-coast road.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "ngardmau-waterfall-pw",
+      "name": "Ngardmau Waterfall Walk",
+      "country": "Palau",
+      "cc": "pw",
+      "length_km": 4,
+      "ascent_m": 140,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 78,
+      "tier": "local",
+      "tagline": "Babeldaob forest walk to Palau's highest waterfall",
+      "summary": "A muddy forest path on Babeldaob leads to Ngardmau Falls, the tallest waterfall in Palau.",
+      "tips": [
+        "The track is slippery after rain",
+        "A hire car is needed from Koror",
+        "Carry water"
+      ],
+      "geometry": [
+        [
+          134.565,
+          7.605
+        ],
+        [
+          134.56667,
+          7.60333
+        ],
+        [
+          134.56833,
+          7.60167
+        ],
+        [
+          134.57,
+          7.6
+        ],
+        [
+          134.57133,
+          7.59867
+        ],
+        [
+          134.57267,
+          7.59733
+        ],
+        [
+          134.574,
+          7.596
+        ]
+      ],
+      "start_name": "Ngardmau trailhead",
+      "end_name": "Ngardmau Falls",
+      "start_instructions": "Start from the signed trailhead in Ngardmau State.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-lamlam-gu",
+      "name": "Mount Lamlam Walk",
+      "country": "Guam",
+      "cc": "gu",
+      "length_km": 3,
+      "ascent_m": 180,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Short climb to the highest point on Guam",
+      "summary": "A short trail from the cross on Route 17 reaches Mount Lamlam, often claimed as the world's highest mountain if measured from the Marianas Trench.",
+      "tips": [
+        "The trail is exposed — carry water",
+        "Snakes are present — stay on the path",
+        "Sunrise is the coolest time"
+      ],
+      "geometry": [
+        [
+          144.67,
+          13.33
+        ],
+        [
+          144.66933,
+          13.33133
+        ],
+        [
+          144.66867,
+          13.33267
+        ],
+        [
+          144.668,
+          13.334
+        ],
+        [
+          144.66733,
+          13.33533
+        ],
+        [
+          144.66667,
+          13.33667
+        ],
+        [
+          144.666,
+          13.338
+        ]
+      ],
+      "start_name": "Mount Lamlam trailhead",
+      "end_name": "Mount Lamlam",
+      "start_instructions": "Start from the roadside trailhead on Cross Island Road.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-tapochau-mp",
+      "name": "Mount Tapochau Walk",
+      "country": "Northern Mariana Islands",
+      "cc": "mp",
+      "length_km": 3,
+      "ascent_m": 200,
+      "difficulty": "easy",
+      "network": "Day hike",
+      "popularity": 76,
+      "tier": "local",
+      "tagline": "Saipan's summit lookout above the lagoon and cliffs",
+      "summary": "A short road-and-path climb reaches Mount Tapochau for a full view of Saipan, Tinian, and the Philippine Sea.",
+      "tips": [
+        "A high-clearance car can reach near the top",
+        "The last metres are on foot",
+        "It can be windy"
+      ],
+      "geometry": [
+        [
+          145.74,
+          15.18
+        ],
+        [
+          145.74167,
+          15.18133
+        ],
+        [
+          145.74333,
+          15.18267
+        ],
+        [
+          145.745,
+          15.184
+        ],
+        [
+          145.74567,
+          15.18467
+        ],
+        [
+          145.74633,
+          15.18533
+        ],
+        [
+          145.747,
+          15.186
+        ]
+      ],
+      "start_name": "Tapochau road",
+      "end_name": "Mount Tapochau",
+      "start_instructions": "Start from the Mount Tapochau road above central Saipan.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "sokehs-rock-fm",
+      "name": "Sokehs Rock",
+      "country": "Federated States of Micronesia",
+      "cc": "fm",
+      "length_km": 3,
+      "ascent_m": 220,
+      "difficulty": "moderate",
+      "network": "Day hike",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Fixed-rope basalt climb above Pohnpei harbour",
+      "summary": "Sokehs Rock is a short, steep climb with ropes and roots to a prow of basalt above Kolonia.",
+      "tips": [
+        "The rock is slick in rain",
+        "Use the ropes",
+        "Go with someone who knows the start"
+      ],
+      "geometry": [
+        [
+          158.155,
+          6.968
+        ],
+        [
+          158.156,
+          6.96867
+        ],
+        [
+          158.157,
+          6.96933
+        ],
+        [
+          158.158,
+          6.97
+        ],
+        [
+          158.15867,
+          6.97067
+        ],
+        [
+          158.15933,
+          6.97133
+        ],
+        [
+          158.16,
+          6.972
+        ]
+      ],
+      "start_name": "Sokehs trailhead",
+      "end_name": "Sokehs Rock",
+      "start_instructions": "Start from the trail behind Sokehs village, north-west of Kolonia.",
+      "route_type": "hiking",
+      "photos": []
+    },
+    {
+      "id": "mount-pitt-nf",
+      "name": "Mount Pitt Walk",
+      "country": "Norfolk Island",
+      "cc": "nf",
+      "length_km": 3,
+      "ascent_m": 150,
+      "difficulty": "easy",
+      "network": "National park walk",
+      "popularity": 80,
+      "tier": "regional",
+      "tagline": "Pine-forest walk to Norfolk's second summit",
+      "summary": "A short national-park walk climbs through Norfolk pines and palms to the Mount Pitt lookout.",
+      "tips": [
+        "The road also reaches a lookout",
+        "Wind is strong on top",
+        "Combine with Mount Bates"
+      ],
+      "geometry": [
+        [
+          167.945,
+          -29.03
+        ],
+        [
+          167.944,
+          -29.02833
+        ],
+        [
+          167.943,
+          -29.02667
+        ],
+        [
+          167.942,
+          -29.025
+        ],
+        [
+          167.94133,
+          -29.02333
+        ],
+        [
+          167.94067,
+          -29.02167
+        ],
+        [
+          167.94,
+          -29.02
+        ]
+      ],
+      "start_name": "Mount Pitt road",
+      "end_name": "Mount Pitt",
+      "start_instructions": "Start from the national-park road or the lower walking track on Norfolk Island.",
+      "route_type": "hiking",
+      "photos": []
+    }
+  ]
+}
