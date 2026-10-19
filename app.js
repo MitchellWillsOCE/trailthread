@@ -192,8 +192,27 @@ const basemapConfig = {
 
 const overlayConfig = {
   labels: { label: "Labels", hint: "Place names on imagery" },
-  transit: { label: "Transit", hint: "Public transport lines" }
+  transit: { label: "Transit", hint: "Public transport lines" },
+  photos: { label: "Photos", hint: "Photo previews on map pins" }
 };
+
+const PIN_PHOTOS_STORAGE_KEY = "tt-pin-photos";
+
+function readPinPhotosPref() {
+  try {
+    return localStorage.getItem(PIN_PHOTOS_STORAGE_KEY) !== "off";
+  } catch {
+    return true;
+  }
+}
+
+function writePinPhotosPref(enabled) {
+  try {
+    localStorage.setItem(PIN_PHOTOS_STORAGE_KEY, enabled ? "on" : "off");
+  } catch {
+    // Private mode or storage full: the toggle still works for this visit.
+  }
+}
 
 const OPENFREEMAP_STYLES = {
   voyager: "https://tiles.openfreemap.org/styles/liberty",
@@ -230,7 +249,11 @@ function createOpenFreeMapLayer(styleUrl) {
     attribution: OPENFREEMAP_ATTRIBUTION,
     // Keep the canvas on the same move as the pins. The plugin default
     // waits 32ms, which leaves the basemap a frame behind a drag.
-    updateInterval: 0
+    updateInterval: 0,
+    // 3x phone screens would otherwise draw 2.25x the pixels of 2x for no
+    // visible gain on a basemap.
+    pixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+    refreshExpiredTiles: false
   });
 
   const pinchZoom = layer._pinchZoom.bind(layer);
@@ -336,7 +359,7 @@ let regionFollowResumeTimer = 0;
 let regionFollowSafetyTimer = 0;
 let state = {
   basemap: "voyager",
-  overlays: { labels: false, transit: false },
+  overlays: { labels: false, transit: false, photos: readPinPhotosPref() },
   modes: { drive: true, train: true, hike: true, ferry: true, fly: true },
   trips: [],
   selectedTrip: null,
@@ -898,7 +921,7 @@ function renderWelcomeOverlay() {
         const meta = [days, region].filter(Boolean).join(" · ");
         return `
           <button type="button" class="welcome-featured__card" data-welcome-trip="${escapeAttr(trip.key)}" data-welcome-emoji="${escapeAttr(trip.emoji || "🗺")}">
-            ${cover ? `<img src="${escapeAttr(cover)}" alt="" loading="lazy" referrerpolicy="no-referrer" />` : `<span class="welcome-featured__fallback" aria-hidden="true">${escapeHtml(trip.emoji || "🗺")}</span>`}
+            ${cover ? `<img src="${escapeAttr(wikimediaThumbUrl(cover, CARD_THUMB_WIDTH) || cover)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />` : `<span class="welcome-featured__fallback" aria-hidden="true">${escapeHtml(trip.emoji || "🗺")}</span>`}
             <span class="welcome-featured__meta">
               <strong>${escapeHtml(trip.title)}</strong>
               ${meta ? `<em>${escapeHtml(meta)}</em>` : ""}
@@ -1210,7 +1233,7 @@ function renderStopsList(pointFeatures) {
         : "";
 
       const photoImg = photo
-        ? `<img class="dest-stop-card__media-img" src="${escapeHtml(photo)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentElement?.classList.add('is-loaded')" onerror="this.remove()" />`
+        ? `<img class="dest-stop-card__media-img" src="${escapeHtml(wikimediaThumbUrl(photo, PANEL_THUMB_WIDTH) || photo)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentElement?.classList.add('is-loaded')" onerror="this.remove()" />`
         : "";
       return `
         <button
@@ -3981,6 +4004,55 @@ function safeCoverUrl(url) {
   return value;
 }
 
+// Wikimedia serves only standard thumbnail widths (120, 250, 330, 500, 960,
+// 1280...) without throttling, so callers must pick from that list.
+const PIN_THUMB_WIDTH = 120;
+const CARD_THUMB_WIDTH = 330;
+const PANEL_THUMB_WIDTH = 500;
+
+function pinThumbUrl(url) {
+  return wikimediaThumbUrl(url, PIN_THUMB_WIDTH);
+}
+
+/** Wikimedia thumbnail at `width`; other hosts pass through unchanged. */
+function wikimediaThumbUrl(url, width) {
+  const value = safeCoverUrl(url);
+  if (!value) return "";
+  let parsed;
+  try {
+    parsed = new URL(value);
+  } catch {
+    return value;
+  }
+  const host = parsed.hostname;
+  if (host === "commons.wikimedia.org" && parsed.pathname.includes("/Special:FilePath/")) {
+    const current = Number(parsed.searchParams.get("width"));
+    if (!current || current > width) parsed.searchParams.set("width", String(width));
+    return parsed.toString();
+  }
+  if (host !== "upload.wikimedia.org" && host !== "thumb.wikimedia.org") return value;
+  const path = parsed.pathname;
+  const sized = /\/((?:lossy-)?page\d+-)?(\d+)px-([^/]+)$/;
+  const sizedMatch = path.includes("/thumb/") ? path.match(sized) : null;
+  if (sizedMatch) {
+    if (Number(sizedMatch[2]) <= width) return value;
+    parsed.pathname = path.replace(sized, `/$1${width}px-$3`);
+    return parsed.toString();
+  }
+  // Original files of unknown size: Wikimedia errors when asked to upscale,
+  // so only request widths that nearly every photo exceeds.
+  const original = width <= CARD_THUMB_WIDTH
+    ? path.match(/^\/wikipedia\/([^/]+)\/([0-9a-f])\/([0-9a-f]{2})\/([^/]+\.(?:jpe?g|png|webp|gif))$/i)
+    : null;
+  if (original) {
+    const [, project, a, ab, file] = original;
+    parsed.pathname = `/wikipedia/${project}/thumb/${a}/${ab}/${file}/${width}px-${file}`;
+    parsed.search = "";
+    return parsed.toString();
+  }
+  return value;
+}
+
 function shortPinTagline(text) {
   const value = String(text || "").replace(/\s+/g, " ").trim();
   if (!value || /future deep-dive/i.test(value)) return "";
@@ -3999,8 +4071,12 @@ function exploreKindLabel(kind, props) {
   return cityCategoryLabel(props?.category, props?.locale);
 }
 
+function pinPhotoAvailable(props) {
+  return state.overlays.photos !== false && Boolean(safeCoverUrl(props?.cover));
+}
+
 function resolvePhotoVisible(props, marker, featured) {
-  if (!safeCoverUrl(props?.cover)) return false;
+  if (!pinPhotoAvailable(props)) return false;
   if (marker?._forcePhoto) return true;
   if (exploreIsCompact()) return Boolean(featured);
   if (featured) return true;
@@ -4013,7 +4089,7 @@ function resolvePhotoVisible(props, marker, featured) {
 }
 
 function explorePinSize(props, featured, photoVisible) {
-  if (photoVisible || (featured && safeCoverUrl(props?.cover))) return 40;
+  if (photoVisible || (featured && pinPhotoAvailable(props))) return 40;
   if (featured) return 28;
   return 22;
 }
@@ -4038,7 +4114,7 @@ function explorePinSignature(kind, props, selected, featured, photoVisible, size
 }
 
 function explorePinHtml(kind, props, showPhoto = false) {
-  const cover = showPhoto ? safeCoverUrl(props?.cover) : "";
+  const cover = showPhoto ? pinThumbUrl(props?.cover) : "";
   const color = EXPLORE_PIN_COLORS[kind] || EXPLORE_PIN_COLORS.city;
   const name = escapeHtml(props?.name || "Place");
   const label = escapeHtml(exploreKindLabel(kind, props));
@@ -4098,17 +4174,20 @@ function syncCatalogPin(marker, kind, props, selected = false, featured = false)
   marker._photoVisible = photoVisible;
   marker._pinKind = kind;
   marker._pinSize = size;
+  marker._pinProps = props;
+  marker._pinSelected = selected;
+  marker._pinFeatured = featured;
   if (marker._pinSignature === signature) {
     marker.getElement?.()?.classList.toggle("is-selected", selected);
     marker.getElement?.()?.classList.toggle("is-featured", featured);
     placeExplorePin(marker, featured);
     return;
   }
-  const showPhoto = photoVisible || (featured && Boolean(safeCoverUrl(props?.cover)));
+  const showPhoto = photoVisible || (featured && pinPhotoAvailable(props));
   const className = [
     "explore-pin",
     `explore-pin--${kind}`,
-    safeCoverUrl(props?.cover) ? "explore-pin--photo" : "",
+    pinPhotoAvailable(props) ? "explore-pin--photo" : "",
     showPhoto ? "explore-pin--show-photo" : "",
     selected ? "is-selected" : "",
     featured ? "is-featured" : ""
@@ -6343,7 +6422,22 @@ function updateLayerChipUI() {
   });
 }
 
+function setPinPhotos(enabled) {
+  state.overlays.photos = enabled;
+  writePinPhotosPref(enabled);
+  map.eachLayer((layer) => {
+    if (layer._explorePin && layer._pinKind && layer._pinProps) {
+      syncCatalogPin(layer, layer._pinKind, layer._pinProps, layer._pinSelected, layer._pinFeatured);
+    }
+  });
+  updateLayerChipUI();
+}
+
 function setOverlay(key, enabled) {
+  if (key === "photos") {
+    setPinPhotos(enabled);
+    return;
+  }
   const layer = overlayLayers[key];
   if (!layer) {
     return;
@@ -6626,7 +6720,7 @@ function linePopupThumbForProps(props, mode) {
   }
   return `
     <div class="route-leg-popup__thumb">
-      <img src="${escapeHtml(pick.url)}" alt="${escapeHtml(pick.caption || "")}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.route-leg-popup__thumb')?.remove()" />
+      <img src="${escapeHtml(wikimediaThumbUrl(pick.url, PANEL_THUMB_WIDTH) || pick.url)}" alt="${escapeHtml(pick.caption || "")}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.closest('.route-leg-popup__thumb')?.remove()" />
       <span class="route-leg-popup__mode-pill" data-mode="${escapeHtml(mode)}">${escapeHtml(modeLabel(mode))}</span>
     </div>
   `;
@@ -7598,7 +7692,7 @@ function renderTripCardHtml(trip, { libraryKind: explicitKind } = {}) {
       : "";
   const distance = trip.distanceKm ? `<span class="trip-card-distance">${trip.distanceKm} km</span>` : "";
   const coverImg = trip.cover
-    ? `<img class="trip-card-cover-img" src="${escapeHtml(trip.cover)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentElement?.classList.add('is-loaded')" onerror="this.remove()" />`
+    ? `<img class="trip-card-cover-img" src="${escapeHtml(wikimediaThumbUrl(trip.cover, PANEL_THUMB_WIDTH) || trip.cover)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onload="this.parentElement?.classList.add('is-loaded')" onerror="this.remove()" />`
     : "";
   const authorLine =
     libraryKind === "downloaded" && trip.author

@@ -7,6 +7,8 @@ import json
 import urllib.request
 from pathlib import Path
 
+from simplify_country_geo import simplify_collection
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "Trip" / "geo" / "europe-countries.geojson"
 SOURCE = "https://raw.githubusercontent.com/leakyMirror/map-of-europe/master/GeoJSON/europe.geojson"
@@ -34,7 +36,11 @@ def main() -> None:
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(
-        json.dumps({"type": "FeatureCollection", "features": features}, ensure_ascii=False),
+        json.dumps(
+            simplify_collection({"type": "FeatureCollection", "features": features}),
+            ensure_ascii=False,
+            separators=(",", ":"),
+        ),
         encoding="utf-8",
     )
     print(f"Wrote {len(features)} countries to {OUT}")

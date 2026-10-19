@@ -2104,6 +2104,21 @@ body.hike-story-open .map-controls .route-legend {
   filter: saturate(1.18) contrast(1.1) brightness(0.97);
 }
 
+/* Match each vector style's own background so the map doesn't flash a
+   different colour while the style and first tiles load. */
+.map-stage > #map.basemap-voyager,
+.map-stage > #map.basemap-streets {
+  background: #f8f4f0;
+}
+
+.map-stage > #map.basemap-light {
+  background: #f2f3f0;
+}
+
+.map-stage > #map.basemap-dark {
+  background: #0c0c0c;
+}
+
 #map.basemap-transitioning .leaflet-tile-pane {
   opacity: 0.72;
 }
@@ -7709,7 +7724,7 @@ path.leaflet-interactive:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease, transform var(--dur-fast) ease;
+  transition: background-color var(--dur-fast) ease, color var(--dur-fast) ease;
 }
 
 .city-search__clear[hidden] {
@@ -7776,7 +7791,6 @@ path.leaflet-interactive:hover {
 .city-search__clear:hover {
   background: rgba(15, 23, 42, 0.14);
   color: #0f172a;
-  transform: scale(1.05);
 }
 
 .city-search__results {
