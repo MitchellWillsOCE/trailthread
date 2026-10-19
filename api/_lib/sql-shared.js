@@ -46,6 +46,86 @@ export function parseJsonField(value, fallback = []) {
   return fallback;
 }
 
+function decodeJsonString(raw) {
+  try {
+    return JSON.parse(`"${raw}"`);
+  } catch {
+    return raw;
+  }
+}
+
+function safeHttpUrl(url) {
+  const value = String(url || "").trim();
+  if (!/^https?:\/\//i.test(value)) return "";
+  return value;
+}
+
+/** First photo URL from a photos JSON blob, without keeping the rest of the gallery. */
+export function coverUrlFromPhotos(value) {
+  if (!value) return "";
+  if (Array.isArray(value)) {
+    const first = value[0];
+    if (!first) return "";
+    if (typeof first === "string") return safeHttpUrl(first);
+    return safeHttpUrl(first.url || first.src || "");
+  }
+  if (typeof value === "object") {
+    return safeHttpUrl(value.url || value.src || "");
+  }
+  const text = String(value);
+  if (!text || text === "[]") return "";
+  const match = text.match(/"(?:url|src)"\s*:\s*"((?:\\.|[^"\\])*)"/);
+  if (!match) return "";
+  return safeHttpUrl(decodeJsonString(match[1]));
+}
+
+const COVER_TABLES = new Set(["cities", "parks", "hikes", "pois"]);
+
+function rowWantsCover(row) {
+  const tier = String(row?.tier || "").toLowerCase();
+  const category = String(row?.category || "").toLowerCase();
+  return tier === "major" || tier === "regional" || category === "capital";
+}
+
+/** Cover photo for a map feature that is worth a photo pin. */
+export function catalogCoverForRow(row) {
+  if (!rowWantsCover(row)) return "";
+  return coverUrlFromPhotos(row.photos_json || row.photos || row.cover || "");
+}
+
+/**
+ * Fill `row.cover` for major and regional places. A second query keeps town
+ * rows from pulling photo JSON into memory.
+ */
+export function attachCoverUrls(db, table, rows) {
+  if (!db || !COVER_TABLES.has(table) || !Array.isArray(rows) || !rows.length) return;
+  const ids = [];
+  for (const row of rows) {
+    if (row?.id && rowWantsCover(row)) ids.push(row.id);
+  }
+  if (!ids.length) return;
+  const placeholders = ids.map(() => "?").join(", ");
+  let covers;
+  try {
+    covers = sqlAll(
+      db,
+      `SELECT id, photos_json FROM ${table} WHERE id IN (${placeholders})`,
+      ids
+    );
+  } catch {
+    return;
+  }
+  const byId = new Map();
+  for (const row of covers) {
+    const cover = coverUrlFromPhotos(row.photos_json);
+    if (cover) byId.set(row.id, cover);
+  }
+  for (const row of rows) {
+    const cover = byId.get(row.id);
+    if (cover) row.cover = cover;
+  }
+}
+
 export function makeTiersForZoom({ thresholds = [5, 7], bottom = "local" } = {}) {
   const [zMajor, zRegional] = thresholds;
   return function tiersForZoom(zoom) {

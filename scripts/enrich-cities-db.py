@@ -46,6 +46,7 @@ UPDATE_SQL = """
 _worker_photos = None
 _worker_tips: dict = {}
 _worker_photo_mode = "auto"
+_worker_force = False
 _db_lock = threading.Lock()
 
 
@@ -199,11 +200,12 @@ def enrich_row_dict(row: dict, photos_mod, tips_db: dict, *, photo_mode: str = "
     }
 
 
-def _init_worker(photo_mode: str, tips_path: str) -> None:
-    global _worker_photos, _worker_tips, _worker_photo_mode
+def _init_worker(photo_mode: str, tips_path: str, force: bool = False) -> None:
+    global _worker_photos, _worker_tips, _worker_photo_mode, _worker_force
     _worker_photos = load_photo_module()
     _worker_tips = json.loads(Path(tips_path).read_text(encoding="utf-8"))
     _worker_photo_mode = photo_mode
+    _worker_force = force
     time.sleep(random.uniform(0, 1.5))
 
 
@@ -216,7 +218,9 @@ def _enrich_city_task(city_id: str) -> tuple[str, bool, str]:
         row = conn.execute("SELECT * FROM cities WHERE id = ?", (city_id,)).fetchone()
         if not row:
             return city_id, False, "not found"
-        if row["enriched"] or row["source"] == "trip":
+        if row["source"] == "trip":
+            return city_id, True, "skipped"
+        if row["enriched"] and not _worker_force:
             return city_id, True, "skipped"
 
         row_dict = dict(row)
@@ -250,10 +254,64 @@ def default_workers(requested: int) -> int:
     return max(1, min(cpus - 2, 12))
 
 
-def fetch_pending_ids(tier: str, limit: int) -> list[str]:
+def europe_capital_ids(conn: sqlite3.Connection) -> list[str]:
+    sys.path.insert(0, str(ROOT / "scripts"))
+    from place_categories import CAPITALS_BY_CC, is_capital_name
+
+    oceania = {
+        "FJ", "PG", "SB", "VU", "NC", "PF", "WS", "AS", "TO", "CK", "NU",
+        "PW", "GU", "MP", "FM", "MH", "KI", "NR", "TV", "WF", "NF",
+    }
+    ids: list[str] = []
+    rows = conn.execute(
+        "SELECT id, name, cc FROM cities WHERE region_id = 'europe' AND cc IN ({})".format(
+            ",".join("?" * (len(CAPITALS_BY_CC) - len(oceania)))
+        ),
+        [cc for cc in CAPITALS_BY_CC if cc not in oceania],
+    ).fetchall()
+    for cid, name, cc in rows:
+        if is_capital_name(name, cc):
+            ids.append(cid)
+    return ids
+
+
+def fetch_pending_ids(
+    tier: str,
+    limit: int,
+    *,
+    ids: list[str] | None = None,
+    capitals: bool = False,
+    force: bool = False,
+) -> list[str]:
     conn = sqlite3.connect(DB_PATH)
-    query = "SELECT id FROM cities WHERE region_id = 'europe' AND enriched = 0 AND source != 'trip'"
+    if ids:
+        wanted = [cid.strip() for cid in ids if cid.strip()]
+        if wanted and not force:
+            rows = conn.execute(
+                f"SELECT id FROM cities WHERE id IN ({','.join('?' * len(wanted))}) "
+                "AND enriched = 0 AND source != 'trip'",
+                wanted,
+            ).fetchall()
+            wanted = [r[0] for r in rows]
+        conn.close()
+        return wanted
+    if capitals:
+        wanted = europe_capital_ids(conn)
+        if wanted and not force:
+            rows = conn.execute(
+                f"SELECT id FROM cities WHERE id IN ({','.join('?' * len(wanted))}) "
+                "AND enriched = 0 AND source != 'trip'",
+                wanted,
+            ).fetchall()
+            wanted = [r[0] for r in rows]
+        conn.close()
+        return wanted
+    query = "SELECT id FROM cities WHERE region_id = 'europe'"
     params: list = []
+    if not force:
+        query += " AND enriched = 0 AND source != 'trip'"
+    else:
+        query += " AND source != 'trip'"
     if tier != "all":
         query += " AND tier = ?"
         params.append(tier)
@@ -261,9 +319,9 @@ def fetch_pending_ids(tier: str, limit: int) -> list[str]:
     if limit:
         query += " LIMIT ?"
         params.append(limit)
-    ids = [r[0] for r in conn.execute(query, params).fetchall()]
+    result = [r[0] for r in conn.execute(query, params).fetchall()]
     conn.close()
-    return ids
+    return result
 
 
 def print_stats() -> None:
@@ -278,6 +336,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, default=0, help="Max cities to enrich (0 = all pending)")
     parser.add_argument("--tier", choices=["major", "regional", "town", "all"], default="all")
+    parser.add_argument("--ids", default="", help="Comma-separated city ids to enrich")
+    parser.add_argument("--capitals", action="store_true", help="Enrich European capital cities only")
+    parser.add_argument("--force", action="store_true", help="Re-enrich even if already flagged enriched")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument(
         "--photos",
@@ -299,7 +360,14 @@ def main() -> None:
         raise SystemExit(f"Missing {DB_PATH}. Run: npm run build:db")
 
     worker_count = default_workers(args.workers)
-    city_ids = fetch_pending_ids(args.tier, args.limit)
+    explicit_ids = [part.strip() for part in args.ids.split(",") if part.strip()]
+    city_ids = fetch_pending_ids(
+        args.tier,
+        args.limit,
+        ids=explicit_ids or None,
+        capitals=args.capitals,
+        force=args.force,
+    )
 
     if not city_ids:
         print("No pending cities to enrich.", flush=True)
@@ -326,7 +394,7 @@ def main() -> None:
     failed = 0
 
     if worker_count == 1:
-        _init_worker(args.photos, str(TIPS_PATH))
+        _init_worker(args.photos, str(TIPS_PATH), force=args.force)
         for index, city_id in enumerate(city_ids, start=1):
             cid, ok, msg = _enrich_city_task(city_id)
             if ok and msg != "skipped":
@@ -337,7 +405,7 @@ def main() -> None:
             if args.progress or index % 10 == 0 or index == len(city_ids):
                 print(f"  {index}/{len(city_ids)} — {msg}", flush=True)
     else:
-        _init_worker(args.photos, str(TIPS_PATH))
+        _init_worker(args.photos, str(TIPS_PATH), force=args.force)
         with ThreadPoolExecutor(max_workers=worker_count) as pool:
             futures = {pool.submit(_enrich_city_task, cid): cid for cid in city_ids}
             completed = 0

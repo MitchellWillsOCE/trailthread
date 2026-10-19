@@ -97,5 +97,8 @@
   {"name": "Canillo", "country": "Andorra", "cc": "AD", "lat": 42.5675, "lng": 1.5972, "pop": 6000, "tier": "town"},
   {"name": "Ordino", "country": "Andorra", "cc": "AD", "lat": 42.5564, "lng": 1.5333, "pop": 5000, "tier": "town"},
   {"name": "Soldeu", "country": "Andorra", "cc": "AD", "lat": 42.5764, "lng": 1.6678, "pop": 900, "tier": "town"},
-  {"name": "Pas de la Casa", "country": "Andorra", "cc": "AD", "lat": 42.5439, "lng": 1.7333, "pop": 2300, "tier": "town"}
+  {"name": "Pas de la Casa", "country": "Andorra", "cc": "AD", "lat": 42.5439, "lng": 1.7333, "pop": 2300, "tier": "town"},
+  {"name": "Vaduz", "country": "Liechtenstein", "cc": "LI", "lat": 47.1410, "lng": 9.5215, "pop": 5741, "tier": "major"},
+  {"name": "San Marino", "country": "San Marino", "cc": "SM", "lat": 43.9367, "lng": 12.4467, "pop": 4127, "tier": "major"},
+  {"name": "Vatican City", "country": "Vatican City", "cc": "VA", "lat": 41.9029, "lng": 12.4534, "pop": 825, "tier": "major"}
 ]

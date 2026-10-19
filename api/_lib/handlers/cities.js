@@ -9,6 +9,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import {
+  attachCoverUrls,
+  catalogCoverForRow,
   createSqlDatabaseLoader,
   makeTiersForZoom,
   parseJsonField,
@@ -234,6 +236,7 @@ function queryFeaturesGeojson(regionId, west, south, east, north, zoom, countryC
     .slice(0, 220)
     .map((feature) => {
       const row = featureToRow(feature);
+      const cover = catalogCoverForRow(row);
       return {
         type: "Feature",
         geometry: { type: "Point", coordinates: [row.lng, row.lat] },
@@ -245,8 +248,10 @@ function queryFeaturesGeojson(regionId, west, south, east, north, zoom, countryC
           pop: row.pop,
           tier: row.tier,
           category: row.category || "",
+          locale: row.locale || "",
           tagline: row.tagline,
           enriched: cityEnrichedFlag(row),
+          ...(cover ? { cover } : {}),
         },
       };
     });
@@ -270,6 +275,7 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
   const params = [regionId, south, north, west, east, ...tiers];
   if (countryCc) params.push(countryCc);
   const rows = sqlAll(db, sql, params).filter((row) => !isParkPlaceName(row.name));
+  attachCoverUrls(db, "cities", rows);
   return rows.map((row) => ({
     type: "Feature",
     geometry: { type: "Point", coordinates: [row.lng, row.lat] },
@@ -284,6 +290,7 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
       locale: row.locale || "",
       tagline: row.tagline,
       enriched: cityEnrichedFlag(row),
+      ...(row.cover ? { cover: row.cover } : {}),
     },
   }));
 }

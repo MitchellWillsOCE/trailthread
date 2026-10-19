@@ -1,6 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 import {
+  attachCoverUrls,
+  catalogCoverForRow,
   createSqlDatabaseLoader,
   makeTiersForZoom,
   parseJsonField,
@@ -128,7 +130,15 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
         return lat >= south && lat <= north && lng >= west && lng <= east;
       })
       .sort((a, b) => (b.properties?.popularity || 0) - (a.properties?.popularity || 0))
-      .slice(0, 400);
+      .slice(0, 400)
+      .map((feature) => {
+        const cover = catalogCoverForRow(feature.properties || {});
+        if (!cover) return feature;
+        return {
+          ...feature,
+          properties: { ...(feature.properties || {}), cover },
+        };
+      });
   }
   const tiers = tiersForZoom(zoom);
   const placeholders = tiers.map(() => "?").join(", ");
@@ -146,7 +156,9 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
   `;
   const params = [regionId, south, north, west, east, ...tiers];
   if (countryCc) params.push(countryCc);
-  return sqlAll(db, sql, params).map((row) => ({
+  const rows = sqlAll(db, sql, params);
+  attachCoverUrls(db, "hikes", rows);
+  return rows.map((row) => ({
     type: "Feature",
     geometry: { type: "Point", coordinates: [row.lng, row.lat] },
     properties: {
@@ -161,6 +173,7 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
       popularity: row.popularity,
       tier: row.tier,
       tagline: row.tagline,
+      ...(row.cover ? { cover: row.cover } : {}),
     },
   }));
 }

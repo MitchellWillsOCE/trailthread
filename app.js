@@ -126,6 +126,23 @@ const map = L.map("map", {
 L.control.zoom({ position: "bottomright" }).addTo(map);
 L.control.scale({ position: "bottomleft", imperial: false, maxWidth: 140 }).addTo(map);
 
+if (typeof ResizeObserver !== "undefined") {
+  const mapEl = document.getElementById("map");
+  if (mapEl) {
+    let mapResizeFrame = 0;
+    const mapResizeObserver = new ResizeObserver(() => {
+      if (mapResizeFrame) {
+        return;
+      }
+      mapResizeFrame = requestAnimationFrame(() => {
+        mapResizeFrame = 0;
+        map.invalidateSize({ animate: false, debounceMoveend: true });
+      });
+    });
+    mapResizeObserver.observe(mapEl);
+  }
+}
+
 map.createPane("routeGlow");
 map.getPane("routeGlow").style.zIndex = "390";
 
@@ -152,6 +169,9 @@ map.getPane("parksCatalog").style.zIndex = "505";
 
 map.createPane("poisCatalog");
 map.getPane("poisCatalog").style.zIndex = "507";
+
+map.createPane("exploreFeatured");
+map.getPane("exploreFeatured").style.zIndex = "630";
 
 map.createPane("routeMarkers");
 map.getPane("routeMarkers").style.zIndex = "650";
@@ -201,14 +221,41 @@ function isVectorBasemap(key) {
 }
 
 function createOpenFreeMapLayer(styleUrl) {
-  return maplibreGL({
+  const layer = maplibreGL({
     style: styleUrl,
     pane: "tilePane",
     interactive: false,
     attributionControl: false,
     maplibreLogo: false,
-    attribution: OPENFREEMAP_ATTRIBUTION
+    attribution: OPENFREEMAP_ATTRIBUTION,
+    // Keep the canvas on the same move as the pins. The plugin default
+    // waits 32ms, which leaves the basemap a frame behind a drag.
+    updateInterval: 0
   });
+
+  const pinchZoom = layer._pinchZoom.bind(layer);
+  layer._pinchZoom = function () {
+    // Animated zoom already scales this canvas with the same CSS transition
+    // as marker icons. jumpTo would redraw the basemap at the destination
+    // zoom immediately, so the pins ease in behind it.
+    if (this._map && this._map._animatingZoom) {
+      return;
+    }
+    pinchZoom();
+  };
+
+  layer._resize = function () {
+    if (!this._map || !this._glMap || this._map._animatingZoom) {
+      return;
+    }
+    this._resizeContainer();
+    if (typeof this._glMap.resize === "function") {
+      this._glMap.resize();
+    }
+    this._update();
+  };
+
+  return layer;
 }
 
 const overlayLayers = {
@@ -994,11 +1041,15 @@ function enterExploreMode(options = {}) {
   const { dismissWelcome = true } = options;
   const flyToRegion = options.flyToRegion ?? options.flyToEurope ?? true;
 
-  if (!state.exploreCities) {
-    setExploreCities(true);
-  }
-  if (!state.exploreParks) {
+  setExploreCities(true);
+  if (exploreIsCompact()) {
+    setTimeout(() => setExploreParks(true), 140);
+    setTimeout(() => setExploreHikes(true), 280);
+    setTimeout(() => setExplorePoi(true), 420);
+  } else {
     setExploreParks(true);
+    setExploreHikes(true);
+    setExplorePoi(true);
   }
 
   if (dismissWelcome) {
@@ -1034,11 +1085,11 @@ function showMapExploreHint(options = {}) {
 
 function syncExploreHintRegion() {
   const hint = document.getElementById("mapHintText");
-  if (!hint || !mapHintBar || mapHintBar.hidden) {
+  if (!hint) {
     return;
   }
   hint.textContent =
-    `Exploring ${activeRegionLabel()}. Zoom in for more places, then tap a city or park. Turn on Trails or Landmarks in Map layers.`;
+    `Exploring ${activeRegionLabel()}. Cities, parks, trails, and landmarks are on the map — zoom in, then tap a place.`;
 }
 
 function hideMapExploreHint() {
@@ -2830,17 +2881,22 @@ const TOUCH_HIT_BUMP = (() => {
   }
 })();
 
+function exploreIsCompact() {
+  return typeof window.matchMedia === "function" && window.matchMedia("(max-width: 640px)").matches;
+}
+
 function catalogMarkerMinPx(zoom = map.getZoom()) {
+  const compact = exploreIsCompact();
   if (zoom <= 5) {
-    return 24;
+    return compact ? 34 : 24;
   }
   if (zoom <= 7) {
-    return 16;
+    return compact ? 30 : 16;
   }
   if (zoom <= 9) {
-    return 12;
+    return compact ? 24 : 12;
   }
-  return 0;
+  return compact ? 18 : 0;
 }
 
 function catalogMarkerOverlaps(lat, lng, ignoreId = "") {
@@ -2863,12 +2919,23 @@ function catalogMarkerOverlaps(lat, lng, ignoreId = "") {
       if (id === ignoreId || !marker?.getLatLng) {
         continue;
       }
-      if (point.distanceTo(map.latLngToContainerPoint(marker.getLatLng())) < minPx) {
+      if (point.distanceTo(markerContainerPoint(marker)) < minPx) {
         return true;
       }
     }
   }
   return false;
+}
+
+function markerContainerPoint(marker) {
+  const zoom = map.getZoom();
+  const center = map.getCenter();
+  const key = `${zoom}:${center.lat.toFixed(2)}:${center.lng.toFixed(2)}`;
+  if (marker._ptKey !== key) {
+    marker._ptKey = key;
+    marker._pt = map.latLngToContainerPoint(marker.getLatLng());
+  }
+  return marker._pt;
 }
 
 function cityCatalogRadius(tier) {
@@ -3883,9 +3950,372 @@ async function ensureCityCatalogPopupContent(marker) {
   await marker._cityDetailsPromise;
 }
 
+const EXPLORE_PIN_COLORS = {
+  city: "#1e3a5f",
+  park: "#15803d",
+  hike: "#c2410c",
+  poi: "#7e22ce"
+};
+
+let explorePinImageFallbackBound = false;
+
+function bindExplorePinImageFallback() {
+  if (explorePinImageFallbackBound || typeof window === "undefined") return;
+  explorePinImageFallbackBound = true;
+  window.addEventListener(
+    "error",
+    (event) => {
+      const img = event.target;
+      if (!(img instanceof HTMLImageElement) || !img.classList.contains("explore-pin__photo")) return;
+      const pin = img.closest(".explore-pin");
+      img.remove();
+      pin?.classList.add("is-photo-broken");
+    },
+    true
+  );
+}
+
+function safeCoverUrl(url) {
+  const value = String(url || "").trim();
+  if (!/^https?:\/\//i.test(value)) return "";
+  return value;
+}
+
+function shortPinTagline(text) {
+  const value = String(text || "").replace(/\s+/g, " ").trim();
+  if (!value || /future deep-dive/i.test(value)) return "";
+  if (value.length <= 88) return value;
+  return `${value.slice(0, 85).trim()}…`;
+}
+
+function exploreKindLabel(kind, props) {
+  if (props?.pinLabel) return String(props.pinLabel);
+  if (kind === "park") return parkCategoryLabel(props?.category);
+  if (kind === "poi") return poiCategoryLabel(props?.category);
+  if (kind === "hike") {
+    const length = formatHikeLength(props?.length_km);
+    return length ? `Trail · ${length}` : "Trail";
+  }
+  return cityCategoryLabel(props?.category, props?.locale);
+}
+
+function resolvePhotoVisible(props, marker, featured) {
+  if (!safeCoverUrl(props?.cover)) return false;
+  if (marker?._forcePhoto) return true;
+  if (exploreIsCompact()) return Boolean(featured);
+  if (featured) return true;
+  const zoom = typeof map?.getZoom === "function" ? map.getZoom() : 4;
+  if (zoom < 6) return false;
+  const tier = String(props?.tier || "").toLowerCase();
+  const category = String(props?.category || "").toLowerCase();
+  if (tier === "major" || category === "capital") return true;
+  return zoom >= 8 && tier === "regional";
+}
+
+function explorePinSize(props, featured, photoVisible) {
+  if (photoVisible || (featured && safeCoverUrl(props?.cover))) return 40;
+  if (featured) return 28;
+  return 22;
+}
+
+function explorePinSignature(kind, props, selected, featured, photoVisible, size) {
+  return [
+    kind,
+    props?.id || "",
+    props?.name || "",
+    props?.cover || "",
+    props?.tagline || "",
+    props?.category || "",
+    props?.locale || "",
+    props?.tier || "",
+    props?.pinLabel || "",
+    props?.length_km || "",
+    selected ? 1 : 0,
+    featured ? 1 : 0,
+    photoVisible ? 1 : 0,
+    size
+  ].join("|");
+}
+
+function explorePinHtml(kind, props, showPhoto = false) {
+  const cover = showPhoto ? safeCoverUrl(props?.cover) : "";
+  const color = EXPLORE_PIN_COLORS[kind] || EXPLORE_PIN_COLORS.city;
+  const name = escapeHtml(props?.name || "Place");
+  const label = escapeHtml(exploreKindLabel(kind, props));
+  const tagline = shortPinTagline(props?.tagline);
+  const aria = escapeAttr(`${props?.name || "Place"}, ${exploreKindLabel(kind, props)}`);
+  const photo = cover
+    ? `<img class="explore-pin__photo" src="${escapeAttr(cover)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />`
+    : "";
+  const line = tagline ? `<span class="explore-pin__callout-line">${escapeHtml(tagline)}</span>` : "";
+  return `
+    <span class="explore-pin__lift" aria-label="${aria}">
+      ${photo}
+      <span class="explore-pin__mark" style="--pin:${color}"></span>
+      <span class="explore-pin__callout">
+        <span class="explore-pin__callout-kicker">${label}</span>
+        <strong>${name}</strong>
+        ${line}
+      </span>
+    </span>
+  `;
+}
+
+function exploreTipHtml(kind, props) {
+  return `<span class="explore-pin-tip__name">${escapeHtml(props?.name || "Place")}</span><span class="explore-pin-tip__kind">${escapeHtml(exploreKindLabel(kind, props))}</span>`;
+}
+
+function exploreTipOptions(size) {
+  return {
+    direction: "top",
+    offset: [0, -Math.round(size / 2) - 6],
+    opacity: 1,
+    className: "explore-pin-tip"
+  };
+}
+
+function placeExplorePin(marker, featured) {
+  const paneName = featured ? "exploreFeatured" : marker._pinPane;
+  const pane = paneName && map.getPane(paneName);
+  const icon = marker.getElement?.();
+  if (!pane || !icon || icon.parentNode === pane) return;
+  pane.appendChild(icon);
+}
+
+function bindExplorePinTooltip(marker, kind, props, size, featured) {
+  marker._tipHtml = exploreTipHtml(kind, props);
+  if (marker.getTooltip?.()) marker.unbindTooltip();
+  if (featured || exploreIsCompact()) return;
+  marker.bindTooltip(marker._tipHtml, exploreTipOptions(size));
+}
+
+function syncCatalogPin(marker, kind, props, selected = false, featured = false) {
+  if (!marker?._explorePin) return;
+  bindExplorePinImageFallback();
+  const photoVisible = resolvePhotoVisible(props, marker, featured);
+  const size = explorePinSize(props, featured, photoVisible);
+  const signature = explorePinSignature(kind, props, selected, featured, photoVisible, size);
+  marker._photoVisible = photoVisible;
+  marker._pinKind = kind;
+  marker._pinSize = size;
+  if (marker._pinSignature === signature) {
+    marker.getElement?.()?.classList.toggle("is-selected", selected);
+    marker.getElement?.()?.classList.toggle("is-featured", featured);
+    placeExplorePin(marker, featured);
+    return;
+  }
+  const showPhoto = photoVisible || (featured && Boolean(safeCoverUrl(props?.cover)));
+  const className = [
+    "explore-pin",
+    `explore-pin--${kind}`,
+    safeCoverUrl(props?.cover) ? "explore-pin--photo" : "",
+    showPhoto ? "explore-pin--show-photo" : "",
+    selected ? "is-selected" : "",
+    featured ? "is-featured" : ""
+  ].filter(Boolean).join(" ");
+  marker.setIcon(L.divIcon({
+    className,
+    html: explorePinHtml(kind, props, showPhoto),
+    iconSize: [size, size],
+    iconAnchor: [size / 2, size / 2],
+    popupAnchor: [0, -Math.round(size / 2)]
+  }));
+  marker._pinSignature = signature;
+  bindExplorePinTooltip(marker, kind, props, size, featured);
+  if (featured) marker.setZIndexOffset(1400);
+  else marker.setZIndexOffset(showPhoto ? 280 : 40);
+  placeExplorePin(marker, featured);
+}
+
+function createExplorePinMarker(kind, props, lat, lng, options = {}) {
+  const marker = L.marker([lat, lng], {
+    pane: options.pane,
+    keyboard: false,
+    riseOnHover: true,
+    icon: L.divIcon({
+      className: "explore-pin",
+      html: "",
+      iconSize: [22, 22],
+      iconAnchor: [11, 11]
+    })
+  });
+  marker._explorePin = true;
+  marker._pinPane = options.pane || "markerPane";
+  marker._forcePhoto = options.forcePhoto === true;
+  marker._featuredApplied = false;
+  syncCatalogPin(marker, kind, props, options.selected === true, false);
+  return marker;
+}
+
+function catalogPinSelected(kind, id) {
+  if (kind === "park") return id === activeParkCatalogId;
+  if (kind === "hike") return id === activeHikeCatalogId;
+  if (kind === "poi") return id === activePoiCatalogId;
+  return id === activeCityCatalogId;
+}
+
+function exploreFocusLatLng() {
+  const size = map.getSize();
+  let x = size.x / 2;
+  const y = size.y / 2;
+  const hud = document.querySelector(".map-hud-left");
+  const mapRect = map.getContainer()?.getBoundingClientRect();
+  if (hud && mapRect) {
+    const hudRect = hud.getBoundingClientRect();
+    const visibleLeft = Math.max(0, hudRect.right - mapRect.left);
+    if (visibleLeft > 40 && visibleLeft < size.x * 0.72) {
+      x = visibleLeft + (size.x - visibleLeft) / 2;
+    }
+  }
+  return map.containerPointToLatLng([x, y]);
+}
+
+function explorePinReadable(latlng) {
+  const pt = map.latLngToContainerPoint(latlng);
+  const size = map.getSize();
+  if (pt.x < 88 || pt.y < 96 || pt.x > size.x - 96 || pt.y > size.y - 48) return false;
+  const hud = document.querySelector(".map-hud-left");
+  const mapRect = map.getContainer()?.getBoundingClientRect();
+  if (!hud || !mapRect) return true;
+  const hudRect = hud.getBoundingClientRect();
+  const pinX = mapRect.left + pt.x;
+  const pinY = mapRect.top + pt.y;
+  return !(
+    pinX > hudRect.left - 20 &&
+    pinX < hudRect.right + 28 &&
+    pinY > hudRect.top - 12 &&
+    pinY < hudRect.bottom + 12
+  );
+}
+
+function explorePinScore(kind, props, latlng) {
+  const center = exploreFocusLatLng();
+  const px = map.latLngToContainerPoint(center).distanceTo(map.latLngToContainerPoint(latlng));
+  const tier = String(props?.tier || "").toLowerCase();
+  const category = String(props?.category || "").toLowerCase();
+  let score = 0;
+  if (safeCoverUrl(props?.cover)) score += 80;
+  if (tier === "major" || category === "capital") score += 42;
+  else if (tier === "regional") score += 16;
+  if (kind === "hike") score += 8;
+  else if (kind === "park") score += 5;
+  else if (kind === "poi") score += 3;
+  const weight = Number(props?.popularity) || Number(props?.pop) || 0;
+  if (weight > 0) score += Math.min(22, Math.log10(weight + 1) * 4);
+  score -= Math.min(80, px / 16);
+  if ((map.getZoom() || 4) <= 5 && tier !== "major" && category !== "capital") score -= 36;
+  return score;
+}
+
+let featuredFloat = null;
+let featuredPinTimer = 0;
+
+function clearFeaturedFloat() {
+  if (!featuredFloat) return;
+  map.removeLayer(featuredFloat);
+  featuredFloat = null;
+}
+
+function fireMarkerClick(marker) {
+  marker.fire("click", {
+    target: marker,
+    stopPropagation() {},
+    preventDefault() {},
+    originalEvent: { stopPropagation() {}, preventDefault() {} }
+  });
+}
+
+function showFeaturedFloat(pin) {
+  const latlng = pin.marker.getLatLng();
+  const props = pin.props;
+  const key = `${pin.kind}:${props.id}`;
+  if (!featuredFloat) {
+    featuredFloat = createExplorePinMarker(pin.kind, props, latlng.lat, latlng.lng, {
+      pane: "exploreFeatured"
+    });
+    featuredFloat._featuredApplied = true;
+    featuredFloat.addTo(map);
+  }
+  if (featuredFloat._floatKey !== key) {
+    featuredFloat._floatKey = key;
+    featuredFloat._forcePhoto = Boolean(safeCoverUrl(props.cover));
+    featuredFloat.setLatLng(latlng);
+    syncCatalogPin(featuredFloat, pin.kind, props, false, true);
+  } else {
+    featuredFloat.setLatLng(latlng);
+  }
+  featuredFloat.off("click");
+  featuredFloat.on("click", (event) => {
+    L.DomEvent.stopPropagation(event);
+    fireMarkerClick(pin.marker);
+  });
+}
+
+function syncFeaturedExplorePin() {
+  clearTimeout(featuredPinTimer);
+  featuredPinTimer = setTimeout(runFeaturedExplorePin, exploreIsCompact() ? 100 : 40);
+}
+
+function runFeaturedExplorePin() {
+  if (typeof map?.getBounds !== "function") return;
+  const bounds = map.getBounds();
+  const compact = exploreIsCompact();
+  const groups = [
+    [cityCatalogMarkersInView, "city", "_cityProps"],
+    [parkCatalogMarkersInView, "park", "_parkProps"],
+    [hikeCatalogMarkersInView, "hike", "_hikeProps"],
+    [poiCatalogMarkersInView, "poi", "_poiProps"]
+  ];
+  const pins = [];
+  for (const [group, kind, propsKey] of groups) {
+    if (!group) continue;
+    group.forEach((marker) => {
+      if (!marker?._explorePin && !marker?._catalogDot) return;
+      const props = marker[propsKey];
+      if (!props) return;
+      pins.push({ marker, kind, props });
+    });
+  }
+
+  let winner = null;
+  let fallback = null;
+  for (const pin of pins) {
+    const latlng = pin.marker.getLatLng?.();
+    if (!latlng || !bounds.contains(latlng)) continue;
+    const score = explorePinScore(pin.kind, pin.props, latlng);
+    const candidate = { ...pin, score };
+    if (!fallback || score > fallback.score) fallback = candidate;
+    if (!explorePinReadable(latlng)) continue;
+    if (!winner || score > winner.score) winner = candidate;
+  }
+  winner = winner || fallback;
+
+  if (compact) {
+    if (winner) showFeaturedFloat(winner);
+    else clearFeaturedFloat();
+    return;
+  }
+
+  clearFeaturedFloat();
+  for (const pin of pins) {
+    if (!pin.marker._explorePin) continue;
+    const featured = Boolean(winner && pin.marker === winner.marker);
+    const selected = catalogPinSelected(pin.kind, pin.props.id);
+    if (pin.marker._featuredApplied !== featured) {
+      pin.marker._featuredApplied = featured;
+      syncCatalogPin(pin.marker, pin.kind, pin.props, selected, featured);
+    }
+    pin.marker.getElement?.()?.classList.toggle("is-featured", featured);
+    if (featured) pin.marker.setZIndexOffset(1400);
+  }
+}
+
 function createCityCatalogMarker(props, lat, lng) {
   const hasStory = cityHasDeepDiveStory(props);
-  const marker = L.circleMarker([lat, lng], cityCatalogMarkerStyle(props));
+  const marker = hasStory && !exploreIsCompact()
+    ? createExplorePinMarker("city", props, lat, lng, { pane: "citiesCatalog" })
+    : L.circleMarker([lat, lng], cityCatalogMarkerStyle(props));
+  marker._catalogDot = !marker._explorePin;
 
   marker._cityProps = props;
   marker._cityHasStory = hasStory;
@@ -4030,7 +4460,9 @@ async function refreshCityCatalogMarkers() {
       String(props.category || "").toLowerCase() === "capital" ||
       String(props.tier || "").toLowerCase() === "major";
     const hidePassive = !hasStory && !keepAtOverview && zoom < 9;
-    const skipOverlap = !hasStory && !keepAtOverview && catalogMarkerOverlaps(lat, lng, props.id);
+    const skipOverlap = catalogMarkerOverlaps(lat, lng, props.id) && (
+      (!hasStory && !keepAtOverview) || exploreIsCompact()
+    );
     if (hidePassive || skipOverlap) {
       return;
     }
@@ -4040,10 +4472,13 @@ async function refreshCityCatalogMarkers() {
     const existing = cityCatalogMarkersInView.get(props.id);
     const hadStory = existing ? cityHasDeepDiveStory(existing._cityProps) : null;
 
-    if (!existing) {
+    const wantPin = hasStory && !exploreIsCompact();
+    if (!existing || hadStory !== hasStory || Boolean(existing._explorePin) !== wantPin) {
       replaceCityCatalogMarker(props, lat, lng);
-    } else if (hadStory !== hasStory) {
-      replaceCityCatalogMarker(props, lat, lng);
+    } else if (existing._explorePin) {
+      existing._cityProps = props;
+      existing._cityHasStory = hasStory;
+      syncCatalogPin(existing, "city", props, false, existing._featuredApplied === true);
     } else {
       existing._cityProps = props;
       existing._cityHasStory = hasStory;
@@ -4058,6 +4493,8 @@ async function refreshCityCatalogMarkers() {
     cityCatalogLayer.removeLayer(marker);
     cityCatalogMarkersInView.delete(id);
   });
+
+  syncFeaturedExplorePin();
 }
 
 function scheduleCityCatalogRefresh() {
@@ -4070,7 +4507,7 @@ function scheduleCityCatalogRefresh() {
   clearTimeout(cityCatalogRefreshTimer);
   cityCatalogRefreshTimer = setTimeout(() => {
     refreshCityCatalogMarkers();
-  }, 40);
+  }, exploreIsCompact() ? 200 : 40);
 }
 
 function bindExploreCatalogMapEvents() {
@@ -4399,20 +4836,29 @@ function refitActiveHikeRoute() {
   }
 }
 
+function hikeCatalogMarkerStyle(props, selected = false) {
+  return {
+    pane: "hikesCatalog",
+    radius: hikeCatalogRadius(props.tier),
+    color: "#ffffff",
+    weight: selected ? 2.5 : 1.5,
+    fillColor: selected ? "#9a3412" : "#c2410c",
+    fillOpacity: 0.94,
+    opacity: 1,
+    className: selected ? "hike-catalog-marker is-selected" : "hike-catalog-marker"
+  };
+}
+
 function syncActiveHikeMarkerStyles() {
   hikeCatalogMarkersInView.forEach((marker, id) => {
-    const props = marker._hikeProps || {};
+    const props = marker._hikeProps;
+    if (!props) return;
     const selected = id === activeHikeCatalogId;
-    marker.setStyle({
-      pane: "hikesCatalog",
-      radius: hikeCatalogRadius(props.tier),
-      color: "#ffffff",
-      weight: selected ? 2.5 : 1.5,
-      fillColor: selected ? "#9a3412" : "#c2410c",
-      fillOpacity: selected ? 1 : 0.94,
-      opacity: 1,
-      className: selected ? "hike-catalog-marker is-selected" : "hike-catalog-marker"
-    });
+    if (marker._explorePin) {
+      syncCatalogPin(marker, "hike", props, selected, marker._featuredApplied === true);
+      return;
+    }
+    marker.setStyle(hikeCatalogMarkerStyle(props, selected));
   });
 }
 
@@ -4958,16 +5404,14 @@ async function showActiveHikeRoute(detail) {
 }
 
 function createHikeCatalogMarker(props, lat, lng) {
-  const marker = L.circleMarker([lat, lng], {
-    pane: "hikesCatalog",
-    radius: hikeCatalogRadius(props.tier),
-    color: "#ffffff",
-    weight: 1.5,
-    fillColor: "#c2410c",
-    fillOpacity: 0.94,
-    opacity: 1,
-    className: "hike-catalog-marker"
-  });
+  const selected = props.id === activeHikeCatalogId;
+  const marker = exploreIsCompact()
+    ? L.circleMarker([lat, lng], hikeCatalogMarkerStyle(props, selected))
+    : createExplorePinMarker("hike", props, lat, lng, {
+        pane: "hikesCatalog",
+        selected
+      });
+  marker._catalogDot = !marker._explorePin;
 
   marker._hikeProps = props;
   marker.on("mousedown touchstart", L.DomEvent.stopPropagation);
@@ -5025,10 +5469,18 @@ async function refreshHikeCatalogMarkers() {
 
     visibleIds.add(props.id);
 
-    if (!hikeCatalogMarkersInView.has(props.id)) {
+    const existing = hikeCatalogMarkersInView.get(props.id);
+    const wantPin = !exploreIsCompact();
+    if (!existing || Boolean(existing._explorePin) !== wantPin) {
+      if (existing) {
+        hikeCatalogLayer.removeLayer(existing);
+        hikeCatalogMarkersInView.delete(props.id);
+      }
       const marker = createHikeCatalogMarker(props, lat, lng);
       hikeCatalogMarkersInView.set(props.id, marker);
       hikeCatalogLayer.addLayer(marker);
+    } else {
+      existing._hikeProps = props;
     }
   });
 
@@ -5041,6 +5493,7 @@ async function refreshHikeCatalogMarkers() {
   });
 
   syncActiveHikeMarkerStyles();
+  syncFeaturedExplorePin();
 }
 
 function scheduleHikeCatalogRefresh() {
@@ -5053,7 +5506,7 @@ function scheduleHikeCatalogRefresh() {
   clearTimeout(hikeCatalogRefreshTimer);
   hikeCatalogRefreshTimer = setTimeout(() => {
     refreshHikeCatalogMarkers();
-  }, 220);
+  }, exploreIsCompact() ? 360 : 220);
 }
 
 function clearHikeCatalogMarkers() {
@@ -5103,10 +5556,12 @@ function parkCatalogMarkerStyle(props, selected = false) {
 function syncActiveParkMarkerStyles() {
   parkCatalogMarkersInView.forEach((marker, id) => {
     const props = marker._parkProps;
-    if (!props) {
+    if (!props) return;
+    const selected = id === activeParkCatalogId;
+    if (marker._explorePin) {
+      syncCatalogPin(marker, "park", props, selected, marker._featuredApplied === true);
       return;
     }
-    const selected = id === activeParkCatalogId;
     marker.setStyle(parkCatalogMarkerStyle(props, selected));
   });
 }
@@ -5144,7 +5599,13 @@ async function openParkFromMarker(marker) {
 
 function createParkCatalogMarker(props, lat, lng) {
   const selected = props.id === activeParkCatalogId;
-  const marker = L.circleMarker([lat, lng], parkCatalogMarkerStyle(props, selected));
+  const marker = exploreIsCompact()
+    ? L.circleMarker([lat, lng], parkCatalogMarkerStyle(props, selected))
+    : createExplorePinMarker("park", props, lat, lng, {
+        pane: "parksCatalog",
+        selected
+      });
+  marker._catalogDot = !marker._explorePin;
 
   marker._parkProps = props;
   marker.on("mousedown touchstart", L.DomEvent.stopPropagation);
@@ -5203,13 +5664,17 @@ async function refreshParkCatalogMarkers() {
     visibleIds.add(props.id);
 
     const existing = parkCatalogMarkersInView.get(props.id);
-    if (!existing) {
+    const wantPin = !exploreIsCompact();
+    if (!existing || Boolean(existing._explorePin) !== wantPin) {
+      if (existing) {
+        parkCatalogLayer.removeLayer(existing);
+        parkCatalogMarkersInView.delete(props.id);
+      }
       const marker = createParkCatalogMarker(props, lat, lng);
       parkCatalogMarkersInView.set(props.id, marker);
       parkCatalogLayer.addLayer(marker);
     } else {
       existing._parkProps = props;
-      existing.setStyle(parkCatalogMarkerStyle(props, props.id === activeParkCatalogId));
     }
   });
 
@@ -5222,6 +5687,7 @@ async function refreshParkCatalogMarkers() {
   });
 
   syncActiveParkMarkerStyles();
+  syncFeaturedExplorePin();
 }
 
 function scheduleParkCatalogRefresh() {
@@ -5384,10 +5850,13 @@ function poiCatalogMarkerStyle(props, selected = false) {
 function syncActivePoiMarkerStyles() {
   poiCatalogMarkersInView.forEach((marker, id) => {
     const props = marker._poiProps;
-    if (!props) {
+    if (!props) return;
+    const selected = id === activePoiCatalogId;
+    if (marker._explorePin) {
+      syncCatalogPin(marker, "poi", props, selected, marker._featuredApplied === true);
       return;
     }
-    marker.setStyle(poiCatalogMarkerStyle(props, id === activePoiCatalogId));
+    marker.setStyle(poiCatalogMarkerStyle(props, selected));
   });
 }
 
@@ -5424,7 +5893,13 @@ async function openPoiFromMarker(marker) {
 
 function createPoiCatalogMarker(props, lat, lng) {
   const selected = props.id === activePoiCatalogId;
-  const marker = L.circleMarker([lat, lng], poiCatalogMarkerStyle(props, selected));
+  const marker = exploreIsCompact()
+    ? L.circleMarker([lat, lng], poiCatalogMarkerStyle(props, selected))
+    : createExplorePinMarker("poi", props, lat, lng, {
+        pane: "poisCatalog",
+        selected
+      });
+  marker._catalogDot = !marker._explorePin;
 
   marker._poiProps = props;
   marker.on("mousedown touchstart", L.DomEvent.stopPropagation);
@@ -5483,13 +5958,17 @@ async function refreshPoiCatalogMarkers() {
     visibleIds.add(props.id);
 
     const existing = poiCatalogMarkersInView.get(props.id);
-    if (!existing) {
+    const wantPin = !exploreIsCompact();
+    if (!existing || Boolean(existing._explorePin) !== wantPin) {
+      if (existing) {
+        poiCatalogLayer.removeLayer(existing);
+        poiCatalogMarkersInView.delete(props.id);
+      }
       const marker = createPoiCatalogMarker(props, lat, lng);
       poiCatalogMarkersInView.set(props.id, marker);
       poiCatalogLayer.addLayer(marker);
     } else {
       existing._poiProps = props;
-      existing.setStyle(poiCatalogMarkerStyle(props, props.id === activePoiCatalogId));
     }
   });
 
@@ -5502,6 +5981,7 @@ async function refreshPoiCatalogMarkers() {
   });
 
   syncActivePoiMarkerStyles();
+  syncFeaturedExplorePin();
 }
 
 function schedulePoiCatalogRefresh() {
@@ -6508,15 +6988,33 @@ function createPointLayers(features) {
     const stopType = journeyStopType(props);
     const section = classifyPointSection(feature);
 
-    const marker = L.circleMarker([lat, lng], {
-      pane: "routeMarkers",
-      radius: 9,
-      color: "#ffffff",
-      weight: 2,
-      fillColor: stopColor(stopType),
-      fillOpacity: 1,
-      opacity: 1
-    });
+    const stopPhotos = normalizePhotoEntries(getPlacePhotos(props.name || ""));
+    const stopCover = stopPhotos[0]?.url || "";
+    const marker = stopCover
+      ? createExplorePinMarker(stopType === "park" ? "park" : stopType === "heritage" ? "poi" : "city", {
+          ...props,
+          cover: stopCover,
+          pinLabel: props.day ? `Day ${props.day}` : "Stop",
+          tagline: ""
+        }, lat, lng, { pane: "routeMarkers", forcePhoto: true })
+      : L.circleMarker([lat, lng], {
+          pane: "routeMarkers",
+          radius: 9,
+          color: "#ffffff",
+          weight: 2,
+          fillColor: stopColor(stopType),
+          fillOpacity: 1,
+          opacity: 1,
+          className: "route-stop-marker"
+        });
+    if (!stopCover && props.name) {
+      marker.bindTooltip(escapeHtml(props.name), {
+        direction: "top",
+        offset: [0, -12],
+        opacity: 1,
+        className: "explore-pin-tip"
+      });
+    }
 
     marker._tripProps = { ...props, stopType };
     marker.on("mousedown touchstart", L.DomEvent.stopPropagation);
@@ -8039,19 +8537,12 @@ function setupWelcomeAndExplore() {
   });
 
   exploreModeBtn?.addEventListener("click", () => {
-    if (state.exploreCities || state.exploreParks || state.exploreHikes || state.explorePoi) {
-      if (state.exploreCities) {
-        setExploreCities(false);
-      }
-      if (state.exploreParks) {
-        setExploreParks(false);
-      }
-      if (state.exploreHikes) {
-        setExploreHikes(false);
-      }
-      if (state.explorePoi) {
-        setExplorePoi(false);
-      }
+    const allOn = state.exploreCities && state.exploreParks && state.exploreHikes && state.explorePoi;
+    if (allOn) {
+      setExploreCities(false);
+      setExploreParks(false);
+      setExploreHikes(false);
+      setExplorePoi(false);
       hideMapExploreHint();
       updateHudJourneyState();
       syncExploreHudButton();
