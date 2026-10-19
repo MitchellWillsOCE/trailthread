@@ -104,6 +104,28 @@ CAPITALS_BY_CC: dict[str, str] = {
     "NF": "kingston",
 }
 
+# Extra official/common spellings that should still classify as the capital.
+CAPITAL_ALIASES_BY_CC: dict[str, tuple[str, ...]] = {
+    "UA": ("kiev",),
+    "MD": ("chisnau",),
+    "VA": ("vatican", "holy see"),
+    "LU": ("luxembourg city",),
+    "MC": ("monaco-ville", "monaco ville"),
+    "SM": ("citta di san marino", "city of san marino"),
+    "IS": ("reykjavikurborg",),
+}
+
+
+def is_capital_name(name: str, cc: str | None) -> bool:
+    cc_up = (cc or "").upper()
+    primary = CAPITALS_BY_CC.get(cc_up)
+    if not primary:
+        return False
+    norm_name = _norm(name)
+    if norm_name == primary:
+        return True
+    return norm_name in CAPITAL_ALIASES_BY_CC.get(cc_up, ())
+
 # Country codes that are unambiguously a single small island — every
 # settlement in them is tagged `island`. Larger island/archipelago
 # nations (GB, IE, IS) fall through to coastal/inland detection so
@@ -271,9 +293,7 @@ def classify_city(
     cc_up = (cc or "").upper()
     norm_name = _norm(name)
 
-    is_capital = bool(
-        cc_up in CAPITALS_BY_CC and CAPITALS_BY_CC[cc_up] == norm_name
-    )
+    is_capital = is_capital_name(name, cc_up)
     category = _pop_category(pop, is_capital=is_capital)
 
     locale = "inland"

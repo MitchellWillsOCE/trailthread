@@ -1,4 +1,5 @@
 import {
+  attachCoverUrls,
   createSqlDatabaseLoader,
   makeTiersForZoom,
   parseJsonField,
@@ -68,7 +69,9 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
   `;
   const params = [regionId, south, north, west, east, ...tiers];
   if (countryCc) params.push(countryCc);
-  return sqlAll(db, sql, params).map((row) => ({
+  const rows = sqlAll(db, sql, params);
+  attachCoverUrls(db, "pois", rows);
+  return rows.map((row) => ({
     type: "Feature",
     geometry: { type: "Point", coordinates: [row.lng, row.lat] },
     properties: {
@@ -80,6 +83,7 @@ function queryFeatures(db, regionId, west, south, east, north, zoom, countryCc) 
       popularity: row.popularity,
       tier: row.tier,
       tagline: row.tagline,
+      ...(row.cover ? { cover: row.cover } : {}),
     },
   }));
 }
